@@ -27,8 +27,8 @@ mermaid:
 logo: "/assets/images/c2sm_logo_transparent.png"
 
 # Set a path/url to a favicon that will be displayed by the browser
-#favicon_ico: "/assets/images/favicon.ico"
-#
+favicon_ico: "/assets/favicons/favicon.ico"
+
 # Back to top link
 back_to_top: true
 back_to_top_text: "Back to top"
