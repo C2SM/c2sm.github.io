@@ -24,3 +24,7 @@ nav_order: 0
 Who‘s who in the core team, work mode, services and support, task assignment from groups and projects, web & wiki 
 
 [Video March 2021](https://polybox.ethz.ch/index.php/s/xZafZWGoPLWxnrL){: .btn}{:target="_blank"}
+
+## Further information
+
+Further information about project staff and previous core team members can be found at our [ETH website](https://c2sm.ethz.ch/the-center/people/executive-office.html).
