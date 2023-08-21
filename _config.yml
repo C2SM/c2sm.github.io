@@ -1,8 +1,30 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: C2SM
+description: Information about C2SM tasks, models, tools, datasets and events.
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://c2sm.github.io
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  C2SM Website: https://c2sm.ethz.ch
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: true  
+
+# Color scheme supports "light" (default) and "dark"
+color_scheme: light
+
+# Heading anchor links appear on hover over h1-h6 tags in page content
+# allowing users to deep link to a particular heading on a page.
+#
+# Supports true (default) or false
+heading_anchors: true
+
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "9.1.3"
+
+# Set a path/url to a logo that will be displayed instead of the title
+#logo: "/assets/images/just-the-docs.png"
+
+# Set a path/url to a favicon that will be displayed by the browser
+#favicon_ico: "/assets/images/favicon.ico"
