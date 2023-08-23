@@ -1,8 +1,8 @@
-name: CI
+name: Push 
 
 on:
   push:
-  pull_request:
+    branches: ['stage_docs']
 
 jobs:
   # Build job
@@ -19,3 +19,17 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Build with Jekyll
         run: bundle exec jekyll build
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          # use a personal access token to commit
+          # the merged code and trigger CI actions
+          token: ${{ secrets.GH_PAT }}
+      - name: Update Git branch X
+      - name: Push to stage_docs
+        run: |
+          git push origin stage_docs_test
