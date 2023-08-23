@@ -9,7 +9,7 @@ for csv_file in *.csv; do
     markdown_file="$base_name.md"
     
     # Perform CSV to Markdown conversion using sed
-    sed -e 's/","/ | /g' -e 's/^"/| /' -e 's/"$//' -e 's/^$/| | | | | | | | | | |/' "$csv_file" > "$markdown_file"
+    sed -e 's/","/ | /g' -e 's/^"/| /' -e 's/"$/ |/' -e 's/^$/| | | | | | | | | | | | | |/' "$csv_file" > "$markdown_file"
     
     # Print a message indicating the conversion is complete
     echo "CSV file '$csv_file' converted to '$markdown_file'."
