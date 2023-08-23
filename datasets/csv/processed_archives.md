@@ -1,0 +1,9 @@
+| Archive |  |  |  |  |  |  |  |  | ",
+| E-OBS and MCH",50G,"IAC (8) | direct | static | 1971-2020 | tas, tasmax, tasmin, pr | daily | 0.11° | E-OBS (v23.1e and v26.0e) data with higher resolution MCH data over Switzerland (prepared for CH2025)
+| MCH",7G,"IAC (9) | direct | static | 1971-2021 | tas, tasmax, tasmin, pr | daily | ~2km | gridded observational data from MeteoSwiss over Switzerland
+| MERRA2",17G,"IAC (10) | direct | updated | 1980-2015 (v0) \n 1980-2018 (v1) | tas, tasmax, tasmin, huss, psl, pr, hfss, hfls, rlus, rlds, rsds, rsus, tos | daily, monthly | 2.5 lat x 2.5 lon (same as cmip6-ng) | files are consistent with cmip-ng archives, no time period is indicated in filenames
+| CERRA",6T,"IAC (11) | direct | updated | 1985 - 2020 (v1) | 2t, t, r, ... | daily, monthly | 5x5km | sub-daily regional reanalysis data for Europe, [Link](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-single-levels?tab=overview), [Link](https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0)
+| CERRA-Land",1.8T,"IAC (12) | direct | updated | 1985 - 2020 (v1) | snom, sro, tp, ... | daily, monthly | 5x5km | [Link](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-land?tab=overview), [Link](https://docs.google.com/spreadsheets/d/1e58ps_yBmxUG0jvL8ZmNNr7Zz_UXuqIZsz4MdRAzvbM/edit#gid=0)
+| ERA5",500G,"IAC (13) | direct | updated | 1940 - present | 2t, tp, mx2t, mn2t | daily, monthly | 0.25° x 0.25° | [Link](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=overview)
+| ERA5-Land",2.2T,"IAC (14) | direct | updated | 1950 - present | 2d, 2t, sd, snom | daily, monthly | 0.1° x 0.1° | [Link](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=form)
+| | | | | | | | | | |
