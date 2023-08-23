@@ -44,10 +44,10 @@ make -j 8
 
 
 ### Toolset
-   * External parameters for the ICON-grid (preprocessing)
-   * A set of tools for extracting and remapping ICON fields (preprocessing)
-   * The Starter Package for ICON-CLM Experiments (processing chain)
-   * COSMO and ICON Processing Chain 
+   * **Extpar:** External parameters for the ICON-grid (preprocessing)
+   * **Icontools:** A set of tools for extracting and remapping ICON fields (preprocessing)
+   * **Spice:** The Starter Package for ICON-CLM Experiments (processing chain)
+   * **Processing Chain:** COSMO and ICON Processing Chain 
    * [icon-vis](https://github.com/C2SM/icon-vis): Visualizing ICON output data on the native grid
 
 ### Documentation
