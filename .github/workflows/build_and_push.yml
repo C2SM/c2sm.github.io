@@ -24,7 +24,7 @@ jobs:
         with:
           fetch-depth: 0
           token:  ${{ secrets.GITHUB_TOKEN }}
-      - name: Push changes
+      - name: Push to deploy_webpage
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
