@@ -6,7 +6,7 @@ on:
 
 jobs:
   # Build job
-  build:
+  build_and_push:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -19,9 +19,6 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Build with Jekyll
         run: bundle exec jekyll build
-  push:
-    runs-on: ubuntu-latest
-    steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -30,5 +27,4 @@ jobs:
       - name: Push to stage_docs
         run: |
           git branch -a
-          git push remotes/origin/stage_docs_test
           git push origin stage_docs_test
