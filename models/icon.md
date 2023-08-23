@@ -52,7 +52,7 @@ make -j 8
 
 
 ### Toolset
-   * **Extpar:** External parameters for the ICON-grid (preprocessing)
+   * **[Extpar:](extpar.md)** External parameters for the ICON-grid (preprocessing)
    * **Icontools:** A set of tools for extracting and remapping ICON fields (preprocessing)
    * **Spice:** The Starter Package for ICON-CLM Experiments (processing chain)
    * **Processing Chain:** COSMO and ICON Processing Chain 
