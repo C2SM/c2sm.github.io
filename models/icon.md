@@ -1,3 +1,11 @@
+---
+title: ICON Icosahedral Nonhydrostatic Weather and Climate Model
+layout: default
+nav_order: 1
+parent: Models
+---
+
+
 ## ICON: Icosahedral Nonhydrostatic Weather and Climate Model
 ICON is a global model suitable for climate and weather predictions for both, regional and global domains.
 It is a joint project of [DWD](https://www.dwd.de/DE/Home/home_node.html), [MPI-M](https://mpimet.mpg.de/startseite) and [KIT](https://www.kit.edu/).
