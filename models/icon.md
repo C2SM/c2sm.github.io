@@ -36,6 +36,12 @@ source modules.env
 # compile
 make -j 8
 ``` 
+### Input files
+
+**CSCS:** ```/users/icontest/pool/data/ICON```
+
+**Euler:** ```/cluster/work/climate/icon_input```
+
 
 ### Toolset
    * External parameters for the ICON-grid (preprocessing)
@@ -46,6 +52,7 @@ make -j 8
 
 ### Documentation
    * [ICON Tutorial (DWD) last update: Mar 2023](https://www.dwd.de/EN/ourservices/nwv_icon_tutorial/nwv_icon_tutorial_en.html)
+   * MPI-M documentation [webpage](https://code.mpimet.mpg.de/projects/iconpublic/wiki/Documentation)
      
 ### External Software
    * [CDO](https://code.zmaw.de/projects/cdo), climate data operator
