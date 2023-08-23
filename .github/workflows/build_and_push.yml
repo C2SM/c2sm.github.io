@@ -24,7 +24,8 @@ jobs:
         with:
           fetch-depth: 0
           token:  ${{ secrets.GITHUB_TOKEN }}
-      - name: Push to stage_docs
-        run: |
-          git branch -a
-          git push origin stage_docs_test
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: stage_docs_test
