@@ -29,7 +29,6 @@ jobs:
           # use a personal access token to commit
           # the merged code and trigger CI actions
           token: ${{ secrets.GH_PAT }}
-      - name: Update Git branch X
       - name: Push to stage_docs
         run: |
           git push origin stage_docs_test
