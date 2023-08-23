@@ -1,4 +1,5 @@
 | Archive | Size (#Files) (3) | Location | Access | Status | Variables | Resolution |
+| ------- | ----------------- | -------- | ------ | ------ | --------- | ---------- |
 | *'Raw' CMIP Archives (as downloaded from ESGF)* |  |  |  |  |  |  |
 | CMIP2",0.01 TB (500),"IAC | direct / rsync | frozen (2010-10) |  | native (1) |
 | CMIP3",6 TB (40’000),"IAC | direct / rsync | frozen (2016-12) |  | native |

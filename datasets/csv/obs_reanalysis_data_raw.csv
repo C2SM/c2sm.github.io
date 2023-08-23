@@ -1,4 +1,5 @@
 "Archive","Size (#Files) (1)","Location","Access","Status","Time Period","Variables","Temporal Resolution","Spatial Resolution","More Information"
+"-------","-----------------","--------","------","------","-----------","---------","-------------------","------------------","----------------"
 "*'Raw' Archives (as downloaded from original source)*","",,,,,"","",,
 "E-OBS",660G,"IAC","direct","different versions, updated irregularly","1950 - present","TG: mean temperature, TN: minimum temperature, TX: maximum temperature, RR: precipitation sum, PP: mean sea level pressure, FG: mean wind speed, HU: mean relative humidity, QQ: global radiation","daily","0.1° and 0.25°","[Link](https://www.ecad.eu/download/ensembles/download.php), [Link](https://cds.climate.copernicus.eu/cdsapp#!/dataset/insitu-gridded-observations-europe?tab=overview)"
 "MERRA2",15T,"IAC","direct","updated","1980 - present","many, temperature, precipitation, radiation, sea level pressure etc.","hourly, sst monthly","0.5 lat x 0.625 lon (~50km)","[Link](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/), [Link](https://climatedataguide.ucar.edu/climate-data/nasas-merra2-reanalysis)"

@@ -1,4 +1,5 @@
 | Archive | Size (#Files) (1) | Location | Access | Status | Time Period | Variables | Temporal Resolution | Spatial Resolution | More Information |
+| ------- | ----------------- | -------- | ------ | ------ | ----------- | --------- | ------------------- | ------------------ | ---------------- |
 | E-OBS and MCH",50G,"IAC (8) | direct | static | 1971-2020 | tas, tasmax, tasmin, pr | daily | 0.11° | E-OBS (v23.1e and v26.0e) data with higher resolution MCH data over Switzerland (prepared for CH2025) |
 | MCH",7G,"IAC (9) | direct | static | 1971-2021 | tas, tasmax, tasmin, pr | daily | ~2km | gridded observational data from MeteoSwiss over Switzerland |
 | MERRA2",17G,"IAC (10) | direct | updated | 1980-2015 (v0) \n 1980-2018 (v1) | tas, tasmax, tasmin, huss, psl, pr, hfss, hfls, rlus, rlds, rsds, rsus, tos | daily, monthly | 2.5 lat x 2.5 lon (same as cmip6-ng) | files are consistent with cmip-ng archives, no time period is indicated in filenames |
