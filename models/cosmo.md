@@ -5,30 +5,30 @@ nav_order: 1
 parent: Models
 ---
 
-## COSMO: A non-hydrostatic limited-area atmospheric weather and climate model 
+# COSMO: A non-hydrostatic limited-area atmospheric weather and climate model 
 The COSMO model is a limited area, non-hydrostatic model developed by a collaboration of National Weather Services called the [COSMO Consortium](http://www.cosmo-model.org/).
 
-### Access
+## Access
 In order to get access to the [COSMO repository hosted on the C2SM-RCM GitHub organization](https://github.com/C2SM-RCM/cosmo),
 please contact support@c2sm.ethz.ch.
 
-### Compile
+## Compile
 Spack takes care of configuring and building COSMO. For detailed instructions, 
 please consider the official spack-c2sm [documentation](https://c2sm.github.io/spack-c2sm/v0.18.1.11/QuickStart.html#cosmo).
 
-### Toolset
+## Toolset
 * [**Extpar:**](https://c2sm.github.io/tools/extpar.html) External parameters for the COSMO-grid (preprocessing)
 * [**int2lm:**](https://c2sm.github.io/tools/int2lm.html) The interpolation software for the COSMO-model (preprocessing)
 
 
-### Documentation
+## Documentation
 * [Official website of the Consortium for Small-scale Modeling (COSMO)](http://www.cosmo-model.org/)
 * [COSMO Model System Overview](http://cosmo-model.org/content/model/default.htm)
 * [COSMO User's Guide](http://cosmo-model.org/content/model/documentation/core/cosmo_userguide_5.04.pdf) 
 
-### Asynchronous IO for NetCDF - A Guide for an optimal model setup
+## Asynchronous IO for NetCDF - A Guide for an optimal model setup
 
-#### Node configuration
+### Node configuration
 When using asynchronous IO, the workload of the IO-processors needs to be balanced carefully. In general, no robust "rule of thumb" has been found, 
 and thus a few benchmark runs may be needed. An optimal setup is not trivial to find because the number of output-namelists, the number of fields 
 and the number of IO-processors may change between different setups. In particular, overload on the IO-processors leads to additional runtime during 
