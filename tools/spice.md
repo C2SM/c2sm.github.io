@@ -13,7 +13,4 @@ If there are any questions or you want to provide your ICON-CLM setup, please co
 
 ## Code
 * [Spice at C2SM-Github organization](https://github.com/C2SM/spice)
-* [Spice at clm-community](https://gitlab.dkrz.de/clm-community/spice)(requires access to gitlab at DKRZ) 
-
-## ICON version
-* [Icon version](https://github.com/C2SM/icon-exclaim/tree/clm-patch) that runs with SPICE>=2.0 and contains the CLM patch 
+* [Spice at clm-community](https://gitlab.dkrz.de/clm-community/spice)(requires access to gitlab at DKRZ)
