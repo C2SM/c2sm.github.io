@@ -5,7 +5,7 @@ nav_order: 1
 parent: Tools
 ---
 
-## Icontools
+# Icontools
 Icontools contain a set of routines which may be suitable for reading, remapping and writing of fields from and to predefined grids,
 e.g. regular (lat-lon, gaussian) or triangular (ICON). It can be used to genereta boundary and initial conditions for ICON-LAM simulations.
 
@@ -61,6 +61,6 @@ sbatch remap_lbc
 sbatch remap_ini
 ```
 
-### Documentation
+## Documentation
 * A [Tex-version](https://github.com/C2SM/icontools/blob/master/doc/icontools_doc.tex) of the official documentation is in the repository.
 * A [pdf-version](https://polybox.ethz.ch/index.php/s/P6zCBn5BIVzsxp7), 2020
