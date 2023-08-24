@@ -2,7 +2,7 @@
 title: Extpar
 layout: default
 nav_order: 1
-parent: Models
+parent: Tools
 ---
 
 ## Extpar
