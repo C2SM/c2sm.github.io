@@ -9,7 +9,7 @@ parent: Tools
 Icontools contain a set of routines which may be suitable for reading, remapping and writing of fields from and to predefined grids,
 e.g. regular (lat-lon, gaussian) or triangular (ICON). It can be used to genereta boundary and initial conditions for ICON-LAM simulations.
 
-### Access
+## Access
 In order to get access to the [Icontools repository hosted on the C2SM GitHub organization](https://github.com/C2SM/icontools),
 please contact your group's technical contact. They will be responsible for adding you to the appropriate user group.
 
@@ -36,7 +36,7 @@ Below is a recipe to create initial and boundary files for an ICON LAM run on Pi
 ### Interpolate BC from IFS
 This manual refers to the workflow MeteoSwiss is currently using to run LAM-simulations.
 
-1. Add fields FI and z from IFS-analysis to BC prior the intepolation using CDO (GRIB-only).
+* Add fields FI and z from IFS-analysis to BC prior the intepolation using CDO (GRIB-only).
 
 ```bash
 cdo -selname,FI analysis fi_file
@@ -47,15 +47,15 @@ cdo setreftime,2019-09-30,03:00:00  z_file_time z_file_reftime
 cat file_for_BC zfile_reftime fi_file_time > complete_file
 ```
 
-2. Adapt scripts remap_ini and remap_lbc to your needs
+* Adapt scripts remap_ini and remap_lbc to your needs
 
-3. Remap IFS data for BC by
+* Remap IFS data for BC by
 
  ```bash
 sbatch remap_lbc
 ``` 
 
-4. Remap IFS data for analysis
+* Remap IFS data for analysis
 
  ```bash
 sbatch remap_ini
