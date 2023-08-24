@@ -55,7 +55,7 @@ make -j 8
    * **[Extpar:](https://c2sm.github.io/tools/extpar.html)** External parameters for the ICON-grid (preprocessing)
    * [**Icontools:**](https://c2sm.github.io/tools/icontools.html) A set of tools for extracting and remapping ICON fields (preprocessing)
    * [**Spice:**](https://c2sm.github.io/tools/spice.html) The Starter Package for ICON-CLM Experiments (processing chain)
-   * **Processing Chain:** COSMO and ICON Processing Chain 
+   * [**Processing Chain:**](https://github.com/C2SM/processing-chain) COSMO and ICON Processing Chain 
    * [**icon-vis:**](https://github.com/C2SM/icon-vis) Visualizing ICON output data on the native grid
 
 ### Documentation
