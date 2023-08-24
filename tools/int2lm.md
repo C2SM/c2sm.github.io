@@ -32,3 +32,4 @@ Doing so mitigates slow down for large input-files via new namelist parameters i
 The parameters ie_in_tot and je_in_tot define the length of the data to be read, instead of the total lenght present in the NetCDF input file. 
 
 **Schematic about the two ways for reading NetCDF input files**
+![](images/int2lm_subset_schematic.png)
