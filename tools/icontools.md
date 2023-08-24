@@ -15,7 +15,7 @@ please contact your group's technical contact. They will be responsible for addi
 
 ## Compile
 Spack takes care of configuring and building Iontools. For detailed instructions,
-please consider the official spack-c2sm [documentation](https://c2sm.github.io/spack-c2sm/latests).
+please consider the official spack-c2sm [documentation](https://c2sm.github.io/spack-c2sm/latest).
 The following spack command should be sufficient for most cases:
 
 ```bash
