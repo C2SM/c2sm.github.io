@@ -9,7 +9,7 @@ parent: Tools
 Icontools contain a set of routines which may be suitable for reading, remapping and writing of fields from and to predefined grids,
 e.g. regular (lat-lon, gaussian) or triangular (ICON). It can be used to genereta boundary and initial conditions for ICON-LAM simulations.
 
-### Access
+## Access
 In order to get access to the [Icontools repository hosted on the C2SM GitHub organization](https://github.com/C2SM/icontools),
 please contact your group's technical contact. They will be responsible for adding you to the appropriate user group.
 
