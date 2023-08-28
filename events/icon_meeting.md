@@ -7,11 +7,11 @@ parent: Events
 # 2023
 
 ## March 16
-<details>
-  <summary>Minutes</summary>
-  Venue
-
-### Hybrid: ETH Zurich (L 17.1) and via Zoom
+<details markdown="block">
+  <summary>Minutes</summary> 
+  
+### Venue
+Hybrid: ETH Zurich (L 17.1) and via Zoom
 
 ### Participants (on-site)
 Jonas Jucker (JJ), Annika Lauber (AL), Tamara Bandikowa (TB), Stefan Rüdisühli (SR), Jan Zibell (JZ), Guillaume Bertoli (GB), Athena Nghiem (AN), Andrea Stenke (AS), Doris Folini (DF), Jacobo Canton (JC), Boriana Chtirkova (BC)
@@ -83,7 +83,7 @@ MJ asks when the GPU port of the VPRM model is planned. AH answers that this wil
 </details>
 
 ## 12 June
-<details>
+<details markdown="block">
   <summary>Minutes</summary>
 
 ### Venue
