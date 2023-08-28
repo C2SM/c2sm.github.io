@@ -53,6 +53,9 @@ make -j 8
 ## Toolset
 In the [Tools](https://c2sm.github.io/tools) section, you can find all scripts and software related to pre- and postprocessing, toolchains and visualization.
 
+## Quarterly C2SM ICON Meeting
+[Minutes of the previous meetings](https://c2sm.github.io/events/icon_meeting.html){: .btn .btn-blue}
+
 ## Documentation
    * [ICON Tutorial (DWD) last update: Mar 2023](https://www.dwd.de/EN/ourservices/nwv_icon_tutorial/nwv_icon_tutorial_en.html)
    * MPI-M documentation [webpage](https://code.mpimet.mpg.de/projects/iconpublic/wiki/Documentation)
