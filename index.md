@@ -42,4 +42,3 @@ This is our main GitHub organization, which contains many repositories, includin
 ### [C2SM-RCM](https://github.com/C2SM-RCM)
 
 The C2SM-RCM organization contains all codes related to COSMO and tools like EXTPAR. For questions and access, please contact [Jonas Jucker](mailto:jonas.jucker@c2sm.ethz.ch).
-
