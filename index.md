@@ -27,13 +27,18 @@ and much more.
 - Matthieu Leclair (CHN L 18)
 - Urs Beyerle (CHN N 16.2)
 
-## Further information
+### Further information
 
-Further information about project staff and previous core team members can be found at our [ETH website](https://c2sm.ethz.ch/the-center/people/executive-office.html).
+Further information about C2SM project staff and previous core team members can be found at our [ETH website](https://c2sm.ethz.ch/the-center/people/executive-office.html).
 
 ## C2SM on GitHub
 
 C2SM maintains two GitHub organizations to distribute code to the community. 
 
-- C2SM: tbd
-- C2SM-RCM: tbd
+### [C2SM](https://github.com/C2SM)
+
+This is our main GitHub organization, which contains many repositories, including ICON. [How to get access](https://c2sm.github.io/models/icon.html#access)
+
+### [C2SM-RCM](https://github.com/C2SM-RCM)
+
+The C2SM-RCM organization contains all codes related to COSMO and tools like EXTPAR. For questions and access, please contact [Jonas Jucker](mailto:jonas.jucker@c2sm.ethz.ch).
