@@ -82,7 +82,7 @@ WS asks if Sven Werchner plans to present the plan for next year. DB replied´s 
 MJ asks when the GPU port of the VPRM model is planned. AH answers that this will be part of the GPU port for OEM. 
 </details>
 
-### 12 June
+## 12 June
 <details>
   <summary>Minutes</summary>
 
