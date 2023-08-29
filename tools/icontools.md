@@ -63,4 +63,4 @@ sbatch remap_ini
 
 ## Documentation
 * A [Tex-version](https://github.com/C2SM/icontools/blob/master/doc/icontools_doc.tex) of the official documentation is in the repository.
-* A [pdf-version](https://polybox.ethz.ch/index.php/s/P6zCBn5BIVzsxp7), 2020
+* A [pdf-version](https://polybox.ethz.ch/index.php/s/jdYaNrWFF8LjcrF), Sept 2023
