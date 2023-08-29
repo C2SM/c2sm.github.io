@@ -8,11 +8,20 @@ nav_order: -1
 
 Welcome to the website of the Center for Climate Systems Modeling (C2SM).
 
-Here, we collect helpful information for scientists and partners
+Here we collect helpful information for scientists and partners
 about our C2SM core team, tasks, support, models, tools, datasets
 and much more.
 
 ## Core Team
+
+The C2SM Core Team as part of the Executive Office currently consists of six scientific programmers.
+Their work is distributed among the following areas:
+
+- Tasks from the Working Groups
+- Maintenance of supported models and tools
+- Regular support for users
+- EXCLAIM project
+- Organization of workshops
 
 ### Executive Director
 
