@@ -16,16 +16,16 @@ and much more.
 
 ### Executive Director
 
-- Christina Schnadt Poberaj (CHN M 15.2)
+- [Christina Schnadt Poberaj](https://iac.ethz.ch/people-iac/person-detail.html?persid=116573) (CHN M 15.2)
 
 ### Scientific Programmers
 
-- Jonas Jucker (CHN M 15.1)
-- Michael Jähn (CHN M 15.1)
-- Annika Lauber (CHN M 15.1)
-- Ruth Lorenz (CHN M 15.1)
-- Matthieu Leclair (CHN L 18)
-- Urs Beyerle (CHN N 16.2)
+- [Jonas Jucker](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=210923) (CHN M 15.1)
+- [Michael Jähn](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091) (CHN M 15.1)
+- [Annika Lauber](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=235458) (CHN M 15.1)
+- [Ruth Lorenz](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=112356) (CHN M 15.1)
+- [Matthieu Leclair](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=221860) (CHN L 18)
+- [Urs Beyerle](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=49918) (CHN N 16.2)
 
 ### Further information
 
