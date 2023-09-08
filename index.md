@@ -6,13 +6,27 @@ nav_order: -1
 
 # Center for Climate Systems Modeling (C2SM)
 
-Welcome to the website of the Center for Climate Systems Modeling (C2SM).
+**Welcome to the user landing page of the Center for Climate Systems Modeling (C2SM).**
 
-Here, we collect helpful information for scientists and partners
+Here we collect helpful information for scientists and partners
 about our C2SM core team, tasks, support, models, tools, datasets
 and much more.
 
+Whether you're seeking a quick overview or in-depth details on a specific topic,
+this website is your comprehensive resource. 
+For additional information on specific projects, we have provided direct links,
+such as to documentation that we distribute directly with the code.
+
 ## Core Team
+
+The C2SM Core Team as is part of the Executive Office and currently consists
+of six scientific programmers. Their work is distributed among the following areas:
+
+- Tasks from the Working Groups
+- Maintenance of supported models and tools
+- Regular support for users
+- EXCLAIM project
+- Organization of workshops
 
 ### Executive Director
 
@@ -27,7 +41,7 @@ and much more.
 - [Matthieu Leclair](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=221860) (CHN L 18)
 - [Urs Beyerle](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=49918) (CHN N 16.2)
 
-### Further information
+### Further staff
 
 Further information about C2SM project staff and previous core team members can be found at our [ETH website](https://c2sm.ethz.ch/the-center/people/executive-office.html).
 
