@@ -15,4 +15,5 @@ Four different time periods are available:
 Every modelling group run an evaluation run (precipitation is described in Ban et al. 2021).
 Not all groups continued to run historical and rcp8.5 runs.
 The groups running WRF joined together to run historical and scenario runs (therefore they were sometimes run on different machines).
-An overview over all the model runs can be found here: Google sheet, data on Jülich server.
+An overview over all the avaialble model runs and which variables are available for which runs can be found here (link to file in polybox).
+More details on the different model runs e.g. info about the driving RCM and domains is here (link to Google doc).
