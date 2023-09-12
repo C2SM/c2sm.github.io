@@ -37,3 +37,20 @@ back_to_top_text: "Back to top"
 
 footer_content: "Copyright &copy; 2023 C2SM."
 
+callouts:
+  note:
+    title: Note
+    color: blue
+  note-title:
+    color: blue
+  attention:
+    title: Attention
+    color: yellow
+  attention-title:
+    color: yellow
+  hint:
+    title: Hint
+    color: green
+  hint-title:
+    color: green
+
