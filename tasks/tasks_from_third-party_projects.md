@@ -19,7 +19,7 @@ A member may also propose a task/tasks to be funded from their project, but wher
 The core team's contributions consist largely of technical model development and support tasks. Individual tasks may also include setting up and maintaining a project website, or organizing individual workshops or seminar series.
 
 ## Procedure for Proposing Participation in a Third-Party Project
-- The project PI contacts the C2SM Executive Director (ED) at the proposal stage by submitting a written proposal similar to the task proposals for group tasks.
-- The ED, along with an assigned core team member, will provide feedback to the PI and may review the proposal again.
-- If the proposal meets the above conditions, C2SM will consider it accepted and reserve time for its execution in the following year.
+- The project PI contacts the C2SM Executive Director (ED) at the proposal stage by submitting a written proposal similar to the task proposals for group tasks;
+- The ED, along with an assigned core team member, will provide feedback to the PI and may review the proposal again;
+- If the proposal meets the above conditions, C2SM will consider it accepted and reserve time for its execution in the following year;
 - C2SM will reserve approximately 3-7 person months (0.3-0.6 FTE) per year for tasks from external projects.
