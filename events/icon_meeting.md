@@ -1,88 +1,21 @@
 ---
-title: Quarterly Icon Meeting
+title: Quarterly ICON Meeting
 layout: default
 nav_order: 1
 parent: Events
 ---
-# 2023
 
-## March 16
-<details markdown="block">
-  <summary>Minutes</summary> 
-  
-### Venue
-Hybrid: ETH Zurich (L 17.1) and via Zoom
+# Quarterly ICON Meeting
 
-### Participants (on-site)
-Jonas Jucker (JJ), Annika Lauber (AL), Tamara Bandikowa (TB), Stefan Rüdisühli (SR), Jan Zibell (JZ), Guillaume Bertoli (GB), Athena Nghiem (AN), Andrea Stenke (AS), Doris Folini (DF), Jacobo Canton (JC), Boriana Chtirkova (BC)
+We invite you to participate in our quarterly C2SM ICON Meeting, designed to facilitate knowledge exchange among researchers and users.
+This regular meeting serves as a forum for the C2SM community to discuss their ongoing projects, share research findings, and collaborate effectively.
+The meeting also offers an avenue to receive updates on the latest developments in the ICON model from the C2SM core team.
+Moreover, it encourages interactions and collaboration with research groups from ETH Zurich, MeteoSwiss, Empa, and CSCS. 
 
-### Participants (Zoom)
-Michael Jähn (MJ), Tina Schnadt (TS), William Sawyer (WS), Joel Thanwerdas (JT), Dominik Brunner (DB), Nikolai Ponomarev (NP) , Arash Hamzehloo (AH), Lionel Constantin (LC)
+In case you have any questions or want to be added to the C2SM ICON mailing list, contact the meeting organizer,
+[Michael Jähn](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091).
 
-_Minutes by Annika Lauber_
-
-### Reports
-Michael Jähn, Annika Lauber, Jonas Jucker
-MJ welcomes all the participants to the meeting and presents the [news from C2SM about ICON](https://polybox.ethz.ch/index.php/s/i5g1gDDBhx99nxL).
-
-JJ reports that the ECHAM physics support is being dropped and replaced by NWP physics. DB notes that HAM is still coupled to ECHAM. Confirmed by JJ.
-
-WS asks if anyone knows the status of the ICON-Seamless project. The answer is no.
-
-JJ reports on the transition to Spack v0.18.1. WS asks what happens if you source `/project/g110/spack/user/daint/spack/share/spack/setup_env.sh` and there is no global instance anymore. JJ: As long as there is no change on Daint-side the old spack-instance stays functional. After the next upgrade C2SM will remove this instance.
-
-**Boriana Chtirkova**  
-BC investigates how changes in the SST affect radiation variables. She plans to complete her PhD in September.
-
-**Jacobo Canton**  
-JC has currently returned to COSMO but plans to work with ICON again.
-
-**Doris Folini**  
-DF helps BC with her PhD project. They use ICON v2.6.4 because it’s closer to CMIP6, which is being used in BC’s work.
-
-WS asks if it is possible to feed back their work into ICON v2.6.6. DS doesn’t know if this is possible. They are currently focused on BC finishing her PhD. DS suggests discussing offline.
-
-**Andrea Stenke**  
-AS plans to use ICON-ART for simulating trace elements such as selenium.
-
-**Athena Nghiem**  
-AN is working on implementing the cycling of the trace element arsenic (As) into ICON-ART and specifically now, she is currently working on implementing the atmospheric As chemistry into ART.
-
-**Guillaume Bertoli**  
-GB is working with a ML based radiation solver and is currently working on a paper.
-
-**Jan Zibell**  
-JZ is starting to use ICON for simulating the aquaplanet with v2.6.5. He looks into the sensitivity and variability of storm tracks.
-
-**Stefan Rüdisühli**  
-SR is supervising master’s thesis on time step effects.
-
-**William Sawyer**  
-WS has been working on the ICON development for a long time. He supports the port of the dycore to GPU and is happy to see that it’s bascially finished. He also works for EXCLAIM, where his main task is the modularization (or granularization) of ICON, i.e. adapting the interfaces in a way that you can pull out the Fortran version and plug it into the Python version. They are working on different schemes, like the diffusion, advection, dycore and microphysics schemes.
-
-CSCS will transform to new CI system. Everything will have to be compiled and run in a container on the new machine. So they are working on getting ICON-EXCLAIM into a container.
-
-DF asks if the hope is to have a stand-alone Python version of some aspects of ICON. WS confirms but adds that he cannot promise that the community will adopt it.
-
-JJ asks if it is possible to access the compute nodes from inside the container when running the CI system. WS replies that the compute nodes have to be selected before running. JJ asks if this means that compute nodes needed for the run are wasted on the build. WS confirms and offers to talk more about this.
-
-**Dominik Brunner et al.**  
-DB shoes overview slide. They are working with ICON-ART and are interested in atmospheric composition related to the transport of tracers.
-
-AH is working on porting ART to GPU. He is working on the OEM (online emission module). They are close to a 3x benchmark speedup.
-
-DB reports on master student Michael Steiner’s work on ICON-ART. They are perturbing a set of prior anthropogenic emission fluxes and optimize them with the Ensemble Kalman Filter.
-
-JT works on designing a tracer release experiment at global scale to try to benchmark chemistry-transport models like ICON-ART. DB is also reports on their work with VPRM where they simulate CO2. They look at the exchange of CO2 with the biosphere using a respiration model. They also simulate photosynthesis and are currently looking for a master student.
-
-WS asks what other contributions to HAMAM are planned. DB reports that they are working with KIT as a project partner. The first task is to port the chemistry part to GPU.
-
-WS asks if Sven Werchner plans to present the plan for next year. DB replied´s that he should contact Sven.
-
-MJ asks when the GPU port of the VPRM model is planned. AH answers that this will be part of the GPU port for OEM. 
-</details>
-
-## 12 June
+## ICON Meeting 2023/2 (12 June 2023)
 <details markdown="block">
   <summary>Minutes</summary>
 
@@ -217,3 +150,83 @@ NB mentions their efforts to complete the Python version and expresses hope that
 **Nikolai Ponomarev**  
 NP informs about their work on CO2 simulations in ICON-ART over Zurich. 
 </details>
+
+## ICON Meeting 2023/1 (16 March 2023)
+<details markdown="block">
+  <summary>Minutes</summary> 
+  
+### Venue
+Hybrid: ETH Zurich (L 17.1) and via Zoom
+
+### Participants (on-site)
+Jonas Jucker (JJ), Annika Lauber (AL), Tamara Bandikowa (TB), Stefan Rüdisühli (SR), Jan Zibell (JZ), Guillaume Bertoli (GB), Athena Nghiem (AN), Andrea Stenke (AS), Doris Folini (DF), Jacobo Canton (JC), Boriana Chtirkova (BC)
+
+### Participants (Zoom)
+Michael Jähn (MJ), Tina Schnadt (TS), William Sawyer (WS), Joel Thanwerdas (JT), Dominik Brunner (DB), Nikolai Ponomarev (NP) , Arash Hamzehloo (AH), Lionel Constantin (LC)
+
+_Minutes by Annika Lauber_
+
+### Reports
+Michael Jähn, Annika Lauber, Jonas Jucker
+MJ welcomes all the participants to the meeting and presents the [news from C2SM about ICON](https://polybox.ethz.ch/index.php/s/i5g1gDDBhx99nxL).
+
+JJ reports that the ECHAM physics support is being dropped and replaced by NWP physics. DB notes that HAM is still coupled to ECHAM. Confirmed by JJ.
+
+WS asks if anyone knows the status of the ICON-Seamless project. The answer is no.
+
+JJ reports on the transition to Spack v0.18.1. WS asks what happens if you source `/project/g110/spack/user/daint/spack/share/spack/setup_env.sh` and there is no global instance anymore. JJ: As long as there is no change on Daint-side the old spack-instance stays functional. After the next upgrade C2SM will remove this instance.
+
+**Boriana Chtirkova**  
+BC investigates how changes in the SST affect radiation variables. She plans to complete her PhD in September.
+
+**Jacobo Canton**  
+JC has currently returned to COSMO but plans to work with ICON again.
+
+**Doris Folini**  
+DF helps BC with her PhD project. They use ICON v2.6.4 because it’s closer to CMIP6, which is being used in BC’s work.
+
+WS asks if it is possible to feed back their work into ICON v2.6.6. DS doesn’t know if this is possible. They are currently focused on BC finishing her PhD. DS suggests discussing offline.
+
+**Andrea Stenke**  
+AS plans to use ICON-ART for simulating trace elements such as selenium.
+
+**Athena Nghiem**  
+AN is working on implementing the cycling of the trace element arsenic (As) into ICON-ART and specifically now, she is currently working on implementing the atmospheric As chemistry into ART.
+
+**Guillaume Bertoli**  
+GB is working with a ML based radiation solver and is currently working on a paper.
+
+**Jan Zibell**  
+JZ is starting to use ICON for simulating the aquaplanet with v2.6.5. He looks into the sensitivity and variability of storm tracks.
+
+**Stefan Rüdisühli**  
+SR is supervising master’s thesis on time step effects.
+
+**William Sawyer**  
+WS has been working on the ICON development for a long time. He supports the port of the dycore to GPU and is happy to see that it’s bascially finished. He also works for EXCLAIM, where his main task is the modularization (or granularization) of ICON, i.e. adapting the interfaces in a way that you can pull out the Fortran version and plug it into the Python version. They are working on different schemes, like the diffusion, advection, dycore and microphysics schemes.
+
+CSCS will transform to new CI system. Everything will have to be compiled and run in a container on the new machine. So they are working on getting ICON-EXCLAIM into a container.
+
+DF asks if the hope is to have a stand-alone Python version of some aspects of ICON. WS confirms but adds that he cannot promise that the community will adopt it.
+
+JJ asks if it is possible to access the compute nodes from inside the container when running the CI system. WS replies that the compute nodes have to be selected before running. JJ asks if this means that compute nodes needed for the run are wasted on the build. WS confirms and offers to talk more about this.
+
+**Dominik Brunner et al.**  
+DB shoes overview slide. They are working with ICON-ART and are interested in atmospheric composition related to the transport of tracers.
+
+AH is working on porting ART to GPU. He is working on the OEM (online emission module). They are close to a 3x benchmark speedup.
+
+DB reports on master student Michael Steiner’s work on ICON-ART. They are perturbing a set of prior anthropogenic emission fluxes and optimize them with the Ensemble Kalman Filter.
+
+JT works on designing a tracer release experiment at global scale to try to benchmark chemistry-transport models like ICON-ART. DB is also reports on their work with VPRM where they simulate CO2. They look at the exchange of CO2 with the biosphere using a respiration model. They also simulate photosynthesis and are currently looking for a master student.
+
+WS asks what other contributions to HAMAM are planned. DB reports that they are working with KIT as a project partner. The first task is to port the chemistry part to GPU.
+
+WS asks if Sven Werchner plans to present the plan for next year. DB replied´s that he should contact Sven.
+
+MJ asks when the GPU port of the VPRM model is planned. AH answers that this will be part of the GPU port for OEM. 
+</details>
+
+{: .note }
+
+> We are trying to transfer older meetings notes here as soon as possible.
