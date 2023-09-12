@@ -4,6 +4,8 @@ theme: just-the-docs
 
 url: https://c2sm.github.io
 
+search_enabled: true
+
 aux_links:
   C2SM Website: https://c2sm.ethz.ch
 # Makes Aux links open in a new tab. Default is false
