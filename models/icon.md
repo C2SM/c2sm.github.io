@@ -1,10 +1,9 @@
 ---
-title: ICON Icosahedral Nonhydrostatic Weather and Climate Model
+title: ICON
 layout: default
 nav_order: 1
 parent: Models
 ---
-
 
 # ICON: Icosahedral Nonhydrostatic Weather and Climate Model
 ICON is a global model suitable for climate and weather predictions for both, regional and global domains.
@@ -28,7 +27,7 @@ Spack takes care of configuring and building ICON. For detailed instructions, pl
 
 ### Euler (ETHZ)
 
-ICON needs to be configured before compilation. There is a configure-script for each compiler and/or machines located in config. The general procedure using configuration files is independent of machines or compilers.
+ICON needs to be configured before compilation. There is a configure script for each compiler and/or machines located in config. The general procedure using configuration files is independent of machines or compilers.
 
 ```bash
 ./config/[machine_you_want_to_compute_on]/[configuration_filename]
@@ -44,23 +43,27 @@ source modules.env
 # compile
 make -j 8
 ``` 
+
 ## Input files
 
-**CSCS:** ```/users/icontest/pool/data/ICON```
-
-**Euler:** ```/cluster/work/climate/icon_input```
+- **CSCS:** `/users/icontest/pool/data/ICON`
+- **Euler:** `/cluster/work/climate/icon_input`
 
 
 ## Toolset
-   * **[Extpar:](https://c2sm.github.io/tools/extpar.html)** External parameters for the ICON-grid (preprocessing)
-   * [**Icontools:**](https://c2sm.github.io/tools/icontools.html) A set of tools for extracting and remapping ICON fields (preprocessing)
-   * [**Spice:**](https://c2sm.github.io/tools/spice.html) The Starter Package for ICON-CLM Experiments (processing chain)
-   * [**Processing Chain:**](https://github.com/C2SM/processing-chain) COSMO and ICON Processing Chain 
-   * [**icon-vis:**](https://github.com/C2SM/icon-vis) Visualizing ICON output data on the native grid
+In the [Tools](https://c2sm.github.io/tools) section, you can find all scripts and software related to pre- and postprocessing, toolchains and visualization.
+
+## Quarterly C2SM ICON Meeting
+[Minutes of the previous meetings](https://c2sm.github.io/events/icon_meeting.html){: .btn .btn-blue}
+
+## Projects
+[EXCLAIM - Extreme scale computing and data platform for cloud-resolving weather and climate modeling](https://exclaim.ethz.ch/){: .btn .btn-blue}  
+[ICON-HAMMOZ](https://redmine.hammoz.ethz.ch/){: .btn .btn-blue}  
+
 
 ## Documentation
    * [ICON Tutorial (DWD) last update: Mar 2023](https://www.dwd.de/EN/ourservices/nwv_icon_tutorial/nwv_icon_tutorial_en.html)
    * MPI-M documentation [webpage](https://code.mpimet.mpg.de/projects/iconpublic/wiki/Documentation)
      
 ## External Software
-   * [CDO](https://code.zmaw.de/projects/cdo), climate data operator
+   * [CDO](https://code.zmaw.de/projects/cdo), Climate Data Operators
