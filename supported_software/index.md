@@ -2,7 +2,7 @@
 title: Supported Software and Libraries
 layout: default
 nav_order: 2.1
-parent: Support
+has_children: false
 ---
 
 # Supported Software and Libraries
@@ -176,6 +176,7 @@ CSCS: Sam Omlin (samuel.omlin@cscs.ch)
 {: .no_toc }
 
 {: .note-title }
+
 > Outdated
 >
 > This needs to be updated or even removed. The relevance is at a higher level now, more C2SM than COSMO only.
