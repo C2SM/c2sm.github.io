@@ -6,7 +6,7 @@ nav_order: -1
 
 # Center for Climate Systems Modeling (C2SM)
 
-**Welcome to the user landing page of the Center for Climate Systems Modeling (C2SM).**
+**Welcome to the C2SM User Landing Page!**
 
 Here we collect helpful information for scientists and partners
 about our C2SM core team, tasks, support, models, tools, datasets
