@@ -16,7 +16,7 @@ Tasks can be submitted as issues through our GitHub repository [Tasks-Support](h
 The Core Team will evaluate the proposals and may provide feedback/ask questions/reiterate the proposals to the groups. Priority will be given to tasks with greater benefit to multiple C2SM groups. Updates on the tasks will be given directly on the submitted task in the GitHub repository.
 
 3. **Core Team starts working on task:**
-Depending on the urgency or current workload of the Core Team, C2SM may begin work on the task immediately or at a later date
+Depending on the urgency or current workload of the Core Team, C2SM may begin work on the task immediately or at a later point in time.
 
 4. **Feedback and Discussion of Tasks:**
-During the semi-annual WG Day, to which representatives of each C2SM group member are invited, the status and future of submitted tasks are discussed. Members can provide critical feedback on the process.
+During the semi-annual WG Day, to which representatives of each C2SM member group are invited, the status and future of submitted tasks are discussed. Members can provide critical feedback on the process.
