@@ -5,7 +5,7 @@ nav_order: 1
 parent: Tasks
 ---
 
-# Working Group
+# Working Groups
 
 ## WG 1 - High Performance Computing for Weather and Climate Modeling : activities which primarily focus on modern technologies
 This group aims at further developing and using weather and climate models like ICON or COSMO using new technologies (e.g. beyond CPU architectures).
