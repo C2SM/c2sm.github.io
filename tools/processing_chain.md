@@ -6,27 +6,30 @@ parent: Tools
 
 # COSMO/ICON Processing Chain
 
-The Processing Chain is a collection of python scripts to prepare necessary input data, submit compute-jobs to the queue on Piz Daint and to apply post-processing steps. 
-Besides being able to deal with standard versions of the COSMO or ICON model, it can als deal with several variants of them, namely COSMO-GHG, COSMO-ART and ICON-ART.
-The chain can flexibly be adapted according to your needs, e.g., by creating your own case, adding new jobs or custom scripts.
+The Processing Chain is a collection of Python scripts to prepare the necessary input data, submit the compute jobs to the queue on Piz Daint and to apply post-processing steps. 
+In addition to the standard versions of the COSMO and ICON models, it can als handle several variants of these models, namely COSMO-GHG, COSMO-ART and ICON-ART.
+The chain can be flexibly adapted according to your needs, e.g., by creating your own case, adding new jobs or custom scripts.
 
-The code is a product of a joint collaboration between Empa and C2SM. 
-Originally, it has been developed by Chrstoph Knote using pure Bash scripts.
+The code is the product of a joint collaboration between Empa and C2SM. 
+It was originally developed by Christoph Knote using pure Bash scripts.
 In 2018, Empa's [Atmospheric Modelling and Remote Sensing group](https://www.empa.ch/web/s503/modelling-remote-sensing) translated the code into Python,
 making it more flexible and easier to maintain.
 
-Since 2021, the Processing Chain is distributed to the whole C2SM
-community and hosted at the C2SM GitHub organization.
-
-has been adapted for running on Piz Daint and is distributed to users via the C2SM GitHub organization. Regular testing if performed via [Jenkins](https://jenkins-mch.cscs.ch/job/Spice/job/spice-weekly/) (requires access) to ensure that the code runs stably on the system.
+Since 2021, the Processing Chain has been distributed to the entire C2SM
+community and hosted on the [C2SM GitHub organization](https://github.com/C2SM/processing-chain/). Regular testing is done via [Jenkins](https://jenkins-mch.cscs.ch/job/ProcessingChain/job/processing-chain-weekly/) (requires access) to ensure that the code runs stably on the system.
 
 If you need any help, please contact [Michael Jähn](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091).
 
-## Code
+## Features
 
-* [Spice at the C2SM Github organization](https://github.com/C2SM/spice)
-* [Spice at DKRZ GitLab (original code)](https://gitlab.dkrz.de/clm-community/spice) (requires access to DKRZ GitLab)
+- Automatic folder structure creation
+- Easy creation of own cases
+- Namelist templates
+- Nested runs possible
+- Different examples for COSMO and ICON available
+- and much more!
 
-## Documentation
+## Code and Documentation
 
-* [https://clm-docs.scrollhelp.site/spice-doc/](https://clm-docs.scrollhelp.site/spice-doc/)
+* [Processing Chain at the C2SM Github organization](https://github.com/C2SM/processing-chain)
+
