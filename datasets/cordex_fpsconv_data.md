@@ -1,3 +1,10 @@
+---
+title: CORDEX-FPSCONV data
+layout: default
+nav_order: 1
+parent: datasets
+---
+
 # CORDEX-FPSCONV data
 
 The CORDEX-FPSCONV dataset is a multi-model ensemble of convection permitting regional climate model runs created within WCRP-CORDEX.
