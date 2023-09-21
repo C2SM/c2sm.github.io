@@ -9,6 +9,7 @@ parent: datasets
 
 The CORDEX-FPSCONV dataset is a multi-model ensemble of convection permitting regional climate model runs created within [WCRP-CORDEX](https://cordex.org/experiment-guidelines/flagship-pilot-studies/endorsed-cordex-flagship-pilote-studies/europe-mediterranean-convective-phenomena-at-high-resolution-over-europe-and-the-mediterranean/).
 The model runs are described in [Coppola et al. 2020](https://link.springer.com/article/10.1007/s00382-018-4521-8), [Ban et al. 2021](https://link.springer.com/article/10.1007/s00382-021-05708-w) and [Pichelli et al. 2021](https://link.springer.com/article/10.1007/s00382-021-05657-4) and cover the ALP-3 domain.
+![](images/alp-3_domain.png)
 
 So far, only the data from ETH (CLMcom-ETH-COSMO-crCLIM) has been CMORized, for all other models the data format is a preliminary version (from ~September 2022) and not the one that will go to ESGF.
 At the moment, the data archive at CSCS (/store/c2sm/c2sme/CH202X/CORDEX-FPSCONV/) contains mainly 1-hourly precipitation and temperature and daily maximum temperature and minimum temperature.
