@@ -2,11 +2,12 @@
 title: Climate Model Data
 layout: default
 nav_order: 1
-parent: datasets
+parent: Datasets
 ---
 
+# Climate Model Data
 
-# "Raw" CMIP archives (as downloaded from ESGF)
+## "Raw" CMIP archives (as downloaded from ESGF)
 
 | Archive   | Size (#Files) (3)   |	Location 	     | Access          | Status           |	Variables  |	Resolution |
 | --------- | ------------------- | -------------- | ----------------|------------------|------------| -----------|
@@ -15,7 +16,7 @@ parent: datasets
 | CMIP5     | 130 TB (700’000)    | IAC            |  direct / rsync | monthly updated  |	           | native |
 | CMIP6     |	520 TB (5’500’000)  | IAC, Euler (4) |  direct / rsync | weekly updated   |	           | native |
 
-# CMIP next generation (checked, standardized, regridded to common grid)
+## CMIP next generation (checked, standardized, regridded to common grid)
 
 | Archive   | Size (#Files) (3)   |	Location 	     | Access          | Status           |	Variables  |	Resolution |
 | --------- | ------------------- | -------------- | ----------------|------------------|------------| -----------|
@@ -23,14 +24,14 @@ parent: datasets
 | CMIP5-ng (2) | 33 TB (100’000)  | IAC            | direct / rsync  | frozen (2019-09) |  	         | native and 2.5°x2.5° |
 | CMIP6-ng (2) | 175 TB (500’000) | IAC, Euler (4) | direct / rsync  | ongoing          |	monthly: co2mass, hfls, mrro, npp, rlds, rsdscs, rtmt, tasmin, tsl, evspsbl, hfss, mrros, pr, rldscs, rsdt, sftlf, tauu, zg500, evspsblsoi, hurs, mrso prw, rlus, rsus, siconc, tauv, evspsblveg, huss, mrsol, psl, rlut, rsuscs, ta, tos, areacella, gpp, lai, mrsos, ra, rlutcs, rsut, tas, tran, clt, hfds, nbp, rh, rsds, rsutcs, tasmax, treeFrac, zos, daily: pr, tas, tasmin, tasmax, zg500, mrro |	native and 2.5°x2.5° |
 
-# "Raw" CORDEX (as downloaded)
+## "Raw" CORDEX (as downloaded)
 
 | Archive   | Size (#Files) (3)   |	Location 	     | Access          | Status           |	Variables  |	Resolution |
 | --------- | ------------------- | -------------- | ----------------|------------------|------------| -----------|
 | CORDEX    |	370 TB (800’000) 	  | IAC, Euler (4), CSCS (5) | direct / rsync | monthly updated | | 0.44° and 0.11° |
 | CORDEX-ReKliEs | 23 TB (100’000) | IAC, Euler (4)          | direct         |	monthly updated |	|  	0.11° |
 
-# CORDEX data for climate scenarios (checked, regridded to identical grids if necessary)
+## CORDEX data for climate scenarios (checked, regridded to identical grids if necessary)
 
 | Archive   | Size (#Files) (3)   |	Location 	     | Access          | Status           |	Variables  |	Resolution |
 | --------- | ------------------- | -------------- | ----------------|------------------|------------| -----------|

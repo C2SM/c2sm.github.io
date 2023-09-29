@@ -2,10 +2,12 @@
 title: Observational and re-analysis datasets
 layout: default
 nav_order: 1
-parent: datasets
+parent: Datasets
 ---
 
-# "Raw" Archives (as downloaded from original source) 	  	  	  	  	  	  	  	  	 
+# Observational and re-analysis datasets
+
+## "Raw" Archives (as downloaded from original source) 	  	  	  	  	  	  	  	  	 
 
 | Archive 	 | Size (1) |	Location |	Access 	| Status 	                                | time period 	 | Variables 	| Temporal Resolution 	| Spatial Resolution 	| more information |
 | -----------|----------|----------|----------|-----------------------------------------|----------------|-------------|-----------------------|---------------------|-------------------|
@@ -18,7 +20,8 @@ parent: datasets
 | CERRA      | 16T      |	IAC (6)  |	direct  |	updated |	1985 - present |	2t, t, r, ... | 	3-hourly | 	5x5km |	sub-daily regional reanalysis data for Europe, https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-single-levels?tab=overview Wishlist: https://docs.google.com/document/d/1YtIabO5PMTsD_i_PqycmzIbrOYigNmuublt_i6FKrhY/edit#heading=h.brsa23yzcugp, download status: https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0, space constraints prevent us from keeping all the 3-hourly data which have been processed into daily data, see sheet on download process |
 | CERRA-Land | 12T      | IAC (7)  | direct   |	updated |	1985 - present |	snom, sro, tp, ... |	3-hourly |	5x5km |	https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-land?tab=overview, Wishlist: https://docs.google.com/document/d/1YtIabO5PMTsD_i_PqycmzIbrOYigNmuublt_i6FKrhY/edit#heading=h.brsa23yzcugp, download status: https://docs.google.com/spreadsheets/d/1e58ps_yBmxUG0jvL8ZmNNr7Zz_UXuqIZsz4MdRAzvbM/edit#gid=0, space constraints prevent us from keeping all the 3-hourly data which have been processed into daily data, see sheet on download process |
 
-# Processed Archives (e.g. aggregated or regridded) 	 
+## Processed Archives (e.g. aggregated or regridded) 	 
+
 | Archive 	 | Size (1) |	Location |	Access | Status  | time period 	 | Variables 	              | Temporal Resolution | Spatial Resolution 	| more information |
 | -----------|----------|----------|---------|---------|---------------|--------------------------|---------------------|---------------------|-------------------|
 | E-OBS and MCH |	50G 	| IAC (8)  |	direct |	static |	1971-2020    |	tas, tasmax, tasmin, pr |	daily               |	0.11°               |	E-OBS (v23.1e and v26.0e) data with higher resolution MCH data over Switzerland (prepared for CH2025) |
