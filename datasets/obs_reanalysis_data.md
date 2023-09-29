@@ -1,11 +1,11 @@
 ---
-title: Observational and re-analysis datasets
+title: Observational and Re-analysis Datasets
 layout: default
 nav_order: 1
 parent: Datasets
 ---
 
-# Observational and re-analysis datasets
+# Observational and Re-analysis Datasets
 
 ## "Raw" Archives (as downloaded from original source) 	  	  	  	  	  	  	  	  	 
 
