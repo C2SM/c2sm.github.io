@@ -42,7 +42,22 @@ source modules.env
 
 # compile
 make -j 8
-``` 
+```
+
+## Run test case with ICON
+In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *mch_ch_lowres*, you can use the *make_runscripts* function.
+
+```bash
+./make_runscripts mch_ch_lowres
+```
+
+To run the created runscript, navigate to the *run* subdirectory and submit the runscript.
+
+```bash
+cd run && sbatch ./exp.mch_ch_lowres.run
+```
+
+You may need to change the account in the runscript to one that you are allowed to use. Alternatively, you can also add `--account <my_account_id>` to the sbatch command.
 
 ## Input files
 
