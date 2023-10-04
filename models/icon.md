@@ -17,13 +17,13 @@ In order to get access to the [ICON repository hosted on the C2SM GitHub organiz
   ```bash
   git clone --recurse-submodules git@github.com:C2SM/icon.git
   ```
-  If you don't already have an ssh key set up for GitHub, but would like to do so, follow the [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+  If you don't already have an SSH key set up for GitHub, but would like to do so, follow the [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
     
 ## Configure and compile
 The ICON build mechanism is different on Piz Daint and Euler. On Daint, Spack is used, whereas on Euler, ICON is build manually with configuration files. 
 
 ### Piz Daint
-Spack takes care of configuring and building ICON. For detailed instructions, please consider the official spack-c2sm [documentation](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon)
+Spack takes care of configuring and building ICON. For detailed instructions, please consider the official spack-c2sm documentation for [setting up a Spack instance](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin) and for [installing ICON](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon).
 
 ### Euler (ETHZ)
 
