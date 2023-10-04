@@ -27,7 +27,7 @@ Spack takes care of configuring and building ICON. For detailed instructions, pl
 
 ### Euler (ETHZ)
 
-ICON needs to be configured before compilation. There is a configure script for each compiler and/or machines located in config. The general procedure using configuration files is independent of machines or compilers.
+ICON needs to be configured before compilation. There is a configure script for each compiler and/or machine located in the folder *config*. The general procedure using configuration files is independent of machines or compilers.
 
 ```bash
 ./config/[machine_you_want_to_compute_on]/[configuration_filename]
