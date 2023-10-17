@@ -7,7 +7,7 @@ parent: Tools
 # DWD ICON Tools
 
 The DWD ICON Tools contain a set of routines which may be suitable for reading, remapping and writing of fields from and to predefined grids,
-e.g. regular (lat-lon, gaussian) or triangular (ICON). It can be used to genereta boundary and initial conditions for ICON-LAM simulations.
+e.g. regular (lat-lon, gaussian) or triangular (ICON). It can be used to generate boundary conditions (BC) and initial conditions for ICON-LAM simulations.
 
 ## Access
 
