@@ -52,13 +52,13 @@ icongridgen --nml icontools/C2SM/gridgen.nml
 
 This manual refers to the workflow MeteoSwiss is currently using to run LAM simulations.
 
-* Add fields `FI` and `z` from IFS analysis to BC prior the interpolation using `cdo` (GRIB only). To use the `cdo` command, make sure the module is loaded: `module load daint-gpu CDO`
+* Add fields `FI` and `z` from IFS analysis to BC prior the interpolation using `cdo` (GRIB only). To use the `cdo` command, make sure the module is loaded: `module load daint-gpu CDO`.
 
 ```bash
-cdo -selname,FI analysis fi_file
-cdo -selname,z analysis z_file
-cdo settime,'03:00:00'  fi_file fi_file_time
-cdo settime,'03:00:00'  z_file z_file_time
+cdo -selname,FI analysis_file fi_file
+cdo -selname,z analysis_file z_file
+cdo settime,'03:00:00' fi_file fi_file_time
+cdo settime,'03:00:00' z_file z_file_time
 cdo setreftime,2019-09-30,03:00:00  z_file_time z_file_reftime
 cat file_for_BC zfile_reftime fi_file_time > complete_file
 ```
