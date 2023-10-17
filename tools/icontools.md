@@ -68,13 +68,13 @@ cat file_for_BC zfile_reftime fi_file_time > complete_file
 * Remap IFS data for BC by
 
  ```bash
-sbatch remap_lbc
+sbatch -A <account> icontools/C2SM/remap_lbc
 ``` 
 
 * Remap IFS data for analysis
 
  ```bash
-sbatch remap_ini
+sbatch -A <account> icontools/C2SM/remap_ini
 ```
 
 ## Documentation
