@@ -37,17 +37,22 @@ Most likely you will use the DWD ICON tools to generate a new grid or interpolat
 
 Below is a recipe to create initial and boundary files for an ICON-LAM run on Piz Daint.
 
-### Generate new ICON grid
+### Clone the repository
+```bash
+git clone git@github.com:C2SM/icontools.git
+```
+
+### Generate a new ICON grid
 
  ```bash
-./icongridgen --nml gridgen.nml
+icongridgen --nml icontools/C2SM/gridgen.nml
 ``` 
 
 ### Interpolate BC from IFS
 
 This manual refers to the workflow MeteoSwiss is currently using to run LAM simulations.
 
-* Add fields `FI` and `z` from IFS analysis to BC prior the interpolation using `cdo` (GRIB only).
+* Add fields `FI` and `z` from IFS analysis to BC prior the interpolation using `cdo` (GRIB only). To use the `cdo` command, make sure the module is loaded: `module load daint-gpu CDO`
 
 ```bash
 cdo -selname,FI analysis fi_file
