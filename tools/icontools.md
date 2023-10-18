@@ -63,15 +63,15 @@ cdo setreftime,2019-09-30,03:00:00  z_file_time z_file_reftime
 cat file_for_BC zfile_reftime fi_file_time > complete_file
 ```
 
-* Adapt scripts remap_ini and remap_lbc to your needs
+* Adapt scripts `icontools/C2SM/remap_ini` and `icontools/C2SM/remap_lbc` to your needs
 
-* Remap IFS data for BC by
+* Remap IFS data for BC:
 
  ```bash
 sbatch -A <account> icontools/C2SM/remap_lbc
 ``` 
 
-* Remap IFS data for analysis
+* Remap IFS data for analysis:
 
  ```bash
 sbatch -A <account> icontools/C2SM/remap_ini
