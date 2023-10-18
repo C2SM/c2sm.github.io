@@ -7,7 +7,7 @@ parent: Tools
 # DWD ICON Tools
 
 The DWD ICON Tools contain a set of routines which may be suitable for reading, remapping and writing of fields from and to predefined grids,
-e.g. regular (lat-lon, gaussian) or triangular (ICON). It can be used to genereta boundary and initial conditions for ICON-LAM simulations.
+e.g. regular (lat-lon, gaussian) or triangular (ICON). It can be used to generate lateral boundary conditions (LBC) and initial conditions (IC) for ICON-LAM simulations.
 
 ## Access
 
@@ -18,10 +18,16 @@ please contact your group's technical contact. They will be responsible for addi
 
 Spack takes care of configuring and building Iontools. For detailed instructions,
 please consider the official [spack-c2sm documentation](https://c2sm.github.io/spack-c2sm/latest).
-The following spack command should be sufficient for most cases:
+The following Spack installation should be sufficient for most cases:
 
 ```bash
 spack install icontools@c2sm-master%gcc
+```
+
+After the installation, you need to load the package with Spack:
+
+```bash
+spack load icontools
 ```
 
 ## Run
@@ -31,39 +37,44 @@ Most likely you will use the DWD ICON tools to generate a new grid or interpolat
 
 Below is a recipe to create initial and boundary files for an ICON-LAM run on Piz Daint.
 
-### Generate new ICON grid
+### Clone the repository
+```bash
+git clone git@github.com:C2SM/icontools.git
+```
+
+### Generate a new ICON grid
 
  ```bash
-./icongridgen --nml gridgen.nml
+icongridgen --nml icontools/C2SM/gridgen.nml
 ``` 
 
 ### Interpolate BC from IFS
 
 This manual refers to the workflow MeteoSwiss is currently using to run LAM simulations.
 
-* Add fields `FI` and `z` from IFS analysis to BC prior the interpolation using `cdo` (GRIB only).
+* Add fields `FI` and `z` from IFS analysis to LBC prior the interpolation using `cdo` (GRIB only). To use the `cdo` command, make sure the module is loaded: `module load daint-gpu CDO`.
 
 ```bash
-cdo -selname,FI analysis fi_file
-cdo -selname,z analysis z_file
-cdo settime,'03:00:00'  fi_file fi_file_time
-cdo settime,'03:00:00'  z_file z_file_time
+cdo -selname,FI analysis_file fi_file
+cdo -selname,z analysis_file z_file
+cdo settime,'03:00:00' fi_file fi_file_time
+cdo settime,'03:00:00' z_file z_file_time
 cdo setreftime,2019-09-30,03:00:00  z_file_time z_file_reftime
-cat file_for_BC zfile_reftime fi_file_time > complete_file
+cat lbc_file zfile_reftime fi_file_time > complete_file
 ```
 
-* Adapt scripts remap_ini and remap_lbc to your needs
+* Adapt scripts `icontools/C2SM/remap_ini` and `icontools/C2SM/remap_lbc` to your needs
 
-* Remap IFS data for BC by
+* Remap IFS data for BC:
 
  ```bash
-sbatch remap_lbc
+sbatch -A <account> icontools/C2SM/remap_lbc
 ``` 
 
-* Remap IFS data for analysis
+* Remap IFS data for analysis:
 
  ```bash
-sbatch remap_ini
+sbatch -A <account> icontools/C2SM/remap_ini
 ```
 
 ## Documentation
