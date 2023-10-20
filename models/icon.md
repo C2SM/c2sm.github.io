@@ -60,8 +60,7 @@ To run the created runscript, navigate to the *run* subdirectory and submit the 
 ```bash
 cd run && sbatch ./exp.mch_ch_lowres.run
 ```
-
-You may need to change the account in the runscript to one that you are allowed to use. Alternatively, you can also add `--account <my_account_id>` to the sbatch command.
+You may need to adjust the account in the runscript to match your permissions. Alternatively, you can include `--account <my_account_id>` in the `sbatch` command.
 
 ## Input files
 
