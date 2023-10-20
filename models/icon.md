@@ -62,13 +62,13 @@ cd run && sbatch ./exp.mch_ch_lowres.run
 ```
 You may need to adjust the account in the runscript to match your permissions. Alternatively, you can include `--account <my_account_id>` in the `sbatch` command.
 
-## Input files
+## Input data
 
-- **CSCS:** `/users/icontest/pool/data/ICON`
+- **Piz Daint (CSCS):** `/users/icontest/pool/data/ICON`
 - **Euler:** `/cluster/work/climate/icon_input`
 
 
-## Tools
+## Related tools
 In the [Tools](https://c2sm.github.io/tools) section, you will find all the scripts and software related to pre- and post-processing, toolchains, and visualization.
 
 ## Quarterly C2SM ICON Meeting
