@@ -75,7 +75,7 @@ In the [Tools](https://c2sm.github.io/tools) section, you will find all the scri
 [Minutes of the previous meetings](https://c2sm.github.io/events/icon_meeting.html){: .btn .btn-blue}
 
 ## Projects
-[EXCLAIM - Extreme scale computing and data platform for cloud-resolving weather and climate modeling](https://exclaim.ethz.ch/){: .btn .btn-blue}  
+[EXCLAIM](https://exclaim.ethz.ch/){: .btn .btn-blue}  
 [ICON-HAMMOZ](https://redmine.hammoz.ethz.ch/){: .btn .btn-blue}  
 
 
