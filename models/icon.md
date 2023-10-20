@@ -68,8 +68,8 @@ You may need to adjust the account in the runscript to match your permissions. A
 - **Euler:** `/cluster/work/climate/icon_input`
 
 
-## Toolset
-In the [Tools](https://c2sm.github.io/tools) section, you can find all scripts and software related to pre- and postprocessing, toolchains and visualization.
+## Tools
+In the [Tools](https://c2sm.github.io/tools) section, you will find all the scripts and software related to pre- and post-processing, toolchains, and visualization.
 
 ## Quarterly C2SM ICON Meeting
 [Minutes of the previous meetings](https://c2sm.github.io/events/icon_meeting.html){: .btn .btn-blue}
