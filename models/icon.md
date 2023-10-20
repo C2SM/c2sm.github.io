@@ -5,12 +5,14 @@ nav_order: 1
 parent: Models
 ---
 
-# ICON: Icosahedral Nonhydrostatic Weather and Climate Model
-ICON is a global model suitable for climate and weather predictions for both, regional and global domains.
+# ICON
+ICON (Icosahedral Nonhydrostatic Weather and Climate Model) is a global model suitable for climate and weather prediction at regional and global domains.
 It is a joint project of [DWD](https://www.dwd.de/DE/Home/home_node.html), [MPI-M](https://mpimet.mpg.de/startseite) and [KIT](https://www.kit.edu/).
 
+C2SM facilitates the utilization of ICON on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) and [Euler](https://scicomp.ethz.ch/wiki/Euler) computing platforms.
+
 ## Access
-In order to get access to the [ICON repository hosted on the C2SM GitHub organization](https://github.com/C2SM/icon), please contact your group's technical contact. They will be responsible for adding you to the appropriate user group. 
+To gain access to the [ICON repository hosted on the C2SM GitHub organization](https://github.com/C2SM/icon), please contact your group's technical contact. They will be responsible for adding you to the appropriate user group. 
 
  Once you have access, clone the repository from GitHub using the SSH protocol:
 
@@ -20,29 +22,31 @@ In order to get access to the [ICON repository hosted on the C2SM GitHub organiz
   If you don't already have an SSH key set up for GitHub, but would like to do so, follow the [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
     
 ## Configure and compile
-The ICON build mechanism is different on Piz Daint and Euler. On Daint, Spack is used, whereas on Euler, ICON is build manually with configuration files. 
+The ICON build process varies between Piz Daint and Euler. The CSCS platform Piz Daint uses Spack, whereas the ETHZ machine Euler requires manual build configuration for ICON. Instructions for both platforms are provided below.
 
 ### Piz Daint
-Spack takes care of configuring and building ICON. For detailed instructions, please consider the official spack-c2sm documentation for [setting up a Spack instance](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin) and for [installing ICON](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon).
+For configuring and building ICON with Spack, please refer to the official spack-c2sm documentation, which provides instructions for [setting up a Spack instance](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin) and [installing ICON](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon).
 
-### Euler (ETHZ)
+### Euler
+Before compiling ICON, it is essential to configure it using the respective script in the *config* folder. The configuration process using these files remains consistent across different machines and compilers.
 
-ICON needs to be configured before compilation. There is a configure script for each compiler and/or machine located in the folder *config*. The general procedure using configuration files is independent of machines or compilers.
-
+Configure ICON:
 ```bash
-./config/[machine_you_want_to_compute_on]/[configuration_filename]
+./config/[platform]/[configuration_file]
 ```
-On Euler, compile with gcc, O2 and CPU:
-
+Load required modules:
 ```bash
-./config/ethz/euler.cpu.gcc.O2
-
-# load the required modules
 source modules.env
-
-# compile
+```
+Compile ICON:
+```bash
 make -j 8
 ```
+
+#### Compile with GCC using -O2 and CPU-specific optimizations:
+- platform = ethz
+- configuration_file = euler.cpu.gcc.O2
+
 
 ## Run test case with ICON
 In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *mch_ch_lowres*, you can use the *make_runscripts* function.
