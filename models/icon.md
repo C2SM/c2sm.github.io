@@ -63,7 +63,7 @@ cd run && sbatch ./exp.mch_ch_lowres.run
 You may need to adjust the account in the runscript to match your permissions. Alternatively, you can include `--account <my_account_id>` in the `sbatch` command.
 
 ## Input data
-
+ICON input data are stored at the following locations:
 - **Piz Daint (CSCS):** `/users/icontest/pool/data/ICON`
 - **Euler:** `/cluster/work/climate/icon_input`
 
