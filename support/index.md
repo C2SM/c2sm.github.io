@@ -12,3 +12,6 @@ User Support refers to C2SM's efforts to ensure that all supported software runs
 ## Request support
 
 To request regular support, please [use our discussion forum](https://github.com/C2SM/Tasks-Support/discussions/categories/support). The C2SM core team will be notified and will try to respond as soon as possible. In addition, all C2SM members can participate in these discussions and help as well.
+
+![](assets/Support_Forum.png)
+*Different threads in our discussion forum*
