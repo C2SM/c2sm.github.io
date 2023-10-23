@@ -11,6 +11,9 @@ It is a joint project of [DWD](https://www.dwd.de/DE/Home/home_node.html), [MPI-
 
 C2SM facilitates the utilization of ICON on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) and [Euler](https://scicomp.ethz.ch/wiki/Euler) computing platforms.
 
+To stay informed about what is going on in the ICON world and to get to know other ICON users, please attend our [quarterly ICON meeting](https://c2sm.github.io/events/icon_meeting.html).
+
+
 ## Access
 To gain access to the [ICON repository hosted on the C2SM GitHub organization](https://github.com/C2SM/icon), please contact your group's technical contact. They will be responsible for adding you to the appropriate user group. 
 
@@ -71,12 +74,9 @@ ICON input data are stored at the following locations:
 ## Related tools
 In the [Tools](https://c2sm.github.io/tools) section, you will find all the scripts and software related to pre- and post-processing, toolchains, and visualization.
 
-## Quarterly C2SM ICON Meeting
-[Minutes of the previous meetings](https://c2sm.github.io/events/icon_meeting.html){: .btn .btn-blue}
-
 ## Projects
-[EXCLAIM](https://exclaim.ethz.ch/){: .btn .btn-blue}  
-[ICON-HAMMOZ](https://redmine.hammoz.ethz.ch/){: .btn .btn-blue}  
+ * [EXCLAIM](https://exclaim.ethz.ch/) 
+ * [ICON-HAMMOZ](https://redmine.hammoz.ethz.ch/)
 
 
 ## Documentation
