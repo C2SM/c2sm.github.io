@@ -7,7 +7,7 @@ has_children: false
 
 # User Support
 
-User Support refers to C2SM's efforts to ensure that all supported software runs correctly on supported computer systems. This includes hosting the software for easy distribution to members, regularly testing the supported software, and helping members resolve issues with running and compiling the software. Find information about supported [tools](https://c2sm.github.io/tools/) and [models](https://c2sm.github.io/models/) in the corresponding sections.
+User Support refers to C2SM's efforts to ensure that all supported software runs correctly on supported computer systems. This includes hosting the software for easy distribution to members, regular testing and helping members resolve issues with running and compiling. Find information about supported [tools](https://c2sm.github.io/tools/) and [models](https://c2sm.github.io/models/) in the corresponding sections.
 
 ## Request support
 
