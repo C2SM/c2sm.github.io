@@ -1,0 +1,26 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^https://github.com/C2SM-RCM/"
+    },
+    {
+      "pattern": "^http://cosmo-model.org/content"
+    },
+    {
+      "pattern": "^https://jenkins-mch.cscs.ch"
+    },
+    {
+      "pattern": "^https://github.com/C2SM/icontools"
+    },
+    {
+      "pattern": "^https://github.com/C2SM/Tasks-Support"
+    },
+    {
+      "pattern": "^https://agupubs.onlinelibrary.wiley.com"
+    },
+    {
+      "pattern": "^https://github.com/C2SM/icon"
+    },
+  ]
+}
+ 
