@@ -41,18 +41,18 @@ parent: Datasets
 
 ---
 
-<a id="1"></a><sup>1</sup>Native means every model on their native grid they were run on
+<a id="1"></a><sup>1</sup> Native means every model on their native grid they were run on
 
-<a id="2"></a><sup>2</sup>CMIP-ng: Next Generation archives were maintained by Reto's group (Jan Sedlacek/Lukas Brunner)
+<a id="2"></a><sup>2</sup> CMIP-ng: Next Generation archives were maintained by Reto's group (Jan Sedlacek/Lukas Brunner)
 Ruth Lorenz / C2SM took over cmip6-ng in 2022. contact: cmip6-archive@env.ethz.ch, documentation: https://doi.org/10.5281/zenodo.3734128
 
-<a id="3"></a><sup>3</sup>As of June 2021
+<a id="3"></a><sup>3</sup> As of June 2021
 
-<a id="4"></a><sup>4</sup>`/nfs/atmos/c2sm`
+<a id="4"></a><sup>4</sup> `/nfs/atmos/c2sm`
 
-<a id="5"></a><sup>5</sup>`/store/c2sm/c2sme`
+<a id="5"></a><sup>5</sup> `/store/c2sm/c2sme`
 
-<a id="6"></a><sup>6</sup>`/net/ch4/data/cordex.ch2025/`
+<a id="6"></a><sup>6</sup> `/net/ch4/data/cordex.ch2025/`
 
-<a id="7"></a><sup>7</sup>`/store/c2sm/c2sme/CH202X/CORDEX-FPSCONV/ALP-3/`
+<a id="7"></a><sup>7</sup> `/store/c2sm/c2sme/CH202X/CORDEX-FPSCONV/ALP-3/`
 
