@@ -1,5 +1,5 @@
 {
   "ignorePatterns": [
-    {
-      "pattern": "^https://github.com/C2SM-RCM/"
-    }]}
+    {"pattern": "^https://github.com/C2SM-RCM/"},
+    {"pattern": "^https://jenkins-mch.cscs.ch/"},
+  ]}
