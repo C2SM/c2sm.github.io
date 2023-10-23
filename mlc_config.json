@@ -3,10 +3,13 @@
     {"pattern": "jenkins-mch"},
     {"pattern": "^https://github.com/C2SM-RCM/extpar"},
     {"pattern": "^https://github.com/C2SM-RCM/int2lm"},
+    {"pattern": "^https://github.com/C2SM-RCM/cosmo"},
     {"pattern": "^https://github.com/C2SM/icon"},
-    {"pattern": "^https://github.com/C2SM-RCM/spice"},
+    {"pattern": "^https://github.com/C2SM/spice"},
     {"pattern": "^https://github.com/C2SM/icontools"},
     {"pattern": "^https://github.com/C2SM/Tasks-Support"},
     {"pattern":"^https://github.com/just-the-docs/just-the-docs-template/generate"}, 
-     {"pattern": "^ http://cosmo-model.org/"}
+    {"pattern": "^http://cosmo-model.org/"},
+    {"pattern": "^https://github.com/C2SM/spice"},
+    {"pattern": "^https://wiki.iac.ethz.ch/Climphys/ProjectCESM2SetupControlRun"}
   ]}
