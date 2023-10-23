@@ -1,4 +1,4 @@
 {
   "ignorePatterns": [
-    {"pattern": "jenkins-mch"},
+    {"pattern": "jenkins-mch"}
   ]}
