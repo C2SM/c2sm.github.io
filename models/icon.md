@@ -72,16 +72,18 @@ ICON input data are stored at the following locations:
 
 
 ## Related tools
-In the [Tools](https://c2sm.github.io/tools) section, you will find all the scripts and software related to pre- and post-processing, toolchains, and visualization.
+In the [Tools](https://c2sm.github.io/tools) section, you will find all the scripts and software related to pre- and post-processing ([EXTPAR](https://c2sm.github.io/tools/extpar.html), [DWD ICON Tools](https://c2sm.github.io/tools/icontools.html)), toolchains ([Processing Chain](https://c2sm.github.io/tools/processing_chain.html), [SPICE](https://c2sm.github.io/tools/spice.html)), and visualization ([icon-vis](https://c2sm.github.io/tools/icon-vis.html)).
 
 ## Projects
- * [EXCLAIM](https://exclaim.ethz.ch/) 
- * [ICON-HAMMOZ](https://redmine.hammoz.ethz.ch/)
-
+Learn more about ongoing projects involving ETHZ in the development of ICON:
+  * [EXCLAIM](https://exclaim.ethz.ch/) 
+  * [ICON-HAMMOZ](https://redmine.hammoz.ethz.ch/projects/icon-hammoz)
 
 ## Documentation
-   * [ICON Tutorial (DWD) last update: Mar 2023](https://www.dwd.de/EN/ourservices/nwv_icon_tutorial/nwv_icon_tutorial_en.html)
-   * MPI-M documentation [webpage](https://code.mpimet.mpg.de/projects/iconpublic/wiki/Documentation)
+ICON documentation is available at:
+   * [ICON Tutorial (DWD)](https://www.dwd.de/EN/ourservices/nwv_icon_tutorial/nwv_icon_tutorial_en.html)
+   * [MPI-M documentation](https://code.mpimet.mpg.de/projects/iconpublic/wiki/Documentation)
      
 ## External Software
-   * [CDO](https://code.zmaw.de/projects/cdo), Climate Data Operators
+The following external software is useful for working with ICON data:
+   * [CDO](https://code.zmaw.de/projects/cdo)
