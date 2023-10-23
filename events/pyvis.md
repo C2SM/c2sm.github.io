@@ -2,7 +2,7 @@
 title: Python Visualization Course
 layout: default
 nav_order: 2
-parent: Events
+parent: Technical Events
 ---
 
 # Python Visualization Course
