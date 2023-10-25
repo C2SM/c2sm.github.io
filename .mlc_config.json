@@ -12,7 +12,6 @@
     {"pattern": "^http://cosmo-model.org/"},
     {"pattern": "^https://github.com/C2SM/spice"},
     {"pattern": "^https://wiki.iac.ethz.ch/Climphys/ProjectCESM2SetupControlRun"},
-    {"pattern": "^https://polybox.ethz.ch"},
     {"pattern": "^Datasets.ERA-5"},
     {"pattern": "^https://wiki.iac.ethz.ch/Climphys/ProjectCESM122SetupControlRun"}
   ]}
