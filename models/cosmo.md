@@ -5,20 +5,22 @@ nav_order: 1
 parent: Models
 ---
 
-# COSMO: A non-hydrostatic limited-area atmospheric weather and climate model 
-The COSMO model is a limited area, non-hydrostatic model developed by a collaboration of National Weather Services called the [COSMO Consortium](http://www.cosmo-model.org/).
+# COSMO
+The COSMO model is a limited area, non-hydrostatic model developed by a collaboration of National Weather Services called the [Consortium for Small-scale Modeling](http://www.cosmo-model.org/).
 
 ## Access
-In order to get access to the [COSMO repository hosted on the C2SM-RCM GitHub organization](https://github.com/C2SM-RCM/cosmo),
+In order to get access to the [COSMO repository](https://github.com/C2SM-RCM/cosmo) hosted on the C2SM-RCM GitHub organization,
 please contact support@c2sm.ethz.ch.
 
-## Compile
+## Configure and compile
 Spack takes care of configuring and building COSMO. For detailed instructions, 
 please consider the official spack-c2sm [documentation](https://c2sm.github.io/spack-c2sm/v0.18.1.11/QuickStart.html#cosmo).
 
-## Toolset
+## Related tools
+In the [Tools](https://c2sm.github.io/tools) section, you will find relevant tools for working with COSMO:
 * [**Extpar:**](https://c2sm.github.io/tools/extpar.html) External parameters for the COSMO-grid (preprocessing)
 * [**int2lm:**](https://c2sm.github.io/tools/int2lm.html) The interpolation software for the COSMO-model (preprocessing)
+* [**Processing Chain**](https://c2sm.github.io/tools/processing_chain.html) Python scripts for the workflow with COSMO
 
 
 ## Documentation
