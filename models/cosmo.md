@@ -8,6 +8,10 @@ parent: Models
 # COSMO
 The COSMO model is a limited area, non-hydrostatic model developed by a collaboration of National Weather Services called the [Consortium for Small-scale Modeling](http://www.cosmo-model.org/).
 
+C2SM currently facilitates the utilization of COSMO on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) computing platform.
+
+**Important note: C2SM COSMO support will end with the scheduled decommissioning of Piz Daint, expected to take place in March 2024**.
+
 ## Access
 In order to get access to the [COSMO repository](https://github.com/C2SM-RCM/cosmo) hosted on the C2SM-RCM GitHub organization,
 please contact support@c2sm.ethz.ch.
@@ -19,7 +23,7 @@ git clone git@github.com:C2SM-RCM/cosmo.git
 If you don't already have an SSH key set up for GitHub, but would like to do so, follow the [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
 ## Configure and compile
-For configuring and building COSMO with Spack, please refer to the official spack-c2sm documentation, which provides instructions for [setting up a Spack instance](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin) and [installing COSMO](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#cosmo).
+For configuring and building COSMO with Spack, please refer to the official spack-c2sm documentation, which provides instructions for [setting up a Spack instance](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin) and [installing COSMO](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#cosmo) on Piz Daint.
 
 ## Related tools
 In the [Tools](https://c2sm.github.io/tools) section, you will find relevant tools for working with COSMO:
