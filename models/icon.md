@@ -15,7 +15,7 @@ To stay informed about what is going on in the ICON world and to get to know oth
 
 
 ## Access
-To gain access to the [ICON repository hosted on the C2SM GitHub organization](https://github.com/C2SM/icon), please contact your group's technical contact. They will be responsible for adding you to the appropriate user group. 
+To gain access to the [ICON repository](https://github.com/C2SM/icon) hosted on the C2SM GitHub organization, please contact your group's technical contact. They will be responsible for adding you to the appropriate user group. 
 
  Once you have access, clone the repository from GitHub using the SSH protocol:
 
@@ -71,8 +71,12 @@ ICON input data are stored at the following locations:
 - **Euler:** `/cluster/work/climate/icon_input`
 
 
-## Related tools
-In the [Tools](https://c2sm.github.io/tools) section, you will find all the scripts and software related to pre- and post-processing ([EXTPAR](https://c2sm.github.io/tools/extpar.html), [DWD ICON Tools](https://c2sm.github.io/tools/icontools.html)), toolchains ([Processing Chain](https://c2sm.github.io/tools/processing_chain.html), [SPICE](https://c2sm.github.io/tools/spice.html)), and visualization ([icon-vis](https://c2sm.github.io/tools/icon-vis.html)).
+## Toolset
+In the [Tools](https://c2sm.github.io/tools) section, you will find relevant tools for working with ICON:
+* [**Extpar:**](https://c2sm.github.io/tools/extpar.html) External parameters for the ICON grid (preprocessing)
+* [**Processing Chain**](https://c2sm.github.io/tools/processing_chain.html) Python scripts for the workflow with ICON
+* [**SPICE**](https://c2sm.github.io/tools/spice.html) Starter package for ICON-CLIM experiments
+* [**icon-vis**](https://c2sm.github.io/tools/icon-vis.html) Python scripts to visuallise ICON data
 
 ## Projects
 Learn more about ongoing projects involving ETHZ in the development of ICON:
