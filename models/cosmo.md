@@ -12,9 +12,14 @@ The COSMO model is a limited area, non-hydrostatic model developed by a collabor
 In order to get access to the [COSMO repository](https://github.com/C2SM-RCM/cosmo) hosted on the C2SM-RCM GitHub organization,
 please contact support@c2sm.ethz.ch.
 
+Once you have access, clone the repository from GitHub using the SSH protocol:
+```
+git clone git@github.com:C2SM-RCM/cosmo.git
+```
+If you don't already have an SSH key set up for GitHub, but would like to do so, follow the [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+
 ## Configure and compile
-Spack takes care of configuring and building COSMO. For detailed instructions, 
-please consider the official spack-c2sm [documentation](https://c2sm.github.io/spack-c2sm/v0.18.1.11/QuickStart.html#cosmo).
+For configuring and building COSMO with Spack, please refer to the official spack-c2sm documentation, which provides instructions for [setting up a Spack instance](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin) and [installing COSMO](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#cosmo).
 
 ## Related tools
 In the [Tools](https://c2sm.github.io/tools) section, you will find relevant tools for working with COSMO:
