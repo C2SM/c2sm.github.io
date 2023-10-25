@@ -45,7 +45,7 @@ When using asynchronous IO, the workload of the IO-processors needs to be balanc
 and thus a few benchmark runs may be needed. An optimal setup is not trivial to find because the number of output-namelists, the number of fields 
 and the number of IO-processors may change between different setups. In particular, overload on the IO-processors leads to additional runtime during 
 model cleanup at the end of a job. Since the compute nodes are not released from the job, all of them will idle while 
-the remainder of the output is processed. note that employing online compression can sometimes add substantially to the time and resources needed for IO
+the remainder of the output is processed. note that employing online compression can sometimes add substantially to the time and resources needed for IO.
 
 A brief overview on the actual workload on the IO-processors can be gained from the COSMO logs, when increasing the the verbosity-settings of the log (ldebug_io=.true., idbg_level=6):
 ```
