@@ -53,7 +53,7 @@ Asyn-IO: block number xx was filled. Allocating a new block
 ```
 
 The log above is printed every time a new buffer block is allocated. This means, that the compute PE's store output 
-data until the IO-processors wrote it to disk. In case the number of blocks allocated increases throughout the simulation, 
+data until the IO-processors write it to disk. In case the number of blocks allocated increases throughout the simulation, 
 i.e. after every output step more and more buffer blocks need to be stored on the compute PE's, 
 the IO-processors don’t write as fast as the model generates new output.
 
@@ -86,7 +86,7 @@ It provides information about how long all compute-PE needed to wait at the end 
 
 ### Zlib replacement for NetCDF compression
 The online compression, activated with parameter `lcompress_netcdf=.true.`, 
-uses by default the not so fast Zlib. A speedup of a factor two can be obeserved in case Zlib_ng is used instead. 
+uses by default the not so fast Zlib. A speedup of a factor two can be obeserved when using Zlib_ng instead. 
 The variant `+zlib_ng` for building COSMO in combination with the command 
 `spack load cosmo@master%pgi cosmo_target=gpu +zlib_ng`
-prior to run is neccesary. Unfortunately the convenient way of using RPATH for that feature is not possible.
+prior to run is necessary. Unfortunately, the convenient way of using RPATH for that feature is not possible.
