@@ -24,9 +24,10 @@ In the [Tools](https://c2sm.github.io/tools) section, you will find relevant too
 
 
 ## Documentation
+COSMO documentation is available at:
 * [Official website of the Consortium for Small-scale Modeling (COSMO)](http://www.cosmo-model.org/)
-* [COSMO Model System Overview](http://cosmo-model.org/content/model/default.htm)
-* [COSMO User's Guide](http://cosmo-model.org/content/model/documentation/core/cosmo_userguide_5.04.pdf) 
+* [COSMO Model System Overview](https://www.cosmo-model.org/content/model/cosmo/default.htm)
+* [COSMO User's Guide](https://www.cosmo-model.org/content/model/cosmo/coreDocumentation/cosmo_userguide_6.00.pdf) 
 
 ## Asynchronous IO for NetCDF - A Guide for an optimal model setup
 
