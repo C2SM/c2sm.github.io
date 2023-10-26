@@ -74,7 +74,7 @@ ICON input data are stored at the following locations:
 ## Toolset
 In the [Tools](https://c2sm.github.io/tools) section, you will find relevant tools for working with ICON:
 * [**Extpar:**](https://c2sm.github.io/tools/extpar.html) External parameters for the ICON grid (preprocessing)
-* [**Processing Chain**](https://c2sm.github.io/tools/processing_chain.html) Python scripts for the workflow with ICON
+* [**Processing Chain**](https://c2sm.github.io/tools/processing_chain.html): Python workflow tool for ICON
 * [**SPICE**](https://c2sm.github.io/tools/spice.html) Starter package for ICON-CLIM experiments
 * [**icon-vis**](https://c2sm.github.io/tools/icon-vis.html) Python scripts to visuallise ICON data
 
