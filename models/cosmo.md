@@ -6,7 +6,7 @@ parent: Models
 ---
 
 # COSMO
-The COSMO model is a limited area, non-hydrostatic model developed by a collaboration of National Weather Services called the [Consortium for Small-scale Modeling](http://www.cosmo-model.org/).
+The COSMO model is a limited-area, non-hydrostatic model developed by a collaboration of National Weather Services called the [Consortium for Small-scale Modeling](http://www.cosmo-model.org/).
 
 C2SM currently facilitates the utilization of COSMO on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) computing platform.
 
