@@ -2,7 +2,7 @@
 title: Git Courses
 layout: default
 nav_order: 2
-parent: Events
+parent: Technical Events
 ---
 
 # Git Courses
