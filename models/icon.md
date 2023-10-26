@@ -76,7 +76,7 @@ In the [Tools](https://c2sm.github.io/tools) section, you will find relevant too
 * [**Extpar:**](https://c2sm.github.io/tools/extpar.html) External parameters for the ICON grid (preprocessing)
 * [**Processing Chain**](https://c2sm.github.io/tools/processing_chain.html): Python workflow tool for ICON
 * [**SPICE**](https://c2sm.github.io/tools/spice.html): Starter package for ICON-CLM experiments
-* [**icon-vis**](https://c2sm.github.io/tools/icon-vis.html) Python scripts to visuallise ICON data
+* [**icon-vis**](https://c2sm.github.io/tools/icon-vis.html): Python scripts to visualize ICON data
 
 ## Projects
 Learn more about ongoing projects involving ETHZ in the development of ICON:
