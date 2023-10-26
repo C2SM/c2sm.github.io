@@ -29,7 +29,7 @@ For configuring and building COSMO with Spack, please refer to the official spac
 In the [Tools](https://c2sm.github.io/tools) section, you will find relevant tools for working with COSMO:
 * [**Extpar:**](https://c2sm.github.io/tools/extpar.html) External parameters for the COSMO-grid (preprocessing)
 * [**int2lm:**](https://c2sm.github.io/tools/int2lm.html) The interpolation software for the COSMO-model (preprocessing)
-* [**Processing Chain**](https://c2sm.github.io/tools/processing_chain.html) Python scripts for the workflow with COSMO
+* [**Processing Chain**](https://c2sm.github.io/tools/processing_chain.html): Python workflow tool for COSMO
 
 
 ## Documentation
