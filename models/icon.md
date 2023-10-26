@@ -52,7 +52,7 @@ make -j 8
 
 
 ## Run test case with ICON
-In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *mch_ch_lowres*, you can use the *make_runscripts* function.
+In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *mch_ch_lowres*, you can use the `make_runscripts` function.
 
 ```bash
 ./make_runscripts mch_ch_lowres
