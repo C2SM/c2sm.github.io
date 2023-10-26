@@ -10,7 +10,7 @@ The COSMO model is a limited-area, non-hydrostatic model developed by a collabor
 
 C2SM currently facilitates the utilization of COSMO on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) computing platform.
 
-**Important note: C2SM COSMO support will end with the scheduled decommissioning of Piz Daint, expected to take place in March 2024**.
+**Important note: C2SM's support for COSMO is scheduled to end in 2025**
 
 ## Access
 In order to get access to the [COSMO repository](https://github.com/C2SM-RCM/cosmo) hosted on the C2SM-RCM GitHub organization,
