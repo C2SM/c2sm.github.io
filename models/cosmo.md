@@ -14,7 +14,7 @@ C2SM currently facilitates the utilization of COSMO on the [Piz Daint](https://w
 
 ## Access
 In order to get access to the [COSMO repository](https://github.com/C2SM-RCM/cosmo) hosted on the C2SM-RCM GitHub organization,
-please contact support@c2sm.ethz.ch.
+please contact [C2SM Support](mailto:support@c2sm.ethz.ch).
 
 Once you have access, clone the repository from GitHub using the SSH protocol:
 ```
