@@ -33,9 +33,9 @@ For configuring and building ICON with Spack, please refer to the official spack
 ### Euler
 Before compiling ICON, it is essential to configure it using the respective script in the *config* folder. The configuration process using these files remains consistent across different machines and compilers.
 
-Configure ICON:
+Configure ICON with GCC using -O2 and CPU-specific optimizations:
 ```bash
-./config/[platform]/[configuration_file]
+./config/ethz/euler.cpu.gcc.O2
 ```
 Load required modules:
 ```bash
@@ -45,11 +45,6 @@ Compile ICON:
 ```bash
 make -j 8
 ```
-
-#### Compile with GCC using -O2 and CPU-specific optimizations:
-- platform = ethz
-- configuration_file = euler.cpu.gcc.O2
-
 
 ## Run test case with ICON
 In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *mch_ch_lowres*, you can use the `make_runscripts` function.
