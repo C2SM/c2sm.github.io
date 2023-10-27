@@ -39,31 +39,17 @@ Merging is the process of combining changes from one branch into another. Git pr
 In a collaborative development environment, developers use pull requests to propose changes from their branches to the main branch. Changes are reviewed, discussed, and, if approved, merged into the main codebase.
 
 
-## Code Testing
+## Automatic Testing
 Code testing is a critical step in software development. It's about finding and fixing problems to make sure the software works well, is of high quality and reliable.
 Testing involves checking different parts of the code to make sure the software is strong and free of bugs.
 
-### Purpose of Code Testing
-
-The primary objectives of code testing are:
-
-1. **Defect Detection:** Identifying and addressing defects, bugs, and issues in the software code to prevent them from reaching end-users.
-
-2. **Quality Assurance:** Ensuring that the software meets specified requirements and performs as expected, meeting user needs and expectations.
-
-3. **Performance Evaluation:** Assessing the software's speed, scalability, and resource utilization under various conditions.
-
-4. **Usability Testing:** Evaluating the user-friendliness and user experience of the software.
-
-5. **Regression Testing:** Ensuring that code changes do not introduce new issues and that existing functionality remains intact.
+### Tests
+The specific tests you need will depend on your project and its requirements. Here is a list of tests that are usually very useful.
+#### 1. Unit Tests
+#### 2. Integractions Tests
+#### 3. Functional Tests
+#### 4. Regression Tests
+#### 5. Performance Tests
+#### 6. Security Tests
 
 
-### Importance of Code Testing
-
-Code testing is vital in software development because it:
-
-- Enhances software quality and reliability.
-- Reduces the cost of bug fixing in later development stages.
-- Identifies issues early in the development process, allowing for quicker resolutions.
-- Ensures that the software meets user requirements and expectations.
-- Supports continuous improvement and software maintenance.
