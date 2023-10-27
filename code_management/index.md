@@ -13,7 +13,7 @@ Plus, don't forget to add tests; they're like the quality check for your code. T
 
 ## Versioning with Git
 
-**Git**, a distributed version control system, has gained widespread popularity as an essential tool for managing source code in software development.
+Git is a distributed version control system, which has gained widespread popularity as an essential tool for managing source code in software development.
 All C2SM repositories are hosted on GitHub, a web-based platform that uses Git as the underlying version control system.
 
 If you're new to Git or looking to improve your Git skills, we recommend attending our **Git for Beginners** and **Git for Advanced** courses, both of which are held annually.
@@ -45,7 +45,7 @@ In a collaborative development environment, developers use pull requests to prop
 
 ## Code Testing
 
-**Code testing**, also known as software testing, is a critical phase in the software development process aimed at identifying and eliminating defects and ensuring the functionality, 
+Code or software testing, is a critical phase in the software development process aimed at identifying and eliminating defects and ensuring the functionality, 
 quality, and reliability of a software application. It involves systematic evaluation and validation of various components 
 and aspects of the code. Code testing is essential to deliver robust and error-free software.
 
