@@ -16,7 +16,7 @@ If you're new to Git or want to improve your Git skills, we recommend attending 
 Additionally, all course materials are publicly available and can be used throughout the year.
 For more details, please visit [Technical Events - Git Courses](https://c2sm.github.io/events/git_courses.html).
 
-### Key Concepts
+### Key Concepts of Git
 
 #### 1. Repository (Repo)
 
@@ -40,10 +40,8 @@ In a collaborative development environment, developers use pull requests to prop
 
 
 ## Code Testing
-
-Code or software testing, is a critical phase in the software development process aimed at identifying and eliminating defects and ensuring the functionality, 
-quality, and reliability of a software application. It involves systematic evaluation and validation of various components 
-and aspects of the code. Code testing is essential to deliver robust and error-free software.
+Code testing is a critical step in software development. It's about finding and fixing problems to make sure the software works well, is of high quality and reliable.
+Testing involves checking different parts of the code to make sure the software is strong and free of bugs.
 
 ### Purpose of Code Testing
 
