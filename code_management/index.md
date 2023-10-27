@@ -8,13 +8,17 @@ has_children: false
 # Code Management
 **Embrace Version Control and Testing**
 
-At C2SM, we're all about making software development a breeze. Version control is your friend—it keeps your code organized and helps teams collaborate seamlessly. 
+Version control is your friend—it keeps your code organized and helps teams collaborate seamlessly. 
 Plus, don't forget to add tests; they're like the quality check for your code. They catch issues early, making your code rock-solid. It's that simple!
 
 ## Versioning with Git
 
-**Git**, a distributed version control system, has gained widespread popularity as an essential tool for managing source code in software development. 
-Created by Linus Torvalds in 2005, Git's decentralized and efficient approach to version control has revolutionized collaborative software development practices.
+**Git**, a distributed version control system, has gained widespread popularity as an essential tool for managing source code in software development.
+All C2SM repositories are hosted on GitHub, a web-based platform that uses Git as the underlying version control system.
+
+If you're new to Git or looking to improve your Git skills, we recommend attending our **Git for Beginners** and **Git for Advanced** courses, both of which are held annually.
+Additionally, all course materials are publicly accessible and can be utilized throughout the year.
+For more details, please visit [Technical Events - Git Courses](https://c2sm.github.io/events/git_courses.html).
 
 ### Key Concepts
 
