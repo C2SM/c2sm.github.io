@@ -42,21 +42,6 @@ Merging is the process of combining changes from one branch into another. Git pr
 
 In a collaborative development environment, developers use pull requests to propose changes from their branches to the main branch. Changes are reviewed, discussed, and, if approved, merged into the main codebase.
 
-### Basic Workflow
-
-The typical Git workflow involves the following steps:
-
-1. **Initializing a Git Repository:** Developers begin by initializing a Git repository in the project directory using the `git init` command, creating a hidden `.git` directory to manage version control.
-
-2. **Making Changes:** Developers modify the codebase and use `git add` to stage specific changes for a commit. Staging allows for selecting which changes to include in the next commit.
-
-3. **Committing Changes:** Once changes are staged, developers commit them using `git commit`, providing a descriptive message about the changes made.
-
-4. **Branching:** Developers create branches with `git branch` and switch between them using `git checkout`. Branching allows for isolated feature development and issue fixing.
-
-5. **Merging:** After completing work on a branch, developers can merge their changes back into the main branch using `git merge`.
-
-6. **Collaboration:** In collaborative environments, pull requests enable developers to propose and review code changes, providing a user-friendly interface for managing the process.
 
 ## Code Testing
 
