@@ -6,18 +6,14 @@ has_children: false
 ---
 
 # Code Management
-**Embrace Version Control and Testing**
+If you're new to coding or already working on it, remember two important things: always **use version control** and **add automatic tests**.
+These steps will help you and anyone you work with to make things easier.
 
-Version control is your friend—it keeps your code organized and helps teams collaborate seamlessly. 
-Plus, don't forget to add tests; they're like the quality check for your code. They catch issues early, making your code rock-solid. It's that simple!
+## Version Control with Git
+**Git** is a popular tool for managing source code. C2SM repositories are hosted on GitHub, which uses Git as its version control system.
 
-## Versioning with Git
-
-Git is a distributed version control system, which has gained widespread popularity as an essential tool for managing source code in software development.
-All C2SM repositories are hosted on GitHub, a web-based platform that uses Git as the underlying version control system.
-
-If you're new to Git or looking to improve your Git skills, we recommend attending our **Git for Beginners** and **Git for Advanced** courses, both of which are held annually.
-Additionally, all course materials are publicly accessible and can be utilized throughout the year.
+If you're new to Git or want to improve your Git skills, we recommend attending our annual **Git for Beginners** and/or **Git for Advanced** courses.
+Additionally, all course materials are publicly available and can be used throughout the year.
 For more details, please visit [Technical Events - Git Courses](https://c2sm.github.io/events/git_courses.html).
 
 ### Key Concepts
