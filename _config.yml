@@ -11,6 +11,9 @@ aux_links:
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true  
 
+# Open external links in new tab
+nav_external_links_new_tab: true
+
 # Color scheme supports "light" (default) and "dark"
 color_scheme: c2sm
 
