@@ -1,11 +1,11 @@
 ---
-title: Code Management
+title: Coding Best Practices
 layout: default
-nav_order: 3
+nav_order: 6
 has_children: false
 ---
 
-# Code Management
+# Coding Best Practices
 If you're new to coding or already working on it, remember two important things: always **use version control** and **add automatic tests**.
 These steps will help you and anyone you work with to make things easier.
 
@@ -38,6 +38,8 @@ Merging is the process of combining changes from one branch into another. Git pr
 
 In a collaborative development environment, developers use pull requests to propose changes from their branches to the main branch. Changes are reviewed, discussed, and, if approved, merged into the main codebase.
 
+### GitHub Workflow
+
 
 ## Automatic Testing
 Code testing is a critical step in software development. It's about finding and fixing problems to make sure the software works well, is of high quality and reliable.
@@ -46,10 +48,16 @@ Testing involves checking different parts of the code to make sure the software 
 ### Tests
 The specific tests you need will depend on your project and its requirements. Here is a list of tests that are usually very useful.
 #### 1. Unit Tests
-#### 2. Integractions Tests
+Link to spack-c2sm
+#### 2. Integrations Tests
+Link to spack-c2sm
+#### 3. System Tests
+Link to spack-c2sm
 #### 3. Functional Tests
 #### 4. Regression Tests
 #### 5. Performance Tests
 #### 6. Security Tests
-
+#### 7. GitHooks & GitHub actions
+Link to Git course. Example for GitHub actions (Micha)
+#### 8. Tolerance test
 
