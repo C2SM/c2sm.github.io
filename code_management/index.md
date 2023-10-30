@@ -61,3 +61,10 @@ Link to spack-c2sm
 Link to Git course. Example for GitHub actions (Micha)
 #### 8. Tolerance test
 
+
+### VS Code
+- [Download VS Code](https://code.visualstudio.com/download)
+- Open a Git folder with a Markdown file and open the split view (right corner)
+- Open Terminal (Terminal button at top)
+- Install extensions (left panel - extensions): Python, GitLens, Remote - SSH, vim
+- cmd - shift - p (Mac): follow instructions here: https://github.com/C2SM/c2sm.github.io/edit/review_code_management/code_management/index.md otherwise VS Code will be killed every view minutes when working on CSCS
