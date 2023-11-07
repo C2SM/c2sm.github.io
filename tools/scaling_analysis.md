@@ -8,7 +8,7 @@ parent: Tools
 
 The Scaling Analysis Tool automatically creates and launches several ICON run
 scripts based on a given experiment with different numbers of nodes to
-analyze the strong scaling. Once the experiment runs are complete,
+analyze the strong scaling[<sup>1</sup>](#1). Once the experiment runs are complete,
 the tool reads the timings from the log files and produces summary plots of 
 efficiency, node hours and wallclock against the number of nodes.
 
@@ -25,3 +25,8 @@ proposal.
 ## Code and Documentation
 
 * [Scaling Analysis Tool](https://github.com/C2SM/scaling_analysis)
+
+---
+
+<a id="1"></a><sup>1</sup> Strong scaling: The time to solution decreases in inverse proportion
+to increases in node count if the problem size (i.e., number of grid points) is unchanged. 
