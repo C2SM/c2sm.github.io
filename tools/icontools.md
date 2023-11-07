@@ -16,7 +16,7 @@ please contact your group's technical contact. They will be responsible for addi
 
 ## Compile
 
-Spack takes care of configuring and building Iontools. For detailed instructions,
+Spack takes care of configuring and building Icontools. For detailed instructions,
 please consider the official [spack-c2sm documentation](https://c2sm.github.io/spack-c2sm/latest).
 The following Spack installation should be sufficient for most cases:
 
@@ -52,7 +52,7 @@ icongridgen --nml icontools/C2SM/gridgen.nml
 
 This manual refers to the workflow MeteoSwiss is currently using to run LAM simulations.
 
-* Add fields `FI` and `z` from IFS analysis to LBC prior the interpolation using `cdo` (GRIB only). To use the `cdo` command, make sure the module is loaded: `module load daint-gpu CDO`.
+* Add fields `FI` and `z` from IFS analysis to LBC prior to the interpolation using `cdo` (GRIB only). To use the `cdo` command, make sure the module is loaded: `module load daint-gpu CDO`.
 
 ```bash
 cdo -selname,FI analysis_file fi_file
