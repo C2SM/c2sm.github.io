@@ -4,7 +4,7 @@ layout: default
 parent: Tools
 ---
 
-# COSMO/ICON Processing Chain
+# Processing Chain
 
 The Processing Chain is a collection of Python scripts to prepare the necessary input data, submit the compute jobs to the queue on Piz Daint and to apply post-processing steps. 
 In addition to the standard versions of the COSMO and ICON models, it can als handle several variants of these models, namely COSMO-GHG, COSMO-ART and ICON-ART.
