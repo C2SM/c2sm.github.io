@@ -4,3 +4,20 @@ $c2sm-blue: #56abdf;
 $c2sm-blue-dark: #4488B3;
 $link-color: $c2sm-blue-dark;
 $header-height: 5.75rem;
+$content-width: 57.5rem;
+
+.main-content p, hr, div.highlighter-rouge {
+    margin-right: 7.5em;
+  }
+
+code.highlighter-rogue {
+  martin-right: 0em !important;
+}
+
+.main-content a {
+    text-decoration-line: underline !important;
+    text-decoration-style: solid !important;
+    text-decoration-color: currentcolor !important;
+    text-decoration-thickness: auto !important;
+    text-underline-offset: .175rem !important; 
+}
