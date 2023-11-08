@@ -6,6 +6,17 @@ has_children: false
 ---
 
 # Coding Best Practices
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+  - TOC
+  {:toc}
+</details>
+
 If you're new to coding or already working on it, remember two important things: always **use version control** and **add automatic tests**.
 These steps will help you and anyone you work with to make things easier.
 
