@@ -1,33 +1,37 @@
 ---
-title: Int2lm
+title: INT2LM
 layout: default
-nav_order: 1
 parent: Tools
 ---
 
-# Int2lm
-Int2lm is an interpolation program providing boundary and/or initial conditions to the Cosmo model.
+# INT2LM
+
+INT2LM is an interpolation program providing boundary and/or initial conditions to the COSMO model.
 
 ## Access
-In order to get access to the [Int2lm repository hosted on the C2SM-RCM GitHub organization](https://github.com/C2SM-RCM/int2lm), 
-please contact support@c2sm.ethz.ch.
+
+In order to get access to the [INT2LM repository hosted on the C2SM-RCM GitHub organization](https://github.com/C2SM-RCM/int2lm), 
+please contact [C2SM Support](mailto:support@c2sm.ethz.ch).
 
 ## Compile
-Spack takes care of configuring and building int2lm. For detailed instructions,
-please consider the official spack-c2sm [documentation](https://c2sm.github.io/spack-c2sm/latest).
+
+Spack takes care of configuring and building INT2LM. For detailed instructions,
+please consider the official [spack-c2sm documentation](https://c2sm.github.io/spack-c2sm/latest).
 
 ## Additional features for C2SM version
+
 There are features that could not be merged into the COSMO-ORG version before the end of development.
-Therefore a separate [branch c2sm-features](https://github.com/C2SM-RCM/int2lm/tree/c2sm-features) has been created.
+Therefore a separate [branch c2sm-features](https://github.com/C2SM-RCM/int2lm/tree/c2sm-features) was created.
 
 ### Read only subset of coarse netcdf input data 
-dd new namelist entries for passing start indices of NetCDF input. 
-Doing so mitigates slow down for large input-files via new namelist parameters in namelist `&GRID_IN`:
 
-* ie_in_start_io (start index in i-direction)
-* je_in_start_io (start index in k-direction) 
+Add new namelist entries for passing start indices of NetCDF input. 
+This mitigates slowdown for large input files via new namelist parameters in namelist `&GRID_IN`:
 
-The parameters ie_in_tot and je_in_tot define the length of the data to be read, instead of the total lenght present in the NetCDF input file. 
+* `ie_in_start_io` (start index in `i`-direction)
+* `je_in_start_io` (start index in `k`-direction) 
 
-**Schematic about the two ways for reading NetCDF input files**
+The parameters `ie_in_tot` and `je_in_tot` define the length of the data to be read, instead of the total length present in the NetCDF input file. 
+
+### Schematic about the two ways for reading NetCDF input files
 ![](images/int2lm_subset_schematic.png)

@@ -3,9 +3,9 @@ title: Models
 layout: default
 nav_order: 3
 has_children: true
+child_nav_order: reversed
 ---
 
 # Models
 
-C2SM supports a couple of models and related pre- and postpocessing tools on different high-performance plattforms. This page provides an overview, further documentation and manuals for each specific software needed in order to run simulations with the models.
-
+C2SM supports the three weather and climate models ICON, COSMO, and CESM, along with associated pre- and post-processing tools, on different high-performance platforms. This page provides an overview, along with detailed documentation and manuals for each required software component to run simulations using these specific models.
