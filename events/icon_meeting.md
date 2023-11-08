@@ -2,7 +2,7 @@
 title: Quarterly ICON Meeting
 layout: default
 nav_order: 1
-parent: Events
+parent: Technical Events
 has_children: True
 child_nav_order: reversed
 ---
@@ -16,7 +16,3 @@ Moreover, it encourages interactions and collaboration with research groups from
 
 In case you have any questions or want to be added to the C2SM ICON mailing list, contact the meeting organizer,
 [Michael Jähn](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091).
-
-{: .note }
-
-> We are trying to transfer older meetings notes here as soon as possible.

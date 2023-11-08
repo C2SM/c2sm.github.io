@@ -19,11 +19,11 @@ such as to documentation that we distribute directly with the code.
 
 ## Core Team
 
-The C2SM Core Team as is part of the Executive Office and currently consists
+The C2SM Core Team is part of the Executive Office and currently consists
 of six scientific programmers. Their work is distributed among the following areas:
 
 - Tasks from the Working Groups
-- Maintenance of supported models and tools
+- Maintenance of supported models, tools and datasets
 - Regular support for users
 - EXCLAIM project
 - Organization of workshops
