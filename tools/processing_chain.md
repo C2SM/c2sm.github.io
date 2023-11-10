@@ -20,6 +20,8 @@ community and hosted on the [C2SM GitHub organization](https://github.com/C2SM/p
 
 If you need any help, please contact [Michael Jähn](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091).
 
+## Support status
+
 ## Features
 
 - Automatic folder structure creation

@@ -9,6 +9,8 @@ parent: Tools
 The DWD ICON Tools contain a set of routines which may be suitable for reading, remapping and writing of fields from and to predefined grids,
 e.g. regular (lat-lon, gaussian) or triangular (ICON). It can be used to generate lateral boundary conditions (LBC) and initial conditions (IC) for ICON-LAM simulations.
 
+## Support status
+
 ## Access
 
 In order to get access to the [DWD ICON Tools repository hosted on the C2SM GitHub organization](https://github.com/C2SM/icontools),
