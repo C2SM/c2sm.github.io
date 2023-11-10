@@ -8,6 +8,7 @@ parent: Datasets
 # Observational and Re-analysis Datasets
 
 ## "Raw" Archives (as downloaded from the original source)
+
 | Archive   | Size[<sup>1</sup>](#1) | Location | Access | Status                                | time period    | Variables | Temporal Resolution | Spatial Resolution | more information |
 | --------- | --------------- | -------- | ------ | -------------------------------------- | -------------- | --------- | ------------------- | ----------------- | ----------------- |
 | E-OBS     | 660G            | IAC      | direct | different versions, updated irregularly | 1950 - present | TG: mean temperature, TN: minimum temperature, TX: maximum temperature, RR: precipitation sum, PP: mean sea level pressure, FG: mean wind speed, HU: mean relative humidity, QQ: global radiation | daily | 0.1° and 0.25° | [Link](https://www.ecad.eu/download/ensembles/download.php), [Link](https://cds.climate.copernicus.eu/cdsapp#!/dataset/insitu-gridded-observations-europe?tab=overview) |
