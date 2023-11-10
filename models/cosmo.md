@@ -9,10 +9,12 @@ parent: Models
 The COSMO model is a limited-area, non-hydrostatic model developed by a collaboration of National Weather Services called the [Consortium for Small-scale Modeling](http://www.cosmo-model.org/).
 
 ## Support status
-C2SM currently facilitates the utilization of COSMO on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) computing platform for the CPU and GPU architectures.
+C2SM currently facilitates the utilization of COSMO on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) computing platform for the CPU and GPU architectures. The `master` and `c2sm-features` branches are continuously tested an Piz Daint.
+
+The following table summarizes the features ported to GPU and their correspoding namelist parameters.
 
 <details close markdown="block">
-<summary> gpu ported COSMO features </summary>
+<summary>gpu ported COSMO features</summary>
 
 ###### Parameters in `INPUT_ORG`
 {: .no_toc }
@@ -92,13 +94,6 @@ C2SM currently facilitates the utilization of COSMO on the [Piz Daint](https://w
 {: .no_toc }
 
 The GPU porting of the dynamical core of COSMO was accomplished by rewriting the dynamics with the Gridtools stencil library. The Gridtools dycore supports a subset of the parameters of the COSMO Fortran dynamical core. The list of features currently supported in the Gridtools dycore can be found [here](https://github.com/C2SM-RCM/cosmo/blob/master/dycore/doc/Dycore/supported_configuration.tex) in the documentation in the code repository.
-
-### Supported branches
-{: .no_toc }
-
-`master` : Only the latest commit of the code is tested and supported.
-
-`c2sm-features` : Only the latest commit of the code is tested and supported.
 
 </details>
 
