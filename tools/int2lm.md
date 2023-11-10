@@ -10,6 +10,8 @@ INT2LM is an interpolation program providing boundary and/or initial conditions 
 
 ## Support status
 
+The `master` branch of INT2LM is continuously tested on Piz Daint
+
 ## Access
 
 In order to get access to the [INT2LM repository hosted on the C2SM-RCM GitHub organization](https://github.com/C2SM-RCM/int2lm), 
