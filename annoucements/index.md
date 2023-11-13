@@ -29,6 +29,5 @@ The registration is now open (30 places available). Places will be confirmed on 
 
 More information about the workshop content and the registration form can be found at [Git for Advanced Workshop 2023](https://c2sm.ethz.ch/education/technical-training/c2sm-git-advanced-workshop-2023.html).
 
-
 published 22/08/2023
 {: .label .label-grey}

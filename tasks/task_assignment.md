@@ -18,6 +18,4 @@ Tasks are one-​time assignments that typically involve the development of a ne
 
 ## Overview of current tasks
 
-An overview of all submitted tasks can be found as the [issues](https://github.com/C2SM/Tasks-Support/issues) of our [Tasks-Support](https://github.com/C2SM/Tasks-Support) repository.
-
-The current status of all tasks for each WG is displayed within the [C2SM projects](https://github.com/C2SM/Tasks-Support/projects?query=is%3Aopen).
+An overview of all submitted tasks can be found as the [issues](https://github.com/C2SM/Tasks-Support/issues) of our [Tasks-Support](https://github.com/C2SM/Tasks-Support) repository. The current task status of each WG can be found there under the [projects](https://github.com/C2SM/Tasks-Support/projects?query=is%3Aopen) section.
