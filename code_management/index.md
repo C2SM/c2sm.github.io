@@ -78,4 +78,4 @@ Check out our Git course for examples of [Custom Git Hooks](https://github.com/C
 - Open a Git folder with a Markdown file and open the split view (right corner)
 - Open Terminal (Terminal button at top)
 - Install extensions (left panel - extensions): Python, GitLens, Remote - SSH, vim
-- cmd - shift - p (Mac): follow instructions here: https://github.com/C2SM/c2sm.github.io/edit/review_code_management/code_management/index.md otherwise VS Code will be killed every view minutes when working on CSCS
+- cmd - shift - p (Mac): follow instructions here: https://confluence.cscs.ch/display/KB/VScode+gets+killed otherwise VS Code will be killed every view minutes when working on CSCS
