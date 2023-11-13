@@ -7,7 +7,7 @@ has_children: false
 
 # Tasks
 
-C2SM's technical team is structured around the 4 working groups decribed [bellow](/tasks/#working-groups) and reveives tasks from 3 differents entities (C2SM members, community projects and third party projects), each of them following a [specific assignement procedure](/tasks/#detailed-task-assignment).
+C2SM's technical team is structured around the 4 working groups decribed [bellow](./#working-groups) and reveives tasks from 3 differents entities (C2SM members, community projects and third party projects), each of them following a [specific assignement procedure](./#detailed-task-assignment).
 
 
 ## Working Groups
@@ -26,7 +26,7 @@ This group focuses on providing climate data for impact research. Tasks may incl
 
 ## Task Assignment
 
-The C2SM Executive Office accepts tasks from 3 different entities each following a specific procedure described [bellow](/tasks/#detailed-task-assignment).
+The C2SM Executive Office accepts tasks from 3 different entities each following a specific procedure described [bellow](./#detailed-task-assignment).
 
 {: .note }
 
