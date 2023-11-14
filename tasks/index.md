@@ -7,4 +7,4 @@ has_children: true
 
 # Tasks
 
-C2SM is organized around different working groups. Below you find an overview about each working group and the C2SM task assignment procedure.
+C2SM is organized around different working groups. Below you find an overview of each working group and the C2SM task assignment procedure.
