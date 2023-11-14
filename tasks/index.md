@@ -46,7 +46,7 @@ This group focuses on providing climate data for impact research. Tasks may incl
 
 The C2SM Executive Office accepts tasks from 3 different entities each following a specific procedure described [bellow](./#detailed-task-assignment).
 
-{: .note }
+{: .attention-title }
 
 In any case, please submit concrete tasks by following the instructions on our GitHub repository [Tasks-Support](https://github.com/C2SM/Tasks-Support).
 
