@@ -104,7 +104,7 @@ The GPU porting of the dynamical core of COSMO was accomplished by rewriting the
 >
 > - The support status on the future Alps system is not yet knonw. It strongly depends on the ability to use an old interpretation of the OpenACC standard.
 >
-> - C2SM's support for COSMO is scheduled to end end of 2024
+> - C2SM's support for COSMO is scheduled to stop end of 2024
 
 ## Access
 In order to get access to the [COSMO repository](https://github.com/C2SM-RCM/cosmo) hosted on the C2SM-RCM GitHub organization,
