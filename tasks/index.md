@@ -89,7 +89,7 @@ Tasks are also taken from C2SM Community Projects. These are large, perennial, a
 
 <details close markdown="block">
   <summary>
-    Tasks from Third-Party Projects
+    Tasks from third-party Projects
   </summary>
   {: .text-gamma }
 
