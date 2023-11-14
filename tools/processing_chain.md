@@ -20,6 +20,10 @@ community and hosted on the [C2SM GitHub organization](https://github.com/C2SM/p
 
 If you need any help, please contact [Michael Jähn](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091).
 
+## Support status
+
+The `main` branch is continuously tested on Piz Daint.
+
 ## Features
 
 - Automatic folder structure creation

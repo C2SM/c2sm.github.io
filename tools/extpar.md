@@ -6,7 +6,11 @@ parent: Tools
 
 # EXTPAR
 
-EXTPAR (External Parameters for Numerical Weather Prediction and Climate Application) is an official COSMO Consortium software that generates external parameter fields used as input for the COSMO and ICON models. 
+EXTPAR (External Parameters for Numerical Weather Prediction and Climate Application) is an official COSMO Consortium software that generates external parameter fields used as input for the COSMO and ICON models.
+
+## Support status
+
+The `master` branch is continuously tested on Piz Daint
 
 ## Access
 
