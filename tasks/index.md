@@ -59,7 +59,7 @@ The Core Team will evaluate the proposals and may provide feedback/ask questions
 Depending on the urgency or current workload of the Core Team, C2SM may begin work on the task immediately or at a later point in time.
 
 4. **Feedback and Discussion of Tasks:**
-During the semi-annual WG Day, to which representatives of each C2SM member group are invited, the status and future of submitted tasks are discussed. Members can provide critical feedback on the process.
+During the biannual WG Day, to which representatives of each C2SM member group are invited, the status and future of submitted tasks are discussed. Members can provide critical feedback on the process.
 </details>
 
 <details close markdown="block">
@@ -79,7 +79,7 @@ Tasks are also taken from C2SM Community Projects. These are large, perennial, a
 - At the latest at the beginning of the project, the project steering group develops and formulates how it envisions the involvement of the core team and defines specific tasks. The tasks are submitted as a proposal to the C2SM ED and the involved programmers;
 - The ED and the responsible programmer(s) evaluate the tasks, provide feedback/clarification, and finally submit their proposal to the C2SM SC;
 - The SC approves the task list;
-- The task assignment from Community Projects is repeated regularly, at semi-​annual or annual intervals, ideally 1-2 months before the biannual Working Group Day.
+- The task assignment from Community Projects is repeated regularly, at biannual or annual intervals, ideally 1-2 months before the biannual Working Group Day.
 
 ##### Current projects
 - [EXCLAIM](https://c2sm.ethz.ch/research/exclaim.html)
