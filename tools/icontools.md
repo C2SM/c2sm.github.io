@@ -11,7 +11,7 @@ e.g. regular (lat-lon, gaussian) or triangular (ICON). It can be used to generat
 
 ## Support status
 
-The `master` branch is continuously tested on Piz'Daint.
+The `master` branch is continuously tested on Piz Daint.
 
 ## Access
 
