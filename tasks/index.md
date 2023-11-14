@@ -8,7 +8,7 @@ has_children: false
 # Tasks
 {: .no_toc }
 
-C2SM's technical team is structured around the four working groups described [below](./#working-groups) and receives tasks from three different entities (C2SM members, community projects and third party projects), each of them following a [specific assignment procedure](./#detailed-task-assignment).
+C2SM's technical team is structured around the four working groups described below and receives tasks from three different entities (C2SM members, community projects and third party projects), each of them following a specific assignment procedure.
 
 <details open markdown="block">
   <summary>
@@ -44,7 +44,7 @@ This group focuses on providing climate data for impact research. Tasks may incl
 
 ## Task Assignment
 
-The C2SM Executive Office accepts tasks from 3 different entities each following a specific procedure described [below](./#detailed-task-assignment).
+The C2SM Executive Office accepts tasks from three different entities each following a specific procedure described below.
 
 {: .attention-title }
 
@@ -58,12 +58,12 @@ Tasks are one-​time assignments that typically involve the development of a ne
 
 ### Overview of current tasks
 
-An overview of all submitted tasks can be found as the [issues](https://github.com/C2SM/Tasks-Support/issues) of our [Tasks-Support](https://github.com/C2SM/Tasks-Support) repository. The current task status of each WG can be found there under the [projects](https://github.com/C2SM/Tasks-Support/projects?query=is%3Aopen) section.
+An overview of all submitted tasks can be found as the [issues list](https://github.com/C2SM/Tasks-Support/issues) of our [Tasks-Support](https://github.com/C2SM/Tasks-Support) repository. The current task status of each WG is visible under the [projects](https://github.com/C2SM/Tasks-Support/projects?query=is%3Aopen) section.
 
 
 ### Detailed task assignment
 
-Task assignment depends on which entity submitted it. This section describes terms, conditions and procedures in the 3 possible cases.
+Task assignment depends on which entity submitted it. This section describes terms, conditions and procedures in the three possible cases.
 
 <details close markdown="block">
   <summary>
