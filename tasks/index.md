@@ -34,7 +34,7 @@ This group gathers all activities revolving around weather and climate modelling
 
 ### WG 3 - Next Generation Swiss Climate Scenarios
 
-This group focuses on the Next Generation Swiss Climate Scenarios.
+This group focuses on the Next Generation Swiss Climate Scenarios. Tasks typically include running ICON-CLM simulations or providing input data.
 
 
 ### WG 4 - Impact Research
