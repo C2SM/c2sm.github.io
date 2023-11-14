@@ -16,24 +16,6 @@ To stay informed about what is going on in the ICON world and to get to know oth
 ## Support status
 C2SM facilitates the utilization of ICON on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) and [Euler](https://scicomp.ethz.ch/wiki/Euler) computing platforms for the CPU and GPU architectures.
 
-The following table summarizes the features ported to GPU and their correspoding namelist parameters.
-
-<details close markdown="block">
-<summary>gpu ported ICON features </summary>
-
-TODO
-{: .label .label-red }
-
-###### Parameters in namelist `XXX`
-{: .no_toc }
-
-| scheme/parameterization | namelist parameter | GPU porting status |
-|-------------------------|--------------------|--------------------|
-| feature a               | `lfeature_a`       | ported             |
-| feaure b                | `lfeature_b`       | partly ported      |
-
-</details>
-
 ### Supported release
 The latest release distributed by C2SM, currently `2.6.6`, is continuously tested on both Piz Daint and Euler and receives patches when necessary.
 
