@@ -15,7 +15,7 @@ C2SM's technical team is structured around the four working groups described [be
 ### WG 1 - High Performance Computing
 Activities in this group mainly contribute to the development and usage of weather and climate models such as ICON or COSMO for modern technologies (*e.g.* beyond CPU architectures).
 
-### WG 2 - Weather and Climate Modelling
+### WG 2 - Weather and Climate Modeling
 This group gathers all activities revolving around weather and climate modelling at the exclusion of WG 1 (HPC), like usage, maintenance and support. They can target weather and climate models and their potential extensions (*e.g.* aerosols, chemistry) and ESMs. Tasks may include coupling of model components, general tools around pre- and post-processing, automated testing, etc.
 
 ### WG 3 - Next Generation Swiss Climate Scenarios
