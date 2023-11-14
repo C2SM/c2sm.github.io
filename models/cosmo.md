@@ -15,8 +15,9 @@ The following table summarizes the features ported to GPU and their correspoding
 
 <details close markdown="block">
 <summary>gpu ported COSMO features</summary>
+{: .text-delta }
 
-###### Parameters in `INPUT_ORG`
+##### Parameters in `INPUT_ORG`
 {: .no_toc }
 
 | scheme/parameterization                       | namelist parameter                                                                                                                                                                  | GPU porting status                                 |
@@ -47,7 +48,7 @@ The following table summarizes the features ported to GPU and their correspoding
 | Debug statements in various model sections    | `ldebug_dyn`, `ldebug_gsp`, `ldebug_rad`, `ldebug_sso`, `ldebug_tur`, `ldebug_con`, `ldebug_soi`, `ldebug_io`, `ldebug_mpe`, `ldebug_dia`, `ldebug_lhn`, `ldebug_ass`, `ldebug_art` | partially ported, not all prints are active on GPU |
 | Initialize local variables                    | `linit_fields`                                                                                                                                                                      | not ported                                         |
 
-###### Parameters in `INPUT_PHY`
+##### Parameters in `INPUT_PHY`
 {: .no_toc }
 
 | scheme/parameterization                   | namelist parameter                                    | GPU porting status                                                          |
@@ -90,7 +91,7 @@ The following table summarizes the features ported to GPU and their correspoding
 | Snow-cover fraction type                  | `idiag_snowfrac = 1`, `2`, `3`, `4`, `20`, `30`, `40` | all options ported                                                          |
 | Subgrid scale orography                   | `lsso`                                                | ported                                                                      |
 
-###### Parameters in `INPUT_DYN`
+##### Parameters in `INPUT_DYN`
 {: .no_toc }
 
 The GPU porting of the dynamical core of COSMO was accomplished by rewriting the dynamics with the Gridtools stencil library. The Gridtools dycore supports a subset of the parameters of the COSMO Fortran dynamical core. The list of features currently supported in the Gridtools dycore can be found [here](https://github.com/C2SM-RCM/cosmo/blob/master/dycore/doc/Dycore/supported_configuration.tex) in the documentation in the code repository.
@@ -103,7 +104,7 @@ The GPU porting of the dynamical core of COSMO was accomplished by rewriting the
 >
 > - The support status on the future Alps system is not yet knonw. It strongly depends on the ability to use an old interpretation of the OpenACC standard.
 >
-> - C2SM's support for COSMO is scheduled to end in 2025
+> - C2SM's support for COSMO is scheduled to end end of 2024
 
 ## Access
 In order to get access to the [COSMO repository](https://github.com/C2SM-RCM/cosmo) hosted on the C2SM-RCM GitHub organization,
