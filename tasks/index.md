@@ -24,12 +24,12 @@ C2SM's technical team is structured around the four working groups described [be
 
 ### WG 1 - High Performance Computing
 
-Activities in this group mainly contribute to the development and usage of weather and climate models such as ICON or COSMO for modern technologies (*e.g.* beyond CPU architectures).
+Activities in this group mainly contribute to the development and usage of weather and climate models such as ICON or COSMO for modern technologies (e.g., beyond CPU architectures).
 
 
 ### WG 2 - Weather and Climate Modeling
 
-This group gathers all activities revolving around weather and climate modelling at the exclusion of WG 1 (HPC), like usage, maintenance and support. They can target weather and climate models and their potential extensions (*e.g.* aerosols, chemistry) and ESMs. Tasks may include coupling of model components, general tools around pre- and post-processing, automated testing, etc.
+This group gathers all activities revolving around weather and climate modelling at the exclusion of WG 1 (HPC), like usage, maintenance and support. They can target weather and climate models and their potential extensions (e.g., aerosols, chemistry) and ESMs. Tasks may include coupling of model components, general tools around pre- and post-processing, automated testing, etc.
 
 
 ### WG 3 - Next Generation Swiss Climate Scenarios
@@ -44,7 +44,7 @@ This group focuses on providing climate data for impact research. Tasks may incl
 
 ## Task Assignment
 
-The C2SM Executive Office accepts tasks from 3 different entities each following a specific procedure described [bellow](./#detailed-task-assignment).
+The C2SM Executive Office accepts tasks from 3 different entities each following a specific procedure described [below](./#detailed-task-assignment).
 
 {: .attention-title }
 
@@ -120,7 +120,7 @@ Tasks are also taken from C2SM Community Projects. These are large, perennial, a
   </summary>
   {: .text-gamma }
 
-As outlined in [C2SM's business plan for 2021-25](https://ethz.ch/content/dam/ethz/special-interest/usys/c2sm-dam/center/documents/c2sm_business_plan_final_18nov19.pdf), the Executive Office also relies heavily on funding from third-party projects. We are therefore happy to contribute to the research projects of our members (e.g. SNF, EU, ETH) in our fields of expertise.
+As outlined in [C2SM's business plan for 2021-25](https://ethz.ch/content/dam/ethz/special-interest/usys/c2sm-dam/center/documents/c2sm_business_plan_final_18nov19.pdf), the Executive Office also relies heavily on funding from third-party projects. We are therefore happy to contribute to the research projects of our members (e.g., SNF, EU, ETH) in our fields of expertise.
 
 
 ##### Third-Party Projects that Benefit Multiple C2SM Groups
