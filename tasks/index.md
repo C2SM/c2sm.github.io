@@ -7,7 +7,7 @@ has_children: false
 
 # Tasks
 
-C2SM's technical team is structured around the 4 working groups decribed [bellow](./#working-groups) and reveives tasks from 3 differents entities (C2SM members, community projects and third party projects), each of them following a [specific assignement procedure](./#detailed-task-assignment).
+C2SM's technical team is structured around the four working groups described [below](./#working-groups) and receives tasks from three different entities (C2SM members, community projects and third party projects), each of them following a [specific assignment procedure](./#detailed-task-assignment).
 
 
 ## Working Groups
