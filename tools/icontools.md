@@ -11,8 +11,7 @@ e.g. regular (lat-lon, gaussian) or triangular (ICON). It can be used to generat
 
 ## Support status
 
-TODO
-{: .label .label-red }
+The `master` branch is continuously tested on Piz'Daint.
 
 ## Access
 

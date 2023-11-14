@@ -16,8 +16,7 @@ If there are any questions or you want to provide your ICON-CLM setup, please co
 
 ## Support status
 
-TODO
-{: .label .label-red }
+The `main` branch is continuously tested on Piz Daint.
 
 ## Code
 

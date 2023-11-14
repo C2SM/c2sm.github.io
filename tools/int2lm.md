@@ -10,7 +10,7 @@ INT2LM is an interpolation program providing boundary and/or initial conditions 
 
 ## Support status
 
-The `master` branch of INT2LM is continuously tested on Piz Daint
+The `master` branch is continuously tested on Piz Daint
 
 ## Access
 

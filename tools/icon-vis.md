@@ -11,5 +11,4 @@ More information can be found as part of the repository itself.
 
 ## Support status
 
-TODO
-{: .label .label-red }
+The `master` branch is continuously tested on Piz Daint.

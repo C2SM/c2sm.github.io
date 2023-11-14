@@ -22,8 +22,7 @@ If you need any help, please contact [Michael Jähn](https://c2sm.ethz.ch/the-ce
 
 ## Support status
 
-TODO
-{: .label .label-red }
+The `main` branch is continuously tested on Piz Daint.
 
 ## Features
 
