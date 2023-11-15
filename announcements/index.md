@@ -17,7 +17,7 @@ The workshop will give an introduction to what a climate model is, how it works 
 The registration is now open (30 places available). Places will be confirmed on a first-come, first-served basis.
 
 
-More information about the workshop content and the registration form can be found [there](https://c2sm.ethz.ch/education/technical-training/climate-model-and-climate-data-workshop-for-impact-research.html#)
+More information about the workshop content and the registration form can be found on the [dedicated C2SM website page](https://c2sm.ethz.ch/education/technical-training/climate-model-and-climate-data-workshop-for-impact-research.html#)
 
 ---
 
