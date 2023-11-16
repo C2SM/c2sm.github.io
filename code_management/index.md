@@ -18,7 +18,7 @@ has_children: false
 </details>
 
 If you're new to coding or already working on it, remember two important things: always **use version control** and **add automatic tests**.
-These steps will help you and anyone you work with to make things easier.
+These steps will help you and anyone you work with to make things easier. Also, try out tools that can make coding easier for you.
 
 ## Version Control with Git
 **Git** is a popular tool for managing source code. C2SM repositories are hosted on GitHub, which uses Git as its version control system.
@@ -73,7 +73,9 @@ Git Hooks are local scripts in Git that make sure things get done right when you
 Check out our Git course for examples of [Custom Git Hooks](https://github.com/C2SM/git-course/blob/main/advanced/Exercise_7_git-hooks.md) hooks, and read GitHub's [documentation on GitHub Actions](https://docs.github.com/en/actions).
 
 
-## VS Code (Useful tool for coding)
+## Useful tools for coding
+
+### VS Code
 - [Download VS Code](https://code.visualstudio.com/download)
 - Open a Git folder with a Markdown file and open the split view (right corner)
 - Open Terminal (Terminal button at top)
