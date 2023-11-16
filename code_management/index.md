@@ -74,10 +74,17 @@ Check out our Git course for examples of [Custom Git Hooks](https://github.com/C
 
 
 ## Useful tools for coding
-
+Two popular tools for coding are [Visual Studio (VS) Code](https://code.visualstudio.com) and [PyCharm](https://www.jetbrains.com/pycharm/). Here are instructions for setting up and using Visual Studio Code with SSH on a CSCS machine.
 ### VS Code
-- [Download VS Code](https://code.visualstudio.com/download)
-- Open a Git folder with a Markdown file and open the split view (right corner)
-- Open Terminal (Terminal button at top)
-- Install extensions (left panel - extensions): Python, GitLens, Remote - SSH, vim
-- cmd - shift - p (Mac): follow instructions here: https://confluence.cscs.ch/display/KB/VScode+gets+killed otherwise VS Code will be killed every view minutes when working on CSCS
+1. [Download](https://code.visualstudio.com/download) and install VS Code on your computer.
+2. Install extensions:
+    - Open VS Code.
+    - Look for the "Extensions" icon in the sidebar (it looks like four small squares).
+    - Install the extensions you need for your coding work. We recommend:
+        - Python: for Python development support
+        - GitLens: to improve Git functionality
+        - vim: if you prefer Vim keybindings
+        - Remote-SSH: to connect to remote machines
+3. Use VS Code with SSH on CSCS:
+    - Install the "Remote-SSH" extension.
+    - [Ensure VS Code remains active when working on CSCS](https://confluence.cscs.ch/display/KB/VScode+gets+killed)
