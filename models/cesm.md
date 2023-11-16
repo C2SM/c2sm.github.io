@@ -9,7 +9,7 @@ The Community Earth System Model (CESM) is a fully-coupled,
 global climate model that provides state-of-the-art computer simulations of the Earth's past, 
 present, and future climate states. For more info please see the [CESM Homepage](https://www.cesm.ucar.edu/).
 
-## Support
+## Support status
 The current supported version on [ETH Cluster Euler](https://scicomp.ethz.ch/wiki/Main_Page) are **CESM 1.2.2** and **CESM 2.1.2**.
 Newer CESM2 versions are supported by request. We recommend to use CESM2. Please contact [Urs Beyerle](https://usys.ethz.ch/personen/profil.NDk5MTg=.TGlzdC82MzcsMzIwMTk3MjIy.html) for support.
 

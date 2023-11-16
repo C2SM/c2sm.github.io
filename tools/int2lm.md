@@ -8,6 +8,10 @@ parent: Tools
 
 INT2LM is an interpolation program providing boundary and/or initial conditions to the COSMO model.
 
+## Support status
+
+The `master` branch is continuously tested on Piz Daint
+
 ## Access
 
 In order to get access to the [INT2LM repository hosted on the C2SM-RCM GitHub organization](https://github.com/C2SM-RCM/int2lm), 

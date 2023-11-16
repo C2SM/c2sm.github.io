@@ -14,6 +14,10 @@ The code has been adapted for running on Piz Daint and is distributed to users v
 
 If there are any questions or you want to provide your ICON-CLM setup, please contact [Michael Jähn](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091).
 
+## Support status
+
+The `main` branch is continuously tested on Piz Daint.
+
 ## Code
 
 * [Spice at the C2SM Github organization](https://github.com/C2SM/spice)

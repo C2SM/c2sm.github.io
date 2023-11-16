@@ -4,7 +4,7 @@ layout: default
 parent: Tools
 ---
 
-# Processing Chain
+# Processing Chain <img src="https://polybox.ethz.ch/index.php/s/yc3zMmoXKyI2rJm/download" width="64" valign="middle"/> 
 
 The Processing Chain is a collection of Python scripts to prepare the necessary input data, submit the compute jobs to the queue on Piz Daint and to apply post-processing steps. 
 In addition to the standard versions of the COSMO and ICON models, it can als handle several variants of these models, namely COSMO-GHG, COSMO-ART and ICON-ART.
@@ -19,6 +19,10 @@ Since 2021, the Processing Chain has been distributed to the entire C2SM
 community and hosted on the [C2SM GitHub organization](https://github.com/C2SM/processing-chain/). Regular testing is done via [Jenkins](https://jenkins-mch.cscs.ch/job/ProcessingChain/job/processing-chain-weekly/) (requires access) to ensure that the code runs stably on the system.
 
 If you need any help, please contact [Michael Jähn](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091).
+
+## Support status
+
+The `main` branch is continuously tested on Piz Daint.
 
 ## Features
 

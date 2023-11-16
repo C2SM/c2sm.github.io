@@ -13,6 +13,11 @@ C2SM facilitates the utilization of ICON on the [Piz Daint](https://www.cscs.ch/
 
 To stay informed about what is going on in the ICON world and to get to know other ICON users, please attend our [quarterly ICON meeting](https://c2sm.github.io/events/icon_meeting.html).
 
+## Support status
+C2SM facilitates the utilization of ICON on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) and [Euler](https://scicomp.ethz.ch/wiki/Euler) computing platforms for the CPU and GPU architectures.
+
+### Supported release
+The latest release distributed by C2SM, currently `2.6.6`, is continuously tested on both Piz Daint and Euler and receives patches when necessary.
 
 ## Access
 To gain access to the [ICON repository](https://github.com/C2SM/icon) hosted on the C2SM GitHub organization, please contact your group's technical contact. They will be responsible for adding you to the appropriate user group. 
