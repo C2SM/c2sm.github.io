@@ -87,4 +87,5 @@ Two popular tools for coding are [Visual Studio (VS) Code](https://code.visualst
         - Remote-SSH: to connect to remote machines
 3. Use VS Code with SSH on CSCS:
     - Install the "Remote-SSH" extension.
-    - [Ensure VS Code remains active when working on CSCS](https://confluence.cscs.ch/display/KB/VScode+gets+killed)
+    - Ensure VS Code remains active when working on CSCS:
+        - Activate the "Remote.SSH: Remote Server Listen On Socket" option in "Remote-SSH: Settings".
