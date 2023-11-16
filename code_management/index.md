@@ -58,13 +58,13 @@ Testing involves checking different parts of the code to make sure the software 
 The specific tests you need will depend on your project and its requirements. Here is a list of tests that are usually very useful.
 ### 1. Unit Tests
 These tests are for testing individual components or functions of your code to ensure they work correctly in isolation.
-Find an [example for unit tests](https://github.com/C2SM/spack-c2sm/blob/main/test/unit_test.py) in our spack-c2sm repository. It can be executed by running `python3 test/unit_test.py` (after creating and activating the respective environment).
+Find an [example for unit tests](https://github.com/C2SM/spack-c2sm/blob/main/test/unit_test.py) in our spack-c2sm repository.
 ### 2. Integrations Tests
 These tests are to check how different parts of your code work together and communicate.
-Find an [example for integration tests](https://github.com/C2SM/spack-c2sm/blob/main/test/integration_test.py) in our spack-c2sm repository. It can be executed by running `python3 test/integration_test.py` (after creating and activating the respective environment).
+Find an [example for integration tests](https://github.com/C2SM/spack-c2sm/blob/main/test/integration_test.py) in our spack-c2sm repository.
 ### 3. System Tests
 These tests are performed to ensure that all the components and modules of a software system work together as intended and that the system meets its specified requirements and functions correctly in its operational environment.
-Find an [example for system tests](https://github.com/C2SM/spack-c2sm/blob/main/test/system_test.py) (wrong!) in our spack-c2sm repository. It can be executed by running `python3 test/system_test.py` (after creating and activating the respective environment).
+Find an [example for system tests](https://github.com/C2SM/spack-c2sm/blob/main/test/system_test.py) in our spack-c2sm repository.
 ### 4. Tolerance tests
 These tests are used for the development of ICON, specifically when code is ported from CPU to GPU. The results when running on CPU and GPU are not bit identical, therefore a tolerance range is accepted when comparing a test case to the CPU reference. The accepted tolerance range is created by running an ensemble of the same test case with different perturbations. MeteoSwiss has development [probtest](https://github.com/MeteoSwiss/probtest) for handling everything related to tolerance tests with ICON. If you have a DKRZ account and are working with ICON-NWP, you can also check out the manual for [Generating tolerances for non-standard tests](https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Validating-with-probtest-without-buildbot-references-(Generating-tolerances-for-non-standard-tests)).
 ### 5. Git Hooks & GitHub Actions
