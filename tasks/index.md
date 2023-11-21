@@ -48,7 +48,7 @@ The C2SM Core Team accepts tasks from the three different areas mentioned above 
 
 {: .attention-title }
 
-In any case, please submit concrete tasks by following the instructions on our GitHub repository [Tasks-Support](https://github.com/C2SM/Tasks-Support).
+Please submit concrete tasks by following the instructions on our GitHub repository [Tasks-Support](https://github.com/C2SM/Tasks-Support).
 
 
 ### Requirements for Tasks
@@ -58,12 +58,12 @@ Tasks are one-​time assignments that typically involve the development of a ne
 
 ### Overview of current tasks
 
-An overview of all submitted tasks can be found as the [issues list](https://github.com/C2SM/Tasks-Support/issues) of our [Tasks-Support](https://github.com/C2SM/Tasks-Support) repository. The current task status of each WG is visible under the [projects](https://github.com/C2SM/Tasks-Support/projects?query=is%3Aopen) section.
+An overview of all submitted tasks can be found at the [issues list](https://github.com/C2SM/Tasks-Support/issues) of our [Tasks-Support](https://github.com/C2SM/Tasks-Support) repository. The current task status of each WG is visible under the [projects](https://github.com/C2SM/Tasks-Support/projects?query=is%3Aopen) section.
 
 
 ### Detailed task assignment
 
-Task assignment depends on which entity submitted it. This section describes terms, conditions and procedures in the three possible cases.
+Task assignment depends on which area submitted it. This section describes terms, conditions and procedures in the three possible cases.
 
 <details close markdown="block">
   <summary>
