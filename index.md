@@ -12,15 +12,14 @@ Here we collect helpful information for scientists and partners
 about the C2SM core team, tasks, support, models, tools, datasets
 and much more.
 
-Whether you're seeking a quick overview or in-depth details on a specific topic,
+Whether you are seeking a quick overview or in-depth details on a specific topic,
 this website is your comprehensive resource. 
 For additional information on specific projects, we have provided direct links,
-such as to documentation that we distribute directly with the code.
+(not clear to me what it means: such as to documentation that we distribute directly with the code.)
 
 ## Core Team
 
-The C2SM Core Team is part of the Executive Office and currently consists
-of six scientific programmers. Their work is distributed among the following areas:
+The C2SM Core Team - or C2SM's Executive Office - currently employs six scientific programmers. Their work is distributed among the following areas:
 
 - Tasks from the Working Groups
 - Maintenance of supported models, tools and datasets
