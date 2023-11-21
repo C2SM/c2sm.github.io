@@ -9,7 +9,7 @@ nav_order: -1
 **Welcome to the C2SM User Landing Page!**
 
 Here we collect helpful information for scientists and partners
-about our C2SM core team, tasks, support, models, tools, datasets
+about the C2SM core team, tasks, support, models, tools, datasets
 and much more.
 
 Whether you're seeking a quick overview or in-depth details on a specific topic,
