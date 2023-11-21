@@ -8,7 +8,7 @@ has_children: false
 # Tasks
 {: .no_toc }
 
-C2SM's technical team is structured around the four working groups described below and receives tasks from three different entities (C2SM members, community projects and third party projects), each of them following a specific assignment procedure.
+The work of C2SM's technical team is structured around the four working groups described below. The team receives tasks from three different areas, i.e. from C2SM members, community projects and third party projects, each of them following a specific assignment procedure.
 
 <details open markdown="block">
   <summary>
@@ -24,27 +24,27 @@ C2SM's technical team is structured around the four working groups described bel
 
 ### WG 1 - High Performance Computing
 
-Activities in this group mainly contribute to the development and usage of weather and climate models such as ICON or COSMO for modern technologies (e.g., beyond CPU architectures).
+Activities for this group mainly contribute to the further development and usage of next-generation weather and climate models such as ICON or COSMO using innovative coding concepts (e.g., beyond CPU architectures).
 
 
 ### WG 2 - Weather and Climate Modeling
 
-This group gathers all activities revolving around weather and climate modelling at the exclusion of WG 1 (HPC), like usage, maintenance and support. They can target weather and climate models and their potential extensions (e.g., aerosols, chemistry) and ESMs. Tasks may include coupling of model components, general tools around pre- and post-processing, automated testing, etc.
+This group gathers all activities revolving around weather and climate modelling with the exception of WG 1 (HPC), like usage, maintenance and support. They can target weather and climate models and their potential extensions (e.g., aerosols, chemistry) and ESMs. Tasks may include coupling of model components, general tools around pre- and post-processing, automated testing, etc.
 
 
 ### WG 3 - Next Generation Swiss Climate Scenarios
 
-This group focuses on the Next Generation Swiss Climate Scenarios. Tasks typically include running ICON-CLM simulations or providing input data.
+This group focuses on the next generation of Swiss Climate Scenarios. Tasks typically include setting up and running ICON-CLM simulations, providing input data. This is not all, additions by Ruth here!
 
 
 ### WG 4 - Impact Research
 
-This group focuses on providing climate data for impact research. Tasks may include standardizing and documenting climate model outputs or climate observations for easier use. We also provide regular support on how to use this type of data.
+This group focuses on providing climate data for impact research. Tasks may include standardising and documenting climate model outputs or climate observations for easier use. We also provide regular support on how to use this type of data.
 
 
 ## Task Assignment
 
-The C2SM Executive Office accepts tasks from three different entities each following a specific procedure described below.
+The C2SM Core Team accepts tasks from the three different areas mentioned above each following a specific procedure described below.
 
 {: .attention-title }
 
@@ -53,7 +53,7 @@ In any case, please submit concrete tasks by following the instructions on our G
 
 ### Requirements for Tasks
 
-Tasks are one-​time assignments that typically involve the development of a new model feature, acceleration/optimization of a model feature, or other technical improvements to a model. Tasks are proposed by one or more C2SM members and approved by the C2SM Working Groups (WGs). They must be related to our supported [tools](https://c2sm.github.io/tools/) and [models](https://c2sm.github.io/models/).
+Tasks are one-​time assignments that typically involve the development of a new model feature, acceleration/optimisation of a model feature, or other technical improvements to a model. Tasks are proposed by one or more C2SM members and are approved by the C2SM Working Groups (WGs). They must be related to our supported [tools](https://c2sm.github.io/tools/) and [models](https://c2sm.github.io/models/).
 
 
 ### Overview of current tasks
