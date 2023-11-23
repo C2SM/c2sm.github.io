@@ -13,5 +13,6 @@
     {"pattern": "agupubs.onlinelibrary.wiley.com"},
     {"pattern": "^https://github.com/C2SM/spice"},
     {"pattern": "^https://wiki.iac.ethz.ch/Climphys/ProjectCESM2SetupControlRun"},
-    {"pattern": "^https://wiki.iac.ethz.ch/Climphys/ProjectCESM122SetupControlRun"}
+    {"pattern": "^https://wiki.iac.ethz.ch/Climphys/ProjectCESM122SetupControlRun"},
+    {"pattern": "^https://wiki.iac.ethz.ch/IT/LinuxNetCDF"}
   ]}
