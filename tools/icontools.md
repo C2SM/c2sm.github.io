@@ -6,16 +6,16 @@ parent: Tools
 
 # DWD ICON Tools
 
-The DWD ICON Tools contain a set of routines which may be suitable for reading, remapping and writing of fields from and to predefined grids,
-e.g. regular (lat-lon, gaussian) or triangular (ICON). It can be used to generate lateral boundary conditions (LBC) and initial conditions (IC) for ICON-LAM simulations.
+DWD ICON Tools contain a set of routines which may be suitable for reading, remapping and writing of fields from and to predefined grids,
+e.g., regular (lat-lon, gaussian) or triangular (ICON). It can be used to generate lateral boundary conditions (LBC) and initial conditions (IC) for ICON-LAM simulations.
 
 ## Support status
 
-The `master` branch is continuously tested on Piz Daint.
+The `master` branch is continuously being tested on Piz Daint.
 
 ## Access
 
-In order to get access to the [DWD ICON Tools repository hosted on the C2SM GitHub organization](https://github.com/C2SM/icontools),
+In order to get access to the [DWD ICON Tools repository hosted on the C2SM GitHub organisation](https://github.com/C2SM/icontools),
 please contact your group's technical contact. They will be responsible for adding you to the appropriate user group.
 
 ## Compile
@@ -54,7 +54,7 @@ icongridgen --nml icontools/C2SM/gridgen.nml
 
 ### Interpolate BC from IFS
 
-This manual refers to the workflow MeteoSwiss is currently using to run LAM simulations.
+This manual refers to the workflow MeteoSwiss currently uses to run LAM simulations.
 
 * Add fields `FI` and `z` from IFS analysis to LBC prior to the interpolation using `cdo` (GRIB only). To use the `cdo` command, make sure the module is loaded: `module load daint-gpu CDO`.
 
