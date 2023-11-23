@@ -132,7 +132,7 @@ These can be projects of individual C2SM members as PI, possibly together with o
 ##### Third-Party Projects with Benefits to the PI Only
 {: .no_toc }
 
-A member may also propose a task/tasks to be funded from their project, but where the benefit is limited to their group. These proposals will be realized if C2SM capacity is available. However, they will have a lower priority than projects with a greater benefit to the community.
+A member may also propose a task/tasks to be funded from their project, but where the benefit is limited to their group. These proposals will be realised if C2SM capacity is available. However, they will have a lower priority than projects with a greater benefit to the community.
 
 ##### Current projects
 {: .no_toc }
