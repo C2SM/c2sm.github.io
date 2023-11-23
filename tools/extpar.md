@@ -14,7 +14,7 @@ The `master` branch is continuously being tested on Piz Daint
 
 ## Access
 
-In order to get access to the [EXTPAR repository hosted on the C2SM-RCM GitHub organization](https://github.com/C2SM-RCM/extpar), 
+In order to get access to the [EXTPAR repository hosted on the C2SM-RCM GitHub organisation](https://github.com/C2SM-RCM/extpar), 
 please contact [Jonas Jucker](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=210923).
 
 Once you have access, please follow the instructions in the [README of EXTPAR](https://github.com/C2SM-RCM/extpar#readme) carefully.
