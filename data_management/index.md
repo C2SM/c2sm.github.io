@@ -17,6 +17,9 @@ has_children: false
   {:toc}
 </details>
 
+## C2SM data management guidelines
+[C2SM Data Management Recommendations 2020](https://polybox.ethz.ch/index.php/s/pyZRPF4FfJJ47g1)
+
 ## ETH Links
    * [Research Data at ETH Zurich](https://ethz.ch/staffnet/en/service/a-to-z/research-data.html)
    * [New Guidelines for Research Data Management](https://ethz.ch/staffnet/en/news-and-events/internal-news/archive/2022/10/new-guidelines-for-research-data-management.html) -> [PDF](https://rechtssammlung.sp.ethz.ch/Dokumente/414.2en.pdf)
