@@ -134,18 +134,23 @@ These can be projects of individual C2SM members as PI, possibly together with o
 
 A member may also propose a task/tasks to be funded from their project, but where the benefit is limited to their group. These proposals will be realized if C2SM capacity is available. However, they will have a lower priority than projects with a greater benefit to the community.
 
+##### Current projects
+{: .no_toc }
+
+- [SNF scClim project](https://scclim.ethz.ch/)
+
 
 ##### Task Portfolio
 {: .no_toc }
 
-The core team's contributions consist largely of technical model development and support tasks. Individual tasks may also include setting up and maintaining a project website, or organizing individual workshops or seminar series.
+The core team's contributions consist largely of technical model development and support tasks. Individual tasks may also include setting up and maintaining a project website, or organising individual workshops or seminar series.
 
 
 ##### Procedure for Proposing Participation in a Third-Party Project
 {: .no_toc }
 
 - The project PI contacts the C2SM Executive Director (ED) at the proposal stage by submitting a written proposal similar to the task proposals for group tasks;
-- The ED, along with an assigned core team member, will provide feedback to the PI and may review the proposal again;
+- The ED, along with an assigned Core Team member, will provide feedback to the PI and may review the proposal again;
 - If the proposal meets the above conditions, C2SM will consider it accepted and reserve time for its execution in the following year;
 - C2SM will reserve approximately 3-7 person months (0.3-0.6 FTE) per year for tasks from external projects.
 </details>
