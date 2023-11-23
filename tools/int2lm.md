@@ -10,11 +10,11 @@ INT2LM is an interpolation program providing boundary and/or initial conditions 
 
 ## Support status
 
-The `master` branch is continuously tested on Piz Daint
+The `master` branch is continuously being tested on Piz Daint
 
 ## Access
 
-In order to get access to the [INT2LM repository hosted on the C2SM-RCM GitHub organization](https://github.com/C2SM-RCM/int2lm), 
+In order to get access to the [INT2LM repository hosted on the C2SM-RCM GitHub organisation](https://github.com/C2SM-RCM/int2lm), 
 please contact [C2SM Support](mailto:support@c2sm.ethz.ch).
 
 ## Compile
@@ -25,7 +25,7 @@ please consider the official [spack-c2sm documentation](https://c2sm.github.io/s
 ## Additional features for C2SM version
 
 There are features that could not be merged into the COSMO-ORG version before the end of development.
-Therefore a separate [branch c2sm-features](https://github.com/C2SM-RCM/int2lm/tree/c2sm-features) was created.
+Therefore, a separate [branch c2sm-features](https://github.com/C2SM-RCM/int2lm/tree/c2sm-features) was created.
 
 ### Read only subset of coarse netcdf input data 
 
