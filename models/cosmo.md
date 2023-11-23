@@ -148,7 +148,7 @@ Asyn-IO: block number xx was filled. Allocating a new block
 
 The above log is printed each time a new buffer block is allocated.
 This means that the Compute PEs (Processing Elements) store output data until the IO processors write it to disk.
-If the number of allocated blocks increases during the simulation, i.e., more and more buffer blocks must be stored on the compute PEs after each output step, the IO processors won't write as fast as the model generates new output.
+If the number of allocated blocks increases during the simulation, i.e., more and more buffer blocks must be stored on the compute PEs after each output step, the IO processors will not write as fast as the model generates new output.
 
 When the speed of writing data to disk by the IO processors and the model timestepping are in balance, the log message changes to:
 ```
