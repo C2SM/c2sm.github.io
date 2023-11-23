@@ -56,12 +56,10 @@ has_children: false
    * [Why avoiding non-commercial licenses?](https://freedomdefined.org/Licenses/NC)
    * [Advices on how to cite datasets](http://www.dcc.ac.uk/resources/how-guides/cite-datasets)
    * [SPDX (standard for easy sofware licensing](https://spdx.org/ids)
-   * [wrong-link](https://spdx.org/skskksks/sksaksks)
 
 ## Help on improving NetCDF metadata
-   * [IAC internal documentation on !NetCDF in general]([[https://wiki.iac.ethz.ch/IT/LinuxNetCDF) (!with IAC login only)
+   * [IAC internal documentation on NetCDF in general](https://wiki.iac.ethz.ch/IT/LinuxNetCDF) (!with IAC login only)
    * [Climate and Forecast (CF) conventions](http://cfconventions.org)
-   * [online CF checker]([http://cfconventions.org/compliance-checker.html)
    * [Python CF checker](https://github.com/cedadev/cf-checker)
    * [CMIP6 controlled vocabularies](https://cmor.llnl.gov/mydoc_cmor3_CV/)
 
