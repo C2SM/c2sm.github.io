@@ -25,7 +25,7 @@ The C2SM Core Team - or C2SM's Executive Office - currently employs six scientif
 - Maintenance of supported models, tools and datasets
 - Regular support for users
 - EXCLAIM project
-- Organization of workshops
+- Organisation of workshops
 
 ### Executive Director
 
@@ -50,8 +50,8 @@ C2SM maintains two GitHub organizations to distribute code to the community.
 
 ### [C2SM](https://github.com/C2SM)
 
-This is our main GitHub organization, which contains many repositories, including ICON. [How to get access](https://c2sm.github.io/models/icon.html#access)
+This is our main GitHub organisation, which contains many repositories, including ICON. [How to get access](https://c2sm.github.io/models/icon.html#access)
 
 ### [C2SM-RCM](https://github.com/C2SM-RCM)
 
-The C2SM-RCM organization contains all codes related to COSMO and tools like EXTPAR. For questions and access, please contact [Jonas Jucker](mailto:jonas.jucker@c2sm.ethz.ch).
+The C2SM-RCM organisation contains all codes related to COSMO and tools like EXTPAR. For questions and access, please contact [Jonas Jucker](mailto:jonas.jucker@c2sm.ethz.ch).
