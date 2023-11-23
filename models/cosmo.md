@@ -9,9 +9,9 @@ parent: Models
 The COSMO model is a limited-area, non-hydrostatic model developed by a collaboration of National Weather Services called the [Consortium for Small-scale Modeling](http://www.cosmo-model.org/).
 
 ## Support status
-C2SM currently facilitates the utilization of COSMO on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) computing platform for the CPU and GPU architectures. The `master` and `c2sm-features` branches are continuously tested an Piz Daint.
+C2SM currently facilitates the utilisation of COSMO on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) computing platform for CPU and GPU architectures. The `master` and `c2sm-features` branches are being continuously tested an Piz Daint.
 
-The following table summarizes the features ported to GPU and their correspoding namelist parameters.
+The following table summarises the features ported to GPU and their correspoding namelist parameters.
 
 <details close markdown="block">
 <summary>gpu ported COSMO features</summary>
@@ -20,7 +20,7 @@ The following table summarizes the features ported to GPU and their correspoding
 ##### Parameters in `INPUT_ORG`
 {: .no_toc }
 
-| scheme/parameterization                       | namelist parameter                                                                                                                                                                  | GPU porting status                                 |
+| scheme/parameterisation                       | namelist parameter                                                                                                                                                                  | GPU porting status                                 |
 |-----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
 | Physics                                       | `lphys`                                                                                                                                                                             | ported                                             |
 | Diagnostics                                   | `ldiagnos`                                                                                                                                                                          | ported                                             |
@@ -35,7 +35,7 @@ The following table summarizes the features ported to GPU and their correspoding
 | Online trajectory module                      | `l_traj`                                                                                                                                                                            | ported                                             |
 | Zero vertical velocity on lower boundary      | `llm`                                                                                                                                                                               | not supported in the C++ dycore                    |
 | Incremental analysis update                   | `itype_iau = 0`, `1`, `2`                                                                                                                                                           | Only itype_iau = 0 ported                          |
-| Idealized runs                                | `lartif_data`                                                                                                                                                                       | not ported                                         |
+| Idealised runs                                | `lartif_data`                                                                                                                                                                       | not ported                                         |
 | 2D model runs                                 | `l2dim`                                                                                                                                                                             | not ported                                         |
 | Periodic boundary conditions in X direction   | `lperi_x`                                                                                                                                                                           | ported (not tested)                                |
 | Periodic boundary conditions in Y direction   | `lperi_y`                                                                                                                                                                           | ported (not tested)                                |
@@ -46,7 +46,7 @@ The following table summarizes the features ported to GPU and their correspoding
 | Write ASCII files every time step             | `ldump_ascii`                                                                                                                                                                       | ported                                             |
 | All processors write debug output             | `lprintdeb_all`                                                                                                                                                                     | ported                                             |
 | Debug statements in various model sections    | `ldebug_dyn`, `ldebug_gsp`, `ldebug_rad`, `ldebug_sso`, `ldebug_tur`, `ldebug_con`, `ldebug_soi`, `ldebug_io`, `ldebug_mpe`, `ldebug_dia`, `ldebug_lhn`, `ldebug_ass`, `ldebug_art` | partially ported, not all prints are active on GPU |
-| Initialize local variables                    | `linit_fields`                                                                                                                                                                      | not ported                                         |
+| Initialise local variables                    | `linit_fields`                                                                                                                                                                      | not ported                                         |
 
 ##### Parameters in `INPUT_PHY`
 {: .no_toc }
@@ -94,7 +94,7 @@ The following table summarizes the features ported to GPU and their correspoding
 ##### Parameters in `INPUT_DYN`
 {: .no_toc }
 
-The GPU porting of the dynamical core of COSMO was accomplished by rewriting the dynamics with the Gridtools stencil library. The Gridtools dycore supports a subset of the parameters of the COSMO Fortran dynamical core. The list of features currently supported in the Gridtools dycore can be found [here](https://github.com/C2SM-RCM/cosmo/blob/master/dycore/doc/Dycore/supported_configuration.tex) in the documentation in the code repository.
+The GPU porting of the dynamical core of COSMO was accomplished by rewriting the dynamics with the Gridtools stencil library. The Gridtools dycore supports a subset of the parameters of the COSMO Fortran dynamical core. The list of features currently supported in the Gridtools dycore can be found in the [documentation in the code repository] (https://github.com/C2SM-RCM/cosmo/blob/master/dycore/doc/Dycore/supported_configuration.tex).
 
 </details>
 
@@ -102,19 +102,19 @@ The GPU porting of the dynamical core of COSMO was accomplished by rewriting the
 
 > Warnings
 >
-> - The support status on the future Alps system is not yet knonw. It strongly depends on the ability to use an old interpretation of the OpenACC standard.
+> - The support status on the future Alps system is not yet known. It strongly depends on the ability to use an old interpretation of the OpenACC standard.
 >
 > - C2SM's support for COSMO is scheduled to stop end of 2024
 
 ## Access
-In order to get access to the [COSMO repository](https://github.com/C2SM-RCM/cosmo) hosted on the C2SM-RCM GitHub organization,
+In order to get access to the [COSMO repository](https://github.com/C2SM-RCM/cosmo) hosted on the C2SM-RCM GitHub organisation,
 please contact [C2SM Support](mailto:support@c2sm.ethz.ch).
 
 Once you have access, clone the repository from GitHub using the SSH protocol:
 ```
 git clone git@github.com:C2SM-RCM/cosmo.git
 ```
-If you don't already have an SSH key set up for GitHub but would like to do so, follow the [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+If you do not already have an SSH key set up for GitHub but would like to do so, follow the [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
 ## Configure and compile
 For configuring and building COSMO with Spack, please refer to the official spack-c2sm documentation, which provides instructions for [setting up a Spack instance](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin) and [installing COSMO](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#cosmo) on Piz Daint.
