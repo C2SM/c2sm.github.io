@@ -10,7 +10,7 @@ EXTPAR (External Parameters for Numerical Weather Prediction and Climate Applica
 
 ## Support status
 
-The `master` branch is continuously tested on Piz Daint
+The `master` branch is continuously being tested on Piz Daint
 
 ## Access
 
