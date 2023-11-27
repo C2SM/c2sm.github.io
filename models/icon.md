@@ -9,11 +9,9 @@ parent: Models
 ICON (Icosahedral Nonhydrostatic Weather and Climate Model) is a global model suitable for climate and weather prediction at regional and global domains.
 It is a joint project of [DWD](https://www.dwd.de/DE/Home/home_node.html), [MPI-M](https://mpimet.mpg.de/startseite) and [KIT](https://www.kit.edu/).
 
-C2SM facilitates the utilisation of ICON on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) and [Euler](https://scicomp.ethz.ch/wiki/Euler) computing platforms.
-
 To stay informed about what is going on in the ICON world and to get to know other ICON users, please attend our [quarterly ICON meeting](https://c2sm.github.io/events/icon_meeting.html).
 
-## Support status (braucht es diesen Abschnitt? Der Satz drunter ist fast eins zu eins der gleiche wie oben)
+## Support status
 C2SM facilitates the utilisation of ICON on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) and [Euler](https://scicomp.ethz.ch/wiki/Euler) computing platforms for the CPU and GPU architectures.
 
 ### Supported release
