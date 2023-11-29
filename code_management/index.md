@@ -28,21 +28,10 @@ For more details, please visit [Technical Events - Git Courses](https://c2sm.git
 
 ### Key Concepts of Git
 
-#### 1. Repository (Repo)
-
-A Git repository is a container for a software project. It stores the complete history of the project, including all files, directories, and changes made over time. Repositories can be hosted locally or remotely on platforms like GitHub, GitLab, or Bitbucket.
-
-#### 2. Commit
-
-A commit is a fundamental concept in Git, representing a snapshot of the codebase at a particular point in time. Each commit is identified by a unique SHA-1 hash, contains a descriptive message explaining the changes, and references the previous commit, forming a version history.
-
-#### 3. Branches
-
-Branches allow developers to work on separate lines of development. The primary branch is usually called 'master' or 'main', while feature branches enable the development of new features or bug-fix branches for addressing issues without affecting the main codebase.
-
-#### 4. Merge
-
-Merging is the process of combining changes from one branch into another. Git provides tools to automatically or manually resolve conflicts that may arise when merging different branches.
+- **Repository (Repo)**: A Git repository is a container for a software project. It stores the complete history of the project, including all files, directories, and changes made over time. Repositories can be hosted locally or remotely on platforms like GitHub, GitLab, or Bitbucket.
+- **Commit**: A commit is a fundamental concept in Git, representing a snapshot of the codebase at a particular point in time. Each commit is identified by a unique SHA-1 hash, contains a descriptive message explaining the changes, and references the previous commit, forming a version history.
+- **Branches**: Branches allow developers to work on separate lines of development. The primary branch is usually called 'master' or 'main', while feature branches enable the development of new features or bug-fix branches for addressing issues without affecting the main codebase.
+- **Merge**: Merging is the process of combining changes from one branch into another. Git provides tools to automatically or manually resolve conflicts that may arise when merging different branches.
 
 ### GitHub Workflow
 When working together with Git, follow these simple steps for a smooth collaborative process:
@@ -57,18 +46,18 @@ When working together with Git, follow these simple steps for a smooth collabora
 Code testing is a critical step in software development. It's about finding and fixing problems to make sure the software works well, is of high quality and reliable.
 Testing involves checking different parts of the code to make sure the software is strong and free of bugs.
 The specific tests you need will depend on your project and its requirements. Here is a list of tests that are usually very useful.
-### 1. Unit Tests
+### Unit Tests
 These tests are for testing individual components or functions of your code to ensure they work correctly in isolation.
 Find an [example for unit tests](https://github.com/C2SM/spack-c2sm/blob/main/test/unit_test.py) in our spack-c2sm repository.
-### 2. Integrations Tests
+### Integrations Tests
 These tests are to check how different parts of your code work together and communicate with each other.
 Find an [example for integration tests](https://github.com/C2SM/spack-c2sm/blob/main/test/integration_test.py) in our spack-c2sm repository.
-### 3. System Tests
+### System Tests
 These tests are performed to ensure that all the components and modules of a software system work together as intended and that the system meets its specified requirements and functions correctly in its operational environment.
 Find an [example for system tests](https://github.com/C2SM/spack-c2sm/blob/main/test/system_test.py) in our spack-c2sm repository.
-### 4. Tolerance tests
+### Tolerance tests
 These tests are used in the development of ICON, specifically when code is ported from CPU to GPU. The results when running on CPU and GPU are not bit identical, therefore a tolerance range is accepted when comparing a test case to the CPU reference. The accepted tolerance range is created by running an ensemble of the same test case with different perturbations. MeteoSwiss has developed [probtest](https://github.com/MeteoSwiss/probtest) for handling everything related to tolerance tests with ICON. If you have a DKRZ account and are working with ICON-NWP, you can also check out the manual for [Generating tolerances for non-standard tests](https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Validating-with-probtest-without-buildbot-references-(Generating-tolerances-for-non-standard-tests)).
-### 5. Git Hooks & GitHub Actions
+### Git Hooks & GitHub Actions
 Git Hooks are local scripts in Git that make sure things get done right when you work on your code. GitHub Actions, on the other hand, are integrated with GitHub and allow you to automate code management workflows. They can be run automatically on GitHub whenever something is committed.
 
 Check out our Git course for examples of [Custom Git Hooks](https://github.com/C2SM/git-course/blob/main/advanced/Exercise_7_git-hooks.md) hooks, and read GitHub's [documentation on GitHub Actions](https://docs.github.com/en/actions).
