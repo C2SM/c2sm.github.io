@@ -44,12 +44,14 @@ Branches allow developers to work on separate lines of development. The primary 
 
 Merging is the process of combining changes from one branch into another. Git provides tools to automatically or manually resolve conflicts that may arise when merging different branches.
 
-#### 5. Pull Request (PR)
-
-In a collaborative development environment, developers use pull requests to propose changes from their branches to the main branch. Changes are reviewed, discussed, and, if approved, merged into the main codebase.
-
 ### GitHub Workflow
-
+When working together with Git, follow these simple steps for a smooth collaborative process:
+1. **Clone**: Get a copy of the remote repository you want to work on.
+2. **Branch Out**: Create a branch with a name that describes your development.
+3. **Development Zone**: Work on your feature within that branch.
+4. **Pull Request (PR)**: When you are finished, open a pull request from your feature branch to the main one. Request a review.
+5. **Refinement**: Make any necessary changes until it's approved.
+6. **Merge Time**: Once the revisions are done and the tests are green, merge your feature branch into the main branch.
 
 ## Automatic Testing
 Code testing is a critical step in software development. It's about finding and fixing problems to make sure the software works well, is of high quality and reliable.
