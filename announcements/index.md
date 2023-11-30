@@ -10,8 +10,8 @@ has_children: false
 published 30/11/2023
 {: .label .label-grey}
 
-We announce the COSMO/ICON User Workshop on **Monday February 12th, 2024** as a physical meeting. 
-It will take place at the [**Radisson Blu at the airport**](https://www.radissonhotels.com/de-de/hotels/radisson-blu-zurich-airport).
+We are pleased to announce the COSMO/ICON User Workshop on **Monday February 12th, 2024** as a physical meeting. 
+It will take place at the **Radisson Blu Hotel**, next to MeteoSwiss.
  
 The COSMO/ICON User Workshop is a rather informal one-day event, whose goal is to bring together users and developers of these two models, 
 to share experience and knowledge, and to get insights into some projects involving these models. 
