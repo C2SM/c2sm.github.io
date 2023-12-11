@@ -1,7 +1,7 @@
 ---
 title: Data Guidelines
 layout: default
-nav_order: 5
+nav_order: 6
 has_children: false
 ---
 
@@ -27,6 +27,7 @@ has_children: false
    * [ETH Guidelines for Research Integrity](https://doi.org/10.3929/ethz-b-000179298)
    * [ETH Research Collection](https://www.research-collection.ethz.ch)
    * [Add your ORCID ID to your ETH account](https://documentation.library.ethz.ch/display/RC/Assign+ORCID+iD)
+   * [ETH Guidelines for data management plans](https://unlimited.ethz.ch/pages/viewpage.action?pageId=194127962)
 
 ## ETH Contacts
    * DMPs: Digital Curation Office, ETH Library, ETH Zurich, [ETH Digital Curation Webpage](http://www.library.ethz.ch/en/ms/Digital-Curation-at-ETH-Zurich)
