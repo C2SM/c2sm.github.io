@@ -12,7 +12,7 @@ The workshop provides an introduction to the concept and functionality of climat
 We answer questions like "How do climate models work?", talk about considerations when using climate model data and give a short introduction to 
 re-​analysis and observational data.
 
-The course took place for the first time December 6th 2023 and we are planning to rerun it annually.
+The course took place for the first time December 6th 2023 and we are planning to repeat it annually.
 
 ## Links
 
