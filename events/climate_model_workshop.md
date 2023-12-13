@@ -1,5 +1,5 @@
 ---
-title: Climate Model and Climate Data workshop
+title: Climate Model and Climate Data Workshop
 layout: default
 nav_order: 2
 parent: Technical Events
