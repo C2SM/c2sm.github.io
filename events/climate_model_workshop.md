@@ -5,7 +5,7 @@ nav_order: 2
 parent: Technical Events
 ---
 
-# Climate Model and Climate Data workshop
+# Climate Model and Climate Data Workshop
 C2SM is offering a climate model and climate data workshop for the C2SM Impacts community.
 This workshop is part of our [technical training](https://c2sm.ethz.ch/education/technical-training.html).
 The workshop provides an introduction to the concept and functionality of climate models and includes a short hands-on session.
