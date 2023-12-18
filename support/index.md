@@ -13,5 +13,7 @@ User Support refers to the Core Team's efforts to ensure that all supported soft
 
 To request regular support, please [use our discussion forum](https://github.com/C2SM/Tasks-Support/discussions/categories/support). The Core Team will be notified and will try to respond as soon as possible. In addition, all C2SM members can participate in these discussions and help as well.
 
+If you don't have access to the support forum, please follow the instructions under [How to get Access](https://c2sm.github.io/#how-to-get-access).
+
 ![](assets/Support_Forum.png)
 *Different threads in our discussion forum*

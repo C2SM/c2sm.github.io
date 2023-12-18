@@ -49,6 +49,7 @@ The Core Team accepts tasks from the three different areas mentioned above each 
 {: .attention-title }
 
 Please submit concrete tasks by following the instructions on our GitHub repository [Tasks-Support](https://github.com/C2SM/Tasks-Support).
+If you do not have access, please follow the instructions under [How to get Access](https://c2sm.github.io/#how-to-get-access).
 
 
 ### Requirements for Tasks

@@ -11,7 +11,9 @@
     {"pattern":"^https://github.com/just-the-docs/just-the-docs-template/generate"}, 
     {"pattern": "^http://cosmo-model.org/"},
     {"pattern": "agupubs.onlinelibrary.wiley.com"},
+    {"pattern": ^https://link.springer.com/article},
     {"pattern": "^https://github.com/C2SM/spice"},
     {"pattern": "^https://wiki.iac.ethz.ch/Climphys/ProjectCESM2SetupControlRun"},
-    {"pattern": "^https://wiki.iac.ethz.ch/Climphys/ProjectCESM122SetupControlRun"}
+    {"pattern": "^https://wiki.iac.ethz.ch/Climphys/ProjectCESM122SetupControlRun"},
+    {"pattern": "^https://wiki.iac.ethz.ch/IT/LinuxNetCDF"}
   ]}
