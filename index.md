@@ -55,12 +55,14 @@ Further information about C2SM project staff and previous core team members can 
 
 ## How to get Access
 
-Please follow the step-by-step instructions below to get access to the C2SM organisation:
+Please follow the step-by-step instructions below to get access to the C2SM organisation.
+This will allow you to submit new tasks, receive support from the C2SM Core Team and have access to supported models and tools. 
 
 1. Create an account on [GitHub](https://github.com/signup).
-2. To gain access to the [C2SM GitHub organisation](https://github.com/C2SM), please reach out to your group’s technical contact and provide them with your GitHub account name.
-   They will be responsible for adding you to the appropriate user group. 
-3. If you do not know who your group's technical contact is, please send an email to [request@c2sm.ethz.ch](mailto:request@c2sm.ethz.ch).
+2. Get access to the [C2SM GitHub organisation](https://github.com/C2SM).
+   - Reach out to your group’s technical contact and provide them with your GitHub account name.
+     They will be responsible for adding you to the appropriate user group. 
+   - If you do not know who your group's technical contact is, please send an email to [request@c2sm.ethz.ch](mailto:request@c2sm.ethz.ch).
 
 ## C2SM on GitHub
 
