@@ -44,7 +44,7 @@ This group focuses on providing climate data for impact research. Tasks may incl
 
 ## Task Assignment
 
-The Core Team accepts tasks from the three different areas mentioned above each following a specific procedure described below.
+The Core Team accepts tasks from the three different areas mentioned above, each following a specific procedure described below.
 
 {: .attention-title }
 
