@@ -20,9 +20,9 @@ C2SM facilitates the utilization of ICON on the [Piz Daint](https://www.cscs.ch/
 The latest release distributed by C2SM, currently `2.6.6`, is continuously tested on both Piz Daint and Euler and receives patches when necessary.
 
 ## Access
-To gain access to the [ICON repository](https://github.com/C2SM/icon) hosted on the C2SM GitHub organization, please contact your group's technical contact. They will be responsible for adding you to the appropriate user group. 
+To gain access to the [ICON repository](https://github.com/C2SM/icon) hosted on the C2SM GitHub organization, please follow [these instructions](https://c2sm.github.io/#how-to-get-access).
 
- Once you have access, clone the repository from GitHub using the SSH protocol:
+Once you have access, clone the repository from GitHub using the SSH protocol:
 
   ```bash
   git clone --recurse-submodules git@github.com:C2SM/icon.git
