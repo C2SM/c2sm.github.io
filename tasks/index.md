@@ -49,6 +49,7 @@ The C2SM Executive Office accepts tasks from three different entities each follo
 {: .attention-title }
 
 In any case, please submit concrete tasks by following the instructions on our GitHub repository [Tasks-Support](https://github.com/C2SM/Tasks-Support).
+If you don't have access, please follow the instructions under [How to get Access](https://c2sm.github.io/#how-to-get-access).
 
 
 ### Requirements for Tasks
