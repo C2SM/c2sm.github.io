@@ -25,5 +25,5 @@ Each modelling group performed an evaluation run (precipitation is described in 
 Not all groups continued with historical and rcp8.5 runs.
 The groups running WRF joined together to run historical and scenario runs (therefore they were sometimes run on different machines).
 
-An overview of which variables are available for which runs can be found [here](https://www.polybox.ethz.ch/index.php/s/hVYniBtoaneP9Lc).
-More details about the different model runs, such as info about the driving RCM and domains, can be found [here](https://docs.google.com/spreadsheets/d/1wrt8Rcquk7dgIumGJeEc06irpkBwZtq_b7Pn3UhiT2g/edit?usp=sharing).
+An overview of which variables are available for which runs can be found [at ETH's polybox](https://www.polybox.ethz.ch/index.php/s/hVYniBtoaneP9Lc).
+More details about the different model runs, such as info about the driving RCM and domains, can be found [under this link](https://docs.google.com/spreadsheets/d/1wrt8Rcquk7dgIumGJeEc06irpkBwZtq_b7Pn3UhiT2g/edit?usp=sharing).

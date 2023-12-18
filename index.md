@@ -10,7 +10,7 @@ nav_order: -1
 **Welcome to the C2SM User Landing Page!**
 
 Here we collect helpful information for scientists and partners
-about our C2SM core team, tasks, support, models, tools, datasets
+about the C2SM core team, tasks, support, models, tools, datasets
 and much more.
 
 <details open markdown="block">
@@ -24,14 +24,13 @@ and much more.
 
 ## Core Team
 
-The C2SM Core Team is part of the Executive Office and currently consists
-of six scientific programmers. Their work is distributed among the following areas:
+The C2SM Core Team - or C2SM's Executive Office - currently employs six scientific programmers. Their work is distributed among the following areas:
 
 - Tasks from the Working Groups
 - Maintenance of supported models, tools and datasets
 - Regular support for users
 - EXCLAIM project
-- Organization of workshops
+- Organisation of workshops
 
 ### Executive Director
 {: .no_toc }
@@ -71,9 +70,9 @@ C2SM maintains two GitHub organizations to distribute code to the community.
 ### [C2SM](https://github.com/C2SM)
 {: .no_toc }
 
-This is our main GitHub organization, which contains many repositories, including ICON. [How to get access](https://c2sm.github.io/models/icon.html#access)
+This is our main GitHub organisation, which contains many repositories, including ICON. [How to get access](https://c2sm.github.io/models/icon.html#access)
 
 ### [C2SM-RCM](https://github.com/C2SM-RCM)
 {: .no_toc }
 
-The C2SM-RCM organization contains all codes related to COSMO and tools like EXTPAR. For questions and access, please contact [Jonas Jucker](mailto:jonas.jucker@c2sm.ethz.ch).
+The C2SM-RCM organisation contains all codes related to COSMO and tools like EXTPAR. For questions and access, please contact [Jonas Jucker](mailto:jonas.jucker@c2sm.ethz.ch).

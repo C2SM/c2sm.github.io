@@ -1,14 +1,13 @@
 ---
-title: Python Visualization Course
+title: Python Visualisation Course
 layout: default
 nav_order: 2
 parent: Technical Events
 ---
 
-# Python Visualization Course
-C2SM offers an annual Visulization Course as part of our [technical training](https://c2sm.ethz.ch/education/technical-training.html).
-Two day course targets Python beginners. Most examples and exercises shown in the course are drawn from the field of Climate Research.
-We place particular emphasis on the visualization of unstructured grids through the use of [icon-vis](https://github.com/C2SM/icon-vis/tree/master).  
+# Python Visualisation Course
+C2SM together with [SIS (Scientific IT Services)](https://sis.id.ethz.ch) offers an annual visualisation programming course in Python as part of our [technical training](https://c2sm.ethz.ch/education/technical-training.html).
+The two-day course targets Python beginners. Most of the examples and exercises used in the course are from the field of climate research.
 
 ## Links
 - [course repository (exercises)](https://github.com/C2SM/pyvis/tree/main)

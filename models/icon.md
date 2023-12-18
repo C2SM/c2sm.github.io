@@ -9,25 +9,23 @@ parent: Models
 ICON (Icosahedral Nonhydrostatic Weather and Climate Model) is a global model suitable for climate and weather prediction at regional and global domains.
 It is a joint project of [DWD](https://www.dwd.de/DE/Home/home_node.html), [MPI-M](https://mpimet.mpg.de/startseite) and [KIT](https://www.kit.edu/).
 
-C2SM facilitates the utilization of ICON on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) and [Euler](https://scicomp.ethz.ch/wiki/Euler) computing platforms.
-
 To stay informed about what is going on in the ICON world and to get to know other ICON users, please attend our [quarterly ICON meeting](https://c2sm.github.io/events/icon_meeting.html).
 
 ## Support status
-C2SM facilitates the utilization of ICON on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) and [Euler](https://scicomp.ethz.ch/wiki/Euler) computing platforms for the CPU and GPU architectures.
+C2SM facilitates the utilisation of ICON on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) and [Euler](https://scicomp.ethz.ch/wiki/Euler) computing platforms for the CPU and GPU architectures.
 
 ### Supported release
-The latest release distributed by C2SM, currently `2.6.6`, is continuously tested on both Piz Daint and Euler and receives patches when necessary.
+The latest release distributed by C2SM, currently `2.6.6`, is continuously being tested on both Piz Daint and Euler and receives patches when necessary.
 
 ## Access
-The ICON repository is hosted on the C2SM GitHub organisation. If you don't have access, please follow the instructions under [How to get Access](https://c2sm.github.io/#how-to-get-access).
+The ICON repository is hosted on the C2SM GitHub organisation. If you do not have access, please follow the instructions under [How to get Access](https://c2sm.github.io/#how-to-get-access).
 
 Once you have access, clone the repository from GitHub using the SSH protocol:
 
   ```bash
   git clone --recurse-submodules git@github.com:C2SM/icon.git
   ```
-  If you don't already have an SSH key set up for GitHub, but would like to do so, follow the [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+  If you do not already have an SSH key set up for GitHub, but would like to do so, follow the [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
     
 ## Configure and compile
 The ICON build process varies between Piz Daint and Euler. The CSCS platform Piz Daint uses Spack, whereas the ETHZ machine Euler requires manual build configuration for ICON. Instructions for both platforms are provided below.
@@ -76,7 +74,7 @@ In the [Tools](https://c2sm.github.io/tools) section, you will find relevant too
 * [**Extpar:**](https://c2sm.github.io/tools/extpar.html) External parameters for the ICON grid (preprocessing)
 * [**Processing Chain**](https://c2sm.github.io/tools/processing_chain.html): Python workflow tool for ICON
 * [**SPICE**](https://c2sm.github.io/tools/spice.html): Starter package for ICON-CLM experiments
-* [**icon-vis**](https://c2sm.github.io/tools/icon-vis.html): Python scripts to visualize ICON data
+* [**icon-vis**](https://c2sm.github.io/tools/icon-vis.html): Python scripts to visualise ICON data
 
 ## Projects
 Learn more about ongoing projects involving ETHZ in the development of ICON:

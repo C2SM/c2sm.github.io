@@ -24,7 +24,7 @@ You are strongly encouraged to present a poster or to give a talk at this inform
 published 09/11/2023
 {: .label .label-grey}
 
-We are pleased to announce our first Climate model and climate data workshop, which will take place on **Wednesday December 6th from 9:30 am to 3:00 pm**.
+We are pleased to announce our first Climate model and climate data workshop, which will take place on **Wednesday December 6th from 9:30 am to 3:00 pm** at Eawag in Dübendorf.
 
 The workshop will give an introduction to what a climate model is, how it works and is tailored to the impacts community.
 
