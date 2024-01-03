@@ -61,7 +61,7 @@ This will allow you to submit new tasks, receive support from the C2SM Core Team
 2. Get access to the [C2SM GitHub organisation](https://github.com/C2SM).
    - Reach out to your group’s technical contact and provide them with your GitHub account name.
      They will be responsible for adding you to the appropriate user group. 
-   - If you do not know who your group's technical contact is, please send an email to [request@c2sm.ethz.ch](mailto:request@c2sm.ethz.ch).
+   - If you do not know who your group's technical contact is, please send an email to [support@c2sm.ethz.ch](mailto:support@c2sm.ethz.ch).
 
 ## C2SM on GitHub
 
@@ -70,7 +70,7 @@ C2SM maintains two GitHub organizations to distribute code to the community.
 ### [C2SM](https://github.com/C2SM)
 {: .no_toc }
 
-This is our main GitHub organisation, which contains many repositories, including ICON. [How to get access](https://c2sm.github.io/models/icon.html#access)
+This is our main GitHub organisation, which contains many repositories, including ICON.
 
 ### [C2SM-RCM](https://github.com/C2SM-RCM)
 {: .no_toc }
