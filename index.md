@@ -65,7 +65,7 @@ This will allow you to submit new tasks, receive support from the C2SM Core Team
 
 ## Are you a new member of C2SM-community?
 - Designate a technical contact within your group, preferably a permanent member familiar with technical aspects.
-- Contact us by visiting our office in person or reaching out via email at support@c2sm.ethz.ch.
+- Contact us by visiting our office in person or reaching out via email at [support@c2sm.ethz.ch](mailto:support@c2sm.ethz.ch).
 - Once contacted, we will initiate the setup of your group's user-group on GitHub for effective collaboration.
 
 ## C2SM on GitHub
