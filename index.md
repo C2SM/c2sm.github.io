@@ -63,6 +63,10 @@ This will allow you to submit new tasks, receive support from the C2SM Core Team
      They will be responsible for adding you to the appropriate user group. 
    - If you do not know who your group's technical contact is, please send an email to [support@c2sm.ethz.ch](mailto:support@c2sm.ethz.ch).
 
+## Are you a new member of the C2SM community?
+- Designate a technical contact within your group, preferably a permanent member who is familiar with technical aspects.
+- Contact us by visiting our office in person or by emailing us at [support@c2sm.ethz.ch](mailto:support@c2sm.ethz.ch).
+- Once contacted, we will initiate the setup of your group's user group on GitHub for effective collaboration.
 ## C2SM on GitHub
 
 C2SM maintains two GitHub organizations to distribute code to the community. 
