@@ -13,7 +13,7 @@ The model runs are described in [Coppola et al. 2020](https://link.springer.com/
 ![Image of the extent of the ALP-3 domain](images/ALP-3-crop.png)
 
 So far, only the data from ETH (CLMcom-ETH-COSMO-crCLIM) has been CMORized, for all other models the data format is a preliminary version (from ~September 2022) and not the one that will go to ESGF.
-Currently, the data archive at CSCS (/store/c2sm/c2sme/CH202X/CORDEX-FPSCONV/) contains mainly 1-hourly precipitation and temperature and daily maximum temperature and minimum temperature.
+Currently, the data archive contains mainly 1-hourly precipitation and temperature and daily maximum temperature and minimum temperature.
 These 4 variables have been used in three MSc theses and went through basic checks. The other variables (in 6hr, day) have been copied from the Jülich server but have not been used and were not checked.
 
 Four different time periods are available:
@@ -27,3 +27,8 @@ The groups running WRF joined together to run historical and scenario runs (ther
 
 An overview of which variables are available for which runs can be found [at ETH's polybox](https://www.polybox.ethz.ch/index.php/s/hVYniBtoaneP9Lc).
 More details about the different model runs, such as info about the driving RCM and domains, can be found [under this link](https://docs.google.com/spreadsheets/d/1wrt8Rcquk7dgIumGJeEc06irpkBwZtq_b7Pn3UhiT2g/edit?usp=sharing).
+
+## Data Availability
+The data can be found at CSCS: `/store/c2sm/c2sme/CH202X/CORDEX-FPSCONV/ALP-3`
+
+The data is mirrored daily to the IAC via `rsync` to: `/net/krypton/hyclimm_nobackup/CORDEX-FPSCONV/ALP-3`
