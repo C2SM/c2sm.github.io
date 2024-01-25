@@ -37,7 +37,7 @@ parent: Datasets
 | --------- | ------------------- | -------------- | ----------------|------------------|------------| -----------|
 | CORDEX.ch2018 |	11 TB (1’800) |	IAC, CSCS[<sup>5</sup>](#5) |	direct |	frozen (2019-04) |	daily: hurs, huss, pr, rsds, sfcWind, sfcWindmax, snw, tas, tasmax, tasmin |	0.44° and 0.11° |
 | CORDEX.ch2025 |	46 TB (3’500) |	IAC[<sup>6</sup>](#6) |	direct 	| ongoing |	daily: pr, tas, tasmax, tasmin, zg500 |	0.44° and 0.11° |
-| CORDEX-FPSCONV |	30T (22'949) |	CSCS[<sup>7</sup>](#7) |	direct |	ongoing |	1hr: pr, tas, daily: pr, tas, tasmax, tasmin |	2-3km  |
+| CORDEX-FPSCONV |	30T (22'949) |	CSCS[<sup>7</sup>](#7), IAC [<sup>8</sup>](#8) |	direct / rsync |	ongoing |	1hr: pr, tas, daily: pr, tas, tasmax, tasmin |	2-3km  |
 
 ---
 
@@ -56,3 +56,4 @@ Ruth Lorenz / C2SM took over cmip6-ng in 2022. contact: cmip6-archive@env.ethz.c
 
 <a id="7"></a><sup>7</sup> `/store/c2sm/c2sme/CH202X/CORDEX-FPSCONV/ALP-3/`
 
+<a id="8"></a><sup>8</sup> `/net/krypton/hyclimm_nobackup/CORDEX-FPSCONV/ALP-3/`
