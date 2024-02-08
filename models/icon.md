@@ -31,7 +31,7 @@ Once you have access, clone the repository from GitHub using the SSH protocol:
 The ICON build process varies between Piz Daint and Euler. The CSCS platform Piz Daint uses Spack, whereas the ETHZ machine Euler requires manual build configuration for ICON. Instructions for both platforms are provided below.
 
 ### Piz Daint
-For configuring and building ICON with Spack, please refer to the official spack-c2sm documentation, which provides instructions for [setting up a Spack instance](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin) and [installing ICON](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon). When cloning Spack, be sure to use the Spack tag provided in the ICON repository at [config/cscs/SPACK_TAG](https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG).
+Refer to the official spack-c2sm documentation for [installing ICON using Spack](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon). To [set up a Spack instance](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin), ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/cscs/SPACK_TAG](https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG).
 
 ### Euler
 Before compiling ICON, it is essential to configure it using the respective script in the *config* folder. The configuration process using these files remains consistent across different machines and compilers.
