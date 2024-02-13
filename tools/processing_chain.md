@@ -20,13 +20,14 @@ community and is being hosted on the [C2SM GitHub organisation](https://github.c
 
 If you need any help, please contact [Michael Jähn](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091).
 
-## Support status
+## Support Status
 
 The `main` branch is continuously being tested on Piz Daint.
 
 ## Features
 
 - Automatic folder structure creation
+- Asynchronous job submission
 - Easy creation of own cases
 - Namelist templates
 - Nested runs possible
@@ -36,4 +37,8 @@ The `main` branch is continuously being tested on Piz Daint.
 ## Code and Documentation
 
 * [Processing Chain at the C2SM Github organisation](https://github.com/C2SM/processing-chain)
+* [Documentation](https://c2sm.github.io/processing-chain/latest/)
 
+## Other Resources
+
+* [Poster from COSMO/ICON User Workshop 2024](https://polybox.ethz.ch/index.php/s/jBFHhdW8VvIrlPW)
