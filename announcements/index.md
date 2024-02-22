@@ -5,6 +5,19 @@ nav_order: 8
 has_children: false
 ---
 
+# Git for Beginners Workshop
+
+published 22/02/2024
+{: .label .label-grey}
+
+We are pleased to announce our next Git for Beginners workshop, which will take place on **Thursday, April 11th from 9:30 am to 3:00 pm**.
+
+The registration is now open (30 places available). Places will be confirmed on a first-come, first-served basis.
+
+More information about the workshop content and the registration form can be found at [Git for Beginners Workshop 2024](https://c2sm.ethz.ch/education/technical-training/c2sm-git-workshop-2024.html).
+
+---
+
 # COSMO/ICON User Workshop
 
 published 30/11/2023
