@@ -7,7 +7,7 @@ has_children: false
 
 # Git for Beginners Workshop
 
-published 22/02/2024
+published 28/02/2024
 {: .label .label-grey}
 
 We are pleased to announce our next Git for Beginners workshop, which will take place on **Thursday, April 11th from 9:30 am to 3:00 pm**.
