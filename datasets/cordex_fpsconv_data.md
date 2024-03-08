@@ -12,7 +12,7 @@ The model runs are described in [Coppola et al. 2020](https://link.springer.com/
 
 ![Image of the extent of the ALP-3 domain](images/ALP-3-crop.png)
 
-So far, only the data from ETH (CLMcom-ETH-COSMO-crCLIM) has been CMORized, for all other models the data format is a preliminary version (from ~September 2022) and not the one that will go to ESGF.
+So far, only the data from ETH (CLMcom-ETH-COSMO-crCLIM) has been CMORized (more info about this effort in this [pdf](https://www.polybox.ethz.ch/index.php/s/cLZG0RkPipah6Uw), for all other models the data format is a preliminary version (from ~September 2022) and not the one that will go to ESGF.
 Currently, the data archive contains mainly 1-hourly precipitation and temperature and daily maximum temperature and minimum temperature.
 These 4 variables have been used in three MSc theses and went through basic checks. The other variables (in 6hr, day) have been copied from the Jülich server but have not been used and were not checked.
 
