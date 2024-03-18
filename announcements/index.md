@@ -5,6 +5,20 @@ nav_order: 8
 has_children: false
 ---
 
+# Scientific Visualisation using Python
+
+published 18/03/2024
+{: .label .label-grey}
+
+Our next Scientific Visualisation using Python workshop will take place on **Thursday and Friday, April 25th to April 26th from 9:00 am to 5:00 pm**.
+
+Registration is open (30 places available), and places will be confirmed on a first-come, first-served basis.
+
+For more information about the workshop content and the registration form, please visit [Scientific Visualisation using Python 2024](https://c2sm.ethz.ch/education/technical-training/python-visualisation-2024.html).
+
+---
+
+
 # Git for Beginners Workshop
 
 published 28/02/2024
