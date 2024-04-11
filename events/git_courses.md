@@ -13,5 +13,5 @@ The **Git for Beginners** course provides an introduction to basic Git commands.
 ## Links
 
 - [git-course repository (exercises)](https://github.com/C2SM/git-course/)
-- [Slides Git for Beginners 2023](https://polybox.ethz.ch/index.php/s/y74Imif9I0OGAk5)
+- [Slides Git for Beginners 2024](https://polybox.ethz.ch/index.php/s/zwKm6Gl740KHpVW)
 - [Slides Git for Advanced 2023](https://polybox.ethz.ch/index.php/s/lnEJyMAFr0KoqsO)
