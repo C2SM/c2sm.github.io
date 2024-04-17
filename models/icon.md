@@ -15,7 +15,10 @@ To stay informed about what is going on in the ICON world and to get to know oth
 C2SM facilitates the utilisation of ICON on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) and [Euler](https://scicomp.ethz.ch/wiki/Euler) computing platforms for the CPU and GPU architectures.
 
 ### Supported release
-The latest release distributed by C2SM, currently `2.6.6`, is continuously being tested on both Piz Daint and Euler and receives patches when necessary.
+The latest release distributed by C2SM, currently `2024.01`, is continuously being tested on both Piz Daint and Euler and receives patches when necessary.
+
+## Mailing list
+If you use ICON, please follow [these instructions](https://c2sm.github.io/events/icon_meeting.html#c2sm-icon-mailing-list) to subscribe to our mailing list.
 
 ## Access
 The ICON repository is hosted on the C2SM GitHub organisation. If you do not have access, please follow the instructions under [How to get Access](https://c2sm.github.io/#how-to-get-access).
@@ -31,7 +34,7 @@ Once you have access, clone the repository from GitHub using the SSH protocol:
 The ICON build process varies between Piz Daint and Euler. The CSCS platform Piz Daint uses Spack, whereas the ETHZ machine Euler requires manual build configuration for ICON. Instructions for both platforms are provided below.
 
 ### Piz Daint
-Refer to the official spack-c2sm documentation for [installing ICON using Spack](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon). To [set up a Spack instance](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin), ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/cscs/SPACK_TAG](https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG).
+Refer to the official spack-c2sm documentation for [installing ICON using Spack](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon). To [set up a Spack instance](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin), ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/cscs/SPACK_TAG_DAINT](https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG_DAINT).
 
 ### Euler
 Before compiling ICON, it is essential to configure it using the respective script in the *config* folder. The configuration process using these files remains consistent across different machines and compilers.
