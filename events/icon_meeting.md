@@ -24,5 +24,5 @@ As a member of the `c2sm.icon` mailing list, you will receive all relevant infor
 If you or someone from your group is not yet a member of the `c2sm.icon` mailing list, subscribe by sending an e-mail to: 
 [`mailto:sympa@sympa.ethz.ch?subject=SUBSCRIBE%20c2sm-icon%20firstname%20lastname`](mailto:sympa@sympa.ethz.ch?subject=SUBSCRIBE%20c2sm-icon%20firstname%20lastname) (modify `firstname` and `lastname` in the subject).
 
-To check which lists you are subscribed to, use:
+To check which lists you are subscribed to, send an e-mail to:
 [`mailto:sympa@sympa.ethz.ch?subject=WHICH`](mailto:sympa@sympa.ethz.ch?subject=WHICH)
