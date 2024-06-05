@@ -26,7 +26,7 @@ Not all groups continued with historical and rcp8.5 runs.
 The groups running WRF joined together to run historical and scenario runs (therefore they were sometimes run on different machines).
 
 An overview of which variables are available for which runs can be found [at ETH's polybox](https://www.polybox.ethz.ch/index.php/s/hVYniBtoaneP9Lc).
-More details about the different model runs, such as info about the driving RCM and domains, can be found [under this link](https://docs.google.com/spreadsheets/d/1wrt8Rcquk7dgIumGJeEc06irpkBwZtq_b7Pn3UhiT2g/edit?usp=sharing).
+More details about the different model runs, such as info about the driving RCM and domains, can be found [under this link](https://www.polybox.ethz.ch/index.php/s/qDE3YAsFyruyyQw).
 
 ## Data Availability
 The data can be found at CSCS: `/store/c2sm/c2sme/CH202X/CORDEX-FPSCONV/ALP-3`
