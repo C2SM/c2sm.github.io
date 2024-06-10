@@ -86,7 +86,9 @@ Learn more about ongoing projects involving ETHZ in the development of ICON:
 
 ## Documentation
 ICON documentation is available at:
-   * [ICON Tutorial (DWD)](https://www.dwd.de/EN/ourservices/nwv_icon_tutorial/nwv_icon_tutorial_en.html)
+
+   * [ICON Tutorial (DWD)](https://www.dwd.de/DE/leistungen/nwv_icon_tutorial/nwv_icon_tutorial.html)
+   * [Getting Started with ICON](https://www.icon-model.org/icon_model/getting_started)
    * [MPI-M documentation](https://code.mpimet.mpg.de/projects/iconpublic/wiki/Documentation)
      
 ## External Software
