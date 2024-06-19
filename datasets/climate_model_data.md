@@ -20,7 +20,7 @@ parent: Datasets
 
 ## "Raw" CMIP archives (as downloaded from ESGF)
 
-{: .attention-title }
+{: .note-title }
 
 "Resolution: native" means that each model output is available on the native grid on which it was run. Size and file information last updated in June 2021.
 
@@ -58,7 +58,7 @@ parent: Datasets
 
 ## CMIP next generation (checked, standardized, regridded to common grid)
 
-{: .attention-title }
+{: .note-title }
 
 Next Generation (ng) archives were maintained by Reto’s group (Jan Sedlacek/Lukas Brunner). Ruth Lorenz / C2SM took over cmip6-ng in 2022. Contact: [cmip6-archive@env.ethz.ch](mailto:cmip6-archive@env.ethz.ch). Documentation: [https://doi.org/10.5281/zenodo.373412](https://doi.org/10.5281/zenodo.3734128).
 
@@ -78,7 +78,7 @@ Next Generation (ng) archives were maintained by Reto’s group (Jan Sedlacek/Lu
 - Access: direct / rsync
 - Status: frozen (2019-03)
 - Variables: n/a
-- Resolution: native and 2.5°x2.5°
+- Resolution: native and 2.5° x 2.5°
 
 ### CMIP6-ng
 - Size: 175 TB
@@ -89,7 +89,7 @@ Next Generation (ng) archives were maintained by Reto’s group (Jan Sedlacek/Lu
 - Variables: n/a
     - monthly: `areacella`, `clt`, `co2mass`, `evspsbl`, `evspsblsoi`, `evspsblveg`, `gpp`, `hfds`, `hfss`, `hfls`, `hurs`, `huss`, `lai`, `mrsol`, `mrsos`, `mrro`, `mrros`, `mrso`, `npp`, `nbp`, `pr`, `prw`, `ra`, `rh`, `rlus`, `rlut`, `rlutcs`, `rlds`, `rldscs`, `rsds`, `rsdscs`, `rsus`, `rsuscs`, `rsut`, `rsutcs`, `rtmt`, `sftlf`, `siconc`, `tas`, `tasmax`, `tasmin`, `tos`, `tran`, `treeFrac`, `zg500`, `zos`
     - daily: `mrro`, `pr`, `tas`, `tasmax`, `tasmin`, `zg500`
-- Resolution: native and 2.5°x2.5°
+- Resolution: native and 2.5° x 2.5°
 
 ## "Raw" CORDEX (as downloaded)
 
