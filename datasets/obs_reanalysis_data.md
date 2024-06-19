@@ -22,6 +22,28 @@ File size information last updated in May 2022.
 
 ## "Raw" Archives (as downloaded from the original source)
 
+### CERRA
+- Size: 16 TB
+- Location: IAC: `/net/atmos/data/cerra/original`
+- Access: direct
+- Status: updated
+- Time period: 1985 - present
+- Variables: 2t, t, r, ...
+- Temporal Resolution: 3-hourly
+- Spatial Resolution: 5 km x 5 km
+- More information: sub-daily regional reanalysis data for Europe, [Wishlist](https://docs.google.com/document/d/1YtIabO5PMTsD_i_PqycmzIbrOYigNmuublt_i6FKrhY/edit#heading=h.brsa23yzcugp), [Download Status](https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0)
+
+### CERRA-Land
+- Size: 12 TB
+- Location: IAC: `/net/atmos/data/cerra-land/original`
+- Access: direct
+- Status: updated
+- Time period: 1985 - present
+- Variables: snom, sro, tp, ...
+- Temporal Resolution: 3-hourly
+- Spatial Resolution: 5 km x 5 km
+- More information: [CDS](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-land?tab=overview), [Wishlist](https://docs.google.com/document/d/1YtIabO5PMTsD_i_PqycmzIbrOYigNmuublt_i6FKrhY/edit#heading=h.brsa23yzcugp), [Download Status](https://docs.google.com/spreadsheets/d/1e58ps_yBmxUG0jvL8ZmNNr7Zz_UXuqIZsz4MdRAzvbM/edit#gid=0)
+
 ### E-OBS
 - Size: 660 GB
 - Location: IAC
@@ -40,17 +62,6 @@ File size information last updated in May 2022.
 - Temporal Resolution: daily
 - Spatial Resolution: 0.1° and 0.25°
 - More information: [E-OBS](https://www.ecad.eu/download/ensembles/download.php), [CDS](https://cds.climate.copernicus.eu/cdsapp#!/dataset/insitu-gridded-observations-europe?tab=overview)
-
-### MERRA2
-- Size: 15 TB
-- Location: IAC
-- Access: direct
-- Status: updated
-- Time period: 1980 - present
-- Variables: many, temperature, precipitation, radiation, sea level pressure etc.
-- Temporal Resolution: hourly, sst monthly
-- Spatial Resolution: 0.5 lat x 0.625 lon (~50km)
-- More information: [MERRA-2](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/), [Climate Data Guide](https://climatedataguide.ucar.edu/climate-data/nasas-merra2-reanalysis)
 
 ### ERAInterim
 - Size: 5 TB
@@ -94,62 +105,19 @@ File size information last updated in May 2022.
 - Spatial Resolution: 0.1° x 0.1°
 - More information: [ERA5-Land](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=form)
 
-### CERRA
-- Size: 16 TB
-- Location: IAC: `/net/atmos/data/cerra/original`
+### MERRA2
+- Size: 15 TB
+- Location: IAC
 - Access: direct
 - Status: updated
-- Time period: 1985 - present
-- Variables: 2t, t, r, ...
-- Temporal Resolution: 3-hourly
-- Spatial Resolution: 5 km x 5 km
-- More information: sub-daily regional reanalysis data for Europe, [Wishlist](https://docs.google.com/document/d/1YtIabO5PMTsD_i_PqycmzIbrOYigNmuublt_i6FKrhY/edit#heading=h.brsa23yzcugp), [Download Status](https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0)
+- Time period: 1980 - present
+- Variables: many, temperature, precipitation, radiation, sea level pressure etc.
+- Temporal Resolution: hourly, sst monthly
+- Spatial Resolution: 0.5 lat x 0.625 lon (~50km)
+- More information: [MERRA-2](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/), [Climate Data Guide](https://climatedataguide.ucar.edu/climate-data/nasas-merra2-reanalysis)
 
-### CERRA-Land
-- Size: 12 TB
-- Location: IAC: `/net/atmos/data/cerra-land/original`
-- Access: direct
-- Status: updated
-- Time period: 1985 - present
-- Variables: snom, sro, tp, ...
-- Temporal Resolution: 3-hourly
-- Spatial Resolution: 5 km x 5 km
-- More information: [CDS](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-land?tab=overview), [Wishlist](https://docs.google.com/document/d/1YtIabO5PMTsD_i_PqycmzIbrOYigNmuublt_i6FKrhY/edit#heading=h.brsa23yzcugp), [Download Status](https://docs.google.com/spreadsheets/d/1e58ps_yBmxUG0jvL8ZmNNr7Zz_UXuqIZsz4MdRAzvbM/edit#gid=0)
 
 ## Processed Archives (e.g. aggregated or regridded)
-
-### E-OBS and MCH
-- Size: 50 GB
-- Location: IAC: `/net/co2/c2sm-data/ch202X/Obs_Data/EOBS/0.1deg_reg_v23.1e/processed/, /net/co2/c2sm-data/ch202X/Obs_Data/EOBS/0.1deg_reg_v26.0e/processed/`
-- Access: direct
-- Status: static
-- Time period: 1971-2020
-- Variables: tas, tasmax, tasmin, pr
-- Temporal Resolution: daily
-- Spatial Resolution: 0.11°
-- More information: E-OBS (v23.1e and v26.0e) data with higher resolution MCH data over Switzerland (prepared for CH2025)
-
-### MCH
-- Size: 7 GB
-- Location: IAC: `/net/co2/c2sm-data/ch202X/Obs_Data/MCH/processed/`
-- Access: direct
-- Status: static
-- Time period: 1971-2021
-- Variables: tas, tasmax, tasmin, pr
-- Temporal Resolution: daily
-- Spatial Resolution: ~2km
-- More information: Gridded observational data from MeteoSwiss over Switzerland
-
-### MERRA2
-- Size: 17 GB
-- Location: IAC: `/net/co2/c2sm-data/rlorenz/MERRA2/`
-- Access: direct
-- Status: updated
-- Time period: v0: 1980-2015, v1: 1980-2018
-- Variables: tas, tasmax, tasmin, huss, psl, pr, hfss, hfls, rlus, rlds, rsds, rsus, tos
-- Temporal Resolution: daily, monthly
-- Spatial Resolution: 2.5 lat x 2.5 lon (same as cmip6-ng)
-- More information: Files are consistent with cmip-ng archives, no time period is indicated in filenames
 
 ### CERRA
 - Size: 6 TB
@@ -172,6 +140,19 @@ File size information last updated in May 2022.
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 5x5km
 - More information: [CDS](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-land?tab=overview), [Status](https://docs.google.com/spreadsheets/d/1e58ps_yBmxUG0jvL8ZmNNr7Zz_UXuqIZsz4MdRAzvbM/edit#gid=0)
+
+### E-OBS and MCH
+- Size: 50 GB
+- Location: IAC
+  - `/net/co2/c2sm-data/ch202X/Obs_Data/EOBS/0.1deg_reg_v23.1e/processed/`
+  - `/net/co2/c2sm-data/ch202X/Obs_Data/EOBS/0.1deg_reg_v26.0e/processed/`
+- Access: direct
+- Status: static
+- Time period: 1971-2020
+- Variables: tas, tasmax, tasmin, pr
+- Temporal Resolution: daily
+- Spatial Resolution: 0.11°
+- More information: E-OBS (v23.1e and v26.0e) data with higher resolution MCH data over Switzerland (prepared for CH2025)
 
 ### ERA5
 - Size: 500 GB
@@ -197,3 +178,24 @@ File size information last updated in May 2022.
 - Spatial Resolution: 0.1° x 0.1°
 - More information: [CDS](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=form)
 
+### MERRA2
+- Size: 17 GB
+- Location: IAC: `/net/co2/c2sm-data/rlorenz/MERRA2/`
+- Access: direct
+- Status: updated
+- Time period: v0: 1980-2015, v1: 1980-2018
+- Variables: tas, tasmax, tasmin, huss, psl, pr, hfss, hfls, rlus, rlds, rsds, rsus, tos
+- Temporal Resolution: daily, monthly
+- Spatial Resolution: 2.5 lat x 2.5 lon (same as cmip6-ng)
+- More information: Files are consistent with cmip-ng archives, no time period is indicated in filenames
+
+### MCH
+- Size: 7 GB
+- Location: IAC: `/net/co2/c2sm-data/ch202X/Obs_Data/MCH/processed/`
+- Access: direct
+- Status: static
+- Time period: 1971-2021
+- Variables: tas, tasmax, tasmin, pr
+- Temporal Resolution: daily
+- Spatial Resolution: ~2km
+- More information: Gridded observational data from MeteoSwiss over Switzerland
