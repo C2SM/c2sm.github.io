@@ -15,7 +15,6 @@ The following table summarises the features ported to GPU and their correspoding
 
 <details close markdown="block">
 <summary>gpu ported COSMO features</summary>
-{: .text-delta }
 
 ##### Parameters in `INPUT_ORG`
 
