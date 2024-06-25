@@ -15,3 +15,5 @@ agupubs.onlinelibrary.wiley.com
 ^https://wiki.iac.ethz.ch/Climphys/ProjectCESM2SetupControlRun
 ^https://wiki.iac.ethz.ch/Climphys/ProjectCESM122SetupControlRun
 ^https://wiki.iac.ethz.ch/IT/LinuxNetCDF
+https://hcdc.hereon.de/clm-community/webpep/webpep
+https://www.gnu.org/licenses/gpl.html
