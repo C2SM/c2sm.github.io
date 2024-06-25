@@ -17,3 +17,4 @@ agupubs.onlinelibrary.wiley.com
 ^https://wiki.iac.ethz.ch/IT/LinuxNetCDF
 https://hcdc.hereon.de/clm-community/webpep/webpep
 https://www.gnu.org/licenses/gpl.html
+https://freedomdefined.org/Licenses/NC
