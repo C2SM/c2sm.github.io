@@ -24,12 +24,8 @@ jobs:
     - name: Test MkDocs build
       run: mkdocs build
     
-    - name: List generated site content
-      run: | 
-        ls -l ./site
-        ls -l ./c2sm.github.io/site
-
     - name: Check for broken links
       run: |
         pip install mkdocs-linkcheck
-        mkdocs-linkcheck ./site
+        exclude_patterns=$(cat exclude_link_patterns.txt | tr '\n' '|' | sed 's/|$//')
+        mkdocs-linkcheck -rv ./docs --ext=".md" --exclude="$exclude_patterns" --sync

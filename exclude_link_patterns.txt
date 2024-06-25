@@ -1,0 +1,17 @@
+jenkins-mch
+images/
+^https://github.com/C2SM-RCM/extpar
+^https://github.com/C2SM-RCM/int2lm
+^https://github.com/C2SM-RCM/cosmo
+^https://github.com/C2SM/icon
+^https://github.com/C2SM/spice
+^https://github.com/C2SM/icontools
+^https://github.com/C2SM/Tasks-Support
+^https://github.com/just-the-docs/just-the-docs-template/generate
+^http://cosmo-model.org/
+agupubs.onlinelibrary.wiley.com
+^https://link.springer.com/article
+^https://github.com/C2SM/spice
+^https://wiki.iac.ethz.ch/Climphys/ProjectCESM2SetupControlRun
+^https://wiki.iac.ethz.ch/Climphys/ProjectCESM122SetupControlRun
+^https://wiki.iac.ethz.ch/IT/LinuxNetCDF
