@@ -18,7 +18,6 @@ The following table summarises the features ported to GPU and their correspoding
 {: .text-delta }
 
 ##### Parameters in `INPUT_ORG`
-{: .no_toc }
 
 | scheme/parameterisation                       | namelist parameter                                                                                                                                                                  | GPU porting status                                 |
 |-----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
@@ -49,7 +48,6 @@ The following table summarises the features ported to GPU and their correspoding
 | Initialise local variables                    | `linit_fields`                                                                                                                                                                      | not ported                                         |
 
 ##### Parameters in `INPUT_PHY`
-{: .no_toc }
 
 | scheme/parameterization                   | namelist parameter                                    | GPU porting status                                                          |
 |-------------------------------------------|-------------------------------------------------------|-----------------------------------------------------------------------------|
@@ -92,7 +90,6 @@ The following table summarises the features ported to GPU and their correspoding
 | Subgrid scale orography                   | `lsso`                                                | ported                                                                      |
 
 ##### Parameters in `INPUT_DYN`
-{: .no_toc }
 
 The GPU porting of the dynamical core of COSMO was accomplished by rewriting the dynamics with the Gridtools stencil library. The Gridtools dycore supports a subset of the parameters of the COSMO Fortran dynamical core. The list of features currently supported in the Gridtools dycore can be found in the [documentation in the code repository] (https://github.com/C2SM-RCM/cosmo/blob/master/dycore/doc/Dycore/supported_configuration.tex).
 

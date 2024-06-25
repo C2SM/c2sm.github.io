@@ -5,7 +5,6 @@ nav_order: -1
 ---
 
 # Center for Climate Systems Modeling (C2SM)
-{: .no_toc }
 
 **Welcome to the C2SM User Landing Page!**
 
@@ -33,12 +32,10 @@ The C2SM Core Team - or C2SM's Executive Office - currently employs six scientif
 - Organisation of workshops
 
 ### Executive Director
-{: .no_toc }
 
 - [Christina Schnadt Poberaj](https://iac.ethz.ch/people-iac/person-detail.html?persid=116573) (CHN M 15.2)
 
 ### Scientific Programmers
-{: .no_toc }
 
 - [Jonas Jucker](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=210923) (CHN M 15.1)
 - [Michael Jähn](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091) (CHN M 15.1)
@@ -48,7 +45,6 @@ The C2SM Core Team - or C2SM's Executive Office - currently employs six scientif
 - [Urs Beyerle](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=49918) (CHN N 16.2)
 
 ### Further staff
-{: .no_toc }
 
 Further information about C2SM project staff and previous core team members can be found at our [ETH website](https://c2sm.ethz.ch/the-center/people/executive-office.html).
 
@@ -72,11 +68,9 @@ This will allow you to submit new tasks, receive support from the C2SM Core Team
 C2SM maintains two GitHub organizations to distribute code to the community. 
 
 ### [C2SM](https://github.com/C2SM)
-{: .no_toc }
 
 This is our main GitHub organisation, which contains many repositories, including ICON.
 
 ### [C2SM-RCM](https://github.com/C2SM-RCM)
-{: .no_toc }
 
 The C2SM-RCM organisation contains all codes related to COSMO and tools like EXTPAR. For questions and access, please contact [Jonas Jucker](mailto:jonas.jucker@c2sm.ethz.ch).

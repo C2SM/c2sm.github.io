@@ -6,7 +6,6 @@ has_children: false
 ---
 
 # Coding Best Practices
-{: .no_toc }
 
 <details open markdown="block">
   <summary>

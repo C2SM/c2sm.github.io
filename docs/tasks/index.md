@@ -6,7 +6,6 @@ has_children: false
 ---
 
 # Tasks
-{: .no_toc }
 
 The work of C2SM's technical team is structured around the four working groups described below. The team receives tasks from three different areas, i.e., from C2SM members, community projects and third party projects, each of them following a specific assignment procedure.
 
@@ -94,7 +93,6 @@ Tasks are also taken from C2SM Community Projects. These are large, perennial, a
 
 
 ##### Community Project Task Assignment Process
-{: .no_toc }
 
 - The C2SM Steering Committee (SC) discusses and recommends C2SM's involvement in a Community Project at the proposal stage. This includes a suggestion on the approximate number of FTEs to be reserved for the project;
 - The C2SM Executive Director (ED) forwards the information to the Core Team, and together with the responsible programmers evaluates the feasibility of the plans, taking into account all other ongoing activities and plans;
@@ -108,7 +106,6 @@ Tasks are also taken from C2SM Community Projects. These are large, perennial, a
 
 
 ##### Current projects
-{: .no_toc }
 
 - [EXCLAIM](https://c2sm.ethz.ch/research/exclaim.html)
 - [Next generation Swiss climate scenarios CH2025](https://www.meteoschweiz.admin.ch/ueber-uns/forschung-und-zusammenarbeit/projekte/2023/klima-ch2025.html)
@@ -125,30 +122,25 @@ As outlined in [C2SM's business plan for 2021-25](https://ethz.ch/content/dam/et
 
 
 ##### Third-Party Projects that Benefit Multiple C2SM Groups
-{: .no_toc }
 
 These can be projects of individual C2SM members as PI, possibly together with other co-PIs from the community, funding individual tasks of core team programmers. These projects will be supported in particular if the results will benefit several C2SM groups.
 
 
 ##### Third-Party Projects with Benefits to the PI Only
-{: .no_toc }
 
 A member may also propose a task/tasks to be funded from their project, but where the benefit is limited to their group. These proposals will be realised if C2SM capacity is available. However, they will have a lower priority than projects with a greater benefit to the community.
 
 ##### Current projects
-{: .no_toc }
 
 - [SNF scClim project](https://scclim.ethz.ch/)
 
 
 ##### Task Portfolio
-{: .no_toc }
 
 The core team's contributions consist largely of technical model development and support tasks. Individual tasks may also include setting up and maintaining a project website, or organising individual workshops or seminar series.
 
 
 ##### Procedure for Proposing Participation in a Third-Party Project
-{: .no_toc }
 
 - The project PI contacts the C2SM Executive Director (ED) at the proposal stage by submitting a written proposal similar to the task proposals for group tasks;
 - The ED, along with an assigned Core Team member, will provide feedback to the PI and may review the proposal again;
