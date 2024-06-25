@@ -27,4 +27,4 @@ jobs:
     - name: Check for broken links (optional)
       run: |
         pip install mkdocs-linkcheck
-        mkdocs-linkcheck
+        mkdocs-linkcheck ./site
