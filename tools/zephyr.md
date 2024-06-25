@@ -33,11 +33,11 @@ Zephyr efficiently extracts both regional and global climate datasets, offering 
 ## Code
 
 * [Zephyr](https://github.com/C2SM/zephyr/tree/main)
-* [Zephyr-request](https://github.com/C2SM/zephyr-request)
 
 ## Access
 
-Zephyr website to create requests: [Zephyr Website](https://zephyr.ethz.ch)
+* Zephyr website to create requests: [Zephyr Website](https://zephyr.ethz.ch)
+* Zephyr-request to submit requests: [Zephyr-request](https://github.com/C2SM/zephyr-request)
 
 ## Local Processing at IAC
 
