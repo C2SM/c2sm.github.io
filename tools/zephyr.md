@@ -11,7 +11,9 @@ Zephyr is the climate data extraction tool developed by C2SM, serving as the bac
 
 ## Support status
 
-The `main` branch is being tested upon creating a PR.
+The `main` branch undergoes testing upon the creation of a PR.
+
+Daily scans of the below listed datasets are conducted, generating file tree JSONs that are then uploaded, ensuring that newly arrived data is promptly available on the [Zephyr-website](https://zephyr.ethz.ch) and kept up to date.
 
 ## Features
 
