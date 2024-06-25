@@ -35,10 +35,9 @@ This group focuses on providing climate data for impact research. Tasks may incl
 
 The Core Team accepts tasks from the three different areas mentioned above, each following a specific procedure described below.
 
-{: .attention-title }
-
-Please submit concrete tasks by following the instructions on our GitHub repository [Tasks-Support](https://github.com/C2SM/Tasks-Support).
-If you do not have access, please follow the instructions under [How to get Access](https://c2sm.github.io/#how-to-get-access).
+!!! info
+    Please submit concrete tasks by following the instructions on our GitHub repository [Tasks-Support](https://github.com/C2SM/Tasks-Support).
+    If you do not have access, please follow the instructions under [How to get Access](https://c2sm.github.io/#how-to-get-access).
 
 
 ### Requirements for Tasks
