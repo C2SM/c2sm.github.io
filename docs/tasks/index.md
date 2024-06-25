@@ -58,7 +58,6 @@ Task assignment depends on which area submitted it. This section describes terms
   <summary>
     Tasks from C2SM Member Groups
   </summary>
-  {: .text-gamma }
 1. **Submission:**
 Tasks can be submitted as issues through our GitHub repository [Tasks-Support](https://github.com/C2SM/Tasks-Support) at any time. The task proposal must include a description and goals of the task, a time estimate, a statement of urgency, the groups involved, and at least one contact person. It should also describe the benefit to C2SM. Please follow the instructions to [Submit a Task](https://github.com/C2SM/Tasks-Support#submit-a-task).
 
@@ -76,7 +75,6 @@ During the biannual WG Day, to which representatives of each C2SM member group a
   <summary>
     Tasks from Community Projects
   </summary>
-  {: .text-gamma }
   
 Tasks are also taken from C2SM Community Projects. These are large, perennial, and joint research and/or development projects involving at least three C2SM groups and two different partner institutions, with a substantial financial volume. Their overall objective supports the implementation of one or more of the four pillars of C2SM. The project produces results that no single group could have produced on its own. Their results benefit a large majority of C2SM members. These projects receive significant support from C2SM core funding in the form of in-kind contributions from core staff.
 
@@ -105,7 +103,6 @@ Tasks are also taken from C2SM Community Projects. These are large, perennial, a
   <summary>
     Tasks from third-party Projects
   </summary>
-  {: .text-gamma }
 
 As outlined in [C2SM's business plan for 2021-25](https://ethz.ch/content/dam/ethz/special-interest/usys/c2sm-dam/center/documents/c2sm_business_plan_final_18nov19.pdf), the Executive Office also relies on funding from third-party projects. We are therefore happy to contribute to the research projects of our members (e.g., SNF, EU, ETH) in our fields of expertise.
 
