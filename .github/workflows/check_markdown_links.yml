@@ -9,8 +9,8 @@ jobs:
   markdown-link-check:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: gaurav-nelson/github-action-markdown-link-check@v1
-      with:
-          use-verbose-mode: 'yes'
-          config-file: '.mlc_config.json'
+      - name: Check for broken links
+      run: |
+        pip install mkdocs-linkcheck
+        exclude_patterns=$(cat exclude_link_patterns.txt | tr '\n' '|' | sed 's/|$//')
+        mkdocs-linkcheck -rv ./docs --ext=".md" --exclude="$exclude_patterns" --sync

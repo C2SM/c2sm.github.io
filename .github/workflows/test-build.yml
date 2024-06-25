@@ -3,7 +3,7 @@ name: Test MkDocs Build
 on:
   push:
     branches:
-      - '**'  # This will trigger the workflow for all branches
+      - '**' 
 
 jobs:
   test-build:
@@ -23,9 +23,3 @@ jobs:
 
     - name: Test MkDocs build
       run: mkdocs build
-    
-    - name: Check for broken links
-      run: |
-        pip install mkdocs-linkcheck
-        exclude_patterns=$(cat exclude_link_patterns.txt | tr '\n' '|' | sed 's/|$//')
-        mkdocs-linkcheck -rv ./docs --ext=".md" --exclude="$exclude_patterns" --sync
