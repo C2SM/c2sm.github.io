@@ -7,15 +7,6 @@ has_children: false
 
 # Data Handling Best Practices
 
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-  - TOC
-  {:toc}
-</details>
-
 ## C2SM data management guidelines
 [C2SM Data Management Recommendations 2020](https://polybox.ethz.ch/index.php/s/pyZRPF4FfJJ47g1)
 
