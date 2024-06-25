@@ -5,7 +5,7 @@ nav_order: 6
 has_children: false
 ---
 
-# Data Handling Best Practives
+# Data Handling Best Practices
 {: .no_toc }
 
 <details open markdown="block">
