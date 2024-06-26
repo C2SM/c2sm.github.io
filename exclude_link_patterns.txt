@@ -20,3 +20,4 @@ agupubs.onlinelibrary.wiley.com
 ^https://freedomdefined.org/Licenses/NC
 ^https://github.com/C2SM/zephyr
 ^https://www.doaj.org
+^https://www.re3data.org
