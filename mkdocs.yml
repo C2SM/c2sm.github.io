@@ -55,18 +55,18 @@ plugins:
         order: asc
         sort_type: natural
         order_by: title
+extra_css:
+  - stylesheets/extra.css
 theme:
   name: material
   language: en
-  logo: assets/c2sm_logo_transparent.png
+  logo: assets/c2sm_logo_white_transparent.png
   favicon: assets/favicon.ico
   icon: fontawesome/brands/github
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: blue grey
-      accent: indigo
+      scheme: c2sm-light
       toggle:
         icon: material/brightness-7 
         name: Switch to dark mode
@@ -74,8 +74,6 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue grey
-      accent: cyan
       toggle:
         icon: material/brightness-4
         name: Switch to light mode

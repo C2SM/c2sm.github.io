@@ -1,0 +1,8 @@
+[data-md-color-scheme="c2sm-light"] {
+    --md-primary-bg-color:        #ffffff;
+    --md-primary-fg-color:        #339cdd;
+}
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color:        #1f2932;
+    --md-hue: 210; 
+}
