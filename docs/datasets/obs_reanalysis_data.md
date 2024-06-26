@@ -1,24 +1,7 @@
----
-title: Observational and Re-analysis Datasets
-layout: default
-nav_order: 1
-parent: Datasets
----
-
 # Observational and Re-analysis Datasets
-{: .no_toc }
 
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-  - TOC
-  {:toc}
-</details>
-
-{: .note-title }
-File size information last updated in May 2022.
+!!! note
+    File size information last updated in May 2022.
 
 ## "Raw" Archives (as downloaded from the original source)
 

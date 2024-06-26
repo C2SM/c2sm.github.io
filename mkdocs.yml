@@ -48,7 +48,6 @@ markdown_extensions:
       permalink: true
 plugins:
   - search
-  - blog
   - awesome-pages:
         filename: .pages
         collapse_single_pages: true
@@ -56,6 +55,7 @@ plugins:
         order: asc
         sort_type: natural
         order_by: title
+  - blog
 extra_css:
   - stylesheets/extra.css
 theme:

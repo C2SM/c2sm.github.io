@@ -1,28 +1,9 @@
----
-title: Climate Model Data
-layout: default
-nav_order: 1
-parent: Datasets
----
-
 # Climate Model Data
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-  - TOC
-  {:toc}
-</details>
-
 
 ## "Raw" CMIP archives (as downloaded from ESGF)
 
-{: .note-title }
-
-"Resolution: native" means that each model output is available on the native grid on which it was run. Size and file information last updated in June 2021.
+!!! note
+    "Resolution: native" means that each model output is available on the native grid on which it was run. Size and file information last updated in June 2021.
 
 ### CMIP2
 - Size: 0.01 TB 
@@ -58,9 +39,8 @@ parent: Datasets
 
 ## CMIP next generation (checked, standardized, regridded to common grid)
 
-{: .note-title }
-
-Next Generation (ng) archives were maintained by Reto’s group (Jan Sedlacek/Lukas Brunner). Ruth Lorenz / C2SM took over cmip6-ng in 2022. Contact: [cmip6-archive@env.ethz.ch](mailto:cmip6-archive@env.ethz.ch). Documentation: [https://doi.org/10.5281/zenodo.373412](https://doi.org/10.5281/zenodo.3734128).
+!!! note
+    Next Generation (ng) archives were maintained by Reto’s group (Jan Sedlacek/Lukas Brunner). Ruth Lorenz / C2SM took over cmip6-ng in 2022. Contact: [cmip6-archive@env.ethz.ch](mailto:cmip6-archive@env.ethz.ch). Documentation: [https://doi.org/10.5281/zenodo.373412](https://doi.org/10.5281/zenodo.3734128).
 
 ### CMIP3-ng
 - Size: 0.5 TB
