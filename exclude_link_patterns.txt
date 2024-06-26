@@ -19,3 +19,4 @@ agupubs.onlinelibrary.wiley.com
 ^https://www.gnu.org/licenses/gpl.html
 ^https://freedomdefined.org/Licenses/NC
 ^https://github.com/C2SM/zephyr
+^https://www.doaj.org
