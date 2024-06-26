@@ -1,8 +1,8 @@
 nav:
   - Home:
     - index.md
-  - Announcements:
-    - announcements
+  - News:
+    - blog
   - Events:
     - events
   - Tasks:
