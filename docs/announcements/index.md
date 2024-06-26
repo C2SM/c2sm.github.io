@@ -1,11 +1,6 @@
----
-title: Announcements
-layout: default
-nav_order: 8
-has_children: false
----
+# Announcements
 
-# Scientific Visualisation using Python
+## Scientific Visualisation using Python
 
 published 18/03/2024
 {: .label .label-grey}
@@ -19,7 +14,7 @@ For more information about the workshop content and the registration form, pleas
 ---
 
 
-# Git for Beginners Workshop
+## Git for Beginners Workshop
 
 published 28/02/2024
 {: .label .label-grey}
@@ -32,7 +27,7 @@ More information about the workshop content and the registration form can be fou
 
 ---
 
-# COSMO/ICON User Workshop
+## COSMO/ICON User Workshop
 
 published 30/11/2023
 {: .label .label-grey}
@@ -46,7 +41,7 @@ to share experience and knowledge, and to get insights into some projects involv
 Please register for the workshop by email to _andreas.pauling@meteoswiss.ch_ by **December 18th, 2023**.
 You are strongly encouraged to present a poster or to give a talk at this informal event!  Please include a preliminary title in your email if you plan to do so.
 
-# Climate model and climate data workshop
+## Climate model and climate data workshop
 
 published 09/11/2023
 {: .label .label-grey}

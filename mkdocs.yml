@@ -46,7 +46,15 @@ markdown_extensions:
       custom_checkbox: true
   - toc:
       permalink: true
-
+plugins:
+  - search
+  - awesome-pages:
+        filename: .pages
+        collapse_single_pages: true
+        strict: false
+        order: asc
+        sort_type: natural
+        order_by: title
 theme:
   name: material
   language: en
@@ -74,11 +82,7 @@ theme:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
-  plugins:
-    - search
-    - typeset
-    - mermaid2:
-        javascript: https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs 
+
   features:
     - content.action.edit
     - content.code.annotate
@@ -86,7 +90,7 @@ theme:
     - content.tabs.link
     - mermaid2
     - navigation.bottom
-    - navigation.expand
+    - navigation.indexes
     - navigation.instant
     - navigation.path
     - navigation.sections
@@ -94,7 +98,6 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
-    - navigation.indexes
     - search
     - search.share
     - search.suggest
