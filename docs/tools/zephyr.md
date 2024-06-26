@@ -27,7 +27,7 @@ Requests are made via the [Zephyr website](https://zephyr.ethz.ch) and submitted
 - CERRA
 - CERRA land
 
-Zephyr efficiently extracts both regional and global climate datasets, offering options for data retrieval at single nearest gridpoints or within a user-defined rectangular area. After successful submission and processing, a download link to the processed data is sent via email and is also displayed in the GitHub issue where the request was submitted, which remains available for up to seven days.
+Zephyr efficiently extracts both regional and global climate datasets, with options to retrieve data at individual nearest grid points or within a user-defined rectangular area. Once a request has been successfully submitted and processed, a download link will be posted to the GitHub issue thread where the request was submitted. The download link will be available for up to seven days.
 
 ## Code
 
