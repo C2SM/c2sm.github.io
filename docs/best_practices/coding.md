@@ -7,7 +7,7 @@ Whether you're new to coding or already working on it, there are two important t
 
 If you're new to Git or want to improve your Git skills, we recommend attending our annual **Git for Beginners** and/or **Git for Advanced** courses.
 Additionally, all course materials are publicly available and can be used throughout the year.
-For more details, please visit [Technical Events - Git Courses](https://c2sm.github.io/events/git_courses.html).
+For more details, please visit [Technical Events - Git Courses](../events/git_courses.md).
 
 ### Key Concepts of Git
 

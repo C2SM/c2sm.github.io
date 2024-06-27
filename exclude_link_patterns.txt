@@ -1,3 +1,4 @@
+.md
 jenkins-mch
 images/
 agupubs.onlinelibrary.wiley.com

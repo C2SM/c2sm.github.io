@@ -112,14 +112,16 @@ If you do not already have an SSH key set up for GitHub but would like to do so,
 For configuring and building COSMO with Spack, please refer to the official spack-c2sm documentation, which provides instructions for [setting up a Spack instance](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin) and [installing COSMO](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#cosmo) on Piz Daint.
 
 ## Related tools
-In the [Tools](https://c2sm.github.io/tools) section, you will find relevant tools for working with COSMO:
-* [**Extpar:**](https://c2sm.github.io/tools/extpar.html) External parameters for the COSMO-grid (preprocessing)
-* [**int2lm:**](https://c2sm.github.io/tools/int2lm.html) The interpolation software for the COSMO-model (preprocessing)
-* [**Processing Chain**](https://c2sm.github.io/tools/processing_chain.html): Python workflow tool for COSMO
+In the [Tools](../tools/index.md) section, you will find relevant tools for working with COSMO:
+
+* [**Extpar:**](../tools/extpar.md) External parameters for the COSMO-grid (preprocessing)
+* [**int2lm:**](../tools/int2lm.md) The interpolation software for the COSMO-model (preprocessing)
+* [**Processing Chain**](../tools/processing_chain.md): Python workflow tool for COSMO
 
 
 ## Documentation
 COSMO documentation is available at:
+
 * [Official website of the Consortium for Small-scale Modeling (COSMO)](http://www.cosmo-model.org/)
 * [COSMO Model System Overview](https://www.cosmo-model.org/content/model/cosmo/default.htm)
 * [COSMO User's Guide](https://www.cosmo-model.org/content/model/cosmo/coreDocumentation/cosmo_userguide_6.00.pdf) 

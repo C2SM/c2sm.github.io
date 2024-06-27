@@ -18,7 +18,7 @@
    * openBIS software: Dr. Caterina Barillari, ETH SIS, [ETH Personal Page](https://www.ethz.ch/en/the-eth-zurich/organisation/departments/informatikdienste/personen/person-detail.html?persid=185758)
 
 ## Data repositories
-   * [C2SM datasets](https://c2sm.github.io/datasets/)
+   * [C2SM datasets](../datasets/index.md)
    * [Directory of data repositories](https://www.re3data.org)
    * [ETH research collection](https://www.research-collection.ethz.ch)
    * [Zenodo](https://zenodo.org)

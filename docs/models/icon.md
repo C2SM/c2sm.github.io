@@ -9,7 +9,7 @@ parent: Models
 ICON (Icosahedral Nonhydrostatic Weather and Climate Model) is a global model suitable for climate and weather prediction at regional and global domains.
 It is a joint project of [DWD](https://www.dwd.de/DE/Home/home_node.html), [MPI-M](https://mpimet.mpg.de/startseite) and [KIT](https://www.kit.edu/).
 
-To stay informed about what is going on in the ICON world and to get to know other ICON users, please attend our [quarterly ICON meeting](https://c2sm.github.io/events/icon_meeting.html).
+To stay informed about what is going on in the ICON world and to get to know other ICON users, please attend our [quarterly ICON meeting](../events/icon_meetings/index.md).
 
 ## Support status
 C2SM facilitates the utilisation of ICON on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) and [Euler](https://scicomp.ethz.ch/wiki/Euler) computing platforms for the CPU and GPU architectures.
@@ -18,10 +18,10 @@ C2SM facilitates the utilisation of ICON on the [Piz Daint](https://www.cscs.ch/
 The latest release distributed by C2SM, currently `2024.01`, is continuously being tested on both Piz Daint and Euler and receives patches when necessary.
 
 ## Mailing list
-If you use ICON, please follow [these instructions](https://c2sm.github.io/events/icon_meeting.html#c2sm-icon-mailing-list) to subscribe to our mailing list.
+If you use ICON, please follow [these instructions](../events/icon_meetings/index.md#c2sm-icon-mailing-list) to subscribe to our mailing list.
 
 ## Access
-The ICON repository is hosted on the C2SM GitHub organisation. If you do not have access, please follow the instructions under [How to get Access](https://c2sm.github.io/#how-to-get-access).
+The ICON repository is hosted on the C2SM GitHub organisation. If you do not have access, please follow the instructions under [How to get Access](../index.md#how-to-get-access).
 
 Once you have access, clone the repository from GitHub using the SSH protocol:
 
@@ -68,12 +68,14 @@ You may need to adjust the account in the runscript to match your permissions. A
 
 ## Input data
 ICON input data are stored at the following locations:
+
 - **Piz Daint (CSCS):** `/users/icontest/pool/data/ICON`
 - **Euler:** `/cluster/work/climate/icon_input`
 
 
 ## Toolset
 In the [Tools](https://c2sm.github.io/tools) section, you will find relevant tools for working with ICON:
+
 * [**Extpar:**](https://c2sm.github.io/tools/extpar.html) External parameters for the ICON grid (preprocessing)
 * [**Processing Chain**](https://c2sm.github.io/tools/processing_chain.html): Python workflow tool for ICON
 * [**SPICE**](https://c2sm.github.io/tools/spice.html): Starter package for ICON-CLM experiments
@@ -81,6 +83,7 @@ In the [Tools](https://c2sm.github.io/tools) section, you will find relevant too
 
 ## Projects
 Learn more about ongoing projects involving ETHZ in the development of ICON:
+
   * [EXCLAIM](https://exclaim.ethz.ch/) 
   * [ICON-HAMMOZ](https://redmine.hammoz.ethz.ch/projects/icon-hammoz)
 
@@ -93,4 +96,5 @@ ICON documentation is available at:
      
 ## External Software
 The following external software is useful for working with ICON data:
+
    * [CDO](https://code.zmaw.de/projects/cdo)
