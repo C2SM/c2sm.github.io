@@ -45,8 +45,6 @@ def main(base_path):
     else:
         print("No invalid links found.")
 
-import sys  # Import sys for exit functionality
-
 def main(base_path):
     markdown_files = set(find_markdown_files(base_path))
     all_invalid_links = {}
