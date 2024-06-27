@@ -3,7 +3,7 @@
 The Core Team accepts tasks from the three different areas mentioned above, each following a specific procedure described below.
 
 !!! info
-    Please submit concrete tasks by following the instructions on our GitHub repository [Tasks-Support](https://github.com/C2SM/Tasks-Support).
+    Please submit concrete tasks by following the instructions on our GitHub repository [Tasks-Support :material-open-in-new:](https://github.com/C2SM/Tasks-Support){:target="_blank"}.
     If you do not have access, please follow the instructions under [How to get Access](../index.md#how-to-get-access).
 
 
@@ -14,7 +14,7 @@ Tasks are one-​time assignments that typically involve the development of a ne
 
 ### Overview of current tasks
 
-An overview of all submitted tasks can be found at the [issues list](https://github.com/C2SM/Tasks-Support/issues) of our [Tasks-Support](https://github.com/C2SM/Tasks-Support) repository. The current task status of each WG is visible under the [projects](https://github.com/C2SM/Tasks-Support/projects?query=is%3Aopen) section.
+An overview of all submitted tasks can be found at the [issues list :material-open-in-new:](https://github.com/C2SM/Tasks-Support/issues){:target="_blank"} of our [Tasks-Support :material-open-in-new:](https://github.com/C2SM/Tasks-Support){:target="_blank"} repository. The current task status of each WG is visible under the [projects :material-open-in-new:](https://github.com/C2SM/Tasks-Support/projects?query=is%3Aopen){:target="_blank"} section.
 
 
 ### Detailed task assignment
@@ -26,7 +26,7 @@ Task assignment depends on which area submitted it. This section describes terms
     Tasks from C2SM Member Groups
   </summary>
 1. **Submission:**
-Tasks can be submitted as issues through our GitHub repository [Tasks-Support](https://github.com/C2SM/Tasks-Support) at any time. The task proposal must include a description and goals of the task, a time estimate, a statement of urgency, the groups involved, and at least one contact person. It should also describe the benefit to C2SM. Please follow the instructions to [Submit a Task](https://github.com/C2SM/Tasks-Support#submit-a-task).
+Tasks can be submitted as issues through our GitHub repository [Tasks-Support :material-open-in-new:](https://github.com/C2SM/Tasks-Support){:target="_blank"} at any time. The task proposal must include a description and goals of the task, a time estimate, a statement of urgency, the groups involved, and at least one contact person. It should also describe the benefit to C2SM. Please follow the instructions to [Submit a Task :material-open-in-new:](https://github.com/C2SM/Tasks-Support#submit-a-task){:target="_blank"}.
 
 2. **Evaluation:**
 The Core Team will evaluate the proposals and may provide feedback/ask questions/reiterate the proposals to the groups. Priority will be given to tasks with greater benefit to multiple C2SM groups. Updates on the tasks will be directly given on the submitted task in the GitHub repository.
@@ -61,8 +61,8 @@ Tasks are also taken from C2SM Community Projects. These are large, perennial, a
 
 ##### Current projects
 
-- [EXCLAIM](https://c2sm.ethz.ch/research/exclaim.html)
-- [Next generation Swiss climate scenarios CH2025](https://www.meteoschweiz.admin.ch/ueber-uns/forschung-und-zusammenarbeit/projekte/2023/klima-ch2025.html)
+- [EXCLAIM :material-open-in-new:](https://c2sm.ethz.ch/research/exclaim.html){:target="_blank"}
+- [Next generation Swiss climate scenarios CH2025 :material-open-in-new:](https://www.meteoschweiz.admin.ch/ueber-uns/forschung-und-zusammenarbeit/projekte/2023/klima-ch2025.html){:target="_blank"}
 
 </details>
 
@@ -71,7 +71,7 @@ Tasks are also taken from C2SM Community Projects. These are large, perennial, a
     Tasks from third-party Projects
   </summary>
 
-As outlined in [C2SM's business plan for 2021-25](https://ethz.ch/content/dam/ethz/special-interest/usys/c2sm-dam/center/documents/c2sm_business_plan_final_18nov19.pdf), the Executive Office also relies on funding from third-party projects. We are therefore happy to contribute to the research projects of our members (e.g., SNF, EU, ETH) in our fields of expertise.
+As outlined in [C2SM's business plan for 2021-25 :material-open-in-new:](https://ethz.ch/content/dam/ethz/special-interest/usys/c2sm-dam/center/documents/c2sm_business_plan_final_18nov19.pdf){:target="_blank"}, the Executive Office also relies on funding from third-party projects. We are therefore happy to contribute to the research projects of our members (e.g., SNF, EU, ETH) in our fields of expertise.
 
 
 ##### Third-Party Projects that Benefit Multiple C2SM Groups
@@ -85,7 +85,7 @@ A member may also propose a task/tasks to be funded from their project, but wher
 
 ##### Current projects
 
-- [SNF scClim project](https://scclim.ethz.ch/)
+- [SNF scClim project :material-open-in-new:](https://scclim.ethz.ch/){:target="_blank"}
 
 
 ##### Task Portfolio

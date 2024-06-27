@@ -14,7 +14,7 @@ extracts timing data from log files, and generates summary plots that show
 efficiency, node hours, and wallclock time in relation to the number of nodes used.
 
 The tool comes in handy when applying for a
-[production project at CSCS](https://www.cscs.ch/user-lab/allocation-schemes/production-projects),
+[production project at CSCS :material-open-in-new:](https://www.cscs.ch/user-lab/allocation-schemes/production-projects){:target="_blank"},
 as a technical report is required that must include the following information:
 
 - Representative benchmarks and scaling
@@ -25,4 +25,4 @@ proposal.
 
 ## Code and Documentation
 
-* [Scaling Analysis Tool](https://github.com/C2SM/scaling_analysis)
+* [Scaling Analysis Tool :material-open-in-new:](https://github.com/C2SM/scaling_analysis){:target="_blank"}

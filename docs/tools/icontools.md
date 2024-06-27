@@ -15,13 +15,13 @@ The `master` branch is continuously being tested on Piz Daint.
 
 ## Access
 
-In order to get access to the [DWD ICON Tools repository hosted on the C2SM GitHub organisation](https://github.com/C2SM/icontools),
+In order to get access to the [DWD ICON Tools repository hosted on the C2SM GitHub organisation :material-open-in-new:](https://github.com/C2SM/icontools){:target="_blank"},
 please contact your group's technical contact. They will be responsible for adding you to the appropriate user group.
 
 ## Compile
 
 Spack takes care of configuring and building Icontools. For detailed instructions,
-please consider the official [spack-c2sm documentation](https://c2sm.github.io/spack-c2sm/latest).
+please consider the official [spack-c2sm documentation :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest){:target="_blank"}.
 The following Spack installation should be sufficient for most cases:
 
 ```bash
@@ -36,7 +36,7 @@ spack load icontools
 
 ## Run
 
-[The folder C2SM in the icontools repository](https://github.com/C2SM/icontools/tree/master/C2SM) contains a bunch of scripts to run `iconremap` and `icongridgen` on Piz Daint.
+[The folder C2SM in the icontools repository :material-open-in-new:](https://github.com/C2SM/icontools/tree/master/C2SM){:target="_blank"} contains a bunch of scripts to run `iconremap` and `icongridgen` on Piz Daint.
 Most likely you will use the DWD ICON tools to generate a new grid or interpolate boundary conditions for limited-area ICON runs. 
 
 Below is a recipe to create initial and boundary files for an ICON-LAM run on Piz Daint.
@@ -83,5 +83,5 @@ sbatch -A <account> icontools/C2SM/remap_ini
 
 ## Documentation
 
-* A [TeX version](https://github.com/C2SM/icontools/blob/master/doc/icontools_doc.tex) of the official documentation is in the repository
-* A [pdf version](https://polybox.ethz.ch/index.php/s/jdYaNrWFF8LjcrF), Sept 2023
+* A [TeX version :material-open-in-new:](https://github.com/C2SM/icontools/blob/master/doc/icontools_doc.tex){:target="_blank"} of the official documentation is in the repository
+* A [pdf version :material-open-in-new:](https://polybox.ethz.ch/index.php/s/jdYaNrWFF8LjcrF){:target="_blank"}, Sept 2023

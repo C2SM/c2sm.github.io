@@ -40,7 +40,7 @@
 ## CMIP next generation (checked, standardized, regridded to common grid)
 
 !!! note
-    Next Generation (ng) archives were maintained by Reto’s group (Jan Sedlacek/Lukas Brunner). Ruth Lorenz / C2SM took over cmip6-ng in 2022. Contact: [cmip6-archive@env.ethz.ch](mailto:cmip6-archive@env.ethz.ch). Documentation: [https://doi.org/10.5281/zenodo.373412](https://doi.org/10.5281/zenodo.3734128).
+    Next Generation (ng) archives were maintained by Reto’s group (Jan Sedlacek/Lukas Brunner). Ruth Lorenz / C2SM took over cmip6-ng in 2022. Contact: [cmip6-archive@env.ethz.ch](mailto:cmip6-archive@env.ethz.ch). Documentation: [https://doi.org/10.5281/zenodo.373412 :material-open-in-new:](https://doi.org/10.5281/zenodo.3734128){:target="_blank"}.
 
 ### CMIP3-ng
 - Size: 0.5 TB

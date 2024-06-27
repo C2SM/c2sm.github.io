@@ -6,10 +6,10 @@ parent: Models
 ---
 
 # COSMO
-The COSMO model is a limited-area, non-hydrostatic model developed by a collaboration of National Weather Services called the [Consortium for Small-scale Modeling](http://www.cosmo-model.org/).
+The COSMO model is a limited-area, non-hydrostatic model developed by a collaboration of National Weather Services called the [Consortium for Small-scale Modeling :material-open-in-new:](http://www.cosmo-model.org/){:target="_blank"}.
 
 ## Support status
-C2SM currently facilitates the utilisation of COSMO on the [Piz Daint](https://www.cscs.ch/computers/piz-daint) computing platform for CPU and GPU architectures. The `master` and `c2sm-features` branches are being continuously tested an Piz Daint.
+C2SM currently facilitates the utilisation of COSMO on the [Piz Daint :material-open-in-new:](https://www.cscs.ch/computers/piz-daint){:target="_blank"} computing platform for CPU and GPU architectures. The `master` and `c2sm-features` branches are being continuously tested an Piz Daint.
 
 The following table summarises the features ported to GPU and their correspoding namelist parameters.
 
@@ -99,17 +99,17 @@ The GPU porting of the dynamical core of COSMO was accomplished by rewriting the
     - C2SM's support for COSMO is scheduled to stop end of 2024
 
 ## Access
-In order to get access to the [COSMO repository](https://github.com/C2SM-RCM/cosmo) hosted on the C2SM-RCM GitHub organisation,
+In order to get access to the [COSMO repository :material-open-in-new:](https://github.com/C2SM-RCM/cosmo){:target="_blank"} hosted on the C2SM-RCM GitHub organisation,
 please contact [C2SM Support](mailto:support@c2sm.ethz.ch).
 
 Once you have access, clone the repository from GitHub using the SSH protocol:
 ```
 git clone git@github.com:C2SM-RCM/cosmo.git
 ```
-If you do not already have an SSH key set up for GitHub but would like to do so, follow the [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+If you do not already have an SSH key set up for GitHub but would like to do so, follow the [instructions :material-open-in-new:](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent){:target="_blank"}.
 
 ## Configure and compile
-For configuring and building COSMO with Spack, please refer to the official spack-c2sm documentation, which provides instructions for [setting up a Spack instance](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin) and [installing COSMO](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#cosmo) on Piz Daint.
+For configuring and building COSMO with Spack, please refer to the official spack-c2sm documentation, which provides instructions for [setting up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"} and [installing COSMO :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#cosmo){:target="_blank"} on Piz Daint.
 
 ## Related tools
 In the [Tools](../tools/index.md) section, you will find relevant tools for working with COSMO:
@@ -122,9 +122,9 @@ In the [Tools](../tools/index.md) section, you will find relevant tools for work
 ## Documentation
 COSMO documentation is available at:
 
-* [Official website of the Consortium for Small-scale Modeling (COSMO)](http://www.cosmo-model.org/)
-* [COSMO Model System Overview](https://www.cosmo-model.org/content/model/cosmo/default.htm)
-* [COSMO User's Guide](https://www.cosmo-model.org/content/model/cosmo/coreDocumentation/cosmo_userguide_6.00.pdf) 
+* [Official website of the Consortium for Small-scale Modeling (COSMO) :material-open-in-new:](http://www.cosmo-model.org/){:target="_blank"}
+* [COSMO Model System Overview :material-open-in-new:](https://www.cosmo-model.org/content/model/cosmo/default.htm){:target="_blank"}
+* [COSMO User's Guide :material-open-in-new:](https://www.cosmo-model.org/content/model/cosmo/coreDocumentation/cosmo_userguide_6.00.pdf){:target="_blank"} 
 
 ## Asynchronous IO for NetCDF - A Guide for an optimal model setup
 

@@ -12,13 +12,13 @@ The chain can be flexibly adapted according to your needs, e.g., by creating you
 
 The code is the product of a joint collaboration between Empa and C2SM. 
 It was originally developed by Christoph Knote using pure Bash scripts.
-In 2018, Empa's [Atmospheric Modelling and Remote Sensing group](https://www.empa.ch/web/s503/modelling-remote-sensing) translated the code into Python,
+In 2018, Empa's [Atmospheric Modelling and Remote Sensing group :material-open-in-new:](https://www.empa.ch/web/s503/modelling-remote-sensing){:target="_blank"} translated the code into Python,
 making it more flexible and easier to maintain.
 
 Since 2021, the Processing Chain has been distributed to the entire C2SM
-community and is being hosted on the [C2SM GitHub organisation](https://github.com/C2SM/processing-chain/). Regular testing is done via [Jenkins](https://jenkins-mch.cscs.ch/job/ProcessingChain/job/processing-chain-weekly/) (requires access) to ensure that the code runs stably on the system.
+community and is being hosted on the [C2SM GitHub organisation :material-open-in-new:](https://github.com/C2SM/processing-chain/){:target="_blank"}. Regular testing is done via [Jenkins :material-open-in-new:](https://jenkins-mch.cscs.ch/job/ProcessingChain/job/processing-chain-weekly/){:target="_blank"} (requires access) to ensure that the code runs stably on the system.
 
-If you need any help, please contact [Michael Jähn](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091).
+If you need any help, please contact [Michael Jähn :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091){:target="_blank"}.
 
 ## Support Status
 
@@ -36,9 +36,9 @@ The `main` branch is continuously being tested on Piz Daint.
 
 ## Code and Documentation
 
-* [Processing Chain at the C2SM Github organisation](https://github.com/C2SM/processing-chain)
-* [Documentation](https://c2sm.github.io/processing-chain/latest/)
+* [Processing Chain at the C2SM Github organisation :material-open-in-new:](https://github.com/C2SM/processing-chain){:target="_blank"}
+* [Documentation :material-open-in-new:](https://c2sm.github.io/processing-chain/latest/){:target="_blank"}
 
 ## Other Resources
 
-* [Poster from COSMO/ICON User Workshop 2024](https://polybox.ethz.ch/index.php/s/jBFHhdW8VvIrlPW)
+* [Poster from COSMO/ICON User Workshop 2024 :material-open-in-new:](https://polybox.ethz.ch/index.php/s/jBFHhdW8VvIrlPW){:target="_blank"}

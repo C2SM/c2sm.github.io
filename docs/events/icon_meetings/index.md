@@ -15,11 +15,11 @@ The meeting also offers an avenue to receive updates on the latest developments 
 Moreover, it encourages interactions and collaboration with research groups from ETH Zurich, MeteoSwiss, Empa, and CSCS. 
 
 In case you have any questions or suggestions, contact the meeting organiser,
-[Michael Jähn](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091).
+[Michael Jähn :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091){:target="_blank"}.
 
 ## C2SM ICON Mailing List
 
-As a member of the `c2sm.icon` mailing list, you will receive all relevant information around [ICON](https://c2sm.github.io/models/icon) and invitations to the quarterly ICON meeting. 
+As a member of the `c2sm.icon` mailing list, you will receive all relevant information around [ICON :material-open-in-new:](https://c2sm.github.io/models/icon){:target="_blank"} and invitations to the quarterly ICON meeting. 
 
 If you or someone from your group is not yet a member of the `c2sm.icon` mailing list, subscribe by sending an e-mail to: 
 [`mailto:sympa@sympa.ethz.ch?subject=SUBSCRIBE%20c2sm.icon%20firstname%20lastname`](mailto:sympa@sympa.ethz.ch?subject=SUBSCRIBE%20c2sm.icon%20firstname%20lastname) (modify `firstname` and `lastname` in the subject).
