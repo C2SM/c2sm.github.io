@@ -29,6 +29,5 @@ jobs:
         with:
           commit_message: 'GitHub Action: Apply external link format'
           branch: ${{ github.head_ref }}
-          repository: ${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
