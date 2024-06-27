@@ -15,7 +15,5 @@ nav:
     - tools
   - Datasets:
     - datasets
-  - Data Guidelines:
-    - data-guidelines
-  - Coding Best Practices:
-    - coding
+  - Best Practices:
+    - best_practices

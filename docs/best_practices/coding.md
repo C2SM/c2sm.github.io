@@ -1,11 +1,4 @@
----
-title: Coding Best Practices
-layout: default
-nav_order: 6
-has_children: false
----
-
-# Coding Best Practices
+# Coding
 
 Whether you're new to coding or already working on it, there are two important things to remember: always **use version control** and **add automatic testing**. These steps will make things easier for you and everyone you work with. Also, try out tools that can make coding easier for you.
 

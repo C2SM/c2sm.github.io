@@ -1,11 +1,4 @@
----
-title: Data Guidelines
-layout: default
-nav_order: 6
-has_children: false
----
-
-# Data Handling Best Practices
+# Data Handling
 
 ## C2SM data management guidelines
 [C2SM Data Management Recommendations 2020](https://polybox.ethz.ch/index.php/s/pyZRPF4FfJJ47g1)
