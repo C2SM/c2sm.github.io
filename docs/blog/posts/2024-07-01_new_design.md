@@ -13,8 +13,6 @@ We are pleased to announce that our website has a new design as of today! This c
 
 For this redesign, we chose [Material for MkDocs :material-open-in-new:](https://squidfunk.github.io/mkdocs-material/){:target="_blank"}, a tool that helps us create a modern and responsive site. Material for MkDocs is also the tool of choice for CSCS and their documentation pages.
 
-## Keeping Things Consistent
-
 A big advantage of Material for MkDocs is how it helps us keep a consistent style across all our documentation. It is important to us that whether we are working on current projects or starting new ones, you always get clear and accessible information. This tool is a big help in achieving that.
 
 ## New Features
