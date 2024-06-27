@@ -18,7 +18,7 @@ A big advantage of Material for MkDocs is how it helps us keep a consistent styl
 ## New Features
 
 - Switch between dark and light mode
-- News are managed with the `blog` feature and appears more prominently in the navigation bar
+- News are managed with the `blog` feature and appear more prominently in the navigation bar
 - Table of Content now visible for each site on the right side bar
 - Clear distinction between internal and external hyperlinks
 - Replaced [Datasets](../../datasets/climate_model_data.md) tables with sections and listings
