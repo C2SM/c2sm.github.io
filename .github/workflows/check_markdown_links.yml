@@ -14,4 +14,4 @@ jobs:
       run: |
         pip install mkdocs-linkcheck
         exclude_patterns=$(cat exclude_link_patterns.txt | tr '\n' '|' | sed 's/|$//')
-        mkdocs-linkcheck -rv ./docs --ext=".md" --exclude="$exclude_patterns" --sync
+        mkdocs-linkcheck -rv ./docs --ext=".md" --exclude="$exclude_patterns" -m get
