@@ -1,17 +1,17 @@
+# <img>![](https://polybox.ethz.ch/index.php/s/P1sc5n7TLhmUcld/download#only-light)![](https://polybox.ethz.ch/index.php/s/7FVqpqKOPQw9xew/download#only-dark)</img>
 
-# <img src="https://polybox.ethz.ch/index.php/s/Na2CeLPTzhtmh1T/download" width="110" valign="middle" alt="Zephyr"/>  Climate Data Extraction Tool
 
-Zephyr is the climate data extraction tool developed by C2SM, serving as the backend processing engine for the [Zephyr website :material-open-in-new:](https://zephyr.ethz.ch){:target="_blank"}.
+Zephyr is the climate data extraction tool developed by C2SM, serving as the backend processing engine for the [Zephyr website](https://zephyr.ethz.ch).
 
 ## Support status
 
 The `main` branch is tested daily and for incoming changes via GitHub pull requests.
 
-Scans of the datasets listed below are performed daily, generating file trees in JSON format. This ensures that the data information for the [Zephyr website :material-open-in-new:](https://zephyr.ethz.ch){:target="_blank"} is kept up to date.
+Scans of the datasets listed below are performed daily, generating file trees in JSON format. This ensures that the data information for the [Zephyr website](https://zephyr.ethz.ch) is kept up to date.
 
 ## Features
 
-Requests are made via the [Zephyr website :material-open-in-new:](https://zephyr.ethz.ch){:target="_blank"} and submitted using the [Zephyr data request template :material-open-in-new:](https://github.com/C2SM/zephyr-request/issues/new/choose){:target="_blank"}. Zephyr supports a range of climate models and reanalysis datasets, including:
+Requests are made via the [Zephyr website](https://zephyr.ethz.ch) and submitted using the [Zephyr data request template](https://github.com/C2SM/zephyr-request/issues/new/choose). Zephyr supports a range of climate models and reanalysis datasets, including:
 
 - CMIP5
 - CMIP6
@@ -26,16 +26,11 @@ Zephyr efficiently extracts both regional and global climate datasets, with opti
 
 ## Code
 
-* [Zephyr :material-open-in-new:](https://github.com/C2SM/zephyr/tree/main){:target="_blank"}
-
-## Access
-
-* Zephyr website to create requests: [Zephyr Website :material-open-in-new:](https://zephyr.ethz.ch){:target="_blank"}
-* Submitting Zephyr data requests: [Zephyr-request :material-open-in-new:](https://github.com/C2SM/zephyr-request/issues/new/choose){:target="_blank"}
+* [Zephyr](https://github.com/C2SM/zephyr/tree/main) on GitHub
 
 ## Local Processing at IAC
 
-If you have access to IAC servers, you can use Zephyr directly without submitting your request via the [Zephyr data request template :material-open-in-new:](https://github.com/C2SM/zephyr-request/issues/new/choose){:target="_blank"}. To do this, clone and install the tool in your workspace by following the instructions in the [Zephyr README :material-open-in-new:](https://github.com/C2SM/zephyr/tree/main){:target="_blank"}. Once installed, you can process requests created via the Zephyr website using the following command:
+If you have access to IAC servers, you can use Zephyr directly without submitting your request via the [Zephyr data request template](https://github.com/C2SM/zephyr-request/issues/new/choose). To do this, clone and install the tool in your workspace by following the instructions in the [Zephyr README](https://github.com/C2SM/zephyr/tree/main). Once installed, you can process requests created via the Zephyr website using the following command:
 
 ```shell
 python launch_zephyr.py --json_path=/path/to/your/request --output_directory=/path/to/your/output/directory
