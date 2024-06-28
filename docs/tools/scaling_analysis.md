@@ -1,8 +1,3 @@
----
-title: Scaling Analysis Tool
-layout: default
-parent: Tools
----
 
 # Scaling Analysis Tool
 

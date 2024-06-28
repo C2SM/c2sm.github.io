@@ -1,9 +1,3 @@
----
-title: Python Visualisation Course
-layout: default
-nav_order: 2
-parent: Technical Events
----
 
 # Python Visualisation Course
 C2SM together with [SIS (Scientific IT Services) :material-open-in-new:](https://sis.id.ethz.ch){:target="_blank"} offers an annual visualisation programming course in Python as part of our [technical training :material-open-in-new:](https://c2sm.ethz.ch/education/technical-training.html){:target="_blank"}.

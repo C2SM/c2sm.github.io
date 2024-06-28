@@ -1,8 +1,3 @@
----
-title: Home
-layout: default
-nav_order: -1
----
 
 # Center for Climate Systems Modeling (C2SM)
 

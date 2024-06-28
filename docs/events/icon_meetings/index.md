@@ -1,11 +1,3 @@
----
-title: Quarterly ICON Meeting
-layout: default
-nav_order: 1
-parent: Technical Events
-has_children: True
-child_nav_order: reversed
----
 
 # Quarterly ICON Meeting
 

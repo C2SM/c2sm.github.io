@@ -1,8 +1,3 @@
----
-title: DWD ICON Tools
-layout: default
-parent: Tools
----
 
 # DWD ICON Tools
 

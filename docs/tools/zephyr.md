@@ -1,8 +1,3 @@
----
-title: Zephyr
-layout: default
-parent: Tools
----
 
 # <img src="https://polybox.ethz.ch/index.php/s/Na2CeLPTzhtmh1T/download" width="110" valign="middle" alt="Zephyr"/>  Climate Data Extraction Tool
 

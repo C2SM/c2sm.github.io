@@ -1,8 +1,3 @@
----
-title: INT2LM
-layout: default
-parent: Tools
----
 
 # INT2LM
 

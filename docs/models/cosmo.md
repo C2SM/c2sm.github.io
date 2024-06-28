@@ -1,9 +1,3 @@
----
-title: COSMO
-layout: default
-nav_order: 1
-parent: Models
----
 
 # COSMO
 The COSMO model is a limited-area, non-hydrostatic model developed by a collaboration of National Weather Services called the [Consortium for Small-scale Modeling :material-open-in-new:](http://www.cosmo-model.org/){:target="_blank"}.

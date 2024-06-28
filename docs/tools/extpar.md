@@ -1,8 +1,3 @@
----
-title: EXTPAR
-layout: default
-parent: Tools
----
 
 # EXTPAR
 

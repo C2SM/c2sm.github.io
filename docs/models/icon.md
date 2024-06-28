@@ -1,9 +1,3 @@
----
-title: ICON
-layout: default
-nav_order: 1
-parent: Models
----
 
 # ICON
 ICON (Icosahedral Nonhydrostatic Weather and Climate Model) is a global model suitable for climate and weather prediction at regional and global domains.

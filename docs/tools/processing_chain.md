@@ -1,8 +1,3 @@
----
-title: Processing Chain
-layout: default
-parent: Tools
----
 
 # Processing Chain <img src="https://polybox.ethz.ch/index.php/s/yc3zMmoXKyI2rJm/download" width="64" valign="middle"/> 
 

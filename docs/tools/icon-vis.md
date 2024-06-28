@@ -1,8 +1,3 @@
----
-title: icon-vis
-layout: default
-parent: Tools
----
 
 # icon-vis
 

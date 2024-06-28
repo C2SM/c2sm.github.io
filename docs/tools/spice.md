@@ -1,8 +1,3 @@
----
-title: SPICE
-layout: default
-parent: Tools
----
 
 # SPICE
 
