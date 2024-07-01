@@ -19,66 +19,75 @@ def write_markdown(file_path, content):
     with open(file_path, 'a') as file:
         file.write(content)
 
-def update_markdown(markdown, json_data):
-    for variable, resolutions in json_data['data'].items():
-        for resolution, details in resolutions.items():
-            for detail_type, detail_values in details.items():
-                date_range = detail_values.get('date_range', '')
-                missing = detail_values.get('missing', [])
-                # Assuming there's a specific way you want to format this in the markdown
-                # For example, using placeholders like {{variable_day_date_range}}
-                date_range_placeholder = f'{{{{{variable}_{resolution}_date_range}}}}'
-                missing_placeholder = f'{{{{{variable}_{resolution}_missing}}}}'
-                markdown = markdown.replace(date_range_placeholder, date_range)
-                if missing:
-                    missing_text = ', '.join(missing)
-                else:
-                    missing_text = 'None'
-                markdown = markdown.replace(missing_placeholder, missing_text)
-    return markdown
-
-def generate_markdown_with_tooltips(json_data, heading_dataset):
+def generate_markdown_with_tooltips(json_data, heading_dataset, dataset):
     markdown_content = f"## {heading_dataset}\n\n"
     markdown_content += "- Variables: \n"
-    datasets_with_scenario = ['cmip5', 'cmip6', 'cmip6-ng', 'cordex', 'cordex-reklies']
     
-    first_iteration = True
-    if heading_dataset.lower() in datasets_with_scenario:
-        # New logic for datasets with an additional scenario level
-        for scenario, scenario_data in json_data['data'].items():
-            for variable, resolutions in scenario_data.items():
-                markdown_content += append_variable_info(variable, resolutions, first_iteration, include_scenario=True, scenario=scenario)
-                first_iteration = False
+    if dataset.startswith('cordex'):
+        variable_details = {}
+        for scenario, temporal_resolutions in json_data['data'].items():
+            for temporal_resolution, variables in temporal_resolutions.items():
+                for variable, details in variables.items():
+                    if variable not in variable_details:
+                        variable_details[variable] = {}
+                    if scenario not in variable_details[variable]:
+                        variable_details[variable][scenario] = set()
+                    # Add resolution to the set of resolutions for this scenario
+                    variable_details[variable][scenario].add(temporal_resolution)
+        
+        first_iteration = True
+        for variable, scenarios_resolutions in variable_details.items():
+            markdown_content += process_cordex_data(variable, scenarios_resolutions, first_iteration)
+            first_iteration = False
     else:
+        first_iteration = True
         # Original logic for datasets without an additional scenario level
         for variable, resolutions in json_data['data'].items():
-            markdown_content += append_variable_info(variable, resolutions, first_iteration)
+            markdown_content += process_obs_reana_data(variable, resolutions, first_iteration, dataset)
             first_iteration = False
 
     markdown_content += "\n\n"
     return markdown_content
+    
+def process_cordex_data(variable, scenarios_resolutions, first_iteration):
+    variable_info = ""
+    tooltip_content = " — ".join(
+        f"{scenario}: {', '.join(sorted(resolutions))}" 
+        for scenario, resolutions in scenarios_resolutions.items()
+    )
+    if first_iteration:
+        variable_info += f"`{variable}`{{ title=\"{tooltip_content}\" }}\n"
+        first_iteration = False
+    else:
+        variable_info += f", `{variable}`{{ title=\"{tooltip_content}\" }}\n"
 
-def append_variable_info(variable, resolutions, first_iteration, include_scenario=False, scenario=None):
+    return variable_info
+
+def process_obs_reana_data(variable, resolutions, first_iteration, dataset):
     variable_info = ""
     if first_iteration:
         variable_info += f"  `{variable}`{{ title=\""
     else:
         variable_info += f",\n  `{variable}`{{ title=\""
     first_iteration_info = True
-    for resolution, details in resolutions.items():
-        for detail_type, detail_values in details.items():
-            date_range = detail_values.get('date_range', 'N/A')
-            if first_iteration_info:
-                if include_scenario:
-                    variable_info += f"{scenario}, {resolution} ({detail_type}): {date_range}"
+    if dataset == 'cmip6-ng':
+        for resolution, grid in resolutions.items():
+            for grid_type, grid_values in grid.items():
+                if first_iteration_info:
+                    variable_info += f"{resolution} ({grid_type})"
+                    first_iteration_info = False
                 else:
-                    variable_info += f"{resolution} ({detail_type}): {date_range}"
-                first_iteration_info = False
-            else:
-                if include_scenario:
-                    variable_info += f", {scenario}, {resolution} ({detail_type}): {date_range}"
+                    variable_info += f", {resolution} ({grid_type})"
+    else:
+        for resolution, grid in resolutions.items():
+            for grid_type, grid_values in grid.items():
+                date_range = grid_values.get('date_range', 'N/A')
+                if first_iteration_info:
+                    variable_info += f"{resolution} ({grid_type}): {date_range}"
+                    first_iteration_info = False
                 else:
-                    variable_info += f", {resolution} ({detail_type}): {date_range}"
+                    variable_info += f", {resolution} ({grid_type}): {date_range}"
+
     variable_info += "\" }"
     return variable_info
 
@@ -99,7 +108,7 @@ def main():
         dataset_json = download_json(f'https://zephyr-c2sm.s3.eu-central-1.amazonaws.com/file_tree_{dataset}_noindent.json')
         heading_dataset = datasets[dataset]
         print(heading_dataset)
-        dataset_markdown = generate_markdown_with_tooltips(dataset_json, heading_dataset)
+        dataset_markdown = generate_markdown_with_tooltips(dataset_json, heading_dataset, dataset)
         write_markdown(markdown_file_path, dataset_markdown)
 
 if __name__ == "__main__":
