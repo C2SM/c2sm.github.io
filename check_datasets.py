@@ -1,6 +1,5 @@
 import requests
 import json
-import os
 import yaml
 
 def read_yaml(file_path):
@@ -20,8 +19,7 @@ def write_markdown(file_path, content):
         file.write(content)
 
 def generate_markdown_with_tooltips(json_data, heading_dataset, dataset):
-    markdown_content = f"## {heading_dataset}\n\n"
-    markdown_content += "- Variables: \n"
+    markdown_content = "- Variables: \n"
     
     if dataset.startswith('cordex'):
         variable_details = {}
@@ -46,7 +44,6 @@ def generate_markdown_with_tooltips(json_data, heading_dataset, dataset):
             markdown_content += process_obs_reana_data(variable, resolutions, first_iteration, dataset)
             first_iteration = False
 
-    markdown_content += "\n\n"
     return markdown_content
     
 def process_cordex_data(variable, scenarios_resolutions, first_iteration):
@@ -91,14 +88,54 @@ def process_obs_reana_data(variable, resolutions, first_iteration, dataset):
     variable_info += "\" }"
     return variable_info
 
+    
+def replace_variables_section(file_path, heading_dataset, new_variables_content):
+    with open(file_path, 'r') as file:
+        content = file.readlines()
+    
+    heading_found = False
+    start_index = end_index = None
+    for i, line in enumerate(content):
+        # Check for an exact match with the heading, considering markdown syntax
+        if line.strip() == f"### {heading_dataset}":
+            heading_found = True
+        if heading_found and line.strip().startswith("- Variables:"):
+            start_index = i
+            break
+    
+    if start_index is not None:
+        # Determine the indentation level of the "- Variables:" line
+        variables_indentation = len(content[start_index]) - len(content[start_index].lstrip())
+        
+        for i in range(start_index + 1, len(content)):
+            # Check if the line is at the same indentation level and starts with "- "
+            line_indentation = len(content[i]) - len(content[i].lstrip())
+            if content[i].strip().startswith("- ") and line_indentation == variables_indentation:
+                end_index = i
+                break
+        if end_index is None:
+            end_index = len(content)
+        
+        content = content[:start_index] + [new_variables_content + '\n'] + content[end_index:]
+        
+        with open(file_path, 'w') as file:
+            file.writelines(content)
+
+def check_heading_exists(file_path, heading_dataset):
+    """Check if the heading exists in the given file, considering markdown syntax."""
+    formatted_heading = f"### {heading_dataset}"
+    
+    with open(file_path, 'r') as file:
+        for line in file:
+            if line.strip() == formatted_heading:
+                return True
+    return False
+
 def main():
-    markdown_file_path = '../c2sm.github.io-mkdocs/docs/datasets/variables_date_ranges.md'
-    # Check if the file exists before attempting to delete it
-    if os.path.exists(markdown_file_path):
-        os.remove(markdown_file_path)
-        print(f"Removed old markdown file: {markdown_file_path}")
-    else:
-        print(f"No old markdown file to remove: {markdown_file_path}")
+    markdown_files = [
+        '../c2sm.github.io-mkdocs/docs/datasets/climate_model_data.md',
+        '../c2sm.github.io-mkdocs/docs/datasets/obs_reanalysis_data.md'
+    ]
 
     # Read the datasets file
     datasets = read_yaml('datasets.yaml')
@@ -109,7 +146,18 @@ def main():
         heading_dataset = datasets[dataset]
         print(heading_dataset)
         dataset_markdown = generate_markdown_with_tooltips(dataset_json, heading_dataset, dataset)
-        write_markdown(markdown_file_path, dataset_markdown)
+
+        # Attempt to update each markdown file until the correct one is found and updated
+        updated = False
+        for markdown_file_path in markdown_files:
+            if check_heading_exists(markdown_file_path, heading_dataset):
+                replace_variables_section(markdown_file_path, heading_dataset, dataset_markdown)
+                print(f"Updated dataset section in: {markdown_file_path}")
+                updated = True
+                break  # Stop searching once the correct file is updated
+        
+        if not updated:
+            print(f"Could not find heading in any markdown files for dataset: {dataset}")
 
 if __name__ == "__main__":
     main()
