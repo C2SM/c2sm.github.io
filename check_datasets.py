@@ -56,10 +56,10 @@ def process_cordex_data(variable, scenarios_resolutions, first_iteration):
         for scenario, resolutions in scenarios_resolutions.items()
     )
     if first_iteration:
-        variable_info += f"`{variable}`{{ title=\"{tooltip_content}\" }}\n"
+        variable_info += f"  `{variable}`{{ title=\"{tooltip_content}\" }}"
         first_iteration = False
     else:
-        variable_info += f", `{variable}`{{ title=\"{tooltip_content}\" }}\n"
+        variable_info += f",\n  `{variable}`{{ title=\"{tooltip_content}\" }}"
 
     return variable_info
 
