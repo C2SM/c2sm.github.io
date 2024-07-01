@@ -64,8 +64,8 @@ def append_variable_info(variable, resolutions, first_iteration, include_scenari
         variable_info += f"  `{variable}`{{ title=\""
     else:
         variable_info += f",\n  `{variable}`{{ title=\""
+    first_iteration_info = True
     for resolution, details in resolutions.items():
-        first_iteration_info = True
         for detail_type, detail_values in details.items():
             date_range = detail_values.get('date_range', 'N/A')
             if first_iteration_info:
