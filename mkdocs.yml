@@ -87,6 +87,7 @@ theme:
     - content.code.annotate
     - content.code.copy
     - content.tabs.link
+    - content.tooltips
     - mermaid2
     - navigation.bottom
     - navigation.indexes
