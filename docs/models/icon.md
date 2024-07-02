@@ -25,25 +25,23 @@ Once you have access, clone the repository from GitHub using the SSH protocol:
   If you do not already have an SSH key set up for GitHub, but would like to do so, follow the [instructions :material-open-in-new:](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent){:target="_blank"}.
     
 ## Configure and compile
-The ICON build process varies between Piz Daint and Euler. The CSCS platform Piz Daint uses Spack, whereas the ETHZ machine Euler requires manual build configuration for ICON. Instructions for both platforms are provided below.
+The ICON build process is almost identical for Piz Daint and Euler. For both machines, Spack is used to build ICON. Refer to the official spack-c2sm documentation for [installing ICON using Spack :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon){:target="_blank"}.
 
 ### Piz Daint
-Refer to the official spack-c2sm documentation for [installing ICON using Spack :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon){:target="_blank"}. To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/cscs/SPACK_TAG_DAINT :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG_DAINT){:target="_blank"}.
+To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/cscs/SPACK_TAG_DAINT :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG_DAINT){:target="_blank"}.
 
 ### Euler
-Before compiling ICON, it is essential to configure it using the respective script in the *config* folder. The configuration process using these files remains consistent across different machines and compilers.
+To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/ethz/SPACK_TAG_EULER :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/ethz/SPACK_TAG_EULER){:target="_blank"}.
 
-Configure ICON with GCC using -O2 and CPU-specific optimizations:
+Euler Support recommends to compile code on compute-nodes. Unfortunately [internet-access on Euler compute-nodes is restricted :material-open-in-new:](https://scicomp.ethz.ch/wiki/Accessing_the_clusters#Internet_Security){:target="_blank"}.
+Therefore a two-step install needs to be performed:
+
 ```bash
-./config/ethz/euler.cpu.gcc.O2
-```
-Load required modules:
-```bash
-source modules.env
-```
-Compile ICON:
-```bash
-make -j 8
+# fetch and install cosmo-eccodes-definitions on login-node
+spack install cosmo-eccodes-definitions
+
+# compile ICON on compute-nodes
+srun -N 1 -c 12 --mem-per-cpu=20G spack install -v -j 12
 ```
 
 ## Run test case with ICON
@@ -68,12 +66,12 @@ ICON input data are stored at the following locations:
 
 
 ## Toolset
-In the [Tools :material-open-in-new:](https://c2sm.github.io/tools){:target="_blank"} section, you will find relevant tools for working with ICON:
+In the [Tools](../tools/index.md) section, you will find relevant tools for working with ICON:
 
-* [**Extpar:** :material-open-in-new:](https://c2sm.github.io/tools/extpar.html){:target="_blank"} External parameters for the ICON grid (preprocessing)
-* [**Processing Chain** :material-open-in-new:](https://c2sm.github.io/tools/processing_chain.html){:target="_blank"}: Python workflow tool for ICON
-* [**SPICE** :material-open-in-new:](https://c2sm.github.io/tools/spice.html){:target="_blank"}: Starter package for ICON-CLM experiments
-* [**icon-vis** :material-open-in-new:](https://c2sm.github.io/tools/icon-vis.html){:target="_blank"}: Python scripts to visualise ICON data
+* [**Extpar**](../tools/extpar.md): External parameters for the ICON grid (preprocessing)
+* [**Processing Chain**](../tools/processing_chain.md): Python workflow tool for ICON
+* [**SPICE**](../tools/spice.md): Starter package for ICON-CLM experiments
+* [**icon-vis**](../tools/icon-vis.md): Python scripts to visualise ICON data
 
 ## Projects
 Learn more about ongoing projects involving ETHZ in the development of ICON:
