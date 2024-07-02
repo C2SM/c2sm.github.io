@@ -37,13 +37,14 @@ Most likely you will use the DWD ICON tools to generate a new grid or interpolat
 Below is a recipe to create initial and boundary files for an ICON-LAM run on Piz Daint.
 
 ### Clone the repository
+
 ```bash
 git clone git@github.com:C2SM/icontools.git
 ```
 
 ### Generate a new ICON grid
 
- ```bash
+```bash
 icongridgen --nml icontools/C2SM/gridgen.nml
 ``` 
 
@@ -66,7 +67,7 @@ cat lbc_file zfile_reftime fi_file_time > complete_file
 
 * Remap IFS data for BC:
 
- ```bash
+```bash
 sbatch -A <account> icontools/C2SM/remap_lbc
 ``` 
 
