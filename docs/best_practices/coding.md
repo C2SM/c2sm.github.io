@@ -17,7 +17,9 @@ For more details, please visit [Technical Events - Git Courses](../events/git_co
 - **Merge**: Merging is the process of combining changes from one branch into another. Git provides tools to automatically or manually resolve conflicts that may arise when merging different branches.
 
 ### GitHub Workflow
+
 When working together with Git, follow these simple steps for a smooth collaborative process:
+
 1. **Clone**: Get a copy of the remote repository you want to work on.
 2. **Branch Out**: Create a branch with a name that describes your development.
 3. **Development Zone**: Work on your feature within that branch.
