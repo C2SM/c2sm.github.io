@@ -3,7 +3,10 @@
 !!! note
     File size information last updated in May 2022.
 
-## "Raw" Archives (as downloaded from the original source)
+## Raw Archives
+
+!!! info
+    Dataset available as downloaded from the original source.
 
 ### CERRA
 - Size: 16 TB
@@ -100,7 +103,10 @@
 - More information: [MERRA-2 :material-open-in-new:](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/){:target="_blank"}, [Climate Data Guide :material-open-in-new:](https://climatedataguide.ucar.edu/climate-data/nasas-merra2-reanalysis){:target="_blank"}
 
 
-## Processed Archives (e.g. aggregated or regridded)
+## Processed Archives
+
+!!! info
+    Datasets are aggregated or regridded.
 
 ### CERRA
 - Size: 6 TB
