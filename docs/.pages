@@ -1,0 +1,19 @@
+nav:
+  - Home:
+    - index.md
+  - News:
+    - blog
+  - Events:
+    - events
+  - Tasks:
+    - tasks
+  - User Support:
+    - support
+  - Models:
+    - models
+  - Tools:
+    - tools
+  - Datasets:
+    - datasets
+  - Best Practices:
+    - best_practices

@@ -1,0 +1,13 @@
+[data-md-color-scheme="c2sm-light"] {
+    --md-primary-bg-color:        #ffffff;
+    --md-primary-fg-color:        #339cdd;
+}
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color:        #00305d;
+    --md-hue: 210; 
+}
+
+[data-md-color-scheme=c2sm-light] img[src$="#only-dark"],
+[data-md-color-scheme=c2sm-light] img[src$="#gh-dark-mode-only"] {
+  display: none; /* Hide dark images in light mode */
+}

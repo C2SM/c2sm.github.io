@@ -1,2 +1,4 @@
-requests==2.26.0
-boto3==1.18.33
+mkdocs
+mkdocs-material
+mkdocs-awesome-pages-plugin
+mkdocs-linkcheck
