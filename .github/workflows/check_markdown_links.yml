@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - name: Check for broken links (internal)
+      run: python check_md_links.py --path ./docs
     - name: Check for broken links (external)
       run: |
         pip install mkdocs-linkcheck
         exclude_patterns=$(cat exclude_link_patterns.txt | tr '\n' '|' | sed 's/|$//')
-        mkdocs-linkcheck -rv ./docs --ext=".md" --exclude="$exclude_patterns" -m get
-    - name: Check for broken links (internal)
-      run: python check_md_links.py --path ./docs
+        mkdocs-linkcheck -rv ./docs --ext=".md" --exclude="$exclude_patterns" -m get || mkdocs-linkcheck -rv ./docs --ext=".md" --exclude="$exclude_patterns" -m get --sync
         
