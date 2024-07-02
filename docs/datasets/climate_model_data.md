@@ -96,7 +96,6 @@
 - Access: direct / rsync
 - Status: frozen (2019-03)
 - Variables: 
-  `fake_var`,  
   `areacella`{ title="fx (native)" },
   `clt`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `co2mass`{ title="mon (native)" },
