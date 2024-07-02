@@ -55,12 +55,12 @@ ICON input data are stored at the following locations:
 
 
 ## Toolset
-In the [Tools :material-open-in-new:](https://c2sm.github.io/tools){:target="_blank"} section, you will find relevant tools for working with ICON:
+In the [Tools](../tools/index.md) section, you will find relevant tools for working with ICON:
 
-* [**Extpar:** :material-open-in-new:](https://c2sm.github.io/tools/extpar.html){:target="_blank"} External parameters for the ICON grid (preprocessing)
-* [**Processing Chain** :material-open-in-new:](https://c2sm.github.io/tools/processing_chain.html){:target="_blank"}: Python workflow tool for ICON
-* [**SPICE** :material-open-in-new:](https://c2sm.github.io/tools/spice.html){:target="_blank"}: Starter package for ICON-CLM experiments
-* [**icon-vis** :material-open-in-new:](https://c2sm.github.io/tools/icon-vis.html){:target="_blank"}: Python scripts to visualise ICON data
+* [**Extpar:**](../tools/extpar.md): External parameters for the ICON grid (preprocessing)
+* [**Processing Chain**](../tools/processing_chain.md): Python workflow tool for ICON
+* [**SPICE**](../tools/spice.md): Starter package for ICON-CLM experiments
+* [**icon-vis**](../tools/icon-vis.md): Python scripts to visualise ICON data
 
 ## Projects
 Learn more about ongoing projects involving ETHZ in the development of ICON:
