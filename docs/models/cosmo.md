@@ -8,7 +8,7 @@ C2SM currently facilitates the utilisation of COSMO on the [Piz Daint :material-
 The following table summarises the features ported to GPU and their correspoding namelist parameters.
 
 <details close markdown="block">
-<summary>gpu ported COSMO features</summary>
+<summary>GPU ported COSMO features</summary>
 
 ##### Parameters in `INPUT_ORG`
 
