@@ -8,3 +8,4 @@ agupubs.onlinelibrary.wiley.com
 ^https://scicomp.ethz.ch/wiki
 ^https://hcdc.hereon.de/clm-community/webpep/webpep
 ^https://doi.org
+^https://zenodo.org
