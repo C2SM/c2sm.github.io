@@ -160,7 +160,32 @@
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
-- Variables: `2t`, `r`, `t`, ...
+- Variables: 
+  `10si`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `10wdir`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `2r`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `2t`{ title="day (native): 1985-2021, mon (native): 1985-2021" },
+  `eva`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `gph500`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
+  `liqvsm`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `mn2t`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `mx2t`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `r`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sde`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sf`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `skt`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `slhf`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sp`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sshf`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `ssr`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `ssrd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `str`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `strd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `t`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `u`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
+  `v`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
+  `vsw`{ title="day (native): 1985-2020, mon (native): 1985-2020" }
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 5x5km
 - More information: Sub-daily regional reanalysis data for Europe, [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-single-levels?tab=overview){:target="_blank"}, [Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0){:target="_blank"}
@@ -177,7 +202,20 @@
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
-- Variables: `sro`, `snom`, `tp`, ...
+- Variables: 
+  `eva`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `skt`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `slhf`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `snom`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sro`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sshf`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `ssr`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `ssrd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `str`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `strd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `tp`{ title="mon (native): 1985-2020" },
+  `vsw`{ title="day (native): 1985-2020, mon (native): 1985-2020" }
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 5x5km
 - More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-land?tab=overview){:target="_blank"}, [Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1e58ps_yBmxUG0jvL8ZmNNr7Zz_UXuqIZsz4MdRAzvbM/edit#gid=0){:target="_blank"}
@@ -214,8 +252,30 @@
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-present, v2: 1980-present
-- Variables:
-    - v1: `2t`, `mn2t`, `mx2t`, `tp`
+- Variables: 
+  `cbh`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `cl`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `clt`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `d2m`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `hur`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `hurs`{ title="day (native): 194001-202312, mon (native): 198001-198512" },
+  `pr`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `ps`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `psl`{ title="day (05x05): 195001-202212, mon (05x05): 195001-202212" },
+  `rlds`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `rls`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `rsds`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `sfcWind`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `strd`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `ta`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `tas`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `tasmax`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `tasmin`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `ua`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `uas`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `va`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `vas`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `zg`{ title="day (native): 194001-202312, mon (native): 194001-202312" }
 - v2: [Variable list and progress :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/5efYkkFrSVC64lZ){:target="_blank"}
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 0.25° x 0.25°
@@ -232,7 +292,18 @@
 - Access: direct
 - Status: updated
 - Time period: 1950-present
-- Variables: `2d`, `2t`, `sd`, `snom`
+- Variables: 
+  `2d`{ title="day (native): 2000-2022, mon (native): 2000-2022" },
+  `2t`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
+  `e`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
+  `pev`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
+  `sd`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
+  `snom`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
+  `swvl1`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
+  `swvl2`{ title="day (native): 1959-2022, mon (native): 1959-2022" },
+  `swvl3`{ title="day (native): 1950-2023, mon (native): 1950-2023" },
+  `swvl4`{ title="day (native): 1950-2023, mon (native): 1950-2023" },
+  `tp`{ title="day (native): 1950-2022, mon (native): 1950-2022" }
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 0.1° x 0.1°
 - More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=form){:target="_blank"}
