@@ -9,8 +9,9 @@
     Dataset available as downloaded from the original source.
 
 ### CERRA
-- Size: 16 TB
+
 - Location: IAC: `/net/atmos/data/cerra/original`
+- Size: 16 TB
 - Access: direct
 - Status: updated
 - Time period: 1985 - present
@@ -20,8 +21,9 @@
 - More information: sub-daily regional reanalysis data for Europe, [Wishlist :material-open-in-new:](https://docs.google.com/document/d/1YtIabO5PMTsD_i_PqycmzIbrOYigNmuublt_i6FKrhY/edit#heading=h.brsa23yzcugp){:target="_blank"}, [Download Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0){:target="_blank"}
 
 ### CERRA-Land
-- Size: 12 TB
+
 - Location: IAC: `/net/atmos/data/cerra-land/original`
+- Size: 12 TB
 - Access: direct
 - Status: updated
 - Time period: 1985 - present
@@ -31,8 +33,9 @@
 - More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-land?tab=overview){:target="_blank"}, [Wishlist :material-open-in-new:](https://docs.google.com/document/d/1YtIabO5PMTsD_i_PqycmzIbrOYigNmuublt_i6FKrhY/edit#heading=h.brsa23yzcugp){:target="_blank"}, [Download Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1e58ps_yBmxUG0jvL8ZmNNr7Zz_UXuqIZsz4MdRAzvbM/edit#gid=0){:target="_blank"}
 
 ### E-OBS
-- Size: 660 GB
+
 - Location: IAC
+- Size: 660 GB
 - Access: direct
 - Status: different versions, updated irregularly
 - Time period: 1950 - present
@@ -50,8 +53,9 @@
 - More information: [E-OBS :material-open-in-new:](https://www.ecad.eu/download/ensembles/download.php){:target="_blank"}, [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/insitu-gridded-observations-europe?tab=overview){:target="_blank"}
 
 ### ERAInterim
-- Size: 5 TB
+
 - Location: CSCS: `/store/c2sm/c2sme/reanalyses_dkrz/ERAInterim`
+- Size: 5 TB
 - Access: direct
 - Status: static
 - Time period: 1979-2019
@@ -60,8 +64,9 @@
 - Spatial Resolution: 0.7° x 0.7° (80 km) global
 
 ### ERA5 (for ICON-CLM)
-- Size: 50 TB
+
 - Location: CSCS: `/store/c2sm/c2sme/reanalyses_dkrz/ERA5`
+- Size: 50 TB
 - Access: direct
 - Status: updated
 - Time period: 1979 - present
@@ -71,8 +76,9 @@
 - More information: [ERA5 at CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels-monthly-means?tab=overview){:target="_blank"}
 
 ### ERA5
-- Size: 17 TB
+
 - Location: IAC: `/net/atmos/data/era5_cds/original`
+- Size: 17 TB
 - Access: direct
 - Status: updated
 - Time period: 1940 - present
@@ -81,8 +87,9 @@
 - Spatial Resolution: 0.25° x 0.25°
 
 ### ERA5-Land
-- Size: 40 TB
+
 - Location: IAC: `/net/atmos/data/era5-land_cds/original`
+- Size: 40 TB
 - Access: direct
 - Status: updated
 - Time period: 1950 - present
@@ -92,8 +99,9 @@
 - More information: [ERA5-Land :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=form){:target="_blank"}
 
 ### MERRA2
-- Size: 15 TB
+
 - Location: IAC
+- Size: 15 TB
 - Access: direct
 - Status: updated
 - Time period: 1980 - present
@@ -109,8 +117,9 @@
     Datasets are aggregated or regridded.
 
 ### CERRA
-- Size: 6 TB
+
 - Location: IAC: `/net/atmos/data/cerra/processed/v1/`
+- Size: 6 TB
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -120,8 +129,9 @@
 - More information: Sub-daily regional reanalysis data for Europe, [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-single-levels?tab=overview){:target="_blank"}, [Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0){:target="_blank"}
 
 ### CERRA-Land
-- Size: 1.8 TB
+
 - Location: IAC: `/net/atmos/data/cerra-land/processed/v1/`
+- Size: 1.8 TB
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -131,10 +141,11 @@
 - More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-land?tab=overview){:target="_blank"}, [Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1e58ps_yBmxUG0jvL8ZmNNr7Zz_UXuqIZsz4MdRAzvbM/edit#gid=0){:target="_blank"}
 
 ### E-OBS and MCH
-- Size: 50 GB
+
 - Location: IAC
   - `/net/co2/c2sm-data/ch202X/Obs_Data/EOBS/0.1deg_reg_v23.1e/processed/`
   - `/net/co2/c2sm-data/ch202X/Obs_Data/EOBS/0.1deg_reg_v26.0e/processed/`
+- Size: 50 GB
 - Access: direct
 - Status: static
 - Time period: 1971-2020
@@ -144,8 +155,9 @@
 - More information: E-OBS (v23.1e and v26.0e) data with higher resolution MCH data over Switzerland (prepared for CH2025)
 
 ### ERA5
-- Size: 500 GB
+
 - Location: IAC: `/net/atmos/data/era5_cds/processed/`, Euler
+- Size: 500 GB
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-present, v2: 1980-present
@@ -157,8 +169,9 @@
 - More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=overview){:target="_blank"}
 
 ### ERA5-Land
-- Size: 2.2 TB
+
 - Location: IAC: `/net/atmos/data/era5-land_cds/processed/v1/`
+- Size: 2.2 TB
 - Access: direct
 - Status: updated
 - Time period: 1950-present
@@ -168,8 +181,9 @@
 - More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=form){:target="_blank"}
 
 ### MERRA2
-- Size: 17 GB
+
 - Location: IAC: `/net/co2/c2sm-data/rlorenz/MERRA2/`
+- Size: 17 GB
 - Access: direct
 - Status: updated
 - Time period: v0: 1980-2015, v1: 1980-2018
@@ -179,8 +193,9 @@
 - More information: Files are consistent with cmip-ng archives, no time period is indicated in filenames
 
 ### MCH
-- Size: 7 GB
+
 - Location: IAC: `/net/co2/c2sm-data/ch202X/Obs_Data/MCH/processed/`
+- Size: 7 GB
 - Access: direct
 - Status: static
 - Time period: 1971-2021
