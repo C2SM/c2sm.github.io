@@ -10,7 +10,11 @@
 
 ### CERRA
 
-- Location: IAC: `/net/atmos/data/cerra/original`
+=== "IAC"
+    ```console
+    /net/atmos/data/cerra/original
+    ```
+
 - Size: 16 TB
 - Access: direct
 - Status: updated
@@ -22,7 +26,11 @@
 
 ### CERRA-Land
 
-- Location: IAC: `/net/atmos/data/cerra-land/original`
+=== "IAC"
+    ```console
+    /net/atmos/data/cerra-land/original
+    ```
+
 - Size: 12 TB
 - Access: direct
 - Status: updated
@@ -34,27 +42,35 @@
 
 ### E-OBS
 
-- Location: IAC
+=== "IAC"
+    ```console
+    /net/atmos/data/E-OBS
+    ```
+
 - Size: 660 GB
 - Access: direct
 - Status: different versions, updated irregularly
 - Time period: 1950 - present
 - Variables:
-  - `TG`: mean temperature
-  - `TN`: minimum temperature
-  - `TX`: maximum temperature
-  - `RR`: precipitation sum
-  - `PP`: mean sea level pressure
-  - `FG`: mean wind speed
-  - `HU`: mean relative humidity
-  - `QQ`: global radiation
+    - `TG`: mean temperature
+    - `TN`: minimum temperature
+    - `TX`: maximum temperature
+    - `RR`: precipitation sum
+    - `PP`: mean sea level pressure
+    - `FG`: mean wind speed
+    - `HU`: mean relative humidity
+    - `QQ`: global radiation
 - Temporal Resolution: daily
 - Spatial Resolution: 0.1° and 0.25°
 - More information: [E-OBS :material-open-in-new:](https://www.ecad.eu/download/ensembles/download.php){:target="_blank"}, [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/insitu-gridded-observations-europe?tab=overview){:target="_blank"}
 
 ### ERAInterim
 
-- Location: CSCS: `/store/c2sm/c2sme/reanalyses_dkrz/ERAInterim`
+=== "CSCS"
+    ```console
+    /store/c2sm/c2sme/reanalyses_dkrz/ERAInterim
+    ```
+
 - Size: 5 TB
 - Access: direct
 - Status: static
@@ -65,7 +81,11 @@
 
 ### ERA5 (for ICON-CLM)
 
-- Location: CSCS: `/store/c2sm/c2sme/reanalyses_dkrz/ERA5`
+=== "CSCS"
+    ```console
+    /store/c2sm/c2sme/reanalyses_dkrz/ERA5
+    ```
+
 - Size: 50 TB
 - Access: direct
 - Status: updated
@@ -77,7 +97,11 @@
 
 ### ERA5
 
-- Location: IAC: `/net/atmos/data/era5_cds/original`
+=== "IAC"
+    ```console
+    /net/atmos/data/era5_cds/original
+    ```
+
 - Size: 17 TB
 - Access: direct
 - Status: updated
@@ -88,7 +112,11 @@
 
 ### ERA5-Land
 
-- Location: IAC: `/net/atmos/data/era5-land_cds/original`
+=== "IAC"
+    ```console
+    /net/atmos/data/era5-land_cds/original
+    ```
+
 - Size: 40 TB
 - Access: direct
 - Status: updated
@@ -99,6 +127,11 @@
 - More information: [ERA5-Land :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=form){:target="_blank"}
 
 ### MERRA2
+
+=== "IAC"
+    ```console
+    /net/atmos/data/MERRA2
+    ```
 
 - Location: IAC
 - Size: 15 TB
@@ -118,7 +151,11 @@
 
 ### CERRA
 
-- Location: IAC: `/net/atmos/data/cerra/processed/v1/`
+=== "IAC"
+    ```console
+    /net/atmos/data/cerra/processed/v1/
+    ```
+
 - Size: 6 TB
 - Access: direct
 - Status: updated
@@ -129,6 +166,11 @@
 - More information: Sub-daily regional reanalysis data for Europe, [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-single-levels?tab=overview){:target="_blank"}, [Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0){:target="_blank"}
 
 ### CERRA-Land
+
+=== "IAC"
+    ```console
+    /net/atmos/data/cerra-land/processed/v1/
+    ```
 
 - Location: IAC: `/net/atmos/data/cerra-land/processed/v1/`
 - Size: 1.8 TB
@@ -142,9 +184,12 @@
 
 ### E-OBS and MCH
 
-- Location: IAC
-  - `/net/co2/c2sm-data/ch202X/Obs_Data/EOBS/0.1deg_reg_v23.1e/processed/`
-  - `/net/co2/c2sm-data/ch202X/Obs_Data/EOBS/0.1deg_reg_v26.0e/processed/`
+=== "IAC"
+    ```console
+    /net/co2/c2sm-data/ch202X/Obs_Data/EOBS/0.1deg_reg_v23.1e/processed/
+    /net/co2/c2sm-data/ch202X/Obs_Data/EOBS/0.1deg_reg_v26.0e/processed/
+    ```
+
 - Size: 50 GB
 - Access: direct
 - Status: static
@@ -156,21 +201,33 @@
 
 ### ERA5
 
-- Location: IAC: `/net/atmos/data/era5_cds/processed/`, Euler
+=== "IAC"
+    ```console
+    /net/atmos/data/era5_cds/processed/
+    ```
+=== "Euler"
+    ```console
+    /net/atmos/data/era5_cds/processed/
+    ```
+
 - Size: 500 GB
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-present, v2: 1980-present
 - Variables:
-  - v1: `2t`, `mn2t`, `mx2t`, `tp`
-  - v2: `/net/atmos/data/era5_cds/processed/v2/`, [Variable list and progress :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/5efYkkFrSVC64lZ){:target="_blank"}
+    - v1: `2t`, `mn2t`, `mx2t`, `tp`
+- v2: [Variable list and progress :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/5efYkkFrSVC64lZ){:target="_blank"}
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 0.25° x 0.25°
 - More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=overview){:target="_blank"}
 
 ### ERA5-Land
 
-- Location: IAC: `/net/atmos/data/era5-land_cds/processed/v1/`
+=== "IAC"
+    ```console
+    /net/atmos/data/era5-land_cds/processed/v1/
+    ```
+
 - Size: 2.2 TB
 - Access: direct
 - Status: updated
@@ -182,7 +239,11 @@
 
 ### MERRA2
 
-- Location: IAC: `/net/co2/c2sm-data/rlorenz/MERRA2/`
+=== "IAC"
+    ```console
+    /net/co2/c2sm-data/rlorenz/MERRA2/
+    ```
+
 - Size: 17 GB
 - Access: direct
 - Status: updated
@@ -194,7 +255,11 @@
 
 ### MCH
 
-- Location: IAC: `/net/co2/c2sm-data/ch202X/Obs_Data/MCH/processed/`
+=== "IAC"
+    ```console
+    /net/co2/c2sm-data/ch202X/Obs_Data/MCH/processed/
+    ```
+
 - Size: 7 GB
 - Access: direct
 - Status: static
