@@ -33,6 +33,17 @@ Refer to the official spack-c2sm documentation for [installing ICON using Spack 
 ### Euler
 Refer to the official spack-c2sm documentation for [installing ICON using Spack :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon){:target="_blank"}. To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/ethz/SPACK_TAG_EULER :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/ethz/SPACK_TAG_EULER){:target="_blank"}.
 
+Euler Support recommends to compile code on compute-nodes. Unfortunately [internet-access on Euler compute-nodes is restricted](https://scicomp.ethz.ch/wiki/Accessing_the_clusters#Internet_Security).
+Therefore a two-step install needs to be performed:
+
+```bash
+# fetch and install cosmo-eccodes-definitions on login-node
+spack install cosmo-eccodes-definitions
+
+# compile ICON on compute-nodes
+srun -N 1 -c 12 --mem-per-cpu=20G spack install -v -j 12
+```
+
 ## Run test case with ICON
 In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *mch_ch_lowres*, you can use the `make_runscripts` function.
 
