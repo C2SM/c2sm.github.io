@@ -6,3 +6,4 @@ agupubs.onlinelibrary.wiley.com
 ^https://github.com/C2SM
 ^https://wiki.iac.ethz.ch
 ^https://scicomp.ethz.ch/wiki
+^https://hcdc.hereon.de/clm-community/webpep/webpep
