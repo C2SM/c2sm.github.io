@@ -2,7 +2,7 @@ name: Update Datasets and Create PR
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs at midnight UTC every day
+    - cron: '0 2 * * *' # Runs at 02:00 UTC every day
   push:
     branches:
       - main # Replace with your default branch if different
