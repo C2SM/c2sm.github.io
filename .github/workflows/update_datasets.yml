@@ -4,9 +4,9 @@ on:
   schedule:
     - cron: '0 0 * * *' # Runs at midnight UTC every day
   push:
-    branches-ignore:
-    # We don't want code modified after merge in master
-    - main
+    branches:
+      - main # Replace with your default branch if different
+  workflow_dispatch: # This line enables manual triggering of the workflow
 
 jobs:
   update-datasets:
@@ -43,7 +43,7 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add .
-          git commit -m "Update datasets"
+          git commit -m "GitHub Action: Update datasets"
 
       - name: Push changes
         if: steps.git-check.outputs.changes_detected == 'true'
@@ -57,7 +57,7 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: Update datasets
+          commit-message: "GitHub Action: Update datasets"
           title: "[AUTO] Update Datasets"
           body: "This is an auto-generated PR with dataset updates."
           branch: "update-datasets-${{ github.run_number }}"
