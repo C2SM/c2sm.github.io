@@ -68,7 +68,7 @@ ICON input data are stored at the following locations:
 ## Toolset
 In the [Tools](../tools/index.md) section, you will find relevant tools for working with ICON:
 
-* [**Extpar:**](../tools/extpar.md): External parameters for the ICON grid (preprocessing)
+* [**Extpar**](../tools/extpar.md): External parameters for the ICON grid (preprocessing)
 * [**Processing Chain**](../tools/processing_chain.md): Python workflow tool for ICON
 * [**SPICE**](../tools/spice.md): Starter package for ICON-CLM experiments
 * [**icon-vis**](../tools/icon-vis.md): Python scripts to visualise ICON data
