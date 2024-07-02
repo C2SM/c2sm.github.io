@@ -133,8 +133,8 @@ def check_heading_exists(file_path, heading_dataset):
 
 def main():
     markdown_files = [
-        '../c2sm.github.io-mkdocs/docs/datasets/climate_model_data.md',
-        '../c2sm.github.io-mkdocs/docs/datasets/obs_reanalysis_data.md'
+        './docs/datasets/climate_model_data.md',
+        './docs/datasets/obs_reanalysis_data.md'
     ]
 
     # Read the datasets file
