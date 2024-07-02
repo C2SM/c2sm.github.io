@@ -1,6 +1,9 @@
 # Climate Model Data
 
-## "Raw" CMIP archives (as downloaded from ESGF)
+## Raw CMIP Archives
+
+!!! info
+    The data is available as downloaded from ESGF.
 
 !!! note
     "Resolution: native" means that each model output is available on the native grid on which it was run. Size and file information last updated in June 2021.
@@ -37,7 +40,10 @@
 - Status: weekly updated
 - Resolution: native
 
-## CMIP next generation (checked, standardized, regridded to common grid)
+## CMIP Next Generation
+
+!!! info
+    The datasets are checked, standardized, and regridded to common grid.
 
 !!! note
     Next Generation (ng) archives were maintained by Reto’s group (Jan Sedlacek/Lukas Brunner). Ruth Lorenz / C2SM took over cmip6-ng in 2022. Contact: [cmip6-archive@env.ethz.ch](mailto:cmip6-archive@env.ethz.ch). Documentation: [https://doi.org/10.5281/zenodo.373412 :material-open-in-new:](https://doi.org/10.5281/zenodo.3734128){:target="_blank"}.
@@ -71,7 +77,10 @@
     - daily: `mrro`, `pr`, `tas`, `tasmax`, `tasmin`, `zg500`
 - Resolution: native and 2.5° x 2.5°
 
-## "Raw" CORDEX (as downloaded)
+## Raw CORDEX
+
+!!! info
+    The data is available as downloaded.
 
 ### CORDEX
 - Size: 370 TB
@@ -89,7 +98,10 @@
 - Status: monthly updated
 - Resolution: 0.11°
 
-## CORDEX data for climate scenarios (checked, regridded to identical grids if necessary)
+## CORDEX Data for Climate Scenarios
+
+!!! info
+    The data is checked, and regridded to identical grids if necessary.
 
 ### CORDEX.ch2018
 - Size: 11 TB
