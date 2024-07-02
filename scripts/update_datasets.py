@@ -94,10 +94,17 @@ def replace_variables_section(file_path, heading_dataset, new_variables_content)
         content = file.readlines()
     
     heading_found = False
+    skip_section = False  # Flag to indicate if the current section should be skipped
     start_index = end_index = None
     for i, line in enumerate(content):
+        # Check for the "## Raw Archives" heading to skip this section
+        if line.strip() == "## Raw Archives":
+            skip_section = True
+        # If we're skipping a section and encounter another "##" heading, stop skipping
+        if skip_section and line.strip().startswith("## ") and not line.strip() == "## Raw Archives":
+            skip_section = False
         # Check for an exact match with the heading, considering markdown syntax
-        if line.strip() == f"### {heading_dataset}":
+        if not skip_section and line.strip() == f"### {heading_dataset}":
             heading_found = True
         if heading_found and line.strip().startswith("- Variables:"):
             start_index = i
