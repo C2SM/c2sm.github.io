@@ -20,7 +20,7 @@ def write_markdown(file_path, content):
 
 def generate_markdown_default(json_data, dataset):
     """
-    Generates markdown content for observational and reanalysis datasets.
+    Generates markdown content for climate datasets.
 
     This function iterates over variables in the provided JSON data, processing each
     to generate a markdown string that lists variables and their details for a given dataset.
