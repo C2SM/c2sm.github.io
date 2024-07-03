@@ -18,31 +18,35 @@ def write_markdown(file_path, content):
     with open(file_path, 'a') as file:
         file.write(content)
 
-def generate_markdown_with_tooltips(json_data, heading_dataset, dataset):
+def generate_markdown_obs_reana(json_data, dataset):
     markdown_content = "- Variables: \n"
     
-    if dataset.startswith('cordex'):
-        variable_details = {}
-        for scenario, temporal_resolutions in json_data['data'].items():
-            for temporal_resolution, variables in temporal_resolutions.items():
-                for variable, details in variables.items():
-                    if variable not in variable_details:
-                        variable_details[variable] = {}
-                    if scenario not in variable_details[variable]:
-                        variable_details[variable][scenario] = set()
-                    # Add resolution to the set of resolutions for this scenario
-                    variable_details[variable][scenario].add(temporal_resolution)
-        
-        first_iteration = True
-        for variable, scenarios_resolutions in variable_details.items():
-            markdown_content += process_cordex_data(variable, scenarios_resolutions, first_iteration)
-            first_iteration = False
-    else:
-        first_iteration = True
-        # Original logic for datasets without an additional scenario level
-        for variable, resolutions in json_data['data'].items():
-            markdown_content += process_obs_reana_data(variable, resolutions, first_iteration, dataset)
-            first_iteration = False
+    first_iteration = True
+    # Original logic for datasets without an additional scenario level
+    for variable, resolutions in json_data['data'].items():
+        markdown_content += process_obs_reana_data(variable, resolutions, first_iteration, dataset)
+        first_iteration = False
+
+    return markdown_content
+
+def generate_markdown_cordex(json_data):
+    markdown_content = "- Variables: \n"
+    
+    variable_details = {}
+    for scenario, temporal_resolutions in json_data['data'].items():
+        for temporal_resolution, variables in temporal_resolutions.items():
+            for variable, details in variables.items():
+                if variable not in variable_details:
+                    variable_details[variable] = {}
+                if scenario not in variable_details[variable]:
+                    variable_details[variable][scenario] = set()
+                # Add resolution to the set of resolutions for this scenario
+                variable_details[variable][scenario].add(temporal_resolution)
+    
+    first_iteration = True
+    for variable, scenarios_resolutions in variable_details.items():
+        markdown_content += process_cordex_data(variable, scenarios_resolutions, first_iteration)
+        first_iteration = False
 
     return markdown_content
     
@@ -152,7 +156,10 @@ def main():
         dataset_json = download_json(f'https://zephyr-c2sm.s3.eu-central-1.amazonaws.com/file_tree_{dataset}_noindent.json')
         heading_dataset = datasets[dataset]
         print(heading_dataset)
-        dataset_markdown = generate_markdown_with_tooltips(dataset_json, heading_dataset, dataset)
+        if dataset.startswith('cordex'):
+            dataset_markdown = generate_markdown_cordex(dataset_json)
+        else:
+            dataset_markdown = generate_markdown_obs_reana(dataset_json, dataset)
 
         # Attempt to update each markdown file until the correct one is found and updated
         updated = False
