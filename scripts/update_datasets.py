@@ -18,7 +18,7 @@ def write_markdown(file_path, content):
     with open(file_path, 'a') as file:
         file.write(content)
 
-def generate_markdown_obs_reana(json_data, dataset):
+def generate_markdown_default(json_data, dataset):
     """
     Generates markdown content for observational and reanalysis datasets.
 
@@ -35,9 +35,13 @@ def generate_markdown_obs_reana(json_data, dataset):
     markdown_content = "- Variables: \n"
     
     first_iteration = True
-    # Original logic for datasets without an additional scenario level
     for variable, resolutions in json_data['data'].items():
-        markdown_content += process_obs_reana_data(variable, resolutions, first_iteration, dataset)
+        if dataset == 'cmip6-ng':
+            # Logic for CMIP6-ng datasets
+            markdown_content += generate_variable_info_cmip6ng(variable, resolutions, first_iteration)
+        else:
+            # Original logic for datasets with an additional scenario level
+            markdown_content += generate_variable_info_default(variable, resolutions, first_iteration)
         first_iteration = False
 
     return markdown_content
@@ -71,12 +75,12 @@ def generate_markdown_cordex(json_data):
     
     first_iteration = True
     for variable, scenarios_resolutions in variable_details.items():
-        markdown_content += process_cordex_data(variable, scenarios_resolutions, first_iteration)
+        markdown_content += generate_variable_info_cordex(variable, scenarios_resolutions, first_iteration)
         first_iteration = False
 
     return markdown_content
     
-def process_cordex_data(variable, scenarios_resolutions, first_iteration):
+def generate_variable_info_cordex(variable, scenarios_resolutions, first_iteration):
     """
     Processes CORDEX data to generate markdown information for a single variable.
 
@@ -104,9 +108,41 @@ def process_cordex_data(variable, scenarios_resolutions, first_iteration):
 
     return variable_info
 
-def process_obs_reana_data(variable, resolutions, first_iteration, dataset):
+def generate_variable_info_cmip6ng(variable, resolutions, first_iteration):
     """
-    Processes observational/reanalysis data to generate markdown information for a single variable.
+    Processes cmip6-ng data to generate markdown information for a single variable.
+
+    This function creates a markdown string for a given variable, detailing the resolutions
+    and, depending on the dataset, additional details like grid type and date range.
+
+    Parameters:
+    - variable (str): The variable being processed.
+    - resolutions (dict): A dictionary mapping resolutions to their details.
+    - first_iteration (bool): Indicates if this is the first variable being processed (affects formatting).
+
+    Returns:
+    - str: A markdown-formatted string for the variable, including resolution and grid type.
+    """
+    variable_info = ""
+    if first_iteration:
+        variable_info += f"  `{variable}`{{ title=\""
+    else:
+        variable_info += f",\n  `{variable}`{{ title=\""
+    first_iteration_info = True
+    for resolution, grid in resolutions.items():
+        for grid_type, grid_values in grid.items():
+            if first_iteration_info:
+                variable_info += f"{resolution} ({grid_type})"
+                first_iteration_info = False
+            else:
+                variable_info += f", {resolution} ({grid_type})"
+
+    variable_info += "\" }"
+    return variable_info
+
+def generate_variable_info_default(variable, resolutions, first_iteration):
+    """
+    Processes climate data to generate markdown information for a single variable.
 
     This function creates a markdown string for a given variable, detailing the resolutions
     and, depending on the dataset, additional details like grid type and date range.
@@ -126,23 +162,14 @@ def process_obs_reana_data(variable, resolutions, first_iteration, dataset):
     else:
         variable_info += f",\n  `{variable}`{{ title=\""
     first_iteration_info = True
-    if dataset == 'cmip6-ng':
-        for resolution, grid in resolutions.items():
-            for grid_type, grid_values in grid.items():
-                if first_iteration_info:
-                    variable_info += f"{resolution} ({grid_type})"
-                    first_iteration_info = False
-                else:
-                    variable_info += f", {resolution} ({grid_type})"
-    else:
-        for resolution, grid in resolutions.items():
-            for grid_type, grid_values in grid.items():
-                date_range = grid_values.get('date_range', 'N/A')
-                if first_iteration_info:
-                    variable_info += f"{resolution} ({grid_type}): {date_range}"
-                    first_iteration_info = False
-                else:
-                    variable_info += f", {resolution} ({grid_type}): {date_range}"
+    for resolution, grid in resolutions.items():
+        for grid_type, grid_values in grid.items():
+            date_range = grid_values.get('date_range', 'N/A')
+            if first_iteration_info:
+                variable_info += f"{resolution} ({grid_type}): {date_range}"
+                first_iteration_info = False
+            else:
+                variable_info += f", {resolution} ({grid_type}): {date_range}"
 
     variable_info += "\" }"
     return variable_info
@@ -245,7 +272,7 @@ def main():
         if dataset.startswith('cordex'):
             dataset_markdown = generate_markdown_cordex(dataset_json)
         else:
-            dataset_markdown = generate_markdown_obs_reana(dataset_json, dataset)
+            dataset_markdown = generate_markdown_default(dataset_json, dataset)
 
         # Attempt to update each markdown file until the correct one is found and updated
         updated = False
