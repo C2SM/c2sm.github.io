@@ -9,8 +9,13 @@
     Dataset available as downloaded from the original source.
 
 ### CERRA
+
+=== "IAC"
+    ```console
+    /net/atmos/data/cerra/original
+    ```
+
 - Size: 16 TB
-- Location: IAC: `/net/atmos/data/cerra/original`
 - Access: direct
 - Status: updated
 - Time period: 1985 - present
@@ -20,8 +25,13 @@
 - More information: sub-daily regional reanalysis data for Europe, [Wishlist :material-open-in-new:](https://docs.google.com/document/d/1YtIabO5PMTsD_i_PqycmzIbrOYigNmuublt_i6FKrhY/edit#heading=h.brsa23yzcugp){:target="_blank"}, [Download Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0){:target="_blank"}
 
 ### CERRA-Land
+
+=== "IAC"
+    ```console
+    /net/atmos/data/cerra-land/original
+    ```
+
 - Size: 12 TB
-- Location: IAC: `/net/atmos/data/cerra-land/original`
 - Access: direct
 - Status: updated
 - Time period: 1985 - present
@@ -31,27 +41,37 @@
 - More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-land?tab=overview){:target="_blank"}, [Wishlist :material-open-in-new:](https://docs.google.com/document/d/1YtIabO5PMTsD_i_PqycmzIbrOYigNmuublt_i6FKrhY/edit#heading=h.brsa23yzcugp){:target="_blank"}, [Download Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1e58ps_yBmxUG0jvL8ZmNNr7Zz_UXuqIZsz4MdRAzvbM/edit#gid=0){:target="_blank"}
 
 ### E-OBS
+
+=== "IAC"
+    ```console
+    /net/atmos/data/E-OBS
+    ```
+
 - Size: 660 GB
-- Location: IAC
 - Access: direct
 - Status: different versions, updated irregularly
 - Time period: 1950 - present
 - Variables:
-  - `TG`: mean temperature
-  - `TN`: minimum temperature
-  - `TX`: maximum temperature
-  - `RR`: precipitation sum
-  - `PP`: mean sea level pressure
-  - `FG`: mean wind speed
-  - `HU`: mean relative humidity
-  - `QQ`: global radiation
+    - `TG`: mean temperature
+    - `TN`: minimum temperature
+    - `TX`: maximum temperature
+    - `RR`: precipitation sum
+    - `PP`: mean sea level pressure
+    - `FG`: mean wind speed
+    - `HU`: mean relative humidity
+    - `QQ`: global radiation
 - Temporal Resolution: daily
 - Spatial Resolution: 0.1° and 0.25°
 - More information: [E-OBS :material-open-in-new:](https://www.ecad.eu/download/ensembles/download.php){:target="_blank"}, [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/insitu-gridded-observations-europe?tab=overview){:target="_blank"}
 
 ### ERAInterim
+
+=== "CSCS"
+    ```console
+    /store/c2sm/c2sme/reanalyses_dkrz/ERAInterim
+    ```
+
 - Size: 5 TB
-- Location: CSCS: `/store/c2sm/c2sme/reanalyses_dkrz/ERAInterim`
 - Access: direct
 - Status: static
 - Time period: 1979-2019
@@ -60,8 +80,13 @@
 - Spatial Resolution: 0.7° x 0.7° (80 km) global
 
 ### ERA5 (for ICON-CLM)
+
+=== "CSCS"
+    ```console
+    /store/c2sm/c2sme/reanalyses_dkrz/ERA5
+    ```
+
 - Size: 50 TB
-- Location: CSCS: `/store/c2sm/c2sme/reanalyses_dkrz/ERA5`
 - Access: direct
 - Status: updated
 - Time period: 1979 - present
@@ -71,8 +96,13 @@
 - More information: [ERA5 at CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels-monthly-means?tab=overview){:target="_blank"}
 
 ### ERA5
+
+=== "IAC"
+    ```console
+    /net/atmos/data/era5_cds/original
+    ```
+
 - Size: 17 TB
-- Location: IAC: `/net/atmos/data/era5_cds/original`
 - Access: direct
 - Status: updated
 - Time period: 1940 - present
@@ -81,8 +111,13 @@
 - Spatial Resolution: 0.25° x 0.25°
 
 ### ERA5-Land
+
+=== "IAC"
+    ```console
+    /net/atmos/data/era5-land_cds/original
+    ```
+
 - Size: 40 TB
-- Location: IAC: `/net/atmos/data/era5-land_cds/original`
 - Access: direct
 - Status: updated
 - Time period: 1950 - present
@@ -92,8 +127,14 @@
 - More information: [ERA5-Land :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=form){:target="_blank"}
 
 ### MERRA2
-- Size: 15 TB
+
+=== "IAC"
+    ```console
+    /net/atmos/data/MERRA2
+    ```
+
 - Location: IAC
+- Size: 15 TB
 - Access: direct
 - Status: updated
 - Time period: 1980 - present
@@ -109,32 +150,85 @@
     Datasets are aggregated or regridded.
 
 ### CERRA
+
+=== "IAC"
+    ```console
+    /net/atmos/data/cerra/processed/v1/
+    ```
+
 - Size: 6 TB
-- Location: IAC: `/net/atmos/data/cerra/processed/v1/`
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
-- Variables: `2t`, `r`, `t`, ...
+- Variables: 
+  `10si`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `10wdir`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `2r`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `2t`{ title="day (native): 1985-2021, mon (native): 1985-2021" },
+  `eva`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `gph500`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
+  `liqvsm`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `mn2t`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `mx2t`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `r`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sde`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sf`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `skt`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `slhf`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sp`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sshf`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `ssr`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `ssrd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `str`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `strd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `t`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `u`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
+  `v`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
+  `vsw`{ title="day (native): 1985-2020, mon (native): 1985-2020" }
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 5x5km
 - More information: Sub-daily regional reanalysis data for Europe, [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-single-levels?tab=overview){:target="_blank"}, [Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0){:target="_blank"}
 
 ### CERRA-Land
-- Size: 1.8 TB
+
+=== "IAC"
+    ```console
+    /net/atmos/data/cerra-land/processed/v1/
+    ```
+
 - Location: IAC: `/net/atmos/data/cerra-land/processed/v1/`
+- Size: 1.8 TB
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
-- Variables: `sro`, `snom`, `tp`, ...
+- Variables: 
+  `eva`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `skt`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `slhf`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `snom`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sro`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sshf`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `ssr`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `ssrd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `str`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `strd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `tp`{ title="mon (native): 1985-2020" },
+  `vsw`{ title="day (native): 1985-2020, mon (native): 1985-2020" }
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 5x5km
 - More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-land?tab=overview){:target="_blank"}, [Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1e58ps_yBmxUG0jvL8ZmNNr7Zz_UXuqIZsz4MdRAzvbM/edit#gid=0){:target="_blank"}
 
 ### E-OBS and MCH
+
+=== "IAC"
+    ```console
+    /net/co2/c2sm-data/ch202X/Obs_Data/EOBS/0.1deg_reg_v23.1e/processed/
+    /net/co2/c2sm-data/ch202X/Obs_Data/EOBS/0.1deg_reg_v26.0e/processed/
+    ```
+
 - Size: 50 GB
-- Location: IAC
-  - `/net/co2/c2sm-data/ch202X/Obs_Data/EOBS/0.1deg_reg_v23.1e/processed/`
-  - `/net/co2/c2sm-data/ch202X/Obs_Data/EOBS/0.1deg_reg_v26.0e/processed/`
 - Access: direct
 - Status: static
 - Time period: 1971-2020
@@ -144,32 +238,84 @@
 - More information: E-OBS (v23.1e and v26.0e) data with higher resolution MCH data over Switzerland (prepared for CH2025)
 
 ### ERA5
+
+=== "IAC"
+    ```console
+    /net/atmos/data/era5_cds/processed/
+    ```
+=== "Euler"
+    ```console
+    /net/atmos/data/era5_cds/processed/
+    ```
+
 - Size: 500 GB
-- Location: IAC: `/net/atmos/data/era5_cds/processed/`, Euler
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-present, v2: 1980-present
-- Variables:
-  - v1: `2t`, `mn2t`, `mx2t`, `tp`
-  - v2: `/net/atmos/data/era5_cds/processed/v2/`, [Variable list and progress :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/5efYkkFrSVC64lZ){:target="_blank"}
+- Variables: 
+  `cbh`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `cl`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `clt`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `d2m`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `hur`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `hurs`{ title="day (native): 194001-202312, mon (native): 198001-198512" },
+  `pr`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `ps`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `psl`{ title="day (05x05): 195001-202212, mon (05x05): 195001-202212" },
+  `rlds`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `rls`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `rsds`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `sfcWind`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `strd`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `ta`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `tas`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `tasmax`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `tasmin`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `ua`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `uas`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `va`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `vas`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `zg`{ title="day (native): 194001-202312, mon (native): 194001-202312" }
+- v2: [Variable list and progress :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/5efYkkFrSVC64lZ){:target="_blank"}
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 0.25° x 0.25°
 - More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=overview){:target="_blank"}
 
 ### ERA5-Land
+
+=== "IAC"
+    ```console
+    /net/atmos/data/era5-land_cds/processed/v1/
+    ```
+
 - Size: 2.2 TB
-- Location: IAC: `/net/atmos/data/era5-land_cds/processed/v1/`
 - Access: direct
 - Status: updated
 - Time period: 1950-present
-- Variables: `2d`, `2t`, `sd`, `snom`
+- Variables: 
+  `2d`{ title="day (native): 2000-2022, mon (native): 2000-2022" },
+  `2t`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
+  `e`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
+  `pev`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
+  `sd`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
+  `snom`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
+  `swvl1`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
+  `swvl2`{ title="day (native): 1959-2022, mon (native): 1959-2022" },
+  `swvl3`{ title="day (native): 1950-2023, mon (native): 1950-2023" },
+  `swvl4`{ title="day (native): 1950-2023, mon (native): 1950-2023" },
+  `tp`{ title="day (native): 1950-2022, mon (native): 1950-2022" }
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 0.1° x 0.1°
 - More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=form){:target="_blank"}
 
 ### MERRA2
+
+=== "IAC"
+    ```console
+    /net/co2/c2sm-data/rlorenz/MERRA2/
+    ```
+
 - Size: 17 GB
-- Location: IAC: `/net/co2/c2sm-data/rlorenz/MERRA2/`
 - Access: direct
 - Status: updated
 - Time period: v0: 1980-2015, v1: 1980-2018
@@ -179,8 +325,13 @@
 - More information: Files are consistent with cmip-ng archives, no time period is indicated in filenames
 
 ### MCH
+
+=== "IAC"
+    ```console
+    /net/co2/c2sm-data/ch202X/Obs_Data/MCH/processed/
+    ```
+
 - Size: 7 GB
-- Location: IAC: `/net/co2/c2sm-data/ch202X/Obs_Data/MCH/processed/`
 - Access: direct
 - Status: static
 - Time period: 1971-2021

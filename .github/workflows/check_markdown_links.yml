@@ -1,4 +1,4 @@
-name: Check Markdown links
+name: Check Markdown Links
 
 on:
   push:
@@ -10,8 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+
     - name: Check for broken links (internal)
-      run: python check_md_links.py --path ./docs
+      run: python ./scripts/check_md_links.py --path ./docs
+
     - name: Check for broken links (external)
       run: |
         pip install mkdocs-linkcheck

@@ -7,3 +7,6 @@ agupubs.onlinelibrary.wiley.com
 ^https://wiki.iac.ethz.ch
 ^https://scicomp.ethz.ch/wiki
 ^https://hcdc.hereon.de/clm-community/webpep/webpep
+^https://doi.org
+^https://zenodo.org
+^https://www.gnu.org
