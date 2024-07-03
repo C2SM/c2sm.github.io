@@ -19,6 +19,19 @@ def write_markdown(file_path, content):
         file.write(content)
 
 def generate_markdown_obs_reana(json_data, dataset):
+    """
+    Generates markdown content for observational and reanalysis datasets.
+
+    This function iterates over variables in the provided JSON data, processing each
+    to generate a markdown string that lists variables and their details for a given dataset.
+
+    Parameters:
+    - json_data (dict): The JSON data containing variables and their resolutions.
+    - dataset (str): The name of the dataset being processed.
+
+    Returns:
+    - str: A markdown-formatted string listing variables and their details.
+    """
     markdown_content = "- Variables: \n"
     
     first_iteration = True
@@ -30,6 +43,19 @@ def generate_markdown_obs_reana(json_data, dataset):
     return markdown_content
 
 def generate_markdown_cordex(json_data):
+    """
+    Generates markdown content for CORDEX(-ReKLiEs) datasets.
+
+    This function compiles details about variables across scenarios and temporal resolutions
+    from the provided JSON data. It then processes this information to generate a markdown
+    string that lists variables, scenarios, and their temporal resolutions.
+
+    Parameters:
+    - json_data (dict): The JSON data containing scenarios, temporal resolutions, and variables.
+
+    Returns:
+    - str: A markdown-formatted string listing variables along with their scenarios and temporal resolutions.
+    """
     markdown_content = "- Variables: \n"
     
     variable_details = {}
@@ -51,6 +77,20 @@ def generate_markdown_cordex(json_data):
     return markdown_content
     
 def process_cordex_data(variable, scenarios_resolutions, first_iteration):
+    """
+    Processes CORDEX data to generate markdown information for a single variable.
+
+    This function creates a markdown string for a given variable, detailing the scenarios
+    and temporal resolutions available for that variable.
+
+    Parameters:
+    - variable (str): The variable being processed.
+    - scenarios_resolutions (dict): A dictionary mapping scenarios to sets of temporal resolutions.
+    - first_iteration (bool): Indicates if this is the first variable being processed (affects formatting).
+
+    Returns:
+    - str: A markdown-formatted string for the variable, including scenario and resolution details.
+    """
     variable_info = ""
     tooltip_content = " — ".join(
         f"{scenario}: {', '.join(sorted(resolutions))}" 
@@ -65,6 +105,21 @@ def process_cordex_data(variable, scenarios_resolutions, first_iteration):
     return variable_info
 
 def process_obs_reana_data(variable, resolutions, first_iteration, dataset):
+    """
+    Processes observational/reanalysis data to generate markdown information for a single variable.
+
+    This function creates a markdown string for a given variable, detailing the resolutions
+    and, depending on the dataset, additional details like grid type and date range.
+
+    Parameters:
+    - variable (str): The variable being processed.
+    - resolutions (dict): A dictionary mapping resolutions to their details.
+    - first_iteration (bool): Indicates if this is the first variable being processed (affects formatting).
+    - dataset (str): The name of the dataset, which determines the detail level in the markdown.
+
+    Returns:
+    - str: A markdown-formatted string for the variable, including resolution and possibly other details.
+    """
     variable_info = ""
     if first_iteration:
         variable_info += f"  `{variable}`{{ title=\""
@@ -91,9 +146,28 @@ def process_obs_reana_data(variable, resolutions, first_iteration, dataset):
 
     variable_info += "\" }"
     return variable_info
-
     
 def replace_variables_section(file_path, heading_dataset, new_variables_content):
+    """
+    Replaces the variables section for a specified dataset within a markdown file.
+
+    This function searches for a specific dataset heading within a markdown file and replaces
+    the content of the variables section that follows this heading with new content. It handles
+    skipping unrelated sections and ensures that the replacement is done at the correct indentation level.
+
+    Parameters:
+    - file_path (str): The path to the markdown file to be modified.
+    - heading_dataset (str): The heading of the dataset section where variables need to be replaced.
+                             This should match the markdown heading format, e.g., "### DatasetName".
+    - new_variables_content (str): The new content to replace the existing variables section with.
+                                   This content should be a string formatted according to markdown syntax.
+
+    Note:
+    - The function assumes that the variables section starts with a line "- Variables:" at the same
+      indentation level as the dataset heading.
+    - It also assumes that a new section starts with a heading at the same indentation level as the
+      "- Variables:" line or with a higher-level heading (e.g., "##").
+    """
     with open(file_path, 'r') as file:
         content = file.readlines()
     
@@ -133,7 +207,19 @@ def replace_variables_section(file_path, heading_dataset, new_variables_content)
             file.writelines(content)
 
 def check_heading_exists(file_path, heading_dataset):
-    """Check if the heading exists in the given file, considering markdown syntax."""
+    """
+    Checks if a specified heading exists within a markdown file.
+
+    This function opens a markdown file and iterates through its lines to find a match for a specified heading.
+    The heading is expected to be at the level of an H3 markdown heading (### HeadingName).
+
+    Parameters:
+    - file_path (str): The path to the markdown file to be searched.
+    - heading_dataset (str): The exact text of the heading to search for, not including the markdown heading syntax (e.g., "DatasetName" for "### DatasetName").
+
+    Returns:
+    - bool: True if the heading is found, False otherwise.
+    """
     formatted_heading = f"### {heading_dataset}"
     
     with open(file_path, 'r') as file:
