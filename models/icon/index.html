@@ -1751,6 +1751,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#temporary-todi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temporary Tödi
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2616,6 +2625,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#temporary-todi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temporary Tödi
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2728,6 +2746,50 @@ spack<span class="w"> </span>install<span class="w"> </span>cosmo-eccodes-defini
 <span class="c1"># compile ICON on compute-nodes</span>
 srun<span class="w"> </span>-N<span class="w"> </span><span class="m">1</span><span class="w"> </span>-c<span class="w"> </span><span class="m">12</span><span class="w"> </span>--mem-per-cpu<span class="o">=</span>20G<span class="w"> </span>spack<span class="w"> </span>install<span class="w"> </span>-v<span class="w"> </span>-j<span class="w"> </span><span class="m">12</span>
 </code></pre></div>
+<h3 id="temporary-todi">Temporary Tödi<a class="headerlink" href="#temporary-todi" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">These are only temporary guidelines during the acceptance phase of Alps</p>
+<ul>
+<li>Santis will be the official W&amp;C vcluster but Tödi has to be deployed on the entire Alps system for the acceptance phase. These guidelines are for the ones who have access to Tödi.</li>
+<li>The resulting executable is not tested.</li>
+<li>Anything can go wrong</li>
+</ul>
+</div>
+<ul>
+<li>
+<p>Install latest <code>uenv</code> tool
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:eth-cscs/uenv.git<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>./uenv/install<span class="w"> </span>--local
+</code></pre></div></p>
+</li>
+<li>
+<p>Get <code>spack-c2sm</code> on the <code>uenv_ci</code> branch
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>--recurse-submodules<span class="w"> </span>--shallow-submodules<span class="w"> </span>-b<span class="w"> </span>uenv_ci<span class="w"> </span>https://github.com/C2SM/spack-c2sm.git
+</code></pre></div></p>
+</li>
+<li>
+<p>Start user environment
+    <div class="highlight"><pre><span></span><code>uenv<span class="w"> </span>start<span class="w"> </span>/capstor/scratch/cscs/leclairm/uenvs/images/icon_c2sm_v1_rc3.sqfs
+</code></pre></div></p>
+</li>
+<li>
+<p>Setup <code>spack-c2sm</code>
+    <div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>spack-c2sm/setup-env.sh<span class="w"> </span>/user-environment
+</code></pre></div></p>
+</li>
+<li>
+<p>Adapt your spack environment following <code>/capstor/scratch/cscs/leclairm/icon-nwp/config/cscs/spack/uenv/mch_gpu_double/spack.yaml</code>  and activate it as usual with <code>spack env activate</code>.</p>
+</li>
+<li>
+<p>Build as usual from your icon root dir
+    <div class="highlight"><pre><span></span><code>spack<span class="w"> </span>install
+</code></pre></div></p>
+</li>
+<li>
+<p>Submit job with uenv
+    <div class="highlight"><pre><span></span><code>sbatch<span class="w"> </span>--uenv<span class="w"> </span>/capstor/scratch/cscs/leclairm/uenvs/images/icon_c2sm_v1_rc3.sqfs<span class="w"> </span>my_run_script
+</code></pre></div></p>
+</li>
+</ul>
 <h2 id="run-test-case-with-icon">Run test case with ICON<a class="headerlink" href="#run-test-case-with-icon" title="Permanent link">&para;</a></h2>
 <p>In the <em>run</em> folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. <em>mch_ch_lowres</em>, you can use the <code>make_runscripts</code> function.</p>
 <div class="highlight"><pre><span></span><code>./make_runscripts<span class="w"> </span>mch_ch_lowres
