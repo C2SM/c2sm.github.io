@@ -51,37 +51,37 @@ srun -N 1 -c 12 --mem-per-cpu=20G spack install -v -j 12
     - The resulting executable is not tested.
     - Anything can go wrong
 
-install latest `uenv` tool
-```shell
-git clone git@github.com:eth-cscs/uenv.git && ./uenv/install --local
-```
+- Install latest `uenv` tool
+    ```shell
+    git clone git@github.com:eth-cscs/uenv.git && ./uenv/install --local
+    ```
 
-Get `spack-c2sm` on the `uenv_ci` branch
-```shell
-git clone --depth 1 --recurse-submodules --shallow-submodules -b uenv_ci https://github.com/C2SM/spack-c2sm.git
-```
+- Get `spack-c2sm` on the `uenv_ci` branch
+    ```shell
+    git clone --depth 1 --recurse-submodules --shallow-submodules -b uenv_ci https://github.com/C2SM/spack-c2sm.git
+    ```
 
-Start user environment
-```shell
-uenv start /capstor/scratch/cscs/leclairm/uenvs/images/icon_c2sm_v1_rc3.sqfs
-```
+- Start user environment
+    ```shell
+    uenv start /capstor/scratch/cscs/leclairm/uenvs/images/icon_c2sm_v1_rc3.sqfs
+    ```
 
-Setup `spack-c2sm`
-```shell
-source spack-c2sm/setup-env.sh /user-environment
-```
+- Setup `spack-c2sm`
+    ```shell
+    source spack-c2sm/setup-env.sh /user-environment
+    ```
 
-Adapt your spack environment following `/capstor/scratch/cscs/leclairm/icon-nwp/config/cscs/spack/uenv/mch_gpu_double/spack.yaml`  and activate it as usual with `spack env activate`.
+- Adapt your spack environment following `/capstor/scratch/cscs/leclairm/icon-nwp/config/cscs/spack/uenv/mch_gpu_double/spack.yaml`  and activate it as usual with `spack env activate`.
 
-Build as usual from your icon root dir
-```shell
-spack install
-```
+- Build as usual from your icon root dir
+    ```shell
+    spack install
+    ```
 
-Submit job with uenv
-```shell
-sbatch --uenv /capstor/scratch/cscs/leclairm/uenvs/images/icon_c2sm_v1_rc3.sqfs my_run_script
-```
+- Submit job with uenv
+    ```shell
+    sbatch --uenv /capstor/scratch/cscs/leclairm/uenvs/images/icon_c2sm_v1_rc3.sqfs my_run_script
+    ```
 
 ## Run test case with ICON
 In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *mch_ch_lowres*, you can use the `make_runscripts` function.
