@@ -21,7 +21,7 @@
 
 - Location: IAC
 - Size: 6 TB
-- Number of files: 40’000
+- Number of files: 40.000
 - Access: direct / rsync
 - Status: frozen (2016-12)
 - Resolution: native
@@ -30,7 +30,7 @@
 
 - Location: IAC
 - Size: 130 TB
-- Number of files: 700’000
+- Number of files: 700.000
 - Access: direct / rsync
 - Status: monthly updated
 - Resolution: native
@@ -47,7 +47,7 @@
     ```
 
 - Size: 520 TB 
-- Number of Files: 5’500’000
+- Number of Files: 5.500.000
 - Access: direct / rsync
 - Status: weekly updated
 - Resolution: native
@@ -58,13 +58,13 @@
     The datasets are checked, standardized, and regridded to common grid.
 
 !!! note
-    Next Generation (ng) archives were maintained by Reto’s group (Jan Sedlacek/Lukas Brunner). Ruth Lorenz / C2SM took over cmip6-ng in 2022. Contact: [cmip6-archive@env.ethz.ch](mailto:cmip6-archive@env.ethz.ch). Documentation: [https://doi.org/10.5281/zenodo.373412 :material-open-in-new:](https://doi.org/10.5281/zenodo.3734128){:target="_blank"}.
+    Next Generation (ng) archives were maintained by Reto's group (Jan Sedlacek/Lukas Brunner). Ruth Lorenz / C2SM took over cmip6-ng in 2022. Contact: [cmip6-archive@env.ethz.ch](mailto:cmip6-archive@env.ethz.ch). Documentation: [https://doi.org/10.5281/zenodo.373412 :material-open-in-new:](https://doi.org/10.5281/zenodo.3734128){:target="_blank"}.
 
 ### CMIP3-ng
 
 - Location: IAC
 - Size: 0.5 TB
-- Number of files: 5’000
+- Number of files: 5.000
 - Access: direct / rsync
 - Status: frozen (2019-03)
 - Variables: n/a
@@ -74,7 +74,7 @@
 
 - Location: IAC
 - Size: 33 TB
-- Number of files: 100’000
+- Number of files: 100.000
 - Access: direct / rsync
 - Status: frozen (2019-03)
 - Variables: n/a
@@ -92,7 +92,7 @@
     ```
 
 - Size: 175 TB
-- Number of files: 500’000
+- Number of files: 500.000
 - Access: direct / rsync
 - Status: frozen (2019-03)
 - Variables: 
@@ -176,7 +176,7 @@
     ```
 
 - Size: 370 TB
-- Number of files: 800’000
+- Number of files: 800.000
 - Access: direct / rsync
 - Status: monthly updated
 - Resolution: 0.44° and 0.11°
@@ -185,7 +185,7 @@
 
 - Location: IAC, Euler
 - Size: 23 TB
-- Number of files: 100’000
+- Number of files: 100.000
 - Access: direct
 - Status: monthly updated
 - Resolution: 0.11°
@@ -199,7 +199,7 @@
 
 - Location: IAC, CSCS
 - Size: 11 TB
-- Number of files: 1’800
+- Number of files: 1.800
 - Access: direct
 - Status: frozen (2019-04)
 - Variables: 
@@ -258,7 +258,7 @@
     ```
 
 - Size: 46 TB 
-- Number of files: 3’500
+- Number of files: 3.500
 - Access: direct
 - Status: ongoing
 - Variables: 
@@ -277,7 +277,7 @@
     ```
 
 - Size: 30 TB
-- Number of files: 22'949
+- Number of files: 22.949
 - Access: direct / rsync
 - Status: ongoing
 - Variables:

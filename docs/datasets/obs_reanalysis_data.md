@@ -157,6 +157,7 @@
     ```
 
 - Size: 6 TB
+- Number of files:
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -197,8 +198,8 @@
     /net/atmos/data/cerra-land/processed/v1/
     ```
 
-- Location: IAC: `/net/atmos/data/cerra-land/processed/v1/`
 - Size: 1.8 TB
+- Number of files:
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -228,11 +229,14 @@
     /net/co2/c2sm-data/ch202X/Obs_Data/EOBS/0.1deg_reg_v26.0e/processed/
     ```
 
-- Size: 50 GB
+- Size: 141 GB
+- Number of files: 12
 - Access: direct
 - Status: static
 - Time period: 1971-2020
-- Variables: `pr`, `tas`, `tasmax`, `tasmin`
+- Variables: 
+    - v23.1e: `CDD`, `TXx`, `pr`, `tas`, `tasmax`, `tasmin`
+    - v26.0e: `pr`, `tas`, `tasmax`, `tasmin`
 - Temporal Resolution: daily
 - Spatial Resolution: 0.11°
 - More information: E-OBS (v23.1e and v26.0e) data with higher resolution MCH data over Switzerland (prepared for CH2025)
@@ -249,6 +253,7 @@
     ```
 
 - Size: 500 GB
+- Number of files:
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-present, v2: 1980-present
@@ -289,6 +294,7 @@
     ```
 
 - Size: 2.2 TB
+- Number of files:
 - Access: direct
 - Status: updated
 - Time period: 1950-present
