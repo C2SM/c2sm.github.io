@@ -277,7 +277,7 @@
     ```
 
 - Size: 30 TB
-- Number of files: 22'949
+- Number of files: 22.949
 - Access: direct / rsync
 - Status: ongoing
 - Variables:
