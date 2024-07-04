@@ -42,17 +42,24 @@ def generate_markdown_default(json_data, dataset, entry):
     else: 
         markdown_content = f"{entry} "
     
-    first_iteration = True
-    for variable, resolutions in json_data['data'].items():
-        if dataset == 'cmip6-ng':
-            # Logic for CMIP6-ng datasets
-            if entry == ENTRY_VARIABLES:
+    if entry == ENTRY_VARIABLES:
+        first_iteration = True
+        for variable, resolutions in json_data['data'].items():
+            if dataset == 'cmip6-ng':
+                # Logic for CMIP6-ng datasets
                 markdown_content += generate_variable_info_cmip6ng(variable, resolutions, first_iteration)
-        else:
-            # Original logic for datasets with an additional scenario level
-            if entry == ENTRY_VARIABLES:
+            else:
+                # Original logic for datasets with an additional scenario level
                 markdown_content += generate_variable_info_default(variable, resolutions, first_iteration)
-        first_iteration = False
+            first_iteration = False
+    elif entry == ENTRY_SIZE:
+        markdown_content += json_data['total_size'] 
+        markdown_content += f" :material-information-outline:{{ title=\"last updated: {json_data['last_updated']}\" }}"
+    elif entry == ENTRY_NUMBER:
+        markdown_content += "{:,}".format(json_data['file_count'])
+        markdown_content += f" :material-information-outline:{{ title=\"last updated: {json_data['last_updated']}\" }}"
+    else: 
+        raise ValueError(f"Invalid entry type: {entry}")
 
     return markdown_content
 
@@ -70,23 +77,33 @@ def generate_markdown_cordex(json_data, entry):
     Returns:
     - str: A markdown-formatted string listing variables along with their scenarios and temporal resolutions.
     """
-    markdown_content = "- Variables: \n"
-    
-    variable_details = {}
-    for scenario, temporal_resolutions in json_data['data'].items():
-        for temporal_resolution, variables in temporal_resolutions.items():
-            for variable, details in variables.items():
-                if variable not in variable_details:
-                    variable_details[variable] = {}
-                if scenario not in variable_details[variable]:
-                    variable_details[variable][scenario] = set()
-                # Add resolution to the set of resolutions for this scenario
-                variable_details[variable][scenario].add(temporal_resolution)
-    
-    first_iteration = True
-    for variable, scenarios_resolutions in variable_details.items():
-        markdown_content += generate_variable_info_cordex(variable, scenarios_resolutions, first_iteration)
-        first_iteration = False
+    if entry == ENTRY_VARIABLES:
+        markdown_content = f"{entry} \n"
+        variable_details = {}
+        for scenario, temporal_resolutions in json_data['data'].items():
+            for temporal_resolution, variables in temporal_resolutions.items():
+                for variable, details in variables.items():
+                    if variable not in variable_details:
+                        variable_details[variable] = {}
+                    if scenario not in variable_details[variable]:
+                        variable_details[variable][scenario] = set()
+                    # Add resolution to the set of resolutions for this scenario
+                    variable_details[variable][scenario].add(temporal_resolution)
+        
+        first_iteration = True
+        for variable, scenarios_resolutions in variable_details.items():
+            markdown_content += generate_variable_info_cordex(variable, scenarios_resolutions, first_iteration)
+            first_iteration = False
+    elif entry == ENTRY_SIZE: 
+        markdown_content = f"{entry} "
+        markdown_content += json_data['total_size']
+        markdown_content += f" :material-information-outline:{{ title=\"last updated: {json_data['last_updated']}\" }}"
+    elif entry == ENTRY_NUMBER:
+        markdown_content = f"{entry} "
+        markdown_content += "{:,}".format(json_data['file_count'])
+        markdown_content += f" :material-information-outline:{{ title=\"last updated: {json_data['last_updated']}\" }}"
+    else: 
+        raise ValueError(f"Invalid entry type: {entry}")
 
     return markdown_content
     
@@ -281,9 +298,15 @@ def main():
 
     # Process data for each dataset and append markdown file
     for dataset in datasets.keys():
+        # Load the JSON data for the dataset from S3 bucket and merge with metadata
         dataset_json = download_json(f'https://zephyr-c2sm.s3.eu-central-1.amazonaws.com/file_tree_{dataset}_noindent.json')
+        dataset_json_meta = download_json(f'https://zephyr-c2sm.s3.eu-central-1.amazonaws.com/meta_{dataset}.json')
+        dataset_json = {**dataset_json, **dataset_json_meta}
         heading_dataset = datasets[dataset]
+
         print(heading_dataset)
+
+        # Generate the markdown content for the dataset
         if dataset.startswith('cordex'):
             markdown_variables = generate_markdown_cordex(dataset_json, ENTRY_VARIABLES)
             markdown_size = generate_markdown_cordex(dataset_json, ENTRY_SIZE)
@@ -293,11 +316,12 @@ def main():
             markdown_size = generate_markdown_default(dataset_json, dataset, ENTRY_SIZE)
             markdown_number = generate_markdown_default(dataset_json, dataset, ENTRY_NUMBER)
 
-        # Attempt to update each markdown file until the correct one is found and updated
+        # Initialize flags to track if the variables, size, and number of files entries were updated
         updated_variables = False
         updated_size = False
         updated_number = False
 
+        # Attempt to update each markdown file until the correct one is found and updated
         for markdown_file_path in markdown_files:
             if check_heading_exists(markdown_file_path, heading_dataset):
                 updated_variables = replace_entry(markdown_file_path, heading_dataset, markdown_variables, ENTRY_VARIABLES)
@@ -305,6 +329,7 @@ def main():
                 updated_number = replace_entry(markdown_file_path, heading_dataset, markdown_number, ENTRY_NUMBER)
                 break  # Stop searching once the correct file is updated
         
+        # Print a message if no updates were made for the dataset
         if not updated_variables:
             print(f"Could not find '{ENTRY_VARIABLES}' list entry for heading {heading_dataset} in any markdown files. No changes applied.")
         if not updated_size:
