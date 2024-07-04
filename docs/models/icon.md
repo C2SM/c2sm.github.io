@@ -1,4 +1,3 @@
-
 # ICON
 ICON (Icosahedral Nonhydrostatic Weather and Climate Model) is a global model suitable for climate and weather prediction at regional and global domains.
 It is a joint project of [DWD :material-open-in-new:](https://www.dwd.de/DE/Home/home_node.html){:target="_blank"}, [MPI-M :material-open-in-new:](https://mpimet.mpg.de/startseite){:target="_blank"} and [KIT :material-open-in-new:](https://www.kit.edu/){:target="_blank"}.
@@ -42,6 +41,46 @@ spack install cosmo-eccodes-definitions
 
 # compile ICON on compute-nodes
 srun -N 1 -c 12 --mem-per-cpu=20G spack install -v -j 12
+```
+
+### Temporary Tödi
+
+!!! warning "This are only temporary guidelines for the acceptance phase of Alps"
+
+    - Santis will be the official W&C vcluster but Tödi has to be deployed on the entire Alps system for the acceptance phase. These guidelines are for the ones who have access to Tödi.
+    - The resulting executable is not tested.
+    - Anything can go wrong
+
+install latest `uenv` tool
+```shell
+git clone git@github.com:eth-cscs/uenv.git && ./uenv/install --local
+```
+
+Get `spack-c2sm` on the `uenv_ci` branch
+```shell
+git clone --depth 1 --recurse-submodules --shallow-submodules -b uenv_ci https://github.com/C2SM/spack-c2sm.git
+```
+
+Start user environment
+```shell
+uenv start /capstor/scratch/cscs/leclairm/uenvs/images/icon_c2sm_v1_rc3.sqfs
+```
+
+Setup `spack-c2sm`
+```shell
+source spack-c2sm/setup-env.sh /user-environment
+```
+
+Adapt your spack environment following `/capstor/scratch/cscs/leclairm/icon-nwp/config/cscs/spack/uenv/mch_gpu_double/spack.yaml`  and activate it as usual with `spack env activate`.
+
+Build as usual from your icon root dir
+```shell
+spack install
+```
+
+Submit job with uenv
+```shell
+sbatch --uenv /capstor/scratch/cscs/leclairm/uenvs/images/icon_c2sm_v1_rc3.sqfs my_run_script
 ```
 
 ## Run test case with ICON
