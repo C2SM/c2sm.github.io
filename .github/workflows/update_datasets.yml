@@ -2,10 +2,7 @@ name: Update Datasets and Create PR
 
 on:
   schedule:
-    - cron: '0 2 * * *' # Runs at 02:00 UTC every day
-  push:
-    branches:
-      - main # Replace with your default branch if different
+    - cron: '20 11 * * *' # Runs at 02:00 UTC every day
   workflow_dispatch: # This line enables manual triggering of the workflow
 
 jobs:
