@@ -44,7 +44,7 @@ srun -N 1 -c 12 --mem-per-cpu=20G spack install -v -j 12
 ```
 
 ### Temporary Tödi
- 
+
 !!! warning "These are only temporary guidelines during the acceptance phase of Alps"
 
     - Santis will be the official W&C vcluster but Tödi has to be deployed on the entire Alps system for the acceptance phase. These guidelines are for the ones who have access to Tödi.
