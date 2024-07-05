@@ -8,13 +8,13 @@ To stay informed about what is going on in the ICON world and to get to know oth
 C2SM facilitates the utilisation of ICON on the [Piz Daint :material-open-in-new:](https://www.cscs.ch/computers/piz-daint){:target="_blank"} and [Euler :material-open-in-new:](https://scicomp.ethz.ch/wiki/Euler){:target="_blank"} computing platforms for the CPU and GPU architectures.
 
 ### Supported release
-The latest release distributed by C2SM, currently [`2024.06`](https://github.com/C2SM/icon/tree/2024.06), is continuously being tested on both Piz Daint and Euler and receives patches when necessary.
+The latest release distributed by C2SM, currently [`2024.06` :material-open-in-new:](https://github.com/C2SM/icon/tree/2024.06){:target="_blank"}, is continuously being tested on both Piz Daint and Euler and receives patches when necessary.
 
 ## Mailing list
 If you use ICON, please follow [these instructions](../events/icon_meetings/index.md#c2sm-icon-mailing-list) to subscribe to our mailing list.
 
 ## Access
-The [ICON repository](https://github.com/C2SM/icon) is hosted on the C2SM GitHub organisation. If you do not have access, please follow the instructions under [How to get Access](../index.md#how-to-get-access).
+The [ICON repository :material-open-in-new:](https://github.com/C2SM/icon){:target="_blank"} is hosted on the C2SM GitHub organisation. If you do not have access, please follow the instructions under [How to get Access](../index.md#how-to-get-access).
 
 Once you have access, clone the repository from GitHub using the SSH protocol:
 
