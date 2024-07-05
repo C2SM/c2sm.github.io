@@ -156,8 +156,8 @@
     /net/atmos/data/cerra/processed/v1/
     ```
 
-- Size: 6 TB
-- Number of files:
+- Size: 7.72 TB :material-information-outline:{ title="last updated: 2024-07-05 01:43:36" }
+- Number of files: 1,824 :material-information-outline:{ title="last updated: 2024-07-05 01:43:36" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -198,8 +198,8 @@
     /net/atmos/data/cerra-land/processed/v1/
     ```
 
-- Size: 1.8 TB
-- Number of files:
+- Size: 1.78 TB :material-information-outline:{ title="last updated: 2024-07-05 01:43:36" }
+- Number of files: 1,016 :material-information-outline:{ title="last updated: 2024-07-05 01:43:36" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -252,8 +252,8 @@
     /net/atmos/data/era5_cds/processed/
     ```
 
-- Size: 500 GB
-- Number of files:
+- Size: 45.76 TB :material-information-outline:{ title="last updated: 2024-07-05 01:44:33" }
+- Number of files: 138,400 :material-information-outline:{ title="last updated: 2024-07-05 01:44:33" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-present, v2: 1980-present
@@ -293,8 +293,8 @@
     /net/atmos/data/era5-land_cds/processed/v1/
     ```
 
-- Size: 2.2 TB
-- Number of files:
+- Size: 6.64 TB :material-information-outline:{ title="last updated: 2024-07-05 01:43:38" }
+- Number of files: 1,504 :material-information-outline:{ title="last updated: 2024-07-05 01:43:38" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
