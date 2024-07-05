@@ -29,6 +29,17 @@ The ICON build process is almost identical for Piz Daint and Euler. For both mac
 ### Piz Daint
 To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/cscs/SPACK_TAG_DAINT :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG_DAINT){:target="_blank"}.
 
+After building ICON using `spack install`, you need to create a setting file, which is only necessary once after the first compilation:
+
+=== "daint_gpu_nvhpc"
+    ```shell
+    SPACK_TAG=$(cat "config/cscs/SPACK_TAG_DAINT")
+    ENV_NAME=daint_gpu_nvhpc # modify if necessary
+    module load daint-gpu CDO
+    source /project/g110/icon/probtest/env/bin/activate
+    ./config/cscs/create_sh_env $SPACK_TAG $ENV_NAME
+    ```
+
 ### Euler
 To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/ethz/SPACK_TAG_EULER :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/ethz/SPACK_TAG_EULER){:target="_blank"}.
 
