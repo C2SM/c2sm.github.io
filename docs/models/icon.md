@@ -33,7 +33,7 @@ After building ICON using `spack install`, you need to create a `setting` file, 
 
 === "daint_gpu_nvhpc"
     ```shell
-    SPACK_TAG=$(cat "config/cscs/SPACK_TAG_DAINT")
+    SPACK_TAG=$(cat "config/cscs/SPACK_TAG_C2SM")
     ENV_NAME=daint_gpu_nvhpc # modify if necessary
     module load daint-gpu CDO
     rm -f setting
