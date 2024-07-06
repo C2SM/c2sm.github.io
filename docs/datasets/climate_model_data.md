@@ -91,8 +91,8 @@
     /nfs/atmos/c2sm
     ```
 
-- Size: 200.07 TB :material-information-outline:{ title="last updated: 2024-07-05 01:46:11" }
-- Number of files: 663,456 :material-information-outline:{ title="last updated: 2024-07-05 01:46:11" }
+- Size: 200.41 TB :material-information-outline:{ title="last updated: 2024-07-06 01:46:07" }
+- Number of files: 663,706 :material-information-outline:{ title="last updated: 2024-07-06 01:46:07" }
 - Access: direct / rsync
 - Status: frozen (2019-03)
 - Variables: 
@@ -175,8 +175,8 @@
     /store/c2sm/c2sme
     ```
 
-- Size: 356.97 TB :material-information-outline:{ title="last updated: 2024-07-05 01:46:37" }
-- Number of files: 552,595 :material-information-outline:{ title="last updated: 2024-07-05 01:46:37" }
+- Size: 356.97 TB :material-information-outline:{ title="last updated: 2024-07-06 01:45:53" }
+- Number of files: 552,595 :material-information-outline:{ title="last updated: 2024-07-06 01:45:53" }
 - Access: direct / rsync
 - Status: monthly updated
 - Resolution: 0.44° and 0.11°
@@ -184,8 +184,8 @@
 ### CORDEX-ReKliEs
 
 - Location: IAC, Euler
-- Size: 22.41 TB :material-information-outline:{ title="last updated: 2024-07-05 01:44:05" }
-- Number of files: 94,936 :material-information-outline:{ title="last updated: 2024-07-05 01:44:05" }
+- Size: 22.41 TB :material-information-outline:{ title="last updated: 2024-07-06 01:42:52" }
+- Number of files: 94,936 :material-information-outline:{ title="last updated: 2024-07-06 01:42:52" }
 - Access: direct
 - Status: monthly updated
 - Resolution: 0.11°
