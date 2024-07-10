@@ -249,7 +249,7 @@
     ```
 === "Euler"
     ```console
-    /net/atmos/data/era5_cds/processed/
+    /nfs/atmos/c2sm/era5/processed/v2
     ```
 
 - Size: 45.76 TB :material-information-outline:{ title="last updated: 2024-07-10 01:44:26" }
