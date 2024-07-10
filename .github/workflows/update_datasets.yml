@@ -46,7 +46,7 @@ jobs:
         if: steps.git-check.outputs.changes_detected == 'true'
         uses: peter-evans/create-pull-request@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} 
           commit-message: "GitHub Action: Update datasets"
           title: "[AUTO] Update Datasets"
           body: "This is an auto-generated PR with dataset updates."
