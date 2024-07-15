@@ -52,3 +52,24 @@ jobs:
           body: "This is an auto-generated PR with dataset updates."
           branch: "update-datasets-${{ github.run_number }}"
           delete-branch: true
+
+      - name: Install GitHub CLI
+        run: |
+          if ! command -v gh &> /dev/null
+          then
+              echo "GitHub CLI not found, installing..."
+              curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+              echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+              sudo apt update
+              sudo apt install gh -y
+          else
+              echo "GitHub CLI is already installed."
+          fi
+
+      - name: Enable Auto-Merge for the PR
+        if: steps.git-check.outputs.changes_detected == 'true'
+        run: |
+          PR_NUMBER=$(echo ${{ steps.create-pr.outputs.pull-request-number }})
+          gh pr merge $PR_NUMBER --auto --merge
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
