@@ -51,13 +51,6 @@ srun -N 1 -c 12 --mem-per-cpu=20G spack install -v -j 12
     - The resulting executable is not tested.
     - Anything can go wrong
 
-- Get latest `uenv` tool, install and init
-    ```shell
-    git clone git@github.com:eth-cscs/uenv.git
-    ./uenv/install --local
-    uenv image repo
-    ```
-
 - Get `spack-c2sm` on the `uenv_ci` branch
     ```shell
     git clone --depth 1 --recurse-submodules --shallow-submodules -b uenv_ci https://github.com/C2SM/spack-c2sm.git
