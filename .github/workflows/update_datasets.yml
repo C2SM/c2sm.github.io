@@ -31,11 +31,12 @@ jobs:
           git diff
           if [ -n "$(git status -s)" ]; then
             echo "Changes detected"
-            echo "::set-output name=changes_detected::true"
-          fi
+            echo "changes_detected=true" >> $GITHUB_ENV
+          else
+            echo "changes_detected=false" >> $GITHUB_ENV
 
       - name: Commit changes
-        if: steps.git-check.outputs.changes_detected == 'true'
+        if: env.changes_detected == 'true'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
@@ -43,7 +44,7 @@ jobs:
           git commit -m "GitHub Action: Update datasets"
 
       - name: Create Pull Request
-        if: steps.git-check.outputs.changes_detected == 'true'
+        if: env.changes_detected == 'true'
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} 
