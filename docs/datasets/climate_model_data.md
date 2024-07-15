@@ -10,7 +10,11 @@
 
 ### CMIP2
 
-- Location: IAC
+=== "IAC"
+    ```console
+    /net/atmos/data/cmip2
+    ```
+    
 - Size: 0.01 TB 
 - Number of files: 500
 - Access: direct / rsync
@@ -19,7 +23,11 @@
 
 ### CMIP3
 
-- Location: IAC
+=== "IAC"
+    ```console
+    /net/atmos/data/cmip3
+    ```
+    
 - Size: 6 TB
 - Number of files: 40.000
 - Access: direct / rsync
@@ -28,7 +36,11 @@
 
 ### CMIP5
 
-- Location: IAC
+=== "IAC"
+    ```console
+    /net/atmos/data/cmip5
+    ```
+    
 - Size: 130 TB
 - Number of files: 700.000
 - Access: direct / rsync
@@ -39,11 +51,11 @@
 
 === "IAC"
     ```console
-    /nfs/atmos/c2sm
+    /net/atmos/data/cmip6
     ```
 === "Euler"
     ```console
-    /nfs/atmos/c2sm
+    /nfs/atmos/c2sm/cmip6
     ```
 
 - Size: 520 TB 
@@ -62,7 +74,11 @@
 
 ### CMIP3-ng
 
-- Location: IAC
+=== "IAC"
+    ```console
+    /net/atmos/data/cmip3-ng
+    ```
+    
 - Size: 0.5 TB
 - Number of files: 5.000
 - Access: direct / rsync
@@ -72,7 +88,11 @@
 
 ### CMIP5-ng
 
-- Location: IAC
+=== "IAC"
+    ```console
+    /net/atmos/data/cmip5-ng
+    ```
+    
 - Size: 33 TB
 - Number of files: 100.000
 - Access: direct / rsync
@@ -84,15 +104,15 @@
 
 === "IAC"
     ```console
-    /nfs/atmos/c2sm
+    /net/atmos/data/cmip6-ng
     ```
 === "Euler"
     ```console
-    /nfs/atmos/c2sm
+    /nfs/atmos/c2sm/cmip6-ng
     ```
 
-- Size: 200.07 TB :material-information-outline:{ title="last updated: 2024-07-05 01:46:11" }
-- Number of files: 663,456 :material-information-outline:{ title="last updated: 2024-07-05 01:46:11" }
+- Size: 200.55 TB :material-information-outline:{ title="last updated: 2024-07-10 01:45:44" }
+- Number of files: 663,772 :material-information-outline:{ title="last updated: 2024-07-10 01:45:44" }
 - Access: direct / rsync
 - Status: frozen (2019-03)
 - Variables: 
@@ -164,28 +184,35 @@
 
 === "IAC"
     ```console
-    /nfs/atmos/c2sm
+    /net/atmos/data/cordex
     ```
 === "Euler"
     ```console
-    /nfs/atmos/c2sm
+    /nfs/atmos/c2sm/cordex
     ```
 === "CSCS"
     ```console
-    /store/c2sm/c2sme
+    /store/c2sm/c2sme/cordex
     ```
 
-- Size: 356.97 TB :material-information-outline:{ title="last updated: 2024-07-05 01:46:37" }
-- Number of files: 552,595 :material-information-outline:{ title="last updated: 2024-07-05 01:46:37" }
+- Size: 356.97 TB :material-information-outline:{ title="last updated: 2024-07-10 01:45:53" }
+- Number of files: 552,595 :material-information-outline:{ title="last updated: 2024-07-10 01:45:53" }
 - Access: direct / rsync
 - Status: monthly updated
 - Resolution: 0.44° and 0.11°
 
 ### CORDEX-ReKliEs
 
-- Location: IAC, Euler
-- Size: 22.41 TB :material-information-outline:{ title="last updated: 2024-07-05 01:44:05" }
-- Number of files: 94,936 :material-information-outline:{ title="last updated: 2024-07-05 01:44:05" }
+=== "IAC"
+    ```console
+    /net/atmos/data/cordex-reklies
+    ```
+=== "Euler"
+    ```console
+    /nfs/atmos/c2sm/cordex-reklies
+    ```
+- Size: 22.41 TB :material-information-outline:{ title="last updated: 2024-07-10 01:43:06" }
+- Number of files: 94,936 :material-information-outline:{ title="last updated: 2024-07-10 01:43:06" }
 - Access: direct
 - Status: monthly updated
 - Resolution: 0.11°
@@ -197,7 +224,14 @@
 
 ### CORDEX.ch2018
 
-- Location: IAC, CSCS
+=== "IAC"
+    ```console
+    /net/ch4/data/cordex.ch2018-freeze-2.1
+    ```
+=== "CSCS"
+    ```console
+    /store/c2sm/c2sme/cordex.ch2018-freeze-2.1
+    ```
 - Size: 11 TB
 - Number of files: 1.800
 - Access: direct
