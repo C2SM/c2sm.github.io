@@ -111,7 +111,7 @@
     /nfs/atmos/c2sm/cmip6-ng
     ```
 
-- Size: 200.62 TB :material-information-outline:{ title="last updated: 2024-07-15 11:26:45" }
+- Size: 200.62 TB :material-information-outline:{ title="last updated: 2024-07-15 11:26:46" }
 - Number of files: 663,800 :material-information-outline:{ title="last updated: 2024-07-15 11:26:46" }
 - Access: direct / rsync
 - Status: frozen (2019-03)
