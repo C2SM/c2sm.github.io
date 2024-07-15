@@ -29,11 +29,13 @@ jobs:
         id: git-check
         run: |
           git diff
+          echo "git diff done"
           if ! git diff --quiet; then
             echo "Changes detected"
             echo "changes_detected=true" >> "$GITHUB_ENV"
           else
             echo "changes_detected=false" >> "$GITHUB_ENV"
+          echo "check done"
 
       - name: Commit changes
         if: env.changes_detected == 'true'
