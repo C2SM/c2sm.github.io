@@ -86,7 +86,8 @@
     /store/c2sm/c2sme/reanalyses_dkrz/ERA5
     ```
 
-- Size: 50 TB
+- Size: 54 TB
+- Number of files: 21,460
 - Access: direct
 - Status: updated
 - Time period: 1979 - present
