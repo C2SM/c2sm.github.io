@@ -111,8 +111,8 @@
     /nfs/atmos/c2sm/cmip6-ng
     ```
 
-- Size: 200.62 TB :material-information-outline:{ title="last updated: 2024-07-15 11:26:46" }
-- Number of files: 663,800 :material-information-outline:{ title="last updated: 2024-07-15 11:26:46" }
+- Size: 200.63 TB :material-information-outline:{ title="last updated: 2024-07-21 01:46:08" }
+- Number of files: 663,802 :material-information-outline:{ title="last updated: 2024-07-21 01:46:08" }
 - Access: direct / rsync
 - Status: frozen (2019-03)
 - Variables: 
@@ -195,8 +195,8 @@
     /store/c2sm/c2sme/cordex
     ```
 
-- Size: 356.97 TB :material-information-outline:{ title="last updated: 2024-07-15 11:27:18" }
-- Number of files: 552,595 :material-information-outline:{ title="last updated: 2024-07-15 11:27:18" }
+- Size: 356.97 TB :material-information-outline:{ title="last updated: 2024-07-21 01:46:58" }
+- Number of files: 552,595 :material-information-outline:{ title="last updated: 2024-07-21 01:46:58" }
 - Access: direct / rsync
 - Status: monthly updated
 - Resolution: 0.44° and 0.11°
@@ -211,8 +211,8 @@
     ```console
     /nfs/atmos/c2sm/cordex-reklies
     ```
-- Size: 22.41 TB :material-information-outline:{ title="last updated: 2024-07-15 11:27:17" }
-- Number of files: 94,936 :material-information-outline:{ title="last updated: 2024-07-15 11:27:17" }
+- Size: 22.41 TB :material-information-outline:{ title="last updated: 2024-07-21 01:44:11" }
+- Number of files: 94,936 :material-information-outline:{ title="last updated: 2024-07-21 01:44:11" }
 - Access: direct
 - Status: monthly updated
 - Resolution: 0.11°
