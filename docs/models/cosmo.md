@@ -104,7 +104,7 @@ git clone git@github.com:C2SM-RCM/cosmo.git
 If you do not already have an SSH key set up for GitHub but would like to do so, follow the [instructions :material-open-in-new:](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent){:target="_blank"}.
 
 ## Configure and compile
-For configuring and building COSMO with Spack, please refer to the official spack-c2sm documentation, which provides instructions for [setting up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"} and [installing COSMO :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#cosmo){:target="_blank"} on Piz Daint and Euler Cluster.
+For configuring and building COSMO with Spack, please refer to the official spack-c2sm documentation, which provides instructions for [setting up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-ethz-daint-tsa-balfrin-and-euler){:target="_blank"} and [installing COSMO :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#cosmo){:target="_blank"} on Piz Daint and Euler Cluster.
 
 ## Related tools
 In the [Tools](../tools/index.md) section, you will find relevant tools for working with COSMO:
