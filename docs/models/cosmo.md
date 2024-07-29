@@ -4,6 +4,7 @@ The COSMO model is a limited-area, non-hydrostatic model developed by a collabor
 
 ## Support status
 C2SM currently facilitates the utilisation of COSMO on the [Piz Daint :material-open-in-new:](https://www.cscs.ch/computers/piz-daint){:target="_blank"} computing platform for CPU and GPU architectures. The `master` and `c2sm-features` branches are being continuously tested an Piz Daint.
+On the ETHZ [Euler CLuster](https://scicomp.ethz.ch/wiki/Euler) COSMO is supported for CPU architectures only.
 
 The following table summarises the features ported to GPU and their correspoding namelist parameters.
 
@@ -103,7 +104,7 @@ git clone git@github.com:C2SM-RCM/cosmo.git
 If you do not already have an SSH key set up for GitHub but would like to do so, follow the [instructions :material-open-in-new:](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent){:target="_blank"}.
 
 ## Configure and compile
-For configuring and building COSMO with Spack, please refer to the official spack-c2sm documentation, which provides instructions for [setting up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"} and [installing COSMO :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#cosmo){:target="_blank"} on Piz Daint.
+For configuring and building COSMO with Spack, please refer to the official spack-c2sm documentation, which provides instructions for [setting up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"} and [installing COSMO :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#cosmo){:target="_blank"} on Piz Daint and Euler Cluster.
 
 ## Related tools
 In the [Tools](../tools/index.md) section, you will find relevant tools for working with COSMO:
@@ -162,9 +163,3 @@ Output                         0.19         0.43         0.86        72.65
 ```
 It provides information about how long all compute-PEs had to wait at the end of the simulation for all IO processors to finish writing data to disk.
 This timer should be as small as possible.
-
-### Zlib replacement for NetCDF compression
-Online compression, enabled with the `lcompress_netcdf=.true.` parameter, uses the slower Zlib by default.
-A speedup of a factor of two can be achieved by using Zlib_ng instead.
-The `+zlib_ng` variant for building COSMO is required in combination with the command `spack load cosmo@master%pgi cosmo_target=gpu +zlib_ng` before execution.
-Unfortunately, the convenient way of using RPATH for this feature is not possible.
