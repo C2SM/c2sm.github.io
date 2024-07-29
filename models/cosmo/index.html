@@ -1799,15 +1799,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#zlib-replacement-for-netcdf-compression" class="md-nav__link">
-    <span class="md-ellipsis">
-      Zlib replacement for NetCDF compression
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2625,15 +2616,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#zlib-replacement-for-netcdf-compression" class="md-nav__link">
-    <span class="md-ellipsis">
-      Zlib replacement for NetCDF compression
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2665,7 +2647,8 @@
 <h1 id="cosmo">COSMO<a class="headerlink" href="#cosmo" title="Permanent link">&para;</a></h1>
 <p>The COSMO model is a limited-area, non-hydrostatic model developed by a collaboration of National Weather Services called the <a href="http://www.cosmo-model.org/" target="_blank">Consortium for Small-scale Modeling <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a>.</p>
 <h2 id="support-status">Support status<a class="headerlink" href="#support-status" title="Permanent link">&para;</a></h2>
-<p>C2SM currently facilitates the utilisation of COSMO on the <a href="https://www.cscs.ch/computers/piz-daint" target="_blank">Piz Daint <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a> computing platform for CPU and GPU architectures. The <code>master</code> and <code>c2sm-features</code> branches are being continuously tested an Piz Daint.</p>
+<p>C2SM currently facilitates the utilisation of COSMO on the <a href="https://www.cscs.ch/computers/piz-daint" target="_blank">Piz Daint <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a> computing platform for CPU and GPU architectures. The <code>master</code> and <code>c2sm-features</code> branches are being continuously tested an Piz Daint.
+On the ETHZ <a href="https://scicomp.ethz.ch/wiki/Euler" target="_blank">Euler CLuster <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a> COSMO is supported for CPU architectures only.</p>
 <p>The following table summarises the features ported to GPU and their correspoding namelist parameters.</p>
 <details close="close">
 <summary>GPU ported COSMO features</summary>
@@ -3021,7 +3004,7 @@ please contact <a href="mailto:support@c2sm.ethz.ch">C2SM Support</a>.</p>
 </code></pre></div>
 If you do not already have an SSH key set up for GitHub but would like to do so, follow the <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank">instructions <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a>.</p>
 <h2 id="configure-and-compile">Configure and compile<a class="headerlink" href="#configure-and-compile" title="Permanent link">&para;</a></h2>
-<p>For configuring and building COSMO with Spack, please refer to the official spack-c2sm documentation, which provides instructions for <a href="https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin" target="_blank">setting up a Spack instance <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a> and <a href="https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#cosmo" target="_blank">installing COSMO <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a> on Piz Daint.</p>
+<p>For configuring and building COSMO with Spack, please refer to the official spack-c2sm documentation, which provides instructions for <a href="https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-ethz-daint-tsa-balfrin-and-euler" target="_blank">setting up a Spack instance <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a> and <a href="https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#cosmo" target="_blank">installing COSMO <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a> on Piz Daint and Euler Cluster.</p>
 <h2 id="related-tools">Related tools<a class="headerlink" href="#related-tools" title="Permanent link">&para;</a></h2>
 <p>In the <a href="../../tools/">Tools</a> section, you will find relevant tools for working with COSMO:</p>
 <ul>
@@ -3067,11 +3050,6 @@ In addition, there is a timer called <code>asyncio_wait</code> in the output sec
 </code></pre></div>
 It provides information about how long all compute-PEs had to wait at the end of the simulation for all IO processors to finish writing data to disk.
 This timer should be as small as possible.</p>
-<h3 id="zlib-replacement-for-netcdf-compression">Zlib replacement for NetCDF compression<a class="headerlink" href="#zlib-replacement-for-netcdf-compression" title="Permanent link">&para;</a></h3>
-<p>Online compression, enabled with the <code>lcompress_netcdf=.true.</code> parameter, uses the slower Zlib by default.
-A speedup of a factor of two can be achieved by using Zlib_ng instead.
-The <code>+zlib_ng</code> variant for building COSMO is required in combination with the command <code>spack load cosmo@master%pgi cosmo_target=gpu +zlib_ng</code> before execution.
-Unfortunately, the convenient way of using RPATH for this feature is not possible.</p>
 
 
 
