@@ -4,7 +4,7 @@ The COSMO model is a limited-area, non-hydrostatic model developed by a collabor
 
 ## Support status
 C2SM currently facilitates the utilisation of COSMO on the [Piz Daint :material-open-in-new:](https://www.cscs.ch/computers/piz-daint){:target="_blank"} computing platform for CPU and GPU architectures. The `master` and `c2sm-features` branches are being continuously tested an Piz Daint.
-On the ETHZ [Euler CLuster](https://scicomp.ethz.ch/wiki/Euler) COSMO is supported for CPU architectures only.
+On the ETHZ [Euler CLuster :material-open-in-new:](https://scicomp.ethz.ch/wiki/Euler){:target="_blank"} COSMO is supported for CPU architectures only.
 
 The following table summarises the features ported to GPU and their correspoding namelist parameters.
 
