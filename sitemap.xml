@@ -61,6 +61,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://c2sm.github.io/blog/2024/07/29/git-for-advanced-workshop/</loc>
+         <lastmod>2024-07-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://c2sm.github.io/datasets/</loc>
          <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
