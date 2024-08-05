@@ -8,13 +8,13 @@ To stay informed about what is going on in the ICON world and to get to know oth
 C2SM facilitates the utilisation of ICON on the [Piz Daint :material-open-in-new:](https://www.cscs.ch/computers/piz-daint){:target="_blank"} and [Euler :material-open-in-new:](https://scicomp.ethz.ch/wiki/Euler){:target="_blank"} computing platforms for the CPU and GPU architectures.
 
 ### Supported release
-The latest release distributed by C2SM, currently `2024.01`, is continuously being tested on both Piz Daint and Euler and receives patches when necessary.
+The latest release distributed by C2SM, currently [`2024.07` :material-open-in-new:](https://github.com/C2SM/icon/tree/2024.07){:target="_blank"}, is continuously being tested on both Piz Daint and Euler and receives patches when necessary.
 
 ## Mailing list
 If you use ICON, please follow [these instructions](../events/icon_meetings/index.md#c2sm-icon-mailing-list) to subscribe to our mailing list.
 
 ## Access
-The ICON repository is hosted on the C2SM GitHub organisation. If you do not have access, please follow the instructions under [How to get Access](../index.md#how-to-get-access).
+The [ICON repository :material-open-in-new:](https://github.com/C2SM/icon){:target="_blank"} is hosted on the C2SM GitHub organisation. If you do not have access, please follow the instructions under [How to get Access](../index.md#how-to-get-access).
 
 Once you have access, clone the repository from GitHub using the SSH protocol:
 
@@ -28,6 +28,17 @@ The ICON build process is almost identical for Piz Daint and Euler. For both mac
 
 ### Piz Daint
 To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/cscs/SPACK_TAG_DAINT :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG_DAINT){:target="_blank"}.
+
+After building ICON using `spack install`, you need to create a `setting` file, which is only necessary once after the first compilation:
+
+=== "daint_gpu_nvhpc"
+    ```shell
+    SPACK_TAG=$(cat "config/cscs/SPACK_TAG_C2SM")
+    ENV_NAME=daint_gpu_nvhpc # modify if necessary
+    module load daint-gpu CDO
+    rm -f setting
+    ./config/cscs/create_sh_env $SPACK_TAG $ENV_NAME
+    ```
 
 ### Euler
 To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/ethz/SPACK_TAG_EULER :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/ethz/SPACK_TAG_EULER){:target="_blank"}.
