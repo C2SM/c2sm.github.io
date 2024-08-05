@@ -2,7 +2,7 @@ name: Update Datasets and Create PR
 
 on:
   schedule:
-    - cron: '0 2 * * *' # Runs at 02:00 UTC every day
+    - cron: '0 2 * * 0' # Runs at 02:00 UTC every Sunday
   workflow_dispatch: # This line enables manual triggering of the workflow
 
 jobs:
@@ -29,13 +29,17 @@ jobs:
         id: git-check
         run: |
           git diff
-          if [ -n "$(git status -s)" ]; then
+          echo "git diff done"
+          if ! git diff --quiet; then
             echo "Changes detected"
-            echo "::set-output name=changes_detected::true"
+            echo "changes_detected=true" >> "$GITHUB_ENV"
+          else
+            echo "changes_detected=false" >> "$GITHUB_ENV"
           fi
+          echo "check done"
 
       - name: Commit changes
-        if: steps.git-check.outputs.changes_detected == 'true'
+        if: env.changes_detected == 'true'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
@@ -43,7 +47,7 @@ jobs:
           git commit -m "GitHub Action: Update datasets"
 
       - name: Create Pull Request
-        if: steps.git-check.outputs.changes_detected == 'true'
+        if: env.changes_detected == 'true'
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} 
@@ -53,23 +57,10 @@ jobs:
           branch: "update-datasets-${{ github.run_number }}"
           delete-branch: true
 
-      - name: Install GitHub CLI
-        run: |
-          if ! command -v gh &> /dev/null
-          then
-              echo "GitHub CLI not found, installing..."
-              curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
-              echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-              sudo apt update
-              sudo apt install gh -y
-          else
-              echo "GitHub CLI is already installed."
-          fi
-
       - name: Enable Auto-Merge for the PR
-        if: steps.git-check.outputs.changes_detected == 'true'
+        if: env.changes_detected == 'true'
         run: |
           PR_NUMBER=$(echo ${{ steps.create-pr.outputs.pull-request-number }})
-          gh pr merge $PR_NUMBER --auto --merge
+          gh pr merge $PR_NUMBER --auto --squash
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}

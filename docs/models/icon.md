@@ -62,9 +62,9 @@ srun -N 1 -c 12 --mem-per-cpu=20G spack install -v -j 12
     - The resulting executable is not tested.
     - Anything can go wrong
 
-- Get `spack-c2sm` on the `uenv_ci` branch
+- Get `spack-c2sm`
     ```shell
-    git clone --depth 1 --recurse-submodules --shallow-submodules -b uenv_ci https://github.com/C2SM/spack-c2sm.git
+    git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/C2SM/spack-c2sm.git
     ```
 
 - Start user environment

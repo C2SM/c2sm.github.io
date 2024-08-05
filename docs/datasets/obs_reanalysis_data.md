@@ -86,7 +86,8 @@
     /store/c2sm/c2sme/reanalyses_dkrz/ERA5
     ```
 
-- Size: 50 TB
+- Size: 54 TB
+- Number of files: 21,460
 - Access: direct
 - Status: updated
 - Time period: 1979 - present
@@ -156,8 +157,8 @@
     /net/atmos/data/cerra/processed/v1/
     ```
 
-- Size: 7.72 TB :material-information-outline:{ title="last updated: 2024-07-15 01:42:35" }
-- Number of files: 1,824 :material-information-outline:{ title="last updated: 2024-07-15 01:42:35" }
+- Size: 7.72 TB :material-information-outline:{ title="last updated: 2024-08-04 01:42:34" }
+- Number of files: 1,824 :material-information-outline:{ title="last updated: 2024-08-04 01:42:34" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -198,8 +199,8 @@
     /net/atmos/data/cerra-land/processed/v1/
     ```
 
-- Size: 1.78 TB :material-information-outline:{ title="last updated: 2024-07-15 01:42:35" }
-- Number of files: 1,016 :material-information-outline:{ title="last updated: 2024-07-15 01:42:35" }
+- Size: 1.78 TB :material-information-outline:{ title="last updated: 2024-08-04 01:42:34" }
+- Number of files: 1,016 :material-information-outline:{ title="last updated: 2024-08-04 01:42:34" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -252,8 +253,8 @@
     /nfs/atmos/c2sm/era5/processed/v2
     ```
 
-- Size: 45.76 TB :material-information-outline:{ title="last updated: 2024-07-15 01:43:24" }
-- Number of files: 138,400 :material-information-outline:{ title="last updated: 2024-07-15 01:43:24" }
+- Size: 45.76 TB :material-information-outline:{ title="last updated: 2024-08-04 01:43:22" }
+- Number of files: 138,400 :material-information-outline:{ title="last updated: 2024-08-04 01:43:22" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-present, v2: 1980-present
@@ -293,8 +294,8 @@
     /net/atmos/data/era5-land_cds/processed/v1/
     ```
 
-- Size: 6.64 TB :material-information-outline:{ title="last updated: 2024-07-15 01:42:37" }
-- Number of files: 1,504 :material-information-outline:{ title="last updated: 2024-07-15 01:42:37" }
+- Size: 6.64 TB :material-information-outline:{ title="last updated: 2024-08-04 01:42:36" }
+- Number of files: 1,504 :material-information-outline:{ title="last updated: 2024-08-04 01:42:36" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
