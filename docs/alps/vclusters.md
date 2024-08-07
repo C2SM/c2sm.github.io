@@ -6,19 +6,19 @@
 
 The vCluster dedicated to Weather and Climate is called `santis`.
 
-- [CSCS Knowledge Base for Santis](https://confluence.cscs.ch/display/KB/Santis+Early+Access)
+- [CSCS Knowledge Base for Santis :material-open-in-new:](https://confluence.cscs.ch/display/KB/Santis+Early+Access){:target="_blank"}
 
 ### Todi
 
 An early-access vCluster with the new Grace-Hopper nodes is called `todi`.
 
-- [CSCS Knowledge Base for Todi](https://confluence.cscs.ch/display/KB/Todi+early+access)
+- [CSCS Knowledge Base for Todi :material-open-in-new:](https://confluence.cscs.ch/display/KB/Todi+early+access){:target="_blank"}
 
 ### Eiger
 
 The production partition on Alps is called `eiger`.
 
-- [CSCS Knowledge Base for Eiger](https://confluence.cscs.ch/display/KB/Alps+%28Eiger%29+User+Guide)
+- [CSCS Knowledge Base for Eiger :material-open-in-new:](https://confluence.cscs.ch/display/KB/Alps+%28Eiger%29+User+Guide){:target="_blank"}
 
 ## Access
 

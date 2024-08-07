@@ -12,7 +12,7 @@ Software stacks at CSCS are now accessible through the so-called User Environmen
 
 ## `uenv` command line tool
 
-[:material-link: Official documentation](https://eth-cscs.github.io/uenv/)
+[:material-link: Official documentation :material-open-in-new:](https://eth-cscs.github.io/uenv/){:target="_blank"}
 
 The user environments are registered in a database. The `uenv` command line tool can be used to
 
@@ -21,7 +21,7 @@ The user environments are registered in a database. The `uenv` command line tool
  - run a single command with that uenv mounted
  - access uenv modules
  
- For now, `uenv` isn't available on Balfrin and requires (easy) [manual installation](https://eth-cscs.github.io/uenv/#getting-uenv)
+ For now, `uenv` isn't available on Balfrin and requires (easy) [manual installation :material-open-in-new:](https://eth-cscs.github.io/uenv/#getting-uenv){:target="_blank"}
  
 ### useful commands
 
@@ -51,9 +51,9 @@ srun --uenv=$(uenv image inspect prgenv-gnu --format="{sqfs}")
 
 ## Build your own
 
-[:material-link: Official stackinator documentation](https://eth-cscs.github.io/stackinator/)
+[:material-link: Official stackinator documentation :material-open-in-new:](https://eth-cscs.github.io/stackinator/){:target="_blank"}
 
-Uenvs are generated using the `stackinator` tool and official CSCS recipes are stored in the [`alps-uenv` repo](https://github.com/eth-cscs/alps-uenv). A CI pipeline is in place on this repo that triggers the build of software stack images upon PR. Images are then added to the uenvs registry so that users can query them by metadata. This github action is accessible to whitelisted users and Matthieu will be added to them.
+Uenvs are generated using the `stackinator` tool and official CSCS recipes are stored in the [`alps-uenv` repo :material-open-in-new:](https://github.com/eth-cscs/alps-uenv){:target="_blank"}. A CI pipeline is in place on this repo that triggers the build of software stack images upon PR. Images are then added to the uenvs registry so that users can query them by metadata. This github action is accessible to whitelisted users and Matthieu will be added to them.
 
 !!! note "TODO"
 
