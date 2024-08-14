@@ -3,12 +3,26 @@ import re
 import argparse
 
 def modify_link(line):
-    pattern = r'\[([^\]]+)\]\((http[s]?://[^\s\)]+)\)'
-    replacement = r'[\1 :material-open-in-new:](\2){:target="_blank"}'
-    modified_line, num_subs = re.subn(pattern, replacement, line)
+    # Define patterns for general and download links
+    general_pattern = r'\[([^\]]+)\]\((http[s]?://[^\s\)]+)\)'
+    download_pattern = r'\[([^\]]+)\]\((https://polybox\.ethz\.ch/index\.php/s/[^\s\)]+)\)'
+
+    # Define replacements for general and download links
+    general_replacement = r'[\1 :material-open-in-new:](\2){:target="_blank"}'
+    download_replacement = r'[\1 :material-download:](\2){:target="_blank"}'
+
     # Check if the line was already modified or doesn't need modification
     if ':material-open-in-new:' in line and '{:target="_blank"}' in line:
         return line, False
+    if ':material-download:' in line and '{:target="_blank"}' in line:
+        return line, False
+
+    # Apply the appropriate replacement based on the URL pattern
+    if re.search(download_pattern, line):
+        modified_line, num_subs = re.subn(download_pattern, download_replacement, line)
+    else:
+        modified_line, num_subs = re.subn(general_pattern, general_replacement, line)
+
     return modified_line, num_subs > 0
 
 def process_markdown_file(file_path):
