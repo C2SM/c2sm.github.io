@@ -11,8 +11,8 @@ def modify_link(line):
     icon_external_link = ':material-open-in-new:'
     icon_download = ':material-download:'
     open_new_tab = '{:target="_blank"}'
-    general_replacement = r'[\1 ' + icon_external_link + r'](\2)' + open_new_tab
-    download_replacement = r'[\1 ' + icon_download + r'](\2)' + open_new_tab
+    general_replacement = r'[\1 ' + icon_external_link + r'](\2)'
+    download_replacement = r'[\1 ' + icon_download + r'](\2)'
 
     # Check if the line was already modified or doesn't need modification
     if icon_external_link in line and open_new_tab in line:
