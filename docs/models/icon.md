@@ -2,7 +2,7 @@
 ICON (Icosahedral Nonhydrostatic Weather and Climate Model) is a global model suitable for climate and weather prediction at regional and global domains.
 It is a joint project of [DWD :material-open-in-new:](https://www.dwd.de/DE/Home/home_node.html){:target="_blank"}, [MPI-M :material-open-in-new:](https://mpimet.mpg.de/startseite){:target="_blank"} and [KIT :material-open-in-new:](https://www.kit.edu/){:target="_blank"}.
 
-To stay informed about what is going on in the ICON world and to get to know other ICON users, please attend our [quarterly ICON meeting](../events/icon_meetings/index.md).
+To stay informed about what is going on in the ICON world and to get to know other ICON users, please attend our [quarterly ICON meeting](../events/icon_meetings/index.md){:target="_blank"}.
 
 ## Support status
 C2SM facilitates the utilisation of ICON on the [Piz Daint :material-open-in-new:](https://www.cscs.ch/computers/piz-daint){:target="_blank"} and [Euler :material-open-in-new:](https://scicomp.ethz.ch/wiki/Euler){:target="_blank"} computing platforms for the CPU and GPU architectures.
@@ -11,7 +11,7 @@ C2SM facilitates the utilisation of ICON on the [Piz Daint :material-open-in-new
 The latest release distributed by C2SM, currently [`2024.07` :material-open-in-new:](https://github.com/C2SM/icon/tree/2024.07){:target="_blank"}, is continuously being tested on both Piz Daint and Euler and receives patches when necessary.
 
 ## Mailing list
-If you use ICON, please follow [these instructions](../events/icon_meetings/index.md#c2sm-icon-mailing-list) to subscribe to our mailing list.
+If you use ICON, please follow [these instructions](../events/icon_meetings/index.md#c2sm-icon-mailing-list){:target="_blank"} to subscribe to our mailing list.
 
 ## Access
 The [ICON repository :material-open-in-new:](https://github.com/C2SM/icon){:target="_blank"} is hosted on the C2SM GitHub organisation. If you do not have access, please follow the instructions under [How to get Access](../index.md#how-to-get-access).
@@ -111,12 +111,12 @@ ICON input data are stored at the following locations:
 
 
 ## Toolset
-In the [Tools](../tools/index.md) section, you will find relevant tools for working with ICON:
+In the [Tools](../tools/index.md){:target="_blank"} section, you will find relevant tools for working with ICON:
 
-* [**Extpar**](../tools/extpar.md): External parameters for the ICON grid (preprocessing)
-* [**Processing Chain**](../tools/processing_chain.md): Python workflow tool for ICON
-* [**SPICE**](../tools/spice.md): Starter package for ICON-CLM experiments
-* [**icon-vis**](../tools/icon-vis.md): Python scripts to visualise ICON data
+* [**Extpar**](../tools/extpar.md){:target="_blank"}: External parameters for the ICON grid (preprocessing)
+* [**Processing Chain**](../tools/processing_chain.md){:target="_blank"}: Python workflow tool for ICON
+* [**SPICE**](../tools/spice.md){:target="_blank"}: Starter package for ICON-CLM experiments
+* [**icon-vis**](../tools/icon-vis.md){:target="_blank"}: Python scripts to visualise ICON data
 
 ## Projects
 Learn more about ongoing projects involving ETHZ in the development of ICON:

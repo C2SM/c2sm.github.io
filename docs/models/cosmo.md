@@ -95,7 +95,7 @@ The GPU porting of the dynamical core of COSMO was accomplished by rewriting the
 
 ## Access
 In order to get access to the [COSMO repository :material-open-in-new:](https://github.com/C2SM-RCM/cosmo){:target="_blank"} hosted on the C2SM-RCM GitHub organisation,
-please contact [C2SM Support](mailto:support@c2sm.ethz.ch).
+please contact [C2SM Support](mailto:support@c2sm.ethz.ch){:target="_blank"}.
 
 Once you have access, clone the repository from GitHub using the SSH protocol:
 ```
@@ -107,11 +107,11 @@ If you do not already have an SSH key set up for GitHub but would like to do so,
 For configuring and building COSMO with Spack, please refer to the official spack-c2sm documentation, which provides instructions for [setting up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-ethz-daint-tsa-balfrin-and-euler){:target="_blank"} and [installing COSMO :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#cosmo){:target="_blank"} on Piz Daint and Euler Cluster.
 
 ## Related tools
-In the [Tools](../tools/index.md) section, you will find relevant tools for working with COSMO:
+In the [Tools](../tools/index.md){:target="_blank"} section, you will find relevant tools for working with COSMO:
 
-* [**Extpar:**](../tools/extpar.md) External parameters for the COSMO-grid (preprocessing)
-* [**int2lm:**](../tools/int2lm.md) The interpolation software for the COSMO-model (preprocessing)
-* [**Processing Chain**](../tools/processing_chain.md): Python workflow tool for COSMO
+* [**Extpar:**](../tools/extpar.md){:target="_blank"} External parameters for the COSMO-grid (preprocessing)
+* [**int2lm:**](../tools/int2lm.md){:target="_blank"} The interpolation software for the COSMO-model (preprocessing)
+* [**Processing Chain**](../tools/processing_chain.md){:target="_blank"}: Python workflow tool for COSMO
 
 
 ## Documentation

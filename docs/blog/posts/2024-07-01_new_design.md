@@ -21,7 +21,7 @@ A big advantage of Material for MkDocs is how it helps us keep a consistent styl
 - News are managed with the `blog` feature and appear more prominently in the navigation bar
 - Table of Content now visible for each site on the right side bar
 - Clear distinction between internal and external hyperlinks
-- Replaced [Datasets](../../datasets/climate_model_data.md) tables with sections and listings
+- Replaced [Datasets](../../datasets/climate_model_data.md){:target="_blank"} tables with sections and listings
 - The [source code :material-open-in-new:](https://github.com/C2SM/c2sm.github.io){:target="_blank"} is now public (so you can try it out by yourself)
 
 ## Your Thoughts Matter

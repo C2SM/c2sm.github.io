@@ -43,11 +43,11 @@ This will allow you to submit new tasks, receive support from the C2SM Core Team
 2. Get access to the [C2SM GitHub organisation :material-open-in-new:](https://github.com/C2SM){:target="_blank"}.
    - Reach out to your group’s technical contact and provide them with your GitHub account name.
      They will be responsible for adding you to the appropriate user group. 
-   - If you do not know who your group's technical contact is, please send an email to [support@c2sm.ethz.ch](mailto:support@c2sm.ethz.ch).
+   - If you do not know who your group's technical contact is, please send an email to [support@c2sm.ethz.ch](mailto:support@c2sm.ethz.ch){:target="_blank"}.
 
 ## Are you a new member of the C2SM community?
 - Designate a technical contact within your group, preferably a permanent member who is familiar with technical aspects.
-- Contact us by visiting our office in person or by emailing us at [support@c2sm.ethz.ch](mailto:support@c2sm.ethz.ch).
+- Contact us by visiting our office in person or by emailing us at [support@c2sm.ethz.ch](mailto:support@c2sm.ethz.ch){:target="_blank"}.
 - Once contacted, we will initiate the setup of your group's user group on GitHub for effective collaboration.
 ## C2SM on GitHub
 
@@ -59,4 +59,4 @@ This is our main GitHub organisation, which contains many repositories, includin
 
 ### [C2SM-RCM :material-open-in-new:](https://github.com/C2SM-RCM){:target="_blank"}
 
-The C2SM-RCM organisation contains all codes related to COSMO and tools like EXTPAR. For questions and access, please contact [Jonas Jucker](mailto:jonas.jucker@c2sm.ethz.ch).
+The C2SM-RCM organisation contains all codes related to COSMO and tools like EXTPAR. For questions and access, please contact [Jonas Jucker](mailto:jonas.jucker@c2sm.ethz.ch){:target="_blank"}.
