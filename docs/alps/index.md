@@ -7,11 +7,11 @@
 
 # The Alps System
 
-Alps is a distributed HPC infrastructure managed by CSCS. Contrary to traditional HPC, it is composed of several logical units called vClusters (versatile clusters). From the users perspective, they play the role of a traditional HPC machine, each vCluster being tailored to the needs of a specific community. This setup also enables geographical distribution of vClusters which facilitates geo-redundancy. The main physical piece of Alps is hosted at CSCS in Lugano and a detailed description can be found at [https://www.cscs.ch/computers/alps :material-open-in-new:](https://www.cscs.ch/computers/alps){:target="_blank"}
+Alps is a distributed HPC infrastructure managed by CSCS. Contrary to traditional HPC, it is composed of several logical units called vClusters (versatile clusters). From the users perspective, they play the role of a traditional HPC machine, each vCluster being tailored to the needs of a specific community. This setup also enables geographical distribution of vClusters which facilitates geo-redundancy. The main physical piece of Alps is hosted at CSCS in Lugano and a detailed description can be found at [their website :material-open-in-new:](https://www.cscs.ch/computers/alps){:target="_blank"}.
 
 ## vClusters
 
-The following vClusters are hosted at CSCS
+The following vClusters are hosted at CSCS:
 
 | vCluster | Activity          | Share            |
 |----------|-------------------|------------------|
@@ -21,11 +21,13 @@ The following vClusters are hosted at CSCS
 | Tödi     | Testing           | few GH nodes     |
 | Eiger    |                   | multi-core nodes |
 
+*GH = Grace Hopper*
+
 ## File Systems
 
 !!! note "TODO"
 
-    - [ ] `/users` `/store` and `/scratch`
+    - [ ] `/users`, `/store` and `/scratch`
     - [ ] reserved space per vClsuter vs shared space
     - [ ] ...
 

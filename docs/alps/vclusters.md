@@ -7,7 +7,7 @@
 
 # Supported vClusters
 
-This page is hosting information about C2SM supported vClusters 
+This page is hosting information about C2SM supported vClusters. 
 
 ## Access
 
@@ -33,13 +33,14 @@ This would allow standard connections like `ssh santis.cscs.ch` but also specify
 
 Daint is the vCluster dedicated to the User Lab. It is deployed on ~800 Grace-Hopper nodes.
 
-Even though Weather and Climate also have the dedicated vCluster Santis (see [bellow](#santis)), traditional projects will be running on Daint.
+Even though Weather and Climate also has the dedicated vCluster Santis (see [below](#santis)), traditional projects will be running on Daint.
 
 !!! warning "Hostname conflict"
 
-    For the duration of the overlap between the current expiring Piz Daint and its reincarnation as a vCluster, there will be two different host names. Most probably the current Piz Daint will continue being accessible at `daint.cscs.ch` while the vCluster hostname isn't known yet.
+    For the duration of the overlap between the current expiring Piz Daint and its reincarnation as a vCluster, there will be two different host names. Most probably the current Piz Daint will continue being accessible at `daint.cscs.ch` while the vCluster hostname is not known yet.
 
 ### Uenvs
+
 List of currently supported Uenvs on Daint:
 
 | uenv        | activity                      |
@@ -56,7 +57,7 @@ List of currently supported Uenvs on Daint:
 
 ## Santis
 
-Santis is dedicated to Weather and Climate and is deployed on ~400 Grace-Hopper nodes. At least at the beginning, it will be hosting only [ExClaim ::material-open-in-new::](https://c2sm.ethz.ch/research/exclaim.html){:target="_blank"}' and related projects.
+Santis is dedicated to Weather and Climate and is deployed on ~400 Grace-Hopper nodes. At least at the beginning, it will be hosting only [EXCLAIM :material-open-in-new:](https://c2sm.ethz.ch/research/exclaim.html){:target="_blank"} and related projects.
 
 ### Uenvs
 
