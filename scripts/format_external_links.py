@@ -18,7 +18,8 @@ def modify_link(line):
     general_replacement = r'[\1 ' + icon_external_link + r'](\2)'
     download_replacement = r'[\1 ' + icon_download + r'](\2)'
 
-    if general_pattern in line:
+    # Check if the general pattern appears in the line
+    if re.search(general_pattern, line):
         # Check for link icon
         if icon_external_link not in line and icon_download not in line:
             new_line = re.sub(download_pattern, download_replacement, line)
