@@ -8,14 +8,31 @@ def modify_link(line):
     download_pattern = r'\[([^\]]+)\]\((https://polybox\.ethz\.ch/index\.php/s/[^\s\)]+)\)'
 
     # Define replacements for general and download links
-    general_replacement = r'[\1 :material-open-in-new:](\2){:target="_blank"}'
-    download_replacement = r'[\1 :material-download:](\2){:target="_blank"}'
+    icon_external_link = ':material-open-in-new:'
+    icon_download = ':material-download:'
+    open_new_tab = '{:target="_blank"}'
+    general_replacement = r'[\1 ' + icon_external_link + r'](\2)' + open_new_tab
+    download_replacement = r'[\1 ' + icon_download + r'](\2)' + open_new_tab
 
     # Check if the line was already modified or doesn't need modification
-    if ':material-open-in-new:' in line and '{:target="_blank"}' in line:
+    if icon_external_link in line and open_new_tab in line:
         return line, False
-    if ':material-download:' in line and '{:target="_blank"}' in line:
+    if icon_download in line and open_new_tab in line:
         return line, False
+
+    # Check for incomplete or incorrect custom formatting
+    if icon_external_link in line and open_new_tab not in line:
+        line = line.replace(icon_external_link, icon_external_link) + open_new_tab
+        return line, True
+    if icon_download in line and open_new_tab not in line:
+        line = line.replace(icon_download, icon_download) + open_new_tab
+        return line, True
+    if open_new_tab in line and icon_external_link not in line and icon_download not in line:
+        if re.search(download_pattern, line):
+            line = re.sub(download_pattern, download_replacement, line)
+        else:
+            line = re.sub(general_pattern, general_replacement, line)
+        return line, True
 
     # Apply the appropriate replacement based on the URL pattern
     if re.search(download_pattern, line):
@@ -32,23 +49,15 @@ def process_markdown_file(file_path):
         for i, line in enumerate(lines):
             new_line, changed = modify_link(line)
             if changed:
-                modified = True
                 lines[i] = new_line
+                modified = True
         if modified:
             file.seek(0)
             file.writelines(lines)
             file.truncate()
-            print(f"Modified: {file_path}")
-
-def main(start_path):
-    for root, dirs, files in os.walk(start_path):
-        for file in files:
-            if file.endswith('.md'):
-                process_markdown_file(os.path.join(root, file))
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Check markdown links in files.')
-    parser.add_argument('-p', '--path', default=os.getcwd(), help='Base path to search for markdown files. Defaults to current working directory.')
+    parser = argparse.ArgumentParser(description="Modify external links in markdown files.")
+    parser.add_argument("file_path", help="Path to the markdown file to be processed.")
     args = parser.parse_args()
-
-    main(args.path)
+    process_markdown_file(args.file_path)
