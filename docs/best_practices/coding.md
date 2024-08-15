@@ -50,6 +50,7 @@ Check out our Git course for examples of [Custom Git Hooks :material-open-in-new
 
 ## Useful tools for coding
 Two popular tools for coding are [Visual Studio (VS) Code :material-open-in-new:](https://code.visualstudio.com){:target="_blank"} and [PyCharm :material-open-in-new:](https://www.jetbrains.com/pycharm/){:target="_blank"}. Here are instructions for setting up and using Visual Studio Code with SSH on a CSCS machine.
+
 ### VS Code
 1. [Download :material-open-in-new:](https://code.visualstudio.com/download){:target="_blank"} and install VS Code on your computer.
 2. Install extensions:
