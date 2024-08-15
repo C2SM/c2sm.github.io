@@ -1,4 +1,4 @@
 nav:
   - Alps Infrastructure: index.md
-  - supported vClusters: vclusters.md
+  - Supported vClusters: vclusters.md
   - User Environments: uenvs.md
