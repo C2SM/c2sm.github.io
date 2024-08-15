@@ -33,7 +33,7 @@ This would allow standard connections like `ssh santis.cscs.ch` but also specify
 
 Daint is the vCluster dedicated to the User Lab. It is deployed on ~800 Grace-Hopper nodes.
 
-Even though Weather and Climate also has the dedicated vCluster Santis (see [below](#santis){:target="_blank"}), traditional projects will be running on Daint.
+Even though Weather and Climate also has the dedicated vCluster Santis (see [below](#santis)), traditional projects will be running on Daint.
 
 !!! warning "Hostname conflict"
 

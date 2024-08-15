@@ -8,7 +8,7 @@ Whether you're new to coding or already working on it, there are two important t
 
 If you're new to Git or want to improve your Git skills, we recommend attending our annual **Git for Beginners** and/or **Git for Advanced** courses.
 Additionally, all course materials are publicly available and can be used throughout the year.
-For more details, please visit [Technical Events - Git Courses](../events/git_courses.md){:target="_blank"}.
+For more details, please visit [Technical Events - Git Courses](../events/git_courses.md).
 
 ### Key Concepts of Git
 
@@ -37,12 +37,12 @@ The specific tests you need will depend on your project and its requirements. He
 ### Unit Tests
 
 These tests are for testing individual components or functions of your code to ensure they work correctly in isolation.
-Find an [example for unit tests :material-open-in-new:](https://github.com/C2SM/spack-c2sm/blob/main/test/unit_test.py){:target="_blank"} in our spack-c2sm repository.
+Find an [example for unit tests](https://github.com/C2SM/spack-c2sm/blob/main/test/unit_test.py){:target="_blank"} in our spack-c2sm repository.
 
 ### Integrations Tests
 
 These tests are to check how different parts of your code work together and communicate with each other.
-Find an [example for integration tests :material-open-in-new:](https://github.com/C2SM/spack-c2sm/blob/main/test/integration_test.py){:target="_blank"} in our spack-c2sm repository.
+Find an [example for integration tests :material-open-in-new:](https://github.com/C2SM/spack-c2sm/blob/main/test/integration_test.py) in our spack-c2sm repository.
 
 ### System Tests
 
