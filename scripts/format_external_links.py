@@ -18,24 +18,25 @@ def modify_link(line):
     general_replacement = r'[\1 ' + icon_external_link + r'](\2)'
     download_replacement = r'[\1 ' + icon_download + r'](\2)'
 
-    # Check for link icon
-    if icon_external_link not in line and icon_download not in line:
-        new_line = re.sub(download_pattern, download_replacement, line)
-        if new_line != line:
-            line = new_line
-            replaced = True
-        else:
-            new_line = re.sub(general_pattern, general_replacement, line)
+    if general_pattern in line:
+        # Check for link icon
+        if icon_external_link not in line and icon_download not in line:
+            new_line = re.sub(download_pattern, download_replacement, line)
             if new_line != line:
                 line = new_line
                 replaced = True
+            else:
+                new_line = re.sub(general_pattern, general_replacement, line)
+                if new_line != line:
+                    line = new_line
+                    replaced = True
 
-    # Check for new tab attribute
-    if open_new_tab not in line:
-        new_line = re.sub(r'(\[.*?\]\(.*?\))', r'\1' + open_new_tab, line)
-        if new_line != line:
-            line = new_line
-            replaced = True
+        # Check for new tab attribute
+        if open_new_tab not in line:
+            new_line = re.sub(r'(\[.*?\]\(.*?\))', r'\1' + open_new_tab, line)
+            if new_line != line:
+                line = new_line
+                replaced = True
 
     return line, replaced
 
