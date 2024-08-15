@@ -22,10 +22,10 @@ def modify_link(line):
 
     # Check for incomplete or incorrect custom formatting
     if icon_external_link in line and open_new_tab not in line:
-        line = line.replace(icon_external_link, icon_external_link) + open_new_tab
+        line = re.sub(r'(\[.*?\]\(.*?\))', r'\1' + open_new_tab, line)
         return line, True
     if icon_download in line and open_new_tab not in line:
-        line = line.replace(icon_download, icon_download) + open_new_tab
+        line = re.sub(r'(\[.*?\]\(.*?\))', r'\1' + open_new_tab, line)
         return line, True
     if open_new_tab in line and icon_external_link not in line and icon_download not in line:
         if re.search(download_pattern, line):
@@ -41,21 +41,6 @@ def modify_link(line):
         modified_line, num_subs = re.subn(general_pattern, general_replacement, line)
 
     return modified_line, num_subs > 0
-
-def process_markdown_file(file_path):
-    with open(file_path, 'r+', encoding='utf-8') as file:
-        lines = file.readlines()
-        modified = False
-        for i, line in enumerate(lines):
-            new_line, changed = modify_link(line)
-            if changed:
-                lines[i] = new_line
-                modified = True
-        if modified:
-            file.seek(0)
-            file.writelines(lines)
-            file.truncate()
-            print(f"Modified: {file_path}")
 
 def main(start_path):
     for root, dirs, files in os.walk(start_path):
