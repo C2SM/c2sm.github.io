@@ -20,15 +20,17 @@ def modify_link(line):
     if icon_download in line and open_new_tab in line:
         return line, False
 
-    # Check for incomplete or incorrect custom formatting
-    if open_new_tab not in line:
-        line = re.sub(r'(\[.*?\]\(.*?\))', r'\1' + open_new_tab, line)
-        return line, True
+    # Check for link icon
     if icon_external_link not in line and icon_download not in line:
         if re.search(download_pattern, line):
             line = re.sub(download_pattern, download_replacement, line)
         else:
             line = re.sub(general_pattern, general_replacement, line)
+        return line, True
+
+    # Check for new tab attribute
+    if open_new_tab not in line:
+        line = re.sub(r'(\[.*?\]\(.*?\))', r'\1' + open_new_tab, line)
         return line, True
 
     # Apply the appropriate replacement based on the URL pattern
