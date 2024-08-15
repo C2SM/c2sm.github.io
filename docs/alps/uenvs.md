@@ -25,7 +25,7 @@ A description of user environments and the `uenv` tool can be found in the [CSCS
 
 ## Uenvs central Registry and C2SM uenvs
 
-The user environments provided by CSCS are registered in a central database. In the long run we should be able to operate only with those but, at least for the initial period, there is also the need for uenvs provided by C2SM. These are accessed by their absolute path. All supported uenvs are documented in the corresponding vClsuter section of the [dedicated page](../vclusters/){:target="_blank"}. 
+The user environments provided by CSCS are registered in a central database. In the long run we should be able to operate only with those but, at least for the initial period, there is also the need for uenvs provided by C2SM. These are accessed by their absolute path. All supported uenvs are documented in the corresponding vClsuter section of the [dedicated page](../vclusters/). 
 
 ## The `uenv` command line tool
 

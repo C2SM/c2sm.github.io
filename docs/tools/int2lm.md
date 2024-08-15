@@ -10,7 +10,7 @@ The `master` branch is continuously being tested on Piz Daint
 ## Access
 
 In order to get access to the [INT2LM repository hosted on the C2SM-RCM GitHub organisation :material-open-in-new:](https://github.com/C2SM-RCM/int2lm){:target="_blank"}, 
-please contact [C2SM Support](mailto:support@c2sm.ethz.ch){:target="_blank"}.
+please contact [C2SM Support](mailto:support@c2sm.ethz.ch).
 
 ## Compile
 
@@ -33,4 +33,4 @@ This mitigates slowdown for large input files via new namelist parameters in nam
 The parameters `ie_in_tot` and `je_in_tot` define the length of the data to be read, instead of the total length present in the NetCDF input file. 
 
 ### Schematic about the two ways for reading NetCDF input files
-![](images/int2lm_subset_schematic.png){:target="_blank"}
+![](images/int2lm_subset_schematic.png)

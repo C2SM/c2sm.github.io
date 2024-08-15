@@ -4,12 +4,12 @@ The Core Team accepts tasks from the three different areas mentioned above, each
 
 !!! info
     Please submit concrete tasks by following the instructions on our GitHub repository [Tasks-Support :material-open-in-new:](https://github.com/C2SM/Tasks-Support){:target="_blank"}.
-    If you do not have access, please follow the instructions under [How to get Access](../index.md#how-to-get-access){:target="_blank"}.
+    If you do not have access, please follow the instructions under [How to get Access](../index.md#how-to-get-access).
 
 
 ## Requirements for Tasks
 
-Tasks are one-​time assignments that typically involve the development of a new model feature, acceleration/optimisation of a model feature, or other technical improvements to a model. Tasks are proposed by one or more C2SM members and are approved by the C2SM Working Groups (WGs). In case of tasks from C2SM Member Groups, priority will be given to tasks with greater benefit to multiple C2SM groups. Tasks must be related to our supported [tools](../tools/index.md){:target="_blank"} and [models](../models/index.md){:target="_blank"}.
+Tasks are one-​time assignments that typically involve the development of a new model feature, acceleration/optimisation of a model feature, or other technical improvements to a model. Tasks are proposed by one or more C2SM members and are approved by the C2SM Working Groups (WGs). In case of tasks from C2SM Member Groups, priority will be given to tasks with greater benefit to multiple C2SM groups. Tasks must be related to our supported [tools](../tools/index.md) and [models](../models/index.md).
 
 
 ## Overview of current tasks
