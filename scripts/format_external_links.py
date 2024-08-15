@@ -61,4 +61,3 @@ if __name__ == "__main__":
     parser.add_argument('-p', '--path', default=os.getcwd(), help='Base path to search for markdown files. Defaults to current working directory.')
     args = parser.parse_args()
     main(args.path) 
-    process_markdown_file(args.file_path)
