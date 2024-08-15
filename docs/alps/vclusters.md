@@ -7,29 +7,7 @@
 
 # Supported vClusters
 
-## Available Clusters
-
-### Daint
-
-Daint is the vCluster dedicated to the User Lab. Even though Weather and Climate 
-
-### Santis
-
-The vCluster dedicated to Weather and Climate is called `santis`.
-
-- [CSCS Knowledge Base for Santis :material-open-in-new:](https://confluence.cscs.ch/display/KB/Santis+Early+Access){:target="_blank"}
-
-### Todi
-
-An early-access vCluster with the new Grace-Hopper nodes is called `todi`.
-
-- [CSCS Knowledge Base for Todi :material-open-in-new:](https://confluence.cscs.ch/display/KB/Todi+early+access){:target="_blank"}
-
-### Eiger
-
-The production partition on Alps is called `eiger`.
-
-- [CSCS Knowledge Base for Eiger :material-open-in-new:](https://confluence.cscs.ch/display/KB/Alps+%28Eiger%29+User+Guide){:target="_blank"}
+This page is hosting information about C2SM supported vClusters 
 
 ## Access
 
@@ -38,18 +16,58 @@ A section in the `~/.ssh/config` could look as follows:
 
 ```config title="~/.ssh.config"
 Host ela
-    HostName ela.cscs.ch
-    User cscsusername
-    ForwardAgent yes
-    IdentityFile ~/.ssh/cscs-key
-Host santis
-    HostName santis.cscs.ch
-    User cscsusername
-    ProxyJump ela
-    IdentityFile ~/.ssh/cscs-key
+  Hostname ela.cscs.ch
+  User cscsusername
+  IdentityFile ~/.ssh/cscs-key
+
+Host balfrin* daint* santis* todi*
+  Hostname %h.cscs.ch
+  User cscsusername
+  IdentityFile ~/.ssh/cscs-key
+  ProxyJump ela
 ```
 
-## Software Stacks
+This would allow standard connections like `ssh santis.cscs.ch` but also specifying the login node like `ssh santis-ln002.cscs.ch` if needed.
 
-Software stacks are provided through the so-called [user environments](uenvs.md).
+## Daint
 
+Daint is the vCluster dedicated to the User Lab. It is deployed on ~800 Grace-Hopper nodes.
+
+Even though Weather and Climate also have the dedicated vCluster Santis (see [bellow](#santis)), traditional projects will be running on Daint.
+
+!!! warning "Hostname conflict"
+
+    For the duration of the overlap between the current expiring Piz Daint and its reincarnation as a vCluster, there will be two different host names. Most probably the current Piz Daint will continue being accessible at `daint.cscs.ch` while the vCluster hostname isn't known yet.
+
+### Uenvs
+List of currently supported Uenvs on Daint:
+
+| uenv        | activity                      |
+|-------------|-------------------------------|
+| icon-vx:rcy | build and run icon            |
+| prepost-vx  | pre and post processing tools |
+|             |                               |
+
+### Storage
+
+!!! note "TODO"
+
+    - [ ] Storage
+
+## Santis
+
+Santis is dedicated to Weather and Climate and is deployed on ~400 Grace-Hopper nodes. At least at the beginning, it will be hosting only [ExClaim ::material-open-in-new::](https://c2sm.ethz.ch/research/exclaim.html){:target="_blank"}' and related projects.
+
+### Uenvs
+
+| uenv        | activity                      |
+|-------------|-------------------------------|
+| icon-vx:rcy | build and run icon            |
+| prepost-vx  | pre and post processing tools |
+|             |                               |
+
+### Storage
+
+!!! note "TODO"
+
+    - [ ] Storage
