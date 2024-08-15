@@ -3,6 +3,8 @@ import re
 import argparse
 
 def modify_link(line):
+    replaced = False
+
     # Define patterns for general and download links
     general_pattern = r'\[([^\]]+)\]\((http[s]?://[^\s\)]+)\)'
     download_pattern = r'\[([^\]]+)\]\((https://polybox\.ethz\.ch/index\.php/s/[^\s\)]+)\)'
@@ -14,32 +16,26 @@ def modify_link(line):
     general_replacement = r'[\1 ' + icon_external_link + r'](\2)'
     download_replacement = r'[\1 ' + icon_download + r'](\2)'
 
-    # Check if the line was already modified or doesn't need modification
-    if icon_external_link in line and open_new_tab in line:
-        return line, False
-    if icon_download in line and open_new_tab in line:
-        return line, False
-
     # Check for link icon
     if icon_external_link not in line and icon_download not in line:
-        if re.search(download_pattern, line):
-            line = re.sub(download_pattern, download_replacement, line)
+        new_line = re.sub(download_pattern, download_replacement, line)
+        if new_line != line:
+            line = new_line
+            replaced = True
         else:
-            line = re.sub(general_pattern, general_replacement, line)
-        return line, True
+            new_line = re.sub(general_pattern, general_replacement, line)
+            if new_line != line:
+                line = new_line
+                replaced = True
 
     # Check for new tab attribute
     if open_new_tab not in line:
-        line = re.sub(r'(\[.*?\]\(.*?\))', r'\1' + open_new_tab, line)
-        return line, True
+        new_line = re.sub(r'(\[.*?\]\(.*?\))', r'\1' + open_new_tab, line)
+        if new_line != line:
+            line = new_line
+            replaced = True
 
-    # Apply the appropriate replacement based on the URL pattern
-    if re.search(download_pattern, line):
-        modified_line, num_subs = re.subn(download_pattern, download_replacement, line)
-    else:
-        modified_line, num_subs = re.subn(general_pattern, general_replacement, line)
-
-    return modified_line, num_subs > 0
+    return line, replaced
 
 
 def process_markdown_file(file_path):
@@ -51,11 +47,12 @@ def process_markdown_file(file_path):
             if changed:
                 modified = True
                 lines[i] = new_line
+                print(f"Modifying line {i+1} in file: {file_path}")
         if modified:
             file.seek(0)
             file.writelines(lines)
             file.truncate()
-            print(f"Modified: {file_path}")
+            print(f"File modified: {file_path}")
 
 
 def main(start_path):
