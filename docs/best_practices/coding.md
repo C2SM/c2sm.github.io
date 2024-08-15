@@ -37,12 +37,12 @@ The specific tests you need will depend on your project and its requirements. He
 ### Unit Tests
 
 These tests are for testing individual components or functions of your code to ensure they work correctly in isolation.
-Find an [example for unit tests](https://github.com/C2SM/spack-c2sm/blob/main/test/unit_test.py){:target="_blank"} in our spack-c2sm repository.
+Find an [example for unit tests :material-open-in-new:](https://github.com/C2SM/spack-c2sm/blob/main/test/unit_test.py){:target="_blank"}{:target="_blank"} in our spack-c2sm repository.
 
 ### Integrations Tests
 
 These tests are to check how different parts of your code work together and communicate with each other.
-Find an [example for integration tests :material-open-in-new:](https://github.com/C2SM/spack-c2sm/blob/main/test/integration_test.py) in our spack-c2sm repository.
+Find an [example for integration tests :material-open-in-new:](https://github.com/C2SM/spack-c2sm/blob/main/test/integration_test.py){:target="_blank"} in our spack-c2sm repository.
 
 ### System Tests
 
