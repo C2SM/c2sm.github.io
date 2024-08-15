@@ -42,6 +42,23 @@ def modify_link(line):
 
     return modified_line, num_subs > 0
 
+
+def process_markdown_file(file_path):
+    with open(file_path, 'r+', encoding='utf-8') as file:
+        lines = file.readlines()
+        modified = False
+        for i, line in enumerate(lines):
+            new_line, changed = modify_link(line)
+            if changed:
+                modified = True
+                lines[i] = new_line
+        if modified:
+            file.seek(0)
+            file.writelines(lines)
+            file.truncate()
+            print(f"Modified: {file_path}")
+
+
 def main(start_path):
     for root, dirs, files in os.walk(start_path):
         for file in files:
