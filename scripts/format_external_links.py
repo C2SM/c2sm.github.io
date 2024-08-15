@@ -5,14 +5,16 @@ import argparse
 def modify_link(line):
     replaced = False
 
+    # Define icons and attributes
+    icon_external_link = ':material-open-in-new:'
+    icon_download = ':material-download:'
+    open_new_tab = '{:target="_blank"}'
+
     # Define patterns for general and download links
     general_pattern = r'\[([^\]]+)\]\((http[s]?://[^\s\)]+)\)'
     download_pattern = r'\[([^\]]+)\]\((https://polybox\.ethz\.ch/index\.php/s/[^\s\)]+)\)'
 
     # Define replacements for general and download links
-    icon_external_link = ':material-open-in-new:'
-    icon_download = ':material-download:'
-    open_new_tab = '{:target="_blank"}'
     general_replacement = r'[\1 ' + icon_external_link + r'](\2)'
     download_replacement = r'[\1 ' + icon_download + r'](\2)'
 
