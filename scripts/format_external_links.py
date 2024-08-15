@@ -21,13 +21,10 @@ def modify_link(line):
         return line, False
 
     # Check for incomplete or incorrect custom formatting
-    if icon_external_link in line and open_new_tab not in line:
+    if open_new_tab not in line:
         line = re.sub(r'(\[.*?\]\(.*?\))', r'\1' + open_new_tab, line)
         return line, True
-    if icon_download in line and open_new_tab not in line:
-        line = re.sub(r'(\[.*?\]\(.*?\))', r'\1' + open_new_tab, line)
-        return line, True
-    if open_new_tab in line and icon_external_link not in line and icon_download not in line:
+    if icon_external_link not in line and icon_download not in line:
         if re.search(download_pattern, line):
             line = re.sub(download_pattern, download_replacement, line)
         else:
