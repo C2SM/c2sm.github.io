@@ -57,7 +57,8 @@ def process_markdown_file(file_path):
             file.truncate()
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Modify external links in markdown files.")
-    parser.add_argument("file_path", help="Path to the markdown file to be processed.")
+    parser = argparse.ArgumentParser(description='Check markdown links in files.')
+    parser.add_argument('-p', '--path', default=os.getcwd(), help='Base path to search for markdown files. Defaults to current working directory.')
     args = parser.parse_args()
+    main(args.path) 
     process_markdown_file(args.file_path)
