@@ -33,6 +33,6 @@ The following vClusters are hosted at CSCS
 
 As an introduction to the Alps infrastructure, the material of our [C2SM workshop "Switching to Alps"](../blog/posts/2024-07-02_switching_to_Alps.md) is available:
 
-[Recording :material-download:](https://polybox.ethz.ch/index.php/s/oSxyJgTjyvJKX8B){:target="_blank"}<br>
-[Slides presenting Alps, vClusters and Uenvs :material-download:](https://polybox.ethz.ch/index.php/s/jvtIYkBvHUSGZYD){:target="_blank"}<br>
-[Slides for the integration of Uenvs in `spack-c2sm` :material-download:](https://polybox.ethz.ch/index.php/s/SWbYrOVRIprke60){:target="_blank"} 
+- [Recording :material-download:](https://polybox.ethz.ch/index.php/s/oSxyJgTjyvJKX8B){:target="_blank"}<br>
+- [Slides presenting Alps, vClusters and Uenvs :material-download:](https://polybox.ethz.ch/index.php/s/jvtIYkBvHUSGZYD){:target="_blank"}<br>
+- [Slides for the integration of Uenvs in `spack-c2sm` :material-download:](https://polybox.ethz.ch/index.php/s/SWbYrOVRIprke60){:target="_blank"} 
