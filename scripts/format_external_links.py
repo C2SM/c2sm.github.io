@@ -55,6 +55,13 @@ def process_markdown_file(file_path):
             file.seek(0)
             file.writelines(lines)
             file.truncate()
+            print(f"Modified: {file_path}")
+
+def main(start_path):
+    for root, dirs, files in os.walk(start_path):
+        for file in files:
+            if file.endswith('.md'):
+                process_markdown_file(os.path.join(root, file))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Check markdown links in files.')
