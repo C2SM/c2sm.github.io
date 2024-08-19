@@ -3,27 +3,44 @@ import re
 import argparse
 
 def modify_link(line):
+    replaced = False
+
+    # Define icons and attributes
+    icon_external_link = ':material-open-in-new:'
+    icon_download = ':material-download:'
+    open_new_tab = '{:target="_blank"}'
+
     # Define patterns for general and download links
     general_pattern = r'\[([^\]]+)\]\((http[s]?://[^\s\)]+)\)'
     download_pattern = r'\[([^\]]+)\]\((https://polybox\.ethz\.ch/index\.php/s/[^\s\)]+)\)'
 
     # Define replacements for general and download links
-    general_replacement = r'[\1 :material-open-in-new:](\2){:target="_blank"}'
-    download_replacement = r'[\1 :material-download:](\2){:target="_blank"}'
+    general_replacement = r'[\1 ' + icon_external_link + r'](\2)'
+    download_replacement = r'[\1 ' + icon_download + r'](\2)'
 
-    # Check if the line was already modified or doesn't need modification
-    if ':material-open-in-new:' in line and '{:target="_blank"}' in line:
-        return line, False
-    if ':material-download:' in line and '{:target="_blank"}' in line:
-        return line, False
+    # Check if the general pattern appears in the line
+    if re.search(general_pattern, line):
+        # Check for link icon
+        if icon_external_link not in line and icon_download not in line:
+            new_line = re.sub(download_pattern, download_replacement, line)
+            if new_line != line:
+                line = new_line
+                replaced = True
+            else:
+                new_line = re.sub(general_pattern, general_replacement, line)
+                if new_line != line:
+                    line = new_line
+                    replaced = True
 
-    # Apply the appropriate replacement based on the URL pattern
-    if re.search(download_pattern, line):
-        modified_line, num_subs = re.subn(download_pattern, download_replacement, line)
-    else:
-        modified_line, num_subs = re.subn(general_pattern, general_replacement, line)
+        # Check for new tab attribute
+        if open_new_tab not in line:
+            new_line = re.sub(r'(\[.*?\]\(.*?\))', r'\1' + open_new_tab, line)
+            if new_line != line:
+                line = new_line
+                replaced = True
 
-    return modified_line, num_subs > 0
+    return line, replaced
+
 
 def process_markdown_file(file_path):
     with open(file_path, 'r+', encoding='utf-8') as file:
@@ -34,11 +51,13 @@ def process_markdown_file(file_path):
             if changed:
                 modified = True
                 lines[i] = new_line
+                print(f"Modifying line {i+1} in file: {file_path}")
         if modified:
             file.seek(0)
             file.writelines(lines)
             file.truncate()
-            print(f"Modified: {file_path}")
+            print(f"File modified: {file_path}")
+
 
 def main(start_path):
     for root, dirs, files in os.walk(start_path):
@@ -51,4 +70,4 @@ if __name__ == "__main__":
     parser.add_argument('-p', '--path', default=os.getcwd(), help='Base path to search for markdown files. Defaults to current working directory.')
     args = parser.parse_args()
 
-    main(args.path)
+    main(args.path) 
