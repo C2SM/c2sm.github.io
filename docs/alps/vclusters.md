@@ -47,7 +47,6 @@ List of currently supported Uenvs on Daint:
 |-------------|-------------------------------|
 | icon-vx:rcy | build and run icon            |
 | prepost-vx  | pre and post processing tools |
-|             |                               |
 
 ### Storage
 
@@ -65,7 +64,6 @@ Santis is dedicated to Weather and Climate and is deployed on ~400 Grace-Hopper 
 |-------------|-------------------------------|
 | icon-vx:rcy | build and run icon            |
 | prepost-vx  | pre and post processing tools |
-|             |                               |
 
 ### Storage
 
