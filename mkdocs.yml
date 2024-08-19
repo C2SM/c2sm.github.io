@@ -48,13 +48,8 @@ markdown_extensions:
       permalink: true
 plugins:
   - search
-  - awesome-pages:
-        filename: .pages
-        collapse_single_pages: true
-        strict: false
-        order: asc
-        sort_type: natural
-        order_by: title
+  - literate-nav:
+      nav_file: SUMMARY.md
   - blog
 extra_css:
   - stylesheets/extra.css
@@ -93,7 +88,6 @@ theme:
     - navigation.indexes
     - navigation.instant
     - navigation.path
-    - navigation.sections
     - navigation.sticky
     - navigation.tabs
     - navigation.tabs.sticky
