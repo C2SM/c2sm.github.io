@@ -1,6 +1,7 @@
 .md
 jenkins-mch
 images/
+^[a-z_]+\/$
 agupubs.onlinelibrary.wiley.com
 ^https://github.com/C2SM-RCM
 ^https://github.com/C2SM
@@ -11,4 +12,4 @@ agupubs.onlinelibrary.wiley.com
 ^https://zenodo.org
 ^https://www.gnu.org
 ^https://git.iac.ethz.ch
-SUMMARY.md
+^https://code.visualstudio.com
