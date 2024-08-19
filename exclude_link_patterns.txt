@@ -11,4 +11,3 @@ agupubs.onlinelibrary.wiley.com
 ^https://zenodo.org
 ^https://www.gnu.org
 ^https://git.iac.ethz.ch
-SUMMARY.md
