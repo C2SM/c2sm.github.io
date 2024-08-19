@@ -1,7 +1,7 @@
 .md
 jenkins-mch
 images/
-^[a-z_]+\/$
+^[a-zA-Z_]+\/$
 agupubs.onlinelibrary.wiley.com
 ^https://github.com/C2SM-RCM
 ^https://github.com/C2SM
