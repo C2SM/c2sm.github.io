@@ -30,3 +30,18 @@
   -webkit-mask-image: var(--md-admonition-icon--construction);
           mask-image: var(--md-admonition-icon--construction);
 }
+
+/* thead tr{ background-color: #00305d7f; } */
+thead tr{ background-color: rgb(from var(--md-primary-fg-color)r g b / 70%); }
+tbody tr:nth-child(even){ background-color: rgb(from var(--md-primary-fg-color)r g b / 50%); }
+tbody tr:nth-child(odd){ background-color: rgb(from var(--md-primary-fg-color)r g b / 20%); }
+
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+  border: none !important;
+}
