@@ -54,41 +54,6 @@ spack install cosmo-eccodes-definitions
 srun -N 1 -c 12 --mem-per-cpu=20G spack install -v -j 12
 ```
 
-### Temporary Tödi
-
-!!! warning "These are only temporary guidelines during the acceptance phase of Alps"
-
-    - Santis will be the official W&C vcluster but Tödi has to be deployed on the entire Alps system for the acceptance phase. These guidelines are for the ones who have access to Tödi.
-    - The resulting executable is not tested.
-    - Anything can go wrong
-
-- Get `spack-c2sm`
-    ```shell
-    git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/C2SM/spack-c2sm.git
-    ```
-
-- Start user environment
-    ```shell
-    uenv start /capstor/scratch/cscs/leclairm/uenvs/images/icon_c2sm_v1_rc3.sqfs
-    ```
-
-- Setup `spack-c2sm`
-    ```shell
-    source spack-c2sm/setup-env.sh /user-environment
-    ```
-
-- Adapt your spack environment following `/capstor/scratch/cscs/leclairm/icon-nwp/config/cscs/spack/uenv/mch_gpu_double/spack.yaml`  and activate it as usual with `spack env activate`.
-
-- Build as usual from your icon root dir
-    ```shell
-    spack install
-    ```
-
-- Submit job with uenv
-    ```shell
-    sbatch --uenv /capstor/scratch/cscs/leclairm/uenvs/images/icon_c2sm_v1_rc3.sqfs my_run_script
-    ```
-
 ## Run test case with ICON
 In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *mch_ch_lowres*, you can use the `make_runscripts` function.
 
