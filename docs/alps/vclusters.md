@@ -72,3 +72,15 @@ Santis is dedicated to Weather and Climate and is deployed on ~400 Grace-Hopper 
 !!! note "TODO"
 
     - [ ] Storage
+
+
+## Tödi
+
+Tödi is the testing vCluster and is currently deployed on the entire machine.
+
+### Uenvs
+
+| uenv                     | activity                      |
+|--------------------------|-------------------------------|
+| icon-wcp/v1:rc4          | build and run icon            |
+| netcdf-tools/2024:v1-rc1 | pre and post processing tools |

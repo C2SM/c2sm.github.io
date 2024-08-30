@@ -38,23 +38,59 @@ It can be used to
 - run a single command with that uenv mounted
 - access uenv modules
  
-For now, `uenv` isn't available on Balfrin and requires (easy) [manual installation :material-open-in-new:](https://eth-cscs.github.io/uenv/#getting-uenv){:target="_blank"}.
+For now, `uenv` isn't available on Balfrin and requires (easy) [manual installation :material-open-in-new:](https://eth-cscs.github.io/uenv/#getting-uenv){:target="_blank"}:
+```shell
+git clone https://github.com/eth-cscs/uenv.git && ./uenv/install --local
+```
 
-!!! note "TODO: Quick start"
+### Quickstart
 
-    - [ ] `uenv image repo create`
-    - [ ] `uenv image find`
-    - [ ] `uenv image pull`
-    - [ ] `uenv start`
-    - [ ] `uenv run`
+In the following, using `name/version:tag` as metadata to target a uenv can be replaced by the absolute path to the image if necessary. 
 
-## `--uenv` SLURM plugin
+
+#### Create a local images repository 
+In order to be able to use uenv images, you first need to `pull`them into a local repository. First create the repo with
+```shell
+uenv repo create
+```
+
+#### List available images
+```shell
+uenv image find
+```
+
+#### Pull an image in the local repo
+```shell
+uenv image pull name/version:tag
+```
+
+#### Start a uenv for interactive use
+This will spawn a new shell with the uenv mounted at `/mount-point` (defaulting to `/user-environment`) 
+```shell
+uenv start name/version:tag [/mount-point]
+```
+Exit with a usual `exit` or `uenv stop`.
+
+#### Use modules
+Software in a uenv can be accessed by using it as a `spack` upstream (see [`spack-c2sm` integration](#spack-c2sm-integration)) but also by loading modules. For that, use the `--view=modules` option:
+```shell
+uenv start --view=modules name/version:tag [/mount-point]
+```
+A usual `module avail` command would then show you the different modules added by the uenv on top of the original environment
+
+#### launch a subprocess with a uenv mounted
+```shell
+uenv run name/version:tag -- my_command
+```
+will run `my_command` (can be executing a script) with the uenv mounted. This is particularly useful when inside scripts. 
+
+## The `--uenv` SLURM plugin
 
 CSCS developped the `--uenv` slurm plugin in order to mount uenvs at runtime. Either use the name of a uenv in your local repo or the full absolute path to the uenv.
 
 ```shell
-sbatch --uenv uenv_name:/mount/point
-sbatch --uenv /image/path:/mount/point
+sbatch --uenv name/version:tag[:/mount/point]
+sbatch --uenv /image/path[:/mount/point]
 ```
 
 `:mount/point` can always be omitted and defaults to `:/user-environment`.
@@ -72,8 +108,13 @@ Uenvs cannot be mounted *anywhere*. They are generated with a predefined install
 
 ## `spack-c2sm` integration
 
-User environments are used as a spack upstream with
+User environments are supported in non-yet released `spack-c2sm` tags. For testing purposes, you can use `v0.21.1.2`, so
 ```shell
+git clone --depth 1 --recurse-submodules --shallow-submodules -b v0.21.1.2 https://github.com/C2SM/spack-c2sm.git
+```
+Then start the user environment and use it as a spack upstream with
+```shell
+uenv start name/version:tag
 source spack-c2sm/setup-env.sh /user-environment
 ``` 
 
