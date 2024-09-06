@@ -25,7 +25,11 @@ A description of user environments and the `uenv` tool can be found in the [CSCS
 
 ## Uenvs central Registry and C2SM uenvs
 
-The user environments provided by CSCS are registered in a central database. In the long run we should be able to operate only with those but, at least for the initial period, there is also the need for uenvs provided by C2SM. These are accessed by their absolute path. All supported uenvs are documented in the corresponding vClsuter section of the [dedicated page](vclusters.md). 
+The user environments provided by CSCS are registered in a central database. In the long run we should be able to operate only with those but, at least for the initial period, there might also be the need for uenvs provided by C2SM. These are accessed by their absolute path. All supported uenvs are documented in the corresponding vClsuter section of the [dedicated page](vclusters.md).
+
+!!! warning
+
+    Old software stack images didn't have a mount point in the metadata which is now required for the new versions of the `uenv` tool and its `--uenv` slurm plugin counterpart. If you have images in your local repository that are older than roughly September 5th, please pull them again. It will only update the metadata 
 
 ## The `uenv` command line tool
 
@@ -45,7 +49,9 @@ git clone https://github.com/eth-cscs/uenv.git && ./uenv/install --local
 
 ### Quickstart
 
-In the following, using `name/version:tag` as metadata to target a uenv can be replaced by the absolute path to the image if necessary. 
+In the following
+- using `name/version:tag` as metadata to target a uenv can be replaced by the absolute path to the image if necessary.
+- when a mount point can be passed to a command it defaults to a path stored in the uenv metadata, most often `/user-environment`
 
 
 #### Create a local images repository 
@@ -65,7 +71,7 @@ uenv image pull name/version:tag
 ```
 
 #### Start a uenv for interactive use
-This will spawn a new shell with the uenv mounted at `/mount-point` (defaulting to `/user-environment`) 
+This will spawn a new shell with the uenv mounted at `/mount-point`
 ```shell
 uenv start name/version:tag [/mount-point]
 ```
@@ -80,9 +86,9 @@ A usual `module avail` command would then show you the different modules added b
 
 #### launch a subprocess with a uenv mounted
 ```shell
-uenv run name/version:tag -- my_command
+uenv run name/version:tag[:mount-point] -- my_command
 ```
-will run `my_command` (can be executing a script) with the uenv mounted. This is particularly useful when inside scripts. 
+will run `my_command` (can be executing a script) with the uenv mounted. This is particularly useful inside scripts. 
 
 ## The `--uenv` SLURM plugin
 
@@ -93,7 +99,7 @@ sbatch --uenv name/version:tag[:/mount/point]
 sbatch --uenv /image/path[:/mount/point]
 ```
 
-`:mount/point` can always be omitted and defaults to `:/user-environment`.
+as for the `uenv` CLI, `:/mount/point` can always be omitted and defaults to what is found in the uenv metadata. 
 
 On Balfrin, the installed plugin version doesn't allow access via uenv names but `uenv image inspect` can be used to query the corresponding absolute path:
 
@@ -104,7 +110,7 @@ uenv image inspect prgenv-gnu --format="{sqfs}"
 
 ## Mount points
 
-Uenvs cannot be mounted *anywhere*. They are generated with a predefined installation path contained in it, where the user is supposed to mount them, at least if they are used as a spack instance (don't know for other usage). By default, it is `/user-environment` and another `/user-tools` also exists for *side* environments that would potentially need to be mounted simultaneously to a *main* one.
+Uenvs cannot be mounted *anywhere*. They are generated with a predefined installation path contained in it, where the user is supposed to mount them. By default the `uenv` tool and slurm plugin will use the path found in the metadata, ususally `/user-environment` and sometimes `/user-tools`. The later path exists for *side* environments that would potentially need to be mounted simultaneously to a *main* one.
 
 ## `spack-c2sm` integration
 
