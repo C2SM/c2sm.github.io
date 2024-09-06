@@ -1,4 +1,4 @@
-!!! construction "Page under construction"
+!!! construction "Page under construction - last update: 2024-09-06"
 
     Information in this page is not yet complete nor final. It will be updated following the progress of
 
@@ -11,7 +11,7 @@ Alps is a distributed HPC infrastructure managed by CSCS. Contrary to traditiona
 
 ## vClusters
 
-The following vClusters are hosted at CSCS:
+The following table shows the current plan for the final vClusters distribution on Alps at CSCS (not the current situation).
 
 | vCluster | Activity          | Share            |
 |----------|-------------------|------------------|
@@ -23,6 +23,14 @@ The following vClusters are hosted at CSCS:
 
 *GH = Grace Hopper*
 
+## Early Access
+
+For getting access to the vCluster dedicated to testing ([Tödi](vclusters.md/#tödi){:target="_blank"}), CSCS offers [Preparatory Projects :material-open-in-new:](https://www.cscs.ch/user-lab/allocation-schemes/preparatory-projects){:target="_blank"}. 
+
+## Support by CSCS
+
+To contact CSCS staff directly, users can join their dedicated [Slack channel :material-open-in-new:](https://cscs-users.slack.com){:target="_blank"}.
+
 ## File Systems
 
 !!! note "TODO"
@@ -33,7 +41,7 @@ The following vClusters are hosted at CSCS:
 
 ## Introductory Workshop Material
 
-As an introduction to the Alps infrastructure, the material of our [C2SM workshop "Switching to Alps"](../blog/posts/2024-07-02_switching_to_Alps.md) is available:
+As an introduction to the Alps infrastructure, the material of our [C2SM workshop "Switching to Alps"](../blog/posts/2024-07-02_switching_to_Alps.md) from August 12, 2024 is available:
 
 - [Recording :material-download:](https://polybox.ethz.ch/index.php/s/oSxyJgTjyvJKX8B){:target="_blank"}<br>
 - [Slides presenting Alps, vClusters and Uenvs :material-download:](https://polybox.ethz.ch/index.php/s/jvtIYkBvHUSGZYD){:target="_blank"}<br>
