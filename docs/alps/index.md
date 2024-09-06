@@ -25,11 +25,11 @@ The following vClusters are hosted at CSCS:
 
 ## Early Access
 
-For getting access to the vCluster dedicated to testing ([Tödi](vclusters.md/#tödi)), CSCS offers [Preparatory Projects](https://www.cscs.ch/user-lab/allocation-schemes/preparatory-projects). 
+For getting access to the vCluster dedicated to testing ([Tödi](vclusters.md/#tödi){:target="_blank"}), CSCS offers [Preparatory Projects :material-open-in-new:](https://www.cscs.ch/user-lab/allocation-schemes/preparatory-projects){:target="_blank"}. 
 
 ## Support by CSCS
 
-To contact CSCS staff directly, users can join their dedicated [Slack channel](https://cscs-users.slack.com).
+To contact CSCS staff directly, users can join their dedicated [Slack channel :material-open-in-new:](https://cscs-users.slack.com){:target="_blank"}.
 
 ## File Systems
 
