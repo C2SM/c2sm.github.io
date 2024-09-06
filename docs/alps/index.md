@@ -11,7 +11,7 @@ Alps is a distributed HPC infrastructure managed by CSCS. Contrary to traditiona
 
 ## vClusters
 
-The following vClusters are hosted at CSCS:
+The following table shows the current plan for the final vClusters distribution on Alps at CSCS (not the current situation).
 
 | vCluster | Activity          | Share            |
 |----------|-------------------|------------------|
