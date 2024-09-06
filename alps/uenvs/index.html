@@ -2494,7 +2494,7 @@
 
 
 <div class="admonition construction">
-<p class="admonition-title">Page under construction</p>
+<p class="admonition-title">Page under construction - last update: 2024-09-06</p>
 <p>Information in this page is not yet complete nor final. It will be updated following the progress of</p>
 <ul>
 <li>the Alps system deployment at CSCS</li>
@@ -2517,7 +2517,11 @@
 <h2 id="cscs-documentation">CSCS documentation<a class="headerlink" href="#cscs-documentation" title="Permanent link">&para;</a></h2>
 <p>A description of user environments and the <code>uenv</code> tool can be found in the <a href="https://confluence.cscs.ch/display/KB/UENV+user+environments" target="_blank">CSCS Knowledge Base <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>. </p>
 <h2 id="uenvs-central-registry-and-c2sm-uenvs">Uenvs central Registry and C2SM uenvs<a class="headerlink" href="#uenvs-central-registry-and-c2sm-uenvs" title="Permanent link">&para;</a></h2>
-<p>The user environments provided by CSCS are registered in a central database. In the long run we should be able to operate only with those but, at least for the initial period, there is also the need for uenvs provided by C2SM. These are accessed by their absolute path. All supported uenvs are documented in the corresponding vClsuter section of the <a href="../vclusters/">dedicated page</a>. </p>
+<p>The user environments provided by CSCS are registered in a central database. In the long run we should be able to operate only with those but, at least for the initial period, there might also be the need for uenvs provided by C2SM. These are accessed by their absolute path. All supported uenvs are documented in the corresponding vClsuter section of the <a href="../vclusters/">dedicated page</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Old software stack images didn't have a mount point in the metadata which is now required for the new versions of the <code>uenv</code> tool and its <code>--uenv</code> slurm plugin counterpart. If you have images in your local repository that are older than roughly September 5th, please pull them again. It will only update the metadata </p>
+</div>
 <h2 id="the-uenv-command-line-tool">The <code>uenv</code> command line tool<a class="headerlink" href="#the-uenv-command-line-tool" title="Permanent link">&para;</a></h2>
 <p><a href="https://eth-cscs.github.io/uenv/" target="_blank">Official documentation <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a></p>
 <p>It can be used to</p>
@@ -2531,7 +2535,9 @@
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/eth-cscs/uenv.git<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>./uenv/install<span class="w"> </span>--local
 </code></pre></div></p>
 <h3 id="quickstart">Quickstart<a class="headerlink" href="#quickstart" title="Permanent link">&para;</a></h3>
-<p>In the following, using <code>name/version:tag</code> as metadata to target a uenv can be replaced by the absolute path to the image if necessary. </p>
+<p>In the following
+- using <code>name/version:tag</code> as metadata to target a uenv can be replaced by the absolute path to the image if necessary.
+- when a mount point can be passed to a command it defaults to a path stored in the uenv metadata, most often <code>/user-environment</code></p>
 <h4 id="create-a-local-images-repository">Create a local images repository<a class="headerlink" href="#create-a-local-images-repository" title="Permanent link">&para;</a></h4>
 <p>In order to be able to use uenv images, you first need to <code>pull</code>them into a local repository. First create the repo with
 <div class="highlight"><pre><span></span><code>uenv<span class="w"> </span>repo<span class="w"> </span>create
@@ -2543,7 +2549,7 @@
 <div class="highlight"><pre><span></span><code>uenv<span class="w"> </span>image<span class="w"> </span>pull<span class="w"> </span>name/version:tag
 </code></pre></div>
 <h4 id="start-a-uenv-for-interactive-use">Start a uenv for interactive use<a class="headerlink" href="#start-a-uenv-for-interactive-use" title="Permanent link">&para;</a></h4>
-<p>This will spawn a new shell with the uenv mounted at <code>/mount-point</code> (defaulting to <code>/user-environment</code>) 
+<p>This will spawn a new shell with the uenv mounted at <code>/mount-point</code>
 <div class="highlight"><pre><span></span><code>uenv<span class="w"> </span>start<span class="w"> </span>name/version:tag<span class="w"> </span><span class="o">[</span>/mount-point<span class="o">]</span>
 </code></pre></div>
 Exit with a usual <code>exit</code> or <code>uenv stop</code>.</p>
@@ -2553,21 +2559,21 @@ Exit with a usual <code>exit</code> or <code>uenv stop</code>.</p>
 </code></pre></div>
 A usual <code>module avail</code> command would then show you the different modules added by the uenv on top of the original environment</p>
 <h4 id="launch-a-subprocess-with-a-uenv-mounted">launch a subprocess with a uenv mounted<a class="headerlink" href="#launch-a-subprocess-with-a-uenv-mounted" title="Permanent link">&para;</a></h4>
-<p><div class="highlight"><pre><span></span><code>uenv<span class="w"> </span>run<span class="w"> </span>name/version:tag<span class="w"> </span>--<span class="w"> </span>my_command
+<p><div class="highlight"><pre><span></span><code>uenv<span class="w"> </span>run<span class="w"> </span>name/version:tag<span class="o">[</span>:mount-point<span class="o">]</span><span class="w"> </span>--<span class="w"> </span>my_command
 </code></pre></div>
-will run <code>my_command</code> (can be executing a script) with the uenv mounted. This is particularly useful when inside scripts. </p>
+will run <code>my_command</code> (can be executing a script) with the uenv mounted. This is particularly useful inside scripts. </p>
 <h2 id="the-uenv-slurm-plugin">The <code>--uenv</code> SLURM plugin<a class="headerlink" href="#the-uenv-slurm-plugin" title="Permanent link">&para;</a></h2>
 <p>CSCS developped the <code>--uenv</code> slurm plugin in order to mount uenvs at runtime. Either use the name of a uenv in your local repo or the full absolute path to the uenv.</p>
 <div class="highlight"><pre><span></span><code>sbatch<span class="w"> </span>--uenv<span class="w"> </span>name/version:tag<span class="o">[</span>:/mount/point<span class="o">]</span>
 sbatch<span class="w"> </span>--uenv<span class="w"> </span>/image/path<span class="o">[</span>:/mount/point<span class="o">]</span>
 </code></pre></div>
-<p><code>:mount/point</code> can always be omitted and defaults to <code>:/user-environment</code>.</p>
+<p>as for the <code>uenv</code> CLI, <code>:/mount/point</code> can always be omitted and defaults to what is found in the uenv metadata. </p>
 <p>On Balfrin, the installed plugin version doesn't allow access via uenv names but <code>uenv image inspect</code> can be used to query the corresponding absolute path:</p>
 <div class="highlight"><pre><span></span><code>uenv<span class="w"> </span>image<span class="w"> </span>inspect<span class="w"> </span>prgenv-gnu<span class="w"> </span>--format<span class="o">=</span><span class="s2">&quot;{sqfs}&quot;</span>
 /bret/scratch/cscs/bcumming/.uenv-images/images/1736b4bb5ad9b3c5cae8878c71782a8bf2f2f739dbce8e039b629de418cb4dab/store.squashfs
 </code></pre></div>
 <h2 id="mount-points">Mount points<a class="headerlink" href="#mount-points" title="Permanent link">&para;</a></h2>
-<p>Uenvs cannot be mounted <em>anywhere</em>. They are generated with a predefined installation path contained in it, where the user is supposed to mount them, at least if they are used as a spack instance (don't know for other usage). By default, it is <code>/user-environment</code> and another <code>/user-tools</code> also exists for <em>side</em> environments that would potentially need to be mounted simultaneously to a <em>main</em> one.</p>
+<p>Uenvs cannot be mounted <em>anywhere</em>. They are generated with a predefined installation path contained in it, where the user is supposed to mount them. By default the <code>uenv</code> tool and slurm plugin will use the path found in the metadata, ususally <code>/user-environment</code> and sometimes <code>/user-tools</code>. The later path exists for <em>side</em> environments that would potentially need to be mounted simultaneously to a <em>main</em> one.</p>
 <h2 id="spack-c2sm-integration"><code>spack-c2sm</code> integration<a class="headerlink" href="#spack-c2sm-integration" title="Permanent link">&para;</a></h2>
 <p>User environments are supported in non-yet released <code>spack-c2sm</code> tags. For testing purposes, you can use <code>v0.21.1.2</code>, so
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>--recurse-submodules<span class="w"> </span>--shallow-submodules<span class="w"> </span>-b<span class="w"> </span>v0.21.1.2<span class="w"> </span>https://github.com/C2SM/spack-c2sm.git
