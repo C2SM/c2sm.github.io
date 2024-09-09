@@ -114,14 +114,14 @@ Uenvs cannot be mounted *anywhere*. They are generated with a predefined install
 
 ## `spack-c2sm` integration
 
-User environments are supported in non-yet released `spack-c2sm` tags. For testing purposes, you can use `v0.21.1.2`, so
+User environments are supported in `spack-c2sm` versions newer than `v0.21.1.3`.
 ```shell
-git clone --depth 1 --recurse-submodules --shallow-submodules -b v0.21.1.2 https://github.com/C2SM/spack-c2sm.git
+git clone --depth 1 --recurse-submodules --shallow-submodules -b v0.21.1.3 https://github.com/C2SM/spack-c2sm.git
 ```
 Then start the user environment and use it as a spack upstream with
 ```shell
-uenv start name/version:tag
-source spack-c2sm/setup-env.sh /user-environment
+uenv start name/version:tag /mount/point
+source spack-c2sm/setup-env.sh /mount/point
 ``` 
 
 !!! note "TODO"
