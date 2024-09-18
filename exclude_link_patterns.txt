@@ -3,6 +3,7 @@ jenkins-mch
 images/
 ^[a-zA-Z_]+\/$
 agupubs.onlinelibrary.wiley.com
+^https://rmets.onlinelibrary.wiley.com
 ^https://github.com/C2SM-RCM
 ^https://github.com/C2SM
 ^https://wiki.iac.ethz.ch
