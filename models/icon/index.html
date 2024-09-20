@@ -1680,6 +1680,39 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#todi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Todi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Todi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-spackyaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a spack.yaml file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-icon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build ICON
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#piz-daint" class="md-nav__link">
     <span class="md-ellipsis">
       Piz Daint
@@ -2417,6 +2450,39 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#todi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Todi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Todi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-spackyaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a spack.yaml file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-icon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build ICON
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#piz-daint" class="md-nav__link">
     <span class="md-ellipsis">
       Piz Daint
@@ -2534,10 +2600,49 @@ It is a joint project of <a href="https://www.dwd.de/DE/Home/home_node.html" tar
   If you do not already have an SSH key set up for GitHub, but would like to do so, follow the <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank">instructions <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
 <h2 id="configure-and-compile">Configure and compile<a class="headerlink" href="#configure-and-compile" title="Permanent link">&para;</a></h2>
 <p>The ICON build process is almost identical for Piz Daint and Euler. For both machines, Spack is used to build ICON. Refer to the official spack-c2sm documentation for <a href="https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon" target="_blank">installing ICON using Spack <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
+<h3 id="todi">Todi<a class="headerlink" href="#todi" title="Permanent link">&para;</a></h3>
+<div class="admonition construction">
+<p class="admonition-title">Under construction - last update: 2024-09-20</p>
+<p>Information on this section is not yet complete nor final. It will be updated following the progress of the Alps system deployment at CSCS and C2SM's adaptation to this new system. Please use the <a href="https://github.com/C2SM/Tasks-Support/discussions" target="_blank">C2SM support forum <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> in case of questions regarding building ICON on Alps.</p>
+</div>
+<p>On Todi, Spack is also used to build ICON. However, these is no suitable <code>spack.yaml</code> file present for the Spack environment. Therefore, create a <code>spack.yaml</code> file and use the software stack upstream provided by the user environment.</p>
+<h4 id="create-a-spackyaml-file">Create a <code>spack.yaml</code> file<a class="headerlink" href="#create-a-spackyaml-file" title="Permanent link">&para;</a></h4>
+<p>From your ICON root folder:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">config/cscs/spack/v0.21.1.3/todi_gpu_nvhpc/spack.yaml</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="nt">spack</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">specs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cosmo-eccodes-definitions@2.25.0.2</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib +cuda-graphs</span>
+<span class="w">  </span><span class="nt">view</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">concretizer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">unify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">when_possible</span>
+<span class="w">  </span><span class="nt">develop</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">icon</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">../../../../..</span>
+<span class="w">      </span><span class="nt">spec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib +cuda-graphs</span>
+</code></pre></div>
+<h4 id="build-icon">Build ICON<a class="headerlink" href="#build-icon" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="gp"># </span>Load<span class="w"> </span>ICON<span class="w"> </span>user-environment<span class="w"> </span>
+<span class="go">uenv start --view=spack icon-wcp/v1:rc4</span>
+
+<span class="gp"># </span>Setup<span class="w"> </span>spack
+<span class="go">SPACK_TAG=&#39;v0.21.1.3&#39;</span>
+<span class="go">git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git</span>
+<span class="go">. spack-c2sm/setup-env.sh /user-environment</span>
+
+<span class="gp"># </span>Build<span class="w"> </span>ICON
+<span class="go">cd /path/to/icon</span>
+<span class="go">spack env activate -d config/cscs/spack/${SPACK_TAG}/todi_gpu_nvhpc</span>
+<span class="go">spack install</span>
+</code></pre></div>
 <h3 id="piz-daint">Piz Daint<a class="headerlink" href="#piz-daint" title="Permanent link">&para;</a></h3>
 <p>To <a href="https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin" target="_blank">set up a Spack instance <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>, ensure that you clone the repository using the Spack tag provided in the ICON repository at <a href="https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG_DAINT" target="_blank">config/cscs/SPACK_TAG_DAINT <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
 <p>After building ICON using <code>spack install</code>, you need to create a <code>setting</code> file, which is only necessary once after the first compilation:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">daint_gpu_nvhpc</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">daint_gpu_nvhpc</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nv">SPACK_TAG</span><span class="o">=</span><span class="k">$(</span>cat<span class="w"> </span><span class="s2">&quot;config/cscs/SPACK_TAG_C2SM&quot;</span><span class="k">)</span>
