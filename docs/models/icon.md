@@ -30,7 +30,7 @@ The ICON build process is almost identical for Piz Daint and Euler. For both mac
 
 !!! construction "Under construction - last update: 2024-09-20"
 
-    Information on this section is not yet complete nor final. It will be updated following the progress of the Alps system deployment at CSCS and C2SM's adaptation to this new system. Please use the [C2SM support forum](https://github.com/C2SM/Tasks-Support/discussions) in case of questions regarding building ICON on Alps.
+    Information on this section is not yet complete nor final. It will be updated following the progress of the Alps system deployment at CSCS and C2SM's adaptation to this new system. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Alps.
 
 On Todi, Spack is also used to build ICON. However, these is no suitable `spack.yaml` file present for the Spack environment. Therefore, create a `spack.yaml` file and use the software stack upstream provided by the user environment.
 
