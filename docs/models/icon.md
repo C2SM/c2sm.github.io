@@ -26,6 +26,51 @@ Once you have access, clone the repository from GitHub using the SSH protocol:
 ## Configure and compile
 The ICON build process is almost identical for Piz Daint and Euler. For both machines, Spack is used to build ICON. Refer to the official spack-c2sm documentation for [installing ICON using Spack :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon){:target="_blank"}.
 
+### Todi
+
+!!! construction "Under construction - last update: 2024-09-20"
+
+    Information on this section is not yet complete nor final. It will be updated following the progress of the Alps system deployment at CSCS and C2SM's adaptation to this new system. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Alps.
+
+On Todi, Spack is also used to build ICON. However, these is no suitable `spack.yaml` file present for the Spack environment. Therefore, create a `spack.yaml` file and use the software stack upstream provided by the user environment.
+
+#### Create a `spack.yaml` file
+
+From your ICON root folder:
+
+=== "config/cscs/spack/v0.21.1.3/todi_gpu_nvhpc/spack.yaml"
+
+  ```yaml
+  spack:
+    specs:
+      - cosmo-eccodes-definitions@2.25.0.2
+      - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib +cuda-graphs
+    view: true
+    concretizer:
+      unify: when_possible
+    develop:
+      icon:
+        path: ../../../../..
+        spec: icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib +cuda-graphs
+  ```
+
+#### Build ICON
+
+```console
+# Load ICON user-environment 
+uenv start --view=spack icon-wcp/v1:rc4
+
+# Setup spack
+SPACK_TAG='v0.21.1.3'
+git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
+. spack-c2sm/setup-env.sh /user-environment
+
+# Build ICON
+cd /path/to/icon
+spack env activate -d config/cscs/spack/${SPACK_TAG}/todi_gpu_nvhpc
+spack install
+```
+
 ### Piz Daint
 To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/cscs/SPACK_TAG_DAINT :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG_DAINT){:target="_blank"}.
 
