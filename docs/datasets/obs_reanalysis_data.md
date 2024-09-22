@@ -157,8 +157,8 @@
     /net/atmos/data/cerra/processed/v1/
     ```
 
-- Size: 7.72 TB :material-information-outline:{ title="last updated: 2024-09-15 01:44:04" }
-- Number of files: 1,824 :material-information-outline:{ title="last updated: 2024-09-15 01:44:04" }
+- Size: 7.72 TB :material-information-outline:{ title="last updated: 2024-09-22 01:45:05" }
+- Number of files: 1,824 :material-information-outline:{ title="last updated: 2024-09-22 01:45:05" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -199,8 +199,8 @@
     /net/atmos/data/cerra-land/processed/v1/
     ```
 
-- Size: 1.78 TB :material-information-outline:{ title="last updated: 2024-09-15 01:44:04" }
-- Number of files: 1,016 :material-information-outline:{ title="last updated: 2024-09-15 01:44:04" }
+- Size: 1.78 TB :material-information-outline:{ title="last updated: 2024-09-22 01:45:05" }
+- Number of files: 1,016 :material-information-outline:{ title="last updated: 2024-09-22 01:45:05" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -253,8 +253,8 @@
     /nfs/atmos/c2sm/era5/processed/v2
     ```
 
-- Size: 45.77 TB :material-information-outline:{ title="last updated: 2024-09-15 01:44:08" }
-- Number of files: 138,422 :material-information-outline:{ title="last updated: 2024-09-15 01:44:08" }
+- Size: 45.83 TB :material-information-outline:{ title="last updated: 2024-09-22 01:45:21" }
+- Number of files: 140,438 :material-information-outline:{ title="last updated: 2024-09-22 01:45:21" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-present, v2: 1980-present
@@ -277,6 +277,7 @@
   `tas`{ title="day (native): 194001-202405, mon (native): 194001-202405" },
   `tasmax`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `tasmin`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `tos`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `ua`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `uas`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
   `va`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
@@ -294,8 +295,8 @@
     /net/atmos/data/era5-land_cds/processed/v1/
     ```
 
-- Size: 6.64 TB :material-information-outline:{ title="last updated: 2024-09-15 01:44:06" }
-- Number of files: 1,504 :material-information-outline:{ title="last updated: 2024-09-15 01:44:06" }
+- Size: 6.64 TB :material-information-outline:{ title="last updated: 2024-09-22 01:45:06" }
+- Number of files: 1,504 :material-information-outline:{ title="last updated: 2024-09-22 01:45:06" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
