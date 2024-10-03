@@ -11,15 +11,15 @@ C2SM facilitates the utilisation of ICON on the [Piz Daint :material-open-in-new
 The latest release distributed by C2SM, currently [`2024.07` :material-open-in-new:](https://github.com/C2SM/icon/tree/2024.07){:target="_blank"}, is continuously being tested on both Piz Daint and Euler and receives patches when necessary.
 
 ## Mailing list
-If you use ICON, please follow [these instructions](../events/icon_meetings/index.md#c2sm-icon-mailing-list) to subscribe to our mailing list.
+If you use ICON, please follow [these instructions](../../events/icon_meetings/index.md#c2sm-icon-mailing-list) to subscribe to our mailing list.
 
 ## Toolset
-In the [Tools](../tools/index.md) section, you will find relevant tools for working with ICON:
+In the [Tools](../../tools/index.md) section, you will find relevant tools for working with ICON:
 
-* [**Extpar**](../tools/extpar.md): External parameters for the ICON grid (preprocessing)
-* [**Processing Chain**](../tools/processing_chain.md): Python workflow tool for ICON
-* [**SPICE**](../tools/spice.md): Starter package for ICON-CLM experiments
-* [**icon-vis**](../tools/icon-vis.md): Python scripts to visualise ICON data
+* [**Extpar**](../../tools/extpar.md): External parameters for the ICON grid (preprocessing)
+* [**Processing Chain**](../../tools/processing_chain.md): Python workflow tool for ICON
+* [**SPICE**](../../tools/spice.md): Starter package for ICON-CLM experiments
+* [**icon-vis**](../../tools/icon-vis.md): Python scripts to visualise ICON data
 
 ## Projects
 Learn more about ongoing projects involving ETHZ in the development of ICON:
