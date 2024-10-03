@@ -19,7 +19,7 @@ The purpose here is to, still with a *standard* ICON, catch issues that could ar
 - approaching the memory limits of the nodes
 - long simulations
 
-## 4. Full scale test with *standard ICON*
+## 4. Full scale test with *standard* ICON
 
 ## 5. Switch to ICON-exclaim
 
