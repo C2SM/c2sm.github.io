@@ -1,6 +1,6 @@
 # Large Use Cases
 
-ICON is a complex piece of software and all the more so is ICON-exclaim that builds on top of it. Fixing issues on a large scale configurations is thus tedious and that's why we came up with a procedure to build large production ICON configurations in an as robust way as possible.
+ICON is a complex piece of software and all the more so is ICON-exclaim that builds on top of it. Fixing issues on large scale configurations can thus be tedious and that's why we came up with a procedure to build large production ICON configurations in an as robust way as possible.
 
 The overall philosophy is to build a series of gradually increasing complexity setups from a small scale ICON test case to the full production configuration. Even if it could feel like an overhead when starting the whole process, the C2M core team is there to assist you in this journey and it will pay off in the end!
 
