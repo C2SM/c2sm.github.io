@@ -1,8 +1,39 @@
 # Large Use Cases
 
-ICON is a complex piece of software and even more so is ICON-exclaim that builds on top of it. Troubleshooting large scale configurations can therefore be tedious, which is why we developed a procedure to build large production ICON configurations in the most robust way possible.
+[ICON](https://www.icon-model.org/icon_model) is a complex piece of software and even more so is [ICON-EXCLAIM](https://github.com/C2SM/icon-exclaim) that builds on top of it. Troubleshooting large scale configurations can therefore be tedious, which is why we developed a procedure to build large production ICON configurations in the most robust way possible.
 
 The overall philosophy is to build a series of gradually increasing complexity setups from a small scale ICON test case to the full production configuration. Even if it could feel like an overhead when starting the whole process, C2SM's core team is there to assist you in this journey and it will pay off in the end!
+
+## Flow Chart
+
+```mermaid
+flowchart TD
+    C[C2SM Support]
+    ST[Small Scale Test Case]
+    IT[Intermediate Scale Test]
+    FT[Full Scale Test]
+    P{Passing?}
+    subgraph "I) Standard ICON (icon-nwp)"
+        direction LR
+        ST -.- CPU & GPU
+        ST ==> IT
+        IT ==> FT
+    end
+    BB --> P
+    ST & IT & FT --> P
+    P --> |Yes| EST
+    P --> |No| C
+    subgraph "II) gitlab.dkrz.de"
+        direction LR
+        ST --> MR[Merge Request for icon-nwp]
+        MR --> BB[BuildBot]
+    end
+    subgraph "III) ICON-EXCLAIM"
+        direction LR
+        EST[Small Scale Test Case] ==> EIT[Intermediate Scale Test]
+        EIT                        ==> EFT[Full Scale Test]
+    end
+```
 
 ## 1. Small Scale Test Case
 Set up an ICON test case (either ICON-c2sm or ICON-nwp) integrated in the ICON testing infrastructure with a low number of grid points and a few time steps. The idea here is to test the code path of the final setup and identify potential issues coming from upstream source code.
