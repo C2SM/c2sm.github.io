@@ -36,10 +36,19 @@ flowchart TD
 ```
 
 ## 1. Small Scale Test Case
-Set up an ICON test case (either ICON-c2sm or ICON-nwp) integrated in the ICON testing infrastructure with a low number of grid points and a few time steps (about 6). The idea here is to test the code path of the final setup and identify potential issues coming from upstream source code.
+Set up an ICON test case by cloning [`icon-nwp`](https://gitlab.dkrz.de/icon/icon-nwp) and integrate in the ICON testing infrastructure with a low number of grid points and a few time steps (about 6). Existing use cases like the [Aquaplanet](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/run/exp.exclaim_ape_R02B04) one can serve as a template. Your test case should be saved as `run/exp.<experiment_name>`.
+
+The idea here is to test the code path of the final setup and identify potential issues coming from upstream source code.
 
 ## 2. Local testing
+1. Add a checksuite file of your experiment under `run/checksuite.icon-dev/exp.<experiment_name>` (copy paste the content of one of the other check file and adapt the name)
+2. Add experiment/test settings under `scripts/experiments/<institution>/*.yml`:
+    - Have a look at `scripts/experiments/c2sm/mch_experiments.yml`:
+        - `type` should contain all file IDs, which are set in each `output_nml` under `output_filename` as unique identifier in your test case
+
 ### Test on CPU
+The ensure that there are no basic issues with the namelist, we recommend to start testing on CPU before going over to GPU testing.
+
 ### Test on GPU
 
 ## 3. Activate Test in a CI Pipeline
