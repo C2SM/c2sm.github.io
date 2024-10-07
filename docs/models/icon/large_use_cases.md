@@ -36,7 +36,7 @@ flowchart TD
 ```
 
 ## 1. Small Scale Test Case
-Set up an ICON test case by cloning [`icon-nwp`](https://gitlab.dkrz.de/icon/icon-nwp) and integrate in the ICON testing infrastructure with a low number of grid points and a few time steps (about 6). Existing use cases like the [Aquaplanet](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/run/exp.exclaim_ape_R02B04) one can serve as a template. Your test case should be saved as `run/exp.<experiment_name>`.
+Set up an ICON test case by cloning [`icon-nwp` :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"} and integrate in the ICON testing infrastructure with a low number of grid points and a few time steps (about 6). Existing use cases like the [Aquaplanet :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/run/exp.exclaim_ape_R02B04){:target="_blank"} one can serve as a template. Your test case should be saved as `run/exp.<experiment_name>`.
 
 The idea here is to test the code path of the final setup and identify potential issues coming from upstream source code.
 
