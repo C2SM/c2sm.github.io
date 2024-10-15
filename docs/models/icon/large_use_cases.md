@@ -36,30 +36,35 @@ flowchart TD
 ```
 
 ## 1. Small Scale Test Case
-Set up an ICON test case by cloning [`icon-nwp` :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"} and integrate in the ICON testing infrastructure with a low number of grid points and a few time steps (about 6). Existing use cases like the [Aquaplanet :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/run/exp.exclaim_ape_R02B04){:target="_blank"} one can serve as a template. Your test case should be saved as `run/exp.<experiment_name>`.
 
 The idea here is to test the code path of the final setup and identify potential issues coming from upstream source code.
 
-## 2. Local testing
-1. Add a checksuite file of your experiment under `run/checksuite.icon-dev/exp.<experiment_name>` (copy paste the content of one of the other check file and adapt the name)
+### 1.1 Set up
+
+Set up an ICON test case by cloning [`icon-nwp` :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"}
+and integrate in the ICON testing infrastructure with a low number of grid points
+and a few time steps (about 6). Existing use cases like the [Aquaplanet :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/run/exp.exclaim_ape_R02B04){:target="_blank"} one can serve as a template. Your test case should be saved as `run/exp.<experiment_name>`.
+
+### 1.2 Local testing
+1. Add a checksuite file of your experiment under `run/checksuite.icon-dev/exp.<experiment_name>` (use one of the other check files as a template)
 2. Add experiment/test settings under `scripts/experiments/<institution>/*.yml`:
     - Have a look at `scripts/experiments/c2sm/mch_experiments.yml`:
         - `type` should contain all file IDs, which are set in each `output_nml` under `output_filename` as unique identifier in your test case
 
-### Test on CPU
-The ensure that there are no basic issues with the namelist, we recommend to start testing on CPU before going over to GPU testing.
+#### Test on CPU
+To ensure that there are no basic issues with the namelist, we recommend to start testing on CPU before going over to GPU testing.
 
-### Test on GPU
+#### Test on GPU
 
-## 3. Activate Test in a CI Pipeline
+### 1.3 Activate Test in a CI Pipeline
 
-## 4. Intermediate Scale Tests
+## 2. Intermediate Scale Tests
 The purpose here is to, still with a *standard* ICON, catch issues that could arise when increasing space and time scales. Because we still would like to be able to debug without waiting hours in the queue, it could be wise to come up with setups using few nodes and testing either/or: 
 
 - approaching the memory limits of the nodes
 - long simulations
 
-## 4. Full scale test with *standard* ICON
+## 3. Full scale test with *standard* ICON
 
-## 5. Switch to ICON-exclaim
+## 4. Switch to ICON-exclaim
 
