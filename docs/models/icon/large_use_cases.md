@@ -48,6 +48,8 @@ and a few time steps (about 6). Existing use cases like the [Aquaplanet :materia
 ### 1.2 Local testing
 Follow the step-by-step guide in [How to add experiments to a buildbot list :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/How-to-setup-new-test-experiments-for-buildbot#how-to-add-experiments-to-a-buildbot-list){:target="_blank"} to add you experiment test case. Start with the `checksuite_modes` for the mpi and nproma test (`'nm'`) for the machine you are testing on.
 
+We recommend you to do out-of-source builds for CPU and GPU so that you can have two compiled versions of ICON in the same repository.
+
 #### Test on CPU
 To ensure that there are no basic issues with the namelist, we recommend to start testing on CPU before going over to GPU testing. First, compile icon-nwp on CPU following the instructions in [Configure and compile :material-open-in-new:](https://c2sm.github.io/models/icon/#configure-and-compile){:target="_blank"} (<span style="color:orange">*TODO*</span>: fix link before merging). Then create the check file and run the test locally (`EXP=<exp_name>`):
 
@@ -57,6 +59,9 @@ To ensure that there are no basic issues with the namelist, we recommend to star
 cd run
 sbatch --partition debug --time 00:30:00 check.${EXP}.run
 ```
+
+!!! note
+    If you are using an out-of-source build, make sure to have copied the `scripts` folder of icon-nwp into it.
 
 Check in the LOG file if all tests passed.
 
