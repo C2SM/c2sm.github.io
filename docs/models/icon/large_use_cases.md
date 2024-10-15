@@ -46,10 +46,10 @@ and integrate in the ICON testing infrastructure with a low number of grid point
 and a few time steps (about 6). Existing use cases like the [Aquaplanet :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/run/exp.exclaim_ape_R02B04){:target="_blank"} one can serve as a template. Your test case should be saved as `run/exp.<experiment_name>`.
 
 ### 1.2 Local testing
-Follow the step-by-step guide in [How to add experiments to a buildbot list](https://gitlab.dkrz.de/icon/wiki/-/wikis/How-to-setup-new-test-experiments-for-buildbot#how-to-add-experiments-to-a-buildbot-list) to add you experiment test case. Start with the `checksuite_modes` for the mpi and nproma test (`'nm'`) for the machine you are testing on.
+Follow the step-by-step guide in [How to add experiments to a buildbot list :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/How-to-setup-new-test-experiments-for-buildbot#how-to-add-experiments-to-a-buildbot-list){:target="_blank"} to add you experiment test case. Start with the `checksuite_modes` for the mpi and nproma test (`'nm'`) for the machine you are testing on.
 
 #### Test on CPU
-To ensure that there are no basic issues with the namelist, we recommend to start testing on CPU before going over to GPU testing. First, compile icon-nwp on CPU following the instructions in [Configure and compile](https://c2sm.github.io/models/icon/#configure-and-compile) (<span style="color:orange">*TODO*</span>: fix link before merging). Then create the check file and run the test locally (`EXP=<exp_name>`):
+To ensure that there are no basic issues with the namelist, we recommend to start testing on CPU before going over to GPU testing. First, compile icon-nwp on CPU following the instructions in [Configure and compile :material-open-in-new:](https://c2sm.github.io/models/icon/#configure-and-compile){:target="_blank"} (<span style="color:orange">*TODO*</span>: fix link before merging). Then create the check file and run the test locally (`EXP=<exp_name>`):
 
 ```bash
 ./make_runscripts ${EXP}
@@ -61,7 +61,7 @@ sbatch --partition debug --time 00:30:00 check.${EXP}.run
 Check in the LOG file if all tests passed.
 
 #### Test on GPU
-If all tests are validating on CPU, the next step is to test on GPU. First, compile icon-nwp on GPU. Then create the check file and run the mpi and nproma test locally as above. If those tests also validate on GPU, you can continue with the tolerance test to ensure that running on GPU gives basically the same results as running on CPU. Therefore, change the `checksuite_mode` to `'t'` for the tolerance test and follow the instructions in [Validating with probtest without buildbot references (Generating tolerances for non standard tests)](https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Validating-with-probtest-without-buildbot-references-(Generating-tolerances-for-non-standard-tests)).
+If all tests are validating on CPU, the next step is to test on GPU. First, compile icon-nwp on GPU. Then create the check file and run the mpi and nproma test locally as above. If those tests also validate on GPU, you can continue with the tolerance test to ensure that running on GPU gives basically the same results as running on CPU. Therefore, change the `checksuite_mode` to `'t'` for the tolerance test and follow the instructions in [Validating with probtest without buildbot references (Generating tolerances for non standard tests) :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Validating-with-probtest-without-buildbot-references-(Generating-tolerances-for-non-standard-tests){:target="_blank"}).
 
 ### 1.3 Activate Test in a CI Pipeline
 
