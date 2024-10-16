@@ -11,23 +11,16 @@ Once you have access, clone the repository from GitHub using the SSH protocol:
   ```
   If you do not already have an SSH key set up for GitHub, but would like to do so, follow the [instructions :material-open-in-new:](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent){:target="_blank"}.
     
-### Configure and compile
+## Configure and compile
 
-#### Piz Daint
+### Piz Daint
 Spack is used to build ICON. Please follow the steps below to set up Spack and build ICON.
 
 **1. Set up a Spack instance**
 
-To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/cscs/SPACK_TAG_C2SM :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG_C2SM){:target="_blank"}.
+To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/cscs/SPACK_TAG_C2SM :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG_C2SM){:target="_blank"} and load it into your command line.
 
-**2. Initialise the submodules of ICON**
-
-Run the following from the ICON root folder:
-```bash
-git submodule update --init
-```
-
-**3. Build ICON**
+**2. Build ICON**
 
 Refer to the official spack-c2sm documentation for [installing ICON using Spack :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon){:target="_blank"}.
 
@@ -42,21 +35,21 @@ After the fist compilation, you need to create a `setting` file:
     ./config/cscs/create_sh_env $SPACK_TAG $ENV_NAME
     ```
 
-#### Euler
+### Euler
 Spack is used to build ICON. Please follow the steps below to set up Spack and build ICON.
 
 **1. Set up a Spack instance**
 
-To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/ethz/SPACK_TAG_EULER :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/ethz/SPACK_TAG_EULER){:target="_blank"}.
+To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/ethz/SPACK_TAG_EULER :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/ethz/SPACK_TAG_EULER){:target="_blank"} and load it into your command line.
 
-**2. Initialise the submodules of ICON**
 
-Run the following from the ICON root folder:
+**2. Build ICON**
+
+Activate the Spack environment for Euler:
 ```bash
-git submodule update --init
+SPACK_TAG=$(cat "config/ethz/SPACK_TAG_EULER")
+spack env activate -d config/ethz/spack/$SPACK_TAG/euler_cpu_gcc
 ```
-
-**3. Build ICON**
 
 Euler Support recommends to compile code on compute-nodes. Unfortunately [internet-access on Euler compute-nodes is restricted :material-open-in-new:](https://scicomp.ethz.ch/wiki/Accessing_the_clusters#Internet_Security){:target="_blank"}.
 Therefore a two-step install needs to be performed:
@@ -70,7 +63,7 @@ srun -N 1 -c 12 --mem-per-cpu=20G spack install -v -j 12
 ```
 
 
-#### Todi
+### Todi
 
 !!! construction "Under construction - last update: 2024-09-20"
 
