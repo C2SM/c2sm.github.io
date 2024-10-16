@@ -41,8 +41,7 @@ The idea here is to test the code path of the final setup and identify potential
 
 ### 1.1 Set up
 
-Set up an ICON test case by cloning [`icon-nwp` :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"}
-and integrate in the ICON testing infrastructure with a low number of grid points
+Set up an ICON test case by cloning [`icon-nwp` :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"}, and integrate it into the ICON test infrastructure with a low number of grid points
 and a few time steps (about 6). Existing use cases like the [Aquaplanet :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/run/exp.exclaim_ape_R02B04){:target="_blank"} one can serve as a template. Your test case should be saved as `run/exp.<experiment_name>`.
 
 ### 1.2 Local testing
@@ -66,7 +65,7 @@ sbatch --partition debug --time 00:30:00 check.${EXP}.run
 Check in the LOG file if all tests passed.
 
 #### Test on GPU
-If all tests are validating on CPU, the next step is to test on GPU. First, compile icon-nwp on GPU. Then create the check file and run the mpi and nproma test locally as above. If those tests also validate on GPU, you can continue with the tolerance test to ensure that running on GPU gives basically the same results as running on CPU. Therefore, please follow the instructions in [Validating with probtest without buildbot references (Generating tolerances for non standard tests) :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Validating-with-probtest-without-buildbot-references-(Generating-tolerances-for-non-standard-tests){:target="_blank"}).
+If all tests are validating on CPU, the next step is to test on GPU. Follow the same steps as for CPU and run nproma and mpi test. If those tests also validate on GPU, you can continue with the tolerance test to ensure that running on GPU gives basically the same results as running on CPU. Therefore, please follow the instructions in [Validating with probtest without buildbot references (Generating tolerances for non standard tests) :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Validating-with-probtest-without-buildbot-references-(Generating-tolerances-for-non-standard-tests){:target="_blank"}). If also the probtest validates, you can change the `checksuite_modes` to `'t'` and everything is set for activating the test in a CI pipeline.
 
 ### 1.3 Activate Test in a CI Pipeline
 
