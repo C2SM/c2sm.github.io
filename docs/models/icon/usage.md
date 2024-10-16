@@ -13,7 +13,62 @@ Once you have access, clone the repository from GitHub using the SSH protocol:
     
 ### Configure and compile
 
-The ICON build process is almost identical for Piz Daint and Euler. For both machines, Spack is used to build ICON. Refer to the official spack-c2sm documentation for [installing ICON using Spack :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon){:target="_blank"}.
+#### Piz Daint
+Spack is used to build ICON. Please follow the steps below to set up Spack and build ICON.
+
+**1. Set up a Spack instance**
+
+To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/cscs/SPACK_TAG_C2SM :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG_C2SM){:target="_blank"}.
+
+**2. Initialise the submodules of ICON**
+
+Run the following from the ICON root folder:
+```bash
+git submodule update --init
+```
+
+**3. Build ICON**
+
+Refer to the official spack-c2sm documentation for [installing ICON using Spack :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon){:target="_blank"}.
+
+After the fist compilation, you need to create a `setting` file:
+
+=== "daint_gpu_nvhpc"
+    ```shell
+    SPACK_TAG=$(cat "config/cscs/SPACK_TAG_C2SM")
+    ENV_NAME=daint_gpu_nvhpc # modify if necessary
+    module load daint-gpu CDO
+    rm -f setting
+    ./config/cscs/create_sh_env $SPACK_TAG $ENV_NAME
+    ```
+
+#### Euler
+Spack is used to build ICON. Please follow the steps below to set up Spack and build ICON.
+
+**1. Set up a Spack instance**
+
+To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/ethz/SPACK_TAG_EULER :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/ethz/SPACK_TAG_EULER){:target="_blank"}.
+
+**2. Initialise the submodules of ICON**
+
+Run the following from the ICON root folder:
+```bash
+git submodule update --init
+```
+
+**3. Build ICON**
+
+Euler Support recommends to compile code on compute-nodes. Unfortunately [internet-access on Euler compute-nodes is restricted :material-open-in-new:](https://scicomp.ethz.ch/wiki/Accessing_the_clusters#Internet_Security){:target="_blank"}.
+Therefore a two-step install needs to be performed:
+
+```bash
+# fetch and install cosmo-eccodes-definitions on login-node
+spack install cosmo-eccodes-definitions
+
+# compile ICON on compute-nodes
+srun -N 1 -c 12 --mem-per-cpu=20G spack install -v -j 12
+```
+
 
 #### Todi
 
@@ -23,7 +78,7 @@ The ICON build process is almost identical for Piz Daint and Euler. For both mac
 
 On Todi, Spack is also used to build ICON. However, these is no suitable `spack.yaml` file present for the Spack environment. Therefore, create a `spack.yaml` file and use the software stack upstream provided by the user environment.
 
-##### Create a `spack.yaml` file
+**1. Create a `spack.yaml` file**
 
 From your ICON root folder:
 
@@ -43,7 +98,7 @@ From your ICON root folder:
         spec: icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib +cuda-graphs
   ```
 
-##### Build ICON
+**2. Build ICON**
 
 ```console
 # Load ICON user-environment 
@@ -60,33 +115,9 @@ spack env activate -d config/cscs/spack/${SPACK_TAG}/todi_gpu_nvhpc
 spack install
 ```
 
-### Piz Daint
-To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/cscs/SPACK_TAG_DAINT :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG_DAINT){:target="_blank"}.
 
-After building ICON using `spack install`, you need to create a `setting` file, which is only necessary once after the first compilation:
 
-=== "daint_gpu_nvhpc"
-    ```shell
-    SPACK_TAG=$(cat "config/cscs/SPACK_TAG_C2SM")
-    ENV_NAME=daint_gpu_nvhpc # modify if necessary
-    module load daint-gpu CDO
-    rm -f setting
-    ./config/cscs/create_sh_env $SPACK_TAG $ENV_NAME
-    ```
 
-### Euler
-To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/ethz/SPACK_TAG_EULER :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/ethz/SPACK_TAG_EULER){:target="_blank"}.
-
-Euler Support recommends to compile code on compute-nodes. Unfortunately [internet-access on Euler compute-nodes is restricted :material-open-in-new:](https://scicomp.ethz.ch/wiki/Accessing_the_clusters#Internet_Security){:target="_blank"}.
-Therefore a two-step install needs to be performed:
-
-```bash
-# fetch and install cosmo-eccodes-definitions on login-node
-spack install cosmo-eccodes-definitions
-
-# compile ICON on compute-nodes
-srun -N 1 -c 12 --mem-per-cpu=20G spack install -v -j 12
-```
 
 ## Run test case
 In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *mch_ch_lowres*, you can use the `make_runscripts` function.
