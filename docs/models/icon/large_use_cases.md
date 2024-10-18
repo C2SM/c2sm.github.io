@@ -41,14 +41,23 @@ The idea here is to test the code path of the final setup and identify potential
 
 ### 1.1 Set up
 
+**Clone**
+
 First, clone [`icon-nwp` :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"} (if you don't have access, you need to request it by DKRZ):
 
 ```bash
 git clone --recurse-submodules git@gitlab.dkrz.de:icon/icon-nwp.git
 ```
+
+**Create test case**
+
 Then set up an ICON test case with a low number of grid points and a few time steps (about 6) and save it under `run/exp.<my_exp>`. Existing use cases like the [Aquaplanet :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/run/exp.exclaim_ape_R02B04){:target="_blank"} one can serve as a template.
 
+**Add test case to checksuite**
+
 Follow the step-by-step guide in [How to add experiments to a buildbot list :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/How-to-setup-new-test-experiments-for-buildbot#how-to-add-experiments-to-a-buildbot-list){:target="_blank"} to add your test case to the checksuite. Start with the `checksuite_modes` for the mpi and nproma tests (`'nm'`) for the machine you are testing on.
+
+**Compile out-of-source**
 
 We recommend you to do out-of-source builds for CPU and GPU so that you can have two compiled versions of ICON in the same repository. Therefore, you simply need to create two folders in the the ICON root folder (e.g. `nvhpc_cpu` and `nvhpc_cpu`) and copy the folders `config` and `scripts` from the root folder into it:
 
