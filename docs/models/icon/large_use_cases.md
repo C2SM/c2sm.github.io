@@ -41,13 +41,20 @@ The idea here is to test the code path of the final setup and identify potential
 
 ### 1.1 Set up
 
-Set up an ICON test case by cloning [`icon-nwp` :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"}, and integrate it into the ICON test infrastructure with a low number of grid points
-and a few time steps (about 6). Existing use cases like the [Aquaplanet :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/run/exp.exclaim_ape_R02B04){:target="_blank"} one can serve as a template. Your test case should be saved as `run/exp.<experiment_name>`.
+First, clone [`icon-nwp` :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"} (if you don't have access, you need to request it by DKRZ):
+
+```bash
+git clone --recurse-submodules git@gitlab.dkrz.de:icon/icon-nwp.git
+```
+Then set up an ICON test case with a low number of grid points and a few time steps (about 6) and save it under `run/exp.<my_exp>`. Existing use cases like the [Aquaplanet :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/run/exp.exclaim_ape_R02B04){:target="_blank"} one can serve as a template.
+
+Follow the step-by-step guide in [How to add experiments to a buildbot list :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/How-to-setup-new-test-experiments-for-buildbot#how-to-add-experiments-to-a-buildbot-list){:target="_blank"} to add your test case to the checksuite. Start with the `checksuite_modes` for the mpi and nproma tests (`'nm'`) for the machine you are testing on.
+
+We recommend you to do out-of-source builds for CPU and GPU so that you can have two compiled versions of ICON in the same repository. Therefore, you simply need to create to folders in the the ICON root folder (e.g. `nvhpc_cpu` and `nvhpc_cpu`) and copy the folders `config` and `scripts` from the root folder into it. Then follow the instructions in [Configure and compile :material-open-in-new:](usage.md/#configure-and-compile){:target="_blank"} to compile ICON on CPU and on GPU from within those folders.
 
 ### 1.2 Local testing
-Follow the step-by-step guide in [How to add experiments to a buildbot list :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/How-to-setup-new-test-experiments-for-buildbot#how-to-add-experiments-to-a-buildbot-list){:target="_blank"} to add you experiment test case. Start with the `checksuite_modes` for the mpi and nproma test (`'nm'`) for the machine you are testing on.
 
-We recommend you to do out-of-source builds for CPU and GPU so that you can have two compiled versions of ICON in the same repository. Please follow the instructions in [Configure and compile :material-open-in-new:](usage.md/#configure-and-compile){:target="_blank"} to compile ICON on CPU and on GPU.
+Before adding anything to the official ICON, we recommend you to run all tests locally first starting with CPU.
 
 #### Test on CPU
 To ensure that there are no basic issues with the namelist, we recommend to start testing on CPU before going over to GPU testing. Create the check file and run the test locally in the folder you built CPU in (set `EXP=<exp_name>`):
@@ -59,13 +66,12 @@ cd run
 sbatch --partition debug --time 00:30:00 check.${EXP}.run
 ```
 
-!!! note
-    If you are using an out-of-source build, make sure to have copied the `scripts` folder of icon-nwp into it.
-
 Check in the LOG file if all tests passed.
 
 #### Test on GPU
-If all tests are validating on CPU, the next step is to test on GPU. Follow the same steps as for CPU and run nproma and mpi test. If those tests also validate on GPU, you can continue with the tolerance test to ensure that running on GPU gives basically the same results as running on CPU. Therefore, please follow the instructions in [Validating with probtest without buildbot references (Generating tolerances for non standard tests) :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Validating-with-probtest-without-buildbot-references-(Generating-tolerances-for-non-standard-tests)){:target="_blank"}). If also the probtest validates, you can change the `checksuite_modes` to `'t'` and everything is set for activating the test in a CI pipeline.
+If all tests are validating on CPU, the next step is to test on GPU. Follow the same steps as for CPU and run nproma and mpi test. Again, check in the LOG file if all tests passed before going over to the next step.
+
+To ensure that running on GPU gives basically the same results as running on CPU. Therefore, please follow the instructions in [Validating with probtest without buildbot references (Generating tolerances for non standard tests) :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Validating-with-probtest-without-buildbot-references-(Generating-tolerances-for-non-standard-tests)){:target="_blank"}). If probtest validates, you can change the `checksuite_modes` to `'t'` and everything is set for activating the test in a CI pipeline.
 
 ### 1.3 Activate Test in a CI Pipeline
 If you followed the steps above in [1.2 Local testing](large_use_cases.md#12-local-testing), everything is set to activate the test in a CI pipeline. Therefore, push your changes to a branch on icon-nwp and open a merge request. Then follow the instructions in [Member selection for generating probtest tolerances :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Member-selection-for-generating-probtest-tolerances){:target="_blank"} for adding tolerances and references as well as best members for generating them to the CI pipeline.
@@ -79,5 +85,5 @@ The purpose here is to, still with a *standard* ICON, catch issues that could ar
 
 ## 3. Full scale test with *standard* ICON
 
-## 4. Switch to ICON-exclaim
+## 4. Switch to ICON-EXCLAIM
 
