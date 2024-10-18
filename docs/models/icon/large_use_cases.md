@@ -50,7 +50,7 @@ Then set up an ICON test case with a low number of grid points and a few time st
 
 Follow the step-by-step guide in [How to add experiments to a buildbot list :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/How-to-setup-new-test-experiments-for-buildbot#how-to-add-experiments-to-a-buildbot-list){:target="_blank"} to add your test case to the checksuite. Start with the `checksuite_modes` for the mpi and nproma tests (`'nm'`) for the machine you are testing on.
 
-We recommend you to do out-of-source builds for CPU and GPU so that you can have two compiled versions of ICON in the same repository. Therefore, you simply need to create to folders in the the ICON root folder (e.g. `nvhpc_cpu` and `nvhpc_cpu`) and copy the folders `config` and `scripts` from the root folder into it:
+We recommend you to do out-of-source builds for CPU and GPU so that you can have two compiled versions of ICON in the same repository. Therefore, you simply need to create two folders in the the ICON root folder (e.g. `nvhpc_cpu` and `nvhpc_cpu`) and copy the folders `config` and `scripts` from the root folder into it:
 
 ```bash
 mkdir nvhpc_cpu
