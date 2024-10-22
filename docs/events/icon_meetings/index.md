@@ -11,7 +11,7 @@ In case you have any questions or suggestions, contact the meeting organiser,
 
 ## C2SM ICON Mailing List
 
-As a member of the `c2sm.icon` mailing list, you will receive all relevant information around [ICON](../../models/icon.md) and invitations to the quarterly ICON meeting. 
+As a member of the `c2sm.icon` mailing list, you will receive all relevant information around [ICON](../../models/icon/index.md) and invitations to the quarterly ICON meeting. 
 
 If you or someone from your group is not yet a member of the `c2sm.icon` mailing list, subscribe by sending an e-mail to: 
 [`mailto:sympa@sympa.ethz.ch?subject=SUBSCRIBE%20c2sm.icon%20firstname%20lastname`](mailto:sympa@sympa.ethz.ch?subject=SUBSCRIBE%20c2sm.icon%20firstname%20lastname) (modify `firstname` and `lastname` in the subject).
