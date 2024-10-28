@@ -86,6 +86,11 @@
     /store/c2sm/c2sme/reanalyses_dkrz/ERA5
     ```
 
+=== "Alps"
+    ```console
+    /store/migration/store/c2sm/c2sme/reanalyses_dkrz/ERA5
+    ```
+
 - Size: 69 TB (last updated: 2024-10-28)
 - Number of files: 21,703 (last updated: 2024-10-28)
 - Access: direct
