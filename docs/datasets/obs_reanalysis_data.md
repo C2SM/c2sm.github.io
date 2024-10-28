@@ -81,20 +81,26 @@
 
 ### ERA5 (for ICON-CLM)
 
-=== "CSCS"
+=== "Piz Daint (legacy)"
     ```console
     /store/c2sm/c2sme/reanalyses_dkrz/ERA5
     ```
 
-- Size: 54 TB
-- Number of files: 21,460
+=== "Alps"
+    ```console
+    /store/migration/store/c2sm/c2sme/reanalyses_dkrz/ERA5
+    ```
+
+- Size: 69 TB (last updated: 2024-10-28)
+- Number of files: 21,703 (last updated: 2024-10-28)
 - Access: direct
 - Status: updated
-- Time period: 1979 - present
+- Time period: 1940 - 1952, 1979 - 2024 (missing data is currently being downloaded)
 - Variables: `FIS`, `FR_LAND`, `FR_SEA_ICE`, `PS`, `QC`, `QI`, `QR`, `QS`, `QV`, `T`, `T_SKIN`, `T_SNOW`, `T_SO`, `U`, `V`, `W_SNOW`, `W_SO_REL`
 - Temporal Resolution: hourly
 - Spatial Resolution: 0.28125° x 0.28125° (31 km)
-- More information: [ERA5 at CDS :material-open-in-new:](https://cds.climate.copernicus.eu/dataset/reanalysis-era5-single-levels-monthly-means?tab=overview){:target="_blank"}
+- Vertical levels: [40 - 137 :material-open-in-new:](https://confluence.ecmwf.int/display/UDOC/L137+model+level+definitions){:target="_blank"}
+- More information: [ERA5 at CDS :material-open-in-new:](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview){:target="_blank"}
 
 ### ERA5
 
