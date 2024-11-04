@@ -163,8 +163,8 @@
     /net/atmos/data/cerra/processed/v1/
     ```
 
-- Size: 7.72 TB :material-information-outline:{ title="last updated: 2024-10-27 01:44:06" }
-- Number of files: 1,824 :material-information-outline:{ title="last updated: 2024-10-27 01:44:06" }
+- Size: 7.72 TB :material-information-outline:{ title="last updated: 2024-11-03 01:44:08" }
+- Number of files: 1,824 :material-information-outline:{ title="last updated: 2024-11-03 01:44:08" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -205,8 +205,8 @@
     /net/atmos/data/cerra-land/processed/v1/
     ```
 
-- Size: 1.78 TB :material-information-outline:{ title="last updated: 2024-10-27 01:44:06" }
-- Number of files: 1,016 :material-information-outline:{ title="last updated: 2024-10-27 01:44:06" }
+- Size: 1.78 TB :material-information-outline:{ title="last updated: 2024-11-03 01:44:08" }
+- Number of files: 1,016 :material-information-outline:{ title="last updated: 2024-11-03 01:44:08" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -259,8 +259,8 @@
     /nfs/atmos/c2sm/era5/processed/v2
     ```
 
-- Size: 45.83 TB :material-information-outline:{ title="last updated: 2024-10-27 01:44:09" }
-- Number of files: 140,460 :material-information-outline:{ title="last updated: 2024-10-27 01:44:09" }
+- Size: 45.83 TB :material-information-outline:{ title="last updated: 2024-11-03 01:44:16" }
+- Number of files: 140,460 :material-information-outline:{ title="last updated: 2024-11-03 01:44:16" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-present, v2: 1980-present
@@ -301,8 +301,8 @@
     /net/atmos/data/era5-land_cds/processed/v1/
     ```
 
-- Size: 6.64 TB :material-information-outline:{ title="last updated: 2024-10-27 01:44:07" }
-- Number of files: 1,504 :material-information-outline:{ title="last updated: 2024-10-27 01:44:07" }
+- Size: 6.64 TB :material-information-outline:{ title="last updated: 2024-11-03 01:44:09" }
+- Number of files: 1,504 :material-information-outline:{ title="last updated: 2024-11-03 01:44:09" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
