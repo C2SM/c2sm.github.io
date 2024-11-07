@@ -27,11 +27,11 @@
 
 ## Open access journals
    * [Directory of open access journals :material-open-in-new:](https://www.doaj.org){:target="_blank"}
-   * [Check specific journal access policy :material-open-in-new:](https://v2.sherpa.ac.uk/romeo/){:target="_blank"}
+   * [Check specific journal access policy :material-open-in-new:](https://openpolicyfinder.jisc.ac.uk/){:target="_blank"}
 
 ## Funding agencies open access policies
    * [Open research data @SNSF :material-open-in-new:](http://www.snf.ch/en/theSNSF/research-policies/open_research_data/Pages/default.aspx){:target="_blank"}
-   * [Check specific funder archiving mandates :material-open-in-new:](https://v2.sherpa.ac.uk/juliet/){:target="_blank"}
+   * [Check specific funder archiving mandates :material-open-in-new:](https://openpolicyfinder.jisc.ac.uk/){:target="_blank"}
      
 ## Licensing
    * [Advices on how to license research data :material-open-in-new:](http://www.dcc.ac.uk/resources/how-guides/license-research-data){:target="_blank"}
