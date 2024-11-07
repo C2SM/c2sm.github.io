@@ -22,7 +22,7 @@
 - Variables: `2t`, `t`, `r`, ...
 - Temporal Resolution: 3-hourly
 - Spatial Resolution: 5 km x 5 km
-- More information: sub-daily regional reanalysis data for Europe, [Wishlist :material-open-in-new:](https://docs.google.com/document/d/1YtIabO5PMTsD_i_PqycmzIbrOYigNmuublt_i6FKrhY/edit#heading=h.brsa23yzcugp){:target="_blank"}, [Download Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0){:target="_blank"}
+- More information: sub-daily regional reanalysis data for Europe, [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/datasets/reanalysis-cerra-single-levels?tab=overview){:target="_blank"},  [Wishlist :material-open-in-new:](https://docs.google.com/document/d/1YtIabO5PMTsD_i_PqycmzIbrOYigNmuublt_i6FKrhY/edit#heading=h.brsa23yzcugp){:target="_blank"}, [Download Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0){:target="_blank"}
 
 ### CERRA-Land
 
@@ -256,14 +256,14 @@
     ```
 === "Euler"
     ```console
-    /nfs/atmos/c2sm/era5/processed/v2
+    /nfs/atmos/c2sm/era5/processed/
     ```
 
 - Size: 45.83 TB :material-information-outline:{ title="last updated: 2024-11-03 01:44:16" }
 - Number of files: 140,460 :material-information-outline:{ title="last updated: 2024-11-03 01:44:16" }
 - Access: direct
 - Status: updated
-- Time period: v1: 1940-present, v2: 1980-present
+- Time period: v1: 1940-22, v2: 1980-2023, v3: 1940-present
 - Variables: 
   `cbh`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `cl`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
@@ -289,7 +289,9 @@
   `va`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `vas`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
   `zg`{ title="day (native): 194001-202312, mon (native): 194001-202312" }
-- v2: [Variable list and progress :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/5efYkkFrSVC64lZ){:target="_blank"}
+- [Variable list and progress :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/5efYkkFrSVC64lZ){:target="_blank"}
+- v2: variable names and units are standardized to CMIP. Inconsistency in clt, clt is provided as fraction (as original ERA5) not % (as supposed to be in CMIP)
+- v3: variable names and units are standardized to CMIP (incl. clt)
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 0.25° x 0.25°
 - More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview){:target="_blank"}
