@@ -263,7 +263,7 @@
 - Number of files: 140,460 :material-information-outline:{ title="last updated: 2024-11-03 01:44:16" }
 - Access: direct
 - Status: updated
-- Time period: v1: 1940-22, v2: 1980-2023, v3: 1940-present
+- Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
 - Variables: 
   `cbh`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `cl`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
