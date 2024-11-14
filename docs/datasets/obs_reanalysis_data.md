@@ -22,7 +22,7 @@
 - Variables: `2t`, `t`, `r`, ...
 - Temporal Resolution: 3-hourly
 - Spatial Resolution: 5 km x 5 km
-- More information: sub-daily regional reanalysis data for Europe, [Wishlist :material-open-in-new:](https://docs.google.com/document/d/1YtIabO5PMTsD_i_PqycmzIbrOYigNmuublt_i6FKrhY/edit#heading=h.brsa23yzcugp){:target="_blank"}, [Download Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0){:target="_blank"}
+- More information: sub-daily regional reanalysis data for Europe, [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/datasets/reanalysis-cerra-single-levels?tab=overview){:target="_blank"},  [Wishlist :material-open-in-new:](https://docs.google.com/document/d/1YtIabO5PMTsD_i_PqycmzIbrOYigNmuublt_i6FKrhY/edit#heading=h.brsa23yzcugp){:target="_blank"}, [Download Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0){:target="_blank"}
 
 ### CERRA-Land
 
@@ -38,7 +38,7 @@
 - Variables: `snom`, `sro`, `tp`, ...
 - Temporal Resolution: 3-hourly
 - Spatial Resolution: 5 km x 5 km
-- More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/dataset/reanalysis-cerra-land?tab=overview){:target="_blank"}, [Wishlist :material-open-in-new:](https://docs.google.com/document/d/1YtIabO5PMTsD_i_PqycmzIbrOYigNmuublt_i6FKrhY/edit#heading=h.brsa23yzcugp){:target="_blank"}, [Download Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1e58ps_yBmxUG0jvL8ZmNNr7Zz_UXuqIZsz4MdRAzvbM/edit#gid=0){:target="_blank"}
+- More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/datasets/reanalysis-cerra-land?tab=overview){:target="_blank"}, [Wishlist :material-open-in-new:](https://docs.google.com/document/d/1YtIabO5PMTsD_i_PqycmzIbrOYigNmuublt_i6FKrhY/edit#heading=h.brsa23yzcugp){:target="_blank"}, [Download Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1e58ps_yBmxUG0jvL8ZmNNr7Zz_UXuqIZsz4MdRAzvbM/edit#gid=0){:target="_blank"}
 
 ### E-OBS
 
@@ -62,7 +62,7 @@
     - `QQ`: global radiation
 - Temporal Resolution: daily
 - Spatial Resolution: 0.1° and 0.25°
-- More information: [E-OBS :material-open-in-new:](https://www.ecad.eu/download/ensembles/download.php){:target="_blank"}, [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/dataset/insitu-gridded-observations-europe?tab=overview){:target="_blank"}
+- More information: [E-OBS :material-open-in-new:](https://www.ecad.eu/download/ensembles/download.php){:target="_blank"}, [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/datasets/insitu-gridded-observations-europe?tab=overview){:target="_blank"}
 
 ### ERAInterim
 
@@ -81,20 +81,26 @@
 
 ### ERA5 (for ICON-CLM)
 
-=== "CSCS"
+=== "Piz Daint (legacy)"
     ```console
     /store/c2sm/c2sme/reanalyses_dkrz/ERA5
     ```
 
-- Size: 54 TB
-- Number of files: 21,460
+=== "Alps"
+    ```console
+    /store/migration/store/c2sm/c2sme/reanalyses_dkrz/ERA5
+    ```
+
+- Size: 69 TB (last updated: 2024-10-28)
+- Number of files: 21,703 (last updated: 2024-10-28)
 - Access: direct
 - Status: updated
-- Time period: 1979 - present
+- Time period: 1940 - 1952, 1979 - 2024 (missing data is currently being downloaded)
 - Variables: `FIS`, `FR_LAND`, `FR_SEA_ICE`, `PS`, `QC`, `QI`, `QR`, `QS`, `QV`, `T`, `T_SKIN`, `T_SNOW`, `T_SO`, `U`, `V`, `W_SNOW`, `W_SO_REL`
 - Temporal Resolution: hourly
 - Spatial Resolution: 0.28125° x 0.28125° (31 km)
-- More information: [ERA5 at CDS :material-open-in-new:](https://cds.climate.copernicus.eu/dataset/reanalysis-era5-single-levels-monthly-means?tab=overview){:target="_blank"}
+- Vertical levels: [40 - 137 :material-open-in-new:](https://confluence.ecmwf.int/display/UDOC/L137+model+level+definitions){:target="_blank"}
+- More information: [ERA5 at CDS :material-open-in-new:](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview){:target="_blank"}
 
 ### ERA5
 
@@ -125,7 +131,7 @@
 - Variables: `2t`, `snom`
 - Temporal Resolution: hourly (variable dependent)
 - Spatial Resolution: 0.1° x 0.1°
-- More information: [ERA5-Land :material-open-in-new:](https://cds.climate.copernicus.eu/dataset/reanalysis-era5-land?tab=form){:target="_blank"}
+- More information: [ERA5-Land :material-open-in-new:](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=form){:target="_blank"}
 
 ### MERRA2
 
@@ -157,8 +163,8 @@
     /net/atmos/data/cerra/processed/v1/
     ```
 
-- Size: 7.72 TB :material-information-outline:{ title="last updated: 2024-10-20 01:45:06" }
-- Number of files: 1,824 :material-information-outline:{ title="last updated: 2024-10-20 01:45:06" }
+- Size: 7.72 TB :material-information-outline:{ title="last updated: 2024-11-10 01:44:33" }
+- Number of files: 1,824 :material-information-outline:{ title="last updated: 2024-11-10 01:44:33" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -190,7 +196,7 @@
   `vsw`{ title="day (native): 1985-2020, mon (native): 1985-2020" }
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 5x5km
-- More information: Sub-daily regional reanalysis data for Europe, [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/dataset/reanalysis-cerra-single-levels?tab=overview){:target="_blank"}, [Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0){:target="_blank"}
+- More information: Sub-daily regional reanalysis data for Europe, [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/datasets/reanalysis-cerra-single-levels?tab=overview){:target="_blank"}, [Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0){:target="_blank"}
 
 ### CERRA-Land
 
@@ -199,8 +205,8 @@
     /net/atmos/data/cerra-land/processed/v1/
     ```
 
-- Size: 1.78 TB :material-information-outline:{ title="last updated: 2024-10-20 01:45:05" }
-- Number of files: 1,016 :material-information-outline:{ title="last updated: 2024-10-20 01:45:05" }
+- Size: 1.78 TB :material-information-outline:{ title="last updated: 2024-11-10 01:44:33" }
+- Number of files: 1,016 :material-information-outline:{ title="last updated: 2024-11-10 01:44:33" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -220,7 +226,7 @@
   `vsw`{ title="day (native): 1985-2020, mon (native): 1985-2020" }
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 5x5km
-- More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/dataset/reanalysis-cerra-land?tab=overview){:target="_blank"}, [Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1e58ps_yBmxUG0jvL8ZmNNr7Zz_UXuqIZsz4MdRAzvbM/edit#gid=0){:target="_blank"}
+- More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/datasets/reanalysis-cerra-land?tab=overview){:target="_blank"}, [Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1e58ps_yBmxUG0jvL8ZmNNr7Zz_UXuqIZsz4MdRAzvbM/edit#gid=0){:target="_blank"}
 
 ### E-OBS and MCH
 
@@ -250,18 +256,18 @@
     ```
 === "Euler"
     ```console
-    /nfs/atmos/c2sm/era5/processed/v2
+    /nfs/atmos/c2sm/era5/processed/
     ```
 
-- Size: 45.83 TB :material-information-outline:{ title="last updated: 2024-10-20 01:45:08" }
-- Number of files: 140,438 :material-information-outline:{ title="last updated: 2024-10-20 01:45:08" }
+- Size: 45.71 TB :material-information-outline:{ title="last updated: 2024-11-10 01:44:53" }
+- Number of files: 135,607 :material-information-outline:{ title="last updated: 2024-11-10 01:44:53" }
 - Access: direct
 - Status: updated
-- Time period: v1: 1940-present, v2: 1980-present
+- Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
 - Variables: 
   `cbh`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `cl`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
-  `clt`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `clt`{ title="day (native): 198001-202312, mon (native): 194012-202312" },
   `d2m`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
   `hur`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `hurs`{ title="day (native): 194001-202312, mon (native): 198001-198512" },
@@ -283,10 +289,12 @@
   `va`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `vas`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
   `zg`{ title="day (native): 194001-202312, mon (native): 194001-202312" }
-- v2: [Variable list and progress :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/5efYkkFrSVC64lZ){:target="_blank"}
+- [Variable list and progress :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/5efYkkFrSVC64lZ){:target="_blank"}
+- v2: variable names and units are standardized to CMIP. Inconsistency in clt, clt is provided as fraction (as original ERA5) not % (as supposed to be in CMIP)
+- v3: variable names and units are standardized to CMIP (incl. clt)
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 0.25° x 0.25°
-- More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/dataset/reanalysis-era5-single-levels?tab=overview){:target="_blank"}
+- More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview){:target="_blank"}
 
 ### ERA5-Land
 
@@ -295,8 +303,8 @@
     /net/atmos/data/era5-land_cds/processed/v1/
     ```
 
-- Size: 6.64 TB :material-information-outline:{ title="last updated: 2024-10-20 01:45:07" }
-- Number of files: 1,504 :material-information-outline:{ title="last updated: 2024-10-20 01:45:07" }
+- Size: 6.64 TB :material-information-outline:{ title="last updated: 2024-11-10 01:44:35" }
+- Number of files: 1,504 :material-information-outline:{ title="last updated: 2024-11-10 01:44:35" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
@@ -314,7 +322,7 @@
   `tp`{ title="day (native): 1950-2022, mon (native): 1950-2022" }
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 0.1° x 0.1°
-- More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/dataset/reanalysis-era5-land?tab=form){:target="_blank"}
+- More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=form){:target="_blank"}
 
 ### MERRA2
 
