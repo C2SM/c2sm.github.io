@@ -98,10 +98,32 @@ If you followed the steps above in [1.2 Local testing](large_use_cases.md#12-loc
 
 
 ## 2. Intermediate Scale Tests
-The purpose here is to, still with a *standard* ICON, catch issues that could arise when increasing space and time scales. Because we still would like to be able to debug without waiting hours in the queue, it could be wise to come up with setups using few nodes and testing either/or: 
 
-- approaching the memory limits of the nodes
-- long simulations
+To test the scalability of ICON simulations under demanding conditions while minimizing queue wait times, we can design tests to stretch computational limits in memory and time. Here are some steps to extend your setup to meet these goals.
+
+### 2.1 Increase Horizontal Resolution with Fixed Node Count
+
+*Goal:* Test memory scaling behavior by increasing resolution without increasing node count.
+
+*Method:* 
+Increase the model's horizontal grid resolution (i.e., decrease grid spacing) to improve spatial accuracy. 
+        This will require more memory per node due to higher data density but will not increase the node count.
+        Monitor the memory usage closely on each node, and consider using profiling tools to track memory allocation patterns and potential memory overflow risks.
+
+
+*Expected Outcome:* This test will reveal the memory thresholds on individual nodes for your current setup and may highlight areas where memory optimization or node allocation adjustments are necessary.
+
+
+*Notes:* Approaching the memory limits without exceeding them can help identify how close the current node allocation is to becoming unsustainable at higher resolutions. If necessary, consider using memory-aware scheduling tools to balance memory loads across nodes if available.
+
+### 2.2 Run Longer Simulations (e.g., 1 Year vs. 1 Month)
+
+*Goal:* Assess the model's stability and resource consumption over prolonged simulation periods, revealing any potential issues with computational drift or resource leaks.
+
+*Method:* Run the simulation for an extended period, like one year instead of one month, to test how well the model holds up over time.
+This will allow for testing both numerical stability (are there signs of drift?) and resource persistence (are there memory leaks or increasing CPU demands?).
+
+*Expected Outcome:* Running for a longer period may expose issues like numerical drift, stability loss, or escalating memory/CPU demands that aren’t noticeable in shorter simulations.
 
 ## 3. Full scale test with *standard* ICON
 
