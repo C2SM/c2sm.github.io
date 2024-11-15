@@ -2,37 +2,28 @@
 
 [ICON :material-open-in-new:](https://www.icon-model.org/icon_model){:target="_blank"} is a complex piece of software and even more so is [ICON-EXCLAIM :material-open-in-new:](https://github.com/C2SM/icon-exclaim){:target="_blank"} that builds on top of it. Troubleshooting large scale configurations can therefore be tedious, which is why we developed a procedure to build large production ICON configurations in the most robust way possible.
 
-The overall philosophy is to build a series of gradually increasing complexity setups from a small scale ICON test case to the full production configuration. Even if it could feel like an overhead when starting the whole process, C2SM's core team is there to assist you in this journey and it will pay off in the end!
+The overall philosophy is to build a series of gradually increasing complexity setups from a small scale ICON-NWP test case to the full production configuration. Complexity can grow in two independent spaces, namely code (from ICON-NWP to ICON-EXCLAIM) and scales (resolution and duration). We will first tackle the first one and then scale up the simulation setup.
+
+Even if it could feel like an overhead when starting the whole process, C2SM's core team and the EXCLAIM team are there to assist you in this journey and it will pay off in the end!
 
 ## Flow Chart
 
 ```mermaid
 flowchart TD
-    C[C2SM Support]
-    ST[Small Scale Test Case]
-    IT[Intermediate Scale Test]
-    FT[Full Scale Test]
-    P{Passing?}
-    subgraph "I) Standard ICON (icon-nwp)"
-        direction LR
-        ST -.- CPU & GPU
-        ST ==> IT
-        IT ==> FT
-    end
-    BB --> P
-    ST & IT & FT --> P
-    P --> |Yes| EST
-    P --> |No| C
-    subgraph "II) gitlab.dkrz.de"
-        direction LR
-        ST --> MR[Merge Request for icon-nwp]
+    subgraph SMALL["1 - Small Scale Test Case"]
+        STnwp[Small Scale Test Case ICON-NWP] -.- CPU & GPU
+        STnwp --> MR[Merge Request for icon-nwp]
         MR --> BB[BuildBot]
+        STnwp --> STexc[Small Scale Test Case ICON-EXCLAIM]
     end
-    subgraph "III) ICON-EXCLAIM"
+    subgraph INT["2 - Intermediate Scale Test"]
+        IT[Intermediate Scale Test] & LST[Longer small Scale Test]
+    end
+    subgraph FULL["3 - Full Scale Test"]
         direction LR
-        EST[Small Scale Test Case] ==> EIT[Intermediate Scale Test]
-        EIT                        ==> EFT[Full Scale Test]
+        FT[Full Scale Test]
     end
+    SMALL ==> INT ==> FULL
 ```
 
 ## 1. Small Scale Test Case
@@ -96,6 +87,12 @@ To ensure that running on GPU gives basically the same results as running on CPU
 ### 1.3 Activate Test in a CI Pipeline
 If you followed the steps above in [1.2 Local testing](large_use_cases.md#12-local-testing), everything is set to activate the test in a CI pipeline. Therefore, push your changes to a branch on icon-nwp and open a merge request. Then follow the instructions in [Member selection for generating probtest tolerances :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Member-selection-for-generating-probtest-tolerances){:target="_blank"} for adding tolerances and references as well as best members for generating them to the CI pipeline.
 
+### 1.4 Small Test Case with ICON-EXCLAIM
+Now it is time to switch to ICON-EXCLAIM, which binds ICON-NWP with modules rewritten in GT4PY, so that we can test the code path in those as well. To that purpose, simply take the small scale test case generated above and replace the icon executable by the relevant one.
+
+!!! note "ICON-EXCLAIM CI"
+
+    When avaialble, it would also make sense to integrate your setup in the ICON-EXCLAIM testing infrastrucutre.
 
 ## 2. Intermediate Scale Tests
 
@@ -120,12 +117,10 @@ Increase the model's horizontal grid resolution (i.e., decrease grid spacing) to
 
 *Goal:* Assess the model's stability and resource consumption over prolonged simulation periods, revealing any potential issues with computational drift or resource leaks.
 
-*Method:* Run the simulation for an extended period, like one year instead of one month, to test how well the model holds up over time.
-This will allow for testing both numerical stability (are there signs of drift?) and resource persistence (are there memory leaks or increasing CPU demands?).
+*Method:* Run the small scale test for an extended period, e.g. one year instead of one month, to test how well the model holds up over time.
 
-*Expected Outcome:* Running for a longer period may expose issues like numerical drift, stability loss, or escalating memory/CPU demands that aren’t noticeable in shorter simulations.
+*Expected Outcome:* Catching issues like numerical drift, stability loss, or escalating memory/CPU demands that aren’t noticeable in shorter simulations.
 
-## 3. Full scale test with *standard* ICON
+## 3. Full scale test
 
-## 4. Switch to ICON-EXCLAIM
-
+At the end of this journey, we're finally ready to launch the full scale runs and start doing science with them! :material-party-popper:
