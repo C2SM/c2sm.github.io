@@ -25,7 +25,7 @@ The following table shows the current plan for the final vClusters distribution 
 
 ## Early Access
 
-For getting access to the vCluster dedicated to testing ([Tödi](vclusters.md/#tödi){:target="_blank"}), CSCS offers [Preparatory Projects :material-open-in-new:](https://www.cscs.ch/user-lab/allocation-schemes/preparatory-projects){:target="_blank"}. 
+For getting access to the vCluster dedicated to testing ([Tödi](vclusters.md/#todi){:target="_blank"}), CSCS offers [Preparatory Projects :material-open-in-new:](https://www.cscs.ch/user-lab/allocation-schemes/preparatory-projects){:target="_blank"}.
 
 ## Support by CSCS
 
