@@ -91,11 +91,11 @@
     /store/migration/store/c2sm/c2sme/reanalyses_dkrz/ERA5
     ```
 
-- Size: 69 TB (last updated: 2024-10-28)
-- Number of files: 21,703 (last updated: 2024-10-28)
+- Size: 100 TB (last updated: 2024-11-25)
+- Number of files: 22'034 (last updated: 2024-11-25)
 - Access: direct
 - Status: updated
-- Time period: 1940 - 1952, 1979 - 2024 (missing data is currently being downloaded)
+- Time period: 1940 - 2024
 - Variables: `FIS`, `FR_LAND`, `FR_SEA_ICE`, `PS`, `QC`, `QI`, `QR`, `QS`, `QV`, `T`, `T_SKIN`, `T_SNOW`, `T_SO`, `U`, `V`, `W_SNOW`, `W_SO_REL`
 - Temporal Resolution: hourly
 - Spatial Resolution: 0.28125° x 0.28125° (31 km)
