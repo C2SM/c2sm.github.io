@@ -1,6 +1,8 @@
 ---
 date:
   created: 2024-07-02
+categories:
+  - Alps
 ---
 
 # Switching to Alps

@@ -1,6 +1,9 @@
 ---
 date:
   created: 2024-02-28
+categories:
+  - Workshop
+  - Git
 ---
 
 # Git for Beginners Workshop

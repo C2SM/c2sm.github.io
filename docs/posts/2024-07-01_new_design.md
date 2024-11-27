@@ -1,6 +1,8 @@
 ---
 date:
   created: 2024-07-01
+categories:
+  - Website
 ---
 
 # Visual Update

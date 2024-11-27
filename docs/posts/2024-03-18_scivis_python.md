@@ -1,6 +1,9 @@
 ---
 date:
   created: 2024-03-18
+categories:
+  - Workshop
+  - Visualisation
 ---
 
 # Scientific Visualisation using Python
