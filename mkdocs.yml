@@ -56,9 +56,9 @@ plugins:
      archive: true
      archive_dir: ./
      archive_url_format: "{date}"
-     categories_dir: ./
-     categories_url_format: "{slug}"
-     post_url_format: "{date}/{slug}"
+     categories_url_format: "category_{slug}"
+     post_url_format: "{date}-{slug}"
+     post_url_date_format:  yyyy-MM-dd
 extra_css:
   - stylesheets/extra.css
 theme:

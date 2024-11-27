@@ -41,7 +41,7 @@ To contact CSCS staff directly, users can join their dedicated [Slack channel :m
 
 ## Introductory Workshop Material
 
-As an introduction to the Alps infrastructure, the material of our [C2SM workshop "Switching to Alps"](../blog/posts/2024-07-02_switching_to_Alps.md) from August 12, 2024 is available:
+As an introduction to the Alps infrastructure, the material of our [C2SM workshop "Switching to Alps"](../posts/2024-07-02_switching_to_Alps.md) from August 12, 2024 is available:
 
 - [Recording :material-download:](https://polybox.ethz.ch/index.php/s/oSxyJgTjyvJKX8B){:target="_blank"}<br>
 - [Slides presenting Alps, vClusters and Uenvs :material-download:](https://polybox.ethz.ch/index.php/s/jvtIYkBvHUSGZYD){:target="_blank"}<br>
