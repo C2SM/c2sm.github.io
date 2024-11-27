@@ -50,7 +50,15 @@ plugins:
   - search
   - literate-nav:
       nav_file: SUMMARY.md
-  - blog
+  - blog:
+     blog_dir: .
+     blog_toc: true
+     archive: true
+     archive_dir: ./
+     archive_url_format: "{date}"
+     categories_dir: ./
+     categories_url_format: "{slug}"
+     post_url_format: "{date}/{slug}"
 extra_css:
   - stylesheets/extra.css
 theme:

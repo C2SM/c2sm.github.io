@@ -1,5 +1,6 @@
 * [Home](index.md)
-* [News](blog/)
+    * */
+* [About C2SM](about/)
 * [Events](events/)
 * [Tasks](tasks/)
 * [User Support](support/)
