@@ -1,6 +1,9 @@
 ---
 date:
   created: 2024-07-29
+categories:
+  - Workshop
+  - Git
 ---
 
 # Git for Advanced Workshop

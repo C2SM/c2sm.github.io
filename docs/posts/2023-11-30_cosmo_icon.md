@@ -1,6 +1,10 @@
 ---
 date:
   created: 2023-11-30
+categories:
+  - Workshop
+  - COSMO
+  - ICON
 ---
 
 #  COSMO/ICON User Workshop

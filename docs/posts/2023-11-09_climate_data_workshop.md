@@ -1,6 +1,9 @@
 ---
 date:
   created: 2023-11-09
+categories:
+  - Workshop
+  - Climate Model & Data
 ---
 
 #  Climate Model and Climate Data Workshop
