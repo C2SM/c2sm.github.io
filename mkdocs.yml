@@ -54,7 +54,6 @@ plugins:
      blog_dir: .
      blog_toc: true
      archive: true
-     archive_dir: ./
      archive_url_format: "{date}"
      categories_url_format: "category_{slug}"
      post_url_format: "{date}-{slug}"
