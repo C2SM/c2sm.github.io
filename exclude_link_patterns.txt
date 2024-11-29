@@ -14,3 +14,4 @@ agupubs.onlinelibrary.wiley.com
 ^https://www.gnu.org
 ^https://git.iac.ethz.ch
 ^https://code.visualstudio.com
+^https://cds.climate.copernicus.eu
