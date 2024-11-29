@@ -69,6 +69,13 @@ Then follow the instructions in [Configure and compile :material-open-in-new:](u
 
 Before adding anything to the official ICON, we recommend you to run all tests locally first starting with CPU.
 
+For running the check scripts in the following, you need to have loaded a probtest environment and CDO and export `BB_NAME` to your builder. E.g. for Piz Daint:
+```bash
+source /project/g110/icon/probtest/conda/miniconda/bin/activate probtest
+module load daint-gpu CDO
+export BB_NAME=daint_cpu_nvidia
+```
+
 #### Test on CPU
 
 To ensure that there are no basic issues with the namelist, we recommend to start testing on CPU before going over to GPU testing. Create the check file and run the test locally in the folder you built CPU in (set `EXP=<exp_name>`):
