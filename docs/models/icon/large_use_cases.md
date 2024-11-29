@@ -56,9 +56,11 @@ We recommend you to do out-of-source builds for CPU and GPU so that you can have
 mkdir nvhpc_cpu
 cd nvhpc_cpu
 cp -r ../config ../scripts .
+cd ..
 mkdir nvhpc_gpu
 cd nvhpc_gpu
 cp -r ../config ../scripts .
+cd ..
 ```
 
 Then follow the instructions in [Configure and compile :material-open-in-new:](usage.md/#configure-and-compile){:target="_blank"} to compile ICON on CPU and on GPU from within those folders.

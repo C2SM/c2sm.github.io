@@ -24,7 +24,7 @@ To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack
 
 Refer to the official spack-c2sm documentation for [installing ICON using Spack :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon){:target="_blank"}.
 
-After the fist compilation, you need to create a `setting` file:
+After the first compilation on GPU, you need to create a `setting` file:
 
 === "daint_gpu_nvhpc"
     ```shell
