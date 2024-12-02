@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
     
     
       
@@ -3311,13 +3311,20 @@
 <div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>nvhpc_cpu
 <span class="nb">cd</span><span class="w"> </span>nvhpc_cpu
 cp<span class="w"> </span>-r<span class="w"> </span>../config<span class="w"> </span>../scripts<span class="w"> </span>.
+<span class="nb">cd</span><span class="w"> </span>..
 mkdir<span class="w"> </span>nvhpc_gpu
 <span class="nb">cd</span><span class="w"> </span>nvhpc_gpu
 cp<span class="w"> </span>-r<span class="w"> </span>../config<span class="w"> </span>../scripts<span class="w"> </span>.
+<span class="nb">cd</span><span class="w"> </span>..
 </code></pre></div>
 <p>Then follow the instructions in <a href="../usage/#configure-and-compile" target="_blank">Configure and compile <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> to compile ICON on CPU and on GPU from within those folders.</p>
 <h3 id="12-local-testing">1.2 Local Testing<a class="headerlink" href="#12-local-testing" title="Permanent link">&para;</a></h3>
 <p>Before adding anything to the official ICON, we recommend you to run all tests locally first starting with CPU.</p>
+<p>For running the check scripts in the following, you need to have loaded a probtest environment and CDO and export <code>BB_NAME</code> to your builder. E.g. for Piz Daint:
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>/project/g110/icon/probtest/conda/miniconda/bin/activate<span class="w"> </span>probtest
+module<span class="w"> </span>load<span class="w"> </span>daint-gpu<span class="w"> </span>CDO
+<span class="nb">export</span><span class="w"> </span><span class="nv">BB_NAME</span><span class="o">=</span>daint_cpu_nvidia
+</code></pre></div></p>
 <h4 id="test-on-cpu">Test on CPU<a class="headerlink" href="#test-on-cpu" title="Permanent link">&para;</a></h4>
 <p>To ensure that there are no basic issues with the namelist, we recommend to start testing on CPU before going over to GPU testing. Create the check file and run the test locally in the folder you built CPU in (set <code>EXP=&lt;exp_name&gt;</code>):</p>
 <div class="highlight"><pre><span></span><code>./make_runscripts<span class="w"> </span><span class="si">${</span><span class="nv">EXP</span><span class="si">}</span>

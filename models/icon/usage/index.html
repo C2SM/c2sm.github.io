@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
     
     
       
@@ -3091,13 +3091,19 @@
 <p>To <a href="https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin" target="_blank">set up a Spack instance <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>, ensure that you clone the repository using the Spack tag provided in the ICON repository at <a href="https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG_C2SM" target="_blank">config/cscs/SPACK_TAG_C2SM <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> and load it into your command line.</p>
 <p><strong>2. Build ICON</strong></p>
 <p>Refer to the official spack-c2sm documentation for <a href="https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon" target="_blank">installing ICON using Spack <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
-<p>After the fist compilation, you need to create a <code>setting</code> file:</p>
+<p>After the first compilation, you need to create a <code>setting</code> file (the following example is for Piz Daint, please adapt the lines according to the machine you are using):</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">daint_gpu_nvhpc</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nv">SPACK_TAG</span><span class="o">=</span><span class="k">$(</span>cat<span class="w"> </span><span class="s2">&quot;config/cscs/SPACK_TAG_C2SM&quot;</span><span class="k">)</span>
-<span class="nv">ENV_NAME</span><span class="o">=</span>daint_gpu_nvhpc<span class="w"> </span><span class="c1"># modify if necessary</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Get SPACK_TAG used on machine</span>
+<span class="nv">SPACK_TAG</span><span class="o">=</span><span class="k">$(</span>cat<span class="w"> </span><span class="s2">&quot;config/cscs/SPACK_TAG_C2SM&quot;</span><span class="k">)</span>
+<span class="c1"># Set the name of the environment, which should be equal to the builder</span>
+<span class="nv">ENV_NAME</span><span class="o">=</span>daint_gpu_nvhpc
+<span class="c1"># Load probtest environment (only needed if you want to run check files)</span>
+<span class="nb">source</span><span class="w"> </span>/project/g110/icon/probtest/conda/miniconda/bin/activate<span class="w"> </span>probtest
+<span class="c1"># Ensure CDO is loaded on your machine</span>
 module<span class="w"> </span>load<span class="w"> </span>daint-gpu<span class="w"> </span>CDO
+<span class="c1"># Remove and create setting file with the following two commands</span>
 rm<span class="w"> </span>-f<span class="w"> </span>setting
 ./config/cscs/create_sh_env<span class="w"> </span><span class="nv">$SPACK_TAG</span><span class="w"> </span><span class="nv">$ENV_NAME</span>
 </code></pre></div>
