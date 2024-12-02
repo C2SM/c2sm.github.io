@@ -24,13 +24,19 @@ To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack
 
 Refer to the official spack-c2sm documentation for [installing ICON using Spack :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon){:target="_blank"}.
 
-After the fist compilation, you need to create a `setting` file:
+After the first compilation, you need to create a `setting` file (the following example is for Piz Daint, please adapt the lines according to the machine you are using):
 
 === "daint_gpu_nvhpc"
     ```shell
+    # Get SPACK_TAG used on machine
     SPACK_TAG=$(cat "config/cscs/SPACK_TAG_C2SM")
-    ENV_NAME=daint_gpu_nvhpc # modify if necessary
+    # Set the name of the environment, which should be equal to the builder
+    ENV_NAME=daint_gpu_nvhpc
+    # Load probtest environment (only needed if you want to run check files)
+    source /project/g110/icon/probtest/conda/miniconda/bin/activate probtest
+    # Ensure CDO is loaded on your machine
     module load daint-gpu CDO
+    # Remove and create setting file with the following two commands
     rm -f setting
     ./config/cscs/create_sh_env $SPACK_TAG $ENV_NAME
     ```

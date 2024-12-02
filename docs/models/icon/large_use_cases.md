@@ -56,9 +56,11 @@ We recommend you to do out-of-source builds for CPU and GPU so that you can have
 mkdir nvhpc_cpu
 cd nvhpc_cpu
 cp -r ../config ../scripts .
+cd ..
 mkdir nvhpc_gpu
 cd nvhpc_gpu
 cp -r ../config ../scripts .
+cd ..
 ```
 
 Then follow the instructions in [Configure and compile :material-open-in-new:](usage.md/#configure-and-compile){:target="_blank"} to compile ICON on CPU and on GPU from within those folders.
@@ -66,6 +68,13 @@ Then follow the instructions in [Configure and compile :material-open-in-new:](u
 ### 1.2 Local Testing
 
 Before adding anything to the official ICON, we recommend you to run all tests locally first starting with CPU.
+
+For running the check scripts in the following, you need to have loaded a probtest environment and CDO and export `BB_NAME` to your builder. E.g. for Piz Daint:
+```bash
+source /project/g110/icon/probtest/conda/miniconda/bin/activate probtest
+module load daint-gpu CDO
+export BB_NAME=daint_cpu_nvidia
+```
 
 #### Test on CPU
 
