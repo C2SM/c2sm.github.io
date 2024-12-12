@@ -1,6 +1,8 @@
 # AI/ML Planning Workshop
 
-Date
+Date: 21 November 2024
+
+Participants: 
 
 - Minutes
 - Presentations
