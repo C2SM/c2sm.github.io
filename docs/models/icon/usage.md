@@ -136,7 +136,7 @@ spack install
 ```
 
 
-### Sanits
+### Santis
 Please follow the instructions for Todi, but run the following before loading the ICON user-environment:
 
 ```bash
