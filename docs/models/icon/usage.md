@@ -75,11 +75,31 @@ srun -N 1 -c 12 --mem-per-cpu=20G spack install -v -j 12
 
     Information on this section is not yet complete nor final. It will be updated following the progress of the Alps system deployment at CSCS and C2SM's adaptation to this new system. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Alps.
 
-On Todi, Spack is also used to build ICON. However, these is no suitable `spack.yaml` file present for the Spack environment. Therefore, create a `spack.yaml` file and use the software stack upstream provided by the user environment.
+On Todi, Spack is also used to build ICON. However, there is no suitable `spack.yaml` file present for the Spack environment. Therefore, create a `spack.yaml` file and use the software stack upstream provided by the user environment.
 
 **1. Create a `spack.yaml` file**
 
-From your ICON root folder:
+Create the following files from the ICON build folder (different to the ICON root folder in case of a out-of-source build).
+
+For CPU compilation:
+
+=== "config/cscs/spack/v0.21.1.3/todi_cpu_nvhpc/spack.yaml"
+
+  ```yaml
+  spack:
+    specs:
+      - cosmo-eccodes-definitions@2.25.0.2
+      - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib
+    view: true
+    concretizer:
+      unify: when_possible
+    develop:
+      icon:
+        path: ../../../../..
+        spec: icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib
+  ```
+
+For GPU compilation:
 
 === "config/cscs/spack/v0.21.1.3/todi_gpu_nvhpc/spack.yaml"
 
@@ -99,6 +119,7 @@ From your ICON root folder:
 
 **2. Build ICON**
 
+Run the following from the ICON root folder:
 ```console
 # Load ICON user-environment 
 uenv start --view=spack icon-wcp/v1:rc4
@@ -109,14 +130,18 @@ git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} ht
 . spack-c2sm/setup-env.sh /user-environment
 
 # Build ICON
-cd /path/to/icon
+cd /path/to/icon-build-folder
 spack env activate -d config/cscs/spack/${SPACK_TAG}/todi_gpu_nvhpc
 spack install
 ```
 
 
+### Santis
+Please follow the instructions for Todi, but run the following before loading the ICON user-environment:
 
-
+```bash
+export CLUSTER_NAME=todi
+```
 
 ## Run test case
 In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *mch_ch_lowres*, you can use the `make_runscripts` function.
