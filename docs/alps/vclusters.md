@@ -75,7 +75,7 @@ Even though Climate and Weather also has the dedicated vCluster `santis` (see [b
 
 ### Uenvs
 
-Same as on `santis`, one can access the uenvs from `todi`:
+As on `santis`, you can access the uenvs from `todi`:
 
 ```shell
 export CLUSTER_NAME=todi
