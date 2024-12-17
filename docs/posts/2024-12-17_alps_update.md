@@ -7,7 +7,7 @@ categories:
 
 # Update on the current status on Alps
 
-Last week, CSCS deployed the Climate and Weather vCluster `santis`. Since there is still some fine-tuning to be performed by CSCS, the [Santis section](../alps/vclusters.md#santis) provides an overview how to transition from `todi` to `santis`.
+Last week, CSCS deployed the Climate and Weather vCluster `santis`. As some fine-tuning is still ongoing, the [Santis section](../alps/vclusters.md#santis) provides an overview of how to transition from `todi` to `santis`.
 
 <!-- more -->
 
