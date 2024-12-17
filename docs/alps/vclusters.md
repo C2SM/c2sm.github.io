@@ -20,7 +20,7 @@ Host balfrin* daint* santis* todi*
   ProxyJump ela
 ```
 
-This would allow standard connections like `ssh santis` but also specifying the login node like `ssh santis-ln002` if needed. Replace `cscsusername` with your actual user name.
+This allows standard connections like `ssh santis`, but you can also specify a login node if needed, e.g., `ssh santis-ln002`. Replace `cscsusername` with your actual username.
 
 ## Santis
 
