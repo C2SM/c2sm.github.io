@@ -33,13 +33,13 @@ By the end of 2024, the deployment is complete only to ~95 %.
 ### Differences to the Environment on `todi`
 
 - `$HOME` is now on a new NFS file system
-    - Your folder `/users/$USER` will be mostly empty
-    - The NFS system still requires some fine-tuning and file system performance might be low.
-        - We recommend to do (especially heavy tasks) on `$SCRATCH`
-- The `$HOME` of `todi` is mounted in `/users.OLD/$USER`
+    - Your folder `/users/$USER` will initially be mostly empty
+    - The NFS system still requires fine-tuning, and file system performance may be low.
+    - We recommend running tasks, especially heavy ones, on $SCRATCH.
+- `Todi`'s $HOME is mounted as `/users.OLD/$USER`.
     - ⚠️ The mount is read-only!
-    - You are responsible to copy your data from `/users.OLD/$USER` :material-arrow-right-thin: `/users/$USER/...`
-    - The mount is temporary - will be removed towards end of January 2025.
+    - You are responsible for copying your data from `/users.OLD/$USER` to `/users/$USER/...`.
+    - The mount is temporary and will be removed by the end of January 2025.
 
 !!! info
 
