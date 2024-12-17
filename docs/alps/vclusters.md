@@ -24,7 +24,7 @@ This allows standard connections like `ssh santis`, but you can also specify a l
 
 ## Santis
 
-The vCluster `Santis` is dedicated to **Climate and Weather** and may initially host only [EXCLAIM :material-open-in-new:](https://c2sm.ethz.ch/research/exclaim.html){:target="_blank"} and related projects.
+The vCluster `santis` is dedicated to **Climate and Weather** and may initially host only [EXCLAIM :material-open-in-new:](https://c2sm.ethz.ch/research/exclaim.html){:target="_blank"} and related projects.
 
 ### Deployment Status
 
@@ -36,7 +36,7 @@ Currently, the deployment is approximately 95% complete.
     - Your folder `/users/$USER` will initially be mostly empty
     - The NFS system still requires fine-tuning, and file system performance may be low.
     - We recommend running tasks, especially heavy ones, on $SCRATCH.
-- `Todi`'s $HOME is mounted as `/users.OLD/$USER`.
+- `todi`'s $HOME is mounted as `/users.OLD/$USER`.
     - ⚠️ The mount is read-only!
     - You are responsible for copying your data from `/users.OLD/$USER` to `/users/$USER/...`.
     - The mount is temporary and will be removed by the end of January 2025.
