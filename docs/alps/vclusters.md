@@ -43,7 +43,7 @@ By the end of 2024, the deployment is complete only to ~95 %.
 
 !!! info
 
-    Despite the need to work on the deployment in the upcoming days, users are invited to already access the system and start familiarising yourself with it and they might also start the data migration of your old home.
+    Despite the need to work on the deployment in the upcoming days, users are invited to already access the system and start familiarising themselves with it and they might also start the data migration of their old home.
 
     The activities on CSCS side should not require any reboot, however, some services might need to be restarted, e.g., SLURM. This could lead to short interruptions or even failing jobs. CSCS will provide more information in the upcoming days and will try to minimise the risk of interferences by consolidating changes.
 
