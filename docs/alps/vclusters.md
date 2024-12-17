@@ -24,7 +24,7 @@ This allows standard connections like `ssh santis`, but you can also specify a l
 
 ## Santis
 
-The vCluster `santis` is dedicated to **Climate and Weather**. It might, at the beginning, only host [EXCLAIM :material-open-in-new:](https://c2sm.ethz.ch/research/exclaim.html){:target="_blank"} and related projects.
+The vCluster `Santis` is dedicated to **Climate and Weather** and may initially host only [EXCLAIM :material-open-in-new:](https://c2sm.ethz.ch/research/exclaim.html){:target="_blank"} and related projects.
 
 ### Deployment Status
 
