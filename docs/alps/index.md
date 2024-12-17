@@ -17,7 +17,7 @@ The following table shows current vClusters distribution on Alps at CSCS (only C
 
 ## Support by CSCS
 
-General information about access, file systems, vClusters, user environments and much more can be found at the [CSCS Knowledge Base](https://confluence.cscs.ch/display/KB).
+General information about access, file systems, vClusters, user environments and much more can be found at the [CSCS Knowledge Base :material-open-in-new:](https://confluence.cscs.ch/display/KB){:target="_blank"}.
 
 To contact CSCS staff directly, users can join their dedicated [Slack workspace :material-open-in-new:](https://cscs-users.slack.com){:target="_blank"}, with dedicated channels for each vCluster. 
 
