@@ -28,7 +28,7 @@ The vCluster `Santis` is dedicated to **Climate and Weather** and may initially 
 
 ### Deployment Status
 
-By the end of 2024, the deployment is complete only to ~95 %. 
+Currently, the deployment is approximately 95% complete. 
 
 ### Differences to the Environment on `todi`
 
