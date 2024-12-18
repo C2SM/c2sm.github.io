@@ -85,7 +85,12 @@ Next, follow the instructions to build ICON using Spack below.
 
 **1. Create a `spack.yaml` file**
 
-Create the following files from the ICON build folder (different to the ICON root folder in case of a out-of-source build).
+Create the following files from the ICON build folder (different to the ICON root folder in case of a out-of-source build). For that, you will have to create the missing folders first:
+```bash
+mkdir config/cscs/spack/v0.21.1.3
+mkdir config/cscs/spack/v0.21.1.3/alps_cpu_nvhpc
+mkdir config/cscs/spack/v0.21.1.3/alps_gpu_nvhpc
+```
 
 For CPU compilation:
 
