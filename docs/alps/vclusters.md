@@ -1,10 +1,3 @@
-!!! construction "Page under construction - last update: 2024-09-06"
-
-    Information in this page is not yet complete nor final. It will be updated following the progress of
-
-    - the Alps system deployment at CSCS
-    - C2SM's adaptation to this new system
-
 # Supported vClusters
 
 This page is hosting information about C2SM supported vClusters (not all CSCS vClusters). 
@@ -27,56 +20,76 @@ Host balfrin* daint* santis* todi*
   ProxyJump ela
 ```
 
-This would allow standard connections like `ssh santis` but also specifying the login node like `ssh santis-ln002` if needed. Replace `cscsusername` with your actual user name.
-
-## Daint
-
-Daint (Alps) is the vCluster dedicated to the User Lab. It is currently accessible at `daint.alps.cscs.ch` (until the current Piz Daint gets decommissioned), so connect with `ssh daint.alps` with the `ssh` settings above.
-
-Even though Weather and Climate also has the dedicated vCluster Santis (see [below](#santis)), traditional projects might also land on Daint.
-
-### Uenvs
-
-List of currently supported Uenvs on Daint:
-
-| uenv                     | activity                       | Remark              |
-|--------------------------|--------------------------------|---------------------|
-| icon-vx:rcy              | build and run ICON             | Not deployed (yet?) |
-| netcdf-tools/2024:v1-rc1 | pre- and post-processing tools |                     |
-
-### Storage
-
-!!! note "TODO"
-
-    - [ ] Storage
+This allows standard connections like `ssh santis`, but you can also specify a login node if needed, e.g., `ssh santis-ln002`. Replace `cscsusername` with your actual username.
 
 ## Santis
 
-!!! warning "Santis has not been deployed yet."
+The vCluster `santis` is dedicated to **Climate and Weather** and may initially host only [EXCLAIM :material-open-in-new:](https://c2sm.ethz.ch/research/exclaim.html){:target="_blank"} and related projects.
 
-Santis is dedicated to Weather and Climate. It might, at the beginning, only host [EXCLAIM :material-open-in-new:](https://c2sm.ethz.ch/research/exclaim.html){:target="_blank"} and related projects.
+### Deployment Status
+
+Currently, the deployment is approximately 95% complete. 
+
+### Differences to the Environment on `todi`
+
+- `$HOME` is now on a new NFS file system
+    - Your folder `/users/$USER` will initially be mostly empty
+    - The NFS system still requires fine-tuning, and file system performance may be low.
+    - We recommend running tasks, especially heavy ones, on $SCRATCH.
+- `todi`'s $HOME is mounted as `/users.OLD/$USER`.
+    - ⚠️ The mount is read-only!
+    - You are responsible for copying your data from `/users.OLD/$USER` to `/users/$USER/...`.
+    - The mount is temporary and will be removed by the end of January 2025.
+
+!!! info
+
+    Despite the need to work on the deployment in the upcoming days, users are invited to already access the system and start familiarising themselves with it and they might also start the data migration of their old home.
+
+    The activities on CSCS side should not require any reboot, however, some services might need to be restarted, e.g., SLURM. This could lead to short interruptions or even failing jobs. CSCS will provide more information in the upcoming days and will try to minimise the risk of interferences by consolidating changes.
 
 ### Uenvs
 
-| uenv                     | activity                       |
-|--------------------------|--------------------------------|
-| icon-vx:rcy              | build and run ICON             |
-| netcdf-tools/tag:version | pre- and post-processing tools |
+To find and use already existing uenvs from `todi`, you need to modify the `CLUSTER_NAME` environment variable.
+
+```shell
+export CLUSTER_NAME=todi
+uenv image find
+```
+
+| uenv                       | activity                       |
+|----------------------------|--------------------------------|
+| `icon-wcp/v1:rc4`          | build and run ICON             |
+| `netcdf-tools/2024:v1-rc1` | pre- and post-processing tools |
 
 ### Storage
 
 !!! note "TODO"
 
-    - [ ] Storage
+The migration of the previous storage is not yet finished. Once there is an update from CSCS, we will inform you here. Also note that the environment variables `$STORE` and `$PROJECT` are not yet set.
 
+## Daint
 
-## Tödi
+Daint (Alps) is the vCluster dedicated to the **User Lab**. It is currently accessible at `daint.alps.cscs.ch` (until the current Piz Daint gets decommissioned), so connect with `ssh daint.alps` with the `ssh` settings above.
 
-Tödi is the testing vCluster and is currently deployed on the most of the Alps system.
+Even though Climate and Weather also has the dedicated vCluster `santis` (see [below](#santis)), traditional projects might also land on Daint.
 
 ### Uenvs
 
-| uenv                     | activity                       |
-|--------------------------|--------------------------------|
-| icon-wcp/v1:rc4          | build and run ICON             |
-| netcdf-tools/2024:v1-rc1 | pre- and post-processing tools |
+As on `santis`, you can access the uenvs from `todi`:
+
+```shell
+export CLUSTER_NAME=todi
+uenv image find
+```
+
+| uenv                       | activity                       |
+|----------------------------|--------------------------------|
+| `icon-wcp/v1:rc4`          | build and run ICON             |
+| `netcdf-tools/2024:v1-rc1` | pre- and post-processing tools |
+
+### Storage
+
+!!! note "TODO"
+
+The migration of the previous storage is not yet finished. Once there is an update from CSCS, we will inform you here.
+
