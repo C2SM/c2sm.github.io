@@ -89,7 +89,7 @@ Create the following files from the ICON build folder (different to the ICON roo
 
 For CPU compilation:
 
-=== "config/cscs/spack/v0.21.1.3/todi_cpu_nvhpc/spack.yaml"
+=== "config/cscs/spack/v0.21.1.3/alps_cpu_nvhpc/spack.yaml"
 
   ```yaml
   spack:
@@ -107,7 +107,7 @@ For CPU compilation:
 
 For GPU compilation:
 
-=== "config/cscs/spack/v0.21.1.3/todi_gpu_nvhpc/spack.yaml"
+=== "config/cscs/spack/v0.21.1.3/alps_gpu_nvhpc/spack.yaml"
 
   ```yaml
   spack:
@@ -137,7 +137,7 @@ git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} ht
 
 # Build ICON
 cd /path/to/icon-build-folder
-spack env activate -d config/cscs/spack/${SPACK_TAG}/todi_gpu_nvhpc
+spack env activate -d config/cscs/spack/${SPACK_TAG}/alps_gpu_nvhpc
 spack install
 ```
 
