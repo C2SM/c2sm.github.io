@@ -16,4 +16,4 @@ agupubs.onlinelibrary.wiley.com
 ^https://code.visualstudio.com
 ^https://cds.climate.copernicus.eu
 ^https://www.doaj.org
-^https://www.re3data.org/
+^https://www.re3data.org
