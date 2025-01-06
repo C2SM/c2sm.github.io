@@ -15,3 +15,4 @@ agupubs.onlinelibrary.wiley.com
 ^https://git.iac.ethz.ch
 ^https://code.visualstudio.com
 ^https://cds.climate.copernicus.eu
+^https://www.doaj.org
