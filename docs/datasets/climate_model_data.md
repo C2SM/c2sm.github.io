@@ -14,8 +14,8 @@
     ```console
     /net/atmos/data/cmip2
     ```
-    
-- Size: 0.01 TB 
+
+- Size: 0.01 TB
 - Number of files: 500
 - Access: direct / rsync
 - Status: frozen (2010-10)
@@ -27,7 +27,7 @@
     ```console
     /net/atmos/data/cmip3
     ```
-    
+
 - Size: 6 TB
 - Number of files: 40.000
 - Access: direct / rsync
@@ -40,7 +40,7 @@
     ```console
     /net/atmos/data/cmip5
     ```
-    
+
 - Size: 130 TB
 - Number of files: 700.000
 - Access: direct / rsync
@@ -58,7 +58,7 @@
     /nfs/atmos/c2sm/cmip6
     ```
 
-- Size: 520 TB 
+- Size: 520 TB
 - Number of Files: 5.500.000
 - Access: direct / rsync
 - Status: weekly updated
@@ -78,7 +78,7 @@
     ```console
     /net/atmos/data/cmip3-ng
     ```
-    
+
 - Size: 0.5 TB
 - Number of files: 5.000
 - Access: direct / rsync
@@ -92,7 +92,7 @@
     ```console
     /net/atmos/data/cmip5-ng
     ```
-    
+
 - Size: 33 TB
 - Number of files: 100.000
 - Access: direct / rsync
@@ -115,7 +115,7 @@
 - Number of files: 665,448 :material-information-outline:{ title="last updated: 2025-01-12 01:46:54" }
 - Access: direct / rsync
 - Status: frozen (2019-03)
-- Variables: 
+- Variables:
   `areacella`{ title="fx (native)" },
   `clt`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `co2mass`{ title="mon (native)" },
@@ -236,7 +236,7 @@
 - Number of files: 1.800
 - Access: direct
 - Status: frozen (2019-04)
-- Variables: 
+- Variables:
   `hfls`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
   `hfss`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
   `hurs`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
@@ -291,13 +291,13 @@
     /net/ch4/data/cordex.ch2025/
     ```
 
-- Size: 46 TB 
+- Size: 46 TB
 - Number of files: 3.500
 - Access: direct
 - Status: ongoing
-- Variables: 
-    - daily: `pr`, `tas`, `tasmax`, `tasmin`, `zg500`
-- Resolution: 0.44° and 0.11°
+- Variables:
+    - daily: `pr`, `tas`, `tasmax`, `tasmin`, `hurs`, `rsds`, `sfcWind`, `zg500`, `evspsbl`, `ta500`, `ta850`
+- Resolution: 0.11°
 
 ### CORDEX-FPSCONV
 
@@ -318,3 +318,21 @@
     - 1hr: `pr`, `tas`
     - daily: `pr`, `tas`, `tasmax`, `tasmin`
 - Resolution: 2-3 km
+
+### Seasonal Forecast Data from ECMWF (SEAS5)
+
+=== "IAC"
+    ```console
+    /net/co2/c2sm-data/rlorenz/seasonal_forecast_ecmwf/netcdf/
+    /net/nitrogen/climphys/seasonal-forecast/
+    ```
+
+- Size:
+- Number of files:
+- Access: direct / rsync
+- Status: frozen (could be updated on request)
+- Variables:
+    - daily: `10m_u_component_of_wind`,  `2m_dewpoint_temperature`,  `mean_sea_level_pressure`,  `snow_depth_water_equivalent`,  `surface_net_solar_radiation`,  `total_cloud_cover`,
+`10m_v_component_of_wind`,  `evaporation`, `snow_depth`, `sub_surface_runoff`, `surface_runoff`, `2m_temperature`, `maximum_2m_temperature_in_the_last_24_hours`, `minimum_2m_temperature_in_the_last_24_hours`, `total_precipitation`
+- Resolution: 1° x 1°
+
