@@ -22,6 +22,14 @@ An overview of which variables are available for which runs can be found [at ETH
 More details about the different model runs, such as info about the driving RCM and domains, can be found [under this link :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/qDE3YAsFyruyyQw){:target="_blank"}.
 
 ## Data Availability
-The data can be found at CSCS: `/store/c2sm/c2sme/CH202X/CORDEX-FPSCONV/ALP-3`
+The data can be found on Santis at CSCS:
 
-The data is mirrored daily to the IAC via `rsync` to: `/net/krypton/hyclimm_nobackup/CORDEX-FPSCONV/ALP-3`
+```console
+/capstor/store/cscs/c2sm/c2sme/CH202X/CORDEX-FPSCONV/ALP-3/
+```
+
+The data is mirrored daily to the IAC via `rsync` to:
+
+```console
+/net/krypton/hyclimm_nobackup/CORDEX-FPSCONV/ALP-3/
+```
