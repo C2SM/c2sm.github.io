@@ -190,9 +190,9 @@
     ```console
     /nfs/atmos/c2sm/cordex
     ```
-=== "CSCS"
+=== "Santis"
     ```console
-    /store/c2sm/c2sme/cordex
+    /capstor/store/cscs/c2sm/c2sme/cordex
     ```
 
 - Size: 356.98 TB :material-information-outline:{ title="last updated: 2025-01-26 01:47:52" }
@@ -211,6 +211,7 @@
     ```console
     /nfs/atmos/c2sm/cordex-reklies
     ```
+
 - Size: 22.41 TB :material-information-outline:{ title="last updated: 2025-01-26 01:45:54" }
 - Number of files: 94,936 :material-information-outline:{ title="last updated: 2025-01-26 01:45:54" }
 - Access: direct
@@ -228,10 +229,11 @@
     ```console
     /net/ch4/data/cordex.ch2018-freeze-2.1
     ```
-=== "CSCS"
+=== "Santis"
     ```console
-    /store/c2sm/c2sme/cordex.ch2018-freeze-2.1
+    /capstor/store/cscs/c2sm/c2sme/cordex.ch2018-freeze-2.1
     ```
+
 - Size: 11 TB
 - Number of files: 1.800
 - Access: direct
@@ -305,9 +307,9 @@
     ```console
     /net/krypton/hyclimm_nobackup/CORDEX-FPSCONV/ALP-3/
     ```
-=== "CSCS"
+=== "Santis"
     ```console
-    /store/c2sm/c2sme/CH202X/CORDEX-FPSCONV/ALP-3/
+    /capstor/store/cscs/c2sm/c2sme/CH202X/CORDEX-FPSCONV/ALP-3/
     ```
 
 - Size: 30 TB

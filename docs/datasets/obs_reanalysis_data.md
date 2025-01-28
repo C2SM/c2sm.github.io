@@ -66,9 +66,9 @@
 
 ### ERAInterim
 
-=== "CSCS"
+=== "Santis"
     ```console
-    /store/c2sm/c2sme/reanalyses_dkrz/ERAInterim
+    /capstor/store/cscs/c2sm/c2sme/reanalyses_dkrz/ERAInterim
     ```
 
 - Size: 5 TB
@@ -81,14 +81,9 @@
 
 ### ERA5 (for ICON-CLM)
 
-=== "Piz Daint (legacy)"
+=== "Santis"
     ```console
-    /store/c2sm/c2sme/reanalyses_dkrz/ERA5
-    ```
-
-=== "Alps"
-    ```console
-    /store/migration/store/c2sm/c2sme/reanalyses_dkrz/ERA5
+    /capstor/store/cscs/c2sm/c2sme/reanalyses_dkrz/ERA5
     ```
 
 - Size: 100 TB (last updated: 2024-11-25)
