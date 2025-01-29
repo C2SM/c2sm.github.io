@@ -66,9 +66,9 @@
 
 ### ERAInterim
 
-=== "CSCS"
+=== "Santis"
     ```console
-    /store/c2sm/c2sme/reanalyses_dkrz/ERAInterim
+    /capstor/store/cscs/c2sm/c2sme/reanalyses_dkrz/ERAInterim
     ```
 
 - Size: 5 TB
@@ -81,14 +81,9 @@
 
 ### ERA5 (for ICON-CLM)
 
-=== "Piz Daint (legacy)"
+=== "Santis"
     ```console
-    /store/c2sm/c2sme/reanalyses_dkrz/ERA5
-    ```
-
-=== "Alps"
-    ```console
-    /store/migration/store/c2sm/c2sme/reanalyses_dkrz/ERA5
+    /capstor/store/cscs/c2sm/c2sme/reanalyses_dkrz/ERA5
     ```
 
 - Size: 100 TB (last updated: 2024-11-25)
@@ -163,8 +158,8 @@
     /net/atmos/data/cerra/processed/v1/
     ```
 
-- Size: 7.72 TB :material-information-outline:{ title="last updated: 2025-01-12 01:44:15" }
-- Number of files: 1,824 :material-information-outline:{ title="last updated: 2025-01-12 01:44:15" }
+- Size: 7.72 TB :material-information-outline:{ title="last updated: 2025-01-26 01:45:32" }
+- Number of files: 1,824 :material-information-outline:{ title="last updated: 2025-01-26 01:45:32" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -205,8 +200,8 @@
     /net/atmos/data/cerra-land/processed/v1/
     ```
 
-- Size: 1.78 TB :material-information-outline:{ title="last updated: 2025-01-12 01:44:15" }
-- Number of files: 1,016 :material-information-outline:{ title="last updated: 2025-01-12 01:44:15" }
+- Size: 1.78 TB :material-information-outline:{ title="last updated: 2025-01-26 01:45:32" }
+- Number of files: 1,016 :material-information-outline:{ title="last updated: 2025-01-26 01:45:32" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -259,8 +254,8 @@
     /nfs/atmos/c2sm/era5/processed/
     ```
 
-- Size: 45.71 TB :material-information-outline:{ title="last updated: 2025-01-12 01:45:08" }
-- Number of files: 137,629 :material-information-outline:{ title="last updated: 2025-01-12 01:45:08" }
+- Size: 45.71 TB :material-information-outline:{ title="last updated: 2025-01-26 01:45:37" }
+- Number of files: 137,629 :material-information-outline:{ title="last updated: 2025-01-26 01:45:37" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
@@ -303,8 +298,8 @@
     /net/atmos/data/era5-land_cds/processed/v1/
     ```
 
-- Size: 6.64 TB :material-information-outline:{ title="last updated: 2025-01-12 01:44:19" }
-- Number of files: 1,504 :material-information-outline:{ title="last updated: 2025-01-12 01:44:19" }
+- Size: 6.64 TB :material-information-outline:{ title="last updated: 2025-01-26 01:45:34" }
+- Number of files: 1,504 :material-information-outline:{ title="last updated: 2025-01-26 01:45:34" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present

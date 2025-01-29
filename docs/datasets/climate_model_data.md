@@ -111,8 +111,8 @@
     /nfs/atmos/c2sm/cmip6-ng
     ```
 
-- Size: 201.07 TB :material-information-outline:{ title="last updated: 2025-01-12 01:46:54" }
-- Number of files: 665,448 :material-information-outline:{ title="last updated: 2025-01-12 01:46:54" }
+- Size: 201.07 TB :material-information-outline:{ title="last updated: 2025-01-26 01:47:31" }
+- Number of files: 665,448 :material-information-outline:{ title="last updated: 2025-01-26 01:47:31" }
 - Access: direct / rsync
 - Status: frozen (2019-03)
 - Variables:
@@ -190,13 +190,13 @@
     ```console
     /nfs/atmos/c2sm/cordex
     ```
-=== "CSCS"
+=== "Santis"
     ```console
-    /store/c2sm/c2sme/cordex
+    /capstor/store/cscs/c2sm/c2sme/cordex
     ```
 
-- Size: 356.98 TB :material-information-outline:{ title="last updated: 2025-01-12 01:46:37" }
-- Number of files: 552,596 :material-information-outline:{ title="last updated: 2025-01-12 01:46:37" }
+- Size: 356.98 TB :material-information-outline:{ title="last updated: 2025-01-26 01:47:52" }
+- Number of files: 552,596 :material-information-outline:{ title="last updated: 2025-01-26 01:47:52" }
 - Access: direct / rsync
 - Status: monthly updated
 - Resolution: 0.44° and 0.11°
@@ -211,8 +211,9 @@
     ```console
     /nfs/atmos/c2sm/cordex-reklies
     ```
-- Size: 22.41 TB :material-information-outline:{ title="last updated: 2025-01-12 01:44:39" }
-- Number of files: 94,936 :material-information-outline:{ title="last updated: 2025-01-12 01:44:39" }
+
+- Size: 22.41 TB :material-information-outline:{ title="last updated: 2025-01-26 01:45:54" }
+- Number of files: 94,936 :material-information-outline:{ title="last updated: 2025-01-26 01:45:54" }
 - Access: direct
 - Status: monthly updated
 - Resolution: 0.11°
@@ -228,10 +229,11 @@
     ```console
     /net/ch4/data/cordex.ch2018-freeze-2.1
     ```
-=== "CSCS"
+=== "Santis"
     ```console
-    /store/c2sm/c2sme/cordex.ch2018-freeze-2.1
+    /capstor/store/cscs/c2sm/c2sme/cordex.ch2018-freeze-2.1
     ```
+
 - Size: 11 TB
 - Number of files: 1.800
 - Access: direct
@@ -305,9 +307,9 @@
     ```console
     /net/krypton/hyclimm_nobackup/CORDEX-FPSCONV/ALP-3/
     ```
-=== "CSCS"
+=== "Santis"
     ```console
-    /store/c2sm/c2sme/CH202X/CORDEX-FPSCONV/ALP-3/
+    /capstor/store/cscs/c2sm/c2sme/CH202X/CORDEX-FPSCONV/ALP-3/
     ```
 
 - Size: 30 TB
