@@ -2957,6 +2957,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#seasonal-forecast-data-from-ecmwf-seas5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seasonal Forecast Data from ECMWF (SEAS5)
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3423,6 +3432,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#seasonal-forecast-data-from-ecmwf-seas5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seasonal Forecast Data from ECMWF (SEAS5)
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3471,7 +3489,7 @@
 </div>
 </div>
 <ul>
-<li>Size: 0.01 TB </li>
+<li>Size: 0.01 TB</li>
 <li>Number of files: 500</li>
 <li>Access: direct / rsync</li>
 <li>Status: frozen (2010-10)</li>
@@ -3523,7 +3541,7 @@
 </div>
 </div>
 <ul>
-<li>Size: 520 TB </li>
+<li>Size: 520 TB</li>
 <li>Number of Files: 5.500.000</li>
 <li>Access: direct / rsync</li>
 <li>Status: weekly updated</li>
@@ -3590,7 +3608,7 @@
 <li>Number of files: 665,448 <span class="twemoji" title="last updated: 2025-01-26 01:47:31"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span></li>
 <li>Access: direct / rsync</li>
 <li>Status: frozen (2019-03)</li>
-<li>Variables: 
+<li>Variables:
   <code title="fx (native)">areacella</code>,
   <code title="ann (g025), ann (native), mon (g025), mon (native)">clt</code>,
   <code title="mon (native)">co2mass</code>,
@@ -3722,7 +3740,7 @@
 <li>Number of files: 1.800</li>
 <li>Access: direct</li>
 <li>Status: frozen (2019-04)</li>
-<li>Variables: 
+<li>Variables:
   <code title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem">hfls</code>,
   <code title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem">hfss</code>,
   <code title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem">hurs</code>,
@@ -3780,15 +3798,15 @@
 </div>
 </div>
 <ul>
-<li>Size: 46 TB </li>
+<li>Size: 46 TB</li>
 <li>Number of files: 3.500</li>
 <li>Access: direct</li>
 <li>Status: ongoing</li>
-<li>Variables: <ul>
-<li>daily: <code>pr</code>, <code>tas</code>, <code>tasmax</code>, <code>tasmin</code>, <code>zg500</code></li>
+<li>Variables:<ul>
+<li>daily: <code>pr</code>, <code>tas</code>, <code>tasmax</code>, <code>tasmin</code>, <code>hurs</code>, <code>rsds</code>, <code>sfcWind</code>, <code>zg500</code>, <code>evspsbl</code>, <code>ta500</code>, <code>ta850</code></li>
 </ul>
 </li>
-<li>Resolution: 0.44° and 0.11°</li>
+<li>Resolution: 0.11°</li>
 </ul>
 <h3 id="cordex-fpsconv">CORDEX-FPSCONV<a class="headerlink" href="#cordex-fpsconv" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">IAC</label><label for="__tabbed_12_2">Santis</label></div>
@@ -3814,6 +3832,28 @@
 </ul>
 </li>
 <li>Resolution: 2-3 km</li>
+</ul>
+<h3 id="seasonal-forecast-data-from-ecmwf-seas5">Seasonal Forecast Data from ECMWF (SEAS5)<a class="headerlink" href="#seasonal-forecast-data-from-ecmwf-seas5" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">IAC</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="go">/net/co2/c2sm-data/rlorenz/seasonal_forecast_ecmwf/netcdf/</span>
+<span class="go">/net/nitrogen/climphys/seasonal-forecast/</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<ul>
+<li>Size: 11 TB</li>
+<li>Number of files: 10.140</li>
+<li>Access: direct / rsync</li>
+<li>Status: frozen (could be updated on request)</li>
+<li>Variables:<ul>
+<li>daily: <code>10m_u_component_of_wind</code>,  <code>2m_dewpoint_temperature</code>,  <code>mean_sea_level_pressure</code>,  <code>snow_depth_water_equivalent</code>,  <code>surface_net_solar_radiation</code>,  <code>total_cloud_cover</code>,
+<code>10m_v_component_of_wind</code>,  <code>evaporation</code>, <code>snow_depth</code>, <code>sub_surface_runoff</code>, <code>surface_runoff</code>, <code>2m_temperature</code>, <code>maximum_2m_temperature_in_the_last_24_hours</code>, <code>minimum_2m_temperature_in_the_last_24_hours</code>, <code>total_precipitation</code></li>
+</ul>
+</li>
+<li>Resolution: 1° x 1°</li>
 </ul>
 
 
