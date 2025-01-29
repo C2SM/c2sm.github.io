@@ -327,8 +327,8 @@
     /net/nitrogen/climphys/seasonal-forecast/
     ```
 
-- Size:
-- Number of files:
+- Size: 11 TB
+- Number of files: 10.140
 - Access: direct / rsync
 - Status: frozen (could be updated on request)
 - Variables:
