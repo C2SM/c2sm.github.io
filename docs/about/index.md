@@ -13,7 +13,7 @@ The C2SM Core Team - or C2SM's Executive Office - currently employs six scientif
 
 ### Executive Director
 
-- [Christina Schnadt Poberaj :material-open-in-new:](https://iac.ethz.ch/people-iac/person-detail.html?persid=116573){:target="_blank"} (CHN M 15.2)
+- [Christina Schnadt Poberaj :material-open-in-new:](https://iac.ethz.ch/people-iac/person-detail.html?persid=116573){:target="_blank"} (CHN M 16.2)
 
 ### Scientific Programmers
 
