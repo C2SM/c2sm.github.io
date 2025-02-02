@@ -111,11 +111,11 @@
     /nfs/atmos/c2sm/cmip6-ng
     ```
 
-- Size: 201.07 TB :material-information-outline:{ title="last updated: 2025-01-26 01:47:31" }
-- Number of files: 665,448 :material-information-outline:{ title="last updated: 2025-01-26 01:47:31" }
+- Size: 201.07 TB :material-information-outline:{ title="last updated: 2025-01-31 01:47:21" }
+- Number of files: 665,448 :material-information-outline:{ title="last updated: 2025-01-31 01:47:21" }
 - Access: direct / rsync
 - Status: frozen (2019-03)
-- Variables:
+- Variables: 
   `areacella`{ title="fx (native)" },
   `clt`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `co2mass`{ title="mon (native)" },
@@ -195,8 +195,8 @@
     /capstor/store/cscs/c2sm/c2sme/cordex
     ```
 
-- Size: 356.98 TB :material-information-outline:{ title="last updated: 2025-01-26 01:47:52" }
-- Number of files: 552,596 :material-information-outline:{ title="last updated: 2025-01-26 01:47:52" }
+- Size: 356.98 TB :material-information-outline:{ title="last updated: 2025-01-31 01:47:44" }
+- Number of files: 552,596 :material-information-outline:{ title="last updated: 2025-01-31 01:47:44" }
 - Access: direct / rsync
 - Status: monthly updated
 - Resolution: 0.44° and 0.11°
@@ -212,8 +212,8 @@
     /nfs/atmos/c2sm/cordex-reklies
     ```
 
-- Size: 22.41 TB :material-information-outline:{ title="last updated: 2025-01-26 01:45:54" }
-- Number of files: 94,936 :material-information-outline:{ title="last updated: 2025-01-26 01:45:54" }
+- Size: 22.41 TB :material-information-outline:{ title="last updated: 2025-01-31 01:45:42" }
+- Number of files: 94,936 :material-information-outline:{ title="last updated: 2025-01-31 01:45:42" }
 - Access: direct
 - Status: monthly updated
 - Resolution: 0.11°
@@ -238,7 +238,7 @@
 - Number of files: 1.800
 - Access: direct
 - Status: frozen (2019-04)
-- Variables:
+- Variables: 
   `hfls`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
   `hfss`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
   `hurs`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
