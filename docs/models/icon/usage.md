@@ -19,56 +19,62 @@ Once you have access, clone the repository from GitHub using the SSH protocol:
 
     Information on this section is not yet complete nor final. It will be updated following the progress of the Alps system deployment at CSCS and C2SM's adaptation to this new system. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Alps.
 
-Currently, the same ICON user environment used on `todi` is being used. Since the environment is still linked to `todi`, you need to export the `CLUSTER_NAME` to `todi` for now:
-
-```bash
-export CLUSTER_NAME=todi
-```
-
 Next, follow the instructions to build ICON using Spack below.
 
 **1. Create a `spack.yaml` file**
 
 Create the following files from the ICON build folder (different to the ICON root folder in case of a out-of-source build). For that, you will have to create the missing folders first:
 ```bash
-mkdir -p config/cscs/spack/v0.21.1.3/alps_cpu_nvhpc
-mkdir -p config/cscs/spack/v0.21.1.3/alps_gpu_nvhpc
+mkdir -p config/cscs/spack/v0.21.1.2/santis_cpu_nvhpc
+mkdir -p config/cscs/spack/v0.21.1.2/santis_gpu_nvhpc
 ```
 
 For CPU compilation:
 
-=== "config/cscs/spack/v0.21.1.3/alps_cpu_nvhpc/spack.yaml"
+=== "config/cscs/spack/v0.21.1.2/santis_cpu_nvhpc/spack.yaml"
 
   ```yaml
   spack:
     specs:
+      - gmake%gcc
+      - gnuconfig%gcc
       - cosmo-eccodes-definitions@2.25.0.2
-      - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib
+      - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace
+        +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp
+        ~loop-exchange ~async-io-rma
     view: true
     concretizer:
-      unify: when_possible
+      unify: true
     develop:
       icon:
         path: ../../../../..
-        spec: icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib
+        spec: icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art
+          +dace +realloc-buf ~aes ~jsbach ~ocean
+          ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma
   ```
 
 For GPU compilation:
 
-=== "config/cscs/spack/v0.21.1.3/alps_gpu_nvhpc/spack.yaml"
+=== "config/cscs/spack/v0.21.1.2/santis_gpu_nvhpc/spack.yaml"
 
   ```yaml
   spack:
     specs:
+      - gmake%gcc
+      - gnuconfig%gcc
       - cosmo-eccodes-definitions@2.25.0.2
-      - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib +cuda-graphs
+      - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace
+        gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp
+        ~loop-exchange ~async-io-rma ~pgi-inlib +cuda-graphs
     view: true
     concretizer:
-      unify: when_possible
+      unify: true
     develop:
       icon:
         path: ../../../../..
-        spec: icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib +cuda-graphs
+        spec: icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art
+          +dace gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean
+          ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma ~pgi-inlib +cuda-graphs
   ```
 
 **2. Build ICON**
@@ -76,16 +82,17 @@ For GPU compilation:
 Run the following from the ICON root folder:
 ```console
 # Load ICON user-environment 
-uenv start --view=spack icon-wcp/v1:rc4
+CLUSTER_NAME=todi uenv start --view=spack icon-wcp/v1:rc4
 
 # Setup spack
-SPACK_TAG='v0.21.1.3'
+SPACK_TAG='v0.21.1.2'
 git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
 . spack-c2sm/setup-env.sh /user-environment
 
 # Build ICON
 cd /path/to/icon-build-folder
-spack env activate -d config/cscs/spack/${SPACK_TAG}/alps_gpu_nvhpc
+spack external find gmake
+spack env activate -d config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc
 spack install
 ```
 
