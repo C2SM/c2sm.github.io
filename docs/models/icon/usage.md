@@ -15,7 +15,7 @@ Once you have access, clone the repository from GitHub using the SSH protocol:
 
 ### Säntis
 
-!!! construction "Under construction - last update: 2024-12-18"
+!!! construction "Under construction - last update: 2025-02-09"
 
     Information on this section is not yet complete nor final. It will be updated following the progress of the Alps system deployment at CSCS and C2SM's adaptation to this new system. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Alps.
 
@@ -122,34 +122,6 @@ spack install cosmo-eccodes-definitions
 # compile ICON on compute-nodes
 srun -N 1 -c 12 --mem-per-cpu=20G spack install -v -j 12
 ```
-
-### Piz Daint
-Spack is used to build ICON. Please follow the steps below to set up Spack and build ICON.
-
-**1. Set up a Spack instance**
-
-To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/cscs/SPACK_TAG_C2SM :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG_C2SM){:target="_blank"} and load it into your command line.
-
-**2. Build ICON**
-
-Refer to the official spack-c2sm documentation for [installing ICON using Spack :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon){:target="_blank"}.
-
-After the first compilation, you need to create a `setting` file (the following example is for Piz Daint, please adapt the lines according to the machine you are using):
-
-=== "daint_gpu_nvhpc"
-    ```shell
-    # Get SPACK_TAG used on machine
-    SPACK_TAG=$(cat "config/cscs/SPACK_TAG_C2SM")
-    # Set the name of the environment, which should be equal to the builder
-    ENV_NAME=daint_gpu_nvhpc
-    # Load probtest environment (only needed if you want to run check files)
-    source /project/g110/icon/probtest/conda/miniconda/bin/activate probtest
-    # Ensure CDO is loaded on your machine
-    module load daint-gpu CDO
-    # Remove and create setting file with the following two commands
-    rm -f setting
-    ./config/cscs/create_sh_env $SPACK_TAG $ENV_NAME
-    ```
 
 ## Run test case
 In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *mch_ch_lowres*, you can use the `make_runscripts` function.
