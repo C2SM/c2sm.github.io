@@ -2488,15 +2488,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#piz-daint" class="md-nav__link">
-    <span class="md-ellipsis">
-      Piz Daint
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3281,15 +3272,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#piz-daint" class="md-nav__link">
-    <span class="md-ellipsis">
-      Piz Daint
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3347,67 +3329,77 @@
 <h2 id="configure-and-compile">Configure and compile<a class="headerlink" href="#configure-and-compile" title="Permanent link">&para;</a></h2>
 <h3 id="santis">Säntis<a class="headerlink" href="#santis" title="Permanent link">&para;</a></h3>
 <div class="admonition construction">
-<p class="admonition-title">Under construction - last update: 2024-12-18</p>
+<p class="admonition-title">Under construction - last update: 2025-02-09</p>
 <p>Information on this section is not yet complete nor final. It will be updated following the progress of the Alps system deployment at CSCS and C2SM's adaptation to this new system. Please use the <a href="https://github.com/C2SM/Tasks-Support/discussions" target="_blank">C2SM support forum <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> in case of questions regarding building ICON on Alps.</p>
 </div>
-<p>Currently, the same ICON user environment used on <code>todi</code> is being used. Since the environment is still linked to <code>todi</code>, you need to export the <code>CLUSTER_NAME</code> to <code>todi</code> for now:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">CLUSTER_NAME</span><span class="o">=</span>todi
-</code></pre></div>
 <p>Next, follow the instructions to build ICON using Spack below.</p>
 <p><strong>1. Create a <code>spack.yaml</code> file</strong></p>
 <p>Create the following files from the ICON build folder (different to the ICON root folder in case of a out-of-source build). For that, you will have to create the missing folders first:
-<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>config/cscs/spack/v0.21.1.3/alps_cpu_nvhpc
-mkdir<span class="w"> </span>-p<span class="w"> </span>config/cscs/spack/v0.21.1.3/alps_gpu_nvhpc
+<div class="highlight"><pre><span></span><code><span class="nv">SPACK_TAG</span><span class="o">=</span><span class="k">$(</span>cat<span class="w"> </span><span class="s2">&quot;config/cscs/SPACK_TAG_ALPS&quot;</span><span class="k">)</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>config/cscs/spack/<span class="si">${</span><span class="nv">SPACK_TAG</span><span class="si">}</span>/santis_cpu_nvhpc
+mkdir<span class="w"> </span>-p<span class="w"> </span>config/cscs/spack/<span class="si">${</span><span class="nv">SPACK_TAG</span><span class="si">}</span>/santis_gpu_nvhpc
 </code></pre></div></p>
 <p>For CPU compilation:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">config/cscs/spack/v0.21.1.3/alps_cpu_nvhpc/spack.yaml</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">config/cscs/spack/${SPACK_TAG}/santis_cpu_nvhpc/spack.yaml</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
 </div>
 <div class="highlight"><pre><span></span><code><span class="nt">spack</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">specs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gmake%gcc</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gnuconfig%gcc</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cosmo-eccodes-definitions@2.25.0.2</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">+realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">~loop-exchange ~async-io-rma</span>
 <span class="w">  </span><span class="nt">view</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">concretizer</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">unify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">when_possible</span>
+<span class="w">    </span><span class="nt">unify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">develop</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">icon</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">../../../../..</span>
-<span class="w">      </span><span class="nt">spec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib</span>
+<span class="w">      </span><span class="nt">spec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">+dace +realloc-buf ~aes ~jsbach ~ocean</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma</span>
 </code></pre></div>
 <p>For GPU compilation:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">config/cscs/spack/v0.21.1.3/alps_gpu_nvhpc/spack.yaml</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc/spack.yaml</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
 </div>
 <div class="highlight"><pre><span></span><code><span class="nt">spack</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">specs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gmake%gcc</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gnuconfig%gcc</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cosmo-eccodes-definitions@2.25.0.2</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib +cuda-graphs</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">~loop-exchange ~async-io-rma ~pgi-inlib +cuda-graphs</span>
 <span class="w">  </span><span class="nt">view</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">concretizer</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">unify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">when_possible</span>
+<span class="w">    </span><span class="nt">unify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">develop</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">icon</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">../../../../..</span>
-<span class="w">      </span><span class="nt">spec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib +cuda-graphs</span>
+<span class="w">      </span><span class="nt">spec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">+dace gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma ~pgi-inlib +cuda-graphs</span>
 </code></pre></div>
 <p><strong>2. Build ICON</strong></p>
 <p>Run the following from the ICON root folder:
 <div class="highlight"><pre><span></span><code><span class="gp"># </span>Load<span class="w"> </span>ICON<span class="w"> </span>user-environment<span class="w"> </span>
-<span class="go">uenv start --view=spack icon-wcp/v1:rc4</span>
+<span class="go">CLUSTER_NAME=todi uenv start --view=spack icon-wcp/v1:rc4</span>
 
 <span class="gp"># </span>Setup<span class="w"> </span>spack
-<span class="go">SPACK_TAG=&#39;v0.21.1.3&#39;</span>
 <span class="go">git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git</span>
 <span class="go">. spack-c2sm/setup-env.sh /user-environment</span>
 
 <span class="gp"># </span>Build<span class="w"> </span>ICON
 <span class="go">cd /path/to/icon-build-folder</span>
-<span class="go">spack env activate -d config/cscs/spack/${SPACK_TAG}/alps_gpu_nvhpc</span>
+<span class="go">spack external find gmake</span>
+<span class="go">spack env activate -d config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc</span>
 <span class="go">spack install</span>
 </code></pre></div></p>
 <h3 id="euler">Euler<a class="headerlink" href="#euler" title="Permanent link">&para;</a></h3>
@@ -3427,31 +3419,6 @@ spack<span class="w"> </span>install<span class="w"> </span>cosmo-eccodes-defini
 <span class="c1"># compile ICON on compute-nodes</span>
 srun<span class="w"> </span>-N<span class="w"> </span><span class="m">1</span><span class="w"> </span>-c<span class="w"> </span><span class="m">12</span><span class="w"> </span>--mem-per-cpu<span class="o">=</span>20G<span class="w"> </span>spack<span class="w"> </span>install<span class="w"> </span>-v<span class="w"> </span>-j<span class="w"> </span><span class="m">12</span>
 </code></pre></div>
-<h3 id="piz-daint">Piz Daint<a class="headerlink" href="#piz-daint" title="Permanent link">&para;</a></h3>
-<p>Spack is used to build ICON. Please follow the steps below to set up Spack and build ICON.</p>
-<p><strong>1. Set up a Spack instance</strong></p>
-<p>To <a href="https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin" target="_blank">set up a Spack instance <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>, ensure that you clone the repository using the Spack tag provided in the ICON repository at <a href="https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG_C2SM" target="_blank">config/cscs/SPACK_TAG_C2SM <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> and load it into your command line.</p>
-<p><strong>2. Build ICON</strong></p>
-<p>Refer to the official spack-c2sm documentation for <a href="https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon" target="_blank">installing ICON using Spack <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
-<p>After the first compilation, you need to create a <code>setting</code> file (the following example is for Piz Daint, please adapt the lines according to the machine you are using):</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">daint_gpu_nvhpc</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c1"># Get SPACK_TAG used on machine</span>
-<span class="nv">SPACK_TAG</span><span class="o">=</span><span class="k">$(</span>cat<span class="w"> </span><span class="s2">&quot;config/cscs/SPACK_TAG_C2SM&quot;</span><span class="k">)</span>
-<span class="c1"># Set the name of the environment, which should be equal to the builder</span>
-<span class="nv">ENV_NAME</span><span class="o">=</span>daint_gpu_nvhpc
-<span class="c1"># Load probtest environment (only needed if you want to run check files)</span>
-<span class="nb">source</span><span class="w"> </span>/project/g110/icon/probtest/conda/miniconda/bin/activate<span class="w"> </span>probtest
-<span class="c1"># Ensure CDO is loaded on your machine</span>
-module<span class="w"> </span>load<span class="w"> </span>daint-gpu<span class="w"> </span>CDO
-<span class="c1"># Remove and create setting file with the following two commands</span>
-rm<span class="w"> </span>-f<span class="w"> </span>setting
-./config/cscs/create_sh_env<span class="w"> </span><span class="nv">$SPACK_TAG</span><span class="w"> </span><span class="nv">$ENV_NAME</span>
-</code></pre></div>
-</div>
-</div>
-</div>
 <h2 id="run-test-case">Run test case<a class="headerlink" href="#run-test-case" title="Permanent link">&para;</a></h2>
 <p>In the <em>run</em> folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. <em>mch_ch_lowres</em>, you can use the <code>make_runscripts</code> function.</p>
 <div class="highlight"><pre><span></span><code>./make_runscripts<span class="w"> </span>mch_ch_lowres
