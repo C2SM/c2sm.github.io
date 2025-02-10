@@ -15,15 +15,9 @@ Once you have access, clone the repository from GitHub using the SSH protocol:
 
 ### Säntis
 
-!!! construction "Under construction - last update: 2024-12-18"
+!!! construction "Under construction - last update: 2025-02-09"
 
     Information on this section is not yet complete nor final. It will be updated following the progress of the Alps system deployment at CSCS and C2SM's adaptation to this new system. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Alps.
-
-Currently, the same ICON user environment used on `todi` is being used. Since the environment is still linked to `todi`, you need to export the `CLUSTER_NAME` to `todi` for now:
-
-```bash
-export CLUSTER_NAME=todi
-```
 
 Next, follow the instructions to build ICON using Spack below.
 
@@ -31,44 +25,57 @@ Next, follow the instructions to build ICON using Spack below.
 
 Create the following files from the ICON build folder (different to the ICON root folder in case of a out-of-source build). For that, you will have to create the missing folders first:
 ```bash
-mkdir -p config/cscs/spack/v0.21.1.3/alps_cpu_nvhpc
-mkdir -p config/cscs/spack/v0.21.1.3/alps_gpu_nvhpc
+SPACK_TAG=$(cat "config/cscs/SPACK_TAG_ALPS")
+mkdir -p config/cscs/spack/${SPACK_TAG}/santis_cpu_nvhpc
+mkdir -p config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc
 ```
 
 For CPU compilation:
 
-=== "config/cscs/spack/v0.21.1.3/alps_cpu_nvhpc/spack.yaml"
+=== "config/cscs/spack/${SPACK_TAG}/santis_cpu_nvhpc/spack.yaml"
 
   ```yaml
   spack:
     specs:
+      - gmake%gcc
+      - gnuconfig%gcc
       - cosmo-eccodes-definitions@2.25.0.2
-      - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib
+      - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace
+        +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp
+        ~loop-exchange ~async-io-rma
     view: true
     concretizer:
-      unify: when_possible
+      unify: true
     develop:
       icon:
         path: ../../../../..
-        spec: icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib
+        spec: icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art
+          +dace +realloc-buf ~aes ~jsbach ~ocean
+          ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma
   ```
 
 For GPU compilation:
 
-=== "config/cscs/spack/v0.21.1.3/alps_gpu_nvhpc/spack.yaml"
+=== "config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc/spack.yaml"
 
   ```yaml
   spack:
     specs:
+      - gmake%gcc
+      - gnuconfig%gcc
       - cosmo-eccodes-definitions@2.25.0.2
-      - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib +cuda-graphs
+      - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace
+        gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp
+        ~loop-exchange ~async-io-rma ~pgi-inlib +cuda-graphs
     view: true
     concretizer:
-      unify: when_possible
+      unify: true
     develop:
       icon:
         path: ../../../../..
-        spec: icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace +acm-license gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma +pgi-inlib +cuda-graphs
+        spec: icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art
+          +dace gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean
+          ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma ~pgi-inlib +cuda-graphs
   ```
 
 **2. Build ICON**
@@ -76,16 +83,16 @@ For GPU compilation:
 Run the following from the ICON root folder:
 ```console
 # Load ICON user-environment 
-uenv start --view=spack icon-wcp/v1:rc4
+CLUSTER_NAME=todi uenv start --view=spack icon-wcp/v1:rc4
 
 # Setup spack
-SPACK_TAG='v0.21.1.3'
 git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
 . spack-c2sm/setup-env.sh /user-environment
 
 # Build ICON
 cd /path/to/icon-build-folder
-spack env activate -d config/cscs/spack/${SPACK_TAG}/alps_gpu_nvhpc
+spack external find gmake
+spack env activate -d config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc
 spack install
 ```
 
@@ -115,34 +122,6 @@ spack install cosmo-eccodes-definitions
 # compile ICON on compute-nodes
 srun -N 1 -c 12 --mem-per-cpu=20G spack install -v -j 12
 ```
-
-### Piz Daint
-Spack is used to build ICON. Please follow the steps below to set up Spack and build ICON.
-
-**1. Set up a Spack instance**
-
-To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/cscs/SPACK_TAG_C2SM :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/cscs/SPACK_TAG_C2SM){:target="_blank"} and load it into your command line.
-
-**2. Build ICON**
-
-Refer to the official spack-c2sm documentation for [installing ICON using Spack :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#icon){:target="_blank"}.
-
-After the first compilation, you need to create a `setting` file (the following example is for Piz Daint, please adapt the lines according to the machine you are using):
-
-=== "daint_gpu_nvhpc"
-    ```shell
-    # Get SPACK_TAG used on machine
-    SPACK_TAG=$(cat "config/cscs/SPACK_TAG_C2SM")
-    # Set the name of the environment, which should be equal to the builder
-    ENV_NAME=daint_gpu_nvhpc
-    # Load probtest environment (only needed if you want to run check files)
-    source /project/g110/icon/probtest/conda/miniconda/bin/activate probtest
-    # Ensure CDO is loaded on your machine
-    module load daint-gpu CDO
-    # Remove and create setting file with the following two commands
-    rm -f setting
-    ./config/cscs/create_sh_env $SPACK_TAG $ENV_NAME
-    ```
 
 ## Run test case
 In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *mch_ch_lowres*, you can use the `make_runscripts` function.
