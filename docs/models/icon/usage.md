@@ -25,13 +25,14 @@ Next, follow the instructions to build ICON using Spack below.
 
 Create the following files from the ICON build folder (different to the ICON root folder in case of a out-of-source build). For that, you will have to create the missing folders first:
 ```bash
-mkdir -p config/cscs/spack/v0.21.1.2/santis_cpu_nvhpc
-mkdir -p config/cscs/spack/v0.21.1.2/santis_gpu_nvhpc
+SPACK_TAG=$(cat "config/cscs/SPACK_TAG_ALPS")
+mkdir -p config/cscs/spack/${SPACK_TAG}/santis_cpu_nvhpc
+mkdir -p config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc
 ```
 
 For CPU compilation:
 
-=== "config/cscs/spack/v0.21.1.2/santis_cpu_nvhpc/spack.yaml"
+=== "config/cscs/spack/${SPACK_TAG}/santis_cpu_nvhpc/spack.yaml"
 
   ```yaml
   spack:
@@ -55,7 +56,7 @@ For CPU compilation:
 
 For GPU compilation:
 
-=== "config/cscs/spack/v0.21.1.2/santis_gpu_nvhpc/spack.yaml"
+=== "config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc/spack.yaml"
 
   ```yaml
   spack:
@@ -85,7 +86,6 @@ Run the following from the ICON root folder:
 CLUSTER_NAME=todi uenv start --view=spack icon-wcp/v1:rc4
 
 # Setup spack
-SPACK_TAG='v0.21.1.2'
 git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
 . spack-c2sm/setup-env.sh /user-environment
 
