@@ -16,7 +16,7 @@ If you use ICON, please follow [these instructions](../../events/icon_meetings/i
 ## Toolset
 In the [Tools](../../tools/index.md) section, you will find relevant tools for working with ICON:
 
-* [**Extpar**](../../tools/extpar.md): External parameters for the ICON grid (preprocessing)
+* [**Extpar**](https://c2sm.github.io/extpar): External parameters for the ICON grid (preprocessing)
 * [**Processing Chain**](../../tools/processing_chain.md): Python workflow tool for ICON
 * [**SPICE**](../../tools/spice.md): Starter package for ICON-CLM experiments
 * [**icon-vis**](../../tools/icon-vis.md): Python scripts to visualise ICON data
