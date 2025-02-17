@@ -6,7 +6,7 @@ e.g., regular (lat-lon, gaussian) or triangular (ICON). It can be used to genera
 
 ## Support status
 
-The `master` branch is integrated in [`spack-c2sm`](https://github.com/C2SM/spack-c2sm/) system tests.
+The `master` branch is integrated in [`spack-c2sm` :material-open-in-new:](https://github.com/C2SM/spack-c2sm/){:target="_blank"} system tests.
 
 ## Access
 
