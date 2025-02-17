@@ -139,7 +139,7 @@ You may need to adjust the account in the runscript to match your permissions. A
 
 ## Input data
 
-The input data for standard ICON tests are stored in a [Git-lfs repository](https://gitlab.dkrz.de/icon/testing-input-data).
+The input data for standard ICON tests are stored in a [Git-lfs repository :material-open-in-new:](https://gitlab.dkrz.de/icon/testing-input-data){:target="_blank"}.
 
 ### Input data pools
 
