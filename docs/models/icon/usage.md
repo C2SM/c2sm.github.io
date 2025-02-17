@@ -143,6 +143,10 @@ The input data for standard ICON tests are stored in a [Git-lfs repository](http
 
 ### Input data pools
 
+=== "Santis"
+    ```shell
+    /capstor/store/cscs/userlab/d126/pool/data/ICON/
+    ```  
 === "Euler"
     ```shell
     /cluster/work/climate/icon_input
