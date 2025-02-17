@@ -96,7 +96,13 @@ uenv image find
 
 ### Storage
 
-!!! note "TODO"
+The migration of the previous storage from old Piz Daint has been finished in January 2025. 
 
-The migration of the previous storage is not yet finished. Once there is an update from CSCS, we will inform you here.
-
+=== "Alps"
+    ```console
+    /capstor/store/cscs/c2sm
+    ```
+=== "Balfrin"
+    ```console
+    /capstor/store/cscs/c2sm
+    ```

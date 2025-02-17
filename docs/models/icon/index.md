@@ -5,10 +5,10 @@ It is a joint project of [DWD :material-open-in-new:](https://www.dwd.de/DE/Home
 To stay informed about what is going on in the ICON world and to get to know other ICON users, please attend our [quarterly ICON meeting](../../events/icon_meetings/index.md).
 
 ## Support status
-C2SM facilitates the utilisation of ICON on the [Piz Daint :material-open-in-new:](https://www.cscs.ch/computers/piz-daint){:target="_blank"} and [Euler :material-open-in-new:](https://scicomp.ethz.ch/wiki/Euler){:target="_blank"} computing platforms for the CPU and GPU architectures.
+C2SM facilitates the utilisation of ICON on the [Alps :material-open-in-new:](https://www.cscs.ch/computers/alps){:target="_blank"} and [Euler :material-open-in-new:](https://scicomp.ethz.ch/wiki/Euler){:target="_blank"} computing platforms for the CPU and GPU architectures.
 
 ### Supported release
-The latest release distributed by C2SM, currently [`2024.07` :material-open-in-new:](https://github.com/C2SM/icon/tree/2024.07){:target="_blank"}, is continuously being tested on both Piz Daint and Euler and receives patches when necessary.
+The latest release distributed by C2SM, currently [`2024.07` :material-open-in-new:](https://github.com/C2SM/icon/tree/2024.07){:target="_blank"}, is continuously being tested on both Alps and Euler and receives patches when necessary.
 
 ## Mailing list
 If you use ICON, please follow [these instructions](../../events/icon_meetings/index.md#c2sm-icon-mailing-list) to subscribe to our mailing list.
