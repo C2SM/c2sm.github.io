@@ -43,6 +43,10 @@ def modify_link(line):
 
 
 def process_markdown_file(file_path):
+    if os.path.basename(file_path) == 'SUMMARY.md':
+        print(f"Skipping file: {file_path}")
+        return
+    
     with open(file_path, 'r+', encoding='utf-8') as file:
         lines = file.readlines()
         modified = False

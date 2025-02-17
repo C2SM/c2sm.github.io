@@ -13,7 +13,13 @@ Host ela
   User cscsusername
   IdentityFile ~/.ssh/cscs-key
 
-Host balfrin* daint* santis* todi*
+Host santis* daint* 
+  Hostname %h.alps.cscs.ch
+  User cscsusername
+  IdentityFile ~/.ssh/cscs-key
+  ProxyJump ela
+
+Host balfrin* 
   Hostname %h.cscs.ch
   User cscsusername
   IdentityFile ~/.ssh/cscs-key
@@ -24,36 +30,18 @@ This allows standard connections like `ssh santis`, but you can also specify a l
 
 ## Santis
 
-The vCluster `santis` is dedicated to **Climate and Weather** and may initially host only [EXCLAIM :material-open-in-new:](https://c2sm.ethz.ch/research/exclaim.html){:target="_blank"} and related projects.
+The vCluster `santis` is dedicated to **Climate and Weather** applications. It includes the following:
 
-### Deployment Status
-
-Currently, the deployment is approximately 95% complete. 
-
-### Differences to the Environment on `todi`
-
-- `$HOME` is now on a new NFS file system
-    - Your folder `/users/$USER` will initially be mostly empty
-    - The NFS system still requires fine-tuning, and file system performance may be low.
-    - We recommend running tasks, especially heavy ones, on $SCRATCH.
-- `todi`'s $HOME is mounted as `/users.OLD/$USER`.
-    - ⚠️ The mount is read-only!
-    - You are responsible for copying your data from `/users.OLD/$USER` to `/users/$USER/...`.
-    - The mount is temporary and will be removed by the end of January 2025.
-
-!!! info
-
-    Despite the need to work on the deployment in the upcoming days, users are invited to already access the system and start familiarising themselves with it and they might also start the data migration of their old home.
-
-    The activities on CSCS side should not require any reboot, however, some services might need to be restarted, e.g., SLURM. This could lead to short interruptions or even failing jobs. CSCS will provide more information in the upcoming days and will try to minimise the risk of interferences by consolidating changes.
+- [EXCLAIM :material-open-in-new:](https://c2sm.ethz.ch/research/exclaim.html){:target="_blank"}: Project for ICON-based km-scale climate simulations
+- Projects by C2SM community members
+- User lab projects in climate and weather domains
 
 ### Uenvs
 
-To find and use already existing uenvs from `todi`, you need to modify the `CLUSTER_NAME` environment variable.
+To find and use already existing uenvs from previous `todi`, you need to prepend the `CLUSTER_NAME` environment variable to any `uenv` command.
 
 ```shell
-export CLUSTER_NAME=todi
-uenv image find
+CLUSTER_NAME=todi uenv image find
 ```
 
 | uenv                       | activity                       |
@@ -61,25 +49,27 @@ uenv image find
 | `icon-wcp/v1:rc4`          | build and run ICON             |
 | `netcdf-tools/2024:v1-rc1` | pre- and post-processing tools |
 
-### Storage
+### SLURM Partitions
 
-!!! note "TODO"
-
-The migration of the previous storage is not yet finished. Once there is an update from CSCS, we will inform you here. Also note that the environment variables `$STORE` and `$PROJECT` are not yet set.
+| SLURM partition | Default wall time | Max. wall time | Limitations |
+|-----------------|-------------------|----------------|-------------|
+| normal          | 01:00:00          | 24:00:00       | -           |
+| debug           | 00:30:00          | 00:30:00       | Single node |  
+| xfer            | 06:00:00          | 24:00:00       | Single node |
 
 ## Daint
 
-Daint (Alps) is the vCluster dedicated to the **User Lab**. It is currently accessible at `daint.alps.cscs.ch` (until the current Piz Daint gets decommissioned), so connect with `ssh daint.alps` with the `ssh` settings above.
+Daint (Alps) is the vCluster dedicated to the **User Lab**. It is accessible at `daint.alps.cscs.ch`.
 
-Even though Climate and Weather also has the dedicated vCluster `santis` (see [below](#santis)), traditional projects might also land on Daint.
+The Climate and Weather Platform (CWP) has the dedicated vCluster `santis` (see [above](#santis)).
+User Lab projects in climate and weather domain should be on  `santis`.
 
 ### Uenvs
 
 As on `santis`, you can access the uenvs from `todi`:
 
 ```shell
-export CLUSTER_NAME=todi
-uenv image find
+CLUSTER_NAME=todi uenv image find
 ```
 
 | uenv                       | activity                       |
@@ -87,9 +77,15 @@ uenv image find
 | `icon-wcp/v1:rc4`          | build and run ICON             |
 | `netcdf-tools/2024:v1-rc1` | pre- and post-processing tools |
 
-### Storage
+## Storage
 
-!!! note "TODO"
+The migration of the previous storage from old Piz Daint has been finished in January 2025. 
 
-The migration of the previous storage is not yet finished. Once there is an update from CSCS, we will inform you here.
-
+=== "Alps"
+    ```console
+    /capstor/store/cscs/c2sm
+    ```
+=== "Balfrin"
+    ```console
+    /capstor/store/cscs/c2sm
+    ```

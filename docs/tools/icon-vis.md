@@ -6,4 +6,4 @@ More information can be found in the repository itself.
 
 ## Support status
 
-The `master` branch is continuously being tested on Piz Daint and Tsa.
+The `master` branch is continuously being tested on Balfrin.
