@@ -13,8 +13,14 @@ Host ela
   User cscsusername
   IdentityFile ~/.ssh/cscs-key
 
-Host balfrin* daint* santis* todi*
+Host balfrin* 
   Hostname %h.cscs.ch
+  User cscsusername
+  IdentityFile ~/.ssh/cscs-key
+  ProxyJump ela
+
+Host santis* daint* todi*
+  Hostname %h.alps.cscs.ch
   User cscsusername
   IdentityFile ~/.ssh/cscs-key
   ProxyJump ela
@@ -69,9 +75,10 @@ The migration of the previous storage is not yet finished. Once there is an upda
 
 ## Daint
 
-Daint (Alps) is the vCluster dedicated to the **User Lab**. It is currently accessible at `daint.alps.cscs.ch` (until the current Piz Daint gets decommissioned), so connect with `ssh daint.alps` with the `ssh` settings above.
+Daint (Alps) is the vCluster dedicated to the **User Lab**. It is accessible at `daint.alps.cscs.ch`.
 
-Even though Climate and Weather also has the dedicated vCluster `santis` (see [below](#santis)), traditional projects might also land on Daint.
+The Climate and Weather Platform (CWP) has the dedicated vCluster `santis` (see [below](#santis)).
+User Lab projects in climate and weather domain should be on  `santis`.
 
 ### Uenvs
 
