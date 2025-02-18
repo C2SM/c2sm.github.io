@@ -4,22 +4,24 @@
 
 The [ICON repository :material-open-in-new:](https://github.com/C2SM/icon){:target="_blank"} is hosted on the C2SM GitHub organisation. If you do not have access, please follow the instructions under [How to get Access](../../about/index.md#how-to-get-access).
 
-Once you have access, clone the repository from GitHub using the SSH protocol:
-
-  ```bash
-  git clone --recurse-submodules git@github.com:C2SM/icon.git
-  ```
   If you do not already have an SSH key set up for GitHub, but would like to do so, follow the [instructions :material-open-in-new:](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent){:target="_blank"}.
     
 ## Configure and compile
 
 ### Säntis
 
-!!! construction "Under construction - last update: 2025-02-17"
+!!! construction "Under construction - last update: 2025-02-18"
 
     Information on this section is not yet complete nor final. It will be updated following the progress of the Alps system deployment at CSCS and C2SM's adaptation to this new system. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Alps.
 
-Run the following from the ICON root folder:
+#### ICON at C2SM
+
+Clone the ICON repository on the branch `santis`:
+```console
+git clone -b santis --recurse-submodules git@github.com:C2SM/icon.git
+```
+
+Run the following after navigating into ICON root folder:
 ```console
 # Load ICON user-environment 
 CLUSTER_NAME=todi uenv start --view=spack icon-wcp/v1:rc4
@@ -35,6 +37,84 @@ spack external find gmake
 spack env activate -d config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc
 spack install
 ```
+
+#### ICON-NWP
+**1. Create a `spack.yaml` file**
+
+Create the following files from the ICON build folder (different to the ICON root folder in case of a out-of-source build). For that, you will have to create the missing folders first:
+```bash
+SPACK_TAG=$(cat "config/cscs/SPACK_TAG_ALPS")
+mkdir -p config/cscs/spack/${SPACK_TAG}/santis_cpu_nvhpc
+mkdir -p config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc
+```
+
+For CPU compilation:
+
+=== "config/cscs/spack/${SPACK_TAG}/santis_cpu_nvhpc/spack.yaml"
+
+  ```yaml
+  spack:
+    specs:
+      - gmake%gcc
+      - gnuconfig%gcc
+      - cosmo-eccodes-definitions@2.25.0.2
+      - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace
+        +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp
+        ~loop-exchange ~async-io-rma
+    view: true
+    concretizer:
+      unify: true
+    develop:
+      icon:
+        path: ../../../../..
+        spec: icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art
+          +dace +realloc-buf ~aes ~jsbach ~ocean
+          ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma
+  ```
+
+For GPU compilation:
+
+=== "config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc/spack.yaml"
+
+  ```yaml
+  spack:
+    specs:
+      - gmake%gcc
+      - gnuconfig%gcc
+      - cosmo-eccodes-definitions@2.25.0.2
+      - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace
+        gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp
+        ~loop-exchange ~async-io-rma ~pgi-inlib +cuda-graphs
+    view: true
+    concretizer:
+      unify: true
+    develop:
+      icon:
+        path: ../../../../..
+        spec: icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art
+          +dace gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean
+          ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma ~pgi-inlib +cuda-graphs
+  ```
+
+**2. Build ICON**
+
+Run the following from the ICON root folder:
+```console
+# Load ICON user-environment
+CLUSTER_NAME=todi uenv start --view=spack icon-wcp/v1:rc4
+
+# Setup spack
+git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
+. spack-c2sm/setup-env.sh /user-environment
+
+# Build ICON
+cd /path/to/icon-build-folder
+spack external find gmake
+spack env activate -d config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc
+spack install
+```
+
+
 
 ### Euler
 Spack is used to build ICON. Please follow the steps below to set up Spack and build ICON.
