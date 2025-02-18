@@ -160,7 +160,13 @@ To run the created runscript, navigate to the *run* subdirectory and submit the 
 ```bash
 cd run && sbatch ./exp.mch_ch_lowres.run
 ```
-You may need to adjust the account in the runscript to match your permissions. Alternatively, you can include `--account <my_account_id>` in the `sbatch` command.
+You may need to adjust the account in the runscript to match your permissions. Alternatively, you can include `--account=<my_account_id>` in the `sbatch` command.
+
+!!! info
+
+    The data pool on `santis` is currently not in a persistent location, and you may not have access privileges.
+    Therefore, you may not be able to run the test cases at this time.
+    As soon as this is fixed, we will update this page accordingly.
 
 ## Input data
 
