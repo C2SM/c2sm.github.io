@@ -24,10 +24,10 @@ git clone -b santis --recurse-submodules git@github.com:C2SM/icon.git
 Run the following after navigating into ICON root folder:
 ```console
 # Load ICON user-environment 
-CLUSTER_NAME=todi uenv start --view=spack icon-wcp/v1:rc4
-SPACK_TAG=$(cat "config/cscs/SPACK_TAG_ALPS")
+uenv start icon-wcp/v1:rc4
 
 # Setup spack
+SPACK_TAG=$(cat "config/cscs/SPACK_TAG_ALPS")
 git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
 . spack-c2sm/setup-env.sh /user-environment
 
@@ -107,9 +107,10 @@ For GPU compilation:
 Run the following after navigating into the ICON-NWP root folder:
 ```console
 # Load ICON user-environment
-CLUSTER_NAME=todi uenv start --view=spack icon-wcp/v1:rc4
+uenv start icon-wcp/v1:rc4
 
 # Setup spack
+SPACK_TAG=$(cat "config/cscs/SPACK_TAG_ALPS")
 git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
 . spack-c2sm/setup-env.sh /user-environment
 
