@@ -50,7 +50,3 @@ C2SM maintains two GitHub organizations to distribute code to the community.
 ### [C2SM :material-open-in-new:](https://github.com/C2SM){:target="_blank"}
 
 This is our main GitHub organisation, which contains many repositories, including ICON.
-
-### [C2SM-RCM :material-open-in-new:](https://github.com/C2SM-RCM){:target="_blank"}
-
-The C2SM-RCM organisation contains all codes related to COSMO and tools like EXTPAR. For questions and access, please contact [Jonas Jucker](mailto:jonas.jucker@c2sm.ethz.ch).

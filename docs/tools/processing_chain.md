@@ -1,7 +1,8 @@
 
-# Processing Chain <img src="https://polybox.ethz.ch/index.php/s/yc3zMmoXKyI2rJm/download" width="64" valign="middle"/> 
+# <img src="https://polybox.ethz.ch/index.php/s/yc3zMmoXKyI2rJm/download" width="32" valign="middle"/> Processing Chain
 
-The Processing Chain is a collection of Python scripts to prepare necessary input data, submit compute jobs to the queue on Piz Daint and to apply post-processing steps to many pre-defined setups of the COSMO and ICON models. 
+The Processing Chain is a collection of Python scripts to prepare necessary input data, submit compute jobs to the SLURM queue
+and to apply post-processing steps to many pre-defined setups of the COSMO and ICON models. 
 In addition to their standard versions, it can als handle several variants of these models, namely COSMO-GHG, COSMO-ART and ICON-ART.
 The chain can be flexibly adapted according to your needs, e.g., by creating your own case, adding new jobs or custom scripts.
 
@@ -11,13 +12,13 @@ In 2018, Empa's [Atmospheric Modelling and Remote Sensing group :material-open-i
 making it more flexible and easier to maintain.
 
 Since 2021, the Processing Chain has been distributed to the entire C2SM
-community and is being hosted on the [C2SM GitHub organisation :material-open-in-new:](https://github.com/C2SM/processing-chain/){:target="_blank"}. Regular testing is done via [Jenkins :material-open-in-new:](https://jenkins-mch.cscs.ch/job/ProcessingChain/job/processing-chain-weekly/){:target="_blank"} (requires access) to ensure that the code runs stably on the system.
+community and is being hosted on the [C2SM GitHub organisation :material-open-in-new:](https://github.com/C2SM/processing-chain/){:target="_blank"}. 
 
 If you need any help, please contact [Michael Jähn :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091){:target="_blank"}.
 
 ## Support Status
 
-The `main` branch is continuously being tested on Piz Daint.
+The Processing Chain is not being tested yet on Säntis.
 
 ## Features
 

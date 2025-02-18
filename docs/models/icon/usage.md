@@ -101,7 +101,7 @@ Spack is used to build ICON. Please follow the steps below to set up Spack and b
 
 **1. Set up a Spack instance**
 
-To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#at-cscs-daint-tsa-balfrin){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/ethz/SPACK_TAG_EULER :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/ethz/SPACK_TAG_EULER){:target="_blank"} and load it into your command line.
+To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#quick-start){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/ethz/SPACK_TAG_EULER :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/ethz/SPACK_TAG_EULER){:target="_blank"} and load it into your command line.
 
 
 **2. Build ICON**
@@ -138,8 +138,20 @@ cd run && sbatch ./exp.mch_ch_lowres.run
 You may need to adjust the account in the runscript to match your permissions. Alternatively, you can include `--account <my_account_id>` in the `sbatch` command.
 
 ## Input data
-ICON input data are stored at the following locations:
 
-- **Piz Daint (CSCS):** `/users/icontest/pool/data/ICON`
-- **Euler:** `/cluster/work/climate/icon_input`
+The input data for standard ICON tests are stored in a [Git-lfs repository :material-open-in-new:](https://gitlab.dkrz.de/icon/testing-input-data){:target="_blank"}.
 
+### Input data pools
+
+=== "Santis"
+    ```shell
+    /capstor/store/cscs/userlab/d126/pool/data/ICON/
+    ```  
+=== "Euler"
+    ```shell
+    /cluster/work/climate/icon_input
+    ```
+=== "Balfrin"
+    ```shell
+    /scratch/mch/jenkins/icon/pool/data/ICON
+    ```
