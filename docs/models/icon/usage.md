@@ -4,22 +4,46 @@
 
 The [ICON repository :material-open-in-new:](https://github.com/C2SM/icon){:target="_blank"} is hosted on the C2SM GitHub organisation. If you do not have access, please follow the instructions under [How to get Access](../../about/index.md#how-to-get-access).
 
-Once you have access, clone the repository from GitHub using the SSH protocol:
-
-  ```bash
-  git clone --recurse-submodules git@github.com:C2SM/icon.git
-  ```
   If you do not already have an SSH key set up for GitHub, but would like to do so, follow the [instructions :material-open-in-new:](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent){:target="_blank"}.
     
 ## Configure and compile
 
 ### Säntis
 
-!!! construction "Under construction - last update: 2025-02-09"
+!!! construction "Under construction - last update: 2025-02-18"
 
     Information on this section is not yet complete nor final. It will be updated following the progress of the Alps system deployment at CSCS and C2SM's adaptation to this new system. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Alps.
 
-Next, follow the instructions to build ICON using Spack below.
+#### ICON at C2SM
+
+Clone the ICON repository on the branch `santis`:
+```console
+git clone -b santis --recurse-submodules git@github.com:C2SM/icon.git
+```
+
+Run the following after navigating into ICON root folder:
+```console
+# Load ICON user-environment 
+uenv start icon-wcp/v1:rc4
+
+# Setup spack
+SPACK_TAG=$(cat "config/cscs/SPACK_TAG_ALPS")
+git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
+. spack-c2sm/setup-env.sh /user-environment
+
+# Build ICON
+# For out-of-source builds: navigate into the build folder and adapt the path to the Spack environment in the following
+spack external find gmake
+spack env activate -d config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc
+spack install
+```
+
+#### ICON-NWP
+
+Clone the ICON-NWP repository (only possible if you have access to GitLab DKRZ):
+```console
+git clone --recurse-submodules git@gitlab.dkrz.de:icon/icon-nwp.git
+```
 
 **1. Create a `spack.yaml` file**
 
@@ -80,17 +104,18 @@ For GPU compilation:
 
 **2. Build ICON**
 
-Run the following from the ICON root folder:
+Run the following after navigating into the ICON-NWP root folder:
 ```console
-# Load ICON user-environment 
-CLUSTER_NAME=todi uenv start --view=spack icon-wcp/v1:rc4
+# Load ICON user-environment
+uenv start icon-wcp/v1:rc4
 
 # Setup spack
+SPACK_TAG=$(cat "config/cscs/SPACK_TAG_ALPS")
 git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
 . spack-c2sm/setup-env.sh /user-environment
 
 # Build ICON
-cd /path/to/icon-build-folder
+# For out-of-source builds: navigate into the build folder and adapt the path to the Spack environment in the following
 spack external find gmake
 spack env activate -d config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc
 spack install
@@ -135,7 +160,13 @@ To run the created runscript, navigate to the *run* subdirectory and submit the 
 ```bash
 cd run && sbatch ./exp.mch_ch_lowres.run
 ```
-You may need to adjust the account in the runscript to match your permissions. Alternatively, you can include `--account <my_account_id>` in the `sbatch` command.
+You may need to adjust the account in the runscript to match your permissions. Alternatively, you can include `--account=<my_account_id>` in the `sbatch` command.
+
+!!! info
+
+    The data pool on `santis` is currently not in a persistent location, and you may not have access privileges.
+    Therefore, you may not be able to run the test cases at this time.
+    As soon as this is fixed, we will update this page accordingly.
 
 ## Input data
 
