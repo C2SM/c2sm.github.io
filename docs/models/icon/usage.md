@@ -32,13 +32,19 @@ git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} ht
 . spack-c2sm/setup-env.sh /user-environment
 
 # Build ICON
-cd /path/to/icon-build-folder
+# For out-of-source builds: navigate into the build folder and adapt the path to the Spack environment in the following
 spack external find gmake
 spack env activate -d config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc
 spack install
 ```
 
 #### ICON-NWP
+
+Clone the ICON-NWP repository (only possible if you have access to GitLab DKRZ):
+```console
+git clone --recurse-submodules git@gitlab.dkrz.de:icon/icon-nwp.git
+```
+
 **1. Create a `spack.yaml` file**
 
 Create the following files from the ICON build folder (different to the ICON root folder in case of a out-of-source build). For that, you will have to create the missing folders first:
@@ -98,7 +104,7 @@ For GPU compilation:
 
 **2. Build ICON**
 
-Run the following from the ICON root folder:
+Run the following after navigating into the ICON-NWP root folder:
 ```console
 # Load ICON user-environment
 CLUSTER_NAME=todi uenv start --view=spack icon-wcp/v1:rc4
@@ -108,13 +114,11 @@ git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} ht
 . spack-c2sm/setup-env.sh /user-environment
 
 # Build ICON
-cd /path/to/icon-build-folder
+# For out-of-source builds: navigate into the build folder and adapt the path to the Spack environment in the following
 spack external find gmake
 spack env activate -d config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc
 spack install
 ```
-
-
 
 ### Euler
 Spack is used to build ICON. Please follow the steps below to set up Spack and build ICON.
