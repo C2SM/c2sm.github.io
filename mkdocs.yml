@@ -50,6 +50,8 @@ plugins:
   - search
   - literate-nav:
       nav_file: SUMMARY.md
+  - git-revision-date-localized:
+      enable_creation_date: true
   - blog:
      blog_dir: .
      blog_toc: true
