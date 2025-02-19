@@ -122,31 +122,42 @@ spack install
 ```
 
 ### Euler
-Spack is used to build ICON. Please follow the steps below to set up Spack and build ICON.
 
-**1. Set up a Spack instance**
+Clone the ICON repository on the main branch:
 
-To [set up a Spack instance :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#quick-start){:target="_blank"}, ensure that you clone the repository using the Spack tag provided in the ICON repository at [config/ethz/SPACK_TAG_EULER :material-open-in-new:](https://github.com/C2SM/icon/blob/main/config/ethz/SPACK_TAG_EULER){:target="_blank"} and load it into your command line.
-
-
-**2. Build ICON**
-
-Activate the Spack environment for Euler:
-```bash
-SPACK_TAG=$(cat "config/ethz/SPACK_TAG_EULER")
-spack env activate -d config/ethz/spack/$SPACK_TAG/euler_cpu_gcc
+```console
+git clone --recurse-submodules git@github.com:C2SM/icon.git
 ```
 
-Euler Support recommends to compile code on compute-nodes. Unfortunately [internet-access on Euler compute-nodes is restricted :material-open-in-new:](https://scicomp.ethz.ch/wiki/Accessing_the_clusters#Internet_Security){:target="_blank"}.
-Therefore a two-step install needs to be performed:
+Load the necessary modules:
+
+```console
+module load stack eth_proxy
+```
+
+The module `stack` provides the software stack, including `gcc/12.2.0`.
+The module `eth_proxy` enables the connection from a compute node to an external service, e.g. GitHub or GitLab.
+
+Run the following after navigating into ICON root folder:
 
 ```bash
-# fetch and install cosmo-eccodes-definitions on login-node
-spack install cosmo-eccodes-definitions
-
-# compile ICON on compute-nodes
-srun -N 1 -c 12 --mem-per-cpu=20G spack install -v -j 12
+# Setup spack
+SPACK_TAG=$(cat "config/cscs/SPACK_TAG_EULER")
+git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
+. spack-c2sm/setup-env.sh
 ```
+
+Euler Support recommends to compile code on compute nodes. There,
+we can take advantage of multi-core compiling:
+
+```bash
+# Build ICON
+# For out-of-source builds: navigate into the build folder and 
+# adapt the path to the Spack environment in the following
+spack env activate -d config/cscs/spack/${SPACK_TAG}/euler_cpu_gcc
+srun -N 1 -c 12 --mem-per-cpu=1G spack install -j 12
+```
+
 
 ## Run test case
 In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *mch_ch_lowres*, you can use the `make_runscripts` function.
