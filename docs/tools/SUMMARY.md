@@ -1,6 +1,6 @@
 * [Tools](index.md)
 * [DWD ICON Tools](icontools.md)
-* [EXTPAR](https://c2sm.github.io/extpar)
+* [EXTPAR](extpar.md)
 * [icon-vis](icon-vis.md)
 * [Processing Chain](processing_chain.md)
 * [Scaling Analysis](scaling_analysis.md)
