@@ -142,7 +142,7 @@ Run the following after navigating into ICON root folder:
 
 ```bash
 # Setup spack
-SPACK_TAG=$(cat "config/cscs/SPACK_TAG_EULER")
+SPACK_TAG=$(cat "config/ethz/SPACK_TAG_EULER")
 git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
 . spack-c2sm/setup-env.sh
 ```
@@ -154,7 +154,7 @@ we can take advantage of multi-core compiling:
 # Build ICON
 # For out-of-source builds: navigate into the build folder and 
 # adapt the path to the Spack environment in the following
-spack env activate -d config/cscs/spack/${SPACK_TAG}/euler_cpu_gcc
+spack env activate -d config/ethz/spack/${SPACK_TAG}/euler_cpu_gcc
 srun -N 1 -c 12 --mem-per-cpu=1G spack install -j 12
 ```
 
