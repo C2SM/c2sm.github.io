@@ -4,7 +4,7 @@ EXTPAR (**Ext**ernal **Par**ameters for Numerical Weather Prediction and Climate
 is used to prepare the external parameter data files that are used as input for the ICON model.
 
 All information around this software can be found at the
-[official EXTPAR documentation](https://c2sm.github.io/extpar/).
+[official EXTPAR documentation :material-open-in-new:](https://c2sm.github.io/extpar/){:target="_blank"}.
 
 ## Support status
 
