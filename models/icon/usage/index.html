@@ -3503,21 +3503,27 @@ mkdir<span class="w"> </span>-p<span class="w"> </span>config/cscs/spack/<span c
 <span class="go">spack install</span>
 </code></pre></div></p>
 <h3 id="euler">Euler<a class="headerlink" href="#euler" title="Permanent link">&para;</a></h3>
-<p>Spack is used to build ICON. Please follow the steps below to set up Spack and build ICON.</p>
-<p><strong>1. Set up a Spack instance</strong></p>
-<p>To <a href="https://c2sm.github.io/spack-c2sm/latest/QuickStart.html#quick-start" target="_blank">set up a Spack instance <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>, ensure that you clone the repository using the Spack tag provided in the ICON repository at <a href="https://github.com/C2SM/icon/blob/main/config/ethz/SPACK_TAG_EULER" target="_blank">config/ethz/SPACK_TAG_EULER <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> and load it into your command line.</p>
-<p><strong>2. Build ICON</strong></p>
-<p>Activate the Spack environment for Euler:
-<div class="highlight"><pre><span></span><code><span class="nv">SPACK_TAG</span><span class="o">=</span><span class="k">$(</span>cat<span class="w"> </span><span class="s2">&quot;config/ethz/SPACK_TAG_EULER&quot;</span><span class="k">)</span>
-spack<span class="w"> </span>env<span class="w"> </span>activate<span class="w"> </span>-d<span class="w"> </span>config/ethz/spack/<span class="nv">$SPACK_TAG</span>/euler_cpu_gcc
-</code></pre></div></p>
-<p>Euler Support recommends to compile code on compute-nodes. Unfortunately <a href="https://scicomp.ethz.ch/wiki/Accessing_the_clusters#Internet_Security" target="_blank">internet-access on Euler compute-nodes is restricted <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.
-Therefore a two-step install needs to be performed:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># fetch and install cosmo-eccodes-definitions on login-node</span>
-spack<span class="w"> </span>install<span class="w"> </span>cosmo-eccodes-definitions
-
-<span class="c1"># compile ICON on compute-nodes</span>
-srun<span class="w"> </span>-N<span class="w"> </span><span class="m">1</span><span class="w"> </span>-c<span class="w"> </span><span class="m">12</span><span class="w"> </span>--mem-per-cpu<span class="o">=</span>20G<span class="w"> </span>spack<span class="w"> </span>install<span class="w"> </span>-v<span class="w"> </span>-j<span class="w"> </span><span class="m">12</span>
+<p>Clone the ICON repository on the main branch:</p>
+<div class="highlight"><pre><span></span><code><span class="go">git clone --recurse-submodules git@github.com:C2SM/icon.git</span>
+</code></pre></div>
+<p>Load the necessary modules:</p>
+<div class="highlight"><pre><span></span><code><span class="go">module load stack eth_proxy</span>
+</code></pre></div>
+<p>The module <code>stack</code> provides the software stack, including <code>gcc/12.2.0</code>.
+The module <code>eth_proxy</code> enables the connection from a compute node to an external service, e.g. GitHub or GitLab.</p>
+<p>Run the following after navigating into ICON root folder:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Setup spack</span>
+<span class="nv">SPACK_TAG</span><span class="o">=</span><span class="k">$(</span>cat<span class="w"> </span><span class="s2">&quot;config/ethz/SPACK_TAG_EULER&quot;</span><span class="k">)</span>
+git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>--recurse-submodules<span class="w"> </span>--shallow-submodules<span class="w"> </span>-b<span class="w"> </span><span class="si">${</span><span class="nv">SPACK_TAG</span><span class="si">}</span><span class="w"> </span>https://github.com/C2SM/spack-c2sm.git
+.<span class="w"> </span>spack-c2sm/setup-env.sh
+</code></pre></div>
+<p>Euler Support recommends to compile code on compute nodes. There,
+we can take advantage of multi-core compiling:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Build ICON</span>
+<span class="c1"># For out-of-source builds: navigate into the build folder and </span>
+<span class="c1"># adapt the path to the Spack environment in the following</span>
+spack<span class="w"> </span>env<span class="w"> </span>activate<span class="w"> </span>-d<span class="w"> </span>config/ethz/spack/<span class="si">${</span><span class="nv">SPACK_TAG</span><span class="si">}</span>/euler_cpu_gcc
+srun<span class="w"> </span>-N<span class="w"> </span><span class="m">1</span><span class="w"> </span>-n<span class="w"> </span><span class="m">12</span><span class="w"> </span>--mem-per-cpu<span class="o">=</span>1G<span class="w"> </span>spack<span class="w"> </span>install<span class="w"> </span>-j<span class="w"> </span><span class="m">12</span>
 </code></pre></div>
 <h2 id="run-test-case">Run test case<a class="headerlink" href="#run-test-case" title="Permanent link">&para;</a></h2>
 <p>In the <em>run</em> folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. <em>mch_ch_lowres</em>, you can use the <code>make_runscripts</code> function.</p>
