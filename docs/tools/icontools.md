@@ -6,7 +6,7 @@ e.g., regular (lat-lon, gaussian) or triangular (ICON). It can be used to genera
 
 ## Support status
 
-The `master` branch is continuously being tested on Piz Daint.
+The `master` branch is integrated in [`spack-c2sm` :material-open-in-new:](https://github.com/C2SM/spack-c2sm/){:target="_blank"} system tests.
 
 ## Access
 
@@ -31,10 +31,10 @@ spack load icontools
 
 ## Run
 
-[The folder C2SM in the icontools repository :material-open-in-new:](https://github.com/C2SM/icontools/tree/master/C2SM){:target="_blank"} contains a bunch of scripts to run `iconremap` and `icongridgen` on Piz Daint.
+[The folder C2SM in the icontools repository :material-open-in-new:](https://github.com/C2SM/icontools/tree/master/C2SM){:target="_blank"} contains a bunch of scripts to run `iconremap` and `icongridgen` on Säntis.
 Most likely you will use the DWD ICON tools to generate a new grid or interpolate boundary conditions for limited-area ICON runs. 
 
-Below is a recipe to create initial and boundary files for an ICON-LAM run on Piz Daint.
+Below is a recipe to create initial and boundary files for an ICON-LAM run on Säntis.
 
 ### Clone the repository
 
@@ -52,7 +52,8 @@ icongridgen --nml icontools/C2SM/gridgen.nml
 
 This manual refers to the workflow MeteoSwiss currently uses to run LAM simulations.
 
-* Add fields `FI` and `z` from IFS analysis to LBC prior to the interpolation using `cdo` (GRIB only). To use the `cdo` command, make sure the module is loaded: `module load daint-gpu CDO`.
+* Add fields `FI` and `z` from IFS analysis to LBC prior to the interpolation using `cdo` (GRIB only). 
+To use the `cdo` command, make sure that a proper user environment is loaded containing `cdo`.
 
     ```bash
     cdo -selname,FI analysis_file fi_file

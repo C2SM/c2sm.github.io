@@ -69,11 +69,10 @@ Then follow the instructions in [Configure and compile :material-open-in-new:](u
 
 Before adding anything to the official ICON, we recommend you to run all tests locally first starting with CPU.
 
-For running the check scripts in the following, you need to have loaded a probtest environment and CDO and export `BB_NAME` to your builder. E.g. for Piz Daint:
+For running the check scripts in the following, you need to have loaded a probtest environment and CDO and export `BB_NAME` to your builder. E.g. for Säntis:
 ```bash
-source /project/g110/icon/probtest/conda/miniconda/bin/activate probtest
-module load daint-gpu CDO
-export BB_NAME=daint_cpu_nvidia
+uenv start icon
+export BB_NAME=santis_cpu_nvidia
 ```
 
 #### Test on CPU
