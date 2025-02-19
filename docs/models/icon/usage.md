@@ -155,7 +155,7 @@ we can take advantage of multi-core compiling:
 # For out-of-source builds: navigate into the build folder and 
 # adapt the path to the Spack environment in the following
 spack env activate -d config/ethz/spack/${SPACK_TAG}/euler_cpu_gcc
-srun -N 1 -c 12 --mem-per-cpu=1G spack install -j 12
+srun -N 1 -n 12 --mem-per-cpu=1G spack install -j 12
 ```
 
 
