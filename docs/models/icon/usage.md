@@ -129,15 +129,6 @@ Clone the ICON repository on the main branch:
 git clone --recurse-submodules git@github.com:C2SM/icon.git
 ```
 
-Load the necessary modules:
-
-```console
-module load stack eth_proxy
-```
-
-The module `stack` provides the software stack, including `gcc/12.2.0`.
-The module `eth_proxy` enables the connection from a compute node to an external service, e.g. GitHub or GitLab.
-
 Run the following after navigating into ICON root folder:
 
 ```bash
@@ -148,7 +139,13 @@ git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} ht
 ```
 
 Euler Support recommends to compile code on compute nodes. There,
-we can take advantage of multi-core compiling:
+we can take advantage of multi-core compiling.
+However, we need to load the module `eth_proxy`, which enables connecting from a compute node
+to an external service, e.g. GitHub or GitLab.
+
+```console
+module load eth_proxy
+```
 
 ```bash
 # Build ICON
