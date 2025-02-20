@@ -181,19 +181,39 @@ You may need to adjust the account in the runscript to match your permissions. A
 
 ## Input data
 
-The input data for standard ICON tests are stored in a [Git-lfs repository :material-open-in-new:](https://gitlab.dkrz.de/icon/testing-input-data){:target="_blank"}.
+There are two types in input data sets available for ICON:
+
+- General input data for use cases / production runs
+- Testing input data for CI
 
 ### Input data pools
 
 === "Santis"
     ```shell
-    /capstor/store/cscs/userlab/d126/pool/data/ICON/
+    /capstor/scratch/cscs/wsawyer/share/pool/data/ICON/
     ```  
-=== "Euler"
-    ```shell
-    /cluster/work/climate/icon_input
-    ```
 === "Balfrin"
     ```shell
     /scratch/mch/jenkins/icon/pool/data/ICON
+    ```
+=== "Euler"
+    ```shell
+    /cluster/work/climate/icon_input
+    ```    
+
+### Testing input data pool
+
+The input data for standard ICON tests are stored in a [Git-lfs repository :material-open-in-new:](https://gitlab.dkrz.de/icon/testing-input-data){:target="_blank"}.
+
+=== "Santis"
+    ```shell
+    tbd
+    ```  
+=== "Balfrin"
+    ```shell
+    /scratch/mch/icontest
+    ```
+=== "Euler"
+    ```shell
+    /cluster/work/climate/icon_testing_input
     ```
