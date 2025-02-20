@@ -12,6 +12,6 @@ The `master` branch is continuously being tested on `co2` (ETHZ) and `levante` (
 
 ## Web Interface
 
-Currently, C2SM in collaboration with MeteoSwiss and DWD is preparing a web interface
+Currently, C2SM, in collaboration with MeteoSwiss and DWD, is preparing a web interface
 for generating external parameter files on the ICON grid. A first beta version will be
 launched in March 2025.
