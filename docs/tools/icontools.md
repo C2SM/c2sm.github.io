@@ -1,12 +1,12 @@
 
 # DWD ICON Tools
 
-DWD ICON Tools contain a set of routines which may be suitable for reading, remapping and writing of fields from and to predefined grids,
+The [DWD ICON Tools :material-open-in-new:](https://github.com/C2SM/icontools#dwd-icon-tools){:target="_blank"} contain a set of routines which may be suitable for reading, remapping and writing of fields from and to predefined grids,
 e.g., regular (lat-lon, gaussian) or triangular (ICON). It can be used to generate lateral boundary conditions (LBC) and initial conditions (IC) for ICON-LAM simulations.
 
 ## Support status
 
-The `master` branch is integrated in [`spack-c2sm` :material-open-in-new:](https://github.com/C2SM/spack-c2sm/){:target="_blank"} system tests.
+The `master` branch of the [DWD ICON Tools :material-open-in-new:](https://github.com/C2SM/icontools){:target="_blank"} is integrated in the [`spack-c2sm` system tests :material-open-in-new:](https://github.com/C2SM/spack-c2sm/blob/main/test/system_test.py){:target="_blank"} on Balfrin.
 
 ## Access
 
@@ -15,10 +15,17 @@ please contact your group's technical contact. They will be responsible for addi
 
 ## Compile
 
-Spack takes care of configuring and building Icontools. For detailed instructions,
+[Spack](spack.md) takes care of configuring and building Icontools. For detailed instructions,
 please consider the official [spack-c2sm documentation :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest){:target="_blank"}.
-The following Spack installation should be sufficient for most cases:
+The following Spack installation should be sufficient for most cases.
 
+Clone the C2SM Spack main branch and source it:
+```bash
+git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/C2SM/spack-c2sm.git
+source ./spack-c2sm/setup-env.sh /user-environment
+```
+
+Install the ICON Tools:
 ```bash
 spack install icontools@c2sm-master%gcc
 ```
