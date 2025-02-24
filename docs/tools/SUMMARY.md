@@ -4,5 +4,6 @@
 * [icon-vis](icon-vis.md)
 * [Processing Chain](processing_chain.md)
 * [Scaling Analysis](scaling_analysis.md)
+* [Spack](spack.md)
 * [SPICE](spice.md)
 * [Zephyr](zephyr.md)
