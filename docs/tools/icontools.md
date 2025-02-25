@@ -8,6 +8,10 @@ e.g., regular (lat-lon, gaussian) or triangular (ICON). It can be used to genera
 
 The `master` branch of the [DWD ICON Tools :material-open-in-new:](https://github.com/C2SM/icontools){:target="_blank"} is integrated in the [`spack-c2sm` system tests :material-open-in-new:](https://github.com/C2SM/spack-c2sm/blob/main/test/system_test.py){:target="_blank"} on Balfrin.
 
+!!! Note "DWD ICON Tools on Säntis - last update: 2025-02-18"
+
+    Currently not supported, but the C2SM Core Team is working on it
+
 ## Access
 
 In order to get access to the [DWD ICON Tools repository hosted on the C2SM GitHub organisation :material-open-in-new:](https://github.com/C2SM/icontools){:target="_blank"},
