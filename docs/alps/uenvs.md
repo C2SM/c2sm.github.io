@@ -105,18 +105,16 @@ uenv image inspect prgenv-gnu --format="{sqfs}"
 
 Uenvs cannot be mounted *anywhere*. They are generated with a predefined installation path contained in it, where the user is supposed to mount them. By default the `uenv` tool and slurm plugin will use the path found in the metadata, ususally `/user-environment` and sometimes `/user-tools`. The later path exists for *side* environments that would potentially need to be mounted simultaneously to a *main* one.
 
-## `spack-c2sm` integration
+## C2SM Spack integration
 
-User environments are supported in `spack-c2sm` versions newer than `v0.21.1.3`.
+User environments are supported in [C2SM Spack :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest){:target="_blank"} versions newer than `v0.21.1.3`.
+
+Clone the repository with the correct Spack version:
 ```shell
 git clone --depth 1 --recurse-submodules --shallow-submodules -b v0.21.1.3 https://github.com/C2SM/spack-c2sm.git
 ```
-Then start the user environment and use it as a spack upstream with
+Then start the user environment and use it as a Spack upstream:
 ```shell
 uenv start name/version:tag /mount/point
 source spack-c2sm/setup-env.sh /mount/point
 ``` 
-
-!!! note "TODO"
-
-    - [ ] Update official `spack-c2sm` documentation
