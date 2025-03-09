@@ -168,8 +168,8 @@
     /net/atmos/data/cerra/processed/v1/
     ```
 
-- Size: 7.72 TB :material-information-outline:{ title="last updated: 2025-03-02 01:46:05" }
-- Number of files: 1,824 :material-information-outline:{ title="last updated: 2025-03-02 01:46:05" }
+- Size: 7.72 TB :material-information-outline:{ title="last updated: 2025-03-09 01:45:25" }
+- Number of files: 1,824 :material-information-outline:{ title="last updated: 2025-03-09 01:45:25" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -210,13 +210,14 @@
     /net/atmos/data/cerra-land/processed/v1/
     ```
 
-- Size: 1.78 TB :material-information-outline:{ title="last updated: 2025-03-02 01:46:05" }
-- Number of files: 1,016 :material-information-outline:{ title="last updated: 2025-03-02 01:46:05" }
+- Size: 1.82 TB :material-information-outline:{ title="last updated: 2025-03-09 01:45:25" }
+- Number of files: 1,060 :material-information-outline:{ title="last updated: 2025-03-09 01:45:25" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
 - Variables: 
   `eva`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `perc`{ title="day (native): 1985-2006, mon (native): 1985-2006" },
   `sd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
   `skt`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
   `slhf`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
@@ -264,8 +265,8 @@
     /nfs/atmos/c2sm/era5/processed/
     ```
 
-- Size: 45.72 TB :material-information-outline:{ title="last updated: 2025-03-02 01:47:10" }
-- Number of files: 138,551 :material-information-outline:{ title="last updated: 2025-03-02 01:47:10" }
+- Size: 45.72 TB :material-information-outline:{ title="last updated: 2025-03-09 01:46:25" }
+- Number of files: 138,683 :material-information-outline:{ title="last updated: 2025-03-09 01:46:25" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
@@ -308,8 +309,8 @@
     /net/atmos/data/era5-land_cds/processed/v1/
     ```
 
-- Size: 6.64 TB :material-information-outline:{ title="last updated: 2025-03-02 01:46:09" }
-- Number of files: 1,504 :material-information-outline:{ title="last updated: 2025-03-02 01:46:09" }
+- Size: 6.64 TB :material-information-outline:{ title="last updated: 2025-03-09 01:45:29" }
+- Number of files: 1,504 :material-information-outline:{ title="last updated: 2025-03-09 01:45:29" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
