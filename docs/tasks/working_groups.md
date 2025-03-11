@@ -6,7 +6,7 @@ Activities for this group mainly contribute to the further development and usage
 
 ## WG 2 - Weather and Climate Modeling
 
-This group gathers all activities revolving around weather and climate modelling with the exception of WG 1 (HPC), like usage, maintenance and support. They can target weather and climate models and their potential extensions (e.g. aerosols, chemistry) and ESMs. Tasks may include coupling of model components, general tools around pre- and post-processing, automated testing, etc.
+This group gathers all activities revolving around weather and climate modelling with the exception of WG 1 (HPC), like usage, maintenance and support. They can target weather and climate models and their potential extensions (e.g. aerosols, chemistry) and earth system models. Tasks may include coupling of model components, general tools around pre- and post-processing, automated testing, etc.
 
 ## WG 3 - Next Generation Swiss Climate Scenarios
 
