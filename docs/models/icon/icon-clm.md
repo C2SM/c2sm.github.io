@@ -320,7 +320,7 @@ It takes the restart file directory (1950/01):
 
 Some scripts in SPICE use Python. For that, some dependencies have to be installed.
 
-**Step 1: Download and Install Miniforge (User-Level)**
+**Step 1: Download and Install Miniforge**
 
 ```bash
 wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh
@@ -328,7 +328,7 @@ bash Miniforge3-Linux-aarch64.sh
 source ~/miniforge3/bin/activate
 ```
 
-**Step 2: Create a Conda Virtual Environment Named "spice_v2.3"**
+**Step 2: Create a conda virtual environment**
 
 ```bash
 conda create --prefix ${SPICE_DIR}/venv python=3.12 -y
@@ -341,7 +341,7 @@ conda activate ${SPICE_DIR}/venv
 echo -e "xarray\npandas\nnumpy\scipy\h5netcdf" > requirements.txt
 ```
 
-**Step 4: Install Dependencies Using Conda or Pip**
+**Step 4: Install dependencies using conda or pip**
 
 *Option 1: Install with Conda*
 
@@ -358,13 +358,13 @@ conda install pip -y
 pip install -r requirements.txt
 ```
 
-**Step 5: Verify Installation**
+**Step 5: Verify installation**
 
 ```bash
 ${SPICE_DIR}/venv/bin/python -c "import xarray; import pandas; import numpy; import scipy; import h5netcdf; print('All modules imported successfully!')"
 ```
 
-**Step 6: Using the Environment**
+**Step 6: Using the environment**
 
 Activate the environment:
 
@@ -372,19 +372,7 @@ Activate the environment:
 conda activate ${SPICE_DIR}/venv 
 ```
 
-Deactivate:
-
-```bash
-conda deactivate
-```
-
-Remove the environment (if needed):
-
-```bash
-conda remove --prefix ${SPICE_DIR}/venv  --all -y
-```
-
-**Step 7:**
+**Step 7: Explicitly set your Python version**
 
 Set your python version in `job_settings`:
 
@@ -392,7 +380,7 @@ Set your python version in `job_settings`:
 PYTHON=${SPICE_DIR}/venv/bin/python
 ```
 
-Now your spice_v2.3 environment is ready to go! 🚀
+Now your Python environment for SPICE is ready to go! 🚀
 
 #### Run the case
 
