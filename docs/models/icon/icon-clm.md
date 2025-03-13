@@ -59,7 +59,7 @@ git clone -b v2.3 git@gitlab.dkrz.de:clm-community/spice.git spice
 cd spice
 ```  
 
-##### 2) Download official release from Zenodo
+##### 3) Download official release from Zenodo
 
 Download SPICE v2.3 from [Zenodo :material-open-in-new:](https://doi.org/10.5281/zenodo.5910888){:target="_blank"}:
 
@@ -149,6 +149,13 @@ Afterwards, go back to your original terminal containing the
 From the SPICE root directory, let's create an experiment folder and 
 copy the `sp001` case in there. If you want a different name for your
 experiment, just modify the `EXP` variable.
+
+!!! note
+    The `sp001` is the standard `gcm2icon` test case defined in SPICE.
+    It is run on the EURO-CORDEX domain at 44 km horizontal resolution
+    and uses ERAInterim data as initial and boundary conditions.
+    If you want to run this case, skip the next subsections and continue
+    with [Install Python virtual environment](#install-python-virtual-environment).
 
 ```bash
 SPICE_DIR=$(pwd)
