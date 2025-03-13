@@ -331,8 +331,8 @@ source ~/miniforge3/bin/activate
 **Step 2: Create a Conda Virtual Environment Named "spice_v2.3"**
 
 ```bash
-conda create --prefix ~/spice_v2.3 python=3.12 -y
-conda activate ~/spice_v2.3
+conda create --prefix ${SPICE_DIR}/venv python=3.12 -y
+conda activate ${SPICE_DIR}/venv 
 ```
 
 **Step 3: Create `requirements.txt`**
@@ -361,7 +361,7 @@ pip install -r requirements.txt
 **Step 5: Verify Installation**
 
 ```bash
-python -c "import xarray; import pandas; import numpy; print('All modules imported successfully!')"
+${SPICE_DIR}/venv/bin/python -c "import xarray; import pandas; import numpy; import scipy; import h5netcdf; print('All modules imported successfully!')"
 ```
 
 **Step 6: Using the Environment**
@@ -369,7 +369,7 @@ python -c "import xarray; import pandas; import numpy; print('All modules import
 Activate the environment:
 
 ```bash
-conda activate ~/spice_v2.3
+conda activate ${SPICE_DIR}/venv 
 ```
 
 Deactivate:
@@ -381,7 +381,15 @@ conda deactivate
 Remove the environment (if needed):
 
 ```bash
-conda remove --prefix ~/spice_v2.3 --all -y
+conda remove --prefix ${SPICE_DIR}/venv  --all -y
+```
+
+**Step 7:**
+
+Set your python version in `job_settings`:
+
+```bash
+PYTHON=${SPICE_DIR}/venv/bin/python
 ```
 
 Now your spice_v2.3 environment is ready to go! 🚀
