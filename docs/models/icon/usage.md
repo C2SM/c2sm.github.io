@@ -91,15 +91,24 @@ srun -N 1 -n 12 --mem-per-cpu=1G spack install -j 12
 ## Run test case
 In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *mch_ch_lowres*, you can use the `make_runscripts` function.
 
-```bash
-./make_runscripts mch_ch_lowres
+```shell
+./make_runscripts c2sm_clm_r13b03_seaice
 ```
 
 To run the created runscript, navigate to the *run* subdirectory and submit the runscript.
 
-```bash
-cd run && sbatch ./exp.mch_ch_lowres.run
-```
+=== "Santis"
+    ```shell
+    cd run && uenv run icon-wcp/v1:rc4 -- sbatch ./exp.c2sm_clm_r13b03_seaice.run
+    ```
+=== "Euler"
+    ```shell
+    cd run && sbatch ./exp.c2sm_clm_r13b03_seaice.run
+    ```
+=== "Balfrin"
+    ```shell
+    cd run && sbatch ./exp.c2sm_clm_r13b03_seaice.run
+    ```
 You may need to adjust the account in the runscript to match your permissions. Alternatively, you can include `--account=<my_account_id>` in the `sbatch` command.
 
 !!! info
