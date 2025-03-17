@@ -89,7 +89,7 @@ srun -N 1 -n 12 --mem-per-cpu=1G spack install -j 12
 
 
 ## Run test case
-In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *mch_ch_lowres*, you can use the `make_runscripts` function.
+In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *c2sm_clm_r13b03_seaice*, you can use the `make_runscripts` function.
 
 ```shell
 ./make_runscripts c2sm_clm_r13b03_seaice
