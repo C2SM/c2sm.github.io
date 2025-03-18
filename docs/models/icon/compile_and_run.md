@@ -1,4 +1,4 @@
-# Usage
+# Compile and Run
 
 ## Access
 
