@@ -125,7 +125,7 @@ The input data for standard ICON tests are stored in a [Git-lfs repository :mate
 
 === "Santis"
     ```shell
-    /capstor/store/cscs/userlab/d126/pool/data/ICON/
+    /capstor/store/cscs/userlab/d126/testing-input-data
     ```  
 === "Euler"
     ```shell
