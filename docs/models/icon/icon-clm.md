@@ -221,12 +221,13 @@ sed -i "s|sp001|${EXP}|g" ${job_settings_file}
 sed -i "s|PFDIR=\${SPDIR}/chain/gcm2icon|PFDIR=\${SPDIR}/experiments|g" ${job_settings_file}
 sed -i "s|WORKDIR=\${SPDIR}/chain|WORKDIR=\${SPDIR}/experiments/work|g" ${job_settings_file}
 sed -i "s|SCRATCHDIR=\${SPDIR}/chain|SCRATCHDIR=\${SPDIR}/experiments/scratch|g" ${job_settings_file}
-sed -i "s|1979-01-01|1950-01-01|g" ${job_settings_file}
+sed -i "s|ARCHIVE_OUTDIR=\${SPDIR}/chain|ARCHIVE_OUTDIR=\${SPDIR}/experiments|g" ${job_settings_file}
+sed -i "s|1979-01-01|1940-01-01|g" ${job_settings_file}
 sed -i "s|1979-03-01|2024-01-01|g" ${job_settings_file}
 sed -i "s|europe044|europe011|g" ${job_settings_file}
 sed -i "s|0.44|0.11|g" ${job_settings_file}
 sed -i "s|TIME_ICON=00-00:30:00|TIME_ICON=00-01:00:00|g" ${job_settings_file}
-sed -i "s|TIME_ARCH=\"00-00:30:00\"|TIME_ARCH=\"00-01:00:00\"|g" ${job_settings_file}
+sed -i "s|TIME_ARCH=\"00-00:30:00\"|TIME_ARCH=\"00-01:30:00\"|g" ${job_settings_file}
 sed -i "s|ITYPE_TS=1|ITYPE_TS=2|g" ${job_settings_file}
 sed -i "s|ITYPE_COMPRESS_POST=0|ITYPE_COMPRESS_POST=1|g" ${job_settings_file}
 sed -i "s|ITYPE_COMPRESS_ARCH=0|ITYPE_COMPRESS_ARCH=1|g" ${job_settings_file}
@@ -253,12 +254,13 @@ For better readability, the following replacements are done:
 | `PFDIR=${SPDIR}/chain/gcm2icon`    | `PFDIR=${SPDIR}/experiments`                    | Base directory of experiment                 |
 | `WORKDIR=${SPDIR}/chain`           | `WORKDIR=${SPDIR}/experiments/work`             | Working directory of experiment              |
 | `SCRATCHDIR=${SPDIR}/chain`        | `SCRATCHDIR=${SPDIR}/experiments/scratch`       | Scratch directory of experiment              |
-| `1979-01-01`                       | `1950-01-01`                                    | Start date                                   |
+| `ARCHIVE_OUTDIR=${SPDIR}/chain`    | `ARCHIVE_OUTDIR=${SPDIR}/experiments`           | Archive directory of experiment              |
+| `1979-01-01`                       | `1940-01-01`                                    | Start date                                   |
 | `1979-03-01`                       | `2024-01-01`                                    | End date                                     |
 | `europe044`                        | `europe011`                                     | Folder names for ERA5 data                   |
 | `0.44`                             | `0.11`                                          | netCDF metadata for 11 km run                |
 | `TIME_ICON=00-00:30:00`            | `TIME_ICON=00-01:00:00`                         | Increase walltime for icon job               |
-| `TIME_ARCH="00-00:30:00"`          | `TIME_ARCH="00-01:00:00"`                       | Increase walltime for arch job               |
+| `TIME_ARCH="00-00:30:00"`          | `TIME_ARCH="00-01:30:00"`                       | Increase walltime for arch job               |
 | `ITYPE_TS=1`                       | `ITYPE_TS=2`                                    | Yearly time series                           |
 | `ITYPE_COMPRESS_POST=0`            | `ITYPE_COMPRESS_POST=1`                         | netCDF compression for post data             |
 | `ITYPE_COMPRESS_ARCH=0`            | `ITYPE_COMPRESS_ARCH=1`                         | netCDF compression for arch data             |
@@ -315,6 +317,8 @@ It takes the restart file directory (1950/01):
 ```bash
 /capstor/store/cscs/c2sm/c2sme/ICON-CLM/multifile_restart_ATMO_19500101T000000Z.mfr
 ```
+
+Note that the `START_DATE` in the `job_settings` file needs to be adapted.
 
 #### Install Python virtual environment
 
