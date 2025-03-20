@@ -355,7 +355,7 @@ conda install --file requirements.txt -y
 
 *Option 2: Install with Pip*
 
-Ensure pip is installed:
+Ensure that pip is installed:
 
 ```bash
 conda install pip -y
