@@ -43,7 +43,7 @@
    * [Copyleft definition :material-open-in-new:](https://en.wikipedia.org/wiki/Copyleft){:target="_blank"}
    * [Why avoiding non-commercial licenses? :material-open-in-new:](https://freedomdefined.org/Licenses/NC){:target="_blank"}
    * [Advices on how to cite datasets :material-open-in-new:](http://www.dcc.ac.uk/resources/how-guides/cite-datasets){:target="_blank"}
-   * [SPDX (standard for easy sofware licensing :material-open-in-new:](https://spdx.org/ids){:target="_blank"}
+   * [SPDX (standard for easy sofware licensing) :material-open-in-new:](https://spdx.org/ids){:target="_blank"}
 
 ## Help on improving NetCDF metadata
    * [IAC internal documentation on NetCDF in general :material-open-in-new:](https://wiki.iac.ethz.ch/IT/LinuxNetCDF){:target="_blank"} (!with IAC login only)
