@@ -1,5 +1,8 @@
 # Working Groups
 
+!!! info
+    Minutes and slides from the annual C2SM Working Group Days can be found under the corresponding [Events page](../events/wgdays.md).
+
 ## WG 1 - High Performance Computing
 
 Activities for this group mainly contribute to the further development and usage of next-generation weather and climate models such as ICON or COSMO using innovative coding concepts (e.g., beyond CPU architectures).
