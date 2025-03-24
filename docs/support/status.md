@@ -13,3 +13,4 @@
 | Spack  | | | [spack-c2sm :material-open-in-new:](https://github.com/C2SM/spack-c2sm){:target="_blank"} | |
 | SPICE  | | | [SPICE :material-open-in-new:](https://gitlab.dkrz.de/clm-community/spice){:target="_blank"} | |
 | Zephyr  | | | [Zephyr website :material-open-in-new:](https://zephyr.ethz.ch){:target="_blank"} |
+| Zonda | | | |
