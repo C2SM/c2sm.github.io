@@ -10,7 +10,7 @@
 
 **CESM** - Community Earth System Model
 
-**CH2025** -
+**CH2025** - Swiss Climate Scenarios 2025
 
 **CL** - Climate and Forecast
 
@@ -32,7 +32,7 @@
 
 **ECMWF** - European Centre for Medium-range Weather Forecasts
 
-**FPS** - Flagship Pilot Studies 
+**FPS** - Flagship Pilot Studies
 
 **FTE** - Full-Time Equivalent
 
