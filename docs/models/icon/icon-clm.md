@@ -373,7 +373,7 @@ ${SPICE_DIR}/venv/bin/python -c 'import xarray; import pandas; import numpy; imp
 Set your python version in `job_settings`:
 
 ```bash
-PYTHON=${SPICE_DIR}/venv/bin/python
+PYTHON=${SPDIR}/venv/bin/python
 ```
 
 Now your Python environment for SPICE is ready to go! 🚀
