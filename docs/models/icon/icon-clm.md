@@ -365,7 +365,7 @@ pip install -r requirements.txt
 **Step 5: Verify installation**
 
 ```bash
-${SPICE_DIR}/venv/bin/python -c 'import xarray; import pandas; import numpy; import scipy; import h5netcdf; print("All modules imported successfully!")'
+${SPICE_DIR}/venv/bin/python -c 'import xarray; import pandas; import numpy; import scipy; import h5netcdf; import matplotlib; print("All modules imported successfully!")'
 ```
 
 **Step 6: Explicitly set your Python version**
