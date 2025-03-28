@@ -342,7 +342,7 @@ conda activate ${SPICE_DIR}/venv
 **Step 3: Create `requirements.txt`**
 
 ```bash
-echo -e "xarray\npandas\nnumpy\nscipy\nh5netcdf" > requirements.txt
+echo -e "xarray\npandas\nnumpy\nscipy\nh5netcdf\nmatplotlib" > requirements.txt
 ```
 
 **Step 4: Install dependencies using conda or pip**
