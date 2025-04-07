@@ -11,5 +11,5 @@ Build via workpackage of SwissTwins project.
 Physically installed at ECMWF Bologna with a direct connection to Alps Lugano [ALPS](../alps/index.md).
 It is part of the multi-site distributed infrastructure (Lugano, Lausanne, Bologna).
 
-Using [polytope](https://polytope-client.readthedocs.io/en/latest/index.html) web service it will be possible to query ECMWF MARS (Meteorological Archival and Retrieval System).
+Using [polytope :material-open-in-new:](https://polytope-client.readthedocs.io/en/latest/index.html){:target="_blank"} web service it will be possible to query ECMWF MARS (Meteorological Archival and Retrieval System).
 Polytope is being set up on AlpsB.
