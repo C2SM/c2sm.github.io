@@ -3,7 +3,7 @@
 The ECMWF Data Cube is currently set up on AlpsB.
 
 !!! warning
-New and under construction, no official CSCS information yet
+New and work in progress, not all information might be up to data at all times
 
 AlpsB is a storage system at the ECMWF Data Center in Bologna.
 Storage-focused system, data hypercube, ½ Pb of fast SSD storage, 2Pb of “slow” storage
