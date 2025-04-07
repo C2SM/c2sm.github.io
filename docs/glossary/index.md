@@ -1,5 +1,7 @@
 # Glossary
 
+**AI** - Artificial Intelligence
+
 **ART** - Aerosols and Reactive Trace gases
 
 **BC** - Boundary Condition
@@ -63,6 +65,12 @@
 **IFS** - Integrated Forecast System
 
 **LAM** - Limited Area Mode
+
+**MCH** - MeteoSwiss
+
+**MERRA** - Modern-Era Retrospective analysis for Research and Applications
+
+**ML** - Machine Learning
 
 **NWP** - Numerical Weather Prediction
 
