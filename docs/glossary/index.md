@@ -18,65 +18,33 @@
 | **CPU** | Central Processing Unit ||
 | **DKRZ** | Deutsches Klimarechenzentrum (central service center for the German climate research and Earth system research) | [DKRZ website :material-open-in-new:](https://www.dkrz.de/de){:target="_blank"} |
 | **DWD** | Deutscher WetterDienst (german weather service) | [DWD website :material-open-in-new:](https://www.dwd.de/DE/Home/home_node.html){:target="_blank"} |
-
-**ECMWF** - European Centre for Medium-range Weather Forecasts
-
-**FPS** - Flagship Pilot Studies
-
-**FTE** - Full-Time Equivalent
-
-**ed** - Executive Director
-
-**ERA** - European ReAnalysis
-
-**ESGF** - Earth System Grid Federation
-
-**EXCLAIM** - EXtreme scale Computing and data platform for cLoud-resolving weAther and clImate Modeling
-
-**EXTPAR** - EXTernal PARameters for numerical weather prediction and climate application
-
-**FTE** - Full-Time Equivalent
-
-**GH** - Grace Hopper
-
-**GHG** - GreenHouse Gases
-
-**GPU** - Graphics Processing Unit
-
-**HPC** - High Performance Computing
-
-**IAC** - Institute for Atmospheric and Climate science
-
-**ICON** - ICOsahedral Nonhydrostatic weather and climate model
-
-**IFS** - Integrated Forecast System
-
-**LAM** - Limited Area Mode
-
-**MCH** - MeteoSwiss
-
-**MERRA** - Modern-Era Retrospective analysis for Research and Applications
-
-**ML** - Machine Learning
-
-**NWP** - Numerical Weather Prediction
-
-**OS** - Operating System
-
-**SC** - Steering Committee
-
-**SLURM** - Simple Linux Utility for Resource Management
-
-**SNF** - Swiss National science Foundation
-
-**SPICE** - Starter Package for Icon-Clm Experiments
-
-**Uenv** - User environment
-
-**vCluster** - versatile cluster (cluster being tailored to the needs of specific community)
-
-**WCRP** - World Climate Research Programme
-
-**WEW** - WeiterEntWicklungen (further developments)
-
-**WG** - Working Group
+| **ECMWF** | European Centre for Medium-range Weather Forecasts | [ECMWF website :material-open-in-new:](https://www.ecmwf.int/en/about){:target="_blank"} |
+| **ed** | Executive Director ||
+| **ERA5** | ECMWF Reanalysis v5 | [ERA4 website :material-open-in-new:](https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5){:target="_blank"} |
+| **ESGF** | Earth System Grid Federation | [ESGF website :material-open-in-new:](https://esgf.llnl.gov){:target="_blank"} |
+| **EXCLAIM** | EXtreme scale Computing and data platform for cLoud-resolving weAther and clImate Modeling | [EXCLAIM website :material-open-in-new:](https://exclaim.ethz.ch){:target="_blank"} |
+| **EXTPAR** | EXTernal PARameters for numerical weather prediction and climate application | [EXTPAR documentation :material-open-in-new:](https://c2sm.github.io/extpar/){:target="_blank"} |
+| **FPS** | Flagship Pilot Studies ||
+| **FTE** | Full-Time Equivalent ||
+| **GH** | Grace Hopper ||
+| **GHG** | GreenHouse Gases ||
+| **GPU** | Graphics Processing Unit ||
+| **HPC** | High Performance Computing ||
+| **IAC** | Institute for Atmospheric and Climate science | [IAC website :material-open-in-new:](https://iac.ethz.ch){:target="_blank"} |
+| **ICON** | ICOsahedral Nonhydrostatic weather and climate model | [ICON offical website :material-open-in-new:](https://www.icon-model.org){:target="_blank"} |
+| **IFS** | Integrated Forecast System ||
+| **LAM** | Limited Area Mode | [ICON-LAM publication :material-open-in-new:](https://doi.org/10.5194/gmd-14-985-2021){:target="_blank"} |
+| **MCH** | Federal Office of Meteorology and Climatology MeteoSwiss | [MeteoSwiss website :material-open-in-new:](https://www.meteoswiss.admin.ch/){:target="_blank"} |
+| **MERRA** | Modern-Era Retrospective analysis for Research and Applications | [MERRA website :material-open-in-new:](https://gmao.gsfc.nasa.gov/reanalysis/MERRA/){:target="_blank"} |
+| **ML** | Machine Learning ||
+| **NWP** | Numerical Weather Prediction ||
+| **OS** | Operating System ||
+| **SC** | Steering Committee ||
+| **SLURM** | Simple Linux Utility for Resource Management ||
+| **SNF** | Swiss National science Foundation | [SNF website :material-open-in-new:](https://www.snf.ch/en){:target="_blank"} |
+| **SPICE** | Starter Package for Icon-Clm Experiments | [SPICE documentation :material-open-in-new:](https://hereon-coast.atlassian.net/wiki/spaces/SPICE/overview?homepageId=983042){:target="_blank"} |
+| **Uenv** | User environment ||
+| **vCluster** | versatile cluster | A cluster being tailored to the needs of specific community |
+| **WCRP** | World Climate Research Programme | [WCRP website :material-open-in-new:](https://www.wcrp-climate.org){:target="_blank"} |
+| **WEW** | WeiterEntWicklungen (further developments) | [WEW-ICON :material-open-in-new:](https://c2sm.ethz.ch/research/wew-icon.html){:target="_blank"} |
+| **WG** | Working Group ||
