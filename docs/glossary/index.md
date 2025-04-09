@@ -42,7 +42,7 @@
 | **SC** | Steering Committee ||
 | **SLURM** | Simple Linux Utility for Resource Management ||
 | **SNF** | Swiss National science Foundation | [SNF website :material-open-in-new:](https://www.snf.ch/en){:target="_blank"} |
-| **SPICE** | Starter Package for Icon-Clm Experiments | [SPICE documentation :material-open-in-new:](https://hereon-coast.atlassian.net/wiki/spaces/SPICE/overview?homepageId=983042){:target="_blank"} |
+| **SPICE** | Starter Package for Icon-CLM Experiments | [SPICE documentation :material-open-in-new:](https://hereon-coast.atlassian.net/wiki/spaces/SPICE/overview?homepageId=983042){:target="_blank"} |
 | **Uenv** | User environment ||
 | **vCluster** | versatile cluster | A cluster being tailored to the needs of specific community |
 | **WCRP** | World Climate Research Programme | [WCRP website :material-open-in-new:](https://www.wcrp-climate.org){:target="_blank"} |
