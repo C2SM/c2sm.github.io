@@ -14,13 +14,13 @@
 | **CMIP** | Coupled Model Intercomparison Project | [CMIP website :material-open-in-new:](https://wcrp-cmip.org){:target="_blank"} |
 | **CORDEX** | Coordinated Regional Climate Downscaling Experiment | [CORDEX website :material-open-in-new:](https://cordex.org){:target="_blank"} |
 | **COSMO** | Consortium for Small-scale Modeling | [COSMO website :material-open-in-new:](https://www.cosmo-model.org/content/default.htm){:target="_blank"} |
-| **CSCS** | Swiss National Supercomputing Centre | [CSCS website :material-open-in-new:](https://www.cscs.ch){:target="_blank"} |
+| **CSCS** | Swiss National Supercomputing Centre (Centro Svizzero di Calcolo Scientifico) | [CSCS website :material-open-in-new:](https://www.cscs.ch){:target="_blank"} |
 | **CPU** | Central Processing Unit ||
 | **DKRZ** | Deutsches Klimarechenzentrum (central service center for the German climate research and Earth system research) | [DKRZ website :material-open-in-new:](https://www.dkrz.de/de){:target="_blank"} |
 | **DWD** | Deutscher WetterDienst (german weather service) | [DWD website :material-open-in-new:](https://www.dwd.de/DE/Home/home_node.html){:target="_blank"} |
 | **ECMWF** | European Centre for Medium-range Weather Forecasts | [ECMWF website :material-open-in-new:](https://www.ecmwf.int/en/about){:target="_blank"} |
-| **ed** | Executive Director ||
-| **ERA5** | ECMWF Reanalysis v5 | [ERA4 website :material-open-in-new:](https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5){:target="_blank"} |
+| **ED** | Executive Director ||
+| **ERA5** | ECMWF ReAnalysis v5 | [ERA4 website :material-open-in-new:](https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5){:target="_blank"} |
 | **ESGF** | Earth System Grid Federation | [ESGF website :material-open-in-new:](https://esgf.llnl.gov){:target="_blank"} |
 | **EXCLAIM** | EXtreme scale Computing and data platform for cLoud-resolving weAther and clImate Modeling | [EXCLAIM website :material-open-in-new:](https://exclaim.ethz.ch){:target="_blank"} |
 | **EXTPAR** | EXTernal PARameters for numerical weather prediction and climate application | [EXTPAR documentation :material-open-in-new:](https://c2sm.github.io/extpar/){:target="_blank"} |
@@ -44,7 +44,7 @@
 | **SNF** | Swiss National science Foundation | [SNF website :material-open-in-new:](https://www.snf.ch/en){:target="_blank"} |
 | **SPICE** | Starter Package for Icon-CLM Experiments | [SPICE documentation :material-open-in-new:](https://hereon-coast.atlassian.net/wiki/spaces/SPICE/overview?homepageId=983042){:target="_blank"} |
 | **Uenv** | User environment ||
-| **vCluster** | versatile cluster | A cluster being tailored to the needs of specific community |
+| **vCluster** | versatile Cluster | A cluster being tailored to the needs of specific community |
 | **WCRP** | World Climate Research Programme | [WCRP website :material-open-in-new:](https://www.wcrp-climate.org){:target="_blank"} |
 | **WEW** | WeiterEntWicklungen (further developments) | [WEW-ICON :material-open-in-new:](https://c2sm.ethz.ch/research/wew-icon.html){:target="_blank"} |
 | **WG** | Working Group ||
