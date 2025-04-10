@@ -168,8 +168,8 @@
     /net/atmos/data/cerra/processed/v1/
     ```
 
-- Size: 7.72 TB :material-information-outline:{ title="last updated: 2025-03-14 09:40:24" }
-- Number of files: 1,824 :material-information-outline:{ title="last updated: 2025-03-14 09:40:24" }
+- Size: 7.77 TB :material-information-outline:{ title="last updated: 2025-04-06 01:46:22" }
+- Number of files: 1,898 :material-information-outline:{ title="last updated: 2025-04-06 01:46:22" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -196,6 +196,7 @@
   `str`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
   `strd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
   `t`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `tcc`{ title="day (native): 1985-2021, mon (native): 1985-2021" },
   `u`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
   `v`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
   `vsw`{ title="day (native): 1985-2020, mon (native): 1985-2020" }
@@ -210,8 +211,8 @@
     /net/atmos/data/cerra-land/processed/v1/
     ```
 
-- Size: 1.82 TB :material-information-outline:{ title="last updated: 2025-03-14 09:40:22" }
-- Number of files: 1,060 :material-information-outline:{ title="last updated: 2025-03-14 09:40:22" }
+- Size: 1.82 TB :material-information-outline:{ title="last updated: 2025-04-06 01:46:22" }
+- Number of files: 1,060 :material-information-outline:{ title="last updated: 2025-04-06 01:46:22" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -228,6 +229,7 @@
   `ssrd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
   `str`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
   `strd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `tcc`{ title="day (native): N/A, mon (native): N/A" },
   `tp`{ title="mon (native): 1985-2020" },
   `vsw`{ title="day (native): 1985-2020, mon (native): 1985-2020" }
 - Temporal Resolution: daily, monthly
@@ -265,8 +267,8 @@
     /nfs/atmos/c2sm/era5/processed/
     ```
 
-- Size: 45.9 TB :material-information-outline:{ title="last updated: 2025-03-14 09:40:26" }
-- Number of files: 139,781 :material-information-outline:{ title="last updated: 2025-03-14 09:40:26" }
+- Size: 45.93 TB :material-information-outline:{ title="last updated: 2025-04-06 01:48:15" }
+- Number of files: 139,791 :material-information-outline:{ title="last updated: 2025-04-06 01:48:15" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
@@ -309,8 +311,8 @@
     /net/atmos/data/era5-land_cds/processed/v1/
     ```
 
-- Size: 6.64 TB :material-information-outline:{ title="last updated: 2025-03-14 09:40:26" }
-- Number of files: 1,504 :material-information-outline:{ title="last updated: 2025-03-14 09:40:26" }
+- Size: 7.13 TB :material-information-outline:{ title="last updated: 2025-04-06 01:46:25" }
+- Number of files: 1,614 :material-information-outline:{ title="last updated: 2025-04-06 01:46:25" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
@@ -321,6 +323,7 @@
   `pev`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
   `sd`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
   `snom`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
+  `strd`{ title="day (native): 1970-2024, mon (native): 1970-2024" },
   `swvl1`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
   `swvl2`{ title="day (native): 1959-2022, mon (native): 1959-2022" },
   `swvl3`{ title="day (native): 1950-2023, mon (native): 1950-2023" },

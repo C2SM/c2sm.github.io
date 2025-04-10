@@ -342,7 +342,7 @@ conda activate ${SPICE_DIR}/venv
 **Step 3: Create `requirements.txt`**
 
 ```bash
-echo -e "xarray\npandas\nnumpy\scipy\h5netcdf" > requirements.txt
+echo -e "xarray\npandas\nnumpy\nscipy\nh5netcdf\nmatplotlib" > requirements.txt
 ```
 
 **Step 4: Install dependencies using conda or pip**
@@ -355,7 +355,7 @@ conda install --file requirements.txt -y
 
 *Option 2: Install with Pip*
 
-Ensure pip is installed:
+Ensure that pip is installed:
 
 ```bash
 conda install pip -y
@@ -365,23 +365,15 @@ pip install -r requirements.txt
 **Step 5: Verify installation**
 
 ```bash
-${SPICE_DIR}/venv/bin/python -c "import xarray; import pandas; import numpy; import scipy; import h5netcdf; print('All modules imported successfully!')"
+${SPICE_DIR}/venv/bin/python -c 'import xarray; import pandas; import numpy; import scipy; import h5netcdf; import matplotlib; print("All modules imported successfully!")'
 ```
 
-**Step 6: Using the environment**
-
-Activate the environment:
-
-```bash
-conda activate ${SPICE_DIR}/venv 
-```
-
-**Step 7: Explicitly set your Python version**
+**Step 6: Explicitly set your Python version**
 
 Set your python version in `job_settings`:
 
 ```bash
-PYTHON=${SPICE_DIR}/venv/bin/python
+PYTHON=${SPDIR}/venv/bin/python
 ```
 
 Now your Python environment for SPICE is ready to go! 🚀
