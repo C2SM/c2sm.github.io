@@ -6,7 +6,7 @@
 | **ART** | Aerosols and Reactive Trace gases | [The ICON-ART Model System :material-open-in-new:](https://www.icon-art.kit.edu){:target="_blank"} |
 | **BC** | Boundary Condition ||
 | **C2SM** | Center for Climate Systems Modeling | [C2SM website :material-open-in-new:](https://c2sm.ethz.ch) {:target="_blank"} |
-| **CERRA** | Copernicus European Regional Reanalysis | [CERRA website :material-open-in-new:](https://climate.copernicus.eu/copernicus-regional-reanalysis-europe-cerra){:target="_blank"} |
+| **CERRA** | Copernicus European Regional ReAnalysis | [CERRA website :material-open-in-new:](https://climate.copernicus.eu/copernicus-regional-reanalysis-europe-cerra){:target="_blank"} |
 | **CESM** | Community Earth System Model | [CESM website :material-open-in-new:](https://www.cesm.ucar.edu/){:target="_blank"} |
 | **CH2025** | Swiss Climate Scenarios 2025 | [Climate CH2025 :material-open-in-new:](https://www.meteoswiss.admin.ch/about-us/research-and-cooperation/projects/2023/climate-ch2025.html){:target="_blank"} |
 | **CF** | Climate and Forecast ||
