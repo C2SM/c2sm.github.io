@@ -47,7 +47,7 @@ git clone --recurse-submodules git@gitlab.dkrz.de:icon/icon-nwp.git
 
 Navigate into the ICON-NWP repository and execute the configure wrapper (replace `cpu` by `gpu` for GPU compilation):
 ```console
-uenv run icon-wcp/v1:rc4 -- ./config/cscs/santis.cpu.nvhpc
+uenv run icon/25.2:v1 -- ./config/cscs/santis.cpu.nvhpc
 ```
 
 ### Euler
