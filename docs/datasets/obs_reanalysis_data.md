@@ -168,8 +168,8 @@
     /net/atmos/data/cerra/processed/v1/
     ```
 
-- Size: 7.77 TB :material-information-outline:{ title="last updated: 2025-04-06 01:46:22" }
-- Number of files: 1,898 :material-information-outline:{ title="last updated: 2025-04-06 01:46:22" }
+- Size: 7.83 TB :material-information-outline:{ title="last updated: 2025-04-20 01:45:15" }
+- Number of files: 1,936 :material-information-outline:{ title="last updated: 2025-04-20 01:45:15" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -197,6 +197,7 @@
   `strd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
   `t`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
   `tcc`{ title="day (native): 1985-2021, mon (native): 1985-2021" },
+  `tp`{ title="day (native): 1985-2022, mon (native): N/A" },
   `u`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
   `v`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
   `vsw`{ title="day (native): 1985-2020, mon (native): 1985-2020" }
@@ -211,14 +212,14 @@
     /net/atmos/data/cerra-land/processed/v1/
     ```
 
-- Size: 1.82 TB :material-information-outline:{ title="last updated: 2025-04-06 01:46:22" }
-- Number of files: 1,060 :material-information-outline:{ title="last updated: 2025-04-06 01:46:22" }
+- Size: 1.84 TB :material-information-outline:{ title="last updated: 2025-04-20 01:45:15" }
+- Number of files: 1,090 :material-information-outline:{ title="last updated: 2025-04-20 01:45:15" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
 - Variables: 
   `eva`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
-  `perc`{ title="day (native): 1985-2006, mon (native): 1985-2006" },
+  `perc`{ title="day (native): 1985-2021, mon (native): 1985-2021" },
   `sd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
   `skt`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
   `slhf`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
@@ -267,8 +268,8 @@
     /nfs/atmos/c2sm/era5/processed/
     ```
 
-- Size: 45.93 TB :material-information-outline:{ title="last updated: 2025-04-06 01:48:15" }
-- Number of files: 139,791 :material-information-outline:{ title="last updated: 2025-04-06 01:48:15" }
+- Size: 45.93 TB :material-information-outline:{ title="last updated: 2025-04-20 01:45:18" }
+- Number of files: 139,817 :material-information-outline:{ title="last updated: 2025-04-20 01:45:18" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
@@ -276,9 +277,10 @@
   `cbh`{ title="day (native): 194001-202412, mon (native): 194001-202412" },
   `cl`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `clt`{ title="day (native): 198001-202312, mon (native): 194012-202410" },
-  `d2m`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `d2m`{ title="day (native): 194001-202412, mon (native): 194012-202412" },
   `hur`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `hurs`{ title="day (native): 194001-202312, mon (native): 198001-198512" },
+  `orog`{ title="fx (native): N/A" },
   `pr`{ title="day (native): 194001-202406, mon (native): 194012-202406" },
   `ps`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
   `psl`{ title="day (05x05): 195001-202212, mon (05x05): 195001-202212" },
@@ -286,6 +288,7 @@
   `rls`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
   `rsds`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
   `sfcWind`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `sftlf`{ title="fx (native): N/A" },
   `strd`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
   `ta`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `tas`{ title="day (native): 194001-202405, mon (native): 194001-202405" },
@@ -311,8 +314,8 @@
     /net/atmos/data/era5-land_cds/processed/v1/
     ```
 
-- Size: 7.13 TB :material-information-outline:{ title="last updated: 2025-04-06 01:46:25" }
-- Number of files: 1,614 :material-information-outline:{ title="last updated: 2025-04-06 01:46:25" }
+- Size: 7.62 TB :material-information-outline:{ title="last updated: 2025-04-20 01:45:17" }
+- Number of files: 1,724 :material-information-outline:{ title="last updated: 2025-04-20 01:45:17" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
@@ -323,6 +326,7 @@
   `pev`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
   `sd`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
   `snom`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
+  `ssrd`{ title="day (native): 1970-2024, mon (native): 1970-2024" },
   `strd`{ title="day (native): 1970-2024, mon (native): 1970-2024" },
   `swvl1`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
   `swvl2`{ title="day (native): 1959-2022, mon (native): 1959-2022" },
