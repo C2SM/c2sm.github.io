@@ -10,7 +10,7 @@ The [ICON repository :material-open-in-new:](https://github.com/C2SM/icon){:targ
 
 ### Säntis
 
-!!! construction "Under construction - last update: 2025-03-17"
+!!! construction "Under construction - last update: 2025-04-22"
 
     Information on this section is not yet complete nor final. It will be updated following the progress of the Alps system deployment at CSCS and C2SM's adaptation to this new system. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Alps.
 
@@ -107,12 +107,6 @@ To run the created runscript, navigate to the *run* subdirectory and submit the 
     cd run && sbatch ./exp.c2sm_clm_r13b03_seaice.run
     ```
 You may need to adjust the account in the runscript to match your permissions. Alternatively, you can include `--account=<my_account_id>` in the `sbatch` command.
-
-!!! info
-
-    The data pool on `santis` is currently not in a persistent location, and you may not have access privileges.
-    Therefore, you may not be able to run the test cases at this time.
-    As soon as this is fixed, we will update this page accordingly.
 
 ## Input data
 
