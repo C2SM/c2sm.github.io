@@ -10,7 +10,7 @@ The [ICON repository :material-open-in-new:](https://github.com/C2SM/icon){:targ
 
 ### Säntis
 
-!!! construction "Under construction - last update: 2025-03-17"
+!!! construction "Under construction - last update: 2025-04-22"
 
     Information on this section is not yet complete nor final. It will be updated following the progress of the Alps system deployment at CSCS and C2SM's adaptation to this new system. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Alps.
 
@@ -58,15 +58,6 @@ Clone the ICON repository on the main branch:
 git clone --recurse-submodules git@github.com:C2SM/icon.git
 ```
 
-Load the necessary modules:
-
-```console
-module load stack eth_proxy
-```
-
-The module `stack` provides the software stack, including `gcc/12.2.0`.
-The module `eth_proxy` enables the connection from a compute node to an external service, e.g. GitHub or GitLab.
-
 Run the following after navigating into ICON root folder:
 
 ```bash
@@ -77,7 +68,13 @@ git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} ht
 ```
 
 Euler Support recommends to compile code on compute nodes. There,
-we can take advantage of multi-core compiling:
+we can take advantage of multi-core compiling.
+However, we need to load the module `eth_proxy`, which enables connecting from a compute node
+to an external service, e.g. GitHub or GitLab.
+
+```console
+module load eth_proxy
+```
 
 ```bash
 # Build ICON
@@ -111,27 +108,41 @@ To run the created runscript, navigate to the *run* subdirectory and submit the 
     ```
 You may need to adjust the account in the runscript to match your permissions. Alternatively, you can include `--account=<my_account_id>` in the `sbatch` command.
 
-!!! info
-
-    The data pool on `santis` is currently not in a persistent location, and you may not have access privileges.
-    Therefore, you may not be able to run the test cases at this time.
-    As soon as this is fixed, we will update this page accordingly.
-
 ## Input data
 
-The input data for standard ICON tests are stored in a [Git-lfs repository :material-open-in-new:](https://gitlab.dkrz.de/icon/testing-input-data){:target="_blank"}.
+There are two types in input data sets available for ICON:
+
+- General input data for use cases / production runs
+- Testing input data for CI
 
 ### Input data pools
 
 === "Santis"
     ```shell
-    /capstor/store/cscs/userlab/d126/testing-input-data
+    /capstor/store/cscs/userlab/cws01/pool/data/ICON
     ```  
-=== "Euler"
-    ```shell
-    /cluster/work/climate/icon_input
-    ```
 === "Balfrin"
     ```shell
     /scratch/mch/jenkins/icon/pool/data/ICON
+    ```
+=== "Euler"
+    ```shell
+    /cluster/work/climate/icon_input
+    ```    
+
+### Testing input data pool
+
+The input data for standard ICON tests are stored in a [Git-lfs repository :material-open-in-new:](https://gitlab.dkrz.de/icon/testing-input-data){:target="_blank"}.
+
+=== "Santis"
+    ```shell
+     /capstor/store/cscs/userlab/d126/testing-input-data
+    ```  
+=== "Balfrin"
+    ```shell
+    /scratch/mch/icontest/testing-input-data
+    ```
+=== "Euler"
+    ```shell
+    /cluster/work/climate/icon_testing_input
     ```
