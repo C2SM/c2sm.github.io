@@ -20,6 +20,7 @@ In the [Tools](../../tools/index.md) section, you will find relevant tools for w
 * [**Processing Chain**](../../tools/processing_chain.md): Python workflow tool for ICON
 * [**SPICE**](../../tools/spice.md): Starter package for ICON-CLM experiments
 * [**icon-vis**](../../tools/icon-vis.md): Python scripts to visualise ICON data
+* [**Spack**](../../tools/spack.md): Package manager for installing ICON
 
 ## Projects
 Learn more about ongoing projects involving ETHZ in the development of ICON:

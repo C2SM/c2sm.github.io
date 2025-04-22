@@ -1,4 +1,4 @@
-# Usage
+# Compile and Run
 
 ## Access
 
@@ -10,7 +10,7 @@ The [ICON repository :material-open-in-new:](https://github.com/C2SM/icon){:targ
 
 ### Säntis
 
-!!! construction "Under construction - last update: 2025-02-18"
+!!! construction "Under construction - last update: 2025-03-17"
 
     Information on this section is not yet complete nor final. It will be updated following the progress of the Alps system deployment at CSCS and C2SM's adaptation to this new system. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Alps.
 
@@ -45,80 +45,9 @@ Clone the ICON-NWP repository (only possible if you have access to GitLab DKRZ):
 git clone --recurse-submodules git@gitlab.dkrz.de:icon/icon-nwp.git
 ```
 
-**1. Create a `spack.yaml` file**
-
-Create the following files from the ICON build folder (different to the ICON root folder in case of a out-of-source build). For that, you will have to create the missing folders first:
-```bash
-SPACK_TAG=$(cat "config/cscs/SPACK_TAG_ALPS")
-mkdir -p config/cscs/spack/${SPACK_TAG}/santis_cpu_nvhpc
-mkdir -p config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc
-```
-
-For CPU compilation:
-
-=== "config/cscs/spack/${SPACK_TAG}/santis_cpu_nvhpc/spack.yaml"
-
-  ```yaml
-  spack:
-    specs:
-      - gmake%gcc
-      - gnuconfig%gcc
-      - cosmo-eccodes-definitions@2.25.0.2
-      - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace
-        +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp
-        ~loop-exchange ~async-io-rma
-    view: true
-    concretizer:
-      unify: true
-    develop:
-      icon:
-        path: ../../../../..
-        spec: icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art
-          +dace +realloc-buf ~aes ~jsbach ~ocean
-          ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma
-  ```
-
-For GPU compilation:
-
-=== "config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc/spack.yaml"
-
-  ```yaml
-  spack:
-    specs:
-      - gmake%gcc
-      - gnuconfig%gcc
-      - cosmo-eccodes-definitions@2.25.0.2
-      - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art +dace
-        gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp
-        ~loop-exchange ~async-io-rma ~pgi-inlib +cuda-graphs
-    view: true
-    concretizer:
-      unify: true
-    develop:
-      icon:
-        path: ../../../../..
-        spec: icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad ~emvorado +art
-          +dace gpu=openacc+cuda +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean
-          ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma ~pgi-inlib +cuda-graphs
-  ```
-
-**2. Build ICON**
-
-Run the following after navigating into the ICON-NWP root folder:
+Navigate into the ICON-NWP repository and execute the configure wrapper (replace `cpu` by `gpu` for GPU compilation):
 ```console
-# Load ICON user-environment
-uenv start icon-wcp/v1:rc4
-
-# Setup spack
-SPACK_TAG=$(cat "config/cscs/SPACK_TAG_ALPS")
-git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
-. spack-c2sm/setup-env.sh /user-environment
-
-# Build ICON
-# For out-of-source builds: navigate into the build folder and adapt the path to the Spack environment in the following
-spack external find gmake
-spack env activate -d config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc
-spack install
+uenv run icon-wcp/v1:rc4 -- ./config/cscs/santis.cpu.nvhpc
 ```
 
 ### Euler
@@ -157,17 +86,26 @@ srun -N 1 -n 12 --mem-per-cpu=1G spack install -j 12
 
 
 ## Run test case
-In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *mch_ch_lowres*, you can use the `make_runscripts` function.
+In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *c2sm_clm_r13b03_seaice*, you can use the `make_runscripts` function.
 
-```bash
-./make_runscripts mch_ch_lowres
+```shell
+./make_runscripts c2sm_clm_r13b03_seaice
 ```
 
 To run the created runscript, navigate to the *run* subdirectory and submit the runscript.
 
-```bash
-cd run && sbatch ./exp.mch_ch_lowres.run
-```
+=== "Santis"
+    ```shell
+    cd run && uenv run icon-wcp/v1:rc4 -- sbatch ./exp.c2sm_clm_r13b03_seaice.run
+    ```
+=== "Euler"
+    ```shell
+    cd run && sbatch ./exp.c2sm_clm_r13b03_seaice.run
+    ```
+=== "Balfrin"
+    ```shell
+    cd run && sbatch ./exp.c2sm_clm_r13b03_seaice.run
+    ```
 You may need to adjust the account in the runscript to match your permissions. Alternatively, you can include `--account=<my_account_id>` in the `sbatch` command.
 
 !!! info
@@ -187,7 +125,7 @@ There are two types in input data sets available for ICON:
 
 === "Santis"
     ```shell
-    /capstor/scratch/cscs/wsawyer/share/pool/data/ICON/
+    /capstor/store/cscs/userlab/cws01/pool/data/ICON
     ```  
 === "Balfrin"
     ```shell
@@ -204,11 +142,11 @@ The input data for standard ICON tests are stored in a [Git-lfs repository :mate
 
 === "Santis"
     ```shell
-    tbd
+     /capstor/store/cscs/userlab/d126/testing-input-data
     ```  
 === "Balfrin"
     ```shell
-    /scratch/mch/icontest
+    /scratch/mch/icontest/testing-input-data
     ```
 === "Euler"
     ```shell
