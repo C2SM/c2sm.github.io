@@ -10,3 +10,4 @@
 * [Datasets](datasets/)
 * [Best Practices](best_practices/)
 * [Group Pages](group_pages/)
+* [Glossary](glossary/)

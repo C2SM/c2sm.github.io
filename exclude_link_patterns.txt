@@ -18,3 +18,6 @@ agupubs.onlinelibrary.wiley.com
 ^https://www.doaj.org
 ^https://www.re3data.org
 ^https://gitlab.dkrz.de/icon
+^https://intranet.c2sm.ethz.ch
+^https://climatedataguide.ucar.edu/climate-data/nasas-merra2-reanalysis
+^https://polybox.ethz.ch/index.php/

@@ -1,4 +1,5 @@
 * [Events](index.md)
+* [Working Group Days](wgdays.md)
 * [ICON Meeting](icon_meetings/)
 * [ICON User Workshop](IUW/)
 * [Git Courses](git_courses.md)
