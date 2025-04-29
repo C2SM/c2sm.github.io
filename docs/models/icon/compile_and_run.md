@@ -49,6 +49,7 @@ Navigate into the ICON-NWP repository and execute the configure wrapper with the
 ```console
 UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
 uenv run ${UENV_VERSION} -- ./config/cscs/santis.cpu.nvhpc
+# For out-of-source builds: navigate into the build folder and execute the above wrapper relative to your path
 ```
 
 ### Euler
