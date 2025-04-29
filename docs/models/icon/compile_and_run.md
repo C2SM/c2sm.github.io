@@ -101,7 +101,7 @@ To run the created runscript, navigate to the *run* subdirectory and submit the 
 === "Santis"
     ```shell
     UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-    cd run && uenv run ${UENV_VERSION} -- sbatch ./exp.c2sm_clm_r13b03_seaice.run
+    cd run && sbatch --uenv ${UENV_VERSION} ./exp.c2sm_clm_r13b03_seaice.run
     ```
 === "Euler"
     ```shell
