@@ -45,9 +45,10 @@ Clone the ICON-NWP repository (only possible if you have access to GitLab DKRZ):
 git clone --recurse-submodules git@gitlab.dkrz.de:icon/icon-nwp.git
 ```
 
-Navigate into the ICON-NWP repository and execute the configure wrapper (replace `cpu` by `gpu` for GPU compilation):
+Navigate into the ICON-NWP repository and execute the configure wrapper with the corresponding UENV (replace `cpu` by `gpu` for GPU compilation):
 ```console
-uenv run icon-wcp/v1:rc4 -- ./config/cscs/santis.cpu.nvhpc
+UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+uenv run ${UENV_VERSION} -- ./config/cscs/santis.cpu.nvhpc
 ```
 
 ### Euler
