@@ -45,10 +45,14 @@ Clone the ICON-NWP repository (only possible if you have access to GitLab DKRZ):
 git clone --recurse-submodules git@gitlab.dkrz.de:icon/icon-nwp.git
 ```
 
-Navigate into the ICON-NWP repository and execute the configure wrapper (replace `cpu` by `gpu` for GPU compilation):
+Navigate into the ICON-NWP repository and execute the configure wrapper with the corresponding UENV (replace `cpu` by `gpu` for GPU compilation):
+
 ```console
-uenv run icon-wcp/v1:rc4 -- ./config/cscs/santis.cpu.nvhpc
+UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+uenv run ${UENV_VERSION} -- ./config/cscs/santis.cpu.nvhpc
 ```
+
+> For out-of-source builds: navigate into the build folder and execute the configure wrapper relative to your path.
 
 ### Euler
 
@@ -96,7 +100,8 @@ To run the created runscript, navigate to the *run* subdirectory and submit the 
 
 === "Santis"
     ```shell
-    cd run && uenv run icon-wcp/v1:rc4 -- sbatch ./exp.c2sm_clm_r13b03_seaice.run
+    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+    cd run && sbatch --uenv ${UENV_VERSION} ./exp.c2sm_clm_r13b03_seaice.run
     ```
 === "Euler"
     ```shell
