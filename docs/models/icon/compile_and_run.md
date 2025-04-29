@@ -46,11 +46,13 @@ git clone --recurse-submodules git@gitlab.dkrz.de:icon/icon-nwp.git
 ```
 
 Navigate into the ICON-NWP repository and execute the configure wrapper with the corresponding UENV (replace `cpu` by `gpu` for GPU compilation):
+
 ```console
 UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
 uenv run ${UENV_VERSION} -- ./config/cscs/santis.cpu.nvhpc
-# For out-of-source builds: navigate into the build folder and execute the above wrapper relative to your path
 ```
+
+> For out-of-source builds: navigate into the build folder and execute the configure wrapper relative to your path.
 
 ### Euler
 
