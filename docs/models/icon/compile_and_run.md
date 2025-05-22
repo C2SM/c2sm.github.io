@@ -16,55 +16,6 @@ into the [`icon-nwp` repository :material-open-in-new:](https://gitlab.dkrz.de/i
 
 Below you find instructions on how to compile different flavors of ICON on C2SM-supported machines.
 
-
-### Säntis
-
-!!! info "Last update: 2025-05-22"
-
-    Säntis is regularly maintained by CSCS. In addition, the [uenvs](../../alps/uenvs.md) are updated irregularly. Therefore, some of the information provided here may be out of date. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Säntis.
-
-#### ICON at C2SM
-
-Clone the ICON repository on the branch `santis`:
-```console
-git clone -b santis --recurse-submodules git@github.com:C2SM/icon.git
-```
-
-Run the following after navigating into ICON root folder:
-```console
-# Load ICON user-environment 
-uenv start icon-wcp/v1:rc4
-
-# Setup spack
-SPACK_TAG=$(cat "config/cscs/SPACK_TAG_ALPS")
-git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
-. spack-c2sm/setup-env.sh /user-environment
-
-# Build ICON
-# For out-of-source builds: navigate into the build folder and adapt the path to the Spack environment in the following
-spack external find gmake
-spack env activate -d config/cscs/spack/${SPACK_TAG}/santis_gpu_nvhpc
-spack install
-```
-
-#### ICON-NWP
-
-Clone the ICON-NWP repository (only possible if you have access to GitLab DKRZ):
-```console
-git clone --recurse-submodules git@gitlab.dkrz.de:icon/icon-nwp.git
-```
-
-Navigate into the ICON-NWP repository and execute the configure wrapper with the corresponding UENV (replace `cpu` by `gpu` for GPU compilation):
-
-```console
-UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-uenv run ${UENV_VERSION} -- ./config/cscs/santis.cpu.nvhpc
-```
-
-> For out-of-source builds: navigate into the build folder and execute the configure wrapper relative to your path.
-
-### Euler
-
 Clone the ICON repository:
 
 === "C2SM (latest release)"
@@ -81,6 +32,27 @@ Clone the ICON repository:
     ```console
     git clone --recurse-submodules git@gitlab.dkrz.de:icon/icon-nwp.git
     ```
+
+
+### Säntis
+
+!!! info "Last update: 2025-05-22"
+
+    Säntis is regularly maintained by CSCS. In addition, the [uenvs](../../alps/uenvs.md) are updated irregularly. Therefore, some of the information provided here may be out of date. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Säntis.
+
+Run the following after navigating into ICON root folder (replace `cpu` by `gpu` if applicable):
+
+```console
+UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+uenv run $UENV_VERSION -- ./config/cscs/santis.cpu.nvhpc
+```
+
+!!! Note
+
+    For out-of-source builds navigate into the build folder and adapt the path to the configure wrapper above.
+
+
+### Euler
 
 Navigate into the ICON root folder.
 
