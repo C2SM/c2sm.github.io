@@ -44,7 +44,7 @@ Run the following after navigating into ICON root folder (replace `cpu` by `gpu`
 
 ```console
 UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-uenv run $UENV_VERSION -- ./config/cscs/santis.cpu.nvhpc
+uenv run ${UENV_VERSION} -- ./config/cscs/santis.cpu.nvhpc
 ```
 
 !!! Note
