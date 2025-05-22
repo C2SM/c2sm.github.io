@@ -5,14 +5,23 @@
 The [ICON repository :material-open-in-new:](https://github.com/C2SM/icon){:target="_blank"} is hosted on the C2SM GitHub organisation. If you do not have access, please follow the instructions under [How to get Access](../../about/index.md#how-to-get-access).
 
   If you do not already have an SSH key set up for GitHub, but would like to do so, follow the [instructions :material-open-in-new:](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent){:target="_blank"}.
+
+Since 2024, ICON is open-source and comes with semi-annual releases, which
+can be accessed via [this public repository](https://gitlab.dkrz.de/icon/icon-model).
+
+If you are an ICON developer, you should have access to the DKRZ GitLab, where the original ICON repository is hosted. All developments related to GPU go
+into the [`icon-nwp` repository](https://gitlab.dkrz.de/icon/icon-nwp).
     
 ## Configure and compile
 
+Below you find instructions on how to compile different flavors of ICON on C2SM-supported machines.
+
+
 ### Säntis
 
-!!! construction "Under construction - last update: 2025-04-22"
+!!! info "Last update: 2025-05-22"
 
-    Information on this section is not yet complete nor final. It will be updated following the progress of the Alps system deployment at CSCS and C2SM's adaptation to this new system. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Alps.
+    Säntis is regularly maintained by CSCS. In addition, the [uenvs](../../alps/uenvs.md) are updated irregularly. Therefore, some of the information provided here may be out of date. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Säntis.
 
 #### ICON at C2SM
 
@@ -56,13 +65,26 @@ uenv run ${UENV_VERSION} -- ./config/cscs/santis.cpu.nvhpc
 
 ### Euler
 
-Clone the ICON repository on the main branch:
+Clone the ICON repository:
 
-```console
-git clone --recurse-submodules git@github.com:C2SM/icon.git
-```
+=== "C2SM (latest release)"
+    ```console
+    git clone -b release-2025.04 --recurse-submodules git@github.com:C2SM/icon.git
+    ```
 
-Run the following after navigating into ICON root folder:
+=== "DKRZ (latest release)"
+    ```console
+    git clone -b release-2025.04-public --recurse-submodules https://gitlab.dkrz.de/icon/icon-model.git
+    ```
+
+=== "DKRZ (icon-nwp master)"
+    ```console
+    git clone --recurse-submodules git@gitlab.dkrz.de:icon/icon-nwp.git
+    ```
+
+Navigate into the ICON root folder.
+
+Now, set up your spack instance:
 
 ```bash
 # Setup spack
@@ -79,6 +101,8 @@ to an external service, e.g. GitHub or GitLab.
 ```console
 module load eth_proxy
 ```
+
+Now, activate the spack environment and build ICON:
 
 ```bash
 # Build ICON
