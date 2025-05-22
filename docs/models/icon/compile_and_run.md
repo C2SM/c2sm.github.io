@@ -7,10 +7,10 @@ The [ICON repository :material-open-in-new:](https://github.com/C2SM/icon){:targ
   If you do not already have an SSH key set up for GitHub, but would like to do so, follow the [instructions :material-open-in-new:](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent){:target="_blank"}.
 
 Since 2024, ICON is open-source and comes with semi-annual releases, which
-can be accessed via [this public repository](https://gitlab.dkrz.de/icon/icon-model).
+can be accessed via [this public repository :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-model){:target="_blank"}.
 
 If you are an ICON developer, you should have access to the DKRZ GitLab, where the original ICON repository is hosted. All developments related to GPU go
-into the [`icon-nwp` repository](https://gitlab.dkrz.de/icon/icon-nwp).
+into the [`icon-nwp` repository :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"}.
     
 ## Configure and compile
 

@@ -3,9 +3,9 @@ ICON (Icosahedral Nonhydrostatic Weather and Climate Model) is a global model su
 It is a joint project of [DWD :material-open-in-new:](https://www.dwd.de/DE/Home/home_node.html){:target="_blank"}, [MPI-M :material-open-in-new:](https://mpimet.mpg.de/startseite){:target="_blank"} and [KIT :material-open-in-new:](https://www.kit.edu/){:target="_blank"}.
 
 To stay informed about what is going on in the ICON world and to get to know other ICON users, please attend our [quarterly C2SM ICON meeting](../../events/icon_meetings/index.md). Additionally, one can subscribe to the official
-[ICON newsletter](https://www.icon-model.org/news/community-newsletter).
+[ICON newsletter :material-open-in-new:](https://www.icon-model.org/news/community-newsletter){:target="_blank"}.
 
-Further information about the ICON model can be found at the [official web page](https://www.icon-model.org/).
+Further information about the ICON model can be found at the [official web page :material-open-in-new:](https://www.icon-model.org/){:target="_blank"}.
 
 ## Support status
 C2SM facilitates the utilisation of ICON on the [Alps :material-open-in-new:](https://www.cscs.ch/computers/alps){:target="_blank"} and [Euler :material-open-in-new:](https://scicomp.ethz.ch/wiki/Euler){:target="_blank"} computing platforms for the CPU and GPU architectures.
@@ -38,7 +38,7 @@ Learn more about ongoing projects involving ETHZ in the development of ICON:
 ## Documentation
 ICON documentation is available at:
 
-   * [ICON Documentation](https://docs.icon-model.org/)
+   * [ICON Documentation :material-open-in-new:](https://docs.icon-model.org/){:target="_blank"}
    * [ICON Tutorial (DWD) :material-open-in-new:](https://www.dwd.de/DE/leistungen/nwv_icon_tutorial/nwv_icon_tutorial.html){:target="_blank"}
    * [Getting Started with ICON :material-open-in-new:](https://www.icon-model.org/icon_model/getting_started){:target="_blank"}
    * [MPI-M documentation :material-open-in-new:](https://code.mpimet.mpg.de/projects/iconpublic/wiki/Documentation){:target="_blank"}
