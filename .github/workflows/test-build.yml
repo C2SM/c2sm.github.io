@@ -1,13 +1,13 @@
 name: Test MkDocs Build
 
 on:
-  push:
-    branches:
-      - '**' 
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   test-build:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.head.repo.full_name == github.repository || github.event_name != 'pull_request'
     steps:
     - uses: actions/checkout@v2
 
