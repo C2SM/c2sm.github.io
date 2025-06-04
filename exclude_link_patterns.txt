@@ -22,4 +22,4 @@ agupubs.onlinelibrary.wiley.com
 ^https://climatedataguide.ucar.edu/climate-data/nasas-merra2-reanalysis
 ^https://polybox.ethz.ch/index.php/
 ^https://education.github.com/discount_requests
-^https://marketplace.visualstudio.com/items?itemName=GitHub.copilot
+^https://marketplace.visualstudio.com
