@@ -10,16 +10,16 @@ jobs:
   markdown-link-check:
     runs-on: ubuntu-latest
     if: |
-      (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository) ||
-      (github.event_name != 'pull_request')
+      (github.event.pull_request && github.event.pull_request.head.repo.full_name == github.repository) ||
+      (!github.event.pull_request)
     steps:
-    - uses: actions/checkout@master
+      - uses: actions/checkout@master
 
-    - name: Check for broken links (internal)
-      run: python ./scripts/check_md_links.py --path ./docs
+      - name: Check for broken links (internal)
+        run: python ./scripts/check_md_links.py --path ./docs
 
-    - name: Check for broken links (external)
-      run: |
-        pip install mkdocs-linkcheck
-        exclude_patterns=$(cat exclude_link_patterns.txt | tr '\n' '|' | sed 's/|$//')
-        mkdocs-linkcheck -rv ./docs --ext=".md" --exclude="$exclude_patterns" -m get || mkdocs-linkcheck -rv ./docs --ext=".md" --exclude="$exclude_patterns" -m get --sync
+      - name: Check for broken links (external)
+        run: |
+          pip install mkdocs-linkcheck
+          exclude_patterns=$(cat exclude_link_patterns.txt | tr '\n' '|' | sed 's/|$//')
+          mkdocs-linkcheck -rv ./docs --ext=".md" --exclude="$exclude_patterns" -m get || mkdocs-linkcheck -rv ./docs --ext=".md" --exclude="$exclude_patterns" -m get --sync
