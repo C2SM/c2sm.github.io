@@ -2,14 +2,15 @@ name: Test MkDocs Build
 
 on:
   pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
   workflow_dispatch:
 
 jobs:
   test-build:
     runs-on: ubuntu-latest
-    if: |
-      (github.event.pull_request && github.event.pull_request.head.repo.full_name == github.repository) ||
-      (!github.event.pull_request)
     steps:
       - uses: actions/checkout@v2
 
