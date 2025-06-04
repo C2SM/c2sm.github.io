@@ -1,9 +1,6 @@
 name: Test MkDocs Build
 
 on:
-  push:
-    branches:
-      - '**'
   pull_request:
   workflow_dispatch:
 
