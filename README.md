@@ -19,7 +19,7 @@ Clone this repository on your PC/laptop, then view the documentation in a browse
 
 ```console
 $ git clone git@github.com:${githubusername}/c2sm.github.io.git
-$ cd c2sm.github.io.git
+$ cd c2sm.github.io
 ./serve
 ...
 INFO    -  [08:33:34] Serving on http://127.0.0.1:8000/
