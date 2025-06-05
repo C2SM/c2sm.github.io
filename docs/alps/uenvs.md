@@ -11,10 +11,10 @@ Software stacks at CSCS are now accessible through the so-called User Environmen
     - upgrading to more recent software stacks or keeping old ones around (think compiler versions) is way easier
     - users (for now C2SM) are able to build their own uenvs
     - quicker access to software compared to classical multi-files directories
-    
+
 ## CSCS documentation
 
-A description of user environments and the `uenv` tool can be found in the [CSCS Knowledge Base :material-open-in-new:](https://confluence.cscs.ch/display/KB/UENV+user+environments){:target="_blank"}. 
+A description of user environments and the `uenv` tool can be found in the [CSCS documentation :material-open-in-new:](https://docs.cscs.ch/software/uenv/){:target="_blank"}. 
 
 ## Uenvs central Registry and C2SM uenvs
 
@@ -26,7 +26,7 @@ The user environments provided by CSCS are registered in a central database. In 
 
 ## The `uenv` command line tool
 
-[Official documentation :material-open-in-new:](https://eth-cscs.github.io/uenv/){:target="_blank"}
+[Official documentation :material-open-in-new:](https://docs.cscs.ch/software/uenv/){:target="_blank"}
 
 It can be used to
 

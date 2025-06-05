@@ -26,7 +26,7 @@ tailored for ICON-CLM simulations.
     Be sure that `CLUSTER_NAME=todi` is **not** present anywhere (e.g. in your `~/.bashrc`) as it is not needed anymore.
     The two uenvs we need are available on santis.
 
-    For more information about uenvs, see [here :material-open-in-new:](https://confluence.cscs.ch/spaces/KB/pages/701726829/uenv+user+environments){:target="_blank"}.
+    For more information about uenvs, see [the CSCS documentation :material-open-in-new:](https://docs.cscs.ch/software/uenv){:target="_blank"}.
 
 Load the `netcdf-tools` uenv:
 
