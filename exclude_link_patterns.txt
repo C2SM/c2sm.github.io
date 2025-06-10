@@ -23,3 +23,4 @@ agupubs.onlinelibrary.wiley.com
 ^https://polybox.ethz.ch/index.php/
 ^https://education.github.com/discount_requests
 ^https://marketplace.visualstudio.com
+^https://www.research-collection.ethz.ch
