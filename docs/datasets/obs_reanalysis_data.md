@@ -168,8 +168,8 @@
     /net/atmos/data/cerra/processed/v1/
     ```
 
-- Size: 7.84 TB :material-information-outline:{ title="last updated: 2025-06-15 01:45:16" }
-- Number of files: 1,978 :material-information-outline:{ title="last updated: 2025-06-15 01:45:16" }
+- Size: 7.84 TB :material-information-outline:{ title="last updated: 2025-06-19 01:45:17" }
+- Number of files: 1,985 :material-information-outline:{ title="last updated: 2025-06-19 01:45:17" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -193,11 +193,11 @@
   `sshf`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
   `ssr`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `ssrd`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
-  `str`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `str`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `strd`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `t`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
   `tcc`{ title="day (native): 1985-2021, mon (native): 1985-2021" },
-  `tp`{ title="day (native): 1985-2022, mon (native): N/A" },
+  `tp`{ title="day (native): 1985-2023, mon (native): N/A" },
   `u`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
   `v`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
   `vsw`{ title="day (native): 1985-2020, mon (native): 1985-2020" }
@@ -212,8 +212,8 @@
     /net/atmos/data/cerra-land/processed/v1/
     ```
 
-- Size: 1.84 TB :material-information-outline:{ title="last updated: 2025-06-15 01:45:16" }
-- Number of files: 1,090 :material-information-outline:{ title="last updated: 2025-06-15 01:45:16" }
+- Size: 1.84 TB :material-information-outline:{ title="last updated: 2025-06-19 01:45:17" }
+- Number of files: 1,090 :material-information-outline:{ title="last updated: 2025-06-19 01:45:17" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -268,8 +268,8 @@
     /nfs/atmos/c2sm/era5/processed/
     ```
 
-- Size: 45.93 TB :material-information-outline:{ title="last updated: 2025-06-15 01:46:13" }
-- Number of files: 139,817 :material-information-outline:{ title="last updated: 2025-06-15 01:46:13" }
+- Size: 45.93 TB :material-information-outline:{ title="last updated: 2025-06-19 01:46:24" }
+- Number of files: 139,817 :material-information-outline:{ title="last updated: 2025-06-19 01:46:24" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
@@ -314,8 +314,8 @@
     /net/atmos/data/era5-land_cds/processed/v1/
     ```
 
-- Size: 8.89 TB :material-information-outline:{ title="last updated: 2025-06-15 01:45:19" }
-- Number of files: 2,008 :material-information-outline:{ title="last updated: 2025-06-15 01:45:19" }
+- Size: 8.89 TB :material-information-outline:{ title="last updated: 2025-06-19 01:45:20" }
+- Number of files: 2,008 :material-information-outline:{ title="last updated: 2025-06-19 01:45:20" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
