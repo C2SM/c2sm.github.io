@@ -8,7 +8,7 @@ categories:
 
 # Upcoming C2SM Workshops open for Registration
 
-We are pleased to announce that we have three upcoming workshops, which are now open for registration:
+We are pleased to announce that three upcoming workshops are now open for registration:
 
 - [**Git for Advanced** :material-open-in-new:](https://c2sm.ethz.ch/education/technical-training/c2sm-git-advanced-workshop-2025.html){:target="_blank"} - :calendar: *12 September 2025*
 - [**Introduction to Python Programming** :material-open-in-new:](https://c2sm.ethz.ch/education/technical-training/introduction-to-python-2025.html){:target="_blank"} - :calendar: *19 & 26 September; 3, 10, 17, 24 October 2025*
