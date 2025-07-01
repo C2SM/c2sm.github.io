@@ -52,6 +52,7 @@ uenv run ${UENV_VERSION} -- ./config/cscs/santis.cpu.nvhpc
     If you have never used an uenv von Säntis, you need to create a uenv repo first: `uenv repo create`
 
     In case you are using the uenv version for the first time, you need to pull the image first: `uenv image pull $UENV_VERSION`.
+
     For out-of-source builds navigate into the build folder and adapt the path to the configure wrapper above.
 
 
