@@ -168,39 +168,40 @@
     /net/atmos/data/cerra/processed/v1/
     ```
 
-- Size: 7.84 TB :material-information-outline:{ title="last updated: 2025-06-08 01:44:38" }
-- Number of files: 1,961 :material-information-outline:{ title="last updated: 2025-06-08 01:44:38" }
+
+- Size: 7.96 TB :material-information-outline:{ title="last updated: 2025-06-29 01:45:24" }
+- Number of files: 2,130 :material-information-outline:{ title="last updated: 2025-06-29 01:45:24" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
 - Variables: 
-  `10si`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
-  `10wdir`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
-  `2r`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `10si`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
+  `10wdir`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
+  `2r`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `2t`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
-  `eva`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `eva`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `gph500`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
   `liqvsm`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
-  `mn2t`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
-  `mx2t`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `mn2t`{ title="day (native): 1985-2023, mon (native): 1985-2020" },
+  `mx2t`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `r`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
-  `sd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sd`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `sde`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
-  `sf`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `sf`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `skt`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
-  `slhf`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
-  `sp`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
-  `sshf`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
-  `ssr`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `slhf`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
+  `sp`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
+  `sshf`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
+  `ssr`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `ssrd`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
-  `str`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
-  `strd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
-  `t`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
-  `tcc`{ title="day (native): 1985-2021, mon (native): 1985-2021" },
-  `tp`{ title="day (native): 1985-2022, mon (native): N/A" },
+  `str`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
+  `strd`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
+  `t`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
+  `tcc`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
+  `tp`{ title="day (native): 1985-2023, mon (native): N/A" },
   `u`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
   `v`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
-  `vsw`{ title="day (native): 1985-2020, mon (native): 1985-2020" }
+  `vsw`{ title="day (native): 1985-2023, mon (native): 1985-2023" }
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 5x5km
 - More information: Sub-daily regional reanalysis data for Europe, [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/datasets/reanalysis-cerra-single-levels?tab=overview){:target="_blank"}, [Status :material-open-in-new:](https://docs.google.com/spreadsheets/d/1xfM4TZCGXZm4M4VLQW3XPyAk6IX9vjlwj_p6ymX4aDU/edit#gid=0){:target="_blank"}
@@ -212,8 +213,9 @@
     /net/atmos/data/cerra-land/processed/v1/
     ```
 
-- Size: 1.84 TB :material-information-outline:{ title="last updated: 2025-06-08 01:44:38" }
-- Number of files: 1,090 :material-information-outline:{ title="last updated: 2025-06-08 01:44:38" }
+
+- Size: 1.84 TB :material-information-outline:{ title="last updated: 2025-06-29 01:45:24" }
+- Number of files: 1,090 :material-information-outline:{ title="last updated: 2025-06-29 01:45:24" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -268,8 +270,9 @@
     /nfs/atmos/c2sm/era5/processed/
     ```
 
-- Size: 45.93 TB :material-information-outline:{ title="last updated: 2025-06-08 01:45:37" }
-- Number of files: 139,817 :material-information-outline:{ title="last updated: 2025-06-08 01:45:37" }
+
+- Size: 45.93 TB :material-information-outline:{ title="last updated: 2025-06-29 01:45:28" }
+- Number of files: 139,817 :material-information-outline:{ title="last updated: 2025-06-29 01:45:28" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
@@ -314,8 +317,9 @@
     /net/atmos/data/era5-land_cds/processed/v1/
     ```
 
-- Size: 8.89 TB :material-information-outline:{ title="last updated: 2025-06-08 01:44:42" }
-- Number of files: 2,008 :material-information-outline:{ title="last updated: 2025-06-08 01:44:42" }
+
+- Size: 8.89 TB :material-information-outline:{ title="last updated: 2025-06-29 01:45:27" }
+- Number of files: 2,008 :material-information-outline:{ title="last updated: 2025-06-29 01:45:27" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
