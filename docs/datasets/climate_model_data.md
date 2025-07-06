@@ -112,8 +112,8 @@
     ```
 
 
-- Size: 201.99 TB :material-information-outline:{ title="last updated: 2025-06-29 01:47:32" }
-- Number of files: 677,816 :material-information-outline:{ title="last updated: 2025-06-29 01:47:32" }
+- Size: 201.99 TB :material-information-outline:{ title="last updated: 2025-07-06 01:47:49" }
+- Number of files: 677,824 :material-information-outline:{ title="last updated: 2025-07-06 01:47:49" }
 - Access: direct / rsync
 - Status: frozen (2019-03)
 - Variables: 
@@ -197,8 +197,8 @@
     ```
 
 
-- Size: 356.98 TB :material-information-outline:{ title="last updated: 2025-06-29 01:47:38" }
-- Number of files: 552,596 :material-information-outline:{ title="last updated: 2025-06-29 01:47:38" }
+- Size: 356.98 TB :material-information-outline:{ title="last updated: 2025-07-06 01:48:06" }
+- Number of files: 552,596 :material-information-outline:{ title="last updated: 2025-07-06 01:48:06" }
 - Access: direct / rsync
 - Status: monthly updated
 - Resolution: 0.44° and 0.11°
@@ -214,8 +214,8 @@
     /nfs/atmos/c2sm/cordex-reklies
     ```
 
-- Size: 22.41 TB :material-information-outline:{ title="last updated: 2025-06-29 01:45:47" }
-- Number of files: 94,936 :material-information-outline:{ title="last updated: 2025-06-29 01:45:47" }
+- Size: 22.41 TB :material-information-outline:{ title="last updated: 2025-07-06 01:46:03" }
+- Number of files: 94,936 :material-information-outline:{ title="last updated: 2025-07-06 01:46:03" }
 - Access: direct
 - Status: monthly updated
 - Resolution: 0.11°
