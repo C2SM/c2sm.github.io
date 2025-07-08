@@ -169,8 +169,8 @@
     ```
 
 
-- Size: 7.96 TB :material-information-outline:{ title="last updated: 2025-06-29 01:45:24" }
-- Number of files: 2,130 :material-information-outline:{ title="last updated: 2025-06-29 01:45:24" }
+- Size: 8.13 TB :material-information-outline:{ title="last updated: 2025-07-06 01:45:40" }
+- Number of files: 2,436 :material-information-outline:{ title="last updated: 2025-07-06 01:45:40" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -180,11 +180,11 @@
   `2r`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `2t`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `eva`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
-  `gph500`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
+  `gph500`{ title="day (native): 1986-2023, mon (native): 1986-2023" },
   `liqvsm`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `mn2t`{ title="day (native): 1985-2023, mon (native): 1985-2020" },
   `mx2t`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
-  `r`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
+  `r`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `sd`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `sde`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `sf`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
@@ -199,8 +199,8 @@
   `t`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `tcc`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `tp`{ title="day (native): 1985-2023, mon (native): N/A" },
-  `u`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
-  `v`{ title="day (native): 1986-2020, mon (native): 1986-2020" },
+  `u`{ title="day (native): 1986-2023, mon (native): 1986-2023" },
+  `v`{ title="day (native): 1986-2023, mon (native): 1986-2023" },
   `vsw`{ title="day (native): 1985-2023, mon (native): 1985-2023" }
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 5x5km
@@ -214,8 +214,8 @@
     ```
 
 
-- Size: 1.84 TB :material-information-outline:{ title="last updated: 2025-06-29 01:45:24" }
-- Number of files: 1,090 :material-information-outline:{ title="last updated: 2025-06-29 01:45:24" }
+- Size: 1.84 TB :material-information-outline:{ title="last updated: 2025-07-06 01:45:40" }
+- Number of files: 1,090 :material-information-outline:{ title="last updated: 2025-07-06 01:45:40" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -271,8 +271,8 @@
     ```
 
 
-- Size: 45.93 TB :material-information-outline:{ title="last updated: 2025-06-29 01:45:28" }
-- Number of files: 139,817 :material-information-outline:{ title="last updated: 2025-06-29 01:45:28" }
+- Size: 45.93 TB :material-information-outline:{ title="last updated: 2025-07-06 01:45:53" }
+- Number of files: 139,817 :material-information-outline:{ title="last updated: 2025-07-06 01:45:53" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
@@ -318,8 +318,8 @@
     ```
 
 
-- Size: 8.89 TB :material-information-outline:{ title="last updated: 2025-06-29 01:45:27" }
-- Number of files: 2,008 :material-information-outline:{ title="last updated: 2025-06-29 01:45:27" }
+- Size: 8.89 TB :material-information-outline:{ title="last updated: 2025-07-06 01:45:42" }
+- Number of files: 2,008 :material-information-outline:{ title="last updated: 2025-07-06 01:45:42" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
