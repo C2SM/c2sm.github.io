@@ -8,7 +8,9 @@ To run Probtest for ICON on Säntis, use the prebuilt container available on Doc
 ICON provides the wrapper script [probtest_container_wrapper.py :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/ci_probtest/scripts/cscs_ci/probtest_container_wrapper.py?ref_type=heads){:target="_blank"}.
 If your ICON version doesn’t include this script, add it to `icon/scripts/cscs_ci/probtest_container_wrapper.py`, along with the appropriate [PROBTEST_TAG :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/ci_probtest/run/tolerance/PROBTEST_TAG?ref_type=heads){:target="_blank"} under `icon/run/tolerance/PROBTEST_TAG`.
 
-Navigate to your ICON build folder, then:
+
+### When Setting Up a New Build Directory
+In your ICON build directory, run:
 
 Import the containter:
 ```console
@@ -32,7 +34,8 @@ source .venv/bin/activate
 pip install -r scripts/cscs_ci/requirements.txt
 ```
 
-*If the container and Python environment are already set up, skip the above and just run:*
+### Every Time You Reconnect to the Server
+If the container and environment are already set up, simply re-run:
 ```console
 export EDF_PATH=$(pwd`
 source .venv/bin/activate
