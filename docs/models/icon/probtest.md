@@ -31,7 +31,7 @@ Create and activate Python environment:
 ```console
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r scripts/cscs_ci/requirements.txt
+pip install pyyaml pandas click toml
 ```
 
 ### Every Time You Reconnect to the Server
