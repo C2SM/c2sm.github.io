@@ -2926,7 +2926,7 @@
         <li class="md-nav__item">
   <a href="#2-run-perturbed-ensemble-on-cpu" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Run perturbed ensemble on CPU.
+      2. Run perturbed ensemble on CPU
     </span>
   </a>
   
@@ -2944,7 +2944,7 @@
         <li class="md-nav__item">
   <a href="#4-run-the-test-case-on-gpu-and-collect-statistics" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Run the test case on GPU and collect statistics.
+      4. Run the test case on GPU and collect statistics
     </span>
   </a>
   
@@ -3835,7 +3835,7 @@
         <li class="md-nav__item">
   <a href="#2-run-perturbed-ensemble-on-cpu" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Run perturbed ensemble on CPU.
+      2. Run perturbed ensemble on CPU
     </span>
   </a>
   
@@ -3853,7 +3853,7 @@
         <li class="md-nav__item">
   <a href="#4-run-the-test-case-on-gpu-and-collect-statistics" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Run the test case on GPU and collect statistics.
+      4. Run the test case on GPU and collect statistics
     </span>
   </a>
   
@@ -3937,7 +3937,7 @@ If your ICON version doesn’t include this script, add it to <code>icon/scripts
 <div class="highlight"><pre><span></span><code><span class="go">export BB_NAME=santis_cpu_nvhpc</span>
 <span class="go">export UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)</span>
 </code></pre></div></p>
-<h2 id="2-run-perturbed-ensemble-on-cpu">2. Run perturbed ensemble on CPU.<a class="headerlink" href="#2-run-perturbed-ensemble-on-cpu" title="Permanent link">&para;</a></h2>
+<h2 id="2-run-perturbed-ensemble-on-cpu">2. Run perturbed ensemble on CPU<a class="headerlink" href="#2-run-perturbed-ensemble-on-cpu" title="Permanent link">&para;</a></h2>
 <p>Generate and run a 10-member ensemble on the CPU (this may take time):
 <div class="highlight"><pre><span></span><code><span class="go">./make_runscripts $EXPERIMENT</span>
 <span class="go">uenv run ${UENV_VERSION} -- python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXPERIMENT --build-dir $(pwd) --member-ids $(seq -s, 1 10)</span>
@@ -3951,13 +3951,13 @@ If your ICON version doesn’t include this script, add it to <code>icon/scripts
 <li><code>${EXPERIMENT}_reference.csv</code></li>
 <li><code>${EXPERIMENT}_tolerance.csv</code></li>
 </ul>
-<h2 id="4-run-the-test-case-on-gpu-and-collect-statistics">4. Run the test case on GPU and collect statistics.<a class="headerlink" href="#4-run-the-test-case-on-gpu-and-collect-statistics" title="Permanent link">&para;</a></h2>
+<h2 id="4-run-the-test-case-on-gpu-and-collect-statistics">4. Run the test case on GPU and collect statistics<a class="headerlink" href="#4-run-the-test-case-on-gpu-and-collect-statistics" title="Permanent link">&para;</a></h2>
 <p>Navigate to your GPU build folder and run the same test case, e.g.:
 <div class="highlight"><pre><span></span><code><span class="go">cd &lt;path-to-GPU-build&gt;</span>
 <span class="go">./make_runscripts $EXPERIMENT</span>
 <span class="go">cd run &amp;&amp; sbatch --uenv ${UENV_VERSION} ./exp.c2sm_clm_r13b03_seaice.run</span>
 </code></pre></div></p>
-<p>Navigate back to the CPU build and collect the GPU statistics (replace <path-to-GPU-build>):
+<p>Navigate back to the CPU build and collect the GPU statistics (replace <code>&lt;path-to-GPU-build&gt;</code>):
 <div class="highlight"><pre><span></span><code><span class="go">cd &lt;path-to-CPU-build&gt;</span>
 <span class="go">python3 scripts/cscs_ci/probtest_container_wrapper.py stats $EXPERIMENT --stats-file-path stats_gpu.csv --build-dir $(pwd) --model-output-dir &lt;path-to-GPU-build&gt;/experiments/$EXPERIMENT</span>
 </code></pre></div></p>
@@ -3998,7 +3998,7 @@ If your ICON version doesn’t include this script, add it to <code>icon/scripts
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 21, 2025 13:39:27 UTC">July 21, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 21, 2025 13:47:01 UTC">July 21, 2025</span>
   </span>
 
     
@@ -4008,7 +4008,7 @@ If your ICON version doesn’t include this script, add it to <code>icon/scripts
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 21, 2025 13:39:27 UTC">July 21, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 21, 2025 13:47:01 UTC">July 21, 2025</span>
   </span>
 
     
