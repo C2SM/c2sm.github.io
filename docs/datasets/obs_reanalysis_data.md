@@ -153,7 +153,7 @@
 - Variables: many, temperature, precipitation, radiation, sea level pressure etc.
 - Temporal Resolution: hourly, sst monthly
 - Spatial Resolution: 0.5 lat x 0.625 lon (~50km)
-- More information: [MERRA-2 :material-open-in-new:](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/){:target="_blank"}, [Climate Data Guide :material-open-in-new:](https://climatedataguide.ucar.edu/climate-data/nasas-merra2-reanalysis){:target="_blank"}
+- More information: [MERRA-2 :material-open-in-new:](https://gmao.gsfc.nasa.gov/gmao-products/merra-2/){:target="_blank"}, [Climate Data Guide :material-open-in-new:](https://climatedataguide.ucar.edu/climate-data/nasas-merra2-reanalysis){:target="_blank"}
 
 
 ## Processed Archives
