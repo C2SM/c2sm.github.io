@@ -52,7 +52,7 @@ export BB_NAME=santis_cpu_nvhpc
 export UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
 ```
 
-## 2. Run perturbed ensemble on CPU.
+## 2. Run perturbed ensemble on CPU
 Generate and run a 10-member ensemble on the CPU (this may take time):
 ```console
 ./make_runscripts $EXPERIMENT
@@ -71,7 +71,7 @@ This generates:
 - `${EXPERIMENT}_reference.csv`
 - `${EXPERIMENT}_tolerance.csv`
 
-## 4. Run the test case on GPU and collect statistics.
+## 4. Run the test case on GPU and collect statistics
 Navigate to your GPU build folder and run the same test case, e.g.:
 ```console
 cd <path-to-GPU-build>
@@ -79,7 +79,7 @@ cd <path-to-GPU-build>
 cd run && sbatch --uenv ${UENV_VERSION} ./exp.c2sm_clm_r13b03_seaice.run
 ```
 
-Navigate back to the CPU build and collect the GPU statistics (replace <path-to-GPU-build>):
+Navigate back to the CPU build and collect the GPU statistics (replace `<path-to-GPU-build>`):
 ```console
 cd <path-to-CPU-build>
 python3 scripts/cscs_ci/probtest_container_wrapper.py stats $EXPERIMENT --stats-file-path stats_gpu.csv --build-dir $(pwd) --model-output-dir <path-to-GPU-build>/experiments/$EXPERIMENT
