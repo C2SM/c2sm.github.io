@@ -35,7 +35,7 @@
 | **IFS** | Integrated Forecast System ||
 | **LAM** | Limited Area Mode | [ICON-LAM publication :material-open-in-new:](https://doi.org/10.5194/gmd-14-985-2021){:target="_blank"} |
 | **MCH** | Federal Office of Meteorology and Climatology MeteoSwiss | [MeteoSwiss website :material-open-in-new:](https://www.meteoswiss.admin.ch/){:target="_blank"} |
-| **MERRA** | Modern-Era Retrospective analysis for Research and Applications | [MERRA website :material-open-in-new:](https://gmao.gsfc.nasa.gov/reanalysis/MERRA/){:target="_blank"} |
+| **MERRA** | Modern-Era Retrospective analysis for Research and Applications | [MERRA website :material-open-in-new:](https://gmao.gsfc.nasa.gov/gmao-products/MERRA/){:target="_blank"} |
 | **ML** | Machine Learning ||
 | **NWP** | Numerical Weather Prediction ||
 | **OS** | Operating System ||
