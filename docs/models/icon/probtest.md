@@ -37,7 +37,7 @@ pip install pyyaml pandas click toml
 ### Every Time You Reconnect to the Server
 If the container and environment are already set up, simply re-run:
 ```console
-export EDF_PATH=$(pwd`
+export EDF_PATH=$(pwd)
 source .venv/bin/activate
 ```
 
