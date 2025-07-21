@@ -25,3 +25,4 @@ agupubs.onlinelibrary.wiley.com
 ^https://marketplace.visualstudio.com
 ^https://www.research-collection.ethz.ch
 ^https://gmao.gsfc.nasa.gov/gmao-products
+^https://rechtssammlung.sp.ethz.ch
