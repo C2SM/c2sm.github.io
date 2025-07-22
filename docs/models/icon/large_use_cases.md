@@ -63,7 +63,7 @@ cp -r ../config ../scripts .
 cd ..
 ```
 
-Then follow the instructions in [Configure and compile :material-open-in-new:](usage.md/#configure-and-compile){:target="_blank"} to compile ICON on CPU and on GPU from within those folders.
+Then follow the instructions in [Configure and compile :material-open-in-new:](compile_and_run.md#configure-and-compile){:target="_blank"} to compile ICON on CPU and on GPU from within those folders.
 
 ### 1.2 Local Testing
 

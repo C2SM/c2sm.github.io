@@ -3,7 +3,7 @@
 Use Probtest to verify whether your test case produces consistent results on GPU. It compares a GPU test run to a CPU ensemble with perturbed input conditions.
 
 ## 1. Compile ICON
-Compile ICON on CPU and on GPU as out-of-source builds. Note that the build directories need to be sub-directories of the ICON root folder. Otherwise the probtest container does not have access to the data.
+Compile ICON on CPU and on GPU as [out-of-source builds](large_use_cases.md#compile-out-of-source). Note that the build directories need to be sub-directories of the ICON root folder. Otherwise the probtest container does not have access to the data.
 
 ## 2. Set Up the Probtest Container and Environment on Säntis
 To run Probtest for ICON on Säntis, use the prebuilt container available on Docker Hub ([Probtest Container :material-open-in-new:](https://github.com/MeteoSwiss/probtest?tab=readme-ov-file#probtest-container){:target="_blank"}).
