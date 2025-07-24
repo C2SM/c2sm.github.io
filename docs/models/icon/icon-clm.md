@@ -12,7 +12,6 @@ tailored for ICON-CLM simulations.
     For a comprehensive overview about SPICE, please consider reading the 
     [official docs :material-open-in-new:](https://hereon-coast.atlassian.net/wiki/spaces/SPICE/pages/983065){:target="_blank"}.
 
-
 !!! note
     It is assumed that the [uenvs](../../alps/uenvs.md) for ICON and pre-/postprocessing are in place. For that, the following has 
     to be executed once:
