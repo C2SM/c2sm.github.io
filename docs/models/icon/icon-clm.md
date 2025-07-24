@@ -159,8 +159,8 @@ Now your Python environment for SPICE is ready to go! 🚀
 
 #### Option 1) Use Template from C2SM's EURO-CORDEX Run
 
-The official ICON-CLM setups are part of the [spice-setups](https://github.com/C2SM/spice-setups) repository.
-Please follow the instructions in the [README](https://github.com/C2SM/spice-setups/blob/main/README.md) file.
+The official ICON-CLM setups are part of the [spice-setups :material-open-in-new:](https://github.com/C2SM/spice-setups){:target="_blank"} repository.
+Please follow the instructions in the [README :material-open-in-new:](https://github.com/C2SM/spice-setups/blob/main/README.md){:target="_blank"} file.
 
 
 #### Option 2) Manually Create ERA5-driven 12 km case
