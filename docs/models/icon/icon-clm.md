@@ -34,44 +34,24 @@ Load the `netcdf-tools` uenv:
 uenv start --view=modules netcdf-tools/2024:v1
 ```
 
-#### Get latest version v2.3
+#### Get latest SPICE version
 
-Choose from either option 1), 2) or 3) from below. Use option 1) if you are 
-a C2SM community member. Note that for option 2) one needs 
-access to the SPICE repository on gitlab.dkrz.de, which can be requested via
-the CLM community. Option 3 will always work since this is the public release.
-
-##### 1) Clone from C2SM GitHub
-
-Clone SPICE v2.3 with the corresponding branch/tag:
+Clone SPICE v2.3.1 with the corresponding branch/tag:
 
 ```bash
-git clone -b v2.3 git@github.com:C2SM/spice.git spice
+git clone -b v2.3.1 git@github.com:C2SM/spice.git spice
 cd spice
 ```  
-
-##### 2) Clone from gitlab.dkrz.de
-
-Clone SPICE v2.3 with the corresponding branch/tag:
-
-```bash
-git clone -b v2.3 git@gitlab.dkrz.de:clm-community/spice.git spice
-cd spice
-```  
-
-##### 3) Download official release from Zenodo
-
-Download SPICE v2.3 from [Zenodo :material-open-in-new:](https://doi.org/10.5281/zenodo.5910888){:target="_blank"}:
-
-```bash
-wget https://zenodo.org/records/10047046/files/spice-v2.3.tar.gz?download=1 -O spice-v2.3.tar.gz
-tar -xvzf spice-v2.3.tar.gz
-cd spice-v2.3
-```
 
 #### Configuration
 
-Alps is officially supported in SPICE v2.3 and can be configured in the following way:
+First, set the `SPICE_DIR` environment variable as it will be needed later on:
+
+```bash
+SPICE_DIR=$(pwd)
+```
+
+Alps is officially supported in SPICE >=v2.3 and can be configured in the following way:
 
 ```bash
 ./test/cscs-alps/scripts/configure.sh
@@ -144,182 +124,6 @@ Now, switch to another terminal to build ICON using the corresponding uenv:
 Afterwards, go back to your original terminal containing the 
 `netcdf-tools/2024:v1` uenv.
 
-#### Creating ERA5-driven 12 km case
-
-From the SPICE root directory, let's create an experiment folder and 
-copy the `sp001` case in there. If you want a different name for your
-experiment, just modify the `EXP` variable.
-
-!!! note
-    The `sp001` is the standard `gcm2icon` test case defined in SPICE.
-    It is run on the EURO-CORDEX domain at 44 km horizontal resolution
-    and uses ERAInterim data as initial and boundary conditions.
-    If you want to run this case, skip the next subsections and continue
-    with [Install Python virtual environment](#install-python-virtual-environment).
-
-```bash
-SPICE_DIR=$(pwd)
-EXP=EVAL-EUR12-ERA5
-mkdir -p ${SPICE_DIR}/experiments
-cp -r ${SPICE_DIR}/chain/gcm2icon/sp001 ${SPICE_DIR}/experiments
-mv ${SPICE_DIR}/experiments/sp001 ${SPICE_DIR}/experiments/${EXP}
-```
-
-Navigate to the directory where our new case is located:
-
-```bash
-cd ${SPICE_DIR}/experiments/${EXP}
-```
-
-##### Adjust boundary data to ERA5
-
-Since the standard spice case `sp001` takes ERAInterim data as input, 
-we need to replace this with ERA5.
-
-```bash
-# Extract lines 17-23 from the source file
-source_lines=$(sed -n '17,23p' ${SPICE_DIR}/chain/boundary_data_options/era5/job_settings)
-
-# Define job_settings_file
-job_settings_file=${SPICE_DIR}/experiments/${EXP}/job_settings
-
-# Replace lines 165-173 in the target file with the extracted lines
-sed -i '165,173d' ${job_settings_file}
-line_num=165
-while IFS= read -r line; do
-    sed -i "${line_num}i $line" ${job_settings_file}
-    line_num=$((line_num + 1))
-done <<< "$source_lines"
-
-# Replace DKRZ data folder with Alps one
-sed -i 's|/pool/data/CLMcom/CCLM/reanalyses|/capstor/store/cscs/c2sm/c2sme/reanalyses_dkrz|g' ${job_settings_file}
-``` 
-
-We also need to replace the `prep` job. This is simply done by copying
-the corresponding file from the boundary data options to our working
-directory:
-
-```bash
-cp -v ${SPICE_DIR}/chain/boundary_data_options/era5/prep.job.sh ${SPICE_DIR}/experiments/${EXP}/scripts
-```
-
-##### Adapt `job_settings` file and fix ICON run script
-
-Now, there are still some necessary adaptations to the `job_settings` file to be done,
-which includes changing paths, ICON executable, meta data and some other settings.
-
-```bash
-# General settings
-sed -i "s|icon-nwp|icon-model|g" ${job_settings_file}
-sed -i "s|nco-5.1.9-7pd2hhq2wllvietf2rvclejzxgcjwosq|nco-5.1.9-yykwws3dmcypjzraijgzagmkb6ml2zzo|g" ${job_settings_file}
-sed -i "s|netcdf-c-4.9.2-azccejv4b3ba227zys3e7mkdo6fxxhlq|netcdf-c-4.9.2-5ijnfossknlii33dnqn7asnlmzst3444|g" ${job_settings_file}
-sed -i "s|netcdf-tools/2024:v1-rc1|netcdf-tools/2024:v1|g" ${job_settings_file}
-sed -i "s|EMAIL_ADDRESS= |EMAIL_ADDRESS=michael.jaehn@c2sm.ethz.ch |g" ${job_settings_file}
-
-# EURO-CORDEX 12 km
-sed -i "s|sp001|${EXP}|g" ${job_settings_file}
-sed -i "s|PFDIR=\${SPDIR}/chain/gcm2icon|PFDIR=\${SPDIR}/experiments|g" ${job_settings_file}
-sed -i "s|WORKDIR=\${SPDIR}/chain|WORKDIR=\${SPDIR}/experiments/work|g" ${job_settings_file}
-sed -i "s|SCRATCHDIR=\${SPDIR}/chain|SCRATCHDIR=\${SPDIR}/experiments/scratch|g" ${job_settings_file}
-sed -i "s|ARCHIVE_OUTDIR=\${SPDIR}/chain|ARCHIVE_OUTDIR=\${SPDIR}/experiments|g" ${job_settings_file}
-sed -i "s|1979-01-01|1940-01-01|g" ${job_settings_file}
-sed -i "s|1979-03-01|2024-01-01|g" ${job_settings_file}
-sed -i "s|europe044|europe011|g" ${job_settings_file}
-sed -i "s|0.44|0.11|g" ${job_settings_file}
-sed -i "s|TIME_ICON=00-00:30:00|TIME_ICON=00-01:00:00|g" ${job_settings_file}
-sed -i "s|TIME_ARCH=\"00-00:30:00\"|TIME_ARCH=\"00-01:30:00\"|g" ${job_settings_file}
-sed -i "s|ITYPE_TS=1|ITYPE_TS=2|g" ${job_settings_file}
-sed -i "s|ITYPE_COMPRESS_POST=0|ITYPE_COMPRESS_POST=1|g" ${job_settings_file}
-sed -i "s|ITYPE_COMPRESS_ARCH=0|ITYPE_COMPRESS_ARCH=1|g" ${job_settings_file}
-sed -i '/ZML_SOIL/c\ZML_SOIL="0.005,0.025,0.07,0.16,0.34,0.7,1.42,2.86,5.74,11.5"    # soil level' ${job_settings_file}
-```
-
-For better readability, the following replacements are done:
-
-**General settings:**
-
-| Original String                    | Replacement String                              | Description                                  |
-|------------------------------------|-------------------------------------------------|----------------------------------------------|
-| `icon-nwp`                         | `icon-model`                                    | Root directory of ICON model                 |
-| `nco-5.1.9-7pd2hhq2wllvietf2rvclejzxgcjwosq` | `nco-5.1.9-yykwws3dmcypjzraijgzagmkb6ml2zzo` | New nco path due to uenv              |
-| `netcdf-c-4.9.2-azccejv4b3ba227zys3e7mkdo6fxxhlq` | `netcdf-c-4.9.2-5ijnfossknlii33dnqn7asnlmzst3444` | New netcdf path due to uenv |
-| `netcdf-tools/2024:v1-rc1`         | `netcdf-tools/2024:v1`                          | New uenv on santis                           |
-| `EMAIL_ADDRESS= `                  | `EMAIL_ADDRESS=michael.jaehn@c2sm.ethz.ch `     | Add email address for notifications          |
-
-**EURO-CORDEX 12 km**:
-
-| Original String                    | Replacement String                              | Description                                  |
-|------------------------------------|-------------------------------------------------|----------------------------------------------|
-| `sp001`                            | `EVAL-EUR12-ERA5`                               | Name of the experiment                       |
-| `PFDIR=${SPDIR}/chain/gcm2icon`    | `PFDIR=${SPDIR}/experiments`                    | Base directory of experiment                 |
-| `WORKDIR=${SPDIR}/chain`           | `WORKDIR=${SPDIR}/experiments/work`             | Working directory of experiment              |
-| `SCRATCHDIR=${SPDIR}/chain`        | `SCRATCHDIR=${SPDIR}/experiments/scratch`       | Scratch directory of experiment              |
-| `ARCHIVE_OUTDIR=${SPDIR}/chain`    | `ARCHIVE_OUTDIR=${SPDIR}/experiments`           | Archive directory of experiment              |
-| `1979-01-01`                       | `1940-01-01`                                    | Start date                                   |
-| `1979-03-01`                       | `2024-01-01`                                    | End date                                     |
-| `europe044`                        | `europe011`                                     | Folder names for ERA5 data                   |
-| `0.44`                             | `0.11`                                          | netCDF metadata for 11 km run                |
-| `TIME_ICON=00-00:30:00`            | `TIME_ICON=00-01:00:00`                         | Increase walltime for icon job               |
-| `TIME_ARCH="00-00:30:00"`          | `TIME_ARCH="00-01:30:00"`                       | Increase walltime for arch job               |
-| `ITYPE_TS=1`                       | `ITYPE_TS=2`                                    | Yearly time series                           |
-| `ITYPE_COMPRESS_POST=0`            | `ITYPE_COMPRESS_POST=1`                         | netCDF compression for post data             |
-| `ITYPE_COMPRESS_ARCH=0`            | `ITYPE_COMPRESS_ARCH=1`                         | netCDF compression for arch data             |
-| `${ICONDIR}/run`                   | `bash ${ICONDIR}/run`                           | Explicitly call bash for the wrapper script  |
-| `ZML_SOIL`                         | `ZML_SOIL=...`                                  | New soil height values                       |
-
-!!! tip
-    There might be even more changes to the `job_settings` file, depending on your setup.
-    For example, your CSCS project needs to be set for the `PROJECT_ACCOUNT` variable.
-    Also, for production runs, all variables starting with `GA_` should be set accordingly,
-    as they are important for the netCDF meta data.
-
-Furthermore, additional data paths for transient aerosols, ozone and 
-solar irradiation need to be set.
-
-```bash
-sed -i '/^TARGET_GRID=/a \
-\
-# Additional directories for aerosol treatment\
-DATADIR_AERO=/capstor/store/cscs/c2sm/c2sme/ICON-CLM/rcm_new\
-\
-KINNE_DIR=${DATADIR_AERO}/europe011/interpolated_aeop_R13B05\
-VOLC_DIR=${DATADIR_AERO}/independent/volcanic_aeropt\
-SP_DIR=${DATADIR_AERO}/independent/MACv2_simple_plumes_merged\
-\
-# Additional directory for ozone treatment\
-OZONE_DIR=${DATADIR_AERO}/europe011/ozone_europe011\
-\
-# Additional directory for solar irradiation\
-SOLAR_DIR=${DATADIR_AERO}/independent/solar_radiation\n' ${job_settings_file}
-```
-
-##### Changing the ICON namelist to match the official CLM configuration
-
-The official setup can be copied from our `icon-clm_patch` repository, which should already 
-be present in `${SPICE_DIR}/src`.
-This also includes a change for the ICON run script around the `srun` command.
-
-```shell
-cp -v ${SPICE_DIR}/src/icon-clm_patch/icon.job.sh ${SPICE_DIR}/experiments/${EXP}/scripts
-cp -v ${SPICE_DIR}/src/icon-clm_patch/post.job.sh ${SPICE_DIR}/experiments/${EXP}/scripts
-```
-
-#### Optional: Warm start run for official ICON-CLM EVAL run
-
-Replace the ICON run script:
-
-```bash
-cp -v ${SPICE_DIR}/src/icon-clm_patch/icon-warm.job.sh ${SPICE_DIR}/experiments/${EXP}/scripts/icon.job.sh
-```
-
-It takes the restart file directory (1950/01):
-
-```bash
-/capstor/store/cscs/c2sm/c2sme/ICON-CLM/multifile_restart_ATMO_19500101T000000Z.mfr
-```
-
-Note that the `START_DATE` in the `job_settings` file needs to be adapted.
-
 #### Install Python virtual environment
 
 Some scripts in SPICE use Python. For that, some dependencies have to be installed.
@@ -339,57 +143,213 @@ conda create --prefix ${SPICE_DIR}/venv python=3.12 -y
 conda activate ${SPICE_DIR}/venv 
 ```
 
-**Step 3: Create `requirements.txt`**
-
-```bash
-echo -e "xarray\npandas\nnumpy\nscipy\nh5netcdf\nmatplotlib" > requirements.txt
-```
-
-**Step 4: Install dependencies using conda or pip**
-
-*Option 1: Install with Conda*
-
-```bash
-conda install --file requirements.txt -y
-```
-
-*Option 2: Install with Pip*
-
-Ensure that pip is installed:
+**Step 3: Install packages**
 
 ```bash
 conda install pip -y
 pip install -r requirements.txt
 ```
 
-**Step 5: Verify installation**
+**Step 4: Verify installation**
 
 ```bash
-${SPICE_DIR}/venv/bin/python -c 'import xarray; import pandas; import numpy; import scipy; import h5netcdf; import matplotlib; print("All modules imported successfully!")'
+${SPICE_DIR}/venv/bin/python -c 'import xarray; import pandas; import numpy; import scipy; import h5netcdf; import matplotlib; import cftime; import netCDF4; print("All modules imported successfully!")'
 ```
-
-**Step 6: Explicitly set your Python version**
-
-Set your python version in `job_settings`:
-
-```bash
-PYTHON=${SPDIR}/venv/bin/python
-```
-
 Now your Python environment for SPICE is ready to go! 🚀
+
+#### Option 1) Download Template from Official Run
+
+The setups for the official ICON-CLM runs can be downloaded:
+
+```bash
+wget ..
+tar -xvzf ...
+```
+
+#### Option 2) Manually Create ERA5-driven 12 km case
+
+??? note "Show instructions for manual ERA5-driven case setup"
+
+    From the SPICE root directory, let's create an experiment folder and 
+    copy the `sp001` case in there. If you want a different name for your
+    experiment, just modify the `EXP` variable.
+
+    !!! note
+        The `sp001` is the standard `gcm2icon` test case defined in SPICE.
+        It is run on the EURO-CORDEX domain at 44 km horizontal resolution
+        and uses ERAInterim data as initial and boundary conditions.
+        If you want to run this case, skip the next subsections and continue
+        with [Install Python virtual environment](#install-python-virtual-environment).
+
+    ```bash
+    EXP=EVAL-EUR12-ERA5
+    mkdir -p ${SPICE_DIR}/experiments
+    cp -r ${SPICE_DIR}/chain/gcm2icon/sp001 ${SPICE_DIR}/experiments
+    mv ${SPICE_DIR}/experiments/sp001 ${SPICE_DIR}/experiments/${EXP}
+    ```
+
+    Navigate to the directory where our new case is located:
+
+    ```bash
+    cd ${SPICE_DIR}/experiments/${EXP}
+    ```
+
+    ##### Adjust boundary data to ERA5
+
+    Since the standard spice case `sp001` takes ERAInterim data as input, 
+    we need to replace this with ERA5.
+
+    ```bash
+    # Extract lines 17-23 from the source file
+    source_lines=$(sed -n '17,23p' ${SPICE_DIR}/chain/boundary_data_options/era5/job_settings)
+
+    # Define job_settings_file
+    job_settings_file=${SPICE_DIR}/experiments/${EXP}/job_settings
+
+    # Replace lines 165-173 in the target file with the extracted lines
+    sed -i '165,173d' ${job_settings_file}
+    line_num=165
+    while IFS= read -r line; do
+        sed -i "${line_num}i $line" ${job_settings_file}
+        line_num=$((line_num + 1))
+    done <<< "$source_lines"
+
+    # Replace DKRZ data folder with Alps one
+    sed -i 's|/pool/data/CLMcom/CCLM/reanalyses|/capstor/store/cscs/c2sm/c2sme/reanalyses_dkrz|g' ${job_settings_file}
+    ``` 
+
+    We also need to replace the `prep` job. This is simply done by copying
+    the corresponding file from the boundary data options to our working
+    directory:
+
+    ```bash
+    cp -v ${SPICE_DIR}/chain/boundary_data_options/era5/prep.job.sh ${SPICE_DIR}/experiments/${EXP}/scripts
+    ```
+
+    ##### Adapt `job_settings` file and fix ICON run script
+
+    Now, there are still some necessary adaptations to the `job_settings` file to be done,
+    which includes changing paths, ICON executable, meta data and some other settings.
+
+    ```bash
+    # General settings
+    sed -i "s|icon-nwp|icon-model|g" ${job_settings_file}
+    sed -i "s|nco-5.1.9-7pd2hhq2wllvietf2rvclejzxgcjwosq|nco-5.1.9-yykwws3dmcypjzraijgzagmkb6ml2zzo|g" ${job_settings_file}
+    sed -i "s|netcdf-c-4.9.2-azccejv4b3ba227zys3e7mkdo6fxxhlq|netcdf-c-4.9.2-5ijnfossknlii33dnqn7asnlmzst3444|g" ${job_settings_file}
+    sed -i "s|netcdf-tools/2024:v1-rc1|netcdf-tools/2024:v1|g" ${job_settings_file}
+    sed -i "s|EMAIL_ADDRESS= |EMAIL_ADDRESS=michael.jaehn@c2sm.ethz.ch |g" ${job_settings_file}
+
+    # EURO-CORDEX 12 km
+    sed -i "s|sp001|${EXP}|g" ${job_settings_file}
+    sed -i "s|PFDIR=\${SPDIR}/chain/gcm2icon|PFDIR=\${SPDIR}/experiments|g" ${job_settings_file}
+    sed -i "s|WORKDIR=\${SPDIR}/chain|WORKDIR=\${SPDIR}/experiments/work|g" ${job_settings_file}
+    sed -i "s|SCRATCHDIR=\${SPDIR}/chain|SCRATCHDIR=\${SPDIR}/experiments/scratch|g" ${job_settings_file}
+    sed -i "s|ARCHIVE_OUTDIR=\${SPDIR}/chain|ARCHIVE_OUTDIR=\${SPDIR}/experiments|g" ${job_settings_file}
+    sed -i "s|1979-01-01|1940-01-01|g" ${job_settings_file}
+    sed -i "s|1979-03-01|2024-01-01|g" ${job_settings_file}
+    sed -i "s|europe044|europe011|g" ${job_settings_file}
+    sed -i "s|0.44|0.11|g" ${job_settings_file}
+    sed -i "s|TIME_ICON=00-00:30:00|TIME_ICON=00-01:00:00|g" ${job_settings_file}
+    sed -i "s|TIME_ARCH=\"00-00:30:00\"|TIME_ARCH=\"00-01:30:00\"|g" ${job_settings_file}
+    sed -i "s|ITYPE_TS=1|ITYPE_TS=2|g" ${job_settings_file}
+    sed -i "s|ITYPE_COMPRESS_POST=0|ITYPE_COMPRESS_POST=1|g" ${job_settings_file}
+    sed -i "s|ITYPE_COMPRESS_ARCH=0|ITYPE_COMPRESS_ARCH=1|g" ${job_settings_file}
+    sed -i '/ZML_SOIL/c\ZML_SOIL="0.005,0.025,0.07,0.16,0.34,0.7,1.42,2.86,5.74,11.5"    # soil level' ${job_settings_file}
+    ```
+
+    For better readability, the following replacements are done:
+
+    **General settings:**
+
+    | Original String                    | Replacement String                              | Description                                  |
+    |------------------------------------|-------------------------------------------------|----------------------------------------------|
+    | `icon-nwp`                         | `icon-model`                                    | Root directory of ICON model                 |
+    | `nco-5.1.9-7pd2hhq2wllvietf2rvclejzxgcjwosq` | `nco-5.1.9-yykwws3dmcypjzraijgzagmkb6ml2zzo` | New nco path due to uenv              |
+    | `netcdf-c-4.9.2-azccejv4b3ba227zys3e7mkdo6fxxhlq` | `netcdf-c-4.9.2-5ijnfossknlii33dnqn7asnlmzst3444` | New netcdf path due to uenv |
+    | `netcdf-tools/2024:v1-rc1`         | `netcdf-tools/2024:v1`                          | New uenv on santis                           |
+    | `EMAIL_ADDRESS= `                  | `EMAIL_ADDRESS=michael.jaehn@c2sm.ethz.ch `     | Add email address for notifications          |
+
+    **EURO-CORDEX 12 km**:
+
+    | Original String                    | Replacement String                              | Description                                  |
+    |------------------------------------|-------------------------------------------------|----------------------------------------------|
+    | `sp001`                            | `EVAL-EUR12-ERA5`                               | Name of the experiment                       |
+    | `PFDIR=${SPDIR}/chain/gcm2icon`    | `PFDIR=${SPDIR}/experiments`                    | Base directory of experiment                 |
+    | `WORKDIR=${SPDIR}/chain`           | `WORKDIR=${SPDIR}/experiments/work`             | Working directory of experiment              |
+    | `SCRATCHDIR=${SPDIR}/chain`        | `SCRATCHDIR=${SPDIR}/experiments/scratch`       | Scratch directory of experiment              |
+    | `ARCHIVE_OUTDIR=${SPDIR}/chain`    | `ARCHIVE_OUTDIR=${SPDIR}/experiments`           | Archive directory of experiment              |
+    | `1979-01-01`                       | `1940-01-01`                                    | Start date                                   |
+    | `1979-03-01`                       | `2024-01-01`                                    | End date                                     |
+    | `europe044`                        | `europe011`                                     | Folder names for ERA5 data                   |
+    | `0.44`                             | `0.11`                                          | netCDF metadata for 11 km run                |
+    | `TIME_ICON=00-00:30:00`            | `TIME_ICON=00-01:00:00`                         | Increase walltime for icon job               |
+    | `TIME_ARCH="00-00:30:00"`          | `TIME_ARCH="00-01:30:00"`                       | Increase walltime for arch job               |
+    | `ITYPE_TS=1`                       | `ITYPE_TS=2`                                    | Yearly time series                           |
+    | `ITYPE_COMPRESS_POST=0`            | `ITYPE_COMPRESS_POST=1`                         | netCDF compression for post data             |
+    | `ITYPE_COMPRESS_ARCH=0`            | `ITYPE_COMPRESS_ARCH=1`                         | netCDF compression for arch data             |
+    | `${ICONDIR}/run`                   | `bash ${ICONDIR}/run`                           | Explicitly call bash for the wrapper script  |
+    | `ZML_SOIL`                         | `ZML_SOIL=...`                                  | New soil height values                       |
+
+    !!! tip
+        There might be even more changes to the `job_settings` file, depending on your setup.
+        For example, your CSCS project needs to be set for the `PROJECT_ACCOUNT` variable.
+        Also, for production runs, all variables starting with `GA_` should be set accordingly,
+        as they are important for the netCDF meta data.
+
+    Furthermore, additional data paths for transient aerosols, ozone and 
+    solar irradiation need to be set.
+
+    ```bash
+    sed -i '/^TARGET_GRID=/a \
+    \
+    # Additional directories for aerosol treatment\
+    DATADIR_AERO=/capstor/store/cscs/c2sm/c2sme/ICON-CLM/rcm_new\
+    \
+    KINNE_DIR=${DATADIR_AERO}/europe011/interpolated_aeop_R13B05\
+    VOLC_DIR=${DATADIR_AERO}/independent/volcanic_aeropt\
+    SP_DIR=${DATADIR_AERO}/independent/MACv2_simple_plumes_merged\
+    \
+    # Additional directory for ozone treatment\
+    OZONE_DIR=${DATADIR_AERO}/europe011/ozone_europe011\
+    \
+    # Additional directory for solar irradiation\
+    SOLAR_DIR=${DATADIR_AERO}/independent/solar_radiation\n' ${job_settings_file}
+    ```
+
+    ##### Changing the ICON namelist to match the official CLM configuration
+
+    The official setup can be copied from our `icon-clm_patch` repository, which should already 
+    be present in `${SPICE_DIR}/src`.
+    This also includes a change for the ICON run script around the `srun` command.
+
+    ```shell
+    cp -v ${SPICE_DIR}/src/icon-clm_patch/icon.job.sh ${SPICE_DIR}/experiments/${EXP}/scripts
+    cp -v ${SPICE_DIR}/src/icon-clm_patch/post.job.sh ${SPICE_DIR}/experiments/${EXP}/scripts
+    ```
+
+    ##### Optional: Warm start run for official ICON-CLM EVAL run
+
+    Replace the ICON run script:
+
+    ```bash
+    cp -v ${SPICE_DIR}/src/icon-clm_patch/icon-warm.job.sh ${SPICE_DIR}/experiments/${EXP}/scripts/icon.job.sh
+    ```
+
+    It takes the restart file directory (1950/01):
+
+    ```bash
+    /capstor/store/cscs/c2sm/c2sme/ICON-CLM/multifile_restart_ATMO_19500101T000000Z.mfr
+    ```
+
+    Note that the `START_DATE` in the `job_settings` file needs to be adapted.
 
 #### Run the case
 
-Start the simulation chain with
+Navigate into your experiment folder and start the simulation chain with
 
 ```bash
 ./subchain start
 ```
-
-!!! note
-    Whenever `./subchain` is called, be sure that the `netcdf-tools/2024:v1`
-    uenv is activated.
-
 
 ##### `chain_status.log`
 
