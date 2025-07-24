@@ -157,14 +157,11 @@ ${SPICE_DIR}/venv/bin/python -c 'import xarray; import pandas; import numpy; imp
 ```
 Now your Python environment for SPICE is ready to go! 🚀
 
-#### Option 1) Download Template from Official Run
+#### Option 1) Use Template from C2SM's EURO-CORDEX Run
 
-The setups for the official ICON-CLM runs can be downloaded:
+The official ICON-CLM setups are part of the [spice-setups](https://github.com/C2SM/spice-setups) repository.
+Please follow the instructions in the [README](https://github.com/C2SM/spice-setups/blob/main/README.md) file.
 
-```bash
-wget ..
-tar -xvzf ...
-```
 
 #### Option 2) Manually Create ERA5-driven 12 km case
 
@@ -383,8 +380,7 @@ EvaSuite is an addon for SPICE but also a standalone software for either
 
 #### How to use
 
-So far, EvaSuite is not tested on Alps. This will be done once the evaluation
-run has been started. More information will follow shortly.
+EvaSuite v1.0 will be released in September 2025. Afterwards, it will be set up on Säntis. 
 
 !!! TODO
     - Install
