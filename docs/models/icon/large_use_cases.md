@@ -50,20 +50,8 @@ Follow the step-by-step guide in [How to add experiments to a buildbot list :mat
 
 #### Compile Out-of-Source
 
-We recommend you to do out-of-source builds for CPU and GPU so that you can have two compiled versions of ICON in the same repository. Therefore, you simply need to create two folders in the ICON root folder (e.g., `nvhpc_cpu` and `nvhpc_cpu`) and copy the folders `config` and `scripts` from the root folder into it:
-
-```bash
-mkdir nvhpc_cpu
-cd nvhpc_cpu
-cp -r ../config ../scripts .
-cd ..
-mkdir nvhpc_gpu
-cd nvhpc_gpu
-cp -r ../config ../scripts .
-cd ..
-```
-
-Then follow the instructions in [Configure and compile :material-open-in-new:](compile_and_run.md#configure-and-compile){:target="_blank"} to compile ICON on CPU and on GPU from within those folders.
+Follow the instructions in [Configure and compile](compile_and_run.md#building-out-of-source){:target="_blank"} to compile ICON 
+out-of-source for CPU and GPU.
 
 ### 1.2 Local Testing
 
