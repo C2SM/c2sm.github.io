@@ -66,21 +66,23 @@ Out-of-source builds are useful if you want to have two or more compiled version
 To achieve that, you simply need to create separate folders in the ICON root folder 
 and run the configure wrapper from there.
 
-For example, if you want to compile ICON both for `cpu` and `gpu`, you can do
+For example, if you want to compile ICON both for `cpu` and `gpu`, create those directories:
 
 ```bash
 mkdir nvhpc_cpu
 mkdir nvhpc_gpu
 ```
 
-and compile with
+Then, navigate into the corresponding folder and compile with:
 
 === "`cpu`"
     ```bash
+    cd nvhpc_cpu
     uenv run ${UENV_VERSION} -- ./../config/cscs/santis.cpu.nvhpc 
     ```
 === "`gpu`"
     ```bash
+    cd nvhpc_gpu
     uenv run ${UENV_VERSION} -- ./../config/cscs/santis.gpu.nvhpc 
     ```
 
