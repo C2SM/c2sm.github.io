@@ -6,16 +6,15 @@ Use Probtest to verify whether your test case produces consistent results on GPU
 Compile ICON on CPU and on GPU as [out-of-source builds](compile_and_run.md#building-out-of-source). Note that the build directories need to be sub-directories of the ICON root folder. Otherwise the probtest container does not have access to the data.
 
 ## 2. Set Up the Probtest Container and Environment on Säntis
-To run Probtest for ICON on Säntis, use the prebuilt container available on Docker Hub ([Probtest Container :material-open-in-new:](https://github.com/MeteoSwiss/probtest?tab=readme-ov-file#probtest-container){:target="_blank"}).
+To run Probtest for ICON on Säntis, use the prebuilt container available on Docker Hub ([Probtest Container :material-open-in-new:](https://github.com/MeteoSwiss/probtest?tab=readme-ov-file#probtest-container){:target="_blank"}). ICON provides the wrapper script [probtest_container_wrapper.py :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/ci_probtest/scripts/cscs_ci/probtest_container_wrapper.py?ref_type=heads){:target="_blank"}.
 
-ICON provides the wrapper script [probtest_container_wrapper.py :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/ci_probtest/scripts/cscs_ci/probtest_container_wrapper.py?ref_type=heads){:target="_blank"}.
-If your ICON version doesn’t include this script, add it to `icon/scripts/cscs_ci/probtest_container_wrapper.py`, along with the appropriate [PROBTEST_TAG :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/ci_probtest/run/tolerance/PROBTEST_TAG?ref_type=heads){:target="_blank"} under `icon/run/tolerance/PROBTEST_TAG` and [yaml_experiment_test_processor.py :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/ci_probtest/scripts/experiments/yaml_experiment_test_processor.py?ref_type=heads){:target="_blank"} under `icon/scripts/experiments/yaml_experiment_test_processor.py` (replace if already available).
+!!! note
+    If your ICON version doesn’t include this script, add it to `scripts/cscs_ci/probtest_container_wrapper.py`, along with the appropriate [PROBTEST_TAG :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/ci_probtest/run/tolerance/PROBTEST_TAG?ref_type=heads){:target="_blank"} under `run/tolerance/PROBTEST_TAG` and [yaml_experiment_test_processor.py :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/ci_probtest/scripts/experiments/yaml_experiment_test_processor.py?ref_type=heads){:target="_blank"} under `scripts/experiments/yaml_experiment_test_processor.py` (replace if already available).
 
 
 ### When Setting Up ICON from scratch
-In your ICON directory, run:
+In your ICON root directory, import the containter:
 
-Import the containter:
 ```console
 PROBTEST_TAG=$(cat run/tolerance/PROBTEST_TAG)
 enroot import docker://c2sm/probtest:${PROBTEST_TAG}
