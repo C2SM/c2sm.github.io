@@ -44,7 +44,7 @@
 - Size: 130 TB
 - Number of files: 700.000
 - Access: direct / rsync
-- Status: monthly updated
+- Status: frozen (2023/01)
 - Resolution: native
 
 ### CMIP6
@@ -116,7 +116,7 @@
 - Number of files: 677,825 :material-information-outline:{ title="last updated: 2025-08-03 01:48:56" }
 - Access: direct / rsync
 - Status: frozen (2019-03)
-- Variables: 
+- Variables:
   `areacella`{ title="fx (native)" },
   `clt`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `co2mass`{ title="mon (native)" },
@@ -240,7 +240,7 @@
 - Number of files: 1.800
 - Access: direct
 - Status: frozen (2019-04)
-- Variables: 
+- Variables:
   `hfls`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
   `hfss`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
   `hurs`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
