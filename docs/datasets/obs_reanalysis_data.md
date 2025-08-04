@@ -74,7 +74,7 @@
 === "Balfrin"
     ```console
     /capstor/store/cscs/c2sm/c2sme/reanalyses_dkrz/ERAInterim
-    ```    
+    ```
 
 - Size: 5 TB
 - Access: direct
@@ -94,7 +94,7 @@
 === "Balfrin"
     ```console
     /capstor/store/cscs/c2sm/c2sme/reanalyses_dkrz/ERA5
-    ```    
+    ```
 
 - Size: 100 TB (last updated: 2025-01-31)
 - Number of files: 22'035 (last updated: 2025-01-31)
@@ -174,7 +174,7 @@
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
-- Variables: 
+- Variables:
   `10si`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `10wdir`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `2r`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
@@ -220,7 +220,7 @@
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
-- Variables: 
+- Variables:
   `eva`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
   `perc`{ title="day (native): 1985-2021, mon (native): 1985-2021" },
   `sd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
@@ -253,7 +253,7 @@
 - Access: direct
 - Status: static
 - Time period: 1971-2020
-- Variables: 
+- Variables:
     - v23.1e: `CDD`, `TXx`, `pr`, `tas`, `tasmax`, `tasmin`
     - v26.0e: `pr`, `tas`, `tasmax`, `tasmin`
 - Temporal Resolution: daily
@@ -277,7 +277,7 @@
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
-- Variables: 
+- Variables:
   `cbh`{ title="day (native): 194001-202412, mon (native): 194001-202412" },
   `cl`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `clt`{ title="day (native): 198001-202312, mon (native): 194012-202410" },
@@ -310,6 +310,7 @@
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 0.25° x 0.25°
 - More information: [CDS :material-open-in-new:](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview){:target="_blank"}
+- automounted to Euler, the automounter mounts filesystem when it is addressed, e.g. with "ls", "cd", before you cannot see it!
 
 ### ERA5-Land
 
@@ -324,7 +325,7 @@
 - Access: direct
 - Status: updated
 - Time period: 1950-present
-- Variables: 
+- Variables:
   `2d`{ title="day (native): 1970-2024, mon (native): 1970-2024" },
   `2t`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
   `e`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
@@ -354,7 +355,7 @@
 - Size: 17 GB
 - Access: direct
 - Status: updated
-- Time period: v0: 1980-2015, v1: 1980-2018
+- Time period: v0: 1980-2015, v1: 1980-2018, v2: 1980-2021
 - Variables: `tas`, `tasmax`, `tasmin`, `huss`, `psl`, `pr`, `hfss`, `hfls`, `rlus`, `rlds`, `rsds`, `rsus`, `tos`
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 2.5 lat x 2.5 lon (same as cmip6-ng)
