@@ -302,6 +302,7 @@
 - Variables:
     - daily: `pr`, `tas`, `tasmax`, `tasmin`, `hurs`, `rsds`, `sfcWind`, `zg500`, `evspsbl`, `ta500`, `ta850`
 - Resolution: 0.11°
+- [List with issues on polybox :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/RQQrUnRPlg86Apx){:target="_blank"}
 
 ### CORDEX-FPSCONV
 
