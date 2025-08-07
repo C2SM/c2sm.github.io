@@ -44,7 +44,7 @@
 - Size: 130 TB
 - Number of files: 700.000
 - Access: direct / rsync
-- Status: monthly updated
+- Status: frozen (2023/01)
 - Resolution: native
 
 ### CMIP6
@@ -112,11 +112,11 @@
     ```
 
 
-- Size: 201.99 TB :material-information-outline:{ title="last updated: 2025-07-20 01:47:48" }
-- Number of files: 677,824 :material-information-outline:{ title="last updated: 2025-07-20 01:47:48" }
+- Size: 201.99 TB :material-information-outline:{ title="last updated: 2025-08-03 01:48:56" }
+- Number of files: 677,825 :material-information-outline:{ title="last updated: 2025-08-03 01:48:56" }
 - Access: direct / rsync
 - Status: frozen (2019-03)
-- Variables: 
+- Variables:
   `areacella`{ title="fx (native)" },
   `clt`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `co2mass`{ title="mon (native)" },
@@ -197,8 +197,8 @@
     ```
 
 
-- Size: 356.98 TB :material-information-outline:{ title="last updated: 2025-07-20 01:48:15" }
-- Number of files: 552,596 :material-information-outline:{ title="last updated: 2025-07-20 01:48:15" }
+- Size: 356.98 TB :material-information-outline:{ title="last updated: 2025-08-03 01:49:21" }
+- Number of files: 552,596 :material-information-outline:{ title="last updated: 2025-08-03 01:49:21" }
 - Access: direct / rsync
 - Status: monthly updated
 - Resolution: 0.44° and 0.11°
@@ -214,8 +214,8 @@
     /nfs/atmos/c2sm/cordex-reklies
     ```
 
-- Size: 22.41 TB :material-information-outline:{ title="last updated: 2025-07-20 01:46:14" }
-- Number of files: 94,936 :material-information-outline:{ title="last updated: 2025-07-20 01:46:14" }
+- Size: 22.41 TB :material-information-outline:{ title="last updated: 2025-08-03 01:47:16" }
+- Number of files: 94,936 :material-information-outline:{ title="last updated: 2025-08-03 01:47:16" }
 - Access: direct
 - Status: monthly updated
 - Resolution: 0.11°
@@ -240,7 +240,7 @@
 - Number of files: 1.800
 - Access: direct
 - Status: frozen (2019-04)
-- Variables: 
+- Variables:
   `hfls`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
   `hfss`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
   `hurs`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
@@ -302,6 +302,7 @@
 - Variables:
     - daily: `pr`, `tas`, `tasmax`, `tasmin`, `hurs`, `rsds`, `sfcWind`, `zg500`, `evspsbl`, `ta500`, `ta850`
 - Resolution: 0.11°
+- [List with issues on polybox :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/RQQrUnRPlg86Apx){:target="_blank"}
 
 ### CORDEX-FPSCONV
 
