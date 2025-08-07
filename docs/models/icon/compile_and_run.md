@@ -40,7 +40,7 @@ Clone the ICON repository:
 
     Säntis is regularly maintained by CSCS. In addition, the [uenvs](../../alps/uenvs.md) are updated irregularly. Therefore, some of the information provided here may be out of date. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Säntis.
 
-Run the following after navigating into ICON root folder (replace `gpu` by `cpu` if applicable):
+Run the following after navigating into the ICON root folder (replace `gpu` by `cpu` if applicable):
 
 ```console
 UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
