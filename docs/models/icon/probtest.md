@@ -63,7 +63,7 @@ uenv run ${UENV_VERSION} -- python3 scripts/cscs_ci/probtest_container_wrapper.p
 
 This generates:
 
-- `stats_${EXPERIMENT}_<member_i<member_id>>.csv`
+- `stats_${EXPERIMENT}_<member_id>.csv`
 - `${EXPERIMENT}_reference.csv`
 
 ## 4. Generate Reference and Tolerance from Ensemble
