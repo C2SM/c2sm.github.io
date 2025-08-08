@@ -12,7 +12,7 @@ To run Probtest for ICON on Säntis, use the prebuilt container available on Doc
     If your ICON version doesn’t include this script, add it to `scripts/cscs_ci/probtest_container_wrapper.py`, along with the appropriate [PROBTEST_TAG :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/ci_probtest/run/tolerance/PROBTEST_TAG?ref_type=heads){:target="_blank"} under `run/tolerance/PROBTEST_TAG` and [yaml_experiment_test_processor.py :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/ci_probtest/scripts/experiments/yaml_experiment_test_processor.py?ref_type=heads){:target="_blank"} under `scripts/experiments/yaml_experiment_test_processor.py` (replace if already available).
 
 
-### When Setting Up ICON from scratch
+### When Setting Up ICON from Scratch
 In your ICON root directory, import the containter:
 
 ```console

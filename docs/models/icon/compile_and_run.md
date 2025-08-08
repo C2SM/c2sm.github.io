@@ -77,11 +77,13 @@ Then, navigate into the corresponding folder and compile with:
 
 === "`cpu`"
     ```bash
+    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
     cd nvhpc_cpu
     uenv run ${UENV_VERSION} -- ./../config/cscs/santis.cpu.nvhpc 
     ```
 === "`gpu`"
     ```bash
+    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
     cd nvhpc_gpu
     uenv run ${UENV_VERSION} -- ./../config/cscs/santis.gpu.nvhpc 
     ```
