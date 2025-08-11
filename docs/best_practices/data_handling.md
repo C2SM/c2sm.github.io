@@ -49,6 +49,6 @@
    * [IAC internal documentation on NetCDF in general :material-open-in-new:](https://wiki.iac.ethz.ch/IT/LinuxNetCDF){:target="_blank"} (!with IAC login only)
    * [Climate and Forecast (CF) conventions :material-open-in-new:](http://cfconventions.org){:target="_blank"}
    * [Python CF checker :material-open-in-new:](https://github.com/cedadev/cf-checker){:target="_blank"}
-   * [CMIP6 controlled vocabularies :material-open-in-new:](https://cmor.llnl.gov/mydoc_cmor3_CV/){:target="_blank"}
+   * [Controlled Vocabularies (CVs) for use in CMIP6 :material-open-in-new:](https://wcrp-cmip.github.io/CMIP6_CVs/){:target="_blank"}
 
 
