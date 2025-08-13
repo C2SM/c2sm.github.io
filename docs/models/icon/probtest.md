@@ -13,7 +13,7 @@ To run Probtest for ICON on Säntis, use the prebuilt container available on Doc
 
 
 ### When Setting Up ICON from Scratch
-In your ICON root directory, import the containter:
+In your ICON root directory, import the container:
 
 ```console
 PROBTEST_TAG=$(cat run/tolerance/PROBTEST_TAG)
@@ -57,6 +57,7 @@ export UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
 ## 3. Run perturbed ensemble on CPU
 Navigate to your CPU build directory and generate and run a 10-member ensemble (this may take time):
 ```console
+cd nvhpc_cpu
 ./make_runscripts $EXPERIMENT
 uenv run ${UENV_VERSION} -- python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXPERIMENT --build-dir $(pwd) --member-ids $(seq -s, 1 10)
 ```
@@ -78,28 +79,26 @@ This generates:
 - `${EXPERIMENT}_tolerance.csv`
 
 ## 5. Run the test case on GPU and collect statistics
-In the following, replace `<...>` by the corresponding paths you are using.
-
 Navigate to your GPU build folder and run the same test case, e.g.:
 ```console
-cd <path-to-GPU-build>
+cd ../nvhpc_gpu
 ./make_runscripts $EXPERIMENT
-cd run && sbatch --uenv ${UENV_VERSION} ./exp.c2sm_clm_r13b03_seaice.run
+cd run && sbatch --uenv ${UENV_VERSION} ./exp.c2sm_clm_r13b03_seaice.run && cd ..
 ```
 
 Navigate back to ICON root folder and collect the GPU statistics:
 ```console
-cd <ICON root folder>
-python3 scripts/cscs_ci/probtest_container_wrapper.py stats $EXPERIMENT --stats-file-path <path-to-CPU-build>/stats_gpu.csv --build-dir <path-to-GPU-build>
+cd ..
+python3 scripts/cscs_ci/probtest_container_wrapper.py stats $EXPERIMENT --stats-file-path stats_gpu.csv --build-dir nvhpc_gpu
 ```
 
-This saves the GPU stats as `stats_gpu.csv` in your CPU build directory.
+This saves the GPU stats as `stats_gpu.csv` in your ICON root directory.
 
 ## 6. Check GPU Statistics Against Reference and Tolerance
 
-From your ICON directory, run the check using the generated reference and tolerance:
+From your ICON root directory, run the check using the generated reference and tolerance:
 ```console
-python3 scripts/cscs_ci/probtest_container_wrapper.py check $EXPERIMENT --input-file-cur stats_gpu.csv --input-file-ref <path-to-CPU-build>/${EXPERIMENT}_reference.csv --tolerance-file-name <path-to-CPU-build>/${EXPERIMENT}_tolerance.csv --build-dir $(pwd)
+python3 scripts/cscs_ci/probtest_container_wrapper.py check $EXPERIMENT --input-file-cur stats_gpu.csv --input-file-ref nvhpc_cpu/${EXPERIMENT}_reference.csv --tolerance-file-name nvhpc_cpu/${EXPERIMENT}_tolerance.csv --build-dir $(pwd)
 ```
 
 ## 7. Increase Ensemble Size if Validation Fails
@@ -107,6 +106,7 @@ A 10-member ensemble may not capture the full variability, causing false negativ
 
 Run additional members (11–49):
 ```console
+cd nvhpc_cpu
 ./make_runscripts $EXPERIMENT
 uenv run ${UENV_VERSION} -- python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXPERIMENT --build-dir $(pwd) --member-ids $(seq -s, 11 49)
 ```
