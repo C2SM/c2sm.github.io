@@ -117,3 +117,6 @@ python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXPERIMENT --bu
 ```
 
 *If the test still fails, the GPU result is likely incorrect.*
+
+## 8. Add Test Case to CI
+If your test case validates, it would be wise to add it to the test cases in ICON to ensure it will not break in the future. Therefore, follow the instructions under [How to add experiments to a CI list :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/How-to-set-up-new-test-experiments-for-CI){:target="_blank"}. After doing so, please run the member selection (for this experiment only!) following [Run probtest jobs :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/CSCS-CI-on-Alps#run-probtest-jobs){:target="_blank"} and add the selected members and the tolerance hash to ICON as described.
