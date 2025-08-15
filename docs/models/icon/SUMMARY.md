@@ -1,5 +1,5 @@
 * [ICON](index.md)
 * [Compile and Run](compile_and_run.md)
-* [Large Use Cases](large_use_cases.md)
+* [Validate Custom Namelist](validate_custom_namelist.md)
 * [Run Probtest](probtest.md)
 * [ICON-CLM](icon-clm.md)
