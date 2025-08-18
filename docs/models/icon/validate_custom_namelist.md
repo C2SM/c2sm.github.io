@@ -95,6 +95,9 @@ If all tests are validating on CPU, the next step is to test on GPU. Follow the 
 ##### Run Probtest
 To ensure that running on GPU gives essentially the same results as running on CPU, you can make use of [Probtest :material-open-in-new:](https://github.com/MeteoSwiss/probtest?tab=readme-ov-file#probtest){:target="_blank"}. Therefore, make use of the entries you made to the YML files and initialise Probtest starting with 10 ensemble members for the CPU reference (set `EXP=<exp_name>`):
 
+=== "Santis"
+    Check the instructions in [Run Probtest on Säntis](./probtest.md){:target="_blank"}.
+
 === "Balfrin"
     ```console
     export BB_NAME=balfrin_cpu_nvidia
@@ -109,14 +112,6 @@ Then follow the Probtest instructions [Example: Check the output of an ICON expe
 ### 1.3 Activate Test in a CI Pipeline
 
 If you followed the steps above in [1.2 Local testing](large_use_cases.md#12-local-testing), everything is set to activate the test in a CI pipeline. Therefore, push your changes to a branch on ICON and open a merge request. Then follow the instructions in [Member selection for generating probtest tolerances :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Member-selection-for-generating-probtest-tolerances){:target="_blank"} for adding tolerances and references as well as best members for generating them to the CI pipeline.
-
-### 1.4 Small Test Case with ICON-EXCLAIM
-
-Now it is time to switch to ICON-EXCLAIM, which binds ICON-NWP with modules rewritten in GT4PY, so that we can test the code path in those as well. To that purpose, simply take the small scale test case generated above and replace the ICON executable by the relevant one.
-
-!!! note "ICON-EXCLAIM CI"
-
-    When avaialble, it would also make sense to integrate your setup in the ICON-EXCLAIM testing infrastrucutre.
 
 ## 2. Intermediate Scale Test
 

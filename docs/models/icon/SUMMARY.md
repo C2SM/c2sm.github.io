@@ -1,5 +1,5 @@
 * [ICON](index.md)
 * [Compile and Run](compile_and_run.md)
 * [Validate Custom Namelist](validate_custom_namelist.md)
-* [Run Probtest](probtest.md)
+* [Run Probtest on Säntis](probtest.md)
 * [ICON-CLM](icon-clm.md)
