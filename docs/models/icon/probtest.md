@@ -67,7 +67,7 @@ This generates:
 - `stats_${EXPERIMENT}_<member_id>.csv`
 - `${EXPERIMENT}_reference.csv`
 
-## 4. Generate Reference and Tolerance from Ensemble
+## 4. Generate Tolerance from Ensemble
 
 Create reference and tolerance files using the 10 ensemble members:
 ```console
