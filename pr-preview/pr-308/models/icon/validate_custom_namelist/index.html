@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://c2sm.github.io/models/icon/large_use_cases/">
+        <link rel="canonical" href="https://c2sm.github.io/models/icon/validate_custom_namelist/">
       
       
         <link rel="prev" href="../compile_and_run/">
@@ -18,11 +18,11 @@
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
     
     
       
-        <title>Large Use Cases - C2SM User Landing Page</title>
+        <title>Validate Custom Namelist - C2SM User Landing Page</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#large-use-cases" class="md-skip">
+        <a href="#validate-custom-namelist" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Large Use Cases
+              Validate Custom Namelist
             
           </span>
         </div>
@@ -2832,7 +2832,7 @@
   
   
   <span class="md-ellipsis">
-    Large Use Cases
+    Validate Custom Namelist
     
   </span>
   
@@ -2845,7 +2845,7 @@
   
   
   <span class="md-ellipsis">
-    Large Use Cases
+    Validate Custom Namelist
     
   </span>
   
@@ -4073,7 +4073,7 @@
 
 
   
-    <a href="https://github.com/C2SM/c2sm.github.io/edit/main/docs/models/icon/large_use_cases.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/C2SM/c2sm.github.io/edit/main/docs/models/icon/validate_custom_namelist.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -4081,10 +4081,9 @@
   
 
 
-<h1 id="large-use-cases">Large Use Cases<a class="headerlink" href="#large-use-cases" title="Permanent link">&para;</a></h1>
-<p><a href="https://www.icon-model.org/icon_model" target="_blank">ICON <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> is a complex piece of software and even more so is <a href="https://github.com/C2SM/icon-exclaim" target="_blank">ICON-EXCLAIM <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> that builds on top of it. Troubleshooting large scale configurations can therefore be tedious, which is why we developed a procedure to build large production ICON configurations in the most robust way possible.</p>
-<p>The overall philosophy is to build a series of gradually increasing complexity setups from a small scale ICON-NWP test case to the full production configuration. Complexity can grow in two independent spaces, namely code (from ICON-NWP to ICON-EXCLAIM) and scales (resolution and duration). We will first tackle the first one and then scale up the simulation setup.</p>
-<p>Even if it could feel like an overhead when starting the whole process, C2SM's core team and the EXCLAIM team are there to assist you in this journey and it will pay off in the end!</p>
+<h1 id="validate-custom-namelist">Validate Custom Namelist<a class="headerlink" href="#validate-custom-namelist" title="Permanent link">&para;</a></h1>
+<p><a href="https://www.icon-model.org/icon_model" target="_blank">ICON <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> is a complex piece of software. Troubleshooting large scale configurations can therefore be tedious, which is why we suggest a procedure to build large production ICON configurations in the most robust way possible.</p>
+<p>The overall philosophy is to build a series of gradually increasing complexity setups from a small scale ICON test case to the full production configuration.</p>
 <h2 id="flow-chart">Flow Chart<a class="headerlink" href="#flow-chart" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>flowchart TD
     subgraph SMALL["1 - Small Scale Test Case"]
@@ -4133,7 +4132,7 @@ sbatch<span class="w"> </span>--partition<span class="w"> </span>debug<span clas
 <p>If all tests are validating on CPU, the next step is to test on GPU. Follow the same steps as for CPU and run nproma and mpi test. Again, check in the LOG file to see if all tests passed before proceeding to the next step.</p>
 <p>To ensure that running on GPU gives essentially the same results as running on CPU, please follow the instructions in <a href="https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Validating-with-probtest-without-buildbot-references-(Generating-tolerances-for-non-standard-tests)" target="_blank">Validating with probtest without buildbot references (Generating tolerances for non standard tests) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>). If probtest validates, you can change the <code>checksuite_modes</code> to <code>'t'</code> and everything is set for activating the test in a CI pipeline.</p>
 <h3 id="13-activate-test-in-a-ci-pipeline">1.3 Activate Test in a CI Pipeline<a class="headerlink" href="#13-activate-test-in-a-ci-pipeline" title="Permanent link">&para;</a></h3>
-<p>If you followed the steps above in <a href="./#12-local-testing">1.2 Local testing</a>, everything is set to activate the test in a CI pipeline. Therefore, push your changes to a branch on icon-nwp and open a merge request. Then follow the instructions in <a href="https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Member-selection-for-generating-probtest-tolerances" target="_blank">Member selection for generating probtest tolerances <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> for adding tolerances and references as well as best members for generating them to the CI pipeline.</p>
+<p>If you followed the steps above in <a href="large_use_cases.md#12-local-testing">1.2 Local testing</a>, everything is set to activate the test in a CI pipeline. Therefore, push your changes to a branch on icon-nwp and open a merge request. Then follow the instructions in <a href="https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Member-selection-for-generating-probtest-tolerances" target="_blank">Member selection for generating probtest tolerances <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> for adding tolerances and references as well as best members for generating them to the CI pipeline.</p>
 <h3 id="14-small-test-case-with-icon-exclaim">1.4 Small Test Case with ICON-EXCLAIM<a class="headerlink" href="#14-small-test-case-with-icon-exclaim" title="Permanent link">&para;</a></h3>
 <p>Now it is time to switch to ICON-EXCLAIM, which binds ICON-NWP with modules rewritten in GT4PY, so that we can test the code path in those as well. To that purpose, simply take the small scale test case generated above and replace the ICON executable by the relevant one.</p>
 <div class="admonition note">
@@ -4181,7 +4180,7 @@ Increase the model's horizontal grid resolution (i.e., decrease grid spacing) to
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 14, 2025 08:04:59 UTC">August 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 18, 2025 07:16:26 UTC">August 18, 2025</span>
   </span>
 
     
@@ -4191,7 +4190,7 @@ Increase the model's horizontal grid resolution (i.e., decrease grid spacing) to
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 14, 2025 08:04:59 UTC">August 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 18, 2025 07:16:26 UTC">August 18, 2025</span>
   </span>
 
     
@@ -4247,10 +4246,10 @@ Increase the model's horizontal grid resolution (i.e., decrease grid spacing) to
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "mermaid2", "navigation.bottom", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sticky", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "mermaid2", "navigation.bottom", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sticky", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       
