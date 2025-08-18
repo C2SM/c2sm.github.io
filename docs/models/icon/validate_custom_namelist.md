@@ -113,7 +113,7 @@ To ensure that running on GPU gives essentially the same results as running on C
     python externals/probtest/probtest.py init --codebase-install $PWD --experiment-name ${EXP} --reference $PWD $file_id --member-ids $(seq -s, 1 10)
     ```
 
-Then follow the Probtest instructions [Example: Check the output of an ICON experiment with an test build compared to a reference build :material-open-in-new:](https://github.com/MeteoSwiss/probtest?tab=readme-ov-file#example-check-the-output-of-an-icon-experiment-with-an-test-build-compared-to-a-reference-build){:target="_blank"} skipping the *Initialize probtest* step.
+    Then follow the Probtest instructions [Example: Check the output of an ICON experiment with an test build compared to a reference build :material-open-in-new:](https://github.com/MeteoSwiss/probtest?tab=readme-ov-file#example-check-the-output-of-an-icon-experiment-with-an-test-build-compared-to-a-reference-build){:target="_blank"} skipping the *Initialize probtest* step.
 
  If probtest validates, you can change the `checksuite_modes` to `'t'`, add the tag `probtest` and the CPU builder to `refgen` in the `scripts/experiments/<institution>/*_tests.yml`. Now everything is set for activating the test in a CI pipeline.
 
