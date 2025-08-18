@@ -44,7 +44,7 @@
 - Size: 130 TB
 - Number of files: 700.000
 - Access: direct / rsync
-- Status: monthly updated
+- Status: frozen (2023/01)
 - Resolution: native
 
 ### CMIP6
@@ -111,8 +111,9 @@
     /nfs/atmos/c2sm/cmip6-ng
     ```
 
-- Size: 201.1 TB :material-information-outline:{ title="last updated: 2025-04-20 01:47:04" }
-- Number of files: 665,936 :material-information-outline:{ title="last updated: 2025-04-20 01:47:04" }
+
+- Size: 201.99 TB :material-information-outline:{ title="last updated: 2025-08-17 01:47:26" }
+- Number of files: 677,825 :material-information-outline:{ title="last updated: 2025-08-17 01:47:26" }
 - Access: direct / rsync
 - Status: frozen (2019-03)
 - Variables: 
@@ -195,8 +196,9 @@
     /capstor/store/cscs/c2sm/c2sme/cordex
     ```
 
-- Size: 356.98 TB :material-information-outline:{ title="last updated: 2025-04-20 01:47:23" }
-- Number of files: 552,596 :material-information-outline:{ title="last updated: 2025-04-20 01:47:23" }
+
+- Size: 356.98 TB :material-information-outline:{ title="last updated: 2025-08-17 01:47:56" }
+- Number of files: 552,596 :material-information-outline:{ title="last updated: 2025-08-17 01:47:56" }
 - Access: direct / rsync
 - Status: monthly updated
 - Resolution: 0.44° and 0.11°
@@ -212,8 +214,8 @@
     /nfs/atmos/c2sm/cordex-reklies
     ```
 
-- Size: 22.41 TB :material-information-outline:{ title="last updated: 2025-04-20 01:45:37" }
-- Number of files: 94,936 :material-information-outline:{ title="last updated: 2025-04-20 01:45:37" }
+- Size: 22.41 TB :material-information-outline:{ title="last updated: 2025-08-17 01:45:54" }
+- Number of files: 94,936 :material-information-outline:{ title="last updated: 2025-08-17 01:45:54" }
 - Access: direct
 - Status: monthly updated
 - Resolution: 0.11°
@@ -300,6 +302,7 @@
 - Variables:
     - daily: `pr`, `tas`, `tasmax`, `tasmin`, `hurs`, `rsds`, `sfcWind`, `zg500`, `evspsbl`, `ta500`, `ta850`
 - Resolution: 0.11°
+- [List with issues on polybox :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/RQQrUnRPlg86Apx){:target="_blank"}
 
 ### CORDEX-FPSCONV
 

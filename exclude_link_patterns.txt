@@ -21,3 +21,8 @@ agupubs.onlinelibrary.wiley.com
 ^https://intranet.c2sm.ethz.ch
 ^https://climatedataguide.ucar.edu/climate-data/nasas-merra2-reanalysis
 ^https://polybox.ethz.ch/index.php/
+^https://education.github.com/discount_requests
+^https://marketplace.visualstudio.com
+^https://www.research-collection.ethz.ch
+^https://gmao.gsfc.nasa.gov/gmao-products
+^https://rechtssammlung.sp.ethz.ch
