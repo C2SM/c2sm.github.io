@@ -8,6 +8,10 @@ After the initial test case, we suggest building up step by step: from a small I
 
 If you are working with a downstream version of ICON (e.g., [ICON-EXCLAIM :material-open-in-new:](https://github.com/C2SM/icon-exclaim){:target="_blank"}), make sure everything runs first in upstream ICON (e.g., [ICON-NWP :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"}). This helps you identify whether an issue comes from the upstream version or from your downstream modifications.
 
+!!! info "Accesss upstream ICON"
+
+    If you don't have access to upstream ICON, you need to request it by DKRZ.
+
 ## Flow Chart
 
 ```mermaid
