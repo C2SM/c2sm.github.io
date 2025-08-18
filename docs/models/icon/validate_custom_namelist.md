@@ -1,8 +1,12 @@
 # Validate Custom Namelist
 
-[ICON :material-open-in-new:](https://www.icon-model.org/icon_model){:target="_blank"} is a complex piece of software. Troubleshooting large scale configurations can therefore be tedious, which is why we suggest a procedure to build large production ICON configurations in the most robust way possible.
+[ICON :material-open-in-new:](https://www.icon-model.org/icon_model){:target="_blank"} is a complex software, and troubleshooting large configurations can be difficult. To avoid problems, we recommend starting every new namelist configuration with a small test case. Add this test case to the ICON CI to ensure it stays compatible with future developments.
 
-The overall philosophy is to build a series of gradually increasing complexity setups from a small scale ICON test case to the full production configuration.
+You can find a list of available tests in [icon/run/checksuite.icon-dev :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/tree/master/run/checksuite.icon-dev){:target="_blank"}. Keep in mind that not all tests are included in the CI, and most are only checked on one or two machines. To see which tests run on Säntis, check the files `icon/scripts/experiments/<institution>/*_tests.yml` for the `santis` keyword. More details on test settings are available under [Experiment and test settings :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/How-to-set-up-new-test-experiments-for-CI#experiment-and-test-settings){:target="_blank"}.
+
+After the initial test case, we suggest building up step by step: from a small ICON test case to increasingly complex setups, and finally to your full production configuration.
+
+If you are working with a downstream version of ICON (e.g., [ICON-EXCLAIM :material-open-in-new:](https://github.com/C2SM/icon-exclaim){:target="_blank"}), make sure everything runs first in upstream ICON (e.g., [ICON-NWP :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"}). This helps you identify whether an issue comes from the upstream version or from your downstream modifications.
 
 ## Flow Chart
 
