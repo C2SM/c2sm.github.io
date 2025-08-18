@@ -49,6 +49,10 @@ Set up an ICON test case with a low number of grid points and a few time steps (
 
 Follow the step-by-step guide in [How to add experiments to a CI list :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/How-to-set-up-new-test-experiments-for-CI#how-to-add-experiments-to-a-ci-list){:target="_blank"} to add your test case to the checksuite. Start with the `checksuite_modes` for the mpi and nproma tests (`'nm'`) for the machine you are testing on.
 
+!!! note "Add test cases to out-of-source build"
+
+    Don't forget to add all your changes also to the out-of-source builds.
+
 ### 1.2 Local Testing
 
 Before adding anything to the official ICON, we recommend you to run all tests locally starting with CPU.
