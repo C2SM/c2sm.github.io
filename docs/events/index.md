@@ -1,3 +1,11 @@
-# Technical Events
+# Events
 
-C2SM organises [technical events :material-open-in-new:](https://c2sm.ethz.ch/education/technical-training.html){:target="_blank"} such as the [Quarterly ICON Meeting](icon_meetings/index.md), the [ICON User Workshop](IUW/index.md), [Git Courses for Beginners and Advanced Users](git_courses.md), the [Python Visualization Course](pyvis.md) and the [Climate Model and Climate Data Workshop](climate_model_workshop.md).
+C2SM organises the following [technical events :material-open-in-new:](https://c2sm.ethz.ch/education/technical-training.html){:target="_blank"}:
+
+- [Quarterly ICON Meeting](icon_meetings/index.md)
+- [Modeling Workshop](modeling_workshop/index.md) (formerly COSMO-ICON User Workshop)
+- [Git Courses for Beginners and Advanced Users](git_courses.md)
+- [Python Visualization Course](pyvis.md)
+- [Climate Model and Climate Data Workshop](climate_model_workshop.md).
+
+In addition, the [C2SM Working Group Day](wgdays.md) takes place annually.
