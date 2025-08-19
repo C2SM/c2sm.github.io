@@ -17,9 +17,9 @@ If you are working with a downstream version of ICON (e.g., [ICON-EXCLAIM :mater
 ```mermaid
 flowchart TD
     subgraph SMALL["1 - Small Scale Test Case"]
-        STnwp[Small Scale Test Case ICON] -.- CPU & GPU
-        STnwp --> MR[Merge Request for ICON]
-        MR --> CI[CI]
+        TC[Test Case ICON]
+        TC --> LT[Local Testing] -.- CPU & GPU
+        LT --> CI[Add Test Case to CI]
     end
     subgraph INT["2 - Intermediate Scale Test"]
         IT[Intermediate Scale Test] & LST[Longer small Scale Test]
