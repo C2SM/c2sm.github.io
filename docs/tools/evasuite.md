@@ -96,6 +96,7 @@ If you don't have access to the EvaSuite repository, you can download the code f
 2. **Create and activate a Python virtual environment within the EvaSuite repo**
 ```bash
 cd EvaSuite_v1.0
+conda activate py310_base
 python -m venv .venv
 source .venv/bin/activate
 ```
