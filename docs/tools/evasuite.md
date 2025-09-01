@@ -59,22 +59,14 @@ module load gcc/13.2.0 hdf5/1.14.3
 Base environment:
 
 ```bash
-conda create -n py310_base python=3.10 -y
-conda activate py310_base
+conda create -n py310_evasuite python=3.10 -y
+conda activate py310_evasuite
 ```
 
 Installing packages:
 
 ```bash
 conda install -c conda-forge fiona cartopy rasterio h5py psutil
-```
-
-Tell pip to Use `$SCRATCH` for Cache & Wheels
-
-```bash
-export PIP_CACHE_DIR=$SCRATCH/pip_cache
-export TMPDIR=$SCRATCH/pip_temp
-mkdir -p $PIP_CACHE_DIR $TMPDIR
 ```
 
 ### Installation
@@ -96,18 +88,24 @@ If you don't have access to the EvaSuite repository, you can download the code f
 2. **Create and activate a Python virtual environment within the EvaSuite repo**
 ```bash
 cd EvaSuite_v1.0
-conda activate py310_base
-python -m venv .venv
-source .venv/bin/activate
+conda activate py310_evasuite
 ```
 
-3. **Upgrade pip and install dependencies**
+3. **Tell pip to Use `$SCRATCH` for Cache & Wheels**
+
+```bash
+export PIP_CACHE_DIR=$SCRATCH/pip_cache
+export TMPDIR=$SCRATCH/pip_temp
+mkdir -p $PIP_CACHE_DIR $TMPDIR
+```
+
+4. **Upgrade pip and install dependencies**
 ```bash
 pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
 ```
 
-4. **Install EvaSuite**
+5. **Install EvaSuite**
 ```bash
 pip install .
 ```
@@ -119,7 +117,7 @@ Load modules and activate environment:
 ```bash
 uenv start --view=modules netcdf-tools/2024:v1
 module load cdo/2.4.0 netcdf-c/4.9.2 netcdf-fortran/4.6.1
-source .venv/bin/activate
+conda activate py310_evasuite
 ```
 
 ## Reference
