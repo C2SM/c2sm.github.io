@@ -47,7 +47,7 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 │   │
 │   └── misc/                        # Other input data not tied to specific grids
 │
-└── validation/                      # Validation/reference datasets
+└── reference/                       # Reference datasets
     ├── observations/                # Ground-based or in-situ observations
     ├── reanalysis/                  # Reanalysis datasets (e.g. ERA5, JRA-55)
     ├── satellite/                   # Satellite observations for validation
