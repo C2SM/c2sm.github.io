@@ -62,8 +62,7 @@ salloc -p normal --time=01:00:00
 
 After your node hours were allocated, you will have to follow the instructions in [Every Time You Reconnect to the Server](Every Time You Reconnect to the Server) again.
 
-
-Navigate to your CPU build directory and generate and run a 10-member ensemble (this may take time):
+Then navigate to your CPU build directory and generate and run a 10-member ensemble (this may take time):
 ```console
 cd nvhpc_cpu
 ./make_runscripts $EXPERIMENT
@@ -110,6 +109,11 @@ python3 scripts/cscs_ci/probtest_container_wrapper.py check $EXPERIMENT --input-
 ```
 
 ## 7. Increase Ensemble Size if Validation Fails
+Again, if not done already allocate compute nodes interactively to *not* use your login nodes and don't forget to follow the instructions in [Every Time You Reconnect to the Server](Every Time You Reconnect to the Server) once the node hours are allocated.
+```console
+salloc -p normal --time=01:20:00
+```
+
 A 10-member ensemble may not capture the full variability, causing false negatives. Increase to 49 members for better coverage from your CPU build directory:
 
 Run additional members (11–49):
