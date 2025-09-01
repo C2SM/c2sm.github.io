@@ -105,7 +105,7 @@ If all tests are validating on CPU, the next step is to test on GPU. Follow the 
 
 
 ##### Run Probtest
-To ensure that running on GPU gives essentially the same results as running on CPU, you can make use of [Probtest :material-open-in-new:](https://github.com/MeteoSwiss/probtest?tab=readme-ov-file#probtest){:target="_blank"}. Therefore, make use of the entries you made to the YML files and initialise Probtest starting with 10 ensemble members for the CPU reference (set `EXP=<exp_name>`):
+To ensure that running on GPU gives essentially the same results as running on CPU, you can make use of [Probtest :material-open-in-new:](https://github.com/MeteoSwiss/probtest?tab=readme-ov-file#probtest){:target="_blank"}. Therefore, make use of the entries you made to the YML files and initialise Probtest starting with 10 ensemble members for the CPU reference. Note that you have to set `pinit_seed = 0` and `pinit_amplitude = 0` in the namelist `initicon_nml` in your test case for running a perturbed ensemble.
 
 === "Santis"
     Check the instructions in [Run Probtest on Säntis](./probtest.md){:target="_blank"}.
