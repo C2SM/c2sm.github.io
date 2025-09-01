@@ -55,6 +55,14 @@ export UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
 ```
 
 ## 3. Run perturbed ensemble on CPU
+To run a perturbed ensemble, please allocate compute nodes interactively to *not* use your login nodes. Therefore, run the following:
+```console
+salloc -p normal --time=01:00:00
+```
+
+After your node hours were allocated, you will have to follow the instructions in [Every Time You Reconnect to the Server](Every Time You Reconnect to the Server) again.
+
+
 Navigate to your CPU build directory and generate and run a 10-member ensemble (this may take time):
 ```console
 cd nvhpc_cpu
