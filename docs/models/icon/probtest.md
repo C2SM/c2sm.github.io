@@ -91,7 +91,7 @@ Navigate to your GPU build folder and run the same test case, e.g.:
 ```console
 cd ../nvhpc_gpu
 ./make_runscripts $EXPERIMENT
-cd run && sbatch --uenv ${UENV_VERSION} ./exp.c2sm_clm_r13b03_seaice.run && cd ..
+cd run && sbatch --uenv ${UENV_VERSION} ./exp.${EXPERIMENT}.run && cd ..
 ```
 
 Navigate back to ICON root folder and collect the GPU statistics:
