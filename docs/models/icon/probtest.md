@@ -60,7 +60,7 @@ To run a perturbed ensemble, please allocate compute nodes interactively to *not
 salloc -p normal --time=01:00:00
 ```
 
-After your node hours were allocated, you will have to follow the instructions in [Every Time You Reconnect to the Server](Every Time You Reconnect to the Server) again.
+After your node hours were allocated, you will have to follow the instructions in [Every Time You Reconnect to the Server](#every-time-you-reconnect-to-the-server) again.
 
 Then navigate to your CPU build directory and generate and run a 10-member ensemble (this may take time):
 ```console
@@ -109,7 +109,7 @@ python3 scripts/cscs_ci/probtest_container_wrapper.py check $EXPERIMENT --input-
 ```
 
 ## 7. Increase Ensemble Size if Validation Fails
-Again, if not done already allocate compute nodes interactively to *not* use your login nodes and don't forget to follow the instructions in [Every Time You Reconnect to the Server](Every Time You Reconnect to the Server) once the node hours are allocated.
+Again, if not done already allocate compute nodes interactively to *not* use your login nodes and don't forget to follow the instructions in [Every Time You Reconnect to the Server](#every-time-you-reconnect-to-the-server) once the node hours are allocated.
 ```console
 salloc -p normal --time=01:20:00
 ```
