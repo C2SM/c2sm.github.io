@@ -9,7 +9,7 @@
    * [Forschungsdatenmanagement und Datenerhalt :material-open-in-new:](https://documentation.library.ethz.ch/display/DD/Forschungsdatenmanagement+und+Datenerhalt){:target="_blank"}
    * [ETH Guidelines for Research Integrity :material-open-in-new:](https://doi.org/10.3929/ethz-b-000179298){:target="_blank"}
    * [ETH Research Collection :material-open-in-new:](https://www.research-collection.ethz.ch){:target="_blank"}
-   * [Author profil and assign ORCID iD :material-open-in-new:](https://unlimited.ethz.ch/spaces/RC/pages/194119877/Author+profil+and+assign+ORCID+iD){:target="_blank"}
+   * [Add your ORCID ID to your ETH account :material-open-in-new:](https://unlimited.ethz.ch/spaces/RC/pages/194119877/Author+profil+and+assign+ORCID+iD){:target="_blank"}
    * [ETH Guidelines for data management plans :material-open-in-new:](https://unlimited.ethz.ch/pages/viewpage.action?pageId=194127962){:target="_blank"}
 
 ## ETH Contacts
