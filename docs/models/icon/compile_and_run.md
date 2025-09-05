@@ -73,7 +73,7 @@ mkdir nvhpc_cpu
 mkdir nvhpc_gpu
 ```
 
-Then, navigate into the corresponding folder and compile with:
+Then, navigate into the corresponding folder and source the configure wrapper for compilation:
 
 === "`cpu`"
     ```bash
