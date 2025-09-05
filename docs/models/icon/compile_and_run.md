@@ -36,7 +36,7 @@ Clone the ICON repository:
 
 ### Säntis
 
-!!! info "Last update: 2025-09-01"
+!!! info "Last update: 2025-09-05"
 
     Säntis is regularly maintained by CSCS. In addition, the [uenvs](../../alps/uenvs.md) are updated irregularly. Therefore, some of the information provided here may be out of date. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Säntis.
 

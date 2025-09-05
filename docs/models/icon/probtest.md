@@ -13,16 +13,10 @@ To run Probtest for ICON on Säntis, use the prebuilt container available on Doc
 
 
 ### When Setting Up ICON from Scratch
-In your ICON root directory, import the container:
-
+Add a TOML configuration to run the docker image and export EDF path (being used when running the container):
 ```console
 PROBTEST_TAG=$(cat run/tolerance/PROBTEST_TAG)
-enroot import docker://c2sm/probtest:${PROBTEST_TAG}
-```
-
-Add a TOML configuration and export EDF path (being used when running the container):
-```console
-echo "image = \"$(pwd)/c2sm+probtest+${PROBTEST_TAG}.sqsh\"" > probtest.toml
+echo "image = 'c2sm/probtest:${PROBTEST_TAG}'" > probtest.toml
 echo "mounts = [ \"$(pwd)\" ]" >> probtest.toml
 echo "workdir = \"$(pwd)\"" >> probtest.toml
 echo "writable = true" >> probtest.toml
