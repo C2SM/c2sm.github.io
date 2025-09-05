@@ -21,7 +21,7 @@
 | **ECMWF** | European Centre for Medium-range Weather Forecasts | [ECMWF website :material-open-in-new:](https://www.ecmwf.int/en/about){:target="_blank"} |
 | **ED** | Executive Director ||
 | **ERA5** | ECMWF ReAnalysis v5 | [ERA4 website :material-open-in-new:](https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5){:target="_blank"} |
-| **ESGF** | Earth System Grid Federation | [ESGF website :material-open-in-new:](https://esgf.llnl.gov){:target="_blank"} |
+| **ESGF** | Earth System Grid Federation | [ESGF website :material-open-in-new:](https://esgf.github.io/index.html){:target="_blank"} |
 | **EXCLAIM** | EXtreme scale Computing and data platform for cLoud-resolving weAther and clImate Modeling | [EXCLAIM website :material-open-in-new:](https://exclaim.ethz.ch){:target="_blank"} |
 | **EXTPAR** | EXTernal PARameters for numerical weather prediction and climate application | [EXTPAR documentation :material-open-in-new:](https://c2sm.github.io/extpar/){:target="_blank"} |
 | **FPS** | Flagship Pilot Studies ||

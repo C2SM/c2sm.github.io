@@ -36,25 +36,57 @@ Clone the ICON repository:
 
 ### Säntis
 
-!!! info "Last update: 2025-05-22"
+!!! info "Last update: 2025-09-05"
 
     Säntis is regularly maintained by CSCS. In addition, the [uenvs](../../alps/uenvs.md) are updated irregularly. Therefore, some of the information provided here may be out of date. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Säntis.
 
-Run the following after navigating into ICON root folder (replace `cpu` by `gpu` if applicable):
+Run the following after navigating into the ICON root folder (replace `gpu` by `cpu` if applicable):
 
 ```console
 UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-uenv run ${UENV_VERSION} -- ./config/cscs/santis.cpu.nvhpc
+uenv run ${UENV_VERSION} -- ./config/cscs/santis.gpu.nvhpc
 ```
 
 !!! Note
 
-    If you have never used a uenv on Säntis, you need to create a uenv repo first: `uenv repo create`.
+    If you have never used a uenv on Säntis, you need to create a uenv repo first:
+    ```
+    uenv repo create
+    ```
 
-    In case you are using the uenv version for the first time, you need to pull the image first: `uenv image pull $UENV_VERSION`.
+    In case you are using the uenv version for the first time, you need to pull the image first:
+    ```
+    uenv image pull $UENV_VERSION
+    ```
 
-    For out-of-source builds navigate into the build folder and adapt the path to the configure wrapper above.
 
+#### Building out-of-source
+
+Out-of-source builds are useful if you want to have two or more compiled versions of ICON in the same repository.
+To achieve that, you simply need to create separate folders in the ICON root folder 
+and run the configure wrapper from there.
+
+For example, if you want to compile ICON both for `cpu` and `gpu`, create those directories:
+
+```bash
+mkdir nvhpc_cpu
+mkdir nvhpc_gpu
+```
+
+Then, navigate into the corresponding folder and source the configure wrapper for compilation:
+
+=== "`cpu`"
+    ```bash
+    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+    cd nvhpc_cpu
+    uenv run ${UENV_VERSION} -- ./../config/cscs/santis.cpu.nvhpc 
+    ```
+=== "`gpu`"
+    ```bash
+    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+    cd nvhpc_gpu
+    uenv run ${UENV_VERSION} -- ./../config/cscs/santis.gpu.nvhpc 
+    ```
 
 ### Euler
 
