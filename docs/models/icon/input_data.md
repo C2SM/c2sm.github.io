@@ -18,40 +18,52 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 ```
 /capstor/store/cscs/userlab/cws01/
 │
-├── ci/                              # CI and testing-related data
-│   └── input/                       # git lfs repo "testing-input-data" lives here
+├── testing-input-data/                 # CI and testing-related data (git lfs repo)
+│   └── input/                          # Test input datasets for ICON regression/CI
 │
-├── input/                           # All input data needed for ICON runs
-│   ├── icon-clm/                    # ICON-CLM specific input
-│   │   ├── aerosols                 # ICON-CLM aerosol input datasets
-│   │   ├── gcm                      # Global climate model boundary data
-│   │   ├── rcm                      # Regional climate model boundary data
-│   │   ├── ERA5                     # ERA5 reanalysis forcing data
-│   │   └── ERAInterim               # ERA-Interim reanalysis forcing data
-│   │
-│   ├── grids/                       # ICON global grids at different resolutions
-│   │   ├── R02B04/
-│   │   │   ├── icon_grid_0013_R02B04_G.nc
-│   │   │   └── index.txt
+├── input/                              # All input data
+│   ├── icon/                           # ICON-specific input
+│   │   ├── clm/                        # ICON-CLM input
+│   │   │   ├── independent/            # Input independent of case/domain
+│   │   │   │   ├── aerosols            # ICON-CLM aerosol input datasets
+│   │   │   │   ├── gcm                 # Global climate model boundary data
+│   │   │   │   ├── rcm                 # Regional climate model boundary data
+│   │   │   │   ├── ERA5                # ERA5 reanalysis forcing data
+│   │   │   │   └── ERAInterim          # ERA-Interim reanalysis forcing data
+│   │   │   │
+│   │   │   └── eur-11/                 # EURO-CORDEX 0.11° domain-specific input
+│   │   │       ├── aerosols
+│   │   │       ├── gcm
+│   │   │       ├── rcm
+│   │   │       ├── ERA5
+│   │   │       └── ERAInterim
 │   │   │
-│   │   ├── R02B05/
-│   │   │   ├── icon_grid_0019_R02B05_G.nc
-│   │   │   ├── aerosol_kinne/       # Aerosol climatologies
-│   │   │   ├── external_parameter/  # Surface and land-sea mask data
-│   │   │   ├── initial_conditions/  # Initial state for atmosphere/ocean
-│   │   │   ├── ozone/               # Ozone datasets
-│   │   │   ├── ozone_old/           # Legacy ozone datasets
-│   │   │   └── sst_and_seaice/      # SST & sea-ice boundary conditions
+│   │   ├── global/                     # ICON global model input
+│   │   │   ├── grids/                  # ICON global grids at different resolutions
+│   │   │   │   ├── R02B04/
+│   │   │   │   │   ├── icon_grid_0013_R02B04_G.nc
+│   │   │   │   │   └── index.txt
+│   │   │   │   ├── R02B05/
+│   │   │   │   │   ├── icon_grid_0019_R02B05_G.nc
+│   │   │   │   │   ├── aerosol_kinne/       # Aerosol climatologies
+│   │   │   │   │   ├── external_parameter/  # Surface and land-sea mask data
+│   │   │   │   │   ├── initial_conditions/  # Initial state for atmosphere/ocean
+│   │   │   │   │   ├── ozone/               # Ozone datasets
+│   │   │   │   │   ├── ozone_old/           # Legacy ozone datasets
+│   │   │   │   │   └── sst_and_seaice/      # SST & sea-ice boundary conditions
+│   │   │   │   └── ...                      # Other grids (R02B06, R02B07, ...)
+│   │   │   │
+│   │   │   └── misc/                        # Other ICON global input data
 │   │   │
-│   │   └── ...                      # Other grids (R02B06, R02B07, ...)
+│   │   └── misc/                            # Other ICON input not tied to CLM/global
 │   │
-│   └── misc/                        # Other input data not tied to specific grids
+│   └── misc/                                # Non-ICON input (placeholder for future)
 │
-└── reference/                       # Reference datasets
-    ├── observations/                # Ground-based or in-situ observations
-    ├── reanalysis/                  # Reanalysis datasets (e.g. ERA5, JRA-55)
-    ├── satellite/                   # Satellite observations for validation
-    └── model_comparisons/           # Reference data from other models
+└── reference/                               # Reference datasets
+    ├── observations/                        # Ground-based or in-situ observations
+    ├── reanalysis/                          # Reanalysis datasets (e.g. ERA5, JRA-55)
+    ├── satellite/                           # Satellite observations for validation
+    └── model_comparisons/                   # Reference data from other models
 ```
 
 
