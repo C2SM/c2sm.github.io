@@ -1,8 +1,6 @@
-# ICON-CLM Workflow
+# ICON-CLM Workflow for EURO-CORDEX 12 km Domain
 
-## EURO-CORDEX 12 km
-
-### SPICE
+## SPICE
 
 [SPICE](../../tools/spice.md) is a software created by the CLM community and serves as a processing chain / workflow tool
 tailored for ICON-CLM simulations.
@@ -33,7 +31,7 @@ Load the `netcdf-tools` uenv:
 uenv start --view=modules netcdf-tools/2024:v1
 ```
 
-#### Get latest SPICE version
+### Get latest SPICE version
 
 Clone SPICE v2.3.1 with the corresponding branch/tag:
 
@@ -42,7 +40,7 @@ git clone -b v2.3.1 git@github.com:C2SM/spice.git spice
 cd spice
 ```  
 
-#### Configuration
+### Configuration
 
 First, set the `SPICE_DIR` environment variable as it will be needed later on:
 
@@ -63,7 +61,7 @@ Alps is officially supported in SPICE >=v2.3 and can be configured in the follow
     build the software manually according to the
     [SPICE Docs :material-open-in-new:](https://hereon-coast.atlassian.net/wiki/spaces/SPICE/pages/983065/Install){:target="_blank"}.
 
-#### Get external data
+### Get external data
 
 The standard SPICE configuration needs ERAInterim or ERA5 data and initial
 and boundary conditions.
@@ -89,7 +87,7 @@ are provided by DKRZ. This data needs to be downloaded:
 
 The data is then available under `data/rcm`.
 
-#### Clone and build ICON
+### Clone and build ICON
 
 First, we will clone the official ICON release 2024.07:
 
@@ -123,7 +121,7 @@ Now, switch to another terminal to build ICON using the corresponding uenv:
 Afterwards, go back to your original terminal containing the 
 `netcdf-tools/2024:v1` uenv.
 
-#### Install Python virtual environment
+### Install Python virtual environment
 
 Some scripts in SPICE use Python. For that, some dependencies have to be installed.
 
@@ -156,13 +154,13 @@ ${SPICE_DIR}/venv/bin/python -c 'import xarray; import pandas; import numpy; imp
 ```
 Now your Python environment for SPICE is ready to go! 🚀
 
-#### Option 1) Use Template from C2SM's EURO-CORDEX Run
+### Option 1) Use Template from C2SM's EURO-CORDEX Run
 
 The official ICON-CLM setups are part of the [spice-setups :material-open-in-new:](https://github.com/C2SM/spice-setups){:target="_blank"} repository.
 Please follow the instructions in the [README :material-open-in-new:](https://github.com/C2SM/spice-setups/blob/main/README.md){:target="_blank"} file.
 
 
-#### Option 2) Manually Create ERA5-driven 12 km case
+### Option 2) Manually Create ERA5-driven 12 km case
 
 ??? note "Show instructions for manual ERA5-driven case setup"
 
@@ -312,7 +310,7 @@ Please follow the instructions in the [README :material-open-in-new:](https://gi
     SOLAR_DIR=${DATADIR_AERO}/independent/solar_radiation\n' ${job_settings_file}
     ```
 
-    ##### Changing the ICON namelist to match the official CLM configuration
+    #### Changing the ICON namelist to match the official CLM configuration
 
     The official setup can be copied from our `icon-clm_patch` repository, which should already 
     be present in `${SPICE_DIR}/src`.
@@ -323,7 +321,7 @@ Please follow the instructions in the [README :material-open-in-new:](https://gi
     cp -v ${SPICE_DIR}/src/icon-clm_patch/post.job.sh ${SPICE_DIR}/experiments/${EXP}/scripts
     ```
 
-    ##### Optional: Warm start run for official ICON-CLM EVAL run
+    #### Optional: Warm start run for official ICON-CLM EVAL run
 
     Replace the ICON run script:
 
@@ -339,7 +337,7 @@ Please follow the instructions in the [README :material-open-in-new:](https://gi
 
     Note that the `START_DATE` in the `job_settings` file needs to be adapted.
 
-#### Run the case
+### Run the case
 
 Navigate into your experiment folder and start the simulation chain with
 
@@ -347,50 +345,27 @@ Navigate into your experiment folder and start the simulation chain with
 ./subchain start
 ```
 
-##### `chain_status.log`
+#### `chain_status.log`
 
 The file `chain_status.log` can be inspected at any time and shows the current 
 state of the SPICE chain. It contains information about started and finished
 jobs.
 
 
-##### Log files
+#### Log files
 
 Job log files are located at `${SPICE_DIR}/experiments/work/${EXP}/joblogs`.
 
 
-##### Output
+#### Output
 
 Job output files are located at `${SPICE_DIR}/experiments/work/${EXP}/joboutputs`.
 
-##### Restarting the chain
+#### Restarting the chain
 
 1. Inspect `chain_status.log` to see which job failed.
 2. Fix the cause of the problem (e.g., increase walltime for corresponding job in `job_settings`).
 3. Check if `date.log` corresponds to the current chunk.
 3. Restart the chain by typing `./subchain <jobname>`. If the ICON job failed, use `./subchain icon noprep`.
 
-### EvaSuite
 
-EvaSuite is an addon for SPICE but also a standalone software for either
-
-1. Compare your simulation experiment with E-OBS or ERA5.
-2. Compare your simulation experiment and a reference simulation with E-OBS or ERA5.
-
-#### How to use
-
-EvaSuite v1.0 will be released in September 2025. Afterwards, it will be set up on Säntis. 
-
-!!! TODO
-    - Install
-    - Usage 
-
-### Reference
-
-- [Documentation :material-open-in-new:](https://hereon-coast.atlassian.net/wiki/spaces/SPICE/pages/983091/eva-Suite){:target="_blank"}
-- [Repository on GitLab :material-open-in-new:](https://gitlab.dkrz.de/clm-community/evasuite/HZG_Evaluation_Suite){:target="_blank"}
-
-## EURO-CORDEX high-resolution (km-scale)
-
-This will be Phase 2 of the ICON-CLM use case (EXCLAIM). Andreas Prein has
-the scientific lead here.
