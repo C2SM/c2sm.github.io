@@ -20,7 +20,8 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 │
 ├── ci                                  # CI 
 │   ├── testing-input-data/             # Input data for CI (git lfs repo)
-│   └── ref/                            # Reference
+│   └── buildbot_data/                  # Buildbot data
+│       └── ref/                        # Reference data (hashed)
 │
 ├── input/                              # All input data
 │   ├── icon/                           # ICON-specific input
