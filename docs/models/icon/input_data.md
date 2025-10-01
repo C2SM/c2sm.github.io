@@ -34,9 +34,7 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 │   │   │   └── eur-11/                 # EURO-CORDEX 0.11° domain-specific input
 │   │   │       ├── aerosols
 │   │   │       ├── gcm
-│   │   │       ├── rcm
-│   │   │       ├── ERA5
-│   │   │       └── ERAInterim
+│   │   │       └── rcm
 │   │   │
 │   │   ├── global/                     # ICON global model input
 │   │   │   ├── grids/                  # ICON global grids at different resolutions
