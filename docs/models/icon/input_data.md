@@ -15,12 +15,20 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 
 ### Directory Tree
 
+!!! warning "Work in Progress"
+
+    The directory tree below is a rough outline of the planned structure. It is subject
+    to change and non-exhaustive. If you find data that is in the wrong place, or if you
+    want to have your data added to the project, please contact
+    [Michael Jähn](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091). 
+
 ```
 /capstor/store/cscs/userlab/cws01/
 │
 ├── ci                                  # CI 
 │   ├── testing-input-data/             # Input data for CI (git lfs repo)
 │   └── buildbot_data/                  # Buildbot data
+│       ├── nwp                         # nwp
 │       └── ref/                        # Reference data (hashed)
 │
 ├── input/                              # All input data
@@ -33,7 +41,7 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 │   │   │   │   ├── ERA5                # ERA5 reanalysis forcing data
 │   │   │   │   └── ERAInterim          # ERA-Interim reanalysis forcing data
 │   │   │   │
-│   │   │   └── eur-11/                 # EURO-CORDEX 0.11° domain-specific input
+│   │   │   └── europe11/               # EURO-CORDEX 0.11° domain-specific input
 │   │   │       ├── aerosols
 │   │   │       ├── gcm
 │   │   │       └── rcm
@@ -59,9 +67,23 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 │   │
 │   └── misc/                                # Non-ICON input (placeholder for future)
 │
+├── pool
+│   └── data
+│       └── ICON
+│           └── buildbot_data                # Buildbot data
+│               ├── nwp                      # nwp
+│               └── ref                      # References data (hashed)
 └── reference/                               # Reference datasets
     ├── observations/                        # Ground-based or in-situ observations (e.g. eObs)
+    └── eObs
+        ├── eObs28.0
+        ├── eObs29.0
+        ├── eObs30.0
+        └── eObs31.0
     ├── reanalysis/                          # Reanalysis datasets (e.g. ERA5)
+    └── dkrz
+        ├── ERA5
+        └── ERAInterim
     ├── satellite/                           # Satellite observations for validation
     └── model_comparisons/                   # Reference data from other models
 ```
