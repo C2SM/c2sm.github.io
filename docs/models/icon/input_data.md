@@ -18,8 +18,10 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 ```
 /capstor/store/cscs/userlab/cws01/
 │
-├── testing-input-data/                 # CI and testing-related data (git lfs repo)
-│   └── input/                          # Test input datasets for ICON regression/CI
+├── ci                                  # CI 
+│   ├── testing-input-data/             # Input data for CI (git lfs repo)
+│   └── buildbot_data/                  # Buildbot data
+│       └── ref/                        # Reference data (hashed)
 │
 ├── input/                              # All input data
 │   ├── icon/                           # ICON-specific input
@@ -58,8 +60,8 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 │   └── misc/                                # Non-ICON input (placeholder for future)
 │
 └── reference/                               # Reference datasets
-    ├── observations/                        # Ground-based or in-situ observations
-    ├── reanalysis/                          # Reanalysis datasets (e.g. ERA5, JRA-55)
+    ├── observations/                        # Ground-based or in-situ observations (e.g. eObs)
+    ├── reanalysis/                          # Reanalysis datasets (e.g. ERA5)
     ├── satellite/                           # Satellite observations for validation
     └── model_comparisons/                   # Reference data from other models
 ```
