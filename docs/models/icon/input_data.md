@@ -38,8 +38,6 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 │   │   │   │   ├── aerosols            # ICON-CLM aerosol input datasets
 │   │   │   │   ├── gcm                 # Global climate model boundary data
 │   │   │   │   ├── rcm                 # Regional climate model boundary data
-│   │   │   │   ├── ERA5                # ERA5 reanalysis forcing data
-│   │   │   │   └── ERAInterim          # ERA-Interim reanalysis forcing data
 │   │   │   │
 │   │   │   └── europe11/               # EURO-CORDEX 0.11° domain-specific input
 │   │   │       ├── aerosols
@@ -73,17 +71,18 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 │           └── buildbot_data                # Buildbot data
 │               ├── nwp                      # nwp
 │               └── ref                      # References data (hashed)
+│
 └── reference/                               # Reference datasets
     ├── observations/                        # Ground-based or in-situ observations (e.g. eObs)
-    └── eObs
-        ├── eObs28.0
-        ├── eObs29.0
-        ├── eObs30.0
-        └── eObs31.0
+    |   └── eObs
+    |       ├── eObs28.0
+    |       ├── eObs29.0
+    |       ├── eObs30.0
+    |       └── eObs31.0
     ├── reanalysis/                          # Reanalysis datasets (e.g. ERA5)
-    └── dkrz
-        ├── ERA5
-        └── ERAInterim
+    ├── dkrz
+    |   ├── ERA5
+    |   └── ERAInterim
     ├── satellite/                           # Satellite observations for validation
     └── model_comparisons/                   # Reference data from other models
 ```
