@@ -20,7 +20,7 @@ On Säntis, all ICON input data is collected in the project `cws01`.
     The directory tree below is a rough outline of the planned structure. It is subject
     to change and non-exhaustive. If you find data that is in the wrong place, or if you
     want to have your data added to the project, please contact
-    [Michael Jähn](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091). 
+    [Michael Jähn :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091){:target="_blank"}. 
 
 ```
 /capstor/store/cscs/userlab/cws01/
