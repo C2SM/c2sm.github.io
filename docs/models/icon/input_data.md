@@ -25,7 +25,7 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 ```
 /capstor/store/cscs/userlab/cws01/
 │
-├── ci                                  # CI 
+├── ci/                                 # CI 
 │   ├── testing-input-data/             # Input data for CI (git lfs repo)
 │   └── buildbot_data/                  # Buildbot data
 │       ├── nwp                         # nwp
@@ -35,14 +35,14 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 │   ├── icon/                           # ICON-specific input
 │   │   ├── clm/                        # ICON-CLM input
 │   │   │   ├── independent/            # Input independent of case/domain
-│   │   │   │   ├── aerosols            # ICON-CLM aerosol input datasets
-│   │   │   │   ├── gcm                 # Global climate model boundary data
-│   │   │   │   ├── rcm                 # Regional climate model boundary data
+│   │   │   │   ├── aerosols/           # ICON-CLM aerosol input datasets
+│   │   │   │   ├── gcm/                # Global climate model boundary data
+│   │   │   │   └── rcm/                # Regional climate model boundary data
 │   │   │   │
 │   │   │   └── europe11/               # EURO-CORDEX 0.11° domain-specific input
-│   │   │       ├── aerosols
-│   │   │       ├── gcm
-│   │   │       └── rcm
+│   │   │       ├── aerosols/
+│   │   │       ├── gcm/
+│   │   │       └── rcm/
 │   │   │
 │   │   ├── global/                     # ICON global model input
 │   │   │   ├── grids/                  # ICON global grids at different resolutions
@@ -65,24 +65,18 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 │   │
 │   └── misc/                                # Non-ICON input (placeholder for future)
 │
-├── pool
-│   └── data
-│       └── ICON
-│           └── buildbot_data                # Buildbot data
-│               ├── nwp                      # nwp
-│               └── ref                      # References data (hashed)
-│
 └── reference/                               # Reference datasets
-    ├── observations/                        # Ground-based or in-situ observations (e.g. eObs)
-    |   └── eObs
-    |       ├── eObs28.0
-    |       ├── eObs29.0
-    |       ├── eObs30.0
-    |       └── eObs31.0
+    ├── observations/                        # Ground-based or in-situ observations
+    |   └── eObs/                            # E-OBS daily gridded meteorological data for Europe
+    |       ├── eObs28.0/
+    |       ├── eObs29.0/
+    |       ├── eObs30.0/
+    |       └── eObs31.0/
     ├── reanalysis/                          # Reanalysis datasets (e.g. ERA5)
-    ├── dkrz
-    |   ├── ERA5
-    |   └── ERAInterim
+    |   ├── ERA5/
+    |   └── dkrz/                            # Synced from DKRZ, ready-to-use for SPICE (CLM runs)
+    |       ├── ERA5/                        # ERA5 (updated as soon as new data is available)
+    |       └── ERAInterim/                  # ERAInterim (static)
     ├── satellite/                           # Satellite observations for validation
     └── model_comparisons/                   # Reference data from other models
 ```
@@ -92,7 +86,7 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 
 === "Santis"
     ```shell
-    /capstor/store/cscs/userlab/cws01/pool/data/ICON
+    /capstor/store/cscs/userlab/cws01/input/icon
     ```  
 === "Balfrin"
     ```shell
@@ -109,7 +103,7 @@ The input data for standard ICON tests are stored in a [Git-lfs repository :mate
 
 === "Santis"
     ```shell
-     /capstor/store/cscs/userlab/d126/testing-input-data
+     /capstor/store/cscs/userlab/cws01/ci/testing-input-data
     ```  
 === "Balfrin"
     ```shell
