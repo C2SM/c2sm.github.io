@@ -25,27 +25,27 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 ```
 /capstor/store/cscs/userlab/cws01/
 │
-├── ci/                                 # CI 
-│   ├── testing-input-data/             # Input data for CI (git lfs repo)
-│   └── buildbot_data/                  # Buildbot data
-│       ├── nwp/                        # nwp
-│       └── ref/                        # Reference data (hashed)
+├── ci/                                      # CI 
+│   ├── testing-input-data/                  # Input data for CI (git lfs repo)
+│   └── buildbot_data/                       # Buildbot data
+│       ├── nwp/                             # nwp test case data
+│       └── ref/                             # Reference data (hashed)
 │
-├── input/                              # All input data
-│   ├── icon/                           # ICON-specific input
-│   │   ├── clm/                        # ICON-CLM input
-│   │   │   ├── independent/            # Input independent of case/domain
-│   │   │   │   ├── aerosols/           # ICON-CLM aerosol input datasets
-│   │   │   │   ├── gcm/                # Global climate model boundary data
-│   │   │   │   └── rcm/                # Regional climate model boundary data
+├── input/                                   # All input data
+│   ├── icon/                                # ICON-specific input
+│   │   ├── clm/                             # ICON-CLM input
+│   │   │   ├── independent/                 # Input independent of case/domain
+│   │   │   │   ├── aerosols/                # ICON-CLM aerosol input datasets
+│   │   │   │   ├── gcm/                     # Global climate model boundary data
+│   │   │   │   └── rcm/                     # Regional climate model boundary data
 │   │   │   │
-│   │   │   └── europe11/               # EURO-CORDEX 0.11° domain-specific input
+│   │   │   └── europe11/                    # EURO-CORDEX 0.11° domain-specific input
 │   │   │       ├── aerosols/
 │   │   │       ├── gcm/
 │   │   │       └── rcm/
 │   │   │
-│   │   ├── global/                     # ICON global model input
-│   │   │   ├── grids/                  # ICON global grids at different resolutions
+│   │   ├── global/                          # ICON global model input
+│   │   │   ├── grids/                       # ICON global grids at different resolutions
 │   │   │   │   ├── R02B04/
 │   │   │   │   │   ├── icon_grid_0013_R02B04_G.nc
 │   │   │   │   │   └── index.txt
@@ -61,7 +61,11 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 │   │   │   │
 │   │   │   └── misc/                        # Other ICON global input data
 │   │   │
-│   │   └── misc/                            # Other ICON input not tied to CLM/global
+│   │   ├── public/                          # Public data
+│   │   │   └── grids/                       # Public grids from MPI-M and DWD
+│   │   │       ├── edzw/
+│   │   │       └── mpim/
+│   │   └── regional/                        # ICON regional model input
 │   │
 │   └── misc/                                # Non-ICON input (placeholder for future)
 │
