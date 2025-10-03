@@ -63,8 +63,8 @@ On Säntis, all ICON input data is collected in the project `cws01`.
 │   │   │
 │   │   ├── public/                          # Public data
 │   │   │   └── grids/                       # Public grids from MPI-M and DWD
-│   │   │       ├── edzw
-│   │   │       └── mpim
+│   │   │       ├── edzw/
+│   │   │       └── mpim/
 │   │   └── regional/                        # ICON regional model input
 │   │
 │   └── misc/                                # Non-ICON input (placeholder for future)
