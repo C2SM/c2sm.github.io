@@ -2948,62 +2948,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#option-1-use-template-from-c2sms-euro-cordex-run" class="md-nav__link">
+  <a href="#use-experiment-template-from-c2sms-euro-cordex-run" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 1) Use Template from C2SM's EURO-CORDEX Run
+      Use Experiment Template from C2SM's EURO-CORDEX Run
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-2-manually-create-era5-driven-12-km-case" class="md-nav__link">
-    <span class="md-ellipsis">
-      Option 2) Manually Create ERA5-driven 12 km case
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Option 2) Manually Create ERA5-driven 12 km case">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adjust-boundary-data-to-era5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adjust boundary data to ERA5
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adapt-job_settings-file-and-fix-icon-run-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adapt job_settings file and fix ICON run script
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changing-the-icon-namelist-to-match-the-official-clm-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Changing the ICON namelist to match the official CLM configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#optional-warm-start-run-for-official-icon-clm-eval-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      Optional: Warm start run for official ICON-CLM EVAL run
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -4023,62 +3972,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#option-1-use-template-from-c2sms-euro-cordex-run" class="md-nav__link">
+  <a href="#use-experiment-template-from-c2sms-euro-cordex-run" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 1) Use Template from C2SM's EURO-CORDEX Run
+      Use Experiment Template from C2SM's EURO-CORDEX Run
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-2-manually-create-era5-driven-12-km-case" class="md-nav__link">
-    <span class="md-ellipsis">
-      Option 2) Manually Create ERA5-driven 12 km case
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Option 2) Manually Create ERA5-driven 12 km case">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adjust-boundary-data-to-era5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adjust boundary data to ERA5
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adapt-job_settings-file-and-fix-icon-run-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adapt job_settings file and fix ICON run script
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changing-the-icon-namelist-to-match-the-official-clm-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Changing the ICON namelist to match the official CLM configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#optional-warm-start-run-for-official-icon-clm-eval-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      Optional: Warm start run for official ICON-CLM EVAL run
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -4267,253 +4165,9 @@ pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </s
 <p><div class="highlight"><pre><span></span><code><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/venv/bin/python<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import xarray; import pandas; import numpy; import scipy; import h5netcdf; import matplotlib; import cftime; import netCDF4; print(&quot;All modules imported successfully!&quot;)&#39;</span>
 </code></pre></div>
 Now your Python environment for SPICE is ready to go! 🚀</p>
-<h3 id="option-1-use-template-from-c2sms-euro-cordex-run">Option 1) Use Template from C2SM's EURO-CORDEX Run<a class="headerlink" href="#option-1-use-template-from-c2sms-euro-cordex-run" title="Permanent link">&para;</a></h3>
+<h3 id="use-experiment-template-from-c2sms-euro-cordex-run">Use Experiment Template from C2SM's EURO-CORDEX Run<a class="headerlink" href="#use-experiment-template-from-c2sms-euro-cordex-run" title="Permanent link">&para;</a></h3>
 <p>The official ICON-CLM setups are part of the <a href="https://github.com/C2SM/spice-setups" target="_blank">spice-setups <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> repository.
 Please follow the instructions in the <a href="https://github.com/C2SM/spice-setups/blob/main/README.md" target="_blank">README <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> file.</p>
-<h3 id="option-2-manually-create-era5-driven-12-km-case">Option 2) Manually Create ERA5-driven 12 km case<a class="headerlink" href="#option-2-manually-create-era5-driven-12-km-case" title="Permanent link">&para;</a></h3>
-<details class="note">
-<summary>Show instructions for manual ERA5-driven case setup</summary>
-<p>From the SPICE root directory, let's create an experiment folder and 
-copy the <code>sp001</code> case in there. If you want a different name for your
-experiment, just modify the <code>EXP</code> variable.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The <code>sp001</code> is the standard <code>gcm2icon</code> test case defined in SPICE.
-It is run on the EURO-CORDEX domain at 44 km horizontal resolution
-and uses ERAInterim data as initial and boundary conditions.
-If you want to run this case, skip the next subsections and continue
-with <a href="#install-python-virtual-environment">Install Python virtual environment</a>.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="nv">EXP</span><span class="o">=</span>EVAL-EUR12-ERA5
-mkdir<span class="w"> </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/experiments
-cp<span class="w"> </span>-r<span class="w"> </span><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/chain/gcm2icon/sp001<span class="w"> </span><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/experiments
-mv<span class="w"> </span><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/experiments/sp001<span class="w"> </span><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/experiments/<span class="si">${</span><span class="nv">EXP</span><span class="si">}</span>
-</code></pre></div>
-<p>Navigate to the directory where our new case is located:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/experiments/<span class="si">${</span><span class="nv">EXP</span><span class="si">}</span>
-</code></pre></div>
-<h5 id="adjust-boundary-data-to-era5">Adjust boundary data to ERA5<a class="headerlink" href="#adjust-boundary-data-to-era5" title="Permanent link">&para;</a></h5>
-<p>Since the standard spice case <code>sp001</code> takes ERAInterim data as input, 
-we need to replace this with ERA5.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Extract lines 17-23 from the source file</span>
-<span class="nv">source_lines</span><span class="o">=</span><span class="k">$(</span>sed<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;17,23p&#39;</span><span class="w"> </span><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/chain/boundary_data_options/era5/job_settings<span class="k">)</span>
-
-<span class="c1"># Define job_settings_file</span>
-<span class="nv">job_settings_file</span><span class="o">=</span><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/experiments/<span class="si">${</span><span class="nv">EXP</span><span class="si">}</span>/job_settings
-
-<span class="c1"># Replace lines 165-173 in the target file with the extracted lines</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;165,173d&#39;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-<span class="nv">line_num</span><span class="o">=</span><span class="m">165</span>
-<span class="k">while</span><span class="w"> </span><span class="nv">IFS</span><span class="o">=</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>line<span class="p">;</span><span class="w"> </span><span class="k">do</span>
-<span class="w">    </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">line_num</span><span class="si">}</span><span class="s2">i </span><span class="nv">$line</span><span class="s2">&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-<span class="w">    </span><span class="nv">line_num</span><span class="o">=</span><span class="k">$((</span><span class="nv">line_num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span>
-<span class="k">done</span><span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$source_lines</span><span class="s2">&quot;</span>
-
-<span class="c1"># Replace DKRZ data folder with Alps one</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s|/pool/data/CLMcom/CCLM/reanalyses|/capstor/store/cscs/c2sm/c2sme/reanalyses_dkrz|g&#39;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-</code></pre></div>
-<p>We also need to replace the <code>prep</code> job. This is simply done by copying
-the corresponding file from the boundary data options to our working
-directory:</p>
-<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/chain/boundary_data_options/era5/prep.job.sh<span class="w"> </span><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/experiments/<span class="si">${</span><span class="nv">EXP</span><span class="si">}</span>/scripts
-</code></pre></div>
-<h5 id="adapt-job_settings-file-and-fix-icon-run-script">Adapt <code>job_settings</code> file and fix ICON run script<a class="headerlink" href="#adapt-job_settings-file-and-fix-icon-run-script" title="Permanent link">&para;</a></h5>
-<p>Now, there are still some necessary adaptations to the <code>job_settings</code> file to be done,
-which includes changing paths, ICON executable, meta data and some other settings.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># General settings</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|icon-nwp|icon-model|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|nco-5.1.9-7pd2hhq2wllvietf2rvclejzxgcjwosq|nco-5.1.9-yykwws3dmcypjzraijgzagmkb6ml2zzo|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|netcdf-c-4.9.2-azccejv4b3ba227zys3e7mkdo6fxxhlq|netcdf-c-4.9.2-5ijnfossknlii33dnqn7asnlmzst3444|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|netcdf-tools/2024:v1-rc1|netcdf-tools/2024:v1|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|EMAIL_ADDRESS= |EMAIL_ADDRESS=michael.jaehn@c2sm.ethz.ch |g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-
-<span class="c1"># EURO-CORDEX 12 km</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|sp001|</span><span class="si">${</span><span class="nv">EXP</span><span class="si">}</span><span class="s2">|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|PFDIR=\${SPDIR}/chain/gcm2icon|PFDIR=\${SPDIR}/experiments|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|WORKDIR=\${SPDIR}/chain|WORKDIR=\${SPDIR}/experiments/work|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|SCRATCHDIR=\${SPDIR}/chain|SCRATCHDIR=\${SPDIR}/experiments/scratch|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|ARCHIVE_OUTDIR=\${SPDIR}/chain|ARCHIVE_OUTDIR=\${SPDIR}/experiments|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|1979-01-01|1940-01-01|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|1979-03-01|2024-01-01|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|europe044|europe011|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|0.44|0.11|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|TIME_ICON=00-00:30:00|TIME_ICON=00-01:00:00|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|TIME_ARCH=\&quot;00-00:30:00\&quot;|TIME_ARCH=\&quot;00-01:30:00\&quot;|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|ITYPE_TS=1|ITYPE_TS=2|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|ITYPE_COMPRESS_POST=0|ITYPE_COMPRESS_POST=1|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|ITYPE_COMPRESS_ARCH=0|ITYPE_COMPRESS_ARCH=1|g&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;/ZML_SOIL/c\ZML_SOIL=&quot;0.005,0.025,0.07,0.16,0.34,0.7,1.42,2.86,5.74,11.5&quot;    # soil level&#39;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-</code></pre></div>
-<p>For better readability, the following replacements are done:</p>
-<p><strong>General settings:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Original String</th>
-<th>Replacement String</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>icon-nwp</code></td>
-<td><code>icon-model</code></td>
-<td>Root directory of ICON model</td>
-</tr>
-<tr>
-<td><code>nco-5.1.9-7pd2hhq2wllvietf2rvclejzxgcjwosq</code></td>
-<td><code>nco-5.1.9-yykwws3dmcypjzraijgzagmkb6ml2zzo</code></td>
-<td>New nco path due to uenv</td>
-</tr>
-<tr>
-<td><code>netcdf-c-4.9.2-azccejv4b3ba227zys3e7mkdo6fxxhlq</code></td>
-<td><code>netcdf-c-4.9.2-5ijnfossknlii33dnqn7asnlmzst3444</code></td>
-<td>New netcdf path due to uenv</td>
-</tr>
-<tr>
-<td><code>netcdf-tools/2024:v1-rc1</code></td>
-<td><code>netcdf-tools/2024:v1</code></td>
-<td>New uenv on santis</td>
-</tr>
-<tr>
-<td><code>EMAIL_ADDRESS=</code></td>
-<td><code>EMAIL_ADDRESS=michael.jaehn@c2sm.ethz.ch</code></td>
-<td>Add email address for notifications</td>
-</tr>
-</tbody>
-</table>
-<p><strong>EURO-CORDEX 12 km</strong>:</p>
-<table>
-<thead>
-<tr>
-<th>Original String</th>
-<th>Replacement String</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>sp001</code></td>
-<td><code>EVAL-EUR12-ERA5</code></td>
-<td>Name of the experiment</td>
-</tr>
-<tr>
-<td><code>PFDIR=${SPDIR}/chain/gcm2icon</code></td>
-<td><code>PFDIR=${SPDIR}/experiments</code></td>
-<td>Base directory of experiment</td>
-</tr>
-<tr>
-<td><code>WORKDIR=${SPDIR}/chain</code></td>
-<td><code>WORKDIR=${SPDIR}/experiments/work</code></td>
-<td>Working directory of experiment</td>
-</tr>
-<tr>
-<td><code>SCRATCHDIR=${SPDIR}/chain</code></td>
-<td><code>SCRATCHDIR=${SPDIR}/experiments/scratch</code></td>
-<td>Scratch directory of experiment</td>
-</tr>
-<tr>
-<td><code>ARCHIVE_OUTDIR=${SPDIR}/chain</code></td>
-<td><code>ARCHIVE_OUTDIR=${SPDIR}/experiments</code></td>
-<td>Archive directory of experiment</td>
-</tr>
-<tr>
-<td><code>1979-01-01</code></td>
-<td><code>1940-01-01</code></td>
-<td>Start date</td>
-</tr>
-<tr>
-<td><code>1979-03-01</code></td>
-<td><code>2024-01-01</code></td>
-<td>End date</td>
-</tr>
-<tr>
-<td><code>europe044</code></td>
-<td><code>europe011</code></td>
-<td>Folder names for ERA5 data</td>
-</tr>
-<tr>
-<td><code>0.44</code></td>
-<td><code>0.11</code></td>
-<td>netCDF metadata for 11 km run</td>
-</tr>
-<tr>
-<td><code>TIME_ICON=00-00:30:00</code></td>
-<td><code>TIME_ICON=00-01:00:00</code></td>
-<td>Increase walltime for icon job</td>
-</tr>
-<tr>
-<td><code>TIME_ARCH="00-00:30:00"</code></td>
-<td><code>TIME_ARCH="00-01:30:00"</code></td>
-<td>Increase walltime for arch job</td>
-</tr>
-<tr>
-<td><code>ITYPE_TS=1</code></td>
-<td><code>ITYPE_TS=2</code></td>
-<td>Yearly time series</td>
-</tr>
-<tr>
-<td><code>ITYPE_COMPRESS_POST=0</code></td>
-<td><code>ITYPE_COMPRESS_POST=1</code></td>
-<td>netCDF compression for post data</td>
-</tr>
-<tr>
-<td><code>ITYPE_COMPRESS_ARCH=0</code></td>
-<td><code>ITYPE_COMPRESS_ARCH=1</code></td>
-<td>netCDF compression for arch data</td>
-</tr>
-<tr>
-<td><code>${ICONDIR}/run</code></td>
-<td><code>bash ${ICONDIR}/run</code></td>
-<td>Explicitly call bash for the wrapper script</td>
-</tr>
-<tr>
-<td><code>ZML_SOIL</code></td>
-<td><code>ZML_SOIL=...</code></td>
-<td>New soil height values</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>There might be even more changes to the <code>job_settings</code> file, depending on your setup.
-For example, your CSCS project needs to be set for the <code>PROJECT_ACCOUNT</code> variable.
-Also, for production runs, all variables starting with <code>GA_</code> should be set accordingly,
-as they are important for the netCDF meta data.</p>
-</div>
-<p>Furthermore, additional data paths for transient aerosols, ozone and 
-solar irradiation need to be set.</p>
-<div class="highlight"><pre><span></span><code>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;/^TARGET_GRID=/a \</span>
-<span class="s1">\</span>
-<span class="s1"># Additional directories for aerosol treatment\</span>
-<span class="s1">DATADIR_AERO=/capstor/store/cscs/c2sm/c2sme/ICON-CLM/rcm_new\</span>
-<span class="s1">\</span>
-<span class="s1">KINNE_DIR=${DATADIR_AERO}/europe011/interpolated_aeop_R13B05\</span>
-<span class="s1">VOLC_DIR=${DATADIR_AERO}/independent/volcanic_aeropt\</span>
-<span class="s1">SP_DIR=${DATADIR_AERO}/independent/MACv2_simple_plumes_merged\</span>
-<span class="s1">\</span>
-<span class="s1"># Additional directory for ozone treatment\</span>
-<span class="s1">OZONE_DIR=${DATADIR_AERO}/europe011/ozone_europe011\</span>
-<span class="s1">\</span>
-<span class="s1"># Additional directory for solar irradiation\</span>
-<span class="s1">SOLAR_DIR=${DATADIR_AERO}/independent/solar_radiation\n&#39;</span><span class="w"> </span><span class="si">${</span><span class="nv">job_settings_file</span><span class="si">}</span>
-</code></pre></div>
-<h4 id="changing-the-icon-namelist-to-match-the-official-clm-configuration">Changing the ICON namelist to match the official CLM configuration<a class="headerlink" href="#changing-the-icon-namelist-to-match-the-official-clm-configuration" title="Permanent link">&para;</a></h4>
-<p>The official setup can be copied from our <code>icon-clm_patch</code> repository, which should already 
-be present in <code>${SPICE_DIR}/src</code>.
-This also includes a change for the ICON run script around the <code>srun</code> command.</p>
-<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/src/icon-clm_patch/icon.job.sh<span class="w"> </span><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/experiments/<span class="si">${</span><span class="nv">EXP</span><span class="si">}</span>/scripts
-cp<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/src/icon-clm_patch/post.job.sh<span class="w"> </span><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/experiments/<span class="si">${</span><span class="nv">EXP</span><span class="si">}</span>/scripts
-</code></pre></div>
-<h4 id="optional-warm-start-run-for-official-icon-clm-eval-run">Optional: Warm start run for official ICON-CLM EVAL run<a class="headerlink" href="#optional-warm-start-run-for-official-icon-clm-eval-run" title="Permanent link">&para;</a></h4>
-<p>Replace the ICON run script:</p>
-<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/src/icon-clm_patch/icon-warm.job.sh<span class="w"> </span><span class="si">${</span><span class="nv">SPICE_DIR</span><span class="si">}</span>/experiments/<span class="si">${</span><span class="nv">EXP</span><span class="si">}</span>/scripts/icon.job.sh
-</code></pre></div>
-<p>It takes the restart file directory (1950/01):</p>
-<div class="highlight"><pre><span></span><code>/capstor/store/cscs/c2sm/c2sme/ICON-CLM/multifile_restart_ATMO_19500101T000000Z.mfr
-</code></pre></div>
-<p>Note that the <code>START_DATE</code> in the <code>job_settings</code> file needs to be adapted.</p>
-</details>
 <h3 id="run-the-case">Run the case<a class="headerlink" href="#run-the-case" title="Permanent link">&para;</a></h3>
 <p>Navigate into your experiment folder and start the simulation chain with</p>
 <div class="highlight"><pre><span></span><code>./subchain<span class="w"> </span>start
@@ -4555,7 +4209,7 @@ jobs.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 2, 2025 14:54:40 UTC">October 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 3, 2025 08:56:49 UTC">October 3, 2025</span>
   </span>
 
     
@@ -4565,7 +4219,7 @@ jobs.</p>
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 2, 2025 14:54:40 UTC">October 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 3, 2025 08:56:49 UTC">October 3, 2025</span>
   </span>
 
     
