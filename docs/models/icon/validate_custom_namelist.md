@@ -2,7 +2,7 @@
 
 [ICON :material-open-in-new:](https://www.icon-model.org/icon_model){:target="_blank"} is a complex software, and troubleshooting large configurations can be difficult. To avoid problems, we recommend starting every new namelist configuration with a small test case. Add this test case to the ICON CI to ensure it stays compatible with future developments.
 
-You can find a list of available tests in [icon/run/checksuite.icon-dev :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/tree/master/run/checksuite.icon-dev){:target="_blank"}. Keep in mind that not all tests are included in the CI, and most are only checked on one or two machines. To see which tests run on Säntis, check the files `icon/scripts/experiments/<institution>/*_tests.yml` for the `santis` keyword. More details on test settings are available under [Experiment and test settings :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/How-to-set-up-new-test-experiments-for-CI#experiment-and-test-settings){:target="_blank"}.
+You can find a list of available tests in the ICON documentation for the latest ICON-MPIM version under [System Tests :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-mpim/infrastructure/testing/system_tests.html#ref-infrastructure-system-tests){:target="_blank"} within `CI System Tests on External Machines by Builder`.
 
 After the initial test case, we suggest building up step by step: from a small ICON test case to increasingly complex setups, and finally to your full production configuration.
 
@@ -39,7 +39,7 @@ The idea here is to test the code path of the final setup but with only a few ti
 
 #### Compile Out-of-Source
 
-Follow the instructions in [Configure and compile](compile_and_run.md){:target="_blank"} to compile ICON out-of-source for CPU and GPU.
+Follow the instructions in [Configure and compile](compile_and_run.md) to compile ICON out-of-source for CPU and GPU.
 
 #### Create Test Case
 
@@ -47,7 +47,7 @@ Set up an ICON test case with a low number of grid points and a few time steps (
 
 #### Add Test Case to Checksuite
 
-Follow the step-by-step guide in [How to add experiments to a CI list :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/How-to-set-up-new-test-experiments-for-CI#how-to-add-experiments-to-a-ci-list){:target="_blank"} to add your test case to the checksuite. Start with the `checksuite_modes` for the mpi and nproma tests (`'nm'`) for the machine you are testing on.
+Follow the step-by-step guide in [How to add experiments to a CI list :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/How-to-set-up-new-test-experiments-for-CI#how-to-add-experiments-to-a-ci-list){:target="_blank"} to add your test case to the checksuite. Start with the `checksuite_modes` for the base tests (`'b'`) for the machine you are testing on.
 
 !!! note "Add test cases to out-of-source build"
 
