@@ -48,6 +48,8 @@ Host balfrin*
   ProxyJump ela
 ```
 
+This allows standard connections like `ssh santis`, but you can also specify a login node if needed, e.g., `ssh santis-ln002`. Replace `cscsusername` with your actual username.
+
 ## Support by CSCS
 
 General information about access, file systems, vClusters, user environments and much more can be found at the [CSCS documentation :material-open-in-new:](https://docs.cscs.ch/){:target="_blank"}.
