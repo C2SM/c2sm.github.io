@@ -58,7 +58,7 @@ Host balfrin*
 ```
 
 This allows standard connections like `ssh santis`, but you can also specify a login node if needed,
-e.g., `ssh santis-ln002`. Replace `cscsusername` with your actual username.
+e.g., `ssh santis-ln002`. Replace `cscsusername` with your actual username. 
 
 ## User Environments
 
