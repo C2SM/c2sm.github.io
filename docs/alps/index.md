@@ -30,7 +30,7 @@ The following table shows current clusters distribution on Alps at CSCS
 </small>
 
 More information about clusters on Alps is available on the
-[official CSCS documentation :material-open-in-new:](https://docs.cscs.ch/alps/clusters/#alps-clusters){:target="_blank"}.
+[official CSCS documentation :material-open-in-new:](https://docs.cscs.ch/clusters/){:target="_blank"}.
 
 ## Access
 
