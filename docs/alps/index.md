@@ -14,13 +14,11 @@ The following table shows current clusters distribution on Alps at CSCS (only C2
 | Daint    | User Lab           | ~ 600 Grace-Hopper nodes | :x:                |
 | Clariden | Machine Learning   | ~ 800 Grace-Hopper nodes | :x:                |
 
-
 <small>
 :white_check_mark: Full C2SM support<br />
 :yellow_circle: Partial or limited C2SM support (help available on request)<br />
 :x: No C2SM support
 </small>
-
 
 More information about clusters on Alps is available on the [official CSCS documentation :material-open-in-new:](https://docs.cscs.ch/alps/clusters/#alps-clusters){:target="_blank"}.
 
@@ -55,7 +53,6 @@ This allows standard connections like `ssh santis`, but you can also specify a l
 General information about access, file systems, vClusters, user environments and much more can be found at the [CSCS documentation :material-open-in-new:](https://docs.cscs.ch/){:target="_blank"}.
 
 To contact CSCS staff directly, users can join their dedicated [Slack workspace :material-open-in-new:](https://cscs-users.slack.com){:target="_blank"}, with dedicated channels for each vCluster. 
-
 
 ## Introductory Workshop Material
 
