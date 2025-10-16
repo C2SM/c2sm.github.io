@@ -6,16 +6,47 @@ Alps is a distributed HPC infrastructure managed by CSCS. Contrary to traditiona
 
 The following table shows current clusters distribution on Alps at CSCS (only C2SM relevant clusters are shown).
 
-| vCluster | Activity          | Share            |
-|----------|-------------------|------------------|
-| Santis   | Weather & Climate | ~ 500 GH nodes   |
-| Daint    | User Lab          | ~ 600 GH nodes   |
-| Clariden | Machine Learning  | ~ 800 GH nodes   |
-| Eiger    |                   | multi-core nodes |
+| vCluster | Activity           | Share                    | C2SM Support       |
+|----------|--------------------|--------------------------|--------------------|
+| Santis   | Weather & Climate  | ~ 430 Grace-Hopper nodes | :white_check_mark: |
+| Balfrin  | MeteoSwiss         | ~ 40 A100 GPU nodes      | :white_check_mark: |
+| Eiger    | CPU-only workloads | ~ 580 multicore nodes    | :yellow_circle:    |
+| Daint    | User Lab           | ~ 600 Grace-Hopper nodes | :x:                |
+| Clariden | Machine Learning   | ~ 800 Grace-Hopper nodes | :x:                |
 
-*GH = Grace Hopper*
+
+<small>
+:white_check_mark: Full C2SM support<br />
+:yellow_circle: Partial or limited C2SM support (help available on request)<br />
+:x: No C2SM support
+</small>
+
 
 More information about clusters on Alps is available on the [official CSCS documentation :material-open-in-new:](https://docs.cscs.ch/alps/clusters/#alps-clusters){:target="_blank"}.
+
+## Access
+
+Connection to vClusters happens as for any other CSCS machine, e.g. `ssh santis.cscs.ch` with a `ProxyJump` on `ela.cscs.ch`.
+A section in the `~/.ssh/config` could look as follows:
+
+```config title="~/.ssh.config"
+Host ela
+  Hostname ela.cscs.ch
+  User cscsusername
+  IdentityFile ~/.ssh/cscs-key
+
+Host santis* daint* 
+  Hostname %h.alps.cscs.ch
+  User cscsusername
+  IdentityFile ~/.ssh/cscs-key
+  ProxyJump ela
+
+Host balfrin* 
+  Hostname %h.cscs.ch
+  User cscsusername
+  IdentityFile ~/.ssh/cscs-key
+  ProxyJump ela
+```
 
 ## Support by CSCS
 
