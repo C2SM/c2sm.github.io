@@ -13,7 +13,7 @@ The vCluster `santis` is dedicated to **Climate and Weather** applications. It i
 | `icon/25.2:v3`         | build and run ICON             |
 | `netcdf-tools/2024:v1` | pre- and post-processing tools |
 
-You can find the most important commands when working with uenvs on the [CSCS Docs pages](https://docs.cscs.ch/software/uenv/#downloading-uenv).
+You can find the most important commands when working with uenvs on the [CSCS Docs pages :material-open-in-new:](https://docs.cscs.ch/software/uenv/#downloading-uenv){:target="_blank"}.
 
 The `netcdf-tools` uenv should be loaded with the `--view=modules` argument to get access to the `module load` command:
 
