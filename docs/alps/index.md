@@ -1,6 +1,6 @@
 # The Alps System
 
-Alps is a distributed high-performance computing (HPC) infrastructure managed by CSCS.
+[Alps](https://www.cscs.ch/computers/alps) is a distributed high-performance computing (HPC) infrastructure managed by CSCS.
 Unlike traditional HPC systems, it is composed of several logical units called vClusters (versatile clusters).
 
 From a user's perspective, these vClusters play the role of traditional HPC machines, with each one tailored
