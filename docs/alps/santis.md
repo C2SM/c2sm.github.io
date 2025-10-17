@@ -8,10 +8,10 @@ The vCluster `santis` is dedicated to **Climate and Weather** applications. It i
 
 ## User Environments (uenvs)
 
-| uenv                   | purpose                        |
+| uenv                   | Description                    |
 |------------------------|--------------------------------|
-| `icon/25.2:v3`         | build and run ICON             |
-| `netcdf-tools/2024:v1` | pre- and post-processing tools |
+| `icon/25.2:v3`         | Build and run ICON             |
+| `netcdf-tools/2024:v1` | Pre- and post-processing tools |
 
 You can find the most important commands when working with uenvs on the [CSCS Docs pages :material-open-in-new:](https://docs.cscs.ch/software/uenv/#downloading-uenv){:target="_blank"}.
 
@@ -30,23 +30,25 @@ cray-mpich/8.1.30    nco/5.1.9       netcdf-cxx4/4.3.1
 gcc/13.2.0           ncview/2.1.9    netcdf-fortran/4.6.1
 ```
 
-There is also a new tools uenv in preparation, but not yet official part of the CSCS uenv registry.
-This uenv contains additional software such as `git-lfs`, `eccodes` and `icontools`.
-You can use it already with the following command:
+### Pre-release uenvs
+
+User environments that are not (yet) part of the official CSCS uenv 
+registry can be found in the following folder:
 
 ```
-uenv start --view=modules /capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images/climtools_25.2_v2.sqfs
-module avail
+/capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images
 ```
 
-This will show the list of available modules:
+| uenv                   | Description                    |
+|------------------------|--------------------------------|
+| `/capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images/climtools_25.2.sqfs`         | Like `netcdf-tools` but with additional software such as `git-lfs` and `eccodes`             |
+| `/capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images/climtools_25.2_v2.sqfs`         | Like `netcdf-tools` but with additional software such as `git-lfs`, `eccodes` and `icontools`             |
+| `/capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images/sirocco_25.9.sqfs` | Sirocco |
 
-```
-cdo/2.4.0            git-lfs/3.3.0      ncview/2.1.9            python/3.12.1
-cray-mpich/8.1.30    hdf5/1.14.3        netcdf-c/4.9.2
-eccodes/2.36.4       icontools/2.5.2    netcdf-cxx4/4.3.1
-gcc/13.2.0           nco/5.1.9          netcdf-fortran/4.6.1
-```
+
+Note that the `climtools` uenvs should also be loaded with
+the `--view=modules` argument. 
+
 
 ## SLURM Partitions
 
