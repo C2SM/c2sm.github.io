@@ -43,8 +43,8 @@
 | **SLURM** | Simple Linux Utility for Resource Management ||
 | **SNF** | Swiss National science Foundation | [SNF website :material-open-in-new:](https://www.snf.ch/en){:target="_blank"} |
 | **SPICE** | Starter Package for Icon-CLM Experiments | [SPICE documentation :material-open-in-new:](https://hereon-coast.atlassian.net/wiki/spaces/SPICE/overview?homepageId=983042){:target="_blank"} |
-| **Uenv** | User environment | [CSCS Documentation](https://docs.cscs.ch/software/uenv/){:target="_blank"} |
-| **vCluster** | versatile Cluster | [CSCS Documentation](https://docs.cscs.ch/clusters/){:target="_blank"} |
+| **Uenv** | User environment | [CSCS Documentation :material-open-in-new:](https://docs.cscs.ch/software/uenv/){:target="_blank"} |
+| **vCluster** | versatile Cluster | [CSCS Documentation :material-open-in-new:](https://docs.cscs.ch/clusters/){:target="_blank"} |
 | **WCRP** | World Climate Research Programme | [WCRP website :material-open-in-new:](https://www.wcrp-climate.org){:target="_blank"} |
 | **WEW** | WeiterEntWicklungen (further developments) | [WEW-ICON :material-open-in-new:](https://c2sm.ethz.ch/research/wew-icon.html){:target="_blank"} |
 | **WG** | Working Group ||
