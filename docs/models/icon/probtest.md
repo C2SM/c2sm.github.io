@@ -13,39 +13,34 @@ To run Probtest for ICON on Säntis, use the prebuilt container available on Doc
 
 
 ### When Setting Up ICON from Scratch
-Add a TOML configuration to run the docker image and export EDF path (being used when running the container):
+Add a TOML configuration to run the probtest container (this requires setting `EDF_PATH` to your current directory):
 ```console
 PROBTEST_TAG=$(cat run/tolerance/PROBTEST_TAG)
 echo "image = 'c2sm/probtest:${PROBTEST_TAG}'" > probtest.toml
 echo "mounts = [ \"$(pwd)\" ]" >> probtest.toml
 echo "workdir = \"$(pwd)\"" >> probtest.toml
 echo "writable = true" >> probtest.toml
-export EDF_PATH=$(pwd)
-```
-
-Create and activate Python environment:
-```console
-python3 -m venv .venv
-source .venv/bin/activate
-pip install pyyaml pandas click toml
 ```
 
 ### Every Time You Reconnect to the Server
-If the container and environment are already set up, simply re-run:
+If the `probtest.toml` file already exists in your directory, run the following:
 ```console
+# Set the path to the probtest.toml file
 export EDF_PATH=$(pwd)
-source .venv/bin/activate
+
+# Set the builder name
+export BB_NAME=santis_cpu_nvhpc
+
+# Set the uenv version
+export UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+
+# Point to the Python image
+export SQFS_PATH=/capstor/store/cscs/userlab/cws01/ci/ci-python-image/py_icon_ci.squashfs # Image for needed Python packages
 ```
 
 Set experiment name, e.g.:
 ```console
-export EXPERIMENT=c2sm_clm_r13b03_seaice
-```
-
-Export required environment variables:
-```console
-export BB_NAME=santis_cpu_nvhpc
-export UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+export EXP=c2sm_clm_r13b03_seaice
 ```
 
 ## 3. Run perturbed ensemble on CPU
@@ -57,38 +52,39 @@ salloc -p normal --time=01:00:00
 Then navigate to your CPU build directory and generate and run a 10-member ensemble (this may take time):
 ```console
 cd nvhpc_cpu
-./make_runscripts $EXPERIMENT
-uenv run ${UENV_VERSION} -- python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXPERIMENT --build-dir $(pwd) --member-ids $(seq -s, 1 10)
+./make_runscripts $EXP
+mkdir -p .venv # Create empty folder for mounting Python image
+uenv run ${UENV_VERSION},${SQFS_PATH}:$(pwd)/.venv --view modules,default -- bash -c 'source $(pwd)/.venv/bin/activate && module load nvhpc cdo && python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)'
 ```
 
 This generates:
 
-- `stats_${EXPERIMENT}_<member_id>.csv`
-- `${EXPERIMENT}_reference.csv`
+- `stats_${EXP}_<member_id>.csv`
+- `${EXP}_reference.csv`
 
 ## 4. Generate Tolerance from Ensemble
 
 Create reference and tolerance files using the 10 ensemble members:
 ```console
-python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXPERIMENT --build-dir $(pwd) --member-ids $(seq -s, 1 10)
+python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)
 ```
 
 This generates:
 
-- `${EXPERIMENT}_tolerance.csv`
+- `${EXP}_tolerance.csv`
 
 ## 5. Run the test case on GPU and collect statistics
 Navigate to your GPU build folder and run the same test case, e.g.:
 ```console
 cd ../nvhpc_gpu
-./make_runscripts $EXPERIMENT
-cd run && sbatch --uenv ${UENV_VERSION} ./exp.${EXPERIMENT}.run && cd ..
+./make_runscripts $EXP
+cd run && uenv run $UENV_VERSION --view modules,default -- bash -c 'module load nvhpc cdo && ./exp.$EXP.run 2>&1 | tee LOG.exp.$EXP.run.o' && cd ..
 ```
 
 Navigate back to ICON root folder and collect the GPU statistics:
 ```console
 cd ..
-python3 scripts/cscs_ci/probtest_container_wrapper.py stats $EXPERIMENT --stats-file-path stats_gpu.csv --build-dir nvhpc_gpu
+python3 scripts/cscs_ci/probtest_container_wrapper.py stats $EXP --stats-file-path stats_gpu.csv --build-dir nvhpc_gpu
 ```
 
 This saves the GPU stats as `stats_gpu.csv` in your ICON root directory.
@@ -97,7 +93,7 @@ This saves the GPU stats as `stats_gpu.csv` in your ICON root directory.
 
 From your ICON root directory, run the check using the generated reference and tolerance:
 ```console
-python3 scripts/cscs_ci/probtest_container_wrapper.py check $EXPERIMENT --input-file-cur stats_gpu.csv --input-file-ref nvhpc_cpu/${EXPERIMENT}_reference.csv --tolerance-file-name nvhpc_cpu/${EXPERIMENT}_tolerance.csv --build-dir $(pwd)
+python3 scripts/cscs_ci/probtest_container_wrapper.py check $EXP --input-file-cur stats_gpu.csv --input-file-ref nvhpc_cpu/${EXP}_reference.csv --tolerance-file-name nvhpc_cpu/${EXP}_tolerance.csv --build-dir $(pwd)
 ```
 
 ## 7. Increase Ensemble Size if Validation Fails
@@ -111,13 +107,14 @@ A 10-member ensemble may not capture the full variability, causing false negativ
 Run additional members (11–49):
 ```console
 cd nvhpc_cpu
-./make_runscripts $EXPERIMENT
-uenv run ${UENV_VERSION} -- python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXPERIMENT --build-dir $(pwd) --member-ids $(seq -s, 11 49)
+./make_runscripts $EXP
+mkdir -p .venv # Create empty folder for mounting Python image
+uenv run ${UENV_VERSION},${SQFS_PATH}:$(pwd)/.venv --view modules,default -- bash -c 'source $(pwd)/.venv/bin/activate && module load nvhpc cdo && python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 11 49)'
 ```
 
 Regenerate reference and tolerance using all 49 members:
 ```console
-python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXPERIMENT --build-dir $(pwd) --member-ids $(seq -s, 1 49)
+python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 49)
 ```
 
 *If the test still fails, the GPU result is likely incorrect.*
