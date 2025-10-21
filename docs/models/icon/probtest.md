@@ -3,7 +3,10 @@
 Use Probtest to verify whether your test case produces consistent results on GPU. It compares a GPU test run to a CPU ensemble with perturbed input conditions.
 
 ## 1. Compile ICON
-Compile ICON on CPU and on GPU as [out-of-source builds](compile_and_run.md#building-out-of-source). Note that the build directories need to be sub-directories of the ICON root folder. Otherwise the probtest container does not have access to the data.
+Compile ICON on CPU and on GPU as [out-of-source builds](compile_and_run.md#building-out-of-source) in sub-directories of ICON.
+
+!!! note
+    The probtest container uses the ICON root directory as its working directory and can therefore only access data within the ICON root directory. This is why the out-of-source builds need to be subdirectories of ICON.
 
 ## 2. Set Up the Probtest Container and Environment on Säntis
 To run Probtest for ICON on Säntis, use the prebuilt container available on Docker Hub ([Probtest Container :material-open-in-new:](https://github.com/MeteoSwiss/probtest?tab=readme-ov-file#probtest-container){:target="_blank"}). ICON provides the wrapper script [`probtest_container_wrapper.py` :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/scripts/cscs_ci/probtest_container_wrapper.py?ref_type=heads){:target="_blank"}.
@@ -13,7 +16,7 @@ To run Probtest for ICON on Säntis, use the prebuilt container available on Doc
 
 
 ### When Setting Up ICON from Scratch
-Add a TOML configuration to run the probtest container (this requires setting `EDF_PATH` to your current directory):
+Add a TOML configuration to run the probtest container in your ICON root directory (this requires setting the `EDF_PATH` to your *current directory* = *ICON root directory*):
 ```console
 PROBTEST_TAG=$(cat run/tolerance/PROBTEST_TAG)
 echo "image = 'c2sm/probtest:${PROBTEST_TAG}'" > probtest.toml
@@ -23,7 +26,7 @@ echo "writable = true" >> probtest.toml
 ```
 
 ### Every Time You Reconnect to the Server
-If the `probtest.toml` file already exists in your directory, run the following:
+If the `probtest.toml` file already exists in your ICON root directory, run the following command from within that directory:
 ```console
 # Set the path to the probtest.toml file
 export EDF_PATH=$(pwd)
