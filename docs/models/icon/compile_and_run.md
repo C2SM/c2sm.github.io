@@ -36,18 +36,14 @@ Clone the ICON repository:
 
 ### Säntis
 
-!!! info "Last update: 2025-09-05"
-
-    Säntis is regularly maintained by CSCS. In addition, the [uenvs](../../alps/uenvs.md) are updated irregularly. Therefore, some of the information provided here may be out of date. Please use the [C2SM support forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"} in case of questions regarding building ICON on Säntis.
-
-Run the following after navigating into the ICON root folder (replace `gpu` by `cpu` if applicable):
+Run the following after navigating into ICON root folder (replace `cpu` by `gpu` if applicable):
 
 ```console
 UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
 uenv run ${UENV_VERSION} -- ./config/cscs/santis.gpu.nvhpc
 ```
 
-!!! Note
+!!! info "User environments and out-of-source builds"
 
     If you have never used a uenv on Säntis, you need to create a uenv repo first:
     ```
