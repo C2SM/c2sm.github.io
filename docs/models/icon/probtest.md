@@ -37,8 +37,8 @@ export BB_NAME=santis_cpu_nvhpc
 # Set the uenv version
 export UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
 
-# Point to the Python image
-export SQFS_PATH=/capstor/store/cscs/userlab/cws01/ci/ci-python-image/py_icon_ci.squashfs # Image for needed Python packages
+# Point the Python image
+export SQFS_PATH=/capstor/store/cscs/userlab/cws01/ci/ci-python-image/py_icon_ci.squashfs
 ```
 
 Set experiment name, e.g.:

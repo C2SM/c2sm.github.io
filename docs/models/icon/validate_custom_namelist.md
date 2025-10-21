@@ -2,7 +2,7 @@
 
 [ICON :material-open-in-new:](https://www.icon-model.org/icon_model){:target="_blank"} is a complex software, and troubleshooting large configurations can be difficult. To avoid problems, we recommend starting every new namelist configuration with a small test case. Add this test case to the ICON CI to ensure it stays compatible with future developments.
 
-You can find a list of available tests in the ICON documentation for the latest ICON-MPIM version under [System Tests :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-mpim/infrastructure/testing/system_tests.html#ref-infrastructure-system-tests){:target="_blank"} within `CI System Tests on External Machines by Builder`.
+You can find a list of available tests in the ICON documentation for the latest ICON-NWP version under [System Tests :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/infrastructure/testing/system_tests.html#ref-infrastructure-system-tests){:target="_blank"} within `CI System Tests on External Machines by Builder`.
 
 After the initial test case, we suggest building up step by step: from a small ICON test case to increasingly complex setups, and finally to your full production configuration.
 
@@ -62,9 +62,8 @@ For running the check scripts in the following, you need to have loaded a probte
 === "Santis"
     ```console
     export BB_NAME=santis_cpu_nvhpc
-    python3 -m venv .venv
-    source .venv/bin/activate
-    pip install pyyaml pandas click toml
+    # Point to Python image
+    export SQFS_PATH=/capstor/store/cscs/userlab/cws01/ci/ci-python-image/py_icon_ci.squashfs
     ```
 
 === "Balfrin"
@@ -89,7 +88,8 @@ Now run the check run scripts:
     ```console
     export UENV_VERSION=$(cat ../config/cscs/SANTIS_ENV_TAG)
     cd run
-    uenv run ${UENV_VERSION} --view modules,default -- bash -c "source ./../.venv/bin/activate && module load nvhpc cdo && ./check.${EXP}.run"
+    mkdir -p .venv # Create empty folder for mounting Python image
+    uenv run ${UENV_VERSION},${SQFS_PATH}:$(pwd)/.venv --view modules,default -- bash -c 'source $(pwd)/.venv/bin/activate && module load nvhpc cdo && ./check.${EXP}.run 2>&1 | tee LOG.check.${EXP}.run.o'
     ```
 
 === "Balfrin"
@@ -108,7 +108,7 @@ If all tests are validating on CPU, the next step is to test on GPU. Follow the 
 To ensure that running on GPU gives essentially the same results as running on CPU, you can make use of [Probtest :material-open-in-new:](https://github.com/MeteoSwiss/probtest?tab=readme-ov-file#probtest){:target="_blank"}. Therefore, make use of the entries you made to the YML files and initialise Probtest starting with 10 ensemble members for the CPU reference. Note that you have to set `pinit_seed = 0` and `pinit_amplitude = 0` in the namelist `initicon_nml` in your test case for running a perturbed ensemble.
 
 === "Santis"
-    Check the instructions in [Run Probtest on Säntis](./probtest.md){:target="_blank"}.
+    Check the instructions in [Run Probtest on Säntis](./probtest.md).
 
 === "Balfrin"
     ```console

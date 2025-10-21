@@ -36,12 +36,19 @@ Clone the ICON repository:
 
 ### Säntis
 
-Run the following after navigating into ICON root folder (replace `cpu` by `gpu` if applicable):
+Run the following after navigating into ICON root folder:
 
-```console
-UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-uenv run ${UENV_VERSION} -- ./config/cscs/santis.gpu.nvhpc
-```
+=== "CPU compilation"
+    ```console
+    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+    uenv run ${UENV_VERSION} -- ./config/cscs/santis.cpu.nvhpc
+    ```
+
+=== "GPU compilation"
+    ```console
+    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+    uenv run ${UENV_VERSION} -- ./config/cscs/santis.gpu.nvhpc
+    ```
 
 !!! info "User environments and out-of-source builds"
 
