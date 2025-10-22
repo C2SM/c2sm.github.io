@@ -6,20 +6,27 @@ e.g., regular (lat-lon, gaussian) or triangular (ICON). It can be used to genera
 
 ## Support status
 
-The `master` branch of the [DWD ICON Tools :material-open-in-new:](https://github.com/C2SM/icontools){:target="_blank"} is integrated in the [`spack-c2sm` system tests :material-open-in-new:](https://github.com/C2SM/spack-c2sm/blob/main/test/system_test.py){:target="_blank"} on Balfrin.
+The `master` branch of the [DWD ICON Tools :material-open-in-new:](https://github.com/C2SM/icontools){:target="_blank"} is integrated in the [`spack-c2sm` system tests :material-open-in-new:](https://github.com/C2SM/spack-c2sm/blob/main/test/common_system_test.py){:target="_blank"} on Balfrin.
 
-!!! Note "DWD ICON Tools on Säntis - last update: 2025-02-18"
-
-    Currently not supported, but the C2SM Core Team is working on it
-
-## Access
+## Repository
 
 In order to get access to the [DWD ICON Tools repository hosted on the C2SM GitHub organisation :material-open-in-new:](https://github.com/C2SM/icontools){:target="_blank"},
 please contact your group's technical contact. They will be responsible for adding you to the appropriate user group.
 
-## Compile
+## Usage
 
-[Spack](spack.md) takes care of configuring and building Icontools. For detailed instructions,
+### 1) Load via module command
+
+On [Säntis](../alps/santis.md), DWD ICON Tools is provided via the `climtools` uenv:
+
+```
+uenv start --view=modules /capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images/climtools_25.2_v2.sqfs
+module load icontools/2.5.2
+```
+
+### 2) Compile manually via Spack
+
+[Spack](spack.md) takes care of configuring and building DWD ICON Tools. For detailed instructions,
 please consider the official [spack-c2sm documentation :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest){:target="_blank"}.
 The following Spack installation should be sufficient for most cases.
 
@@ -33,6 +40,9 @@ Install the ICON Tools:
 ```bash
 spack install icontools@c2sm-master%gcc
 ```
+
+!!! note
+    If all dependencies have to be installed from scratch, this may take a while.
 
 After the installation, you need to load the package with Spack:
 
@@ -92,4 +102,4 @@ To use the `cdo` command, make sure that a proper user environment is loaded con
 ## Documentation
 
 * A [TeX version :material-open-in-new:](https://github.com/C2SM/icontools/blob/master/doc/icontools_doc.tex){:target="_blank"} of the official documentation is in the repository
-* A [pdf version :material-open-in-new:](https://polybox.ethz.ch/index.php/s/jdYaNrWFF8LjcrF){:target="_blank"}, Sept 2023
+* A [pdf version :material-open-in-new:](https://polybox.ethz.ch/index.php/s/jdYaNrWFF8LjcrF){:target="_blank"}, Oct 2025
