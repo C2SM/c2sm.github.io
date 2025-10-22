@@ -69,7 +69,7 @@ This generates:
 
 Create reference and tolerance files using the 10 ensemble members:
 ```console
-python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)
+mkdir -p .venv && uenv run ${UENV_VERSION},${SQFS_PATH}:$(pwd)/.venv -- bash -c 'source $(pwd)/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)'
 ```
 
 This generates:
@@ -87,7 +87,7 @@ cd run && uenv run $UENV_VERSION --view modules,default -- bash -c 'module load 
 Navigate back to ICON root folder and collect the GPU statistics:
 ```console
 cd ..
-python3 scripts/cscs_ci/probtest_container_wrapper.py stats $EXP --stats-file-path stats_gpu.csv --build-dir nvhpc_gpu
+mkdir -p .venv && uenv run ${UENV_VERSION},${SQFS_PATH}:$(pwd)/.venv -- bash -c 'source $(pwd)/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py stats $EXP --stats-file-path stats_gpu.csv --build-dir nvhpc_gpu'
 ```
 
 This saves the GPU stats as `stats_gpu.csv` in your ICON root directory.
@@ -96,7 +96,7 @@ This saves the GPU stats as `stats_gpu.csv` in your ICON root directory.
 
 From your ICON root directory, run the check using the generated reference and tolerance:
 ```console
-python3 scripts/cscs_ci/probtest_container_wrapper.py check $EXP --input-file-cur stats_gpu.csv --input-file-ref nvhpc_cpu/${EXP}_reference.csv --tolerance-file-name nvhpc_cpu/${EXP}_tolerance.csv --build-dir $(pwd)
+mkdir -p .venv && uenv run ${UENV_VERSION},${SQFS_PATH}:$(pwd)/.venv -- bash -c 'source $(pwd)/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py check $EXP --input-file-cur stats_gpu.csv --input-file-ref nvhpc_cpu/${EXP}_reference.csv --tolerance-file-name nvhpc_cpu/${EXP}_tolerance.csv --build-dir $(pwd)'
 ```
 
 ## 7. Increase Ensemble Size if Validation Fails
@@ -111,13 +111,12 @@ Run additional members (11–49):
 ```console
 cd nvhpc_cpu
 ./make_runscripts $EXP
-mkdir -p .venv # Create empty folder for mounting Python image
-uenv run ${UENV_VERSION},${SQFS_PATH}:$(pwd)/.venv --view modules,default -- bash -c 'source $(pwd)/.venv/bin/activate && module load nvhpc cdo && python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 11 49)'
+mkdir -p .venv && uenv run ${UENV_VERSION},${SQFS_PATH}:$(pwd)/.venv --view modules,default -- bash -c 'source $(pwd)/.venv/bin/activate && module load nvhpc cdo && python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 11 49)'
 ```
 
 Regenerate reference and tolerance using all 49 members:
 ```console
-python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 49)
+mkdir -p .venv && uenv run ${UENV_VERSION},${SQFS_PATH}:$(pwd)/.venv -- bash -c 'source $(pwd)/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 49)'
 ```
 
 *If the test still fails, the GPU result is likely incorrect.*
