@@ -169,8 +169,8 @@
     ```
 
 
-- Size: 8.26 TB :material-information-outline:{ title="last updated: 2025-10-26 01:45:50" }
-- Number of files: 3,493 :material-information-outline:{ title="last updated: 2025-10-26 01:45:50" }
+- Size: 8.26 TB :material-information-outline:{ title="last updated: 2025-11-02 01:46:29" }
+- Number of files: 3,493 :material-information-outline:{ title="last updated: 2025-11-02 01:46:29" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -215,8 +215,8 @@
     ```
 
 
-- Size: 1.84 TB :material-information-outline:{ title="last updated: 2025-10-26 01:45:50" }
-- Number of files: 1,090 :material-information-outline:{ title="last updated: 2025-10-26 01:45:50" }
+- Size: 1.84 TB :material-information-outline:{ title="last updated: 2025-11-02 01:46:29" }
+- Number of files: 1,090 :material-information-outline:{ title="last updated: 2025-11-02 01:46:29" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -272,8 +272,8 @@
     ```
 
 
-- Size: 45.93 TB :material-information-outline:{ title="last updated: 2025-10-26 01:45:56" }
-- Number of files: 139,817 :material-information-outline:{ title="last updated: 2025-10-26 01:45:56" }
+- Size: 45.94 TB :material-information-outline:{ title="last updated: 2025-11-02 01:47:37" }
+- Number of files: 139,879 :material-information-outline:{ title="last updated: 2025-11-02 01:47:37" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
@@ -295,9 +295,9 @@
   `sftlf`{ title="fx (native): N/A" },
   `strd`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
   `ta`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
-  `tas`{ title="day (native): 194001-202405, mon (native): 194001-202405" },
-  `tasmax`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
-  `tasmin`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `tas`{ title="day (native): 194001-202412, mon (native): 194001-202412" },
+  `tasmax`{ title="day (native): 194001-202412, mon (native): 194001-202312" },
+  `tasmin`{ title="day (native): 194001-202412, mon (native): 194001-202312" },
   `tos`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `ua`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `uas`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
@@ -320,8 +320,8 @@
     ```
 
 
-- Size: 8.9 TB :material-information-outline:{ title="last updated: 2025-10-26 01:45:53" }
-- Number of files: 2,012 :material-information-outline:{ title="last updated: 2025-10-26 01:45:53" }
+- Size: 8.9 TB :material-information-outline:{ title="last updated: 2025-11-02 01:46:33" }
+- Number of files: 2,012 :material-information-outline:{ title="last updated: 2025-11-02 01:46:33" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
