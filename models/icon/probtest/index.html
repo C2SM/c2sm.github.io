@@ -4053,7 +4053,7 @@
 <span class="go">export UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)</span>
 
 <span class="gp"># </span>Point<span class="w"> </span>the<span class="w"> </span>Python<span class="w"> </span>image<span class="w"> </span>and<span class="w"> </span>create<span class="w"> </span>empty<span class="w"> </span>folder<span class="w"> </span>to<span class="w"> </span>mount<span class="w"> </span>to
-<span class="go">export SQFS_PATH=/capstor/store/cscs/userlab/cws01/ci/ci-python-image/py_icon_ci.squashfs</span>
+<span class="go">export SQFS_PATH=/capstor/store/cscs/userlab/cws01/ci/ci-python-image</span>
 <span class="go">mkdir -p .venv</span>
 </code></pre></div></p>
 <p>Set experiment name, e.g.:
@@ -4066,7 +4066,7 @@
 <p>Then navigate to your CPU build directory and generate and run a 10-member ensemble (this may take time):
 <div class="highlight"><pre><span></span><code><span class="go">cd nvhpc_cpu</span>
 <span class="go">./make_runscripts $EXP</span>
-<span class="go">uenv run ${UENV_VERSION},${SQFS_PATH}:${EDF_PATH}/.venv --view modules,default -- bash -c &#39;source ${EDF_PATH}/.venv/bin/activate &amp;&amp; module load nvhpc cdo &amp;&amp; python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)&#39;</span>
+<span class="go">uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c &#39;source ${SQFS_PATH}/.venv/bin/activate &amp;&amp; module load nvhpc cdo &amp;&amp; python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)&#39;</span>
 </code></pre></div></p>
 <p>This generates:</p>
 <ul>
@@ -4075,7 +4075,7 @@
 </ul>
 <h2 id="4-generate-tolerance-from-ensemble">4. Generate Tolerance from Ensemble<a class="headerlink" href="#4-generate-tolerance-from-ensemble" title="Permanent link">&para;</a></h2>
 <p>Create reference and tolerance files using the 10 ensemble members:
-<div class="highlight"><pre><span></span><code><span class="go">uenv run ${UENV_VERSION},${SQFS_PATH}:${EDF_PATH}/.venv -- bash -c &#39;source ${EDF_PATH}/.venv/bin/activate &amp;&amp; python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="go">uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c &#39;source ${SQFS_PATH}/.venv/bin/activate &amp;&amp; python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)&#39;</span>
 </code></pre></div></p>
 <p>This generates:</p>
 <ul>
@@ -4089,12 +4089,12 @@
 </code></pre></div></p>
 <p>Navigate back to ICON root folder and collect the GPU statistics:
 <div class="highlight"><pre><span></span><code><span class="go">cd ..</span>
-<span class="go">uenv run ${UENV_VERSION},${SQFS_PATH}:${EDF_PATH}/.venv -- bash -c &#39;source ${EDF_PATH}/.venv/bin/activate &amp;&amp; python3 scripts/cscs_ci/probtest_container_wrapper.py stats $EXP --stats-file-path stats_gpu.csv --build-dir nvhpc_gpu&#39;</span>
+<span class="go">uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c &#39;source ${SQFS_PATH}/.venv/bin/activate &amp;&amp; python3 scripts/cscs_ci/probtest_container_wrapper.py stats $EXP --stats-file-path stats_gpu.csv --build-dir nvhpc_gpu&#39;</span>
 </code></pre></div></p>
 <p>This saves the GPU stats as <code>stats_gpu.csv</code> in your ICON root directory.</p>
 <h2 id="6-check-gpu-statistics-against-reference-and-tolerance">6. Check GPU Statistics Against Reference and Tolerance<a class="headerlink" href="#6-check-gpu-statistics-against-reference-and-tolerance" title="Permanent link">&para;</a></h2>
 <p>From your ICON root directory, run the check using the generated reference and tolerance:
-<div class="highlight"><pre><span></span><code><span class="go">uenv run ${UENV_VERSION},${SQFS_PATH}:${EDF_PATH}/.venv -- bash -c &#39;source ${EDF_PATH}/.venv/bin/activate &amp;&amp; python3 scripts/cscs_ci/probtest_container_wrapper.py check $EXP --input-file-cur stats_gpu.csv --input-file-ref nvhpc_cpu/${EXP}_reference.csv --tolerance-file-name nvhpc_cpu/${EXP}_tolerance.csv --build-dir $(pwd)&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="go">uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c &#39;source ${SQFS_PATH}/.venv/bin/activate &amp;&amp; python3 scripts/cscs_ci/probtest_container_wrapper.py check $EXP --input-file-cur stats_gpu.csv --input-file-ref nvhpc_cpu/${EXP}_reference.csv --tolerance-file-name nvhpc_cpu/${EXP}_tolerance.csv --build-dir $(pwd)&#39;</span>
 </code></pre></div></p>
 <h2 id="7-increase-ensemble-size-if-validation-fails">7. Increase Ensemble Size if Validation Fails<a class="headerlink" href="#7-increase-ensemble-size-if-validation-fails" title="Permanent link">&para;</a></h2>
 <p>Again, if not done already, allocate compute nodes interactively to <em>not</em> use your login nodes:
@@ -4104,10 +4104,10 @@
 <p>Run additional members (11–49):
 <div class="highlight"><pre><span></span><code><span class="go">cd nvhpc_cpu</span>
 <span class="go">./make_runscripts $EXP</span>
-<span class="go">uenv run ${UENV_VERSION},${SQFS_PATH}:${EDF_PATH}/.venv --view modules,default -- bash -c &#39;source ${EDF_PATH}/.venv/bin/activate &amp;&amp; module load nvhpc cdo &amp;&amp; python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 11 49)&#39;</span>
+<span class="go">uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c &#39;source ${SQFS_PATH}/.venv/bin/activate &amp;&amp; module load nvhpc cdo &amp;&amp; python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 11 49)&#39;</span>
 </code></pre></div></p>
 <p>Regenerate reference and tolerance using all 49 members:
-<div class="highlight"><pre><span></span><code><span class="go">uenv run ${UENV_VERSION},${SQFS_PATH}:${EDF_PATH}/.venv -- bash -c &#39;source ${EDF_PATH}/.venv/bin/activate &amp;&amp; python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 49)&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="go">uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c &#39;source ${SQFS_PATH}/.venv/bin/activate &amp;&amp; python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 49)&#39;</span>
 </code></pre></div></p>
 <p><em>If the test still fails, the GPU result is likely incorrect.</em></p>
 
@@ -4132,7 +4132,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 2, 2025 02:40:10 UTC">November 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 3, 2025 08:49:49 UTC">November 3, 2025</span>
   </span>
 
     
@@ -4142,7 +4142,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 2, 2025 02:40:10 UTC">November 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 3, 2025 08:49:49 UTC">November 3, 2025</span>
   </span>
 
     
