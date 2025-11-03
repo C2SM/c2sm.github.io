@@ -6,9 +6,9 @@ It includes environment setup, code compilation, and configuration steps for run
 
 !!! note "Important Notes"
 
-    - The **`master`** branch of [`icon-nwp`](https://gitlab.dkrz.de/icon/icon-nwp) does **not** currently include the latest ComIn updates.  
+    - The **`master`** branch of [`icon-nwp` :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"} does **not** currently include the latest ComIn updates.  
     A manual fix is required to make ComIn work on GPUs, following this commit:  
-    [ComIn Commit f9e1c2f](https://gitlab.dkrz.de/icon-comin/comin/-/commit/f9e1c2fe9e17650e55ccf82f5e1b8e872fc658c7)
+    [ComIn Commit f9e1c2f :material-open-in-new:](https://gitlab.dkrz.de/icon-comin/comin/-/commit/f9e1c2fe9e17650e55ccf82f5e1b8e872fc658c7){:target="_blank"}
 
     - Further ComIn bug fixes are under development. Updates will be merged into `icon-nwp` when available.
 
