@@ -3,7 +3,6 @@
 This guide provides a step-by-step recipe to compile **`icon-nwp`** on **Santis** with GPU support and enable **ComIn** functionality.  
 It includes environment setup, code compilation, and configuration steps for running ICON with the ComIn plugin.
 
-
 !!! note "Important Notes"
 
     - The **`master`** branch of [`icon-nwp` :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"} does **not** currently include the latest ComIn updates.  
@@ -13,7 +12,6 @@ It includes environment setup, code compilation, and configuration steps for run
     - Further ComIn bug fixes are under development. Updates will be merged into `icon-nwp` when available.
 
     - Replace all instances of `<username>` with your actual username.
-
 
 ## 1. Pull and Start the ICON Environment
 
@@ -35,7 +33,6 @@ Load the Spack instance:
 source $SCRATCH/spack-c2sm-nwp/setup-env.sh /user-environment
 ```
 
-
 ## 3. Clone and Prepare the ICON Code
 
 ```bash
@@ -43,7 +40,6 @@ git clone git@gitlab.dkrz.de:icon/icon-nwp.git ./icon-nwp
 cd ./icon-nwp
 git submodule update --init --recursive
 ```
-
 
 ## 4. Set Up the Build Directory
 
@@ -97,7 +93,6 @@ spack:
 
 </details>
 
-
 ## 5. Activate the Spack Environment and Build ICON
 
 ```bash
@@ -105,7 +100,6 @@ spack env activate -p -d santis/
 spack concretize -f
 spack install -v
 ```
-
 
 ## 6. Create a Python Virtual Environment for ComIn
 
@@ -121,7 +115,6 @@ pip install --upgrade pip
 pip install cupy numpy scipy xarray mpi4py netcdf4 shapely scikit-learn pyyaml
 ```
 
-
 ## 7. Build ComIn
 
 Enter the Spack build environment and compile ComIn:
@@ -132,7 +125,6 @@ cd ./externals/comin/build
 cmake -DCOMIN_ENABLE_EXAMPLES=ON -DCOMIN_ENABLE_PYTHON_ADAPTER=ON .
 make
 ```
-
 
 ## 8. Add ComIn to the ICON Namelist
 
@@ -145,7 +137,6 @@ In your ICON namelist, include the following section:
   plugin_list(1)%options        = "<comin_python_script_path>"
 /
 ```
-
 
 ## 9. Configure the Slurm Job
 
