@@ -123,7 +123,7 @@ To ensure that running on GPU gives essentially the same results as running on C
 
 ### 1.3 Activate Test in a CI Pipeline
 
-If you followed the steps above in [1.2 Local testing](large_use_cases.md#12-local-testing), everything is set to activate the test in a CI pipeline. Therefore, push your changes to a branch on ICON and open a merge request. Then follow the instructions in [Member selection for generating probtest tolerances :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Member-selection-for-generating-probtest-tolerances){:target="_blank"} for adding tolerances and references as well as best members for generating them to the CI pipeline.
+If you followed the steps above in [1.2 Local testing](#12-local-testing), everything is set to activate the test in a CI pipeline. Therefore, push your changes to a branch on ICON and open a merge request. Then follow the instructions in [Member selection for generating probtest tolerances :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Member-selection-for-generating-probtest-tolerances){:target="_blank"} for adding tolerances and references as well as best members for generating them to the CI pipeline.
 
 ## 2. Intermediate Scale Test
 
