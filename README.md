@@ -10,12 +10,14 @@ For full documentation visit https://squidfunk.github.io/mkdocs-material/.
 
 ### Quick Start
 
+> [!TIP]
+> You can also preview any open pull request at
+> [https://c2sm.github.io/pr-preview/pr-&lt;pr-id&gt;/](https://c2sm.github.io/pr-preview/pr-<pr-id>/)
+
+
+To quickly generate a view of the documentation clone this repository on your PC/laptop, then view the documentation in a browser run `./serve`:
 > [!IMPORTANT]
-> to run the serve script, you need to first install [uv](https://docs.astral.sh/uv/getting-started/installation/).
-
-To quickly generate a view of the documenation
-
-Clone this repository on your PC/laptop, then view the documentation in a browser run `./serve`:
+> To run the serve script, you need to first install [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
 ```console
 $ git clone git@github.com:${githubusername}/c2sm.github.io.git

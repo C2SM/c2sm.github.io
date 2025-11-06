@@ -8,7 +8,7 @@ to the needs of a specific community.
 
 This setup also enables geographical distribution of vClusters which facilitates geo-redundancy.
 The main physical component of Alps is hosted at CSCS in Lugano and a detailed description can be found in
-[their documenation :material-open-in-new:](https://docs.cscs.ch/alps/){:target="_blank"}.
+[their documentation :material-open-in-new:](https://docs.cscs.ch/alps/){:target="_blank"}.
 
 ## vClusters
 
