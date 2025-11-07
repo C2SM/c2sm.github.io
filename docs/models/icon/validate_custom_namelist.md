@@ -88,6 +88,10 @@ Then, create the check run scripts:
 ./run/make_target_runscript in_script=checksuite.icon-dev/check.${EXP} in_script=exec.iconrun out_script=check.${EXP}.run EXPNAME=${EXP}
 ```
 
+!!! warning "Compute account"
+    Ensure that your default account at CSCS has computing resources. If this is not the case, you need to open a ticket 
+    at the [CSCS Service Desk](https://jira.cscs.ch/plugins/servlet/desk/site/global).
+
 Now run the check run scripts:
 
 === "Santis"

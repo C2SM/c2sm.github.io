@@ -53,6 +53,10 @@ To run a perturbed ensemble, please allocate compute nodes interactively to *not
 salloc -p normal --time=01:00:00
 ```
 
+!!! warning "Compute account"
+    Ensure that your default account at CSCS has computing resources. If this is not the case, you need to open a ticket 
+    at the [CSCS Service Desk](https://jira.cscs.ch/plugins/servlet/desk/site/global).
+
 Then navigate to your CPU build directory and generate and run a 10-member ensemble (this may take time):
 ```console
 cd nvhpc_cpu
