@@ -28,7 +28,7 @@ $ which cdo
 /user-environment/env/netcdf/bin/cdo
 ```
 
-More information about the `netcdf-tools` uenv can be found at the [CSCS Docs page](https://docs.cscs.ch/software/cw/netcdf-tools/).
+More information about the `netcdf-tools` uenv can be found at the [CSCS Docs page :material-open-in-new:](https://docs.cscs.ch/software/cw/netcdf-tools/){:target="_blank"}.
 
 ### Pre-release uenvs
 
