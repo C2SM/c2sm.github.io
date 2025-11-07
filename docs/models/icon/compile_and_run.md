@@ -125,10 +125,15 @@ srun -N 1 -n 12 --mem-per-cpu=1G spack install -j 12
 
 
 ## Run test case
-In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, e.g. *c2sm_clm_r13b03_seaice*, you can use the `make_runscripts` function.
+In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files,  you can use the `make_runscripts` function.
+
+Set experiment name, e.g.:
+```console
+export EXP=c2sm_clm_r13b03_seaice
+```
 
 ```shell
-./make_runscripts c2sm_clm_r13b03_seaice
+./make_runscripts ${EXP}
 ```
 
 To run the created runscript, navigate to the *run* subdirectory and submit the runscript.
@@ -136,15 +141,15 @@ To run the created runscript, navigate to the *run* subdirectory and submit the 
 === "Santis"
     ```shell
     UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-    cd run && sbatch --uenv ${UENV_VERSION} ./exp.c2sm_clm_r13b03_seaice.run
+    cd run && sbatch --uenv ${UENV_VERSION} ./exp.${EXP}.run
     ```
 === "Euler"
     ```shell
-    cd run && sbatch ./exp.c2sm_clm_r13b03_seaice.run
+    cd run && sbatch ./exp.${EXP}.run
     ```
 === "Balfrin"
     ```shell
-    cd run && sbatch ./exp.c2sm_clm_r13b03_seaice.run
+    cd run && sbatch ./exp.${EXP}.run
     ```
 You may need to adjust the account in the runscript to match your permissions. Alternatively, you can include `--account=<my_account_id>` in the `sbatch` command.
 
