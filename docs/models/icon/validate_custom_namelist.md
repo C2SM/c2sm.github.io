@@ -75,7 +75,13 @@ For running the check scripts in the following, you need to have loaded a probte
 
 #### Test on CPU
 
-To ensure that there are no basic issues with the namelist, we recommend to start testing on CPU before going over to GPU testing. Therefore, create the check run scripts (set `EXP=<exp_name>`):
+To ensure that there are no basic issues with the namelist, we recommend to start testing on CPU before going over to GPU testing. 
+
+Set experiment name, e.g.:
+```console
+export EXP=c2sm_clm_r13b03_seaice
+```
+Then, create the check run scripts:
 
 ```console
 ./make_runscripts ${EXP}
