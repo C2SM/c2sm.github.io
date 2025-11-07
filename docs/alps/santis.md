@@ -20,11 +20,13 @@ You can find the most important commands when working with uenvs on the [CSCS Do
 The `netcdf-tools` uenv should be loaded with the `--view=netcdf` argument to instantly access all of the tools that are shipped with this uenv:
 
 ```bash
-# start using the netcdf view
-$ uenv start --view=netcdf netcdf-tools/2025:v1
+uenv start --view=netcdf netcdf-tools/2025:v1
+```
 
-# the software is available
-$ which cdo
+The software is now available:
+
+```bash
+which cdo
 /user-environment/env/netcdf/bin/cdo
 ```
 
