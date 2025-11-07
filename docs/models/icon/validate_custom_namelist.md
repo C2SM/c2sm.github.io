@@ -90,7 +90,7 @@ Then, create the check run scripts:
 
 !!! warning "Compute account"
     Ensure that your default account at CSCS has computing resources. If this is not the case, you need to open a ticket 
-    at the [CSCS Service Desk](https://jira.cscs.ch/plugins/servlet/desk/site/global).
+    at the [CSCS Service Desk :material-open-in-new:](https://jira.cscs.ch/plugins/servlet/desk/site/global){:target="_blank"}.
 
 Now run the check run scripts:
 
