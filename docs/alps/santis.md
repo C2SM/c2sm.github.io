@@ -20,7 +20,7 @@ You can find the most important commands when working with uenvs on the [CSCS Do
 The netcdf-tools uenv provides a set of CLI tools and GUI tools frequently used in climate and weather workflows,
 including `cdo`, `ncview`, `ncdump` and others.
 
-It is recommended that the `netcdf-tools` uenv should be loaded with the `--view=netcdf` argument to instantly
+It is recommended that the `netcdf-tools` uenv is loaded with the `--view=netcdf` argument to instantly
 access all of the tools that are shipped with this uenv:
 
 ```bash
