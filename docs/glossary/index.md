@@ -10,6 +10,7 @@
 | **CESM** | Community Earth System Model | [CESM website :material-open-in-new:](https://www.cesm.ucar.edu/){:target="_blank"} |
 | **CH2025** | Swiss Climate Scenarios 2025 | [Climate CH2025 :material-open-in-new:](https://www.meteoswiss.admin.ch/about-us/research-and-cooperation/projects/2023/climate-ch2025.html){:target="_blank"} |
 | **CF** | Climate and Forecast ||
+| **CLI** | Command Line Interface ||
 | **CLM** | Climate Limited-area Mode | [ICON-CLM :material-open-in-new:](https://www.clm-community.eu/ICON-CLM/){:target="_blank"} |
 | **CMIP** | Coupled Model Intercomparison Project | [CMIP website :material-open-in-new:](https://wcrp-cmip.org){:target="_blank"} |
 | **CORDEX** | Coordinated Regional Climate Downscaling Experiment | [CORDEX website :material-open-in-new:](https://cordex.org){:target="_blank"} |
@@ -28,7 +29,6 @@
 | **FTE** | Full-Time Equivalent ||
 | **GH** | Grace Hopper ||
 | **GHG** | GreenHouse Gases ||
-| **CLI** | Command Line Interface ||
 | **GPU** | Graphics Processing Unit ||
 | **GUI** | Graphical User Interface ||
 | **HPC** | High Performance Computing ||
