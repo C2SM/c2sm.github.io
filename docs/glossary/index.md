@@ -28,7 +28,9 @@
 | **FTE** | Full-Time Equivalent ||
 | **GH** | Grace Hopper ||
 | **GHG** | GreenHouse Gases ||
+| **CLI** | Command Line Interface ||
 | **GPU** | Graphics Processing Unit ||
+| **GUI** | Graphical User Interface ||
 | **HPC** | High Performance Computing ||
 | **IAC** | Institute for Atmospheric and Climate science | [IAC website :material-open-in-new:](https://iac.ethz.ch){:target="_blank"} |
 | **ICON** | ICOsahedral Nonhydrostatic weather and climate model | [ICON offical website :material-open-in-new:](https://www.icon-model.org){:target="_blank"} |
