@@ -23,16 +23,14 @@ On Säntis, all ICON input and reference data is collected in the project `cws01
     want to have your data added to the project, please contact
     [Michael Jähn :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091){:target="_blank"}. 
 
-```
+```text
 /capstor/store/cscs/userlab/cws01/
-│
-├── ci/                                      # CI 
+├── ci/                                      # CI
 │   ├── buildbot_data/                       # Buildbot data
-│   │    ├── nwp/                            # nwp test case data
-│   │    └── ref/                            # Reference data (hashed)
+│   │   ├── nwp/                             # nwp test case data
+│   │   └── ref/                             # Reference data (hashed)
 │   ├── ci-python-image/                     # Squashfs file for Python environment
 │   └── testing-input-data/                  # Input data for CI (git lfs repo)
-│
 ├── input/                                   # All input data
 │   ├── icon/                                # ICON-specific input
 │   │   ├── clm/                             # ICON-CLM input
@@ -40,26 +38,24 @@ On Säntis, all ICON input and reference data is collected in the project `cws01
 │   │   │   │   ├── aerosols/                # ICON-CLM aerosol input datasets
 │   │   │   │   ├── gcm/                     # Global climate model boundary data
 │   │   │   │   └── rcm/                     # Regional climate model boundary data
-│   │   │   │
 │   │   │   └── europe11/                    # EURO-CORDEX 0.11° domain-specific input
 │   │   │       ├── aerosols/
 │   │   │       ├── gcm/
 │   │   │       └── rcm/
-│   │   │
 │   │   ├── global/                          # ICON global model input
 │   │   │   ├── grids/                       # ICON global grids at different resolutions
 │   │   │   │   ├── atmo/
 │   │   │   │   │   ├── 0033-0017/
-│   │   │   │   │   │   ├── hd/ 
-|   │   │   │   │   │   │   ├── hdpara_r2b8_0033_0016_mc_maxl_v1.nc
-|   │   │   │   │   │   │   ├── hdstart_r2b8_0033_0016_v1.nc
-|   │   │   │   │   │   │   └── r0002/
-|   │   │   │   │   │   │   │   ├── hdpara_r2b8_0033_0016_mc_maxl_s_v1.nc
-|   │   │   │   │   │   │   │   ├── hdstart_r2b8_0033_0016_from_restart_ngc4006_20300101.nc
-|   │   │   │   │   │   │   │   └── hdstart_r2b8_0033_0016_mc_maxl_s_v1_1.nc
+│   │   │   │   │   │   ├── hd/
+│   │   │   │   │   │   │   ├── hdpara_r2b8_0033_0016_mc_maxl_v1.nc
+│   │   │   │   │   │   │   ├── hdstart_r2b8_0033_0016_v1.nc
+│   │   │   │   │   │   │   └── r0002/
+│   │   │   │   │   │   │       ├── hdpara_r2b8_0033_0016_mc_maxl_s_v1.nc
+│   │   │   │   │   │   │       ├── hdstart_r2b8_0033_0016_from_restart_ngc4006_20300101.nc
+│   │   │   │   │   │   │       └── hdstart_r2b8_0033_0016_mc_maxl_s_v1_1.nc
 │   │   │   │   │   │   └── land/
-|   │   │   │   │   │       └── rcscs/
-                                └── *.nc
+│   │   │   │   │   │       └── rcscs/
+│   │   │   │   │   │           └── *.nc
 │   │   │   │   │   ├── .../
 │   │   │   │   │   ├── R02B04_0013/
 │   │   │   │   │   │   └── icon_grid_0013_R02B04_G.nc
@@ -74,31 +70,27 @@ On Säntis, all ICON input and reference data is collected in the project `cws01
 │   │   │   │   │   ├── .../
 │   │   │   │   │   └── index.txt                # Mapping RnBk grids to official grid ID
 │   │   │   │   └── ocean/                       # Ocean grids
-│   │   │   │
-│   │   │   └── misc/                        # Other ICON global input data
-│   │   │
-│   │   ├── public/                          # Public data
-│   │   │   └── grids/                       # Public grids from the ICON Grid Server
-│   │   │       ├── dwd/                     # DWD grids
-│   │   │       └── mpim/                    # MPI-M grids
-│   │   └── regional/                        # ICON regional model input
-│   │
-│   └── misc/                                # Non-ICON input (placeholder for future)
-│
-└── reference/                               # Reference datasets
-    ├── observations/                        # Ground-based or in-situ observations
-    |   └── eObs/                            # E-OBS daily gridded meteorological data for Europe
-    |       ├── eObs28.0/
-    |       ├── eObs29.0/
-    |       ├── eObs30.0/
-    |       └── eObs31.0/
-    ├── reanalysis/                          # Reanalysis datasets (e.g. ERA5)
-    |   ├── ERA5/                            # ERA5 data retrieved from CDS
-    |   └── dkrz/                            # Synced from DKRZ, ready-to-use for SPICE (CLM runs)
-    |       ├── ERA5/                        # ERA5 (updated as soon as new data is available)
-    |       └── ERAInterim/                  # ERAInterim (static)
-    ├── satellite/                           # Satellite observations for validation
-    └── model_comparisons/                   # Reference data from other models
+│   │   │   └── misc/                            # Other ICON global input data
+│   │   ├── public/                           # Public data
+│   │   │   └── grids/                        # Public grids from the ICON Grid Server
+│   │   │       ├── dwd/                      # DWD grids
+│   │   │       └── mpim/                     # MPI-M grids
+│   │   └── regional/                         # ICON regional model input
+│   └── misc/                                 # Non-ICON input (placeholder for future)
+└── reference/                                # Reference datasets
+    ├── observations/                         # Ground-based or in-situ observations
+    │   └── eObs/                             # E-OBS daily gridded meteorological data for Europe
+    │       ├── eObs28.0/
+    │       ├── eObs29.0/
+    │       ├── eObs30.0/
+    │       └── eObs31.0/
+    ├── reanalysis/                           # Reanalysis datasets (e.g. ERA5)
+    │   ├── ERA5/                             # ERA5 data retrieved from CDS
+    │   └── dkrz/                             # Synced from DKRZ, ready-to-use for SPICE (CLM runs)
+    │       ├── ERA5/                         # ERA5 (updated as soon as new data is available)
+    │       └── ERAInterim/                   # ERAInterim (static)
+    ├── satellite/                            # Satellite observations for validation
+    └── model_comparisons/                    # Reference data from other models
 ```
 
 
