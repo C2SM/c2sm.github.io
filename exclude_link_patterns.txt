@@ -29,3 +29,4 @@ agupubs.onlinelibrary.wiley.com
 ^https://esgf.llnl.gov
 ^https://www.clm-community.eu
 ^https://c2sm.ethz.ch/education/technical-training/*.html
+^https://egusphere.copernicus.org
