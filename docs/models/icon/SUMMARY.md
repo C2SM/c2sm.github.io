@@ -4,4 +4,5 @@
 * [Run Probtest on Säntis](probtest.md)
 * [ICON-CLM](icon-clm.md)
 * [Input Data](input_data.md)
+* [ComIn on GPU](comin_gpu.md)
 * [Known Bugs](known_bugs.md)
