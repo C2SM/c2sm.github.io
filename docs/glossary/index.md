@@ -10,6 +10,7 @@
 | **CESM** | Community Earth System Model | [CESM website :material-open-in-new:](https://www.cesm.ucar.edu/){:target="_blank"} |
 | **CH2025** | Swiss Climate Scenarios 2025 | [Climate CH2025 :material-open-in-new:](https://www.meteoswiss.admin.ch/about-us/research-and-cooperation/projects/2023/climate-ch2025.html){:target="_blank"} |
 | **CF** | Climate and Forecast ||
+| **CLI** | Command Line Interface ||
 | **CLM** | Climate Limited-area Mode | [ICON-CLM :material-open-in-new:](https://www.clm-community.eu/ICON-CLM/){:target="_blank"} |
 | **CMIP** | Coupled Model Intercomparison Project | [CMIP website :material-open-in-new:](https://wcrp-cmip.org){:target="_blank"} |
 | **CORDEX** | Coordinated Regional Climate Downscaling Experiment | [CORDEX website :material-open-in-new:](https://cordex.org){:target="_blank"} |
@@ -29,6 +30,7 @@
 | **GH** | Grace Hopper ||
 | **GHG** | GreenHouse Gases ||
 | **GPU** | Graphics Processing Unit ||
+| **GUI** | Graphical User Interface ||
 | **HPC** | High Performance Computing ||
 | **IAC** | Institute for Atmospheric and Climate science | [IAC website :material-open-in-new:](https://iac.ethz.ch){:target="_blank"} |
 | **ICON** | ICOsahedral Nonhydrostatic weather and climate model | [ICON offical website :material-open-in-new:](https://www.icon-model.org){:target="_blank"} |

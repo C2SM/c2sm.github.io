@@ -11,24 +11,30 @@ The vCluster `santis` is dedicated to **Climate and Weather** applications. It i
 | uenv                   | Description                    |
 |------------------------|--------------------------------|
 | `icon/25.2:v3`         | Build and run ICON             |
-| `netcdf-tools/2024:v1` | Pre- and post-processing tools |
+| `netcdf-tools/2025:v1` | Pre- and post-processing tools |
 
 You can find the most important commands when working with uenvs on the [CSCS Docs pages :material-open-in-new:](https://docs.cscs.ch/software/uenv/#downloading-uenv){:target="_blank"}.
 
-The `netcdf-tools` uenv should be loaded with the `--view=modules` argument to get access to the `module load` command:
+### netcdf-tools
 
-```
-uenv start --view=modules netcdf-tools/2024:v1
-module avail
+The netcdf-tools uenv provides a set of CLI tools and GUI tools frequently used in climate and weather workflows,
+including `cdo`, `ncview`, `ncdump` and others.
+
+It is recommended that the `netcdf-tools` uenv is loaded with the `--view=netcdf` argument to instantly
+access all of the tools that are shipped with this uenv:
+
+```bash
+uenv start --view=netcdf netcdf-tools/2025:v1
 ```
 
-This will show the list of available modules:
+The software is now available, e.g.:
 
+```bash
+which cdo
+# /user-environment/env/netcdf/bin/cdo
 ```
-cdo/2.4.0            hdf5/1.14.3     netcdf-c/4.9.2          python/3.12.1
-cray-mpich/8.1.30    nco/5.1.9       netcdf-cxx4/4.3.1
-gcc/13.2.0           ncview/2.1.9    netcdf-fortran/4.6.1
-```
+
+More information about the `netcdf-tools` uenv can be found at the [CSCS Docs page :material-open-in-new:](https://docs.cscs.ch/software/cw/netcdf-tools/){:target="_blank"}.
 
 ### Pre-release uenvs
 

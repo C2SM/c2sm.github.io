@@ -75,12 +75,22 @@ For running the check scripts in the following, you need to have loaded a probte
 
 #### Test on CPU
 
-To ensure that there are no basic issues with the namelist, we recommend to start testing on CPU before going over to GPU testing. Therefore, create the check run scripts (set `EXP=<exp_name>`):
+To ensure that there are no basic issues with the namelist, we recommend to start testing on CPU before going over to GPU testing. 
+
+Set experiment name, e.g.:
+```console
+export EXP=c2sm_clm_r13b03_seaice
+```
+Then, create the check run scripts:
 
 ```console
 ./make_runscripts ${EXP}
 ./run/make_target_runscript in_script=checksuite.icon-dev/check.${EXP} in_script=exec.iconrun out_script=check.${EXP}.run EXPNAME=${EXP}
 ```
+
+!!! warning "Compute account"
+    Ensure that your default account at CSCS has computing resources. If this is not the case, you need to open a ticket 
+    at the [CSCS Service Desk :material-open-in-new:](https://jira.cscs.ch/plugins/servlet/desk/site/global){:target="_blank"}.
 
 Now run the check run scripts:
 
