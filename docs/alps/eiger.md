@@ -2,7 +2,7 @@
 
 Eiger is an Alps cluster that provides compute nodes and file systems designed to meet the needs
 of CPU-only workloads for the HPC Platform. For more information, please refer to the
-[CSCS Documentation](https://docs.cscs.ch/clusters/eiger/).
+[CSCS Documentation :material-open-in-new:](https://docs.cscs.ch/clusters/eiger/){:target="_blank"}.
 
 C2SM only provides partial support for Eiger. Nevertheless, below you can find instructions on how
 to set up ICON on Eiger.
