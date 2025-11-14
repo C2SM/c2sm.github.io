@@ -20,12 +20,12 @@ Clone the ICON repository:
 
 === "C2SM (latest release)"
     ```console
-    git clone -b release-2025.04 --recurse-submodules git@github.com:C2SM/icon.git
+    git clone -b release-2025.10 --recurse-submodules git@github.com:C2SM/icon.git
     ```
 
 === "DKRZ (latest release)"
     ```console
-    git clone -b release-2025.04-public --recurse-submodules https://gitlab.dkrz.de/icon/icon-model.git
+    git clone -b release-2025.10-public --recurse-submodules https://gitlab.dkrz.de/icon/icon-model.git
     ```
 
 === "DKRZ (icon-nwp master)"
