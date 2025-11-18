@@ -28,5 +28,9 @@ To run the created runscript, navigate to the *run* subdirectory and submit the 
     ```shell
     cd run && sbatch ./exp.${EXP}.run
     ```
+=== "Eiger"
+    ```shell
+    cd run && sbatch ./exp.${EXP}.run
+    ```
 You may need to adjust the account in the runscript to match your permissions. Alternatively, you can include `--account=<my_account_id>` in the `sbatch` command.
 
