@@ -148,7 +148,7 @@ export SPACK_SYSTEM_CONFIG_PATH=/user-environment/config/
 
 #### 3. Modify Compiler Flags for ICON
 
-Edit the file: `spack/var/spack/repos/builtin/packages/icon/package.pypackages.py`
+Edit the file: `spack/var/spack/repos/builtin/packages/icon/package.py`
 
 Add the following under the line `if self.compiler.name == "gcc":`:
 
