@@ -125,14 +125,14 @@ srun -N 1 -n 12 --mem-per-cpu=1G spack install -j 12
 
 ### Eiger
 
-#### 1. Pull and Start the Environment
+Pull and start the Environment:
 
 ```bash
 uenv image pull prgenv-gnu/24.11:v1
 uenv start --view=spack prgenv-gnu/24.11:v1
 ```
 
-#### 2. Clone and Setup Spack
+Clone and setup Spack
 
 ```bash
 git clone -b releases/v0.23 https://github.com/spack/spack
@@ -145,8 +145,7 @@ Set spack system config path:
 export SPACK_SYSTEM_CONFIG_PATH=/user-environment/config/
 ```
 
-
-#### 3. Modify Compiler Flags for ICON
+Modify compiler flags for ICON:
 
 Edit the file: `spack/var/spack/repos/builtin/packages/icon/package.py`
 
@@ -162,7 +161,7 @@ flags["ICON_OCEAN_FCFLAGS"].extend([
 ])
 ```
 
-#### 4. Create and Configure Spack Environment for ICON
+Create and configure Spack environment for ICON
 
 ```bash
 spack env create my-icon
@@ -217,13 +216,13 @@ spack:
 !!! warning "Path to ICON code"
     Ensure `develop.icon.path` points to your local ICON source code.
 
-#### 5. Activate the Environment
+Activate the environment:
 
 ```bash
 spack env activate path/to/my-icon
 ```
 
-#### 6. Concretize and Install Packages
+Concretize and install packages:
 
 ```bash
 spack concretize
