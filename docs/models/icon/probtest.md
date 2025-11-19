@@ -3,7 +3,7 @@
 Use Probtest to verify whether your test case produces consistent results on GPU. It compares a GPU test run to a CPU ensemble with perturbed input conditions.
 
 ## 1. Compile ICON
-Compile ICON on CPU and on GPU as [out-of-source builds](compile_and_run.md#building-out-of-source) in sub-directories of ICON.
+Compile ICON on CPU and on GPU as [out-of-source builds](compile.md#building-out-of-source) in sub-directories of ICON.
 
 !!! note
     The probtest container uses the ICON root directory as its working directory and can therefore only access data within the ICON root directory. This is why the out-of-source builds need to be subdirectories of ICON.
