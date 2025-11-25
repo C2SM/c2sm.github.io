@@ -39,7 +39,7 @@ The idea here is to test the code path of the final setup but with only a few ti
 
 #### Compile Out-of-Source
 
-Follow the instructions in [Configure and compile](compile_and_run.md) to compile ICON out-of-source for CPU and GPU.
+Follow the instructions in [Configure](compile.md) to compile ICON out-of-source for CPU and GPU.
 
 #### Create Test Case
 

@@ -1,4 +1,4 @@
-# Compile and Run
+# Compile
 
 ## Access
 
@@ -123,73 +123,110 @@ spack env activate -d config/ethz/spack/${SPACK_TAG}/euler_cpu_gcc
 srun -N 1 -n 12 --mem-per-cpu=1G spack install -j 12
 ```
 
+### Eiger
 
-## Run test case
-In the *run* folder, you find many prepared test cases, which you can convert into run scripts. To generate the runscript of one of the experiment files, you can use the `make_runscripts` function.
+Pull and start the Environment:
 
-First, set experiment name, e.g.:
-```console
-export EXP=c2sm_clm_r13b03_seaice
+```bash
+uenv image pull prgenv-gnu/24.11:v1
+uenv start --view=spack prgenv-gnu/24.11:v1
 ```
 
-Then, generate the runscript for your experiment:
+Clone and setup Spack
 
-```shell
-./make_runscripts ${EXP}
+```bash
+git clone -b releases/v0.23 https://github.com/spack/spack
+source spack/share/spack/setup-env.sh
 ```
 
-To run the created runscript, navigate to the *run* subdirectory and submit the runscript.
+Set spack system config path:
 
-=== "Santis"
-    ```shell
-    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-    cd run && sbatch --uenv ${UENV_VERSION} ./exp.${EXP}.run
-    ```
-=== "Euler"
-    ```shell
-    cd run && sbatch ./exp.${EXP}.run
-    ```
-=== "Balfrin"
-    ```shell
-    cd run && sbatch ./exp.${EXP}.run
-    ```
-You may need to adjust the account in the runscript to match your permissions. Alternatively, you can include `--account=<my_account_id>` in the `sbatch` command.
+```bash
+export SPACK_SYSTEM_CONFIG_PATH=/user-environment/config/
+```
 
-## Input data
+Modify compiler flags for ICON:
 
-There are two types in input data sets available for ICON:
+Edit the file: `spack/var/spack/repos/builtin/packages/icon/package.py`
 
-- General input data for use cases / production runs
-- Testing input data for CI
+Add the following under the line `if self.compiler.name == "gcc":`:
 
-### Input data pools
+```python
+flags["LDFLAGS"].append("-Wl,--copy-dt-needed-entries")
+flags["ICON_FCFLAGS"].append("-fallow-argument-mismatch")
+flags["ICON_OCEAN_FCFLAGS"].extend([
+    "-O3",
+    "-fno-tree-loop-vectorize",
+    "-fallow-argument-mismatch"
+])
+```
 
-=== "Santis"
-    ```shell
-    /capstor/store/cscs/userlab/cws01/pool/data/ICON
-    ```  
-=== "Balfrin"
-    ```shell
-    /scratch/mch/jenkins/icon/pool/data/ICON
-    ```
-=== "Euler"
-    ```shell
-    /cluster/work/climate/icon_input
-    ```    
+Create and configure Spack environment for ICON
 
-### Testing input data pool
+```bash
+spack env create my-icon
+```
 
-The input data for standard ICON tests are stored in a [Git-lfs repository :material-open-in-new:](https://gitlab.dkrz.de/icon/testing-input-data){:target="_blank"}.
+Modify the `spack.yaml` file in your `my-icon` environment. Example:
 
-=== "Santis"
-    ```shell
-     /capstor/store/cscs/userlab/d126/testing-input-data
-    ```  
-=== "Balfrin"
-    ```shell
-    /scratch/mch/icontest/testing-input-data
-    ```
-=== "Euler"
-    ```shell
-    /cluster/work/climate/icon_testing_input
-    ```
+```yaml
+# This is a Spack Environment file.
+#
+# It describes a set of packages to be installed, along with
+# configuration settings.
+spack:
+  specs:
+  - icon+art+rte-rrtmgp+grib2 -ocean ~coupling
+  view: true
+  concretizer:
+    unify: true
+  develop:
+    icon:
+      spec: icon +rte-rrtmgp +art +grib2 -ocean ~coupling
+      path: /capstor/store/cscs/empa/em05/ckeller/icon-kit
+  compilers:
+  - compiler:
+      spec: gcc@=7.5.0
+      paths:
+        cc: /usr/bin/gcc
+        cxx: /usr/bin/g++
+        f77: /usr/bin/gfortran
+        fc: /usr/bin/gfortran
+      flags: {}
+      operating_system: sles15
+      target: x86_64
+      modules: []
+      environment: {}
+      extra_rpaths: []
+  - compiler:
+      spec: gcc@=12.3.0
+      paths:
+        cc: /usr/bin/gcc-12
+        cxx: /usr/bin/g++-12
+        f77: /usr/bin/gfortran-12
+        fc: /usr/bin/gfortran-12
+      flags: {}
+      operating_system: sles15
+      target: x86_64
+      modules: []
+      environment: {}
+      extra_rpaths: []
+```
+
+!!! warning "Path to ICON code"
+    Ensure `develop.icon.path` points to your local ICON source code.
+
+Activate the environment:
+
+```bash
+spack env activate path/to/my-icon
+```
+
+Concretize and install packages:
+
+```bash
+spack concretize
+spack install
+```
+
+`concretize` resolves dependencies, and `install` builds the packages.
