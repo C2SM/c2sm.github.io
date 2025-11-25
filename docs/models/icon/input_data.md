@@ -26,9 +26,7 @@ On Säntis, all ICON input and reference data is collected in the project `cws01
 ```text
 /capstor/store/cscs/userlab/cws01/
 ├── ci/                                      # CI
-│   ├── buildbot_data/                       # Buildbot data
-│   │   ├── nwp/                             # nwp test case data
-│   │   └── ref/                             # Reference data (hashed)
+│   ├── reference_data/                      # Reference data (hashed)
 │   ├── ci-python-image/                     # Squashfs file for Python environment
 │   └── testing-input-data/                  # Input data for CI (git lfs repo)
 ├── input/                                   # All input data
