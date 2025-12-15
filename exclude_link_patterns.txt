@@ -26,3 +26,7 @@ agupubs.onlinelibrary.wiley.com
 ^https://www.research-collection.ethz.ch
 ^https://gmao.gsfc.nasa.gov/gmao-products
 ^https://rechtssammlung.sp.ethz.ch
+^https://esgf.llnl.gov
+^https://www.clm-community.eu
+^https://c2sm.ethz.ch/education/technical-training/*.html
+^https://egusphere.copernicus.org

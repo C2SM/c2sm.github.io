@@ -15,7 +15,7 @@ The latest official ICON release is continuously being tested on both Santis (CS
 
 !!! info 
 
-    The latest ICON release is `2025.04`.
+    The latest ICON release is `2025.10`.
 
 ## Mailing list
 If you use ICON, please follow [these instructions](../../events/icon_meetings/index.md#c2sm-icon-mailing-list) to subscribe to our mailing list.

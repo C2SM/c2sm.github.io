@@ -9,7 +9,7 @@
    * [Forschungsdatenmanagement und Datenerhalt :material-open-in-new:](https://documentation.library.ethz.ch/display/DD/Forschungsdatenmanagement+und+Datenerhalt){:target="_blank"}
    * [ETH Guidelines for Research Integrity :material-open-in-new:](https://doi.org/10.3929/ethz-b-000179298){:target="_blank"}
    * [ETH Research Collection :material-open-in-new:](https://www.research-collection.ethz.ch){:target="_blank"}
-   * [Add your ORCID ID to your ETH account :material-open-in-new:](https://documentation.library.ethz.ch/display/RC/Assign+ORCID+iD){:target="_blank"}
+   * [Add your ORCID ID to your ETH account :material-open-in-new:](https://unlimited.ethz.ch/spaces/RC/pages/194119877/Author+profil+and+assign+ORCID+iD){:target="_blank"}
    * [ETH Guidelines for data management plans :material-open-in-new:](https://unlimited.ethz.ch/pages/viewpage.action?pageId=194127962){:target="_blank"}
 
 ## ETH Contacts
@@ -49,6 +49,6 @@
    * [IAC internal documentation on NetCDF in general :material-open-in-new:](https://wiki.iac.ethz.ch/IT/LinuxNetCDF){:target="_blank"} (!with IAC login only)
    * [Climate and Forecast (CF) conventions :material-open-in-new:](http://cfconventions.org){:target="_blank"}
    * [Python CF checker :material-open-in-new:](https://github.com/cedadev/cf-checker){:target="_blank"}
-   * [CMIP6 controlled vocabularies :material-open-in-new:](https://cmor.llnl.gov/mydoc_cmor3_CV/){:target="_blank"}
+   * [Controlled Vocabularies (CVs) for use in CMIP6 :material-open-in-new:](https://wcrp-cmip.github.io/CMIP6_CVs/){:target="_blank"}
 
 
