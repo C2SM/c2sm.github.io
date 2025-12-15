@@ -34,94 +34,22 @@ Clone the ICON repository:
     ```
 
 
-### Säntis
+### Balfrin
 
-Run the following after navigating into ICON root folder:
+Run the following after navigating into the ICON root folder:
 
 === "CPU compilation"
     ```console
-    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-    uenv run ${UENV_VERSION} -- ./config/cscs/santis.cpu.nvhpc
+    ./config/cscs/alps_mch.cpu.nvidia
     ```
 
 === "GPU compilation"
     ```console
-    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-    uenv run ${UENV_VERSION} -- ./config/cscs/santis.gpu.nvhpc
+    ./config/cscs/alps_mch.gpu.nvidia
     ```
 
-!!! info "User environments and out-of-source builds"
+You can run the above scripts out-of-source also.
 
-    If you have never used a uenv on Säntis, you need to create a uenv repo first:
-    ```
-    uenv repo create
-    ```
-
-    In case you are using the uenv version for the first time, you need to pull the image first:
-    ```
-    uenv image pull $UENV_VERSION
-    ```
-
-
-#### Building out-of-source
-
-Out-of-source builds are useful if you want to have two or more compiled versions of ICON in the same repository.
-To achieve that, you simply need to create separate folders in the ICON root folder 
-and run the configure wrapper from there.
-
-For example, if you want to compile ICON both for `cpu` and `gpu`, create those directories:
-
-```bash
-mkdir nvhpc_cpu
-mkdir nvhpc_gpu
-```
-
-Then, navigate into the corresponding folder and source the configure wrapper for compilation:
-
-=== "`cpu`"
-    ```bash
-    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-    cd nvhpc_cpu
-    uenv run ${UENV_VERSION} -- ./../config/cscs/santis.cpu.nvhpc 
-    ```
-=== "`gpu`"
-    ```bash
-    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-    cd nvhpc_gpu
-    uenv run ${UENV_VERSION} -- ./../config/cscs/santis.gpu.nvhpc 
-    ```
-
-### Euler
-
-Navigate into the ICON root folder.
-
-Now, set up your spack instance:
-
-```bash
-# Setup spack
-SPACK_TAG=$(cat "config/ethz/SPACK_TAG_EULER")
-git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
-. spack-c2sm/setup-env.sh
-```
-
-Euler Support recommends to compile code on compute nodes. There,
-we can take advantage of multi-core compiling.
-However, we need to load the module `eth_proxy`, which enables connecting from a compute node
-to an external service, e.g. GitHub or GitLab.
-
-```console
-module load eth_proxy
-```
-
-Now, activate the spack environment and build ICON:
-
-```bash
-# Build ICON
-# For out-of-source builds: navigate into the build folder and 
-# adapt the path to the Spack environment in the following
-spack env activate -d config/ethz/spack/${SPACK_TAG}/euler_cpu_gcc
-srun -N 1 -n 12 --mem-per-cpu=1G spack install -j 12
-```
 
 ### Eiger
 
@@ -230,3 +158,95 @@ spack install
 ```
 
 `concretize` resolves dependencies, and `install` builds the packages.
+
+
+### Euler
+
+Navigate into the ICON root folder.
+
+Now, set up your spack instance:
+
+```bash
+# Setup spack
+SPACK_TAG=$(cat "config/ethz/SPACK_TAG_EULER")
+git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
+. spack-c2sm/setup-env.sh
+```
+
+Euler Support recommends to compile code on compute nodes. There,
+we can take advantage of multi-core compiling.
+However, we need to load the module `eth_proxy`, which enables connecting from a compute node
+to an external service, e.g. GitHub or GitLab.
+
+```console
+module load eth_proxy
+```
+
+Now, activate the spack environment and build ICON:
+
+```bash
+# Build ICON
+# For out-of-source builds: navigate into the build folder and 
+# adapt the path to the Spack environment in the following
+spack env activate -d config/ethz/spack/${SPACK_TAG}/euler_cpu_gcc
+srun -N 1 -n 12 --mem-per-cpu=1G spack install -j 12
+```
+
+### Säntis
+
+Run the following after navigating into the ICON root folder:
+
+=== "CPU compilation"
+    ```console
+    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+    uenv run ${UENV_VERSION} -- ./config/cscs/santis.cpu.nvhpc
+    ```
+
+=== "GPU compilation"
+    ```console
+    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+    uenv run ${UENV_VERSION} -- ./config/cscs/santis.gpu.nvhpc
+    ```
+
+!!! info "User environments and out-of-source builds"
+
+    If you have never used a uenv on Säntis, you need to create a uenv repo first:
+    ```
+    uenv repo create
+    ```
+
+    In case you are using the uenv version for the first time, you need to pull the image first:
+    ```
+    uenv image pull $UENV_VERSION
+    ```
+
+
+#### Building out-of-source
+
+Out-of-source builds are useful if you want to have two or more compiled versions of ICON in the same repository.
+To achieve that, you simply need to create separate folders in the ICON root folder 
+and run the configure wrapper from there.
+
+For example, if you want to compile ICON both for `cpu` and `gpu`, create those directories:
+
+```bash
+mkdir nvhpc_cpu
+mkdir nvhpc_gpu
+```
+
+Then, navigate into the corresponding folder and source the configure wrapper for compilation:
+
+=== "`cpu`"
+    ```bash
+    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+    cd nvhpc_cpu
+    uenv run ${UENV_VERSION} -- ./../config/cscs/santis.cpu.nvhpc 
+    ```
+=== "`gpu`"
+    ```bash
+    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+    cd nvhpc_gpu
+    uenv run ${UENV_VERSION} -- ./../config/cscs/santis.gpu.nvhpc 
+    ```
+
+
