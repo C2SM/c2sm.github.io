@@ -20,6 +20,7 @@
 - Access: direct / rsync
 - Status: frozen (2010-10)
 - Resolution: native
+- Coverage: global
 
 ### CMIP3
 
@@ -33,6 +34,7 @@
 - Access: direct / rsync
 - Status: frozen (2016-12)
 - Resolution: native
+- Coverage: global
 
 ### CMIP5
 
@@ -46,6 +48,7 @@
 - Access: direct / rsync
 - Status: frozen (2023/01)
 - Resolution: native
+- Coverage: global
 
 ### CMIP6
 
@@ -63,6 +66,7 @@
 - Access: direct / rsync
 - Status: weekly updated
 - Resolution: native
+- Coverage: global
 
 ## CMIP Next Generation
 
@@ -85,6 +89,7 @@
 - Status: frozen (2019-03)
 - Variables: n/a
 - Resolution: native and 2.5°x2.5°
+- Coverage: global
 
 ### CMIP5-ng
 
@@ -99,6 +104,7 @@
 - Status: frozen (2019-03)
 - Variables: n/a
 - Resolution: native and 2.5° x 2.5°
+- Coverage: global
 
 ### CMIP6-ng
 
@@ -115,8 +121,8 @@
 - Size: 214.61 TB :material-information-outline:{ title="last updated: 2025-11-30 01:48:59" }
 - Number of files: 715,562 :material-information-outline:{ title="last updated: 2025-11-30 01:48:59" }
 - Access: direct / rsync
-- Status: frozen (2019-03)
-- Variables: 
+- Status: updated monthly
+- Variables:
   `areacella`{ title="fx (native)" },
   `clt`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `co2mass`{ title="mon (native)" },
@@ -175,6 +181,7 @@
   `zg500`{ title="ann (g025), ann (native), day (g025), day (native), mon (g025), mon (native)" },
   `zos`{ title="ann (g025), ann (native), mon (g025), mon (native)" }
 - Resolution: native and 2.5° x 2.5°
+- Coverage: global
 
 ## Raw CORDEX
 
@@ -202,6 +209,7 @@
 - Access: direct / rsync
 - Status: monthly updated
 - Resolution: 0.44° and 0.11°
+- Coverage: Europe
 
 ### CORDEX-ReKliEs
 
@@ -219,6 +227,7 @@
 - Access: direct
 - Status: monthly updated
 - Resolution: 0.11°
+- Coverage: Europe
 
 ## CORDEX Data for Climate Scenarios
 
@@ -240,7 +249,7 @@
 - Number of files: 1.800
 - Access: direct
 - Status: frozen (2019-04)
-- Variables: 
+- Variables:
   `hfls`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
   `hfss`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
   `hurs`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
@@ -287,6 +296,7 @@
   `orog`{ title="historical: fx — rcp26: fx — rcp85: fx" },
   `sftlf`{ title="historical: fx — rcp26: fx — rcp85: fx" }
 - Resolution: 0.44° and 0.11°
+- Coverage: Europe
 
 ### CORDEX.ch2025
 
@@ -298,10 +308,11 @@
 - Size: 46 TB
 - Number of files: 3.500
 - Access: direct
-- Status: ongoing
+- Status: frozen (2025-11)
 - Variables:
     - daily: `pr`, `tas`, `tasmax`, `tasmin`, `hurs`, `rsds`, `sfcWind`, `zg500`, `evspsbl`, `ta500`, `ta850`
 - Resolution: 0.11°
+- Coverage: Europe
 - [List with issues on polybox :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/RQQrUnRPlg86Apx){:target="_blank"}
 
 ### CORDEX-FPSCONV
@@ -318,11 +329,12 @@
 - Size: 30 TB
 - Number of files: 22.949
 - Access: direct / rsync
-- Status: ongoing
+- Status: frozen (2023-12)
 - Variables:
     - 1hr: `pr`, `tas`
     - daily: `pr`, `tas`, `tasmax`, `tasmin`
 - Resolution: 2-3 km
+- Coverage: European Alpine domain
 
 ### Seasonal Forecast Data from ECMWF (SEAS5)
 
@@ -340,4 +352,4 @@
     - daily: `10m_u_component_of_wind`,  `2m_dewpoint_temperature`,  `mean_sea_level_pressure`,  `snow_depth_water_equivalent`,  `surface_net_solar_radiation`,  `total_cloud_cover`,
 `10m_v_component_of_wind`,  `evaporation`, `snow_depth`, `sub_surface_runoff`, `surface_runoff`, `2m_temperature`, `maximum_2m_temperature_in_the_last_24_hours`, `minimum_2m_temperature_in_the_last_24_hours`, `total_precipitation`
 - Resolution: 1° x 1°
-
+- Coverage: global
