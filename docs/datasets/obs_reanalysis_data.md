@@ -100,15 +100,16 @@
     /capstor/store/cscs/c2sm/c2sme/reanalyses_dkrz/ERA5
     ```
 
-- Size: 100 TB (last updated: 2025-01-31)
-- Number of files: 22'035 (last updated: 2025-01-31)
+- Size: 101 TB (last updated: 2025-12-15)
+- Number of files: 22'047 (last updated: 2025-12-15)
 - Access: direct
 - Status: updated
-- Time period: 1940-01 - 2024-08
+- Time period: 1940-01 - 2025-08
 - Variables: `FIS`, `FR_LAND`, `FR_SEA_ICE`, `PS`, `QC`, `QI`, `QR`, `QS`, `QV`, `T`, `T_SKIN`, `T_SNOW`, `T_SO`, `U`, `V`, `W_SNOW`, `W_SO_REL`
 - Temporal Resolution: hourly
 - Spatial Resolution: 0.28125° x 0.28125° (31 km)
 - Vertical levels: [40 - 137 :material-open-in-new:](https://confluence.ecmwf.int/display/UDOC/L137+model+level+definitions){:target="_blank"}
+- Coverage: Europe
 - More information: [ERA5 at CDS :material-open-in-new:](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview){:target="_blank"}
 
 ### ERA5
