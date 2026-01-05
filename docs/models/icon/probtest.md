@@ -91,7 +91,7 @@ cd run && uenv run $UENV_VERSION --view modules,default -- bash -c 'module load 
 Navigate back to ICON root folder and collect the GPU statistics:
 ```console
 cd ..
-uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c 'source ${SQFS_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py stats $EXP --stats-file-path stats_gpu.csv --build-dir nvhpc_gpu'
+uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c 'source ${SQFS_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py stats $EXP --stats-file-name stats_gpu.csv --build-dir ${EDF_PATH}/nvhpc_gpu'
 ```
 
 This saves the GPU stats as `stats_gpu.csv` in your ICON root directory.
@@ -100,7 +100,7 @@ This saves the GPU stats as `stats_gpu.csv` in your ICON root directory.
 
 From your ICON root directory, run the check using the generated reference and tolerance:
 ```console
-uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c 'source ${SQFS_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py check $EXP --input-file-cur stats_gpu.csv --input-file-ref nvhpc_cpu/${EXP}_reference.csv --tolerance-file-name nvhpc_cpu/${EXP}_tolerance.csv --build-dir $(pwd)'
+uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c 'source ${SQFS_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py check $EXP --current-files stats_gpu.csv --reference-files nvhpc_cpu/${EXP}_reference.csv --tolerance-files nvhpc_cpu/${EXP}_tolerance.csv --build-dir $(pwd)'
 ```
 
 ## 7. Increase Ensemble Size if Validation Fails
