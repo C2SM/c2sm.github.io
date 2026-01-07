@@ -177,12 +177,12 @@
     ```
 
 
-- Size: 8.32 TB :material-information-outline:{ title="last updated: 2025-12-14 01:45:48" }
-- Number of files: 3,573 :material-information-outline:{ title="last updated: 2025-12-14 01:45:48" }
+- Size: 8.33 TB :material-information-outline:{ title="last updated: 2026-01-04 01:46:46" }
+- Number of files: 3,573 :material-information-outline:{ title="last updated: 2026-01-04 01:46:46" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
-- Variables:
+- Variables: 
   `10si`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `10wdir`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `2r`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
@@ -225,12 +225,12 @@
     ```
 
 
-- Size: 1.84 TB :material-information-outline:{ title="last updated: 2025-12-14 01:45:48" }
-- Number of files: 1,090 :material-information-outline:{ title="last updated: 2025-12-14 01:45:48" }
+- Size: 1.84 TB :material-information-outline:{ title="last updated: 2026-01-04 01:46:46" }
+- Number of files: 1,090 :material-information-outline:{ title="last updated: 2026-01-04 01:46:46" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
-- Variables:
+- Variables: 
   `eva`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
   `perc`{ title="day (native): 1985-2021, mon (native): 1985-2021" },
   `sd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
@@ -284,12 +284,12 @@
     ```
 
 
-- Size: 45.94 TB :material-information-outline:{ title="last updated: 2025-12-14 01:46:47" }
-- Number of files: 139,930 :material-information-outline:{ title="last updated: 2025-12-14 01:46:47" }
+- Size: 45.94 TB :material-information-outline:{ title="last updated: 2026-01-04 01:47:51" }
+- Number of files: 139,930 :material-information-outline:{ title="last updated: 2026-01-04 01:47:51" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
-- Variables:
+- Variables: 
   `cbh`{ title="day (native): 194001-202412, mon (native): 194001-202412" },
   `cl`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `clt`{ title="day (native): 198001-202312, mon (native): 194012-202410" },
@@ -333,12 +333,12 @@
     ```
 
 
-- Size: 8.9 TB :material-information-outline:{ title="last updated: 2025-12-14 01:45:52" }
-- Number of files: 2,012 :material-information-outline:{ title="last updated: 2025-12-14 01:45:52" }
+- Size: 8.9 TB :material-information-outline:{ title="last updated: 2026-01-04 01:46:51" }
+- Number of files: 2,012 :material-information-outline:{ title="last updated: 2026-01-04 01:46:51" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
-- Variables:
+- Variables: 
   `2d`{ title="day (native): 1970-2024, mon (native): 1970-2024" },
   `2t`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
   `e`{ title="day (native): 1950-2022, mon (native): 1950-2022" },
