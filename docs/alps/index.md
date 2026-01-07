@@ -18,7 +18,7 @@ The following table shows current clusters distribution on Alps at CSCS
 | vCluster | Activity           | Share                    | C2SM Support       |
 |----------|--------------------|--------------------------|--------------------|
 | Santis   | Weather & Climate  | ~ 430 Grace-Hopper nodes | :white_check_mark: |
-| Balfrin  | MeteoSwiss         | ~ 40 A100 GPU nodes      | :white_check_mark: |
+| Balfrin  | MeteoSwiss         | ~ 40 A100 GPU nodes      | :yellow_circle:    |
 | Eiger    | CPU-only workloads | ~ 580 multicore nodes    | :yellow_circle:    |
 | Daint    | User Lab           | ~ 600 Grace-Hopper nodes | :x:                |
 | Clariden | Machine Learning   | ~ 800 Grace-Hopper nodes | :x:                |
