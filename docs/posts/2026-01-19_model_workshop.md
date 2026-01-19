@@ -1,6 +1,6 @@
 ---
 date:
-  created: 2026-01-14
+  created: 2026-01-19
 categories:
   - Workshop
   - Modeling
