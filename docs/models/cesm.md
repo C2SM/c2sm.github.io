@@ -5,7 +5,7 @@ present, and future climate states. For more info please see the [CESM Homepage 
 
 ## Support status
 The current supported version on [ETH Cluster Euler :material-open-in-new:](https://scicomp.ethz.ch/wiki/Main_Page){:target="_blank"} are **CESM 1.2.2** and **CESM 2.1.2**.
-Newer CESM2 versions are supported by request. We recommend to use CESM2. Please contact [Urs Beyerle :material-open-in-new:](https://usys.ethz.ch/personen/profil.NDk5MTg=.TGlzdC82MzcsMzIwMTk3MjIy.html){:target="_blank"} for support.
+Newer CESM2 versions are supported by request. We recommend to use CESM2.
 
 ## Get started
 * [Setup a CESM2 control run :material-open-in-new:](https://wiki.iac.ethz.ch/Climphys/ProjectCESM2SetupControlRun){:target="_blank"} (ETH login required)
