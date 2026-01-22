@@ -4,7 +4,7 @@ global climate model that provides state-of-the-art computer simulations of the 
 present, and future climate states. For more info please see the [CESM Homepage :material-open-in-new:](https://www.cesm.ucar.edu/){:target="_blank"}.
 
 ## Support status
-The current supported version on [ETH Cluster Euler :material-open-in-new:](https://docs.hpc.ethz.ch/){:target="_blank"} are:
+The current supported versions on [ETH Cluster Euler :material-open-in-new:](https://docs.hpc.ethz.ch/){:target="_blank"} are:
 
 - **CESM 2.2.2**: runs natively under Ubuntu on Euler
 - **CESM 2.1.5**: runs natively under Ubuntu on Euler
