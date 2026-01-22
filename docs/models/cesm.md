@@ -12,10 +12,10 @@ The current supported version on [ETH Cluster Euler :material-open-in-new:](http
 
 Newer CESM2 versions are supported by request. **CESM 1.2.2** is no longer supported. 
 
-If you need help or support, please use the [C2SM discussion forum](https://github.com/C2SM/Tasks-Support/discussions).
+If you need help or support, please use the [C2SM discussion forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"}.
 
 ## Get started
-- [Overview Page CESM](https://wiki.iac.ethz.ch/bin/viewauth/Climphys/ProjectCESM) (IAC-ETH login required)
+- [Overview Page CESM :material-open-in-new:](https://wiki.iac.ethz.ch/bin/viewauth/Climphys/ProjectCESM){:target="_blank"} (IAC-ETH login required)
 * [Setup a CESM2 control run :material-open-in-new:](https://wiki.iac.ethz.ch/Climphys/ProjectCESM2SetupControlRun){:target="_blank"} (IAC-ETH login required)
 
 ## Input files
