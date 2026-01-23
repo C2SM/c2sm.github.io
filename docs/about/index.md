@@ -17,7 +17,6 @@ The C2SM Core Team - or C2SM's Executive Office - currently employs six scientif
 
 ### Scientific Programmers
 
-- [Urs Beyerle :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=49918){:target="_blank"} (CHN N 16.2)
 - [Michael Jähn :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091){:target="_blank"} (CHN M 15.1)
 - [Annika Lauber :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=235458){:target="_blank"} (CHN M 15.1)
 - [Matthieu Leclair :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=221860){:target="_blank"} (CHN M 15.2)
