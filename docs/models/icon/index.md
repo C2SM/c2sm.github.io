@@ -38,7 +38,9 @@ Learn more about ongoing projects involving ETHZ in the development of ICON:
 ## Documentation
 ICON documentation is available at:
 
-   * [ICON Documentation :material-open-in-new:](https://docs.icon-model.org/){:target="_blank"}
+   * [ICON Documentation (latest release) :material-open-in-new:](https://docs.icon-model.org/){:target="_blank"}
+   * [ICON Documentation (icon main branch) :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon/){:target="_blank"}
+   * [ICON Documentation (icon-nwp master branch) :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/){:target="_blank"}
    * [ICON Tutorial (DWD) :material-open-in-new:](https://www.dwd.de/DE/leistungen/nwv_icon_tutorial/nwv_icon_tutorial.html){:target="_blank"}
    * [Getting Started with ICON :material-open-in-new:](https://www.icon-model.org/icon_model/getting_started){:target="_blank"}
    * [MPI-M documentation :material-open-in-new:](https://code.mpimet.mpg.de/projects/iconpublic/wiki/Documentation){:target="_blank"}
