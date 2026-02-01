@@ -177,8 +177,8 @@
     ```
 
 
-- Size: 8.33 TB :material-information-outline:{ title="last updated: 2026-01-25 01:45:49" }
-- Number of files: 3,573 :material-information-outline:{ title="last updated: 2026-01-25 01:45:49" }
+- Size: 8.33 TB :material-information-outline:{ title="last updated: 2026-02-01 01:46:43" }
+- Number of files: 3,573 :material-information-outline:{ title="last updated: 2026-02-01 01:46:43" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -225,8 +225,8 @@
     ```
 
 
-- Size: 1.84 TB :material-information-outline:{ title="last updated: 2026-01-25 01:45:49" }
-- Number of files: 1,090 :material-information-outline:{ title="last updated: 2026-01-25 01:45:49" }
+- Size: 1.84 TB :material-information-outline:{ title="last updated: 2026-02-01 01:46:43" }
+- Number of files: 1,090 :material-information-outline:{ title="last updated: 2026-02-01 01:46:43" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -243,7 +243,6 @@
   `ssrd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
   `str`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
   `strd`{ title="day (native): 1985-2020, mon (native): 1985-2020" },
-  `tcc`{ title="day (native): N/A, mon (native): N/A" },
   `tp`{ title="mon (native): 1985-2020" },
   `vsw`{ title="day (native): 1985-2020, mon (native): 1985-2020" }
 - Temporal Resolution: daily, monthly
@@ -284,8 +283,8 @@
     ```
 
 
-- Size: 45.94 TB :material-information-outline:{ title="last updated: 2026-01-25 01:46:04" }
-- Number of files: 139,930 :material-information-outline:{ title="last updated: 2026-01-25 01:46:04" }
+- Size: 45.94 TB :material-information-outline:{ title="last updated: 2026-02-01 01:46:47" }
+- Number of files: 139,930 :material-information-outline:{ title="last updated: 2026-02-01 01:46:47" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
@@ -333,8 +332,8 @@
     ```
 
 
-- Size: 8.9 TB :material-information-outline:{ title="last updated: 2026-01-25 01:45:51" }
-- Number of files: 2,012 :material-information-outline:{ title="last updated: 2026-01-25 01:45:51" }
+- Size: 8.9 TB :material-information-outline:{ title="last updated: 2026-02-01 01:46:46" }
+- Number of files: 2,012 :material-information-outline:{ title="last updated: 2026-02-01 01:46:46" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
