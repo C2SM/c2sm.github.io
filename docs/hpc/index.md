@@ -20,14 +20,13 @@ The following table shows current clusters distribution on Alps at CSCS
 | Santis   | Weather & Climate  | ~ 430 Grace-Hopper nodes | :white_check_mark: |
 | Balfrin  | MeteoSwiss         | ~ 40 A100 GPU nodes      | :yellow_circle:    |
 | Eiger    | CPU-only workloads | ~ 580 multicore nodes    | :yellow_circle:    |
-| Daint    | User Lab           | ~ 600 Grace-Hopper nodes | :x:                |
-| Clariden | Machine Learning   | ~ 800 Grace-Hopper nodes | :x:                |
 
 <small>
 :white_check_mark: Full C2SM support<br />
 :yellow_circle: Partial or limited C2SM support (help available on request)<br />
-:x: No C2SM support
 </small>
+
+Additional vClusters without C2SM support include Daint (User Lab) and Clariden (Machine Learning).
 
 More information about clusters on Alps is available on the
 [official CSCS documentation :material-open-in-new:](https://docs.cscs.ch/clusters/){:target="_blank"}.
@@ -44,7 +43,7 @@ Host ela
   User cscsusername
   IdentityFile ~/.ssh/cscs-key
 
-Host santis* daint* 
+Host santis* eiger* 
   Hostname %h.alps.cscs.ch
   User cscsusername
   IdentityFile ~/.ssh/cscs-key
