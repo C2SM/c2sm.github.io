@@ -15,7 +15,7 @@ Groups at IAC have shares for storage and CPU via the Euler **Climate** group. A
 
 ## Software Stack
 
-Euler provides a [software stack](https://docs.hpc.ethz.ch/software/software-stack/) via the module command:
+Euler provides a [software stack :material-open-in-new:](https://docs.hpc.ethz.ch/software/software-stack/){:target="_blank"} via the module command:
 
 ```bash
 module load stack openmpi
