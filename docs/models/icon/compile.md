@@ -2,39 +2,88 @@
 
 ## Access
 
-The [ICON repository :material-open-in-new:](https://github.com/C2SM/icon){:target="_blank"} is hosted on the C2SM GitHub organisation. If you do not have access, please follow the instructions under [How to get Access](../../about/index.md#how-to-get-access).
-
-  If you do not already have an SSH key set up for GitHub, but would like to do so, follow the [instructions :material-open-in-new:](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent){:target="_blank"}.
-
-Since 2024, ICON is open-source and comes with semi-annual releases, which
+Since 2024, ICON is open-source and comes with semi-annual, public releases, which
 can be accessed via [this public repository :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-model){:target="_blank"}.
 
-If you are an ICON developer, you should have access to the DKRZ GitLab, where the original ICON repository is hosted. All developments related to GPU go
+If you are an ICON developer, you should have access to the DKRZ GitLab, where the original ICON repository is hosted. All developments related to GPU porting and NWP settings go
 into the [`icon-nwp` repository :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"}.
     
-## Configure and compile
+## Configure and Compile
+
+### Cloning ICON Repository
 
 Below you find instructions on how to compile different flavors of ICON on C2SM-supported machines.
 
 Clone the ICON repository:
 
-=== "C2SM (latest release)"
-    ```console
-    git clone -b release-2025.10 --recurse-submodules git@github.com:C2SM/icon.git
-    ```
-
-=== "DKRZ (latest release)"
+=== "Latest release at DKRZ GitLab"
     ```console
     git clone -b release-2025.10-public --recurse-submodules https://gitlab.dkrz.de/icon/icon-model.git
     ```
 
-=== "DKRZ (icon-nwp master)"
+=== "icon-nwp master branch at DKRZ GitLab"
     ```console
     git clone --recurse-submodules git@gitlab.dkrz.de:icon/icon-nwp.git
     ```
 
+### Compiling
 
-### Balfrin
+#### Säntis
+
+Run the following after navigating into the ICON root folder:
+
+=== "CPU compilation"
+    ```console
+    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+    uenv run ${UENV_VERSION} -- ./config/cscs/santis.cpu.nvhpc
+    ```
+
+=== "GPU compilation"
+    ```console
+    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+    uenv run ${UENV_VERSION} -- ./config/cscs/santis.gpu.nvhpc
+    ```
+
+!!! info "User environments and out-of-source builds"
+
+    If you have never used a uenv on Säntis, you need to create a uenv repo first:
+    ```
+    uenv repo create
+    ```
+
+    In case you are using the uenv version for the first time, you need to pull the image first:
+    ```
+    uenv image pull $UENV_VERSION
+    ```
+
+##### Building out-of-source
+
+Out-of-source builds are useful if you want to have two or more compiled versions of ICON in the same repository.
+To achieve that, you simply need to create separate folders in the ICON root folder 
+and run the configure wrapper from there.
+
+For example, if you want to compile ICON both for `cpu` and `gpu`, create those directories:
+
+```bash
+mkdir nvhpc_cpu
+mkdir nvhpc_gpu
+```
+
+Then, navigate into the corresponding folder and source the configure wrapper for compilation:
+
+=== "`cpu`"
+    ```bash
+    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+    cd nvhpc_cpu
+    uenv run ${UENV_VERSION} -- ./../config/cscs/santis.cpu.nvhpc 
+    ```
+=== "`gpu`"
+    ```bash
+    cd nvhpc_gpu
+    uenv run ${UENV_VERSION} -- ./../config/cscs/santis.gpu.nvhpc 
+    ```
+
+#### Balfrin
 
 Run the following after navigating into the ICON root folder:
 
@@ -51,7 +100,7 @@ Run the following after navigating into the ICON root folder:
 You can run the above scripts out-of-source also.
 
 
-### Eiger
+#### Eiger
 
 Pull and start the Environment:
 
@@ -160,7 +209,7 @@ spack install
 `concretize` resolves dependencies, and `install` builds the packages.
 
 
-### Euler
+#### Euler
 
 Navigate into the ICON root folder.
 
@@ -191,62 +240,3 @@ Now, activate the spack environment and build ICON:
 spack env activate -d config/ethz/spack/${SPACK_TAG}/euler_cpu_gcc
 srun -N 1 -n 12 --mem-per-cpu=1G spack install -j 12
 ```
-
-### Säntis
-
-Run the following after navigating into the ICON root folder:
-
-=== "CPU compilation"
-    ```console
-    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-    uenv run ${UENV_VERSION} -- ./config/cscs/santis.cpu.nvhpc
-    ```
-
-=== "GPU compilation"
-    ```console
-    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-    uenv run ${UENV_VERSION} -- ./config/cscs/santis.gpu.nvhpc
-    ```
-
-!!! info "User environments and out-of-source builds"
-
-    If you have never used a uenv on Säntis, you need to create a uenv repo first:
-    ```
-    uenv repo create
-    ```
-
-    In case you are using the uenv version for the first time, you need to pull the image first:
-    ```
-    uenv image pull $UENV_VERSION
-    ```
-
-
-#### Building out-of-source
-
-Out-of-source builds are useful if you want to have two or more compiled versions of ICON in the same repository.
-To achieve that, you simply need to create separate folders in the ICON root folder 
-and run the configure wrapper from there.
-
-For example, if you want to compile ICON both for `cpu` and `gpu`, create those directories:
-
-```bash
-mkdir nvhpc_cpu
-mkdir nvhpc_gpu
-```
-
-Then, navigate into the corresponding folder and source the configure wrapper for compilation:
-
-=== "`cpu`"
-    ```bash
-    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-    cd nvhpc_cpu
-    uenv run ${UENV_VERSION} -- ./../config/cscs/santis.cpu.nvhpc 
-    ```
-=== "`gpu`"
-    ```bash
-    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-    cd nvhpc_gpu
-    uenv run ${UENV_VERSION} -- ./../config/cscs/santis.gpu.nvhpc 
-    ```
-
-
