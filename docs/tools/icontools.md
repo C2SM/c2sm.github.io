@@ -17,7 +17,7 @@ please contact your group's technical contact. They will be responsible for addi
 
 ### 1) Load via module command
 
-On [Säntis](../alps/santis.md), DWD ICON Tools is provided via the `climtools` uenv:
+On [Säntis](../hpc/santis.md), DWD ICON Tools is provided via the `climtools` uenv:
 
 ```
 uenv start --view=modules /capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images/climtools_25.2_v2.sqfs
