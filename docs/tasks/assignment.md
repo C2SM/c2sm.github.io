@@ -1,6 +1,6 @@
 # Task Assignment
 
-The Core Team accepts tasks from the three different areas mentioned above, each following a specific procedure described below.
+The Core Team accepts tasks from the working groups, each following a specific procedure described below.
 
 !!! info
     Please submit concrete tasks by following the instructions on our GitHub repository [Tasks-Support :material-open-in-new:](https://github.com/C2SM/Tasks-Support){:target="_blank"}.
