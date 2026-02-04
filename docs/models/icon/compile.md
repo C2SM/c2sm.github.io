@@ -3,10 +3,10 @@
 ## Access
 
 Since 2024, ICON is open-source and comes with semi-annual, public releases, which
-can be accessed via [this public repository :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-model){:target="_blank"}.
+can be accessed via the public [icon-model :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-model){:target="_blank"} repository.
 
 If you are an ICON developer, you should have access to the DKRZ GitLab, where the original ICON repository is hosted. All developments related to GPU porting and NWP settings go
-into the [`icon-nwp` repository :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"}.
+into the [icon-nwp :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"} repository.
     
 ## Configure and Compile
 
@@ -79,6 +79,7 @@ Then, navigate into the corresponding folder and source the configure wrapper fo
     ```
 === "`gpu`"
     ```bash
+    UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
     cd nvhpc_gpu
     uenv run ${UENV_VERSION} -- ./../config/cscs/santis.gpu.nvhpc 
     ```

@@ -1,6 +1,6 @@
 # Euler
 
-Euler is ETH Zürich's central high-performance computing (HPC) cluster, providing computational resources for research across all disciplines.
+Euler is ETH Zurich's central high-performance computing (HPC) cluster, providing computational resources for research across all disciplines.
 
 ## Access
 
