@@ -4,7 +4,7 @@
 * [Events](events/)
 * [Tasks](tasks/)
 * [User Support](support/)
-* [Alps](alps/)
+* [HPC](hpc/)
 * [Models](models/)
 * [Tools](tools/)
 * [Datasets](datasets/)

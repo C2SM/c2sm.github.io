@@ -2,41 +2,35 @@
 
 ## Access
 
-The [ICON repository :material-open-in-new:](https://github.com/C2SM/icon){:target="_blank"} is hosted on the C2SM GitHub organisation. If you do not have access, please follow the instructions under [How to get Access](../../about/index.md#how-to-get-access).
+Since 2024, ICON is open-source and comes with semi-annual, public releases, which
+can be accessed via the public [icon-model :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-model){:target="_blank"} repository.
 
-  If you do not already have an SSH key set up for GitHub, but would like to do so, follow the [instructions :material-open-in-new:](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent){:target="_blank"}.
-
-Since 2024, ICON is open-source and comes with semi-annual releases, which
-can be accessed via [this public repository :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-model){:target="_blank"}.
-
-If you are an ICON developer, you should have access to the DKRZ GitLab, where the original ICON repository is hosted. All developments related to GPU go
-into the [`icon-nwp` repository :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"}.
+If you are an ICON developer, you should have access to the DKRZ GitLab, where the original ICON repository is hosted. All developments related to GPU porting and NWP settings go
+into the [icon-nwp :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"} repository.
     
-## Configure and compile
+## Configure and Compile
+
+### Cloning ICON Repository
 
 Below you find instructions on how to compile different flavors of ICON on C2SM-supported machines.
 
 Clone the ICON repository:
 
-=== "C2SM (latest release)"
-    ```console
-    git clone -b release-2025.10 --recurse-submodules git@github.com:C2SM/icon.git
-    ```
-
-=== "DKRZ (latest release)"
+=== "Latest release at DKRZ GitLab"
     ```console
     git clone -b release-2025.10-public --recurse-submodules https://gitlab.dkrz.de/icon/icon-model.git
     ```
 
-=== "DKRZ (icon-nwp master)"
+=== "icon-nwp master branch at DKRZ GitLab"
     ```console
     git clone --recurse-submodules git@gitlab.dkrz.de:icon/icon-nwp.git
     ```
 
+### Compiling
 
-### Säntis
+#### Säntis
 
-Run the following after navigating into ICON root folder:
+Run the following after navigating into the ICON root folder:
 
 === "CPU compilation"
     ```console
@@ -62,8 +56,7 @@ Run the following after navigating into ICON root folder:
     uenv image pull $UENV_VERSION
     ```
 
-
-#### Building out-of-source
+##### Building out-of-source
 
 Out-of-source builds are useful if you want to have two or more compiled versions of ICON in the same repository.
 To achieve that, you simply need to create separate folders in the ICON root folder 
@@ -91,39 +84,24 @@ Then, navigate into the corresponding folder and source the configure wrapper fo
     uenv run ${UENV_VERSION} -- ./../config/cscs/santis.gpu.nvhpc 
     ```
 
-### Euler
+#### Balfrin
 
-Navigate into the ICON root folder.
+Run the following after navigating into the ICON root folder:
 
-Now, set up your spack instance:
+=== "CPU compilation"
+    ```console
+    ./config/cscs/alps_mch.cpu.nvidia
+    ```
 
-```bash
-# Setup spack
-SPACK_TAG=$(cat "config/ethz/SPACK_TAG_EULER")
-git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
-. spack-c2sm/setup-env.sh
-```
+=== "GPU compilation"
+    ```console
+    ./config/cscs/alps_mch.gpu.nvidia
+    ```
 
-Euler Support recommends to compile code on compute nodes. There,
-we can take advantage of multi-core compiling.
-However, we need to load the module `eth_proxy`, which enables connecting from a compute node
-to an external service, e.g. GitHub or GitLab.
+You can run the above scripts out-of-source also.
 
-```console
-module load eth_proxy
-```
 
-Now, activate the spack environment and build ICON:
-
-```bash
-# Build ICON
-# For out-of-source builds: navigate into the build folder and 
-# adapt the path to the Spack environment in the following
-spack env activate -d config/ethz/spack/${SPACK_TAG}/euler_cpu_gcc
-srun -N 1 -n 12 --mem-per-cpu=1G spack install -j 12
-```
-
-### Eiger
+#### Eiger
 
 Pull and start the Environment:
 
@@ -230,3 +208,36 @@ spack install
 ```
 
 `concretize` resolves dependencies, and `install` builds the packages.
+
+
+#### Euler
+
+Navigate into the ICON root folder.
+
+Now, set up your spack instance:
+
+```bash
+# Setup spack
+SPACK_TAG=$(cat "config/ethz/SPACK_TAG_EULER")
+git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
+. spack-c2sm/setup-env.sh
+```
+
+Euler Support recommends to compile code on compute nodes. There,
+we can take advantage of multi-core compiling.
+However, we need to load the module `eth_proxy`, which enables connecting from a compute node
+to an external service, e.g. GitHub or GitLab.
+
+```console
+module load eth_proxy
+```
+
+Now, activate the spack environment and build ICON:
+
+```bash
+# Build ICON
+# For out-of-source builds: navigate into the build folder and 
+# adapt the path to the Spack environment in the following
+spack env activate -d config/ethz/spack/${SPACK_TAG}/euler_cpu_gcc
+srun -N 1 -n 12 --mem-per-cpu=1G spack install -j 12
+```
