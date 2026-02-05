@@ -10,6 +10,7 @@ extra:
   analytics:
     provider: plausible
     domain: c2sm.github.io
+    src: https://plausible.io/js/pa-ldiV-r_nLsxShIy7MXSIw.js
 markdown_extensions:
   - admonition
   - attr_list
