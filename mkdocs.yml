@@ -6,6 +6,10 @@ docs_dir: docs/
 repo_name: C2SM/c2sm.github.io
 repo_url: https://github.com/C2SM/c2sm.github.io
 edit_uri: edit/main/docs/
+extra:
+  analytics:
+    provider: plausible
+    domain: c2sm.github.io
 markdown_extensions:
   - admonition
   - attr_list
