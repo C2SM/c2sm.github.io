@@ -10,30 +10,20 @@ Further information about the ICON model can be found at the [official web page 
 ## Support status
 C2SM facilitates the utilisation of ICON on the [Alps :material-open-in-new:](https://www.cscs.ch/computers/alps){:target="_blank"} and [Euler :material-open-in-new:](https://scicomp.ethz.ch/wiki/Euler){:target="_blank"} computing platforms for the CPU and GPU architectures.
 
-### Supported release
-The latest official ICON release is continuously being tested on both Santis (CSCS) and Euler (ETHZ) and receives patches when necessary.
-
 !!! info 
 
-    The latest ICON release is `2025.10`.
+      The latest official ICON release (currently `2025.10`) and the [`icon-nwp` master branch](https://gitlab.dkrz.de/icon/icon-nwp) are continuously being tested on both [Santis](../../hpc/santis.md) (CSCS) and [Euler](../../hpc/euler.md) (ETHZ).
 
-## Mailing list
-If you use ICON, please follow [these instructions](../../events/icon_meetings/index.md#c2sm-icon-mailing-list) to subscribe to our mailing list.
 
-## Toolset
-In the [Tools](../../tools/index.md) section, you will find relevant tools for working with ICON:
+## Mailing List
 
-* [**Extpar** :material-open-in-new:](https://c2sm.github.io/extpar){:target="_blank"}: External parameters for the ICON grid (preprocessing)
-* [**Processing Chain**](../../tools/processing_chain.md): Python workflow tool for ICON
-* [**SPICE**](../../tools/spice.md): Starter package for ICON-CLM experiments
-* [**icon-vis**](../../tools/icon-vis.md): Python scripts to visualise ICON data
-* [**Spack**](../../tools/spack.md): Package manager for installing ICON
+As a member of the `c2sm.icon` mailing list, you will receive all relevant information around ICON and invitations to the quarterly ICON meeting. 
 
-## Projects
-Learn more about ongoing projects involving ETHZ in the development of ICON:
+If you or someone from your group is not yet a member of the `c2sm.icon` mailing list, subscribe by sending an e-mail to 
+[`sympa@sympa.ethz.ch?subject=SUBSCRIBE%20c2sm.icon%20firstname%20lastname`](mailto:sympa@sympa.ethz.ch?subject=SUBSCRIBE%20c2sm.icon%20firstname%20lastname) (modify `firstname` and `lastname` in the subject).
 
-  * [EXCLAIM :material-open-in-new:](https://exclaim.ethz.ch/){:target="_blank"} 
-  * [ICON-HAMMOZ :material-open-in-new:](https://redmine.hammoz.ethz.ch/projects/icon-hammoz){:target="_blank"}
+To check which lists you are subscribed to, send an e-mail to:
+[`sympa@sympa.ethz.ch?subject=WHICH`](mailto:sympa@sympa.ethz.ch?subject=WHICH)
 
 ## Documentation
 ICON documentation is available at:
@@ -44,6 +34,21 @@ ICON documentation is available at:
    * [ICON Tutorial (DWD) :material-open-in-new:](https://www.dwd.de/DE/leistungen/nwv_icon_tutorial/nwv_icon_tutorial.html){:target="_blank"}
    * [Getting Started with ICON :material-open-in-new:](https://www.icon-model.org/icon_model/getting_started){:target="_blank"}
    * [MPI-M documentation :material-open-in-new:](https://code.mpimet.mpg.de/projects/iconpublic/wiki/Documentation){:target="_blank"}
+
+## Toolset
+In the [Tools](../../tools/index.md) section, you will find relevant tools for working with ICON:
+
+* [**EXTPAR** :material-open-in-new:](https://c2sm.github.io/extpar){:target="_blank"}: External parameters for the ICON grid (preprocessing)
+* [**Processing Chain**](../../tools/processing_chain.md): Python workflow tool for ICON
+* [**Spack**](../../tools/spack.md): Package manager for installing ICON
+* [**SPICE**](../../tools/spice.md): Starter package for ICON-CLM experiments
+* [**Zonda**](../../tools/zonda.md): Web interface for genarating EXTPAR data on the ICON grid
+
+## Projects
+Learn more about ongoing projects involving ETHZ in the development of ICON:
+
+  * [EXCLAIM :material-open-in-new:](https://exclaim.ethz.ch/){:target="_blank"} 
+  * [ICON-HAMMOZ :material-open-in-new:](https://redmine.hammoz.ethz.ch/projects/icon-hammoz){:target="_blank"}
      
 ## External Software
 The following external software is useful for working with ICON data:
