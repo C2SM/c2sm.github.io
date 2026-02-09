@@ -2,7 +2,7 @@
 
 [ICON :material-open-in-new:](https://www.icon-model.org/icon_model){:target="_blank"} is a complex software, and troubleshooting large configurations can be difficult. To avoid problems, we recommend starting every new namelist configuration with a small test case. Add this test case to the ICON CI to ensure it stays compatible with future developments.
 
-You can find a list of available tests in the ICON documentation for the latest ICON-NWP version under [System Tests :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/infrastructure/testing/system_tests.html#ref-infrastructure-system-tests){:target="_blank"} within `CI System Tests on External Machines by Builder`.
+You can find a list of available tests in the ICON documentation for the latest ICON-NWP version under [System Tests :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/infrastructure/testing/system_tests.html#ref-infrastructure-system-tests){:target="_blank"} within `CI System Tests on External Machines by Builder`.
 
 After the initial test case, we suggest building up step by step: from a small ICON test case to increasingly complex setups, and finally to your full production configuration.
 
