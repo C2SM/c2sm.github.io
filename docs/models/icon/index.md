@@ -12,7 +12,7 @@ C2SM facilitates the utilisation of ICON on the [Alps :material-open-in-new:](ht
 
 !!! info 
 
-      The latest official ICON release (currently `2025.10`) and the [`icon-nwp` master branch](https://gitlab.dkrz.de/icon/icon-nwp) are continuously being tested on both [Santis](../../hpc/santis.md) (CSCS) and [Euler](../../hpc/euler.md) (ETHZ).
+      The latest official ICON release (currently `2025.10`) and the [`icon-nwp` master branch :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"} are continuously being tested on both [Santis](../../hpc/santis.md){:target="_blank"} (CSCS) and [Euler](../../hpc/euler.md){:target="_blank"} (ETHZ).
 
 
 ## Mailing List
