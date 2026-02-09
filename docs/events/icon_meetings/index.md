@@ -1,4 +1,3 @@
-
 # Quarterly ICON Meeting
 
 We invite C2SM community members to participate in our quarterly C2SM ICON Meeting, which is designed to facilitate knowledge exchange among researchers and users.
