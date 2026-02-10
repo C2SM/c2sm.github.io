@@ -45,7 +45,8 @@ registry can be found in the following folder:
 
 | uenv                   | Description                    |
 |------------------------|--------------------------------|
-| `/capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images/sirocco_25.9.sqfs` | Sirocco |
+| `/capstor/store/cscs/userlab/cws01/uenvs/sirocco_v0.0.1.sqfs` | Sirocco |
+| `/capstor/store/cscs/userlab/cws01/uenvs/sirocco_v0.0.2.sqfs` |  |
 
 
 ## SLURM Partitions
