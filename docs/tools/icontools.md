@@ -15,13 +15,12 @@ please contact your group's technical contact. They will be responsible for addi
 
 ## Usage
 
-### 1) Load via module command
+### 1) Shipped via uenv
 
 On [Säntis](../hpc/santis.md), DWD ICON Tools is provided via the `climtools` uenv:
 
 ```
-uenv start --view=modules /capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images/climtools_25.2_v2.sqfs
-module load icontools/2.5.2
+uenv start climtools/25.2:v1 --view=climtools
 ```
 
 ### 2) Compile manually via Spack
