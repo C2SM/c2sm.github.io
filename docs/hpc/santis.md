@@ -11,20 +11,20 @@ The vCluster `santis` is dedicated to **Climate and Weather** applications. It i
 | uenv                   | Description                    |
 |------------------------|--------------------------------|
 | `icon/25.2:v3`         | Build and run ICON             |
-| `netcdf-tools/2025:v1` | Pre- and post-processing tools |
+| `climtools/25.2:v1`    | Pre- and post-processing tools |
 
 You can find the most important commands when working with uenvs on the [CSCS Docs pages :material-open-in-new:](https://docs.cscs.ch/software/uenv/#downloading-uenv){:target="_blank"}.
 
-### netcdf-tools
+### climtools
 
-The netcdf-tools uenv provides a set of CLI tools and GUI tools frequently used in climate and weather workflows,
-including `cdo`, `ncview`, `ncdump` and others.
+The climtools uenv provides a set of CLI tools and GUI tools frequently used in climate and weather workflows,
+including `cdo`, `ncview`, `ncdump` and others. For more information consider the [corresponding Spack spec](https://github.com/C2SM/software-stack-recipes/blob/main/recipes/climtools/25.2/gh200/environments.yaml).
 
-It is recommended that the `netcdf-tools` uenv is loaded with the `--view=netcdf` argument to instantly
+It is recommended that the `climtools` uenv is loaded with the `--view=climtools` argument to instantly
 access all of the tools that are shipped with this uenv:
 
 ```bash
-uenv start --view=netcdf netcdf-tools/2025:v1
+uenv start climtools/25.2:v1 --view=climtools
 ```
 
 The software is now available, e.g.:
