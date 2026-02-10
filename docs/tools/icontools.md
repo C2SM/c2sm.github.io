@@ -15,7 +15,7 @@ please contact your group's technical contact. They will be responsible for addi
 
 ## Usage
 
-### 1) Shipped via uenv
+### Option 1: Shipped via uenv
 
 On [Säntis](../hpc/santis.md), DWD ICON Tools is provided via the `climtools` uenv:
 
@@ -23,7 +23,7 @@ On [Säntis](../hpc/santis.md), DWD ICON Tools is provided via the `climtools` u
 uenv start climtools/25.2:v1 --view=climtools
 ```
 
-### 2) Compile manually via Spack
+### Option 2: Compile manually via Spack
 
 [Spack](spack.md) takes care of configuring and building DWD ICON Tools. For detailed instructions,
 please consider the official [spack-c2sm documentation :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest){:target="_blank"}.
