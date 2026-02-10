@@ -15,16 +15,15 @@ please contact your group's technical contact. They will be responsible for addi
 
 ## Usage
 
-### 1) Load via module command
+### Option 1: Shipped via uenv
 
 On [Säntis](../hpc/santis.md), DWD ICON Tools is provided via the `climtools` uenv:
 
 ```
-uenv start --view=modules /capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images/climtools_25.2_v2.sqfs
-module load icontools/2.5.2
+uenv start climtools/25.2:v1 --view=climtools
 ```
 
-### 2) Compile manually via Spack
+### Option 2: Compile manually via Spack
 
 [Spack](spack.md) takes care of configuring and building DWD ICON Tools. For detailed instructions,
 please consider the official [spack-c2sm documentation :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest){:target="_blank"}.
@@ -74,7 +73,10 @@ icongridgen --nml icontools/C2SM/gridgen.nml
 This manual refers to the workflow MeteoSwiss currently uses to run LAM simulations.
 
 * Add fields `FI` and `z` from IFS analysis to LBC prior to the interpolation using `cdo` (GRIB only). 
-To use the `cdo` command, make sure that a proper user environment is loaded containing `cdo`.
+
+    !!! note
+    
+        Ensure that `cdo` is available through uenv or has been installed.
 
     ```bash
     cdo -selname,FI analysis_file fi_file

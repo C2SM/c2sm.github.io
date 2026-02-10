@@ -11,20 +11,20 @@ The vCluster `santis` is dedicated to **Climate and Weather** applications. It i
 | uenv                   | Description                    |
 |------------------------|--------------------------------|
 | `icon/25.2:v3`         | Build and run ICON             |
-| `netcdf-tools/2025:v1` | Pre- and post-processing tools |
+| `climtools/25.2:v1`    | Pre- and post-processing tools |
 
 You can find the most important commands when working with uenvs on the [CSCS Docs pages :material-open-in-new:](https://docs.cscs.ch/software/uenv/#downloading-uenv){:target="_blank"}.
 
-### netcdf-tools
+### climtools
 
-The netcdf-tools uenv provides a set of CLI tools and GUI tools frequently used in climate and weather workflows,
-including `cdo`, `ncview`, `ncdump` and others.
+The climtools uenv provides a set of CLI tools and GUI tools frequently used in climate and weather workflows,
+including `cdo`, `ncview`, `ncdump` and others. For more information consider the [corresponding Spack spec :material-open-in-new:](https://github.com/C2SM/software-stack-recipes/blob/main/recipes/climtools/25.2/gh200/environments.yaml){:target="_blank"}.
 
-It is recommended that the `netcdf-tools` uenv is loaded with the `--view=netcdf` argument to instantly
+It is recommended that the `climtools` uenv is loaded with the `--view=climtools` argument to instantly
 access all of the tools that are shipped with this uenv:
 
 ```bash
-uenv start --view=netcdf netcdf-tools/2025:v1
+uenv start climtools/25.2:v1 --view=climtools
 ```
 
 The software is now available, e.g.:
@@ -34,26 +34,15 @@ which cdo
 # /user-environment/env/netcdf/bin/cdo
 ```
 
-More information about the `netcdf-tools` uenv can be found at the [CSCS Docs page :material-open-in-new:](https://docs.cscs.ch/software/cw/netcdf-tools/){:target="_blank"}.
-
 ### Pre-release uenvs
 
 User environments that are not (yet) part of the official CSCS uenv 
 registry can be found in the following folder:
 
 ```
-/capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images
+/capstor/store/cscs/userlab/cws01/uenvs
 ```
-
-| uenv                   | Description                    |
-|------------------------|--------------------------------|
-| `/capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images/climtools_25.2.sqfs`         | Like `netcdf-tools` but with additional software such as `git-lfs` and `eccodes`             |
-| `/capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images/climtools_25.2_v2.sqfs`         | Like `netcdf-tools` but with additional software such as `git-lfs`, `eccodes` and `icontools`             |
-| `/capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images/sirocco_25.9.sqfs` | Sirocco |
-
-
-Note that the `climtools` uenvs should also be loaded with
-the `--view=modules` argument. 
+The README file there provides information about these images.
 
 
 ## SLURM Partitions
