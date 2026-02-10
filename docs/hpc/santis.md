@@ -40,13 +40,9 @@ User environments that are not (yet) part of the official CSCS uenv
 registry can be found in the following folder:
 
 ```
-/capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images
+/capstor/store/cscs/userlab/cws01/uenvs
 ```
-
-| uenv                   | Description                    |
-|------------------------|--------------------------------|
-| `/capstor/store/cscs/userlab/cws01/uenvs/sirocco_v0.0.1.sqfs` | Sirocco |
-| `/capstor/store/cscs/userlab/cws01/uenvs/sirocco_v0.0.2.sqfs` |  |
+The README file there provides information about these images.
 
 
 ## SLURM Partitions
