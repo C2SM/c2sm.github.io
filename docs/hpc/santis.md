@@ -18,7 +18,7 @@ You can find the most important commands when working with uenvs on the [CSCS Do
 ### climtools
 
 The climtools uenv provides a set of CLI tools and GUI tools frequently used in climate and weather workflows,
-including `cdo`, `ncview`, `ncdump` and others. For more information consider the [corresponding Spack spec](https://github.com/C2SM/software-stack-recipes/blob/main/recipes/climtools/25.2/gh200/environments.yaml).
+including `cdo`, `ncview`, `ncdump` and others. For more information consider the [corresponding Spack spec :material-open-in-new:](https://github.com/C2SM/software-stack-recipes/blob/main/recipes/climtools/25.2/gh200/environments.yaml){:target="_blank"}.
 
 It is recommended that the `climtools` uenv is loaded with the `--view=climtools` argument to instantly
 access all of the tools that are shipped with this uenv:
