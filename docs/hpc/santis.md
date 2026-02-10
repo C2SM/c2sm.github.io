@@ -34,8 +34,6 @@ which cdo
 # /user-environment/env/netcdf/bin/cdo
 ```
 
-More information about the `netcdf-tools` uenv can be found at the [CSCS Docs page :material-open-in-new:](https://docs.cscs.ch/software/cw/netcdf-tools/){:target="_blank"}.
-
 ### Pre-release uenvs
 
 User environments that are not (yet) part of the official CSCS uenv 
@@ -47,13 +45,7 @@ registry can be found in the following folder:
 
 | uenv                   | Description                    |
 |------------------------|--------------------------------|
-| `/capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images/climtools_25.2.sqfs`         | Like `netcdf-tools` but with additional software such as `git-lfs` and `eccodes`             |
-| `/capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images/climtools_25.2_v2.sqfs`         | Like `netcdf-tools` but with additional software such as `git-lfs`, `eccodes` and `icontools`             |
 | `/capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images/sirocco_25.9.sqfs` | Sirocco |
-
-
-Note that the `climtools` uenvs should also be loaded with
-the `--view=modules` argument. 
 
 
 ## SLURM Partitions
