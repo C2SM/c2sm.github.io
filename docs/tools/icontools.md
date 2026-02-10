@@ -73,7 +73,10 @@ icongridgen --nml icontools/C2SM/gridgen.nml
 This manual refers to the workflow MeteoSwiss currently uses to run LAM simulations.
 
 * Add fields `FI` and `z` from IFS analysis to LBC prior to the interpolation using `cdo` (GRIB only). 
-To use the `cdo` command, make sure that a proper user environment is loaded containing `cdo`.
+
+    !!! note
+    
+        Ensure that `cdo` is available through uenv or has been installed.
 
     ```bash
     cdo -selname,FI analysis_file fi_file
