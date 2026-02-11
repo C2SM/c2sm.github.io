@@ -4181,10 +4181,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-load-via-module-command" class="md-nav__link">
+  <a href="#option-1-shipped-via-uenv" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1) Load via module command
+        Option 1: Shipped via uenv
       
     </span>
   </a>
@@ -4192,10 +4192,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-compile-manually-via-spack" class="md-nav__link">
+  <a href="#option-2-compile-manually-via-spack" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2) Compile manually via Spack
+        Option 2: Compile manually via Spack
       
     </span>
   </a>
@@ -5152,10 +5152,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-load-via-module-command" class="md-nav__link">
+  <a href="#option-1-shipped-via-uenv" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1) Load via module command
+        Option 1: Shipped via uenv
       
     </span>
   </a>
@@ -5163,10 +5163,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-compile-manually-via-spack" class="md-nav__link">
+  <a href="#option-2-compile-manually-via-spack" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2) Compile manually via Spack
+        Option 2: Compile manually via Spack
       
     </span>
   </a>
@@ -5279,12 +5279,11 @@ e.g., regular (lat-lon, gaussian) or triangular (ICON). It can be used to genera
 <p>In order to get access to the <a href="https://github.com/C2SM/icontools" target="_blank">DWD ICON Tools repository hosted on the C2SM GitHub organisation <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>,
 please contact your group's technical contact. They will be responsible for adding you to the appropriate user group.</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<h3 id="1-load-via-module-command">1) Load via module command<a class="headerlink" href="#1-load-via-module-command" title="Permanent link">&para;</a></h3>
+<h3 id="option-1-shipped-via-uenv">Option 1: Shipped via uenv<a class="headerlink" href="#option-1-shipped-via-uenv" title="Permanent link">&para;</a></h3>
 <p>On <a href="../../hpc/santis/">Säntis</a>, DWD ICON Tools is provided via the <code>climtools</code> uenv:</p>
-<div class="highlight"><pre><span></span><code>uenv start --view=modules /capstor/store/cscs/userlab/cwd01/leclairm/uenvs/images/climtools_25.2_v2.sqfs
-module load icontools/2.5.2
+<div class="highlight"><pre><span></span><code>uenv start climtools/25.2:v1 --view=climtools
 </code></pre></div>
-<h3 id="2-compile-manually-via-spack">2) Compile manually via Spack<a class="headerlink" href="#2-compile-manually-via-spack" title="Permanent link">&para;</a></h3>
+<h3 id="option-2-compile-manually-via-spack">Option 2: Compile manually via Spack<a class="headerlink" href="#option-2-compile-manually-via-spack" title="Permanent link">&para;</a></h3>
 <p><a href="../spack/">Spack</a> takes care of configuring and building DWD ICON Tools. For detailed instructions,
 please consider the official <a href="https://c2sm.github.io/spack-c2sm/latest" target="_blank">spack-c2sm documentation <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.
 The following Spack installation should be sufficient for most cases.</p>
@@ -5316,8 +5315,11 @@ Most likely you will use the DWD ICON tools to generate a new grid or interpolat
 <p>This manual refers to the workflow MeteoSwiss currently uses to run LAM simulations.</p>
 <ul>
 <li>
-<p>Add fields <code>FI</code> and <code>z</code> from IFS analysis to LBC prior to the interpolation using <code>cdo</code> (GRIB only). 
-To use the <code>cdo</code> command, make sure that a proper user environment is loaded containing <code>cdo</code>.</p>
+<p>Add fields <code>FI</code> and <code>z</code> from IFS analysis to LBC prior to the interpolation using <code>cdo</code> (GRIB only). </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensure that <code>cdo</code> is available through uenv or has been installed.</p>
+</div>
 <div class="highlight"><pre><span></span><code>cdo<span class="w"> </span>-selname,FI<span class="w"> </span>analysis_file<span class="w"> </span>fi_file
 cdo<span class="w"> </span>-selname,z<span class="w"> </span>analysis_file<span class="w"> </span>z_file
 cdo<span class="w"> </span>settime,<span class="s1">&#39;03:00:00&#39;</span><span class="w"> </span>fi_file<span class="w"> </span>fi_file_time
@@ -5367,7 +5369,7 @@ cat<span class="w"> </span>lbc_file<span class="w"> </span>zfile_reftime<span cl
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 9, 2026 15:51:15 UTC">February 9, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 10, 2026 13:12:01 UTC">February 10, 2026</span>
   </span>
 
     
@@ -5377,7 +5379,7 @@ cat<span class="w"> </span>lbc_file<span class="w"> </span>zfile_reftime<span cl
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 9, 2026 15:51:15 UTC">February 9, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 10, 2026 13:12:01 UTC">February 10, 2026</span>
   </span>
 
     
