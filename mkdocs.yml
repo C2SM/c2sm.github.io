@@ -7,6 +7,10 @@ docs_dir: docs/
 repo_name: C2SM/c2sm.github.io
 repo_url: https://github.com/C2SM/c2sm.github.io
 edit_uri: edit/main/docs/
+extra:
+  analytics:
+    provider: plausible
+    domain: c2sm.github.io
 extra_javascript:
   - https://plausible.io/js/plausible.js
   - assets/javascripts/plausible-init.js
@@ -64,6 +68,7 @@ plugins:
      categories_url_format: "category_{slug}"
      post_url_format: "{date}-{slug}"
      post_url_date_format:  yyyy-MM-dd
+  - material-plausible
 extra_css:
   - stylesheets/extra.css
 theme:
