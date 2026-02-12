@@ -3,3 +3,4 @@ mkdocs-material
 mkdocs-literate-nav
 mkdocs-linkcheck
 mkdocs-git-revision-date-localized-plugin
+material-plausible-plugin
