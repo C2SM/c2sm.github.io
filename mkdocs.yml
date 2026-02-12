@@ -2,6 +2,7 @@ site_name: C2SM User Landing Page
 site_url: https://c2sm.github.io
 theme:
   name: material
+  custom_dir: docs/overrides
 docs_dir: docs/
 repo_name: C2SM/c2sm.github.io
 repo_url: https://github.com/C2SM/c2sm.github.io
