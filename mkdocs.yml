@@ -11,9 +11,6 @@ extra:
   analytics:
     provider: plausible
     domain: c2sm.github.io
-extra_javascript:
-  - https://plausible.io/js/plausible.js
-  - assets/javascripts/plausible-init.js
 markdown_extensions:
   - admonition
   - attr_list
