@@ -118,8 +118,8 @@
     ```
 
 
-- Size: 214.61 TB :material-information-outline:{ title="last updated: 2026-02-22 01:47:52" }
-- Number of files: 715,562 :material-information-outline:{ title="last updated: 2026-02-22 01:47:52" }
+- Size: 216.55 TB :material-information-outline:{ title="last updated: 2026-03-01 01:47:55" }
+- Number of files: 724,482 :material-information-outline:{ title="last updated: 2026-03-01 01:47:55" }
 - Access: direct / rsync
 - Status: updated monthly
 - Variables: 
@@ -137,6 +137,7 @@
   `huss`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `lai`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `masks`{ title="fx (native)" },
+  `mlotst`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `mrro`{ title="ann (g025), ann (native), day (g025), day (native), mon (g025), mon (native)" },
   `mrros`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `mrso`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
@@ -166,6 +167,7 @@
   `sfcWind`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `sftlf`{ title="fx (native)" },
   `siconc`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
+  `sos`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `ta`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `tas`{ title="ann (g025), ann (native), day (g025), day (native), mon (g025), mon (native)" },
   `tasmax`{ title="ann (g025), ann (native), day (g025), day (native), mon (g025), mon (native)" },
@@ -204,8 +206,8 @@
     ```
 
 
-- Size: 356.98 TB :material-information-outline:{ title="last updated: 2026-02-22 01:47:21" }
-- Number of files: 552,596 :material-information-outline:{ title="last updated: 2026-02-22 01:47:21" }
+- Size: 356.98 TB :material-information-outline:{ title="last updated: 2026-03-01 01:48:13" }
+- Number of files: 552,596 :material-information-outline:{ title="last updated: 2026-03-01 01:48:13" }
 - Access: direct / rsync
 - Status: monthly updated
 - Resolution: 0.44° and 0.11°
@@ -222,8 +224,8 @@
     /nfs/atmos/c2sm/cordex-reklies
     ```
 
-- Size: 22.41 TB :material-information-outline:{ title="last updated: 2026-02-22 01:46:01" }
-- Number of files: 94,936 :material-information-outline:{ title="last updated: 2026-02-22 01:46:01" }
+- Size: 22.41 TB :material-information-outline:{ title="last updated: 2026-03-01 01:46:08" }
+- Number of files: 94,936 :material-information-outline:{ title="last updated: 2026-03-01 01:46:08" }
 - Access: direct
 - Status: monthly updated
 - Resolution: 0.11°
