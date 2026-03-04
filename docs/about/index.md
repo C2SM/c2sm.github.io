@@ -42,10 +42,7 @@ This will allow you to submit new tasks, receive support from the C2SM Core Team
 - Designate a technical contact within your group, preferably a permanent member who is familiar with technical aspects.
 - Contact us by visiting our office in person or by emailing us at [support@c2sm.ethz.ch](mailto:support@c2sm.ethz.ch).
 - Once contacted, we will initiate the setup of your group's user group on GitHub for effective collaboration.
+
 ## C2SM on GitHub
 
-C2SM maintains two GitHub organizations to distribute code to the community. 
-
-### [C2SM :material-open-in-new:](https://github.com/C2SM){:target="_blank"}
-
-This is our main GitHub organisation, which contains many repositories, including ICON.
+C2SM maintains the [C2SM :material-open-in-new:](https://github.com/C2SM){:target="_blank"} GitHub organizations to distribute code to the community. It contains many repositories including many of the supported tools.
