@@ -8,31 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://c2sm.github.io/alps/">
+        <link rel="canonical" href="https://c2sm.github.io/hpc/SUMMARY/">
       
       
-        <link rel="prev" href="../support/status/">
-      
-      
-        <link rel="next" href="santis/">
       
       
         
       
       
-      <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
-        <title>Alps - C2SM User Landing Page</title>
+        <title>SUMMARY - C2SM User Landing Page</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,11 +47,64 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  <script
+  defer
+  data-domain="c2sm.github.io"
+  src="https://plausible.io/js/plausible.js"
+  
+></script>
+
+<script>
+  window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) };
+
+  /* Register event handlers after documented loaded */
+  document.addEventListener("DOMContentLoaded", function () {
+    /* Set up search tracking */
+    if (document.forms.search) {
+      var query = document.forms.search.query;
+      query.addEventListener("blur", function() {
+        if (this.value) plausible("Search", { props: { search_term: this.value } });
+      })
+    }
+
+    /* Set up feedback, i.e. "Was this page helpful?" */
+    document$.subscribe(function () {
+      var feedback = document.forms.feedback;
+      if (typeof feedback === "undefined") return;
+
+      /* Send feedback to Plausible */
+      for (var button of feedback.querySelectorAll("[type=submit]")) {
+        button.addEventListener("click", function (ev) {
+          ev.preventDefault();
+
+          var page = document.location.pathname;
+          var value = this.getAttribute("data-md-value");
+          console.log("[feedback] User clicked", { value });
+          plausible(`Feedback: ${value}`);
+
+          /* Disable form and show note, if given */
+          feedback.firstElementChild.disabled = true;
+          var note = feedback.querySelector(".md-feedback__note [data-md-value='" + value + "']");
+          if (note) note.hidden = false;
+        })
+
+        /* Show feedback */
+        feedback.hidden = false;
+      }
+    });
+  });
+</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -77,11 +126,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#the-alps-system" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -94,9 +138,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="C2SM User Landing Page" class="md-header__button md-logo" aria-label="C2SM User Landing Page" data-md-component="logo">
+    <a href="../.." title="C2SM User Landing Page" class="md-header__button md-logo" aria-label="C2SM User Landing Page" data-md-component="logo">
       
-  <img src="../assets/c2sm_logo_white_transparent.png" alt="logo">
+  <img src="../../assets/c2sm_logo_white_transparent.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +157,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Alps
+              SUMMARY
             
           </span>
         </div>
@@ -227,7 +271,7 @@
     
     
       <li class="md-tabs__item">
-        <a href=".." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   
@@ -249,7 +293,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../about/" class="md-tabs__link">
+        <a href="../../about/" class="md-tabs__link">
           
   
   
@@ -271,7 +315,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../events/" class="md-tabs__link">
+        <a href="../../events/" class="md-tabs__link">
           
   
   
@@ -293,7 +337,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../tasks/" class="md-tabs__link">
+        <a href="../../tasks/" class="md-tabs__link">
           
   
   
@@ -315,7 +359,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../support/user_support/" class="md-tabs__link">
+        <a href="../../support/user_support/" class="md-tabs__link">
           
   
   
@@ -333,22 +377,30 @@
   
   
   
+  
     
+    
+      
+  
+  
   
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
           
   
   
     
   
-  Alps
+  HPC
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -361,7 +413,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../models/" class="md-tabs__link">
+        <a href="../../models/" class="md-tabs__link">
           
   
   
@@ -383,7 +435,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../tools/" class="md-tabs__link">
+        <a href="../../tools/" class="md-tabs__link">
           
   
   
@@ -405,7 +457,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../datasets/" class="md-tabs__link">
+        <a href="../../datasets/" class="md-tabs__link">
           
   
   
@@ -427,7 +479,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../best_practices/" class="md-tabs__link">
+        <a href="../../best_practices/" class="md-tabs__link">
           
   
   
@@ -449,7 +501,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../group_pages/" class="md-tabs__link">
+        <a href="../../group_pages/" class="md-tabs__link">
           
   
   
@@ -471,7 +523,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../glossary/" class="md-tabs__link">
+        <a href="../../glossary/" class="md-tabs__link">
           
   
   
@@ -513,9 +565,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="C2SM User Landing Page" class="md-nav__button md-logo" aria-label="C2SM User Landing Page" data-md-component="logo">
+    <a href="../.." title="C2SM User Landing Page" class="md-nav__button md-logo" aria-label="C2SM User Landing Page" data-md-component="logo">
       
-  <img src="../assets/c2sm_logo_white_transparent.png" alt="logo">
+  <img src="../../assets/c2sm_logo_white_transparent.png" alt="logo">
 
     </a>
     C2SM User Landing Page
@@ -556,6 +608,8 @@
       
         
       
+        
+      
     
     
     
@@ -571,7 +625,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href=".." class="md-nav__link ">
+            <a href="../.." class="md-nav__link ">
               
   
   
@@ -616,6 +670,8 @@
   
     
     
+      
+        
       
         
       
@@ -701,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2023-08-22-git-for-advanced-workshop/" class="md-nav__link">
+      <a href="../../2023-08-22-git-for-advanced-workshop/" class="md-nav__link">
         
   
   
@@ -729,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2023-11-09-climate-model-and-climate-data-workshop/" class="md-nav__link">
+      <a href="../../2023-11-09-climate-model-and-climate-data-workshop/" class="md-nav__link">
         
   
   
@@ -757,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2023-11-30-cosmoicon-user-workshop/" class="md-nav__link">
+      <a href="../../2023-11-30-cosmoicon-user-workshop/" class="md-nav__link">
         
   
   
@@ -785,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2024-02-28-git-for-beginners-workshop/" class="md-nav__link">
+      <a href="../../2024-02-28-git-for-beginners-workshop/" class="md-nav__link">
         
   
   
@@ -813,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2024-03-18-scientific-visualisation-using-python/" class="md-nav__link">
+      <a href="../../2024-03-18-scientific-visualisation-using-python/" class="md-nav__link">
         
   
   
@@ -841,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2024-07-01-visual-update/" class="md-nav__link">
+      <a href="../../2024-07-01-visual-update/" class="md-nav__link">
         
   
   
@@ -869,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2024-07-02-switching-to-alps/" class="md-nav__link">
+      <a href="../../2024-07-02-switching-to-alps/" class="md-nav__link">
         
   
   
@@ -897,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2024-07-29-git-for-advanced-workshop/" class="md-nav__link">
+      <a href="../../2024-07-29-git-for-advanced-workshop/" class="md-nav__link">
         
   
   
@@ -925,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2024-08-14-new-information-about-the-alps-system-available/" class="md-nav__link">
+      <a href="../../2024-08-14-new-information-about-the-alps-system-available/" class="md-nav__link">
         
   
   
@@ -953,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2024-11-26-icon-user-workshop-formerly-cosmo-icon-user-workshop/" class="md-nav__link">
+      <a href="../../2024-11-26-icon-user-workshop-formerly-cosmo-icon-user-workshop/" class="md-nav__link">
         
   
   
@@ -981,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2024-12-17-update-on-the-current-status-on-alps/" class="md-nav__link">
+      <a href="../../2024-12-17-update-on-the-current-status-on-alps/" class="md-nav__link">
         
   
   
@@ -1009,7 +1065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2025-02-19-git-for-beginners-workshop/" class="md-nav__link">
+      <a href="../../2025-02-19-git-for-beginners-workshop/" class="md-nav__link">
         
   
   
@@ -1037,7 +1093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2025-02-20-extpar-new-release-v515-and-documentation-available/" class="md-nav__link">
+      <a href="../../2025-02-20-extpar-new-release-v515-and-documentation-available/" class="md-nav__link">
         
   
   
@@ -1065,7 +1121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2025-03-25-c2sm-communtiy-day-2025/" class="md-nav__link">
+      <a href="../../2025-03-25-c2sm-communtiy-day-2025/" class="md-nav__link">
         
   
   
@@ -1093,7 +1149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2025-04-10-glossary-now-available/" class="md-nav__link">
+      <a href="../../2025-04-10-glossary-now-available/" class="md-nav__link">
         
   
   
@@ -1121,7 +1177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2025-06-23-upcoming-c2sm-workshops-open-for-registration/" class="md-nav__link">
+      <a href="../../2025-06-23-upcoming-c2sm-workshops-open-for-registration/" class="md-nav__link">
         
   
   
@@ -1149,7 +1205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2026-01-19-c2sm-modeling-workshop-2026/" class="md-nav__link">
+      <a href="../../2026-01-19-c2sm-modeling-workshop-2026/" class="md-nav__link">
         
   
   
@@ -1157,6 +1213,34 @@
     
   
     C2SM Modeling Workshop 2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2026-02-02-git-for-beginners-workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git for Beginners Workshop
   
 
     
@@ -1260,7 +1344,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../page/2/" class="md-nav__link ">
+            <a href="../../page/2/" class="md-nav__link ">
               
   
   
@@ -1319,12 +1403,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
     
@@ -1346,7 +1424,7 @@
   <span class="md-ellipsis">
     
   
-    Archive
+    Category workshop
   
 
     
@@ -1359,6 +1437,166 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Category workshop
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4_1" id="__nav_1_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Page
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Page
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category_workshop/page/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1377,7 +1615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2026/" class="md-nav__link">
+      <a href="../../2026/" class="md-nav__link">
         
   
   
@@ -1407,7 +1645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2025/" class="md-nav__link">
+      <a href="../../2025/" class="md-nav__link">
         
   
   
@@ -1437,7 +1675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2024/" class="md-nav__link">
+      <a href="../../2024/" class="md-nav__link">
         
   
   
@@ -1467,7 +1705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2023/" class="md-nav__link">
+      <a href="../../2023/" class="md-nav__link">
         
   
   
@@ -1538,10 +1776,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
         
           
-          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
             
   
   
@@ -1559,8 +1797,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1579,7 +1817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../category_alps/" class="md-nav__link">
+      <a href="../../category_alps/" class="md-nav__link">
         
   
   
@@ -1609,7 +1847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../category_cosmo/" class="md-nav__link">
+      <a href="../../category_cosmo/" class="md-nav__link">
         
   
   
@@ -1639,7 +1877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../category_climate-model--data/" class="md-nav__link">
+      <a href="../../category_climate-model--data/" class="md-nav__link">
         
   
   
@@ -1669,7 +1907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../category_community/" class="md-nav__link">
+      <a href="../../category_community/" class="md-nav__link">
         
   
   
@@ -1699,7 +1937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../category_extpar/" class="md-nav__link">
+      <a href="../../category_extpar/" class="md-nav__link">
         
   
   
@@ -1729,7 +1967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../category_git/" class="md-nav__link">
+      <a href="../../category_git/" class="md-nav__link">
         
   
   
@@ -1759,7 +1997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../category_icon/" class="md-nav__link">
+      <a href="../../category_icon/" class="md-nav__link">
         
   
   
@@ -1789,7 +2027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../category_modeling/" class="md-nav__link">
+      <a href="../../category_modeling/" class="md-nav__link">
         
   
   
@@ -1819,7 +2057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../category_visualisation/" class="md-nav__link">
+      <a href="../../category_visualisation/" class="md-nav__link">
         
   
   
@@ -1849,7 +2087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../category_website/" class="md-nav__link">
+      <a href="../../category_website/" class="md-nav__link">
         
   
   
@@ -1879,7 +2117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../category_workshop/" class="md-nav__link">
+      <a href="../../category_workshop/" class="md-nav__link">
         
   
   
@@ -1943,7 +2181,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../about/" class="md-nav__link ">
+            <a href="../../about/" class="md-nav__link ">
               
   
   
@@ -2022,7 +2260,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../events/" class="md-nav__link ">
+            <a href="../../events/" class="md-nav__link ">
               
   
   
@@ -2066,7 +2304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/wgdays/" class="md-nav__link">
+      <a href="../../events/wgdays/" class="md-nav__link">
         
   
   
@@ -2145,7 +2383,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../events/icon_meetings/" class="md-nav__link ">
+            <a href="../../events/icon_meetings/" class="md-nav__link ">
               
   
   
@@ -2189,7 +2427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/icon_meetings/2025-3/" class="md-nav__link">
+      <a href="../../events/icon_meetings/2025-3/" class="md-nav__link">
         
   
   
@@ -2217,7 +2455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/icon_meetings/2025-2/" class="md-nav__link">
+      <a href="../../events/icon_meetings/2025-2/" class="md-nav__link">
         
   
   
@@ -2245,7 +2483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/icon_meetings/2025-1/" class="md-nav__link">
+      <a href="../../events/icon_meetings/2025-1/" class="md-nav__link">
         
   
   
@@ -2273,7 +2511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/icon_meetings/2024-4/" class="md-nav__link">
+      <a href="../../events/icon_meetings/2024-4/" class="md-nav__link">
         
   
   
@@ -2301,7 +2539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/icon_meetings/2024-3/" class="md-nav__link">
+      <a href="../../events/icon_meetings/2024-3/" class="md-nav__link">
         
   
   
@@ -2329,7 +2567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/icon_meetings/2024-2/" class="md-nav__link">
+      <a href="../../events/icon_meetings/2024-2/" class="md-nav__link">
         
   
   
@@ -2357,7 +2595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/icon_meetings/2024-1/" class="md-nav__link">
+      <a href="../../events/icon_meetings/2024-1/" class="md-nav__link">
         
   
   
@@ -2385,7 +2623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/icon_meetings/2023-4/" class="md-nav__link">
+      <a href="../../events/icon_meetings/2023-4/" class="md-nav__link">
         
   
   
@@ -2413,7 +2651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/icon_meetings/2023-3/" class="md-nav__link">
+      <a href="../../events/icon_meetings/2023-3/" class="md-nav__link">
         
   
   
@@ -2441,7 +2679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/icon_meetings/2023-2/" class="md-nav__link">
+      <a href="../../events/icon_meetings/2023-2/" class="md-nav__link">
         
   
   
@@ -2469,7 +2707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/icon_meetings/2023-1/" class="md-nav__link">
+      <a href="../../events/icon_meetings/2023-1/" class="md-nav__link">
         
   
   
@@ -2497,7 +2735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/icon_meetings/2022-4/" class="md-nav__link">
+      <a href="../../events/icon_meetings/2022-4/" class="md-nav__link">
         
   
   
@@ -2525,7 +2763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/icon_meetings/2022-3/" class="md-nav__link">
+      <a href="../../events/icon_meetings/2022-3/" class="md-nav__link">
         
   
   
@@ -2553,7 +2791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/icon_meetings/2022-2/" class="md-nav__link">
+      <a href="../../events/icon_meetings/2022-2/" class="md-nav__link">
         
   
   
@@ -2581,7 +2819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/icon_meetings/2022-1/" class="md-nav__link">
+      <a href="../../events/icon_meetings/2022-1/" class="md-nav__link">
         
   
   
@@ -2644,7 +2882,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../events/modeling_workshop/" class="md-nav__link ">
+            <a href="../../events/modeling_workshop/" class="md-nav__link ">
               
   
   
@@ -2688,7 +2926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/modeling_workshop/2026/" class="md-nav__link">
+      <a href="../../events/modeling_workshop/2026/" class="md-nav__link">
         
   
   
@@ -2716,7 +2954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/modeling_workshop/2025/" class="md-nav__link">
+      <a href="../../events/modeling_workshop/2025/" class="md-nav__link">
         
   
   
@@ -2744,7 +2982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/modeling_workshop/2024/" class="md-nav__link">
+      <a href="../../events/modeling_workshop/2024/" class="md-nav__link">
         
   
   
@@ -2780,7 +3018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/git_courses/" class="md-nav__link">
+      <a href="../../events/git_courses/" class="md-nav__link">
         
   
   
@@ -2808,7 +3046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/pyvis/" class="md-nav__link">
+      <a href="../../events/pyvis/" class="md-nav__link">
         
   
   
@@ -2836,7 +3074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/climate_model_workshop/" class="md-nav__link">
+      <a href="../../events/climate_model_workshop/" class="md-nav__link">
         
   
   
@@ -2896,7 +3134,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tasks/" class="md-nav__link ">
+            <a href="../../tasks/" class="md-nav__link ">
               
   
   
@@ -2940,7 +3178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tasks/working_groups/" class="md-nav__link">
+      <a href="../../tasks/working_groups/" class="md-nav__link">
         
   
   
@@ -2968,7 +3206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tasks/assignment/" class="md-nav__link">
+      <a href="../../tasks/assignment/" class="md-nav__link">
         
   
   
@@ -3059,7 +3297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../support/user_support/" class="md-nav__link">
+      <a href="../../support/user_support/" class="md-nav__link">
         
   
   
@@ -3087,7 +3325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../support/status/" class="md-nav__link">
+      <a href="../../support/status/" class="md-nav__link">
         
   
   
@@ -3119,7 +3357,61 @@
       
   
   
+  
+  
     
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HPC
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    HPC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
   
   
   
@@ -3134,32 +3426,31 @@
       
         
       
+        
+      
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Alps
+    CSCS
   
 
     
@@ -3170,18 +3461,18 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_6" id="__nav_6_label" tabindex="">
+              <label class="md-nav__link " for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Alps
+    CSCS
   
 
           </label>
@@ -3196,7 +3487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="santis/" class="md-nav__link">
+      <a href="../santis/" class="md-nav__link">
         
   
   
@@ -3224,7 +3515,35 @@
   
   
     <li class="md-nav__item">
-      <a href="eiger/" class="md-nav__link">
+      <a href="../balfrin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balfrin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eiger/" class="md-nav__link">
         
   
   
@@ -3240,6 +3559,104 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ETHZ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ETHZ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../euler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Euler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3284,7 +3701,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../models/" class="md-nav__link ">
+            <a href="../../models/" class="md-nav__link ">
               
   
   
@@ -3365,7 +3782,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../models/icon/" class="md-nav__link ">
+            <a href="../../models/icon/" class="md-nav__link ">
               
   
   
@@ -3409,7 +3826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/icon/compile/" class="md-nav__link">
+      <a href="../../models/icon/compile/" class="md-nav__link">
         
   
   
@@ -3437,7 +3854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/icon/run/" class="md-nav__link">
+      <a href="../../models/icon/run/" class="md-nav__link">
         
   
   
@@ -3465,7 +3882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/icon/validate_custom_namelist/" class="md-nav__link">
+      <a href="../../models/icon/validate_custom_namelist/" class="md-nav__link">
         
   
   
@@ -3493,7 +3910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/icon/probtest/" class="md-nav__link">
+      <a href="../../models/icon/probtest/" class="md-nav__link">
         
   
   
@@ -3521,7 +3938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/icon/icon-clm/" class="md-nav__link">
+      <a href="../../models/icon/icon-clm/" class="md-nav__link">
         
   
   
@@ -3549,7 +3966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/icon/input_data/" class="md-nav__link">
+      <a href="../../models/icon/input_data/" class="md-nav__link">
         
   
   
@@ -3577,7 +3994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/icon/comin_gpu/" class="md-nav__link">
+      <a href="../../models/icon/comin_gpu/" class="md-nav__link">
         
   
   
@@ -3605,7 +4022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/icon/known_bugs/" class="md-nav__link">
+      <a href="../../models/icon/known_bugs/" class="md-nav__link">
         
   
   
@@ -3641,7 +4058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/cesm/" class="md-nav__link">
+      <a href="../../models/cesm/" class="md-nav__link">
         
   
   
@@ -3700,8 +4117,6 @@
       
         
       
-        
-      
     
     
     
@@ -3717,7 +4132,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tools/" class="md-nav__link ">
+            <a href="../../tools/" class="md-nav__link ">
               
   
   
@@ -3761,7 +4176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tools/icontools/" class="md-nav__link">
+      <a href="../../tools/icontools/" class="md-nav__link">
         
   
   
@@ -3789,7 +4204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tools/evasuite/" class="md-nav__link">
+      <a href="../../tools/evasuite/" class="md-nav__link">
         
   
   
@@ -3817,7 +4232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tools/extpar/" class="md-nav__link">
+      <a href="../../tools/extpar/" class="md-nav__link">
         
   
   
@@ -3845,35 +4260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tools/icon-vis/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    icon-vis
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tools/processing_chain/" class="md-nav__link">
+      <a href="../../tools/processing_chain/" class="md-nav__link">
         
   
   
@@ -3901,7 +4288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tools/scaling_analysis/" class="md-nav__link">
+      <a href="../../tools/scaling_analysis/" class="md-nav__link">
         
   
   
@@ -3929,7 +4316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tools/spack/" class="md-nav__link">
+      <a href="../../tools/spack/" class="md-nav__link">
         
   
   
@@ -3957,7 +4344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tools/spice/" class="md-nav__link">
+      <a href="../../tools/spice/" class="md-nav__link">
         
   
   
@@ -3985,7 +4372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tools/zephyr/" class="md-nav__link">
+      <a href="../../tools/zephyr/" class="md-nav__link">
         
   
   
@@ -4013,7 +4400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tools/zonda/" class="md-nav__link">
+      <a href="../../tools/zonda/" class="md-nav__link">
         
   
   
@@ -4079,7 +4466,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../datasets/" class="md-nav__link ">
+            <a href="../../datasets/" class="md-nav__link ">
               
   
   
@@ -4123,7 +4510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datasets/climate_model_data/" class="md-nav__link">
+      <a href="../../datasets/climate_model_data/" class="md-nav__link">
         
   
   
@@ -4151,7 +4538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datasets/obs_reanalysis_data/" class="md-nav__link">
+      <a href="../../datasets/obs_reanalysis_data/" class="md-nav__link">
         
   
   
@@ -4179,7 +4566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datasets/cordex_fpsconv_data/" class="md-nav__link">
+      <a href="../../datasets/cordex_fpsconv_data/" class="md-nav__link">
         
   
   
@@ -4207,7 +4594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datasets/ecmwf_data_cube/" class="md-nav__link">
+      <a href="../../datasets/ecmwf_data_cube/" class="md-nav__link">
         
   
   
@@ -4235,7 +4622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datasets/ch2011/" class="md-nav__link">
+      <a href="../../datasets/ch2011/" class="md-nav__link">
         
   
   
@@ -4297,7 +4684,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../best_practices/" class="md-nav__link ">
+            <a href="../../best_practices/" class="md-nav__link ">
               
   
   
@@ -4341,7 +4728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best_practices/coding/" class="md-nav__link">
+      <a href="../../best_practices/coding/" class="md-nav__link">
         
   
   
@@ -4369,7 +4756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best_practices/data_handling/" class="md-nav__link">
+      <a href="../../best_practices/data_handling/" class="md-nav__link">
         
   
   
@@ -4397,7 +4784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best_practices/github-copilot/" class="md-nav__link">
+      <a href="../../best_practices/github-copilot/" class="md-nav__link">
         
   
   
@@ -4457,7 +4844,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../group_pages/" class="md-nav__link ">
+            <a href="../../group_pages/" class="md-nav__link ">
               
   
   
@@ -4501,7 +4888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../group_pages/wew-icon/" class="md-nav__link">
+      <a href="../../group_pages/wew-icon/" class="md-nav__link">
         
   
   
@@ -4529,7 +4916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../group_pages/aimlplanning/" class="md-nav__link">
+      <a href="../../group_pages/aimlplanning/" class="md-nav__link">
         
   
   
@@ -4585,7 +4972,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../glossary/" class="md-nav__link ">
+            <a href="../../glossary/" class="md-nav__link ">
               
   
   
@@ -4641,71 +5028,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#vclusters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        vClusters
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#access" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Access
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-environments" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        User Environments
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support-by-cscs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Support by CSCS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#introductory-workshop-material" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Introductory Workshop Material
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -4728,7 +5050,7 @@
 
 
   
-    <a href="https://github.com/C2SM/c2sm.github.io/edit/main/docs/alps/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/C2SM/c2sm.github.io/edit/main/docs/hpc/SUMMARY.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -4736,124 +5058,19 @@
   
 
 
-<h1 id="the-alps-system">The Alps System<a class="headerlink" href="#the-alps-system" title="Permanent link">&para;</a></h1>
-<p><a href="https://www.cscs.ch/computers/alps" target="_blank">Alps <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> is a distributed high-performance computing (HPC) infrastructure managed by CSCS.
-Unlike traditional HPC systems, it is composed of several logical units called vClusters (versatile clusters).</p>
-<p>From a user's perspective, these vClusters play the role of traditional HPC machines, with each one tailored
-to the needs of a specific community.</p>
-<p>This setup also enables geographical distribution of vClusters which facilitates geo-redundancy.
-The main physical component of Alps is hosted at CSCS in Lugano and a detailed description can be found in
-<a href="https://docs.cscs.ch/alps/" target="_blank">their documentation <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
-<h2 id="vclusters">vClusters<a class="headerlink" href="#vclusters" title="Permanent link">&para;</a></h2>
-<p>The following table shows current clusters distribution on Alps at CSCS 
-(only C2SM relevant clusters are shown).</p>
-<table>
-<thead>
-<tr>
-<th>vCluster</th>
-<th>Activity</th>
-<th>Share</th>
-<th>C2SM Support</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Santis</td>
-<td>Weather &amp; Climate</td>
-<td>~ 430 Grace-Hopper nodes</td>
-<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-</tr>
-<tr>
-<td>Balfrin</td>
-<td>MeteoSwiss</td>
-<td>~ 40 A100 GPU nodes</td>
-<td><img alt="🟡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f7e1.svg" title=":yellow_circle:" /></td>
-</tr>
-<tr>
-<td>Eiger</td>
-<td>CPU-only workloads</td>
-<td>~ 580 multicore nodes</td>
-<td><img alt="🟡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f7e1.svg" title=":yellow_circle:" /></td>
-</tr>
-<tr>
-<td>Daint</td>
-<td>User Lab</td>
-<td>~ 600 Grace-Hopper nodes</td>
-<td><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/274c.svg" title=":x:" /></td>
-</tr>
-<tr>
-<td>Clariden</td>
-<td>Machine Learning</td>
-<td>~ 800 Grace-Hopper nodes</td>
-<td><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/274c.svg" title=":x:" /></td>
-</tr>
-</tbody>
-</table>
-<p><small>
-<img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /> Full C2SM support<br />
-<img alt="🟡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f7e1.svg" title=":yellow_circle:" /> Partial or limited C2SM support (help available on request)<br />
-<img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/274c.svg" title=":x:" /> No C2SM support
-</small></p>
-<p>More information about clusters on Alps is available on the
-<a href="https://docs.cscs.ch/clusters/" target="_blank">official CSCS documentation <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
-<h2 id="access">Access<a class="headerlink" href="#access" title="Permanent link">&para;</a></h2>
-<p>Connection to vClusters happens as for any other CSCS machine, 
-e.g. <code>ssh santis.cscs.ch</code> with a <code>ProxyJump</code> on <code>ela.cscs.ch</code>.
-A section in the <code>~/.ssh/config</code> could look as follows:</p>
-<div class="highlight"><span class="filename">~/.ssh.config</span><pre><span></span><code>Host ela
-  Hostname ela.cscs.ch
-  User cscsusername
-  IdentityFile ~/.ssh/cscs-key
+  <h1>SUMMARY</h1>
 
-Host santis* daint* 
-  Hostname %h.alps.cscs.ch
-  User cscsusername
-  IdentityFile ~/.ssh/cscs-key
-  ProxyJump ela
-
-Host balfrin* 
-  Hostname %h.cscs.ch
-  User cscsusername
-  IdentityFile ~/.ssh/cscs-key
-  ProxyJump ela
-</code></pre></div>
-<p>This allows standard connections like <code>ssh santis</code>, but you can also specify a login node if needed,
-e.g., <code>ssh santis-ln002</code>. Replace <code>cscsusername</code> with your actual username. </p>
-<h2 id="user-environments">User Environments<a class="headerlink" href="#user-environments" title="Permanent link">&para;</a></h2>
-<p>Software stacks at CSCS are now accessible through the so-called User Environments (uenv). 
-User environments contain the minimal software stack required for a certain activity, say, building and running ICON.
-They are generated by <code>spack</code>, packed into single <code>squashfs</code> file and then mounted by the user.
-In a way, they can be considered as poor man's containers.</p>
-<div class="admonition success">
-<p class="admonition-title">Main Advantages of Uenvs</p>
-<p>To a large degree, we can consider that there is a separation of concerns between software stacks and the 
-machine OS which enables the following:</p>
 <ul>
-<li>a much reduced maintenance of software stacks</li>
-<li>system-wide upgrades are limited to the low level OS, so should be way easier, when not transparent to the users</li>
-<li>upgrading to more recent software stacks or keeping old ones around (think compiler versions) is way easier</li>
-<li>users (for now C2SM) are able to build their own uenvs</li>
-<li>quicker access to software compared to classical multi-files directories</li>
+<li><a href="../">CSCS</a><ul>
+<li><a href="../santis/">Santis</a></li>
+<li><a href="../balfrin/">Balfrin</a></li>
+<li><a href="../eiger/">Eiger</a></li>
 </ul>
-</div>
-<div class="admonition info">
-<p class="admonition-title">CSCS Documentation</p>
-<p>A description of user environments and the <code>uenv</code> tool can be found in the 
-<a href="https://docs.cscs.ch/software/uenv/" target="_blank">CSCS documentation <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>. </p>
-</div>
-<h2 id="support-by-cscs">Support by CSCS<a class="headerlink" href="#support-by-cscs" title="Permanent link">&para;</a></h2>
-<p>General information about access, file systems, vClusters, user environments and much more can be found at the
-<a href="https://docs.cscs.ch/" target="_blank">CSCS documentation <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
-<p>To contact CSCS staff directly, users can join their dedicated
-<a href="https://cscs-users.slack.com" target="_blank">Slack workspace <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>,
-with dedicated channels for each vCluster. </p>
-<h2 id="introductory-workshop-material">Introductory Workshop Material<a class="headerlink" href="#introductory-workshop-material" title="Permanent link">&para;</a></h2>
-<p>As an introduction to the Alps infrastructure, the material of our
-<a href="../2024-07-02-switching-to-alps/">C2SM workshop "Switching to Alps"</a> from August 12, 2024 is available:</p>
-<ul>
-<li><a href="https://polybox.ethz.ch/index.php/s/oSxyJgTjyvJKX8B" target="_blank">Recording <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg></span></a><br></li>
-<li><a href="https://polybox.ethz.ch/index.php/s/jvtIYkBvHUSGZYD" target="_blank">Slides presenting Alps, vClusters and Uenvs <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg></span></a><br></li>
-<li><a href="https://polybox.ethz.ch/index.php/s/SWbYrOVRIprke60" target="_blank">Slides for the integration of Uenvs in <code>spack-c2sm</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg></span></a> </li>
+</li>
+<li>ETHZ<ul>
+<li><a href="../euler/">Euler</a></li>
+</ul>
+</li>
 </ul>
 
 
@@ -4877,7 +5094,7 @@ with dedicated channels for each vCluster. </p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 2, 2026 08:56:33 UTC">February 2, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 4, 2026 08:21:27 UTC">March 4, 2026</span>
   </span>
 
     
@@ -4887,7 +5104,7 @@ with dedicated channels for each vCluster. </p>
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 2, 2026 08:56:33 UTC">February 2, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 4, 2026 08:21:27 UTC">March 4, 2026</span>
   </span>
 
     
@@ -4895,6 +5112,8 @@ with dedicated channels for each vCluster. </p>
     
   </aside>
 
+
+  
 
 
 
@@ -4944,12 +5163,12 @@ with dedicated channels for each vCluster. </p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "mermaid2", "navigation.bottom", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sticky", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search", "search.share", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "mermaid2", "navigation.bottom", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sticky", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
