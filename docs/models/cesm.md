@@ -16,6 +16,14 @@ Newer CESM2 versions are supported by request. **CESM 1.2.2** is no longer suppo
 
 If you need help or support, please use the [C2SM discussion forum :material-open-in-new:](https://github.com/C2SM/Tasks-Support/discussions){:target="_blank"}.
 
+## Mailing List
+
+As a member of the `c2sm.cesm` mailing list, you will receive all relevant information around CESM.
+
+If you or someone from your group is not yet a member of the `c2sm.cesm` mailing list, subscribe by sending an e-mail to [`sympa@sympa.ethz.ch?subject=SUBSCRIBE%20c2sm.cesm%20firstname%20lastname`](mailto:sympa@sympa.ethz.ch?subject=SUBSCRIBE%20c2sm.cesm%20firstname%20lastname) (modify `firstname` and `lastname` in the subject).
+
+To check which lists you are subscribed to, send an e-mail to [`sympa@sympa.ethz.ch?subject=WHICH`](mailto:sympa@sympa.ethz.ch?subject=WHICH).
+
 ## Get started
 
 - [Overview Page CESM :material-open-in-new:](https://wiki.iac.ethz.ch/bin/viewauth/Climphys/ProjectCESM){:target="_blank"} (IAC-ETH login required)

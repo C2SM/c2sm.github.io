@@ -2,10 +2,15 @@ site_name: C2SM User Landing Page
 site_url: https://c2sm.github.io
 theme:
   name: material
+  custom_dir: docs/overrides
 docs_dir: docs/
 repo_name: C2SM/c2sm.github.io
 repo_url: https://github.com/C2SM/c2sm.github.io
 edit_uri: edit/main/docs/
+extra:
+  analytics:
+    provider: plausible
+    domain: c2sm.github.io
 markdown_extensions:
   - admonition
   - attr_list
@@ -60,6 +65,7 @@ plugins:
      categories_url_format: "category_{slug}"
      post_url_format: "{date}-{slug}"
      post_url_date_format:  yyyy-MM-dd
+  - material-plausible
 extra_css:
   - stylesheets/extra.css
 theme:

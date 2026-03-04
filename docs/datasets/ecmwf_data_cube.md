@@ -13,7 +13,7 @@ which is a storage system at the ECMWF Data Center in Bologna.
 - 0.5 PB of fast SSD storage
 - 2 PB of “slow” storage
 - Build via work package of SwissTwins project
-- Physically installed at ECMWF Bologna with a direct connection to Alps Lugano [ALPS](../alps/index.md)
+- Physically installed at ECMWF Bologna with a direct connection to Alps Lugano [ALPS](../hpc/index.md)
 - Part of the multi-site distributed infrastructure (Lugano, Lausanne, Bologna)
 
 ## Usage

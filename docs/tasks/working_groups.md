@@ -5,7 +5,7 @@
 
 ## WG 1 - High Performance Computing
 
-Activities for this group mainly contribute to the further development and usage of next-generation weather and climate models such as ICON or COSMO using innovative coding concepts (e.g., beyond CPU architectures).
+Activities for this group mainly contribute to the further development and usage of next-generation weather and climate models such as ICON using innovative coding concepts (e.g., beyond CPU architectures).
 
 ## WG 2 - Weather and Climate Modeling
 
