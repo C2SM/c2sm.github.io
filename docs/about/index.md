@@ -45,4 +45,4 @@ This will allow you to submit new tasks, receive support from the C2SM Core Team
 
 ## C2SM on GitHub
 
-C2SM maintains the [C2SM :material-open-in-new:](https://github.com/C2SM){:target="_blank"} GitHub organizations to distribute code to the community. It contains many repositories including many of the supported tools.
+C2SM maintains the [C2SM :material-open-in-new:](https://github.com/C2SM){:target="_blank"} GitHub organization to distribute code to the community. It contains many repositories including many of the supported tools.
