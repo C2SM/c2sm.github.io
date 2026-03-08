@@ -177,8 +177,8 @@
     ```
 
 
-- Size: 8.33 TB :material-information-outline:{ title="last updated: 2026-03-01 01:45:47" }
-- Number of files: 3,573 :material-information-outline:{ title="last updated: 2026-03-01 01:45:47" }
+- Size: 8.35 TB :material-information-outline:{ title="last updated: 2026-03-08 01:46:47" }
+- Number of files: 3,609 :material-information-outline:{ title="last updated: 2026-03-08 01:46:47" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -187,31 +187,31 @@
   `10wdir`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `2r`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `2t`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
-  `eva`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
+  `eva`{ title="day (native): 1985-2025, mon (native): 1985-2025" },
   `gph300`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `gph500`{ title="day (native): 1986-2023, mon (native): 1986-2023" },
   `liqvsm`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `mn2t`{ title="day (native): 1985-2023, mon (native): 1985-2020" },
   `msl`{ title="day (native): 1985-2024, mon (native): 1985-2024" },
-  `mx2t`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
+  `mx2t`{ title="day (native): 1985-2025, mon (native): 1985-2025" },
   `r`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `sd`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `sde`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `sf`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `skt`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
-  `slhf`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
+  `slhf`{ title="day (native): 1985-2025, mon (native): 1985-2025" },
   `sp`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
-  `sshf`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
-  `ssr`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
-  `ssrd`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
-  `str`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
-  `strd`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
+  `sshf`{ title="day (native): 1985-2025, mon (native): 1985-2025" },
+  `ssr`{ title="day (native): 1985-2025, mon (native): 1985-2025" },
+  `ssrd`{ title="day (native): 1985-2025, mon (native): 1985-2025" },
+  `str`{ title="day (native): 1985-2025, mon (native): 1985-2025" },
+  `strd`{ title="day (native): 1985-2025, mon (native): 1985-2025" },
   `t`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `tcc`{ title="day (native): 1985-2023, mon (native): 1985-2023" },
   `tp`{ title="day (native): 1986-2023, mon (native): 1986-2023" },
   `u`{ title="day (native): 1986-2023, mon (native): 1986-2023" },
   `v`{ title="day (native): 1986-2023, mon (native): 1986-2023" },
-  `vsw`{ title="day (native): 1985-2023, mon (native): 1985-2023" }
+  `vsw`{ title="day (native): 1985-2025, mon (native): 1985-2025" }
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 5x5km
 - Coverage: Europe
@@ -225,8 +225,8 @@
     ```
 
 
-- Size: 1.78 TB :material-information-outline:{ title="last updated: 2026-03-01 01:45:47" }
-- Number of files: 1,220 :material-information-outline:{ title="last updated: 2026-03-01 01:45:47" }
+- Size: 1.78 TB :material-information-outline:{ title="last updated: 2026-03-08 01:46:47" }
+- Number of files: 1,220 :material-information-outline:{ title="last updated: 2026-03-08 01:46:47" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -243,8 +243,8 @@
   `ssrd`{ title="day (native): 1985-2025, mon (native): 1985-2025" },
   `str`{ title="day (native): 1985-2025, mon (native): 1985-2025" },
   `strd`{ title="day (native): 1985-2025, mon (native): 1985-2025" },
-  `tp`{ title="mon (native): 1985-2020" },
-  `vsw`{ title="day (native): 1985-2021, mon (native): 1985-2021" }
+  `tp`{ title="mon (native): 1985-2025" },
+  `vsw`{ title="day (native): 1985-2025, mon (native): 1985-2025" }
 - Temporal Resolution: daily, monthly
 - Spatial Resolution: 5x5km
 - Coverage: Europe
@@ -283,8 +283,8 @@
     ```
 
 
-- Size: 45.94 TB :material-information-outline:{ title="last updated: 2026-03-01 01:47:31" }
-- Number of files: 139,930 :material-information-outline:{ title="last updated: 2026-03-01 01:47:31" }
+- Size: 45.94 TB :material-information-outline:{ title="last updated: 2026-03-08 01:46:53" }
+- Number of files: 139,937 :material-information-outline:{ title="last updated: 2026-03-08 01:46:53" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
@@ -306,7 +306,7 @@
   `sftlf`{ title="fx (native): N/A" },
   `strd`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
   `ta`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
-  `tas`{ title="day (native): 194001-202412, mon (native): 194001-202412" },
+  `tas`{ title="day (native): 194001-202511, mon (native): 194001-202511" },
   `tasmax`{ title="day (native): 194001-202412, mon (native): 194001-202412" },
   `tasmin`{ title="day (native): 194001-202412, mon (native): 194001-202412" },
   `tos`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
@@ -332,8 +332,8 @@
     ```
 
 
-- Size: 8.9 TB :material-information-outline:{ title="last updated: 2026-03-01 01:45:51" }
-- Number of files: 2,012 :material-information-outline:{ title="last updated: 2026-03-01 01:45:51" }
+- Size: 8.9 TB :material-information-outline:{ title="last updated: 2026-03-08 01:46:50" }
+- Number of files: 2,012 :material-information-outline:{ title="last updated: 2026-03-08 01:46:50" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
