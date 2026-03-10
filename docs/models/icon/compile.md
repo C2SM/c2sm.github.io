@@ -30,6 +30,45 @@ Clone the ICON repository:
 
 #### Säntis
 
+!!! info "Changes needed for latest ICON release"
+    Before continuing with the instructions below, you must apply the following patch if you are using the latest DKRZ GitLab release (`2025.10`). Older releases than that have not been tested.
+    <details>
+    <summary> <b><u> patch </u></b> </summary>
+
+    ```diff
+    diff --git a/config/cscs/SANTIS_ENV_TAG b/config/cscs/SANTIS_ENV_TAG
+    index 4b8589c5a5..f4526e9f3c 100644
+    --- a/config/cscs/SANTIS_ENV_TAG
+    +++ b/config/cscs/SANTIS_ENV_TAG
+    @@ -1 +1 @@
+    -icon/25.2:v3
+    +icon/25.2:v4
+    diff --git a/config/cscs/spack/santis_cpu_double/spack.yaml b/config/cscs/spack/santis_cpu_double/spack.yaml
+    index 577ebfa752..a578dde384 100644
+    --- a/config/cscs/spack/santis_cpu_double/spack.yaml
+    +++ b/config/cscs/spack/santis_cpu_double/spack.yaml
+    @@ -16,3 +16,6 @@ spack:
+    view: true
+    concretizer:
+        unify: true
+    +  packages:
+    +    mpi:
+    +      require: cray-mpich%nvhpc
+    diff --git a/config/cscs/spack/santis_gpu_double/spack.yaml b/config/cscs/spack/santis_gpu_double/spack.yaml
+    index 1c49d3f582..b3eb81765f 100644
+    --- a/config/cscs/spack/santis_gpu_double/spack.yaml
+    +++ b/config/cscs/spack/santis_gpu_double/spack.yaml
+    @@ -17,3 +17,6 @@ spack:
+    view: true
+    concretizer:
+        unify: true
+    +  packages:
+    +    mpi:
+    +      require: cray-mpich%nvhpc
+    ```
+
+    </details>
+
 Run the following after navigating into the ICON root folder:
 
 === "CPU compilation"
