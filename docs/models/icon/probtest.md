@@ -38,7 +38,7 @@ export BB_NAME=santis_cpu_nvhpc
 export UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
 
 # Point the Python image and create empty folder to mount to
-export SQFS_PATH=/capstor/store/cscs/userlab/cws01/ci/ci-python-image
+export SQFS_PATH=/capstor/store/cscs/userlab/cws01/ci/python_image_icon25.2_v4
 mkdir -p .venv
 ```
 
