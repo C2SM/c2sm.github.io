@@ -31,37 +31,42 @@ Clone the ICON repository:
 #### Säntis
 
 !!! info "Changes needed for latest ICON release"
-    Before continuing with the instructions below, you must apply the following patch if you are using the latest DKRZ GitLab release (`2025.10`). Older releases than that have not been tested.
+    Before continuing with the instructions below, you must apply the following patch if you are using the latest DKRZ GitLab release `2025.10` (older releases have not been tested). The same applies if you are using an `icon-nwp` version prior to the [[hotfix] Fix CI after major update of Säntis :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/commit/2d6ef79e184af8cce957f8b6862f076040285c62){:target="_blank"} commit.
     <details>
     <summary> <b><u> patch </u></b> </summary>
 
     ```diff
     diff --git a/config/cscs/SANTIS_ENV_TAG b/config/cscs/SANTIS_ENV_TAG
-    index 4b8589c5a5..f4526e9f3c 100644
+    index 4b8589c5a..f4526e9f3 100644
     --- a/config/cscs/SANTIS_ENV_TAG
     +++ b/config/cscs/SANTIS_ENV_TAG
     @@ -1 +1 @@
     -icon/25.2:v3
     +icon/25.2:v4
     diff --git a/config/cscs/spack/santis_cpu_double/spack.yaml b/config/cscs/spack/santis_cpu_double/spack.yaml
-    index 577ebfa752..a578dde384 100644
+    index f0300a1b9..e98ddde04 100644
     --- a/config/cscs/spack/santis_cpu_double/spack.yaml
     +++ b/config/cscs/spack/santis_cpu_double/spack.yaml
-    @@ -16,3 +16,6 @@ spack:
-    view: true
-    concretizer:
-        unify: true
+    @@ -12,7 +12,10 @@ spack:
+       specs:
+       - cosmo-eccodes-definitions@2.36.0.3
+       - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad +emvorado +art +dace ~aes
+    -    ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange
+    +    ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange +mpi
+       view: true
+       concretizer:
+         unify: true
     +  packages:
     +    mpi:
     +      require: cray-mpich%nvhpc
     diff --git a/config/cscs/spack/santis_gpu_double/spack.yaml b/config/cscs/spack/santis_gpu_double/spack.yaml
-    index 1c49d3f582..b3eb81765f 100644
+    index 677e1bd3b..5db097eee 100644
     --- a/config/cscs/spack/santis_gpu_double/spack.yaml
     +++ b/config/cscs/spack/santis_gpu_double/spack.yaml
     @@ -17,3 +17,6 @@ spack:
-    view: true
-    concretizer:
-        unify: true
+       view: true
+       concretizer:
+         unify: true
     +  packages:
     +    mpi:
     +      require: cray-mpich%nvhpc
