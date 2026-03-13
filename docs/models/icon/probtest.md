@@ -61,7 +61,7 @@ Then navigate to your CPU build directory and generate and run a 10-member ensem
 ```console
 cd nvhpc_cpu
 ./make_runscripts $EXP
-uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c 'source ${SQFS_PATH}/.venv/bin/activate && module load nvhpc cdo && python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)'
+uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c 'source ${SQFS_PATH}/.venv/bin/activate python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)'
 ```
 
 This generates:
@@ -85,7 +85,7 @@ Navigate to your GPU build folder and run the same test case, e.g.:
 ```console
 cd ../nvhpc_gpu
 ./make_runscripts $EXP
-cd run && uenv run $UENV_VERSION --view modules,default -- bash -c 'module load nvhpc cdo && ./exp.$EXP.run 2>&1 | tee LOG.exp.$EXP.run.o' && cd ..
+cd run && uenv run $UENV_VERSION --view modules,default -- bash -c './exp.$EXP.run 2>&1 | tee LOG.exp.$EXP.run.o' && cd ..
 ```
 
 Navigate back to ICON root folder and collect the GPU statistics:
@@ -115,7 +115,7 @@ Run additional members (11–49):
 ```console
 cd nvhpc_cpu
 ./make_runscripts $EXP
-uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c 'source ${SQFS_PATH}/.venv/bin/activate && module load nvhpc cdo && python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 11 49)'
+uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c 'source ${SQFS_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 11 49)'
 ```
 
 Regenerate reference and tolerance using all 49 members:
