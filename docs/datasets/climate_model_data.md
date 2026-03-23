@@ -185,7 +185,7 @@
 - Resolution: native and 2.5° x 2.5°
 - Coverage: global
 
-Link to CMIP6 Known Issues: https://wiki.iac.ethz.ch/Climphys/CMIP6KnownIssues
+Link to [CMIP6KnownIssues](https://wiki.iac.ethz.ch/Climphys/CMIP6KnownIssues)
 
 ## Raw CORDEX
 
