@@ -184,8 +184,7 @@
   `zos`{ title="ann (g025), ann (native), mon (g025), mon (native)" }
 - Resolution: native and 2.5° x 2.5°
 - Coverage: global
-
-Link to [CMIP6KnownIssues :material-open-in-new:](https://wiki.iac.ethz.ch/Climphys/CMIP6KnownIssues){:target="_blank"}
+- Link to [CMIP6KnownIssues :material-open-in-new:](https://wiki.iac.ethz.ch/Climphys/CMIP6KnownIssues){:target="_blank"}
 
 ## Raw CORDEX
 
