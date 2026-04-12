@@ -177,8 +177,8 @@
     ```
 
 
-- Size: 8.56 TB :material-information-outline:{ title="last updated: 2026-04-05 01:45:55" }
-- Number of files: 4,014 :material-information-outline:{ title="last updated: 2026-04-05 01:45:55" }
+- Size: 8.56 TB :material-information-outline:{ title="last updated: 2026-04-12 01:47:12" }
+- Number of files: 4,014 :material-information-outline:{ title="last updated: 2026-04-12 01:47:12" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -225,8 +225,8 @@
     ```
 
 
-- Size: 1.78 TB :material-information-outline:{ title="last updated: 2026-04-05 01:45:55" }
-- Number of files: 1,220 :material-information-outline:{ title="last updated: 2026-04-05 01:45:55" }
+- Size: 1.78 TB :material-information-outline:{ title="last updated: 2026-04-12 01:47:12" }
+- Number of files: 1,220 :material-information-outline:{ title="last updated: 2026-04-12 01:47:12" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -283,8 +283,8 @@
     ```
 
 
-- Size: 45.94 TB :material-information-outline:{ title="last updated: 2026-04-05 01:47:49" }
-- Number of files: 139,937 :material-information-outline:{ title="last updated: 2026-04-05 01:47:49" }
+- Size: 46.16 TB :material-information-outline:{ title="last updated: 2026-04-12 01:47:16" }
+- Number of files: 140,033 :material-information-outline:{ title="last updated: 2026-04-12 01:47:16" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
@@ -310,9 +310,9 @@
   `tasmax`{ title="day (native): 194001-202412, mon (native): 194001-202412" },
   `tasmin`{ title="day (native): 194001-202412, mon (native): 194001-202412" },
   `tos`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
-  `ua`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `ua`{ title="day (native): 194001-202512, mon (native): 194001-202512" },
   `uas`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
-  `va`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `va`{ title="day (native): 194001-202512, mon (native): 194001-202512" },
   `vas`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
   `zg`{ title="day (native): 194001-202312, mon (native): 194001-202312" }
 - [Variable list and progress :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/5efYkkFrSVC64lZ){:target="_blank"}
@@ -332,8 +332,8 @@
     ```
 
 
-- Size: 8.9 TB :material-information-outline:{ title="last updated: 2026-04-05 01:45:59" }
-- Number of files: 2,012 :material-information-outline:{ title="last updated: 2026-04-05 01:45:59" }
+- Size: 8.9 TB :material-information-outline:{ title="last updated: 2026-04-12 01:47:15" }
+- Number of files: 2,012 :material-information-outline:{ title="last updated: 2026-04-12 01:47:15" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
