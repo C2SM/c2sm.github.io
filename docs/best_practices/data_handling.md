@@ -32,7 +32,7 @@
 ## Funding agencies open access policies
    * [Open research data @SNSF :material-open-in-new:](http://www.snf.ch/en/theSNSF/research-policies/open_research_data/Pages/default.aspx){:target="_blank"}
    * [Check specific funder archiving mandates :material-open-in-new:](https://openpolicyfinder.jisc.ac.uk/){:target="_blank"}
-     
+
 ## Licensing
    * [Advices on how to license research data :material-open-in-new:](http://www.dcc.ac.uk/resources/how-guides/license-research-data){:target="_blank"}
    * [Creative commons licenses :material-open-in-new:](https://creativecommons.org){:target="_blank"}
@@ -47,7 +47,7 @@
 
 ## Help on improving NetCDF metadata
    * [IAC internal documentation on NetCDF in general :material-open-in-new:](https://wiki.iac.ethz.ch/IT/LinuxNetCDF){:target="_blank"} (!with IAC login only)
-   * [Climate and Forecast (CF) conventions :material-open-in-new:](http://cfconventions.org){:target="_blank"}
+   * [Climate and Forecast (CF) conventions :material-open-in-new:](https://cf-convention.github.io/){:target="_blank"}
    * [Python CF checker :material-open-in-new:](https://github.com/cedadev/cf-checker){:target="_blank"}
    * [Controlled Vocabularies (CVs) for use in CMIP6 :material-open-in-new:](https://wcrp-cmip.github.io/CMIP6_CVs/){:target="_blank"}
 
