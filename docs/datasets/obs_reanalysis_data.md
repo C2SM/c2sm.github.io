@@ -177,8 +177,8 @@
     ```
 
 
-- Size: 8.56 TB :material-information-outline:{ title="last updated: 2026-04-19 01:46:46" }
-- Number of files: 4,014 :material-information-outline:{ title="last updated: 2026-04-19 01:46:46" }
+- Size: 8.56 TB :material-information-outline:{ title="last updated: 2026-04-26 01:47:09" }
+- Number of files: 4,014 :material-information-outline:{ title="last updated: 2026-04-26 01:47:09" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -225,8 +225,8 @@
     ```
 
 
-- Size: 1.78 TB :material-information-outline:{ title="last updated: 2026-04-19 01:46:46" }
-- Number of files: 1,220 :material-information-outline:{ title="last updated: 2026-04-19 01:46:46" }
+- Size: 1.78 TB :material-information-outline:{ title="last updated: 2026-04-26 01:47:09" }
+- Number of files: 1,220 :material-information-outline:{ title="last updated: 2026-04-26 01:47:09" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -283,38 +283,41 @@
     ```
 
 
-- Size: 46.16 TB :material-information-outline:{ title="last updated: 2026-04-19 01:46:50" }
-- Number of files: 140,033 :material-information-outline:{ title="last updated: 2026-04-19 01:46:50" }
+- Size: 46.56 TB :material-information-outline:{ title="last updated: 2026-04-26 01:49:10" }
+- Number of files: 140,950 :material-information-outline:{ title="last updated: 2026-04-26 01:49:10" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
 - Variables: 
-  `cbh`{ title="day (native): 194001-202412, mon (native): 194001-202412" },
+  `cbh`{ title="day (native): 194001-202601, mon (native): 194001-202601" },
   `cl`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
-  `clt`{ title="day (native): 198001-202312, mon (native): 194012-202410" },
-  `d2m`{ title="day (native): 194001-202412, mon (native): 194012-202412" },
-  `hur`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `clt`{ title="day (native): 198001-202601, mon (native): 194012-202601" },
+  `d2m`{ title="day (native): 194001-202601, mon (native): 194012-202601" },
+  `hur`{ title="day (native): 194001-202512, mon (native): 194001-202512" },
   `hurs`{ title="day (native): 194001-202312, mon (native): 198001-198512" },
+  `hus`{ title="day (native): 202201-202512, mon (native): 202201-202512" },
   `orog`{ title="fx (native): N/A" },
-  `pr`{ title="day (native): 194001-202406, mon (native): 194012-202406" },
-  `ps`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
-  `psl`{ title="day (05x05): 195001-202212, mon (05x05): 195001-202212" },
-  `rlds`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `pr`{ title="day (native): 194001-202601, mon (native): 194012-202601" },
+  `ps`{ title="day (native): 194001-202601, mon (native): 194012-202601" },
+  `psl`{ title="day (05x05): 195001-202212, day (native): 202401-202601, mon (05x05): 195001-202212, mon (native): 202401-202601" },
+  `rlds`{ title="day (native): 194001-202601, mon (native): 194001-202601" },
   `rls`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
-  `rsds`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
-  `sfcWind`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `rsds`{ title="day (native): 194001-202601, mon (native): 194012-202601" },
+  `sfcWind`{ title="day (native): 194001-202601, mon (native): 194012-202601" },
   `sftlf`{ title="fx (native): N/A" },
+  `str`{ title="day (native): 202401-202601, mon (native): 202401-202601" },
   `strd`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
-  `ta`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
-  `tas`{ title="day (native): 194001-202511, mon (native): 194001-202511" },
-  `tasmax`{ title="day (native): 194001-202412, mon (native): 194001-202412" },
-  `tasmin`{ title="day (native): 194001-202412, mon (native): 194001-202412" },
-  `tos`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
+  `ta`{ title="day (native): 194001-202512, mon (native): 194001-202512" },
+  `tas`{ title="day (native): 194001-202601, mon (native): 194001-202601" },
+  `tasmax`{ title="day (native): 194001-202601, mon (native): 194001-202601" },
+  `tasmin`{ title="day (native): 194001-202601, mon (native): 194001-202601" },
+  `tos`{ title="day (native): 194001-202601, mon (native): 194001-202601" },
+  `ts`{ title="day (native): 202401-202601, mon (native): 202401-202601" },
   `ua`{ title="day (native): 194001-202512, mon (native): 194001-202512" },
-  `uas`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
+  `uas`{ title="day (native): 194001-202601, mon (native): 194012-202601" },
   `va`{ title="day (native): 194001-202512, mon (native): 194001-202512" },
-  `vas`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
-  `zg`{ title="day (native): 194001-202312, mon (native): 194001-202312" }
+  `vas`{ title="day (native): 194001-202601, mon (native): 194012-202601" },
+  `zg`{ title="day (native): 194001-202601, mon (native): 194001-202601" }
 - [Variable list and progress :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/5efYkkFrSVC64lZ){:target="_blank"}
 - v2: variable names and units are standardized to CMIP. Inconsistency in clt, clt is provided as fraction (as original ERA5) not % (as supposed to be in CMIP)
 - v3: variable names and units are standardized to CMIP (incl. clt)
@@ -332,8 +335,8 @@
     ```
 
 
-- Size: 8.9 TB :material-information-outline:{ title="last updated: 2026-04-19 01:46:49" }
-- Number of files: 2,012 :material-information-outline:{ title="last updated: 2026-04-19 01:46:49" }
+- Size: 8.9 TB :material-information-outline:{ title="last updated: 2026-04-26 01:47:13" }
+- Number of files: 2,012 :material-information-outline:{ title="last updated: 2026-04-26 01:47:13" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
