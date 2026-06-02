@@ -67,7 +67,6 @@ extra_css:
   - stylesheets/extra.css
 theme:
   name: material
-  custom_dir: docs/overrides
   language: en
   logo: assets/c2sm_logo_white_transparent.png
   favicon: assets/favicon.ico
