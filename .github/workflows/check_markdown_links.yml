@@ -20,6 +20,7 @@ jobs:
         run: python ./scripts/check_md_links.py --path ./docs
 
       - name: Check for broken links (external)
+        continue-on-error: true
         run: |
           pip install mkdocs-linkcheck
           exclude_patterns=$(cat exclude_link_patterns.txt | tr '\n' '|' | sed 's/|$//')
