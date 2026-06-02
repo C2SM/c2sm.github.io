@@ -63,7 +63,7 @@ For running the check scripts in the following, you need to have loaded a probte
     ```console
     export BB_NAME=santis_cpu_nvhpc
     # Point to Python image
-    export SQFS_PATH=/capstor/store/cscs/userlab/cws01/ci/ci-python-image/py_icon_ci.squashfs
+    export SQFS_PATH=/capstor/store/cscs/userlab/cws01/ci/python_image_icon25.2_v4/py_icon_ci.squashfs
     ```
 
 === "Balfrin"
@@ -99,7 +99,7 @@ Now run the check run scripts:
     export UENV_VERSION=$(cat ../config/cscs/SANTIS_ENV_TAG)
     cd run
     mkdir -p .venv # Create empty folder for mounting Python image
-    uenv run ${UENV_VERSION},${SQFS_PATH}:$(pwd)/.venv --view modules,default -- bash -c 'source $(pwd)/.venv/bin/activate && module load nvhpc cdo && ./check.${EXP}.run 2>&1 | tee LOG.check.${EXP}.run.o'
+    uenv run ${UENV_VERSION},${SQFS_PATH}:$(pwd)/.venv --view modules,default -- bash -c 'source $(pwd)/.venv/bin/activate && ./check.${EXP}.run 2>&1 | tee LOG.check.${EXP}.run.o'
     ```
 
 === "Balfrin"

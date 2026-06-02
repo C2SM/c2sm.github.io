@@ -8,4 +8,4 @@ The **Git for Beginners** course provides an introduction to basic Git commands.
 
 - [git-course repository (exercises) :material-open-in-new:](https://github.com/C2SM/git-course/){:target="_blank"}
 - [Slides Git for Advanced 2025 :material-open-in-new:](https://polybox.ethz.ch/index.php/s/MRMHrT7sMNbYN3R){:target="_blank"}
-- [Slides Git for Beginners 2025 :material-open-in-new:](https://polybox.ethz.ch/index.php/s/eao9nGsrymY7SsC){:target="_blank"}
+- [Slides Git for Beginners 2026 :material-open-in-new:](https://polybox.ethz.ch/index.php/s/tEKNfNRGxPzzkm6){:target="_blank"}

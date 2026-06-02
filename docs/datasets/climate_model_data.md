@@ -118,8 +118,8 @@
     ```
 
 
-- Size: 216.55 TB :material-information-outline:{ title="last updated: 2026-03-01 01:47:55" }
-- Number of files: 724,482 :material-information-outline:{ title="last updated: 2026-03-01 01:47:55" }
+- Size: 216.74 TB :material-information-outline:{ title="last updated: 2026-05-31 01:46:54" }
+- Number of files: 725,518 :material-information-outline:{ title="last updated: 2026-05-31 01:46:54" }
 - Access: direct / rsync
 - Status: updated monthly
 - Variables: 
@@ -184,6 +184,7 @@
   `zos`{ title="ann (g025), ann (native), mon (g025), mon (native)" }
 - Resolution: native and 2.5° x 2.5°
 - Coverage: global
+- Link to [CMIP6KnownIssues :material-open-in-new:](https://wiki.iac.ethz.ch/Climphys/CMIP6KnownIssues){:target="_blank"}
 
 ## Raw CORDEX
 
@@ -206,8 +207,8 @@
     ```
 
 
-- Size: 356.98 TB :material-information-outline:{ title="last updated: 2026-03-01 01:48:13" }
-- Number of files: 552,596 :material-information-outline:{ title="last updated: 2026-03-01 01:48:13" }
+- Size: 356.98 TB :material-information-outline:{ title="last updated: 2026-05-31 01:47:21" }
+- Number of files: 552,596 :material-information-outline:{ title="last updated: 2026-05-31 01:47:21" }
 - Access: direct / rsync
 - Status: monthly updated
 - Resolution: 0.44° and 0.11°
@@ -224,8 +225,8 @@
     /nfs/atmos/c2sm/cordex-reklies
     ```
 
-- Size: 22.41 TB :material-information-outline:{ title="last updated: 2026-03-01 01:46:08" }
-- Number of files: 94,936 :material-information-outline:{ title="last updated: 2026-03-01 01:46:08" }
+- Size: 22.41 TB :material-information-outline:{ title="last updated: 2026-05-31 01:45:25" }
+- Number of files: 94,936 :material-information-outline:{ title="last updated: 2026-05-31 01:45:25" }
 - Access: direct
 - Status: monthly updated
 - Resolution: 0.11°

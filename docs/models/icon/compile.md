@@ -30,6 +30,59 @@ Clone the ICON repository:
 
 #### Säntis
 
+!!! info "Changes needed for latest ICON release"
+    Before continuing with the instructions below, you must apply the following patch if you are using the latest DKRZ GitLab release `2025.10` (older releases have not been tested). The same applies if you are using an `icon-nwp` version prior to the [[hotfix] Fix CI after major update of Säntis :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/commit/2d6ef79e184af8cce957f8b6862f076040285c62){:target="_blank"} commit.
+    <details>
+    <summary> <b><u> patch </u></b> </summary>
+
+    ```diff
+    diff --git a/config/cscs/SANTIS_ENV_TAG b/config/cscs/SANTIS_ENV_TAG
+    index 4b8589c5a..f4526e9f3 100644
+    --- a/config/cscs/SANTIS_ENV_TAG
+    +++ b/config/cscs/SANTIS_ENV_TAG
+    @@ -1 +1 @@
+    -icon/25.2:v3
+    +icon/25.2:v4
+    diff --git a/config/cscs/spack/santis_cpu_double/spack.yaml b/config/cscs/spack/santis_cpu_double/spack.yaml
+    index f0300a1b9..20c7ce662 100644
+    --- a/config/cscs/spack/santis_cpu_double/spack.yaml
+    +++ b/config/cscs/spack/santis_cpu_double/spack.yaml
+    @@ -11,8 +11,11 @@
+     spack:
+       specs:
+       - cosmo-eccodes-definitions@2.36.0.3
+    -  - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad +emvorado +art +dace ~aes
+    -    ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange
+    +  - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad +emvorado +art ~aes
+    +    ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange +mpi
+       view: true
+       concretizer:
+         unify: true
+    +  packages:
+    +    mpi:
+    +      require: cray-mpich%nvhpc
+    diff --git a/config/cscs/spack/santis_gpu_double/spack.yaml b/config/cscs/spack/santis_gpu_double/spack.yaml
+    index 677e1bd3b..052d0856a 100644
+    --- a/config/cscs/spack/santis_gpu_double/spack.yaml
+    +++ b/config/cscs/spack/santis_gpu_double/spack.yaml
+    @@ -11,9 +11,12 @@
+     spack:
+       specs:
+       - cosmo-eccodes-definitions@2.36.0.3
+    -  - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad +emvorado +art +dace gpu=nvidia-90
+    +  - icon @develop %nvhpc +grib2 +eccodes-definitions +ecrad +emvorado +art gpu=nvidia-90
+         +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange
+         ~cuda-graphs fflags="-traceback"
+       view: true
+       concretizer:
+         unify: true
+    +  packages:
+    +    mpi:
+    +      require: cray-mpich%nvhpc
+    ```
+
+    </details>
+
 Run the following after navigating into the ICON root folder:
 
 === "CPU compilation"

@@ -13,7 +13,7 @@
    * [ETH Guidelines for data management plans :material-open-in-new:](https://unlimited.ethz.ch/pages/viewpage.action?pageId=194127962){:target="_blank"}
 
 ## ETH Contacts
-   * Data management plans: Digital Curation Office, ETH Library, ETH Zurich, [ETH Digital Curation Webpage :material-open-in-new:](https://library.ethz.ch/en/archiving-and-digitising/archiving/digital-long-term-preservation/digital-curation-services.html){:target="_blank"}
+   * Data management plans: Digital Curation Office, ETH Library, ETH Zurich, [ETH Digital Curation Webpage :material-open-in-new:](https://library.ethz.ch/en/collections-and-archives/archiving/digital-long-term-preservation/digital-curation-services.html){:target="_blank"}
    * Research Collection: Barbara Hirschmann, ETH Research Collection, ETH Library, ETH Zurich, [ETH Research Collection Webpage :material-open-in-new:](https://library.ethz.ch/en/publishing-and-archiving/publishing-and-registering/publishing-in-the-research-collection.html){:target="_blank"}
    * openBIS software: Dr. Caterina Barillari, ETH SIS, [ETH Personal Page :material-open-in-new:](https://www.ethz.ch/en/the-eth-zurich/organisation/departments/informatikdienste/personen/person-detail.html?persid=185758){:target="_blank"}
 
@@ -32,7 +32,7 @@
 ## Funding agencies open access policies
    * [Open research data @SNSF :material-open-in-new:](http://www.snf.ch/en/theSNSF/research-policies/open_research_data/Pages/default.aspx){:target="_blank"}
    * [Check specific funder archiving mandates :material-open-in-new:](https://openpolicyfinder.jisc.ac.uk/){:target="_blank"}
-     
+
 ## Licensing
    * [Advices on how to license research data :material-open-in-new:](http://www.dcc.ac.uk/resources/how-guides/license-research-data){:target="_blank"}
    * [Creative commons licenses :material-open-in-new:](https://creativecommons.org){:target="_blank"}
@@ -47,7 +47,7 @@
 
 ## Help on improving NetCDF metadata
    * [IAC internal documentation on NetCDF in general :material-open-in-new:](https://wiki.iac.ethz.ch/IT/LinuxNetCDF){:target="_blank"} (!with IAC login only)
-   * [Climate and Forecast (CF) conventions :material-open-in-new:](http://cfconventions.org){:target="_blank"}
+   * [Climate and Forecast (CF) conventions :material-open-in-new:](https://cf-convention.github.io/){:target="_blank"}
    * [Python CF checker :material-open-in-new:](https://github.com/cedadev/cf-checker){:target="_blank"}
    * [Controlled Vocabularies (CVs) for use in CMIP6 :material-open-in-new:](https://wcrp-cmip.github.io/CMIP6_CVs/){:target="_blank"}
 

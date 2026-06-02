@@ -10,7 +10,7 @@ The vCluster `santis` is dedicated to **Climate and Weather** applications. It i
 
 | uenv                   | Description                    |
 |------------------------|--------------------------------|
-| `icon/25.2:v3`         | Build and run ICON             |
+| `icon/25.2:v4`         | Build and run ICON             |
 | `climtools/25.2:v1`    | Pre- and post-processing tools |
 
 You can find the most important commands when working with uenvs on the [CSCS Docs pages :material-open-in-new:](https://docs.cscs.ch/software/uenv/#downloading-uenv){:target="_blank"}.
