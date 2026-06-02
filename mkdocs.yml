@@ -1,8 +1,5 @@
 site_name: C2SM User Landing Page
 site_url: https://c2sm.github.io
-theme:
-  name: material
-  custom_dir: docs/overrides
 docs_dir: docs/
 repo_name: C2SM/c2sm.github.io
 repo_url: https://github.com/C2SM/c2sm.github.io
@@ -70,6 +67,7 @@ extra_css:
   - stylesheets/extra.css
 theme:
   name: material
+  custom_dir: docs/overrides
   language: en
   logo: assets/c2sm_logo_white_transparent.png
   favicon: assets/favicon.ico
@@ -112,4 +110,4 @@ theme:
     - search.suggest
 extra_javascript:
   - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mathjax@3.2.2/es5/tex-mml-chtml.js
