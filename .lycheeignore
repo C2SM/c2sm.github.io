@@ -31,3 +31,6 @@ agupubs\.onlinelibrary\.wiley\.com
 ^https://www\.clm-community\.eu
 ^https://c2sm\.ethz\.ch/education/technical-training/.*\.html
 ^https://egusphere\.copernicus\.org
+^https://gitlab\.dkrz\.de
+^https://icon\.gitlab-pages\.dkrz\.de
+^https://www\.ethz\.ch

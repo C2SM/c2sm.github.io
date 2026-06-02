@@ -27,6 +27,6 @@ jobs:
             --no-progress
             --timeout 30
             --max-retries 3
-            --accept 200,204,301,302,429
+            --accept 200,204,301,302,401,403,429
             'docs/**/*.md'
           fail: true

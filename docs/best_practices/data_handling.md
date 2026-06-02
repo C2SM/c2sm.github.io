@@ -14,7 +14,7 @@
 
 ## ETH Contacts
    * Data management plans: Digital Curation Office, ETH Library, ETH Zurich, [ETH Digital Curation Webpage :material-open-in-new:](https://library.ethz.ch/en/collections-and-archives/archiving/digital-long-term-preservation/digital-curation-services.html){:target="_blank"}
-   * Research Collection: Barbara Hirschmann, ETH Research Collection, ETH Library, ETH Zurich, [ETH Research Collection Webpage :material-open-in-new:](https://library.ethz.ch/en/publishing-and-archiving/publishing-and-registering/publishing-in-the-research-collection.html){:target="_blank"}
+   * Research Collection: Barbara Hirschmann, ETH Research Collection, ETH Library, ETH Zurich, [ETH Research Collection Webpage :material-open-in-new:](https://library.ethz.ch/en/researching-and-publishing/publishing-research/publishing-in-the-research-collection.html){:target="_blank"}
    * openBIS software: Dr. Caterina Barillari, ETH SIS, [ETH Personal Page :material-open-in-new:](https://www.ethz.ch/en/the-eth-zurich/organisation/departments/informatikdienste/personen/person-detail.html?persid=185758){:target="_blank"}
 
 ## Data repositories
