@@ -20,8 +20,13 @@ jobs:
         run: python ./scripts/check_md_links.py --path ./docs
 
       - name: Check for broken links (external)
-        continue-on-error: true
-        run: |
-          pip install mkdocs-linkcheck
-          exclude_patterns=$(cat exclude_link_patterns.txt | tr '\n' '|' | sed 's/|$//')
-          mkdocs-linkcheck -rv ./docs --ext=".md" --exclude="$exclude_patterns" -m get || mkdocs-linkcheck -rv ./docs --ext=".md" --exclude="$exclude_patterns" -m get
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --timeout 30
+            --max-retries 3
+            --accept 200,204,301,302,429
+            'docs/**/*.md'
+          fail: true
