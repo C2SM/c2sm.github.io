@@ -16,4 +16,4 @@ First held in December 2023, this workshop is now offered annually.
 
 - [Workshop repository (exercises) :material-open-in-new:](https://github.com/C2SM/climate-model-workshop){:target="_blank"}
 - [Slides 2024 :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/ZEXegJ2zquTLRps){:target="_blank"}
-
+- [Slides 2026 :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/nyiQgzWm29WPe7T){:target="_blank"}
