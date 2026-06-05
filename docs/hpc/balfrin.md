@@ -1,6 +1,6 @@
 # Balfrin
 
-Balfrin is a high-performance computing (HPC) cluster used by MeteoSwiss, located in Lugano and hosted by CSCS (Swiss National Supercomputing Centre). It is an [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface) cluster managed by [Slurm](https://slurm.schedmd.com/), primarily used for research and development (R&D) and as a production failover system.
+Balfrin is a high-performance computing (HPC) cluster used by MeteoSwiss, located in Lugano and hosted by CSCS (Swiss National Supercomputing Centre). It is an [MPI :material-open-in-new:](https://en.wikipedia.org/wiki/Message_Passing_Interface){:target="_blank"} cluster managed by [Slurm :material-open-in-new:](https://slurm.schedmd.com/){:target="_blank"}, primarily used for research and development (R&D) and as a production failover system.
 
 > Note: C2SM does not officially support Balfrin. However, instructions for setting up ICON on Balfrin are available in the [Compile section of ICON](../models/icon/compile.md#balfrin).
 
@@ -11,17 +11,17 @@ Balfrin's hardware is designed for scalability. The maximum configuration is out
 
 Node type           | Nodes |                                                    GPU type    |  GPUs |  GPU RAM per GPU | CPU model type                                                      |  CPU Sockets |  Cores per socket |  Threads per core | Threads |           RAM |
 --------------------|-------|----------------------------------------------------------------|-------|------------------|---------------------------------------------------------------------|--------------|-------------------|-------------------|---------|---------------|
-Login node          |     3 |                                                              - |     0 |                - |  [AMD EPYC 7713](https://www.amd.com/en/products/cpu/amd-epyc-7713) |            2 |                64 |                 2 |     256 | 256 or 512 GB |
-GPU node            |    46 |  [NVIDIA A100](https://www.nvidia.com/en-us/data-center/a100/) |     4 |            96 GB |  [AMD EPYC 7713](https://www.amd.com/en/products/cpu/amd-epyc-7713) |            1 |                64 |                 2 |     128 |        512 GB |
-Postprocessing node |    15 |                                                              - |     0 |                - |  [AMD EPYC 7713](https://www.amd.com/en/products/cpu/amd-epyc-7713) |            2 |                64 |                 2 |     256 |        512 GB | 
-User Access Node*   |     1 |                                                              - |     0 |                - |  [AMD EPYC 7713](https://www.amd.com/en/products/cpu/amd-epyc-7713) |            2 |                64 |                 2 |     256 |        512 GB |
+Login node          |     3 |                                                              - |     0 |                - |  [AMD EPYC 7713 :material-open-in-new:](https://www.amd.com/en/products/cpu/amd-epyc-7713){:target="_blank"} |            2 |                64 |                 2 |     256 | 256 or 512 GB |
+GPU node            |    46 |  [NVIDIA A100 :material-open-in-new:](https://www.nvidia.com/en-us/data-center/a100/){:target="_blank"} |     4 |            96 GB |  [AMD EPYC 7713 :material-open-in-new:](https://www.amd.com/en/products/cpu/amd-epyc-7713){:target="_blank"} |            1 |                64 |                 2 |     128 |        512 GB |
+Postprocessing node |    15 |                                                              - |     0 |                - |  [AMD EPYC 7713 :material-open-in-new:](https://www.amd.com/en/products/cpu/amd-epyc-7713){:target="_blank"} |            2 |                64 |                 2 |     256 |        512 GB | 
+User Access Node*   |     1 |                                                              - |     0 |                - |  [AMD EPYC 7713 :material-open-in-new:](https://www.amd.com/en/products/cpu/amd-epyc-7713){:target="_blank"} |            2 |                64 |                 2 |     256 |        512 GB |
 
 
 ## Storage and Quota
 
 
 ### Storage
-For detailed storage documentation, refer to the [CSCS Storage Documentation](https://user.cscs.ch/storage/file_systems/).
+For detailed storage documentation, refer to the [CSCS Storage Documentation :material-open-in-new:](https://user.cscs.ch/storage/file_systems/){:target="_blank"}.
 
 ### Quota
 
@@ -41,7 +41,7 @@ lsattr -p -d $HOME
 lfs quota -p 74 /users -h
 ```
 
-For more information, see the CSCS [Lustre Quotas Guide](https://confluence.cscs.ch/x/v4EzMw).
+For more information, see the CSCS [Lustre Quotas Guide :material-open-in-new:](https://confluence.cscs.ch/x/v4EzMw){:target="_blank"}.
 
 ## Network Access
 
@@ -85,7 +85,7 @@ module avail
 
 ### Domain-Specific Software (UENV)
 Some software (e.g., ncview) is available in user environments (uenvs). To use these:
-1. Install the CSCS UENV CLI: Follow the [Getting Started Guide](https://confluence.cscs.ch/display/KB/UENV+user+environments).
+1. Install the CSCS UENV CLI: Follow the [Getting Started Guide :material-open-in-new:](https://confluence.cscs.ch/display/KB/UENV+user+environments){:target="_blank"}.
 2. Using UENV: There are three ways to use uenvs:
    - Option 1: Load modules from a uenv
      ```bash
