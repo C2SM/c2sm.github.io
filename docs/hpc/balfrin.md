@@ -1,40 +1,56 @@
 # Balfrin
 
-Balfrin is an Alps cluster used by MeteoSwiss.
-Located in Lugano and hosted by CSCS.
-Balfrin is a MPI cluster with slurm. Balfrin is used for R&D and for production failover.
+Balfrin is a high-performance computing (HPC) cluster used by MeteoSwiss, located in Lugano and hosted by CSCS (Swiss National Supercomputing Centre). It is an [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface) cluster managed by [Slurm](https://slurm.schedmd.com/), primarily used for research and development (R&D) and as a production failover system.
 
-## Hardware
-
-Node type           | Nodes |  GPU type    |  GPUs |  GPU RAM per GPU | CPU model type |  CPU Sockets |  Cores per socket |  Threads per core | Threads |           RAM |                Comment |
---------------------|-------|--------------|-------|------------------|----------------|--------------|-------------------|-------------------|---------|---------------|------------------------|
-Login node          |     3 |         -    |     0 |                - |  AMD EPYC 7713 |            2 |                64 |                 2 |     256 | 256 or 512 GB |                        |
-GPU node            |    46 |  nvidia A100 |     4 |            96 GB |  AMD EPYC 7713 |            1 |                64 |                 2 |     128 |        512 GB |                        |
-Postprocessing node |    15 |            - |     0 |                - |  AMD EPYC 7713 |            2 |                64 |                 2 |     256 |        512 GB |                        | 
-User Access Node*   |     1 |            - |     0 |                - |  AMD EPYC 7713 |            2 |                64 |                 2 |     256 |        512 GB | Has a RMDCN connection |
-
-This is the maximum configuration, and can be scaled down according to the demand.
-
-C2SM does not officially support Balfrin. Nevertheless,  you can find instructions on how
-to set up ICON on Balfrin at the [Compile section of ICON](../models/icon/compile.md#balfrin).
+> Note: C2SM does not officially support Balfrin. However, instructions for setting up ICON on Balfrin are available in the [Compile section of ICON](../models/icon/compile.md#balfrin).
 
 
-## Storage
-CSCS Documentation 
+## Hardware Specifications
 
-## Quota
-User's home has a size limit per user with a soft limit at 80GB and a hard limit at 100GB.
-Use `df -h $HOME`, `lsattr -p -d $HOME` or `lfs quota -p 74 /users -h` to get more info.
+Balfrin's hardware is designed for scalability. The maximum configuration is outlined below, but resources can be scaled down based on demand in the future.
 
-CSCS' documentation on Lustre quotas: https://confluence.cscs.ch/x/v4EzMw
+Node type           | Nodes |                                                    GPU type    |  GPUs |  GPU RAM per GPU | CPU model type                                                      |  CPU Sockets |  Cores per socket |  Threads per core | Threads |           RAM |
+--------------------|-------|----------------------------------------------------------------|-------|------------------|---------------------------------------------------------------------|--------------|-------------------|-------------------|---------|---------------|
+Login node          |     3 |                                                              - |     0 |                - |  [AMD EPYC 7713](https://www.amd.com/en/products/cpu/amd-epyc-7713) |            2 |                64 |                 2 |     256 | 256 or 512 GB |
+GPU node            |    46 |  [NVIDIA A100](https://www.nvidia.com/en-us/data-center/a100/) |     4 |            96 GB |  [AMD EPYC 7713](https://www.amd.com/en/products/cpu/amd-epyc-7713) |            1 |                64 |                 2 |     128 |        512 GB |
+Postprocessing node |    15 |                                                              - |     0 |                - |  [AMD EPYC 7713](https://www.amd.com/en/products/cpu/amd-epyc-7713) |            2 |                64 |                 2 |     256 |        512 GB | 
+User Access Node*   |     1 |                                                              - |     0 |                - |  [AMD EPYC 7713](https://www.amd.com/en/products/cpu/amd-epyc-7713) |            2 |                64 |                 2 |     256 |        512 GB |
 
-## Network
-The login nodes can be accessed via balfrin.cscs.ch and tasna.cscs.ch. This will forward you to a random login node, so you can profit form their redundancy.
+
+## Storage and Quota
+
+
+### Storage
+For detailed storage documentation, refer to the [CSCS Storage Documentation](https://user.cscs.ch/storage/file_systems/).
+
+### Quota
+
+Home Directory Limits:
+- Soft limit: 80 GB
+- Hard limit: 100 GB
+
+To check your quota usage, use one of the following commands:
+```bash
+# Check home directory usage
+df -h $HOME
+
+# Check Lustre attributes
+lsattr -p -d $HOME
+
+# Check project quota (example for /users)
+lfs quota -p 74 /users -h
+```
+
+For more information, see the CSCS [Lustre Quotas Guide](https://confluence.cscs.ch/x/v4EzMw).
+
+## Network Access
+
+The login nodes can be accessed via `balfrin.cscs.ch`. This will forward you to a random login node, so you can profit form their redundancy.
 
 
 ## Example Job Script
-
-```
+Below is a template for submitting jobs using Slurm on Balfrin:
+```bash
 #!/bin/bash
 #SBATCH --job-name=my_job
 #SBATCH --output=output.txt
@@ -49,87 +65,68 @@ module load my_module
 srun my_program
 ```
 
-## Software stack
-CSCS installs lower-level and general purpose software in `/mch-environment/`. It contains a directory for each version of the stack. Versions are immutable, but will be decommissioned eventually.
-
-
-Details of the software stack content
-
-Scientific applications, libraries and tools are available through different uenv’s. 
-
-Module is used for dynamically loading and unloading environments for software (like paths to software executables and libraries), inside and outside of the uenvs.
-
-Spack is the package manager available to install software easily. Additionally, CSCS uses their stackinator to build software stacks.
+## Software Stack
+### Overview
+CSCS provides a curated software stack for general-purpose and domain-specific applications. The stack is installed in `/mch-environment/` and is organized by version, with each version being immutable but subject to eventual decommissioning.
 
 ### General purpose software
-The environment variable $USER_ENV_ROOT contains the path to the latest production-grade version of the software stack - all version are installed under “/mch-environment/”. To use its modules, run
+The `$USER_ENV_ROOT` environment variable points to the latest production-grade software stack.
 
-```
+### Loading Modules
+To use the modules in the stack:
+```bash
+# Add the stack's module directory to your MODULEPATH
 module use $USER_ENV_ROOT/modules
-```
-to see an overview of its content, run
 
-```
+# List available modules
 module avail
 ```
-This might be a good candidate to put in your bashrc.
+> Tip: Consider adding `module use $USER_ENV_ROOT/modules` to your `~/.bashrc` for convenience.
 
-Domain specific software available in user environments (uenv)
-Some software (e.g. ncview) is available in specific user environment. 
+### Domain-Specific Software (UENV)
+Some software (e.g., ncview) is available in user environments (uenvs). To use these:
+1. Install the CSCS UENV CLI: Follow the [Getting Started Guide](https://confluence.cscs.ch/display/KB/UENV+user+environments).
+2. Using UENV: There are three ways to use uenvs:
+   - Option 1: Load modules from a uenv
+     ```bash
+     uenv start --view=modules climana/24.7\:v1-rc4
+     module load ncview/2.1.9
+     ncview
+     ```
+   - Option 2: Directly add applications
+     ```bash
+     uenv start --view=default netcdf-tools/2024\:v1
+     ncview
+     ```
+   - Option 3: Run scripts with a specific uenv
+     ```bash
+     uenv run {uenv/version\:tag} -- ./job-using-uenv.sh
+     ```
 
-To use those environments, you first need to install a command-line tool provided by CSCS, see "Getting Started" on https://confluence.cscs.ch/display/KB/UENV+user+environments . 
 
-This page also explains how to use those uenvs, in short there are three options (example for ncview, versions as of 6 August 2024):
+## Spack and Spack-C2SM
 
-Use an uenv that defines modules:
-```
-uenv start --view=modules climana/24.7:v1-rc4
-module load ncview/2.1.9
-ncview
-```
-or
+### Spack
+Spack is a flexible package manager for HPC. It allows users to install software without sudo rights and manage complex dependencies.
 
-```
-uenv start climana/24.7:v1-rc4
-uenv view modules
-module load ncview/2.1.9
-ncview
-```
-Use an uenv that directly adds applications:
-```
-uenv start --view=default netcdf-tools/2024:v1
-ncview
-```
-or
-```
-uenv start netcdf-tools/2024:v1
-uenv view default
-ncview
-```
-Run scripts with specific uenvs without loading them in the shell 
-```
-uenv run {uenv/version:tag} -- ./job-using-uenv.sh
-```
-:light_bulb_on: deactivate a loaded uenv with uenv stop.
+### Spack-C2SM
+Spack-C2SM is an extension of Spack, tailored for MeteoSwiss. It includes proprietary packages and machine-specific configurations.
 
-## Spack
-You can use Spack to install software, as it is capable of installing lots of software without sudo rights.
+#### Setup
+```bash
+# Clone the Spack-C2SM repository
+git clone --depth 1 --recurse-submodules --shallow-submodules \
+  https://github.com/C2SM/spack-c2sm.git -b latest
 
-Spack-C2SM is an extension of Spack, that contains additional MeteoSwiss specific software and can be used by cloning the repo and sourcing its env:
-
+# Source the environment
+. spack-c2sm/setup-env.sh \$USER_ENV_ROOT
 ```
-git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/C2SM/spack-c2sm.git -b latest
-. spack-c2sm/setup-env.sh $USER_ENV_ROOT
-```
-to see an overview of its content, run
-
-```
+#### Usage
+```bash
+# List available packages
 spack find
-```
-to install software, run
-```
+
+# Install a package (e.g., libelf)
 spack install libelf
 ```
-Spack is a package manager, like apt, yum, pip, conda.
-
-Spack-c2sm is an extension of spack, that hosts proprietary packages and machine specific configs.
+> Note: Spack-C2SM is designed to complement the CSCS software stack, providing additional tools and libraries specific to MeteoSwiss workflows.
