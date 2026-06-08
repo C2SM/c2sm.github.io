@@ -68,7 +68,7 @@
 - Resolution: native
 - Coverage: global
 
-Information on individual CMIP6 model is available [here](https://wcrp-cmip.github.io/CMIP6_CVs/docs/CMIP6_source_id.html) 
+Information on individual CMIP6 model is available [here :material-open-in-new:](https://wcrp-cmip.github.io/CMIP6_CVs/docs/CMIP6_source_id.html){:target="_blank"} 
 
 ## CMIP Next Generation
 

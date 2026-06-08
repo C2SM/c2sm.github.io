@@ -4,7 +4,7 @@
 
 **[CMIP data at C2SM](cmip_data.md)**
 
-CMIP or the Coupled Model Intercomparison Project is a collection of global climate model simulations commonly run by institutions all over the world. For more information, please visit [https://wcrp-cmip.org/](https://wcrp-cmip.org/).
+CMIP or the Coupled Model Intercomparison Project is a collection of global climate model simulations commonly run by institutions all over the world. For more information, please visit [https://wcrp-cmip.org/ :material-open-in-new:](https://wcrp-cmip.org/){:target="_blank"}.
 
 <p align="center">
   <a href="images/CMIP_compare_Brunner2026_Fig3.png">
@@ -21,7 +21,7 @@ C2SM provides CMIP data in primary and derived formats. In most instances, the d
 
 **[CORDEX data at C2SM](cordex.md)**
 
-CORDEX or the Coordinated Regional Climate Downscaling Experiment provides regional climate model simulations downscaled from CMIP global climate models.  Downscaling provides climate information on a spatially finer-scale than a traditional global climate (e.g., 12-50km vs. 100-250km) but for a limited spatial domain (e.g., Europe). For more information, please visit [https://cordex.org/](https://cordex.org/).
+CORDEX or the Coordinated Regional Climate Downscaling Experiment provides regional climate model simulations downscaled from CMIP global climate models.  Downscaling provides climate information on a spatially finer-scale than a traditional global climate (e.g., 12-50km vs. 100-250km) but for a limited spatial domain (e.g., Europe). For more information, please visit [https://cordex.org/ :material-open-in-new:](https://cordex.org/){:target="_blank"}.
 
 <p align="center">
   <a href="images/cmip5_eurocordex_eur11.png">
@@ -39,9 +39,9 @@ C2SM provides CORDEX data in primary and derived formats. In most instances, the
 **[SEAS5 data at C2SM](forecast.md)**
 
 European Centre for Medium-Range Weather Forecasts (ECMWF) provides real-time seasonal forecasts (produced monthly, predicting up to 7 months in the future) produced using ECMWF's Integrated Forecasting System (IFS). For more information, please visit: 
-- [SEAS5 documentaion](https://www.ecmwf.int/en/elibrary/81237-seas5-user-guide)
-- [SEAS5 press release](https://www.ecmwf.int/en/newsletter/154/meteorology/ecmwfs-new-long-range-forecasting-system-seas5)
-- [SEAS5 charts](https://charts.ecmwf.int/?facets=%7B%22Range%22%3A%5B%22Seasonal%22%5D%7D)
+- [SEAS5 documentaion :material-open-in-new:](https://www.ecmwf.int/en/elibrary/81237-seas5-user-guide){:target="_blank"}
+- [SEAS5 press release :material-open-in-new:](https://www.ecmwf.int/en/newsletter/154/meteorology/ecmwfs-new-long-range-forecasting-system-seas5){:target="_blank"}
+- [SEAS5 charts :material-open-in-new:](https://charts.ecmwf.int/?facets=%7B%22Range%22%3A%5B%22Seasonal%22%5D%7D){:target="_blank"}
 
 
 C2SM provides SEAS5 data in primary formats. The data has a horizontal spatial resolution of about 100 km or 1˚ latitude/longitude.
@@ -52,5 +52,5 @@ C2SM provides SEAS5 data in primary formats. The data has a horizontal spatial r
 ## NCCR-Clim+ data
 
 ## Data Request
-**Would you like to share your data through C2SM? Open a task [here](https://github.com/C2SM/Tasks-Support)** 
+**Would you like to share your data through C2SM? Open a task [here :material-open-in-new:](https://github.com/C2SM/Tasks-Support){:target="_blank"}** 
  
