@@ -21,7 +21,7 @@ User Access Node*   |     1 |                                                   
 
 
 ### Storage
-For detailed storage documentation, refer to the [CSCS Storage Documentation :material-open-in-new:](https://user.cscs.ch/storage/file_systems/){:target="_blank"}.
+For detailed storage documentation, refer to the [CSCS Storage Documentation :material-open-in-new:](https://docs.cscs.ch/storage/){:target="_blank"}.
 
 ### Quota
 
