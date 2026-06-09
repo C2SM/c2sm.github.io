@@ -136,4 +136,5 @@ spack find
 # Install a package (e.g., libelf)
 spack install libelf
 ```
-> Note: Spack-C2SM is designed to complement the CSCS software stack, providing additional tools and libraries specific to MeteoSwiss workflows.
+!!! note
+    Spack-C2SM is designed to complement the CSCS software stack, providing additional tools and libraries specific to MeteoSwiss workflows.
