@@ -126,7 +126,7 @@ git clone --depth 1 --recurse-submodules --shallow-submodules \
   https://github.com/C2SM/spack-c2sm.git -b latest
 
 # Source the environment
-. spack-c2sm/setup-env.sh \$USER_ENV_ROOT
+. spack-c2sm/setup-env.sh $USER_ENV_ROOT
 ```
 #### Usage
 ```bash
