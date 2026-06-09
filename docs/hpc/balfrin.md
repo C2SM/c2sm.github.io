@@ -86,7 +86,9 @@ module avail
 
 ### Domain-Specific Software (UENV)
 Some software (e.g., ncview) is available in user environments (uenvs). To use these:
+
 1. Install the CSCS UENV CLI: Follow the [Getting Started Guide :material-open-in-new:](https://confluence.cscs.ch/display/KB/UENV+user+environments){:target="_blank"}.
+
 2. Using UENV: There are three ways to use uenvs:
    - Option 1: Load modules from a uenv
      ```bash
