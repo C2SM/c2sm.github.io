@@ -41,9 +41,6 @@ lsattr -p -d $HOME
 # Check project quota (example for /users)
 lfs quota -p 74 /users -h
 ```
-
-For more information, see the CSCS [Lustre Quotas Guide :material-open-in-new:](https://confluence.cscs.ch/x/v4EzMw){:target="_blank"}.
-
 ## Network Access
 
 The login nodes can be accessed via `balfrin.cscs.ch`. This will forward you to a random login node, so you can profit form their redundancy.
