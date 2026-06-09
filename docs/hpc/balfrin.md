@@ -26,6 +26,7 @@ For detailed storage documentation, refer to the [CSCS Storage Documentation :ma
 ### Quota
 
 Home Directory Limits:
+
 - Soft limit: 80 GB
 - Hard limit: 100 GB
 
