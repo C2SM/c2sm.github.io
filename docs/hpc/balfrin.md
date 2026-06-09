@@ -90,18 +90,24 @@ Some software (e.g., ncview) is available in user environments (uenvs). To use t
 1. Install the CSCS UENV CLI: Follow the [Getting Started Guide :material-open-in-new:](https://confluence.cscs.ch/display/KB/UENV+user+environments){:target="_blank"}.
 
 2. Using UENV: There are three ways to use uenvs:
+
    - Option 1: Load modules from a uenv
+   
      ```bash
      uenv start --view=modules climana/24.7\:v1-rc4
      module load ncview/2.1.9
      ncview
      ```
+
    - Option 2: Directly add applications
+   
      ```bash
      uenv start --view=default netcdf-tools/2024\:v1
      ncview
      ```
+
    - Option 3: Run scripts with a specific uenv
+   
      ```bash
      uenv run {uenv/version\:tag} -- ./job-using-uenv.sh
      ```
