@@ -5,6 +5,8 @@
 * [ECMWF Data Cube](ecmwf_data_cube.md)
 * [CH2011](ch2011.md)
 * [CMIP Data](cmip_data.md)
+* [CMIP Derived Data](cmip_derived_data.md)
 * [CORDEX Data](cordex.md)
 * [SEAS5 Data](forecast.md)
+* [Derived Data Highlights](highlights.md)
 

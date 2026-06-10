@@ -14,7 +14,7 @@ CMIP or the Coupled Model Intercomparison Project is a collection of global clim
   <em>Model performance as a function of model resolution across CMIP generations. Courtesy of Lukas Brunner from <a href="https://www.nature.com/articles/s43247-026-03497-w">Brunner et al. (2026)</a>.</em>
 </p>
 
-C2SM provides CMIP data in primary and derived formats. In most instances, the data has a horizontal spatial resolution of 100 - 250 km or 1 - 2.5˚ latitude/longitude.
+C2SM provides CMIP data in [primary](cmip_data.md) and [derived](cmip_derived_data.md) formats. In most instances, the data has a horizontal spatial resolution of 100 - 250 km or 1 - 2.5˚ latitude/longitude.
 
 
 ## CORDEX data
@@ -31,7 +31,7 @@ CORDEX or the Coordinated Regional Climate Downscaling Experiment provides regio
   <em>EUR-11 simulations from the CMIP5 EURO-CORDEX ensemble gridded according to driving global climate model simulation and regional climate model name.</em>
 </p>
 
-C2SM provides CORDEX data in primary and derived formats. In most instances, the data has a horizontal spatial resolution of 12 - 50 km or 0.11 - 0.44˚ latitude/longitude. An exception is [CORDEX-FPSCONV](cordex_fpsconv_data.md), which has a 2-3km resolution.
+C2SM provides CORDEX data in [primary](cordex_data.md) and [derived](cordex_derived_data.md) formats. In most instances, the data has a horizontal spatial resolution of 12 - 50 km or 0.11 - 0.44˚ latitude/longitude. An exception is [CORDEX-FPSCONV](cordex_fpsconv_data.md), which has a 2-3km resolution.
 
 
 ## Seasonal Forecast Data from ECMWF (SEAS5)
@@ -47,10 +47,10 @@ European Centre for Medium-Range Weather Forecasts (ECMWF) provides real-time se
 C2SM provides SEAS5 data in primary formats. The data has a horizontal spatial resolution of about 100 km or 1˚ latitude/longitude.
 
 
-## Climate CH2025 data
-
-## NCCR-Clim+ data
 
 ## Data Request
-**Would you like to share your data through C2SM? Open a task [here :material-open-in-new:](https://github.com/C2SM/Tasks-Support){:target="_blank"}** 
+**Would you like to share your data through C2SM?** 
+
+- Open a task [here :material-open-in-new:](https://github.com/C2SM/Tasks-Support){:target="_blank"} 
+- review the [C2SM Data Management Recommendations]
  
