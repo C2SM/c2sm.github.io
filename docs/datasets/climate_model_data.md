@@ -193,6 +193,7 @@
 - Link to [Guide for data usage :material-open-in-new:](https://pcmdi.github.io/CMIP6/Guide/dataUsers.html){:target="_blank"}
 - Link to [publication behind the scenarios :material-open-in-new:](https://link.springer.com/article/10.1007/s10584-013-0905-2){:target="_blank"}
 - Link to [CMIP6 explained by CarbonBrief :material-open-in-new:](https://www.carbonbrief.org/cmip6-the-next-generation-of-climate-models-explained/){:target="_blank"}
+- Link to [CMIP6-ng publication on Zenodo](https://zenodo.org/records/3734128){:target="_blank"}
 
 ## Raw CORDEX
 
