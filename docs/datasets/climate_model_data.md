@@ -38,7 +38,7 @@ C2SM provides CORDEX data in [primary](cordex_data.md) and [derived](cordex_deri
 
 **[SEAS5 data at C2SM](forecast.md)**
 
-European Centre for Medium-Range Weather Forecasts (ECMWF) provides real-time seasonal forecasts (produced monthly, predicting up to 7 months in the future) produced using ECMWF's Integrated Forecasting System (IFS). For more information, please visit: 
+European Centre for Medium-Range Weather Forecasts (ECMWF) provides real-time seasonal forecasts (produced monthly, predicting up to 7 months in the future) produced using ECMWF's Integrated Forecasting System (IFS). For more information, please visit:
 - [SEAS5 documentaion :material-open-in-new:](https://www.ecmwf.int/en/elibrary/81237-seas5-user-guide){:target="_blank"}
 - [SEAS5 press release :material-open-in-new:](https://www.ecmwf.int/en/newsletter/154/meteorology/ecmwfs-new-long-range-forecasting-system-seas5){:target="_blank"}
 - [SEAS5 charts :material-open-in-new:](https://charts.ecmwf.int/?facets=%7B%22Range%22%3A%5B%22Seasonal%22%5D%7D){:target="_blank"}
@@ -49,8 +49,7 @@ C2SM provides SEAS5 data in primary formats. The data has a horizontal spatial r
 
 
 ## Data Request
-**Would you like to share your data through C2SM?** 
+**Would you like to share your data through C2SM?**
 
-- Open a task [here :material-open-in-new:](https://github.com/C2SM/Tasks-Support){:target="_blank"} 
-- review the [C2SM Data Management Recommendations]
- 
+- Open a task [here :material-open-in-new:](https://github.com/C2SM/Tasks-Support){:target="_blank"}
+- review the [C2SM Data Management Recommendations 2020 :material-open-in-new:](https://polybox.ethz.ch/index.php/s/pyZRPF4FfJJ47g1){:target="_blank"}
