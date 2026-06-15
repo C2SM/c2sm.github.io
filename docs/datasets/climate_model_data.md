@@ -67,6 +67,10 @@
 - Status: weekly updated
 - Resolution: native
 - Coverage: global
+- Link to [More general info about CMIP6 :material-open-in-new:](https://wcrp-cmip.org/cmip-phases/cmip6/){:target="_blank"}
+- Link to [Guide for data usage :material-open-in-new:](https://pcmdi.github.io/CMIP6/Guide/dataUsers.html){:target="_blank"}
+- Link to [Publication behind the scenarios :material-open-in-new:](https://link.springer.com/article/10.1007/s10584-013-0905-2){:target="_blank"}
+- Link to [CMIP6 explained by CarbonBrief :material-open-in-new:](https://www.carbonbrief.org/cmip6-the-next-generation-of-climate-models-explained/){:target="_blank"}
 
 ## CMIP Next Generation
 
@@ -118,8 +122,8 @@
     ```
 
 
-- Size: 216.74 TB :material-information-outline:{ title="last updated: 2026-06-07 01:47:27" }
-- Number of files: 725,518 :material-information-outline:{ title="last updated: 2026-06-07 01:47:27" }
+- Size: 216.74 TB :material-information-outline:{ title="last updated: 2026-06-14 01:47:55" }
+- Number of files: 725,518 :material-information-outline:{ title="last updated: 2026-06-14 01:47:55" }
 - Access: direct / rsync
 - Status: updated monthly
 - Variables: 
@@ -185,6 +189,11 @@
 - Resolution: native and 2.5° x 2.5°
 - Coverage: global
 - Link to [CMIP6KnownIssues :material-open-in-new:](https://wiki.iac.ethz.ch/Climphys/CMIP6KnownIssues){:target="_blank"}
+- Link to [more general info about CMIP6 :material-open-in-new:](https://wcrp-cmip.org/cmip-phases/cmip6/){:target="_blank"}
+- Link to [Guide for data usage :material-open-in-new:](https://pcmdi.github.io/CMIP6/Guide/dataUsers.html){:target="_blank"}
+- Link to [publication behind the scenarios :material-open-in-new:](https://link.springer.com/article/10.1007/s10584-013-0905-2){:target="_blank"}
+- Link to [CMIP6 explained by CarbonBrief :material-open-in-new:](https://www.carbonbrief.org/cmip6-the-next-generation-of-climate-models-explained/){:target="_blank"}
+- Link to [CMIP6-ng publication on Zenodo (Brunner et al. 2020):material-open-in-new:](https://zenodo.org/records/3734128){:target="_blank"}
 
 ## Raw CORDEX
 
@@ -207,8 +216,8 @@
     ```
 
 
-- Size: 356.98 TB :material-information-outline:{ title="last updated: 2026-06-07 01:47:23" }
-- Number of files: 552,596 :material-information-outline:{ title="last updated: 2026-06-07 01:47:23" }
+- Size: 356.98 TB :material-information-outline:{ title="last updated: 2026-06-14 01:47:32" }
+- Number of files: 552,596 :material-information-outline:{ title="last updated: 2026-06-14 01:47:32" }
 - Access: direct / rsync
 - Status: monthly updated
 - Resolution: 0.44° and 0.11°
@@ -225,8 +234,8 @@
     /nfs/atmos/c2sm/cordex-reklies
     ```
 
-- Size: 22.41 TB :material-information-outline:{ title="last updated: 2026-06-07 01:45:39" }
-- Number of files: 94,936 :material-information-outline:{ title="last updated: 2026-06-07 01:45:39" }
+- Size: 22.41 TB :material-information-outline:{ title="last updated: 2026-06-14 01:46:14" }
+- Number of files: 94,936 :material-information-outline:{ title="last updated: 2026-06-14 01:46:14" }
 - Access: direct
 - Status: monthly updated
 - Resolution: 0.11°
