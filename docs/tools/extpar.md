@@ -8,6 +8,4 @@ All information around this software can be found in the
 
 ## Web Interface
 
-Currently, C2SM, in collaboration with MeteoSwiss and DWD, is preparing a web interface
-for generating external parameter files on the ICON grid. A first beta version will be
-launched in March 2025.
+[Zonda](zonda.md) is the web interface for generating EXTPAR data on ICON triangular grids, developed by C2SM in collaboration with MeteoSwiss and DWD. It is publicly available at [zonda.ethz.ch :material-open-in-new:](https://zonda.ethz.ch/){:target="_blank"}.
