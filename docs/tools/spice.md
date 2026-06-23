@@ -13,8 +13,8 @@ For any questions, please contact [Michael Jähn :material-open-in-new:](https:/
 
 ## Code
 
-* [Spice source code :material-open-in-new:](https://gitlab.dkrz.de/clm-community/public/spice){:target="_blank"} 
+* [SPICE source code (public) :material-open-in-new:](https://gitlab.dkrz.de/clm-community/public/spice){:target="_blank"} 
 
 ## Documentation
 
-* [SPICE-Doc :material-open-in-new:](https://spice.clm-community.eu/){:target="_blank"}
+* [SPICE Docs :material-open-in-new:](https://spice.clm-community.eu/){:target="_blank"}
