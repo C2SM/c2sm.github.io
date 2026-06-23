@@ -1,2 +1,2 @@
 * [User Support](user_support.md)
-* [Support status](status.md)
+* [Support Status](status.md)

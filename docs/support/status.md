@@ -1,16 +1,27 @@
 # Support status
 
-| Tool/Model |  Version(s) |  Machine(s) | Availability | Responsibility |
-|----------|-------------------|------------------|-----|----|
-| CESM     | 1.2.2, 2.1.2      | Euler            |[CESM Homepage :material-open-in-new:](https://www.cesm.ucar.edu/){:target="_blank"} |  [Urs Beyerle :material-open-in-new:](https://usys.ethz.ch/personen/profil.NDk5MTg=.TGlzdC82MzcsMzIwMTk3MjIy.html){:target="_blank"} |
-| DWD ICON Tools | latest   | Santis         | [DWD ICON Tools :material-open-in-new:](https://github.com/C2SM/icontools){:target="_blank"} | C2SM Core Team |
-| EXTPAR   | | | [EXTPAR :material-open-in-new:](https://github.com/C2SM/extpar){:target="_blank"} | |
-| ICON     | Latest OS      | Euler, Santis  | [ICON :material-open-in-new:](https://github.com/C2SM/icon){:target="_blank"}  | C2SM Core Team  |
-| ICON-NWP | ICON-NWP master| Santis         | [ICON-NWP :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"} | C2SM Core Team |
-| icon-vis   | | | [icon-vis :material-open-in-new:](https://github.com/C2SM/icon-vis){:target="_blank"} | |
-| Processing Chain   | | | [Processing Chain :material-open-in-new:](https://github.com/C2SM/processing-chain){:target="_blank"} | |
-| Scaling Analysis   | | | [Scaling Analysis Tool :material-open-in-new:](https://github.com/C2SM/scaling_analysis){:target="_blank"} | |
-| Spack  | | | [spack-c2sm :material-open-in-new:](https://github.com/C2SM/spack-c2sm){:target="_blank"} | |
-| SPICE  | | | [SPICE :material-open-in-new:](https://gitlab.dkrz.de/clm-community/spice){:target="_blank"} | |
-| Zephyr  | | | [Zephyr website :material-open-in-new:](https://zephyr.ethz.ch){:target="_blank"} |
-| Zonda | | | |
+## Models
+
+| Model |  Version(s) |  Machine(s) | Source code |
+|----------|-------------------|------------------|-----|
+| [CESM](../models/cesm.md)     | 2.1.2, 2.1.5, 2.2.2    | Euler            | [CESM Homepage :material-open-in-new:](https://www.cesm.ucar.edu/){:target="_blank"} |
+| [ICON](../models/icon/index.md)     | latest public release | Santis, Euler | [ICON :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-model){:target="_blank"} |
+| [ICON-NWP](../models/icon/index.md) | latest master | Santis, Euler | [ICON-NWP :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"} |
+
+## Tools
+
+| Tool |  Version(s) |  Machine(s) | Source code |
+|----------|-------------------|------------------|-----|
+| [DWD ICON Tools](../tools/icontools.md) | >2.5.0   | Santis         | [DWD ICON Tools :material-open-in-new:](https://github.com/C2SM/icontools){:target="_blank"} |
+| [EXTPAR](../tools/extpar.md)   | >5.15 | online (via Zonda) | [EXTPAR :material-open-in-new:](https://github.com/C2SM/extpar){:target="_blank"} |
+| [Processing Chain](../tools/processing_chain.md)   | latest | Santis | [Processing Chain :material-open-in-new:](https://github.com/C2SM/processing-chain){:target="_blank"} |
+| [Scaling Analysis](../tools/scaling_analysis.md)   | latest | Santis | [Scaling Analysis Tool :material-open-in-new:](https://github.com/C2SM/scaling_analysis){:target="_blank"} |
+| [Spack](../tools/spack.md)  | v0.22.2.6 | Santis, Euler | [spack-c2sm :material-open-in-new:](https://github.com/C2SM/spack-c2sm){:target="_blank"} |
+| [SPICE](../tools/spice.md)  | v2.4 | Santis | [SPICE :material-open-in-new:](https://gitlab.dkrz.de/clm-community/spice){:target="_blank"} |
+
+## Web Tools
+
+| Tool | Website |
+|------|---------|
+| [Zephyr](../tools/zephyr.md) | [zephyr.ethz.ch :material-open-in-new:](https://zephyr.ethz.ch){:target="_blank"} |
+| [Zonda](../tools/zonda.md) | [zonda.ethz.ch :material-open-in-new:](https://zonda.ethz.ch/){:target="_blank"} |
