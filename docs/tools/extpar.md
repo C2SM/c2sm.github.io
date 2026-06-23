@@ -6,10 +6,6 @@ is used to prepare the external parameter data files that are used as input for 
 All information around this software can be found in the
 [official EXTPAR documentation :material-open-in-new:](https://c2sm.github.io/extpar/){:target="_blank"}.
 
-## Support status
-
-The `master` branch is continuously being tested on `co2` (ETHZ) and `levante` (DKRZ).
-
 ## Web Interface
 
 Currently, C2SM, in collaboration with MeteoSwiss and DWD, is preparing a web interface

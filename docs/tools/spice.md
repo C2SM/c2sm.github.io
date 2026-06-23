@@ -11,10 +11,6 @@ To set up your own ICON-CLM simulation, refer to the [corresponding ICON page](.
 
 For any questions, please contact [Michael Jähn :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091){:target="_blank"}.
 
-## Support status
-
-The tag `v2.3` branch is being tested manually on Säntis.
-
 ## Code
 
 * [Spice at DKRZ GitLab (original code) :material-open-in-new:](https://gitlab.dkrz.de/clm-community/spice){:target="_blank"} (requires access to DKRZ GitLab)
