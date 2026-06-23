@@ -4,7 +4,7 @@ ICON (Icosahedral Nonhydrostatic Weather and Climate Model) is a global model su
 It is a joint project of [DWD :material-open-in-new:](https://www.dwd.de/DE/Home/home_node.html){:target="_blank"}, [MPI-M :material-open-in-new:](https://mpimet.mpg.de/startseite){:target="_blank"} and [KIT :material-open-in-new:](https://www.kit.edu/){:target="_blank"}.
 
 To stay informed about what is going on in the ICON world and to get to know other ICON users, please attend our [quarterly C2SM ICON meeting](../../events/icon_meetings/index.md). Additionally, one can subscribe to the official
-[ICON newsletter :material-open-in-new:](https://www.icon-model.org/news/community-newsletter){:target="_blank"}.
+[ICON newsletter :material-open-in-new:](https://www.icon-model.org/news/community-newsletter){:target="_blank"} or join the community discussion on the [ICON Exchange forum :material-open-in-new:](https://exchange.icon-model.org/t/welcome-to-icon-exchange/){:target="_blank"}.
 
 Further information about the ICON model can be found at the [official web page :material-open-in-new:](https://www.icon-model.org/){:target="_blank"}.
 
