@@ -13,10 +13,8 @@ For any questions, please contact [Michael Jähn :material-open-in-new:](https:/
 
 ## Code
 
-* [Spice at DKRZ GitLab (original code) :material-open-in-new:](https://gitlab.dkrz.de/clm-community/spice){:target="_blank"} (requires access to DKRZ GitLab)
-* [SPICE at C2SM (release versions) :material-open-in-new:](https://github.com/C2SM/spice){:target="_blank"} 
-* [Download release versions :material-open-in-new:](https://zenodo.org/records/10047021){:target="_blank"}
+* [Spice source code :material-open-in-new:](https://gitlab.dkrz.de/clm-community/public/spice){:target="_blank"} 
 
 ## Documentation
 
-* [SPICE-Doc :material-open-in-new:](https://hereon-coast.atlassian.net/wiki/spaces/SPICE/overview?homepageId=983042){:target="_blank"}
+* [SPICE-Doc :material-open-in-new:](https://spice.clm-community.eu/){:target="_blank"}
