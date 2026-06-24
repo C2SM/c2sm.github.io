@@ -4,14 +4,14 @@
 The [DWD ICON Tools :material-open-in-new:](https://github.com/C2SM/icontools#dwd-icon-tools){:target="_blank"} contain a set of routines which may be suitable for reading, remapping and writing of fields from and to predefined grids,
 e.g., regular (lat-lon, gaussian) or triangular (ICON). It can be used to generate lateral boundary conditions (LBC) and initial conditions (IC) for ICON-LAM simulations.
 
-## Support status
-
-The `master` branch of the [DWD ICON Tools :material-open-in-new:](https://github.com/C2SM/icontools){:target="_blank"} is integrated in the [`spack-c2sm` system tests :material-open-in-new:](https://github.com/C2SM/spack-c2sm/blob/main/test/common_system_test.py){:target="_blank"} on Balfrin.
-
 ## Repository
 
 In order to get access to the [DWD ICON Tools repository hosted on the C2SM GitHub organisation :material-open-in-new:](https://github.com/C2SM/icontools){:target="_blank"},
 please contact your group's technical contact. They will be responsible for adding you to the appropriate user group.
+
+## Web Interface
+
+[Zonda](zonda.md) uses DWD ICON Tools under the hood: `icongridgen` is used to generate ICON grids, and `iconsub` is used to create the lateral boundary grid. Zonda is publicly available at [zonda.ethz.ch :material-open-in-new:](https://zonda.ethz.ch/){:target="_blank"}.
 
 ## Usage
 

@@ -16,10 +16,6 @@ community and is being hosted on the [C2SM GitHub organisation :material-open-in
 
 If you need any help, please contact [Michael Jähn :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091){:target="_blank"}.
 
-## Support Status
-
-The Processing Chain is not being tested yet on Säntis.
-
 ## Features
 
 - Automatic folder structure creation

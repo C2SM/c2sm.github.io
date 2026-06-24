@@ -3,7 +3,7 @@
 * [About C2SM](about/)
 * [Events](events/)
 * [Tasks](tasks/)
-* [User Support](support/)
+* [Support](support/)
 * [HPC](hpc/)
 * [Models](models/)
 * [Tools](tools/)

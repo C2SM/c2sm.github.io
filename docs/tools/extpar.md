@@ -6,12 +6,6 @@ is used to prepare the external parameter data files that are used as input for 
 All information around this software can be found in the
 [official EXTPAR documentation :material-open-in-new:](https://c2sm.github.io/extpar/){:target="_blank"}.
 
-## Support status
-
-The `master` branch is continuously being tested on `co2` (ETHZ) and `levante` (DKRZ).
-
 ## Web Interface
 
-Currently, C2SM, in collaboration with MeteoSwiss and DWD, is preparing a web interface
-for generating external parameter files on the ICON grid. A first beta version will be
-launched in March 2025.
+[Zonda](zonda.md) is the web interface for generating EXTPAR data on ICON triangular grids, developed by C2SM in collaboration with MeteoSwiss and DWD. It is publicly available at [zonda.ethz.ch :material-open-in-new:](https://zonda.ethz.ch/){:target="_blank"}.
