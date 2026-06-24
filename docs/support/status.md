@@ -16,7 +16,7 @@
 | [EXTPAR](../tools/extpar.md)   | >5.15 | online (via Zonda) | [EXTPAR :material-open-in-new:](https://github.com/C2SM/extpar){:target="_blank"} |
 | [Processing Chain](../tools/processing_chain.md)   | latest | Santis | [Processing Chain :material-open-in-new:](https://github.com/C2SM/processing-chain){:target="_blank"} |
 | [Scaling Analysis](../tools/scaling_analysis.md)   | latest | Santis | [Scaling Analysis Tool :material-open-in-new:](https://github.com/C2SM/scaling_analysis){:target="_blank"} |
-| [Spack](../tools/spack.md)  | v0.22.2.6 | Santis, Euler | [spack-c2sm :material-open-in-new:](https://github.com/C2SM/spack-c2sm){:target="_blank"} |
+| [Spack-C2SM](../tools/spack.md)  | v0.22.2.6 | Santis, Euler | [spack-c2sm :material-open-in-new:](https://github.com/C2SM/spack-c2sm){:target="_blank"} |
 | [SPICE](../tools/spice.md)  | v2.4 | Santis | [SPICE :material-open-in-new:](https://gitlab.dkrz.de/clm-community/spice){:target="_blank"} |
 
 ## Web Tools

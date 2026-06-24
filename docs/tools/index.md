@@ -59,7 +59,7 @@ C2SM supports a set of pre- and postprocessing tools on different high-performan
 
 <div class="grid cards" markdown>
 
--   :material-package-variant:{ .lg .middle } **Spack**
+-   :material-package-variant:{ .lg .middle } **Spack-C2SM**
 
     ---
 
