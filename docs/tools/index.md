@@ -37,14 +37,6 @@ C2SM supports a set of pre- and postprocessing tools on different high-performan
 
     [:octicons-arrow-right-24: SPICE](spice.md)
 
--   :material-check-circle-outline:{ .lg .middle } **EvaSuite**
-
-    ---
-
-    Addon for SPICE and standalone tool for comparing simulation experiments with E-OBS or ERA5.
-
-    [:octicons-arrow-right-24: EvaSuite](evasuite.md)
-
 -   :material-pipe:{ .lg .middle } **Processing Chain**
 
     ---
