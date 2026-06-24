@@ -29,7 +29,7 @@ uenv start climtools/25.2:v1 --view=climtools
 please consider the official [spack-c2sm documentation :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest){:target="_blank"}.
 The following Spack installation should be sufficient for most cases.
 
-Clone the C2SM Spack main branch and source it:
+Clone the Spack-C2SM main branch and source it:
 ```bash
 git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/C2SM/spack-c2sm.git
 source ./spack-c2sm/setup-env.sh /user-environment
