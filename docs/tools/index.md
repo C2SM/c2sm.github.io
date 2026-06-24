@@ -57,7 +57,7 @@ C2SM supports a set of pre- and postprocessing tools on different high-performan
 
     C2SM's configuration of the Spack package manager for installing ICON and related software on HPC systems.
 
-    [:octicons-arrow-right-24: Spack](spack.md)
+    [:octicons-arrow-right-24: Spack-C2SM](spack.md)
 
 -   :material-chart-bar:{ .lg .middle } **Scaling Analysis**
 
