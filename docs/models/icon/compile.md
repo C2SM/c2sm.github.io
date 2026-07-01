@@ -35,13 +35,13 @@ Run the following after navigating into the ICON root folder:
 === "CPU compilation"
     ```console
     UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-    uenv run ${UENV_VERSION} -- ./config/cscs/santis.cpu.nvhpc
+    uenv run ${UENV_VERSION} --view default -- ./config/cscs/santis.cpu.nvhpc
     ```
 
 === "GPU compilation"
     ```console
     UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-    uenv run ${UENV_VERSION} -- ./config/cscs/santis.gpu.nvhpc
+    uenv run ${UENV_VERSION} --view default -- ./config/cscs/santis.gpu.nvhpc
     ```
 
 !!! info "User environments (uenvs)"
@@ -75,13 +75,13 @@ Then, navigate into the corresponding folder and source the configure wrapper fo
     ```bash
     UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
     cd nvhpc_cpu
-    uenv run ${UENV_VERSION} -- ./../config/cscs/santis.cpu.nvhpc 
+    uenv run ${UENV_VERSION} --view default -- ./../config/cscs/santis.cpu.nvhpc
     ```
 === "`gpu`"
     ```bash
     UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
     cd nvhpc_gpu
-    uenv run ${UENV_VERSION} -- ./../config/cscs/santis.gpu.nvhpc 
+    uenv run ${UENV_VERSION} --view default -- ./../config/cscs/santis.gpu.nvhpc
     ```
 
 #### Balfrin

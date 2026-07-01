@@ -55,16 +55,10 @@ Follow the step-by-step guide in [How to add experiments to a CI list :material-
 
 ### 1.2 Local Testing
 
-Before adding anything to the official ICON, we recommend you to run all tests locally starting with CPU.
-
-For running the check scripts in the following, you need to have loaded a probtest environment and CDO and export `BB_NAME` to your builder.
+Before adding anything to the official ICON, we recommend you to run all tests locally starting with CPU. Therefore a Python environment has to be setup or activated:
 
 === "Santis"
-    ```console
-    export BB_NAME=santis_cpu_nvhpc
-    # Point to Python image
-    export SQFS_PATH=/capstor/store/cscs/userlab/cws01/ci/python_image_icon25.2_v4/py_icon_ci.squashfs
-    ```
+    Follow the [Set Up the Probtest Container and Environment on Säntis](probtest.md#2-set-up-the-probtest-container-and-environment-on-säntis) instructions.
 
 === "Balfrin"
     ```console
@@ -98,8 +92,7 @@ Now run the check run scripts:
     ```console
     export UENV_VERSION=$(cat ../config/cscs/SANTIS_ENV_TAG)
     cd run
-    mkdir -p .venv # Create empty folder for mounting Python image
-    uenv run ${UENV_VERSION},${SQFS_PATH}:$(pwd)/.venv --view modules,default -- bash -c 'source $(pwd)/.venv/bin/activate && ./check.${EXP}.run 2>&1 | tee LOG.check.${EXP}.run.o'
+    uenv run ${UENV_VERSION} --view default -- bash -c 'source ${EDF_PATH}/.venv/bin/activate && ./check.${EXP}.run 2>&1 | tee LOG.check.${EXP}.run.o'
     ```
 
 === "Balfrin"
