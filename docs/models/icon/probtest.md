@@ -28,7 +28,7 @@ echo "writable = true" >> probtest.toml
 Install Python image needed for probtest:
 ```
 export UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-uenv run ${UENV_VERSION} --view default -- ./scripts/cscs_ci/install_python_env.sh
+uenv run ${UENV_VERSION} --view default -- bash -c 'python3 -m venv --clear .venv && source .venv/bin/activate && pip install click numpy pandas pyyaml toml'
 ```
 
 ### Every Time You Reconnect to the Server
