@@ -3,12 +3,6 @@
 
 Zephyr is the climate data extraction tool developed by C2SM, serving as the backend processing engine for the [Zephyr website :material-open-in-new:](https://zephyr.ethz.ch){:target="_blank"}.
 
-## Support status
-
-The `main` branch is tested daily and for incoming changes via GitHub pull requests.
-
-Scans of the datasets listed below are performed daily, generating file trees in JSON format. This ensures that the data information for the [Zephyr website :material-open-in-new:](https://zephyr.ethz.ch){:target="_blank"} is kept up to date.
-
 ## Features
 
 Requests are made via the [Zephyr website :material-open-in-new:](https://zephyr.ethz.ch){:target="_blank"} and submitted using the [Zephyr data request template :material-open-in-new:](https://github.com/C2SM/zephyr-request/issues/new/choose){:target="_blank"}. Zephyr supports a range of [climate models and reanalysis datasets](../datasets/index.md), including:

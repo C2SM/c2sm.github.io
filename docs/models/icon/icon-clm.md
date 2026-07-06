@@ -1,5 +1,9 @@
 # ICON-CLM Workflow for EURO-CORDEX 12 km Domain
 
+!!! warning 
+
+    Information provided here is outdated since Santis, uenvs and SPICE have received updates.
+
 ## SPICE
 
 [SPICE](../../tools/spice.md) is a software created by the CLM community and serves as a processing chain / workflow tool

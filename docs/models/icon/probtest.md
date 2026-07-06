@@ -48,9 +48,9 @@ export EXP=c2sm_clm_r13b03_seaice
 ```
 
 ## 3. Run perturbed ensemble on CPU
-To run a perturbed ensemble, please allocate compute nodes interactively to *not* use your login nodes. Therefore, run the following:
+To run a perturbed ensemble, please allocate compute nodes interactively to *not* use your login nodes. Therefore, run the following (replace `<project account>`):
 ```console
-salloc -p normal --time=01:00:00
+salloc -A <project account> -p normal --time=01:00:00
 ```
 
 !!! warning "Compute account"
@@ -61,7 +61,7 @@ Then navigate to your CPU build directory and generate and run a 10-member ensem
 ```console
 cd nvhpc_cpu
 ./make_runscripts $EXP
-uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c 'source ${SQFS_PATH}/.venv/bin/activate python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)'
+uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c 'source ${SQFS_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)'
 ```
 
 This generates:
