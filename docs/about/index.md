@@ -21,6 +21,8 @@ The C2SM Core Team - or C2SM's Executive Office - currently employs six scientif
 - [Annika Lauber :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=235458){:target="_blank"} (CHN M 15.1)
 - [Matthieu Leclair :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=221860){:target="_blank"} (CHN M 15.2)
 - [Ruth Lorenz :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=112356){:target="_blank"} (CHN M 15.1)
+- [Anna Merrifield Könz :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=250725){:target="_blank"} (CHN M 15.1)
+- [Konstantinos Servis :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=382462){:target="_blank"} (CHN M 16.3)
 - [Mikael Stellio :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=226434){:target="_blank"} (CHN M 15.2)
 
 ### Further staff
@@ -30,12 +32,12 @@ Further information about C2SM project staff and previous core team members can 
 ## How to get Access
 
 Please follow the step-by-step instructions below to get access to the C2SM organisation.
-This will allow you to submit new tasks, receive support from the C2SM Core Team and have access to supported models and tools. 
+This will allow you to submit new tasks, receive support from the C2SM Core Team and have access to supported models and tools.
 
 1. Create an account on [GitHub :material-open-in-new:](https://github.com/signup){:target="_blank"}.
 2. Get access to the [C2SM GitHub organisation :material-open-in-new:](https://github.com/C2SM){:target="_blank"}.
    - Reach out to your group’s technical contact and provide them with your GitHub account name.
-     They will be responsible for adding you to the appropriate user group. 
+     They will be responsible for adding you to the appropriate user group.
    - If you do not know who your group's technical contact is, please send an email to [support@c2sm.ethz.ch](mailto:support@c2sm.ethz.ch).
 
 ## Are you a new member of the C2SM community?
