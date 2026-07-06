@@ -115,4 +115,7 @@
   `zos`{ title="ann (g025), ann (native), mon (g025), mon (native)" }
 - Resolution: native and 2.5° x 2.5°
 - Coverage: global
-- Link to [CMIP6KnownIssues :material-open-in-new:](https://wiki.iac.ethz.ch/Climphys/CMIP6KnownIssues){:target="_blank"}
+- Link to [More general info about CMIP6 :material-open-in-new:](https://wcrp-cmip.org/cmip-phases/cmip6/){:target="_blank"}
+- Link to [Guide for data usage :material-open-in-new:](https://pcmdi.github.io/CMIP6/Guide/dataUsers.html){:target="_blank"}
+- Link to [Publication behind the scenarios :material-open-in-new:](https://link.springer.com/article/10.1007/s10584-013-0905-2){:target="_blank"}
+- Link to [CMIP6 explained by CarbonBrief :material-open-in-new:](https://www.carbonbrief.org/cmip6-the-next-generation-of-climate-models-explained/){:target="_blank"}

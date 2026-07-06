@@ -39,9 +39,9 @@ def generate_markdown_default(json_data, dataset, entry):
     """
     if entry == ENTRY_VARIABLES:
         markdown_content = f"{entry} \n"
-    else: 
+    else:
         markdown_content = f"{entry} "
-    
+
     if entry == ENTRY_VARIABLES:
         first_iteration = True
         for variable, resolutions in json_data['data'].items():
@@ -53,12 +53,12 @@ def generate_markdown_default(json_data, dataset, entry):
                 markdown_content += generate_variable_info_default(variable, resolutions, first_iteration)
             first_iteration = False
     elif entry == ENTRY_SIZE:
-        markdown_content += json_data['total_size'] 
+        markdown_content += json_data['total_size']
         markdown_content += f" :material-information-outline:{{ title=\"last updated: {json_data['last_updated']}\" }}"
     elif entry == ENTRY_NUMBER:
         markdown_content += "{:,}".format(json_data['file_count'])
         markdown_content += f" :material-information-outline:{{ title=\"last updated: {json_data['last_updated']}\" }}"
-    else: 
+    else:
         raise ValueError(f"Invalid entry type: {entry}")
 
     return markdown_content
@@ -89,12 +89,12 @@ def generate_markdown_cordex(json_data, entry):
                         variable_details[variable][scenario] = set()
                     # Add resolution to the set of resolutions for this scenario
                     variable_details[variable][scenario].add(temporal_resolution)
-        
+
         first_iteration = True
         for variable, scenarios_resolutions in variable_details.items():
             markdown_content += generate_variable_info_cordex(variable, scenarios_resolutions, first_iteration)
             first_iteration = False
-    elif entry == ENTRY_SIZE: 
+    elif entry == ENTRY_SIZE:
         markdown_content = f"{entry} "
         markdown_content += json_data['total_size']
         markdown_content += f" :material-information-outline:{{ title=\"last updated: {json_data['last_updated']}\" }}"
@@ -102,11 +102,11 @@ def generate_markdown_cordex(json_data, entry):
         markdown_content = f"{entry} "
         markdown_content += "{:,}".format(json_data['file_count'])
         markdown_content += f" :material-information-outline:{{ title=\"last updated: {json_data['last_updated']}\" }}"
-    else: 
+    else:
         raise ValueError(f"Invalid entry type: {entry}")
 
     return markdown_content
-    
+
 def generate_variable_info_cordex(variable, scenarios_resolutions, first_iteration):
     """
     Processes CORDEX data to generate markdown information for a single variable.
@@ -124,7 +124,7 @@ def generate_variable_info_cordex(variable, scenarios_resolutions, first_iterati
     """
     variable_info = ""
     tooltip_content = " — ".join(
-        f"{scenario}: {', '.join(sorted(resolutions))}" 
+        f"{scenario}: {', '.join(sorted(resolutions))}"
         for scenario, resolutions in scenarios_resolutions.items()
     )
     if first_iteration:
@@ -200,7 +200,7 @@ def generate_variable_info_default(variable, resolutions, first_iteration):
 
     variable_info += "\" }"
     return variable_info
-    
+
 def replace_entry(file_path, heading_dataset, new_variables_content, entry):
     """
     Replaces a specified list entry for a specified dataset within a markdown file.
@@ -224,7 +224,7 @@ def replace_entry(file_path, heading_dataset, new_variables_content, entry):
     """
     with open(file_path, 'r') as file:
         content = file.readlines()
-    
+
     heading_found = False
     skip_section = False  # Flag to indicate if the current section should be skipped
     start_index = end_index = None
@@ -241,11 +241,11 @@ def replace_entry(file_path, heading_dataset, new_variables_content, entry):
         if heading_found and line.strip().startswith(entry):
             start_index = i
             break
-    
+
     if start_index is not None:
         # Determine the indentation level of the "- Variables:" line
         variables_indentation = len(content[start_index]) - len(content[start_index].lstrip())
-        
+
         for i in range(start_index + 1, len(content)):
             # Check if the line is at the same indentation level and starts with "- "
             line_indentation = len(content[i]) - len(content[i].lstrip())
@@ -254,9 +254,9 @@ def replace_entry(file_path, heading_dataset, new_variables_content, entry):
                 break
         if end_index is None:
             end_index = len(content)
-        
+
         content = content[:start_index] + [new_variables_content + '\n'] + content[end_index:]
-        
+
         with open(file_path, 'w') as file:
             file.writelines(content)
 
@@ -280,7 +280,7 @@ def check_heading_exists(file_path, heading_dataset):
     - bool: True if the heading is found, False otherwise.
     """
     formatted_heading = f"### {heading_dataset}"
-    
+
     with open(file_path, 'r') as file:
         for line in file:
             if line.strip() == formatted_heading:
@@ -289,7 +289,10 @@ def check_heading_exists(file_path, heading_dataset):
 
 def main():
     markdown_files = [
-        './docs/datasets/climate_model_data.md',
+        './docs/datasets/cmip_data.md',
+        './docs/datasets/cmip_derived_data.md',
+        './docs/datasets/cordex_data.md',
+        './docs/datasets/cordex_derived_data.md',
         './docs/datasets/obs_reanalysis_data.md'
     ]
 
@@ -328,7 +331,7 @@ def main():
                 updated_size = replace_entry(markdown_file_path, heading_dataset, markdown_size, ENTRY_SIZE)
                 updated_number = replace_entry(markdown_file_path, heading_dataset, markdown_number, ENTRY_NUMBER)
                 break  # Stop searching once the correct file is updated
-        
+
         # Print a message if no updates were made for the dataset
         if not updated_variables:
             print(f"Could not find '{ENTRY_VARIABLES}' list entry for heading {heading_dataset} in any markdown files. No changes applied.")
