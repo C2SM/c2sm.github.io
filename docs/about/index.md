@@ -8,7 +8,8 @@ The C2SM Core Team - or C2SM's Executive Office - currently employs six scientif
 - Tasks from the Working Groups
 - Maintenance of supported models, tools and datasets
 - Regular support for users
-- EXCLAIM project
+- [EXCLAIM project :material-open-in-new:](https://exclaim.ethz.ch/){:target="_blank"}
+- [NCCR CLIM+ project :material-open-in-new:](https://nccr-climplus.ch/){:target="_blank"} 
 - Organisation of workshops
 
 ### Executive Director
@@ -21,6 +22,7 @@ The C2SM Core Team - or C2SM's Executive Office - currently employs six scientif
 - [Annika Lauber :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=235458){:target="_blank"} (CHN M 15.1)
 - [Matthieu Leclair :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=221860){:target="_blank"} (CHN M 15.2)
 - [Ruth Lorenz :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=112356){:target="_blank"} (CHN M 15.1)
+- [Alitzel Macías Infante :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=334696){:target="_blank"} (CHN M 15.1)
 - [Anna Merrifield Könz :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=250725){:target="_blank"} (CHN M 15.1)
 - [Konstantinos Servis :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=382462){:target="_blank"} (CHN M 16.3)
 - [Mikael Stellio :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=226434){:target="_blank"} (CHN M 15.2)
