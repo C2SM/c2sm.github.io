@@ -25,7 +25,7 @@ echo "workdir = \"$(pwd)\"" >> probtest.toml
 echo "writable = true" >> probtest.toml
 ```
 
-Install Python image needed for probtest:
+Install Python image needed for *probtest_container_wrapper.py*:
 ```
 export UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
 uenv run ${UENV_VERSION} --view default -- bash -c 'python3 -m venv --clear .venv && source .venv/bin/activate && pip install click numpy pandas pyyaml toml'
