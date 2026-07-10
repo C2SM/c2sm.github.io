@@ -298,9 +298,9 @@ def main():
 
     # Process data for each dataset and append markdown file
     for dataset in datasets.keys():
-        # Load the JSON data for the dataset from S3 bucket and merge with metadata
-        dataset_json = download_json(f'https://zephyr-c2sm.s3.eu-central-1.amazonaws.com/file_tree_{dataset}_noindent.json')
-        dataset_json_meta = download_json(f'https://zephyr-c2sm.s3.eu-central-1.amazonaws.com/meta_{dataset}.json')
+        # Load the JSON data for the dataset from https://data.iac.ethz.ch/zephyr/file_index/ and merge with metadata
+        dataset_json = download_json(f'https://data.iac.ethz.ch/zephyr/file_index/file_tree_{dataset}_noindent.json')
+        dataset_json_meta = download_json(f'https://data.iac.ethz.ch/zephyr/file_index/meta_{dataset}.json')
         dataset_json = {**dataset_json, **dataset_json_meta}
         heading_dataset = datasets[dataset]
 
