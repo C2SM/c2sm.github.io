@@ -25,6 +25,12 @@ echo "workdir = \"$(pwd)\"" >> probtest.toml
 echo "writable = true" >> probtest.toml
 ```
 
+Install Python image needed for *probtest_container_wrapper.py*:
+```
+export UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
+uenv run ${UENV_VERSION} --view default -- bash -c 'python3 -m venv --clear .venv && source .venv/bin/activate && pip install click numpy pandas pyyaml toml'
+```
+
 ### Every Time You Reconnect to the Server
 If the `probtest.toml` file already exists in your ICON root directory, run the following command from within that directory:
 ```console
@@ -36,10 +42,6 @@ export BB_NAME=santis_cpu_nvhpc
 
 # Set the uenv version
 export UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
-
-# Point the Python image and create empty folder to mount to
-export SQFS_PATH=/capstor/store/cscs/userlab/cws01/ci/python_image_icon25.2_v4
-mkdir -p .venv
 ```
 
 Set experiment name, e.g.:
@@ -61,7 +63,7 @@ Then navigate to your CPU build directory and generate and run a 10-member ensem
 ```console
 cd nvhpc_cpu
 ./make_runscripts $EXP
-uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c 'source ${SQFS_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)'
+uenv run ${UENV_VERSION} --view default -- bash -c 'source ${EDF_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)'
 ```
 
 This generates:
@@ -73,7 +75,7 @@ This generates:
 
 Create reference and tolerance files using the 10 ensemble members:
 ```console
-uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c 'source ${SQFS_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)'
+uenv run ${UENV_VERSION} --view default -- bash -c 'source ${EDF_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)'
 ```
 
 This generates:
@@ -91,7 +93,7 @@ cd run && uenv run $UENV_VERSION --view modules,default -- bash -c './exp.$EXP.r
 Navigate back to ICON root folder and collect the GPU statistics:
 ```console
 cd ..
-uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c 'source ${SQFS_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py stats $EXP --stats-file-name stats_gpu.csv --build-dir ${EDF_PATH}/nvhpc_gpu'
+uenv run ${UENV_VERSION} --view default -- bash -c 'source ${EDF_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py stats $EXP --stats-file-name stats_gpu.csv --build-dir ${EDF_PATH}/nvhpc_gpu'
 ```
 
 This saves the GPU stats as `stats_gpu.csv` in your ICON root directory.
@@ -100,7 +102,7 @@ This saves the GPU stats as `stats_gpu.csv` in your ICON root directory.
 
 From your ICON root directory, run the check using the generated reference and tolerance:
 ```console
-uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c 'source ${SQFS_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py check $EXP --current-files stats_gpu.csv --reference-files nvhpc_cpu/${EXP}_reference.csv --tolerance-files nvhpc_cpu/${EXP}_tolerance.csv --build-dir $(pwd)'
+uenv run ${UENV_VERSION} --view default -- bash -c 'source ${EDF_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py check $EXP --current-files stats_gpu.csv --reference-files nvhpc_cpu/${EXP}_reference.csv --tolerance-files nvhpc_cpu/${EXP}_tolerance.csv --build-dir $(pwd)'
 ```
 
 ## 7. Increase Ensemble Size if Validation Fails
@@ -115,12 +117,12 @@ Run additional members (11–49):
 ```console
 cd nvhpc_cpu
 ./make_runscripts $EXP
-uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c 'source ${SQFS_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 11 49)'
+uenv run ${UENV_VERSION} --view default -- bash -c 'source ${EDF_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py ensemble $EXP --build-dir $(pwd) --member-ids $(seq -s, 11 49)'
 ```
 
 Regenerate reference and tolerance using all 49 members:
 ```console
-uenv run ${UENV_VERSION},${SQFS_PATH}/py_icon_ci.squashfs:${EDF_PATH}/.venv --view modules,default -- bash -c 'source ${SQFS_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 49)'
+uenv run ${UENV_VERSION} --view default -- bash -c 'source ${EDF_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 49)'
 ```
 
 *If the test still fails, the GPU result is likely incorrect.*
