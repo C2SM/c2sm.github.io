@@ -3,7 +3,7 @@
 Balfrin is a high-performance computing (HPC) cluster used by MeteoSwiss, located in Lugano and hosted by CSCS (Swiss National Supercomputing Centre). It is an [MPI :material-open-in-new:](https://en.wikipedia.org/wiki/Message_Passing_Interface){:target="_blank"} cluster managed by [Slurm :material-open-in-new:](https://slurm.schedmd.com/){:target="_blank"}, primarily used for research and development (R&D) and as a production failover system.
 
 !!! note
-    C2SM does not officially support Balfrin. However, instructions for setting up ICON on Balfrin are available in the [Compile section of ICON](../models/icon/compile.md#balfrin).
+    C2SM does not officially support Balfrin. However, instructions for setting up ICON on Balfrin are available in the [Compile section of ICON](../../models/icon/compile.md#balfrin).
 
 
 ## Hardware Specifications
