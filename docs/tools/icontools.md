@@ -17,7 +17,7 @@ please contact your group's technical contact. They will be responsible for addi
 
 ### Säntis
 
-On [Säntis](../hpc/santis.md), DWD ICON Tools is provided via the `climtools` uenv:
+On [Säntis](../hpc/cscs/santis.md), DWD ICON Tools is provided via the `climtools` uenv:
 
 ```
 uenv start climtools/25.2:v1 --view=climtools
