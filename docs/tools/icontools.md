@@ -27,7 +27,7 @@ The resulting binaries (`iconremap`, `iconsub`, `icongridgen`, `icondelaunay`, `
 
 ### Euler
 
-On [Euler](../hpc/euler.md), DWD ICON Tools can also be built directly against Euler's native module software stack.
+On [Euler](../hpc/ethz/euler.md), DWD ICON Tools can also be built directly against Euler's native module software stack.
 
 Clone the repository with submodules:
 
