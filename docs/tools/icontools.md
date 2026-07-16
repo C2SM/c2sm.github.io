@@ -15,7 +15,7 @@ please contact your group's technical contact. They will be responsible for addi
 
 ## Usage
 
-### Option 1: Shipped via uenv
+### Säntis
 
 On [Säntis](../hpc/cscs/santis.md), DWD ICON Tools is provided via the `climtools` uenv:
 
@@ -23,31 +23,33 @@ On [Säntis](../hpc/cscs/santis.md), DWD ICON Tools is provided via the `climtoo
 uenv start climtools/25.2:v1 --view=climtools
 ```
 
-### Option 2: Compile manually via Spack
+The resulting binaries (`iconremap`, `iconsub`, `icongridgen`, `icondelaunay`, `icongpi`) are directly available within this uenv.
 
-[Spack](spack.md) takes care of configuring and building DWD ICON Tools. For detailed instructions,
-please consider the official [spack-c2sm documentation :material-open-in-new:](https://c2sm.github.io/spack-c2sm/latest){:target="_blank"}.
-The following Spack installation should be sufficient for most cases.
+### Euler
 
-Clone the Spack-C2SM main branch and source it:
-```bash
-git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/C2SM/spack-c2sm.git
-source ./spack-c2sm/setup-env.sh /user-environment
-```
+On [Euler](../hpc/ethz/euler.md), DWD ICON Tools can also be built directly against Euler's native module software stack.
 
-Install the ICON Tools:
-```bash
-spack install icontools@c2sm-master%gcc
-```
-
-!!! note
-    If all dependencies have to be installed from scratch, this may take a while.
-
-After the installation, you need to load the package with Spack:
+Clone the repository with submodules:
 
 ```bash
-spack load icontools
+git clone --recurse-submodules git@github.com:C2SM/icontools.git
+cd icontools
 ```
+
+Load the required modules: 
+
+```bash
+module load stack/2025-06 gcc/12.2.0 openmpi/4.1.7
+module load netcdf-c/4.9.2 netcdf-fortran/4.6.1 hdf5/1.14.5 eccodes/2.34.0 libaec/1.0.6 libpng/1.6.39
+```
+
+Configure and build on a compute node:
+
+```bash
+srun -c 8 --time=00:15:00 bash -c './do_configure.sh && make -j 8'
+```
+
+The resulting binaries (`iconremap`, `iconsub`, `icongridgen`, `icondelaunay`, `icongpi`) are placed in the `icontools/` subdirectory.
 
 ## Run
 
