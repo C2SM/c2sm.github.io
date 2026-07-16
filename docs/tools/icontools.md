@@ -23,6 +23,8 @@ On [Säntis](../hpc/santis.md), DWD ICON Tools is provided via the `climtools` u
 uenv start climtools/25.2:v1 --view=climtools
 ```
 
+The resulting binaries (`iconremap`, `iconsub`, `icongridgen`, `icondelaunay`, `icongpi`) are directly available within this uenv.
+
 ### Euler
 
 On [Euler](../hpc/euler.md), DWD ICON Tools can also be built directly against Euler's native module software stack.
@@ -34,7 +36,7 @@ git clone --recurse-submodules git@github.com:C2SM/icontools.git
 cd icontools
 ```
 
-Load the required modules. 
+Load the required modules: 
 
 ```bash
 module load stack/2025-06 gcc/12.2.0 openmpi/4.1.7
