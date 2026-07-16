@@ -11,7 +11,7 @@ C2SM supported models and tools run on the following high-performance computing 
 
     The Alps system at CSCS, including the Santis, Balfrin and Eiger vClusters.
 
-    [:octicons-arrow-right-24: CSCS](cscs.md)
+    [:octicons-arrow-right-24: CSCS](cscs/index.md)
 
 -   :material-school:{ .lg .middle } **Euler**
 
@@ -19,6 +19,6 @@ C2SM supported models and tools run on the following high-performance computing 
 
     ETH Zurich's central high-performance computing cluster.
 
-    [:octicons-arrow-right-24: Euler](euler.md)
+    [:octicons-arrow-right-24: Euler](ethz/euler.md)
 
 </div>
