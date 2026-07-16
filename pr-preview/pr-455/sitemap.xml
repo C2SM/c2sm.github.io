@@ -209,19 +209,27 @@
          <lastmod>2026-07-16</lastmod>
     </url>
     <url>
-         <loc>https://c2sm.github.io/hpc/balfrin/</loc>
+         <loc>https://c2sm.github.io/hpc/cscs/</loc>
          <lastmod>2026-07-16</lastmod>
     </url>
     <url>
-         <loc>https://c2sm.github.io/hpc/eiger/</loc>
+         <loc>https://c2sm.github.io/hpc/cscs/SUMMARY/</loc>
          <lastmod>2026-07-16</lastmod>
     </url>
     <url>
-         <loc>https://c2sm.github.io/hpc/euler/</loc>
+         <loc>https://c2sm.github.io/hpc/cscs/balfrin/</loc>
          <lastmod>2026-07-16</lastmod>
     </url>
     <url>
-         <loc>https://c2sm.github.io/hpc/santis/</loc>
+         <loc>https://c2sm.github.io/hpc/cscs/eiger/</loc>
+         <lastmod>2026-07-16</lastmod>
+    </url>
+    <url>
+         <loc>https://c2sm.github.io/hpc/cscs/santis/</loc>
+         <lastmod>2026-07-16</lastmod>
+    </url>
+    <url>
+         <loc>https://c2sm.github.io/hpc/ethz/euler/</loc>
          <lastmod>2026-07-16</lastmod>
     </url>
     <url>
@@ -346,6 +354,10 @@
     </url>
     <url>
          <loc>https://c2sm.github.io/2026-02-02-git-for-beginners-workshop/</loc>
+         <lastmod>2026-07-16</lastmod>
+    </url>
+    <url>
+         <loc>https://c2sm.github.io/support/</loc>
          <lastmod>2026-07-16</lastmod>
     </url>
     <url>
