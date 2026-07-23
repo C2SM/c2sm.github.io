@@ -1,4 +1,4 @@
-# <img src="https://polybox.ethz.ch/index.php/s/c8uZqrzwk45wpBx/download?path=%2Fpng&files=zonda-high-resolution-logo-transparent.png" width="110" valign="middle" alt="zonda"/> ICON Grid & EXTPAR Web Interface
+# ![zonda](../assets/images/zonda-high-resolution-logo-transparent.png){: width="110" style="vertical-align: middle;"} ICON Grid & EXTPAR Web Interface
 
 [Zonda :material-open-in-new:](https://zonda.ethz.ch/){:target="_blank"} is a web interface that facilitates generating EXTPAR data on ICON triangular grids for reasearch and on-demand simulations.
 
