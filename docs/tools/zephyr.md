@@ -1,7 +1,10 @@
-# ![](https://polybox.ethz.ch/index.php/s/P1sc5n7TLhmUcld/download#only-light){:style="vertical-align: top"} ![](https://polybox.ethz.ch/index.php/s/7FVqpqKOPQw9xew/download#only-dark){:style="vertical-align: top"} Climate Data Extraction Tool
+# ![](../assets/images/zephyr-logo-no-background.png#only-light){: width="124" style="vertical-align: middle;"} ![](../assets/images/zephyr-logo-no-background_darkmode.png#only-dark){: width="124" style="vertical-align: middle;"} Climate Data Extraction Tool
 
 
 Zephyr is the climate data extraction tool developed by C2SM, serving as the backend processing engine for the [Zephyr website :material-open-in-new:](https://zephyr.ethz.ch){:target="_blank"}.
+
+
+The tool has been developed as a joint project by C2SM and EAWAG. Zephyr has been released in May 2024 and is publicly available.
 
 ## Features
 
