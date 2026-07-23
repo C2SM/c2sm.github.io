@@ -4,7 +4,7 @@
 Zephyr is the climate data extraction tool developed by C2SM, serving as the backend processing engine for the [Zephyr website :material-open-in-new:](https://zephyr.ethz.ch){:target="_blank"}.
 
 
-The tool has been developed as a joint project by C2SM and EAWAG. Zephyr has been released in May 2024 and is publicly available.
+The tool has been developed as a joint project by C2SM and EAWAG. Zephyr has been released in July 2024 and is available to the C2SM community.
 
 ## Features
 
