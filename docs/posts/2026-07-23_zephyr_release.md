@@ -17,7 +17,7 @@ Any field in a Zephyr request — `variable`, `ensemble_member`, and others — 
 
 ### New documentation
 
-Zephyr's documentation has moved out of the repository's README into a full documentation site, covering installation, running extractions locally on IAC machines, using the web interface, the request JSON format, supported datasets, architecture, and how the four repositories in the [Zephyr ecosystem](https://c2sm.github.io/zephyr/docs/ecosystem.html) fit together.
+Zephyr's documentation has moved out of the repository's README into a full documentation site, covering installation, running extractions locally on IAC machines, using the web interface, the request JSON format, supported datasets, architecture, and how the four repositories in the [Zephyr ecosystem :material-open-in-new:](https://c2sm.github.io/zephyr/docs/ecosystem.html){:target="_blank"} fit together.
 
 ### Related links
 
