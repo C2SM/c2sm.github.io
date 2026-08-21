@@ -2,7 +2,7 @@
 # Git Courses
 
 C2SM offers two annual Git courses as part of our [technical training :material-open-in-new:](https://c2sm.ethz.ch/education/technical-training.html){:target="_blank"}.
-The **Git for Beginners** course provides an introduction to basic Git commands. For users who already have some experience with Git, we recommend to join our **Git for Advanced** workshop, which focuses on improved workflow and advanced Git commands.
+The **Git for Beginners** course provides an introduction to basic Git commands. For users who already have some experience with Git, we recommend to join our **Git: Beyond the Basics** workshop, which focuses on improved workflow and advanced Git commands.
 
 ## Links
 
