@@ -47,8 +47,8 @@ If you need access to other climate datasets, contact us at [support@c2sm.ethz.c
 
     ---
 
-    The 2011 Swiss Climate Change Scenarios dataset.
+    Information about the Swiss Climate Change Scenarios.
 
-    [:octicons-arrow-right-24: CH2011](ch2011.md)
+    [:octicons-arrow-right-24: Swiss Climate Change Scenarios](ch2011.md)
 
 </div>
