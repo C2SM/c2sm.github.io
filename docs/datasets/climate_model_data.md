@@ -126,7 +126,7 @@
 - Number of files: 725,518 :material-information-outline:{ title="last updated: 2026-07-25 07:04:25" }
 - Access: direct / rsync
 - Status: updated monthly
-- Variables: 
+- Variables:
   `areacella`{ title="fx (native)" },
   `clt`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `co2mass`{ title="mon (native)" },
@@ -261,7 +261,7 @@
 - Number of files: 1.800
 - Access: direct
 - Status: frozen (2019-04)
-- Variables: 
+- Variables:
   `hfls`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
   `hfss`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
   `hurs`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
@@ -348,7 +348,7 @@
 - Resolution: 2-3 km
 - Coverage: European Alpine domain
 
-### Seasonal Forecast Data from ECMWF (SEAS5)
+## Seasonal Forecast Data from ECMWF (SEAS5)
 
 === "IAC"
     ```console

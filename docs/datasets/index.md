@@ -43,12 +43,12 @@ If you need access to other climate datasets, contact us at [support@c2sm.ethz.c
 
     [:octicons-arrow-right-24: ECMWF Data Cube](ecmwf_data_cube.md)
 
--   :material-history:{ .lg .middle } **CH2011**
+-   :material-history:{ .lg .middle } **Swiss Climate Change Scenarios**
 
     ---
 
-    The 2011 Swiss Climate Change Scenarios dataset.
+    Information about the Swiss Climate Change Scenarios.
 
-    [:octicons-arrow-right-24: CH2011](ch2011.md)
+    [:octicons-arrow-right-24: Swiss Climate Change Scenarios](ch2011.md)
 
 </div>
