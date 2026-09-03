@@ -4,4 +4,4 @@ cmip6-ng: CMIP6-ng
 cordex: CORDEX
 cordex-reklies: CORDEX-ReKliEs
 era5_cds: ERA5
-era5-land: ERA5-Land
+era5-land_cds: ERA5-Land
