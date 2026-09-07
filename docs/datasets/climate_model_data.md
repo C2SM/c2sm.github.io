@@ -8,47 +8,8 @@
 !!! note
     "Resolution: native" means that each model output is available on the native grid on which it was run. Size and file information last updated in June 2021.
 
-### CMIP2
+### CMIP7
 
-=== "IAC"
-    ```console
-    /net/atmos/data/cmip2
-    ```
-
-- Size: 0.01 TB
-- Number of files: 500
-- Access: direct / rsync
-- Status: frozen (2010-10)
-- Resolution: native
-- Coverage: global
-
-### CMIP3
-
-=== "IAC"
-    ```console
-    /net/atmos/data/cmip3
-    ```
-
-- Size: 6 TB
-- Number of files: 40.000
-- Access: direct / rsync
-- Status: frozen (2016-12)
-- Resolution: native
-- Coverage: global
-
-### CMIP5
-
-=== "IAC"
-    ```console
-    /net/atmos/data/cmip5
-    ```
-
-- Size: 130 TB
-- Number of files: 700.000
-- Access: direct / rsync
-- Status: frozen (2023/01)
-- Resolution: native
-- Coverage: global
 
 ### CMIP6
 
@@ -72,6 +33,52 @@
 - Link to [Publication behind the scenarios :material-open-in-new:](https://link.springer.com/article/10.1007/s10584-013-0905-2){:target="_blank"}
 - Link to [CMIP6 explained by CarbonBrief :material-open-in-new:](https://www.carbonbrief.org/cmip6-the-next-generation-of-climate-models-explained/){:target="_blank"}
 
+
+### CMIP5
+
+=== "IAC"
+    ```console
+    /net/atmos/data/cmip5
+    ```
+
+- Size: 130 TB
+- Number of files: 700.000
+- Access: direct / rsync
+- Status: frozen (2023/01)
+- Resolution: native
+- Coverage: global
+
+
+### CMIP3
+
+=== "IAC"
+    ```console
+    /net/atmos/data/cmip3
+    ```
+
+- Size: 6 TB
+- Number of files: 40.000
+- Access: direct / rsync
+- Status: frozen (2016-12)
+- Resolution: native
+- Coverage: global
+
+
+### CMIP2
+
+=== "IAC"
+    ```console
+    /net/atmos/data/cmip2
+    ```
+
+- Size: 0.01 TB
+- Number of files: 500
+- Access: direct / rsync
+- Status: frozen (2010-10)
+- Resolution: native
+- Coverage: global
+
+
 ## CMIP Next Generation
 
 !!! info
@@ -79,36 +86,6 @@
 
 !!! note
     Next Generation (ng) archives were maintained by Reto's group (Jan Sedlacek/Lukas Brunner). Ruth Lorenz / C2SM took over cmip6-ng in 2022. Contact: [cmip6-archive@env.ethz.ch](mailto:cmip6-archive@env.ethz.ch). Documentation: [https://doi.org/10.5281/zenodo.373412 :material-open-in-new:](https://doi.org/10.5281/zenodo.3734128){:target="_blank"}.
-
-### CMIP3-ng
-
-=== "IAC"
-    ```console
-    /net/atmos/data/cmip3-ng
-    ```
-
-- Size: 0.5 TB
-- Number of files: 5.000
-- Access: direct / rsync
-- Status: frozen (2019-03)
-- Variables: n/a
-- Resolution: native and 2.5°x2.5°
-- Coverage: global
-
-### CMIP5-ng
-
-=== "IAC"
-    ```console
-    /net/atmos/data/cmip5-ng
-    ```
-
-- Size: 33 TB
-- Number of files: 100.000
-- Access: direct / rsync
-- Status: frozen (2019-03)
-- Variables: n/a
-- Resolution: native and 2.5° x 2.5°
-- Coverage: global
 
 ### CMIP6-ng
 
@@ -195,12 +172,57 @@
 - Link to [CMIP6 explained by CarbonBrief :material-open-in-new:](https://www.carbonbrief.org/cmip6-the-next-generation-of-climate-models-explained/){:target="_blank"}
 - Link to [CMIP6-ng publication on Zenodo (Brunner et al. 2020):material-open-in-new:](https://zenodo.org/records/3734128){:target="_blank"}
 
+
+### CMIP5-ng
+
+=== "IAC"
+    ```console
+    /net/atmos/data/cmip5-ng
+    ```
+
+- Size: 33 TB
+- Number of files: 100.000
+- Access: direct / rsync
+- Status: frozen (2019-03)
+- Variables: n/a
+- Resolution: native and 2.5° x 2.5°
+- Coverage: global
+
+
+### CMIP3-ng
+
+=== "IAC"
+    ```console
+    /net/atmos/data/cmip3-ng
+    ```
+
+- Size: 0.5 TB
+- Number of files: 5.000
+- Access: direct / rsync
+- Status: frozen (2019-03)
+- Variables: n/a
+- Resolution: native and 2.5°x2.5°
+- Coverage: global
+
+
+
 ## Raw CORDEX
 
 !!! info
     The data is available as downloaded.
 
-### CORDEX
+### EURO-CORDEX-CMIP6
+=== "IAC"
+    ```console
+    /net/stratus/c2sm-data/cordex-cmip6/EUR-12/
+
+- Access: direct
+- Status: updated
+- Resolution: 0.11°
+- Coverage: Europe
+
+
+### CORDEX (CMIP5)
 
 === "IAC"
     ```console
@@ -223,7 +245,7 @@
 - Resolution: 0.44° and 0.11°
 - Coverage: Europe
 
-### CORDEX-ReKliEs
+### CORDEX-ReKliEs (CMIP5)
 
 === "IAC"
     ```console
@@ -245,6 +267,35 @@
 
 !!! info
     The data is checked, and regridded to identical grids if necessary.
+
+
+### CORDEX-CMIP6 processed
+=== "IAC"
+    ```console
+    /net/stratus/c2sm-data/cordex-cmip6/processed/
+
+- Access: direct
+- Status: updated
+- Resolution: 0.11°
+- Coverage: Europe or hydrological Switzerland
+
+### CORDEX.ch2025
+
+=== "IAC"
+    ```console
+    /net/ch4/data/cordex.ch2025/
+    ```
+
+- Size: 46 TB
+- Number of files: 3.500
+- Access: direct
+- Status: frozen (2025-11)
+- Variables:
+    - daily: `pr`, `tas`, `tasmax`, `tasmin`, `hurs`, `rsds`, `sfcWind`, `zg500`, `evspsbl`, `ta500`, `ta850`
+- Resolution: 0.11°
+- Coverage: Europe
+- [List with issues on polybox :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/RQQrUnRPlg86Apx){:target="_blank"}
+
 
 ### CORDEX.ch2018
 
@@ -310,22 +361,6 @@
 - Resolution: 0.44° and 0.11°
 - Coverage: Europe
 
-### CORDEX.ch2025
-
-=== "IAC"
-    ```console
-    /net/ch4/data/cordex.ch2025/
-    ```
-
-- Size: 46 TB
-- Number of files: 3.500
-- Access: direct
-- Status: frozen (2025-11)
-- Variables:
-    - daily: `pr`, `tas`, `tasmax`, `tasmin`, `hurs`, `rsds`, `sfcWind`, `zg500`, `evspsbl`, `ta500`, `ta850`
-- Resolution: 0.11°
-- Coverage: Europe
-- [List with issues on polybox :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/RQQrUnRPlg86Apx){:target="_blank"}
 
 ### CORDEX-FPSCONV
 
