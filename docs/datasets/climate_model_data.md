@@ -9,6 +9,16 @@
     "Resolution: native" means that each model output is available on the native grid on which it was run. Size and file information last updated in June 2021.
 
 ### CMIP7
+=== "IAC"
+    ```console
+    /net/stratus/c2sm-data/cmip7
+
+- Size: 0 TB
+- Number of Files:
+- Access: direct
+- Status: updated
+- Resolution: native
+- Coverage: global
 
 
 ### CMIP6
