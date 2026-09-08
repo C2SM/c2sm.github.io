@@ -12,6 +12,7 @@
 === "IAC"
     ```console
     /net/stratus/c2sm-data/cmip7
+    ```
 
 - Size: 0 TB
 - Number of Files:
@@ -225,6 +226,7 @@
 === "IAC"
     ```console
     /net/stratus/c2sm-data/cordex-cmip6/EUR-12/
+    ```
 
 - Access: direct
 - Status: updated
@@ -283,6 +285,7 @@
 === "IAC"
     ```console
     /net/stratus/c2sm-data/cordex-cmip6/processed/
+    ```
 
 - Access: direct
 - Status: updated
