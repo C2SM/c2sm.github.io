@@ -52,7 +52,7 @@ export EXP=c2sm_clm_r13b03_seaice
 ## 3. Run perturbed ensemble on CPU
 To run a perturbed ensemble, please allocate compute nodes interactively to *not* use your login nodes. Therefore, run the following (replace `<project account>`):
 ```console
-salloc -A <project account> -p normal --time=01:00:00
+salloc -A <project account> -p normal --nodes=1 --gpus-per-node=4 --time=01:00:00
 ```
 
 !!! warning "Compute account"
@@ -108,7 +108,7 @@ uenv run ${UENV_VERSION} --view default -- bash -c 'source ${EDF_PATH}/.venv/bin
 ## 7. Increase Ensemble Size if Validation Fails
 Again, if not done already, allocate compute nodes interactively to *not* use your login nodes:
 ```console
-salloc -p normal --time=01:20:00
+salloc -A <project account> -p normal --nodes=1 --gpus-per-node=4 --time=01:20:00
 ```
 
 A 10-member ensemble may not capture the full variability, causing false negatives. Increase to 49 members for better coverage from your CPU build directory:
