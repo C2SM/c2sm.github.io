@@ -30,7 +30,7 @@
    * [Check specific journal access policy :material-open-in-new:](https://openpolicyfinder.jisc.ac.uk/){:target="_blank"}
 
 ## Funding agencies open access policies
-   * [Open research data @SNSF :material-open-in-new:](http://www.snf.ch/en/theSNSF/research-policies/open_research_data/Pages/default.aspx){:target="_blank"}
+   * [Open research data @SNSF :material-open-in-new:](https://www.snf.ch/en/dMILj9t4LNk8NwyR/topic/open-research-data){:target="_blank"}
    * [Check specific funder archiving mandates :material-open-in-new:](https://openpolicyfinder.jisc.ac.uk/){:target="_blank"}
 
 ## Licensing
