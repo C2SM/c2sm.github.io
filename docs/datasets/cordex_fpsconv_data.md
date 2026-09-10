@@ -10,6 +10,7 @@ Currently, the data archive contains mainly 1-hourly precipitation and temperatu
 These 4 variables have been used in three MSc theses and went through basic checks. The other variables (in 6hr, day) have been copied from the Jülich server but have not been used and were not checked.
 
 Four different time periods are available:
+
 * Evaluation: ca. 2000-2009 (varies for some models)
 * Historical: ca. 1996-2005 (varies for some models)
 * RCP8.5: 2041-2050 and 2090-2099 (not all modelling groups run both time periods)
