@@ -5149,6 +5149,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Data compression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-lossless-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard lossless methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lossy-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lossy algorithms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -5517,6 +5545,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Data compression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-lossless-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard lossless methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lossy-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lossy algorithms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -5634,21 +5690,27 @@
 <p>Compression of data can considerably reduce disk space usage and the time for data transfer. Compressing data can be a lossless or lossy process. Lossless compression enables the restoration of a file to its original state, without the loss of a single bit of data. Lossy compression permanently eliminates bits of data that are redundant, unimportant or imperceptible. Lossy compression is useful for graphics, audio, video and images, where the removal of some data bits has little or no discernible effect on the representation of the content. Depending on the use case, lossy compression can also be applied to measured or simulated data.</p>
 <p>Compression and decompression use CPU and memory resources and can have a negative impact on read and write performance. Ideally, data that is not accessed much should be compressed. It is highly recommended for data that is stored in an archive.</p>
 <p>Compressed files, like *.gz, *.zip, *.bz files normally need to be uncompressed before they can be used again. But there are alternatives. Linux commands, like zless, zcat, zdiff, zgrep, etc. can handle compressed files on the fly. The same is true for file access from scripting languages like R, python, Matlab or IDL.</p>
-<p>### Standard lossless methods
-   * netcdf4 library and all the tools compiled with netcdf4 support seamlessly integrate compression
-   * We recommend lossless compressed netcdf4 files for many cases
-      * Lossless compression in netcdf4 is based on the zlib library. The level of compression can be adjusted between 1 (least aggressive) and 9 (most aggressive compression). The minimum compression requires moderate CPU and memory resources and is sufficient for most purposes. Higher levels should usually result in smaller compressed files, but come with larger processing costs when packing/unpacking. For fine tuning netcdf compression, it is possible to set the size of data chunks on which the compression operates. These chunks should match typical data blocks that have to be accessed at the same time. Furthermore, the shuffling option is often a possibility to further reduce data size. Finally, it is advantageous to remove unneeded unlimited dimensions from a netcdf file as they may reduce the efficiency of compression.
-   * On IAC systems the script nczip is installed. The nczip script is a wrapper around ncks and can be used to compress and decompress a netcdf file or a bunch of netcdf files in a folder. The command ncks is part of NCO.
-   * Good results can also be obtained with the nccopy command which is part of every netcdf4 installation. nccopy allows setting the compression level, shuffling option, and even chunk sizes.
-   * Another alternative to nczip is nccompress
-   * Climate Data Operators (cdo) can compress netCDF, but offers limited chunking options compared to NCO
-   * Compression details can also directly be set in source code when creating netcdf variables (e.g., FORTRAN, R, python interfaces)</p>
-<p>### Lossy algorithms
-   * This is still an area where people experiment. We cannott make recommendations at this point
-   * ncks also supports three lossy compression algorithms. More information can be found in the NCO User Guide
-   * Python users should have a look at netcdf4-python or xarray which support lossless and lossy compression. The latter is supported by defining a least significant digit. The least significant digit is the power of ten of the smallest decimal place in the data that is a reliable value. All information below this threshold is cropped from the data before saving and cannot be restored.
-   * Check the dedicated dc-toolkit that helps exploring data compression techniques on your data
-   * One always needs to be aware of what might be lost. In general, lossy compression should result in smaller files than lossless compression.</p>
+<h3 id="standard-lossless-methods">Standard lossless methods<a class="headerlink" href="#standard-lossless-methods" title="Permanent link">&para;</a></h3>
+<ul>
+<li>netcdf4 library and all the tools compiled with netcdf4 support seamlessly integrate compression</li>
+<li>We recommend lossless compressed netcdf4 files for many cases<ul>
+<li>Lossless compression in netcdf4 is based on the zlib library. The level of compression can be adjusted between 1 (least aggressive) and 9 (most aggressive compression). The minimum compression requires moderate CPU and memory resources and is sufficient for most purposes. Higher levels should usually result in smaller compressed files, but come with larger processing costs when packing/unpacking. For fine tuning netcdf compression, it is possible to set the size of data chunks on which the compression operates. These chunks should match typical data blocks that have to be accessed at the same time. Furthermore, the shuffling option is often a possibility to further reduce data size. Finally, it is advantageous to remove unneeded unlimited dimensions from a netcdf file as they may reduce the efficiency of compression.</li>
+</ul>
+</li>
+<li>On IAC systems the script nczip is installed. The nczip script is a wrapper around ncks and can be used to compress and decompress a netcdf file or a bunch of netcdf files in a folder. The command ncks is part of NCO.</li>
+<li>Good results can also be obtained with the nccopy command which is part of every netcdf4 installation. nccopy allows setting the compression level, shuffling option, and even chunk sizes.</li>
+<li>Another alternative to nczip is nccompress</li>
+<li>Climate Data Operators (cdo) can compress netCDF, but offers limited chunking options compared to NCO</li>
+<li>Compression details can also directly be set in source code when creating netcdf variables (e.g., FORTRAN, R, python interfaces)</li>
+</ul>
+<h3 id="lossy-algorithms">Lossy algorithms<a class="headerlink" href="#lossy-algorithms" title="Permanent link">&para;</a></h3>
+<ul>
+<li>This is still an area where people experiment. We cannott make recommendations at this point</li>
+<li>ncks also supports three lossy compression algorithms. More information can be found in the NCO User Guide</li>
+<li>Python users should have a look at netcdf4-python or xarray which support lossless and lossy compression. The latter is supported by defining a least significant digit. The least significant digit is the power of ten of the smallest decimal place in the data that is a reliable value. All information below this threshold is cropped from the data before saving and cannot be restored.</li>
+<li>Check the dedicated dc-toolkit that helps exploring data compression techniques on your data</li>
+<li>One always needs to be aware of what might be lost. In general, lossy compression should result in smaller files than lossless compression.</li>
+</ul>
 <h2 id="eth-links">ETH Links<a class="headerlink" href="#eth-links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://ethz.ch/staffnet/en/service/a-to-z/research-data.html" target="_blank">Research Data at ETH Zurich <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a></li>
@@ -5726,7 +5788,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 18, 2026 12:01:14 UTC">September 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 18, 2026 12:06:27 UTC">September 18, 2026</span>
   </span>
 
     
@@ -5736,7 +5798,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 18, 2026 12:01:14 UTC">September 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 18, 2026 12:06:27 UTC">September 18, 2026</span>
   </span>
 
     
