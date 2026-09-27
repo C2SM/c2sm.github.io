@@ -177,8 +177,8 @@
     ```
 
 
-- Size: 8.56 TB :material-information-outline:{ title="last updated: 2026-09-19 05:09:15" }
-- Number of files: 4,014 :material-information-outline:{ title="last updated: 2026-09-19 05:09:15" }
+- Size: 8.56 TB :material-information-outline:{ title="last updated: 2026-09-26 05:08:58" }
+- Number of files: 4,014 :material-information-outline:{ title="last updated: 2026-09-26 05:08:58" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -225,8 +225,8 @@
     ```
 
 
-- Size: 1.78 TB :material-information-outline:{ title="last updated: 2026-09-19 05:09:15" }
-- Number of files: 1,220 :material-information-outline:{ title="last updated: 2026-09-19 05:09:15" }
+- Size: 1.78 TB :material-information-outline:{ title="last updated: 2026-09-26 05:08:58" }
+- Number of files: 1,220 :material-information-outline:{ title="last updated: 2026-09-26 05:08:58" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -283,8 +283,8 @@
     ```
 
 
-- Size: 46.68 TB :material-information-outline:{ title="last updated: 2026-09-19 06:11:14" }
-- Number of files: 141,015 :material-information-outline:{ title="last updated: 2026-09-19 06:11:14" }
+- Size: 46.73 TB :material-information-outline:{ title="last updated: 2026-09-26 06:09:36" }
+- Number of files: 141,052 :material-information-outline:{ title="last updated: 2026-09-26 06:09:36" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
@@ -293,9 +293,9 @@
   `cl`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `clt`{ title="day (native): 198001-202312, mon (native): 194012-202312" },
   `d2m`{ title="day (native): 194001-202605, mon (native): 194012-202605" },
-  `hur`{ title="day (native): 194001-202603, mon (native): 194001-202603" },
+  `hur`{ title="day (native): 194001-202605, mon (native): 194001-202605" },
   `hurs`{ title="day (native): 194001-202312, mon (native): 198001-198512" },
-  `hus`{ title="day (native): 202201-202603, mon (native): 202201-202603" },
+  `hus`{ title="day (native): 202201-202605, mon (native): 202201-202605" },
   `orog`{ title="fx (native): N/A" },
   `pr`{ title="day (native): 194001-202605, mon (native): 194012-202605" },
   `ps`{ title="day (native): 194001-202605, mon (native): 194012-202605" },
@@ -307,14 +307,14 @@
   `sftlf`{ title="fx (native): N/A" },
   `str`{ title="day (native): 202401-202605, mon (native): 202401-202605" },
   `strd`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
-  `ta`{ title="day (native): 194001-202603, mon (native): 194001-202603" },
+  `ta`{ title="day (native): 194001-202605, mon (native): 194001-202605" },
   `tas`{ title="day (native): 194001-202605, mon (native): 194001-202605" },
   `tasmax`{ title="day (native): 194001-202605, mon (native): 194001-202605" },
   `tasmin`{ title="day (native): 194001-202605, mon (native): 194001-202605" },
   `tos`{ title="day (native): 194001-202605, mon (native): 194001-202605" },
-  `ua`{ title="day (native): 194001-202603, mon (native): 194001-202603" },
+  `ua`{ title="day (native): 194001-202605, mon (native): 194001-202605" },
   `uas`{ title="day (native): 194001-202605, mon (native): 194012-202605" },
-  `va`{ title="day (native): 194001-202603, mon (native): 194001-202603" },
+  `va`{ title="day (native): 194001-202605, mon (native): 194001-202605" },
   `vas`{ title="day (native): 194001-202605, mon (native): 194012-202605" },
   `zg`{ title="day (native): 194001-202605, mon (native): 194001-202605" }
 - [Variable list and progress :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/5efYkkFrSVC64lZ){:target="_blank"}
@@ -334,8 +334,8 @@
     ```
 
 
-- Size: 8.9 TB :material-information-outline:{ title="last updated: 2026-09-19 06:11:14" }
-- Number of files: 2,012 :material-information-outline:{ title="last updated: 2026-09-19 06:11:14" }
+- Size: 8.9 TB :material-information-outline:{ title="last updated: 2026-09-26 06:09:36" }
+- Number of files: 2,012 :material-information-outline:{ title="last updated: 2026-09-26 06:09:36" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
