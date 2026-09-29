@@ -8,7 +8,7 @@ categories:
 
 # Git: Beyond the Basics Workshop
 
-We are pleased to announce our next Git: Beyond the Basics workshop, which will take place on **Thursday, October 8th from 9:30 am to 15:00 pm**.
+We are pleased to announce our next Git: Beyond the Basics workshop, which will take place on **Thursday, October 8th from 9:15 am to 15:00 pm**.
 
 <!-- more -->
 
