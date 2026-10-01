@@ -85,10 +85,11 @@ thumb, primary data is data for which there exists no previous
 incarnation. The researcher, considering conventions in their
 field, defines what exactly to archive as primary data.
 
-> **Primary data examples:** Weather and climate model simulations,
-> reanalysis data sets, measurements from field instruments, etc.
-> Remember that the user has to decide themselves what exactly has to
-> be declared as primary data.
+!!! example "Primary data examples"
+    Weather and climate model simulations, reanalysis data sets,
+    measurements from field instruments, etc. Remember that the user has
+    to decide themselves what exactly has to be declared as primary
+    data.
 
 #### 2.1.1 Raw data
 
@@ -102,23 +103,23 @@ applied. Because physical observations cannot be replicated if the
 original source files are lost, archiving raw data (alongside its
 metadata) is critical for long-term data provenance.
 
-- **Raw data examples:** Raw voltage signals or unprocessed,
-  high-frequency digital data from eddy covariance towers, output
-  retrieved from field data loggers, uncalibrated digital counts from
-  satellite sensors, raw binary data from weather radars, or handwritten
-  field logs.
+!!! example "Raw data examples"
+    Raw voltage signals or unprocessed, high-frequency digital data from
+    eddy covariance towers, output retrieved from field data loggers,
+    uncalibrated digital counts from satellite sensors, raw binary data
+    from weather radars, or handwritten field logs.
 
-- **Storage Recommendation:** Raw data must **never** be stored
-  exclusively on local hard drives or instrument laptops. During active
-  research, it must be stored on secure, redundant network storage
-  provided by your departmental IT Service Group (ISG) or central IT
-  Services (e.g., central NAS or replicated S3 buckets) of your
-  institution. For the mandatory 10-year preservation phase, raw
-  datasets suitable for publication can be archived in the ETH Library's
-  institutional repository (ETH Research Collection), which automatically
-  pushes data to the geo-redundant ETH Data Archive for long-term
-  preservation. Large data volumes should instead be archived on
-  tape-based long-term storage (see [Section 6](#6-archiving-data)).
+**Storage recommendation:** Raw data must **never** be stored
+exclusively on local hard drives or instrument laptops. During active
+research, it must be stored on secure, redundant network storage
+provided by your departmental IT Service Group (ISG) or central IT
+Services (e.g., central NAS or replicated S3 buckets) of your
+institution. For the mandatory 10-year preservation phase, raw
+datasets suitable for publication can be archived in the ETH Library's
+institutional repository (ETH Research Collection), which automatically
+pushes data to the geo-redundant ETH Data Archive for long-term
+preservation. Large data volumes should instead be archived on
+tape-based long-term storage (see [Section 6](#6-archiving-data)).
 
 #### 2.1.2 Original simulation output
 
@@ -130,24 +131,24 @@ its native grid and time step, containing all prognostic variables
 before any spatial interpolation, temporal averaging (e.g., monthly
 means), or diagnostic variable calculations occur.
 
-- **Original simulation output examples:** Raw history or restart files
-  directly from an atmospheric/oceanic general circulation model (GCM),
-  or native-grid output from a high-resolution regional climate model
-  (RCM).
+!!! example "Original simulation output examples"
+    Raw history or restart files directly from an atmospheric/oceanic
+    general circulation model (GCM), or native-grid output from a
+    high-resolution regional climate model (RCM).
 
-- **Storage Recommendation:** Active simulation runs are typically
-  generated on high-performance computing (HPC) scratch spaces. Because
-  scratch space is not backed up and is subject to automated purging,
-  critical outputs must be moved immediately upon run completion. Due to
-  the massive volume of climate files, storing all original output on
-  standard redundant disk storage is often financially or technically
-  unfeasible. In alignment with Art. 5 of the ETH RDM Guidelines, if the
-  data is too large for standard redundant storage, the researcher must
-  secure the exact code version (e.g., on gitlab.ethz.ch), namelists,
-  seeding keys, and boundary conditions required to deterministically
-  *recreate* the simulation. If the native files themselves are
-  irreplaceable, they must be moved to Tape-Based Long-Term Storage
-  (LTS) provided by ETH IT Services or CSCS.
+**Storage recommendation:** Active simulation runs are typically
+generated on high-performance computing (HPC) scratch spaces. Because
+scratch space is not backed up and is subject to automated purging,
+critical outputs must be moved immediately upon run completion. Due to
+the massive volume of climate files, storing all original output on
+standard redundant disk storage is often financially or technically
+unfeasible. In alignment with Art. 5 of the ETH RDM Guidelines, if the
+data is too large for standard redundant storage, the researcher must
+secure the exact code version (e.g., on gitlab.ethz.ch), namelists,
+seeding keys, and boundary conditions required to deterministically
+*recreate* the simulation. If the native files themselves are
+irreplaceable, they must be moved to Tape-Based Long-Term Storage
+(LTS) provided by ETH IT Services or CSCS.
 
 ### 2.2 Derived data
 
@@ -157,10 +158,10 @@ and individual numbers in the running text that are presented in the
 main paper and the supporting information. In case you decide to delete
 some of your primary data, archiving derived data is essential.
 
-> **Derived data examples**: Weather feature climatologies, trend
-> analyses, etc. These data are produced from the primary data using
-> programs and scripts (Fortran, Shell scripts, Python, R, Matlab, NCL,
-> etc.)
+!!! example "Derived data examples"
+    Weather feature climatologies, trend analyses, etc. These data are
+    produced from the primary data using programs and scripts (Fortran,
+    Shell scripts, Python, R, Matlab, NCL, etc.)
 
 #### 2.2.1 Processed data
 
@@ -227,9 +228,10 @@ includes, for example, photos and figures of a related publication and
 its supporting information, maps, pointers to related resources such as
 the project website, etc.
 
-> **Examples:** Written report or presentation, paper, thesis. The
-> report is created based on the processed data (Word, LaTeX,
-> Powerpoint, visualisation software).
+!!! example "Ancillary information examples"
+    Written report or presentation, paper, thesis. The report is created
+    based on the processed data (Word, LaTeX, Powerpoint, visualisation
+    software).
 
 ### 2.5 Third-party data
 

@@ -6,6 +6,14 @@
     --md-primary-fg-color:        #00305d;
     --md-hue: 210;
 }
+[data-md-color-scheme="slate"] .md-typeset .md-button {
+    color: #339cdd;
+    border-color: #339cdd;
+}
+[data-md-color-scheme="slate"] .md-typeset .md-button:hover {
+    color: #ffffff;
+    background-color: #339cdd;
+}
 
 [data-md-color-scheme=c2sm-light] img[src$="#only-dark"],
 [data-md-color-scheme=c2sm-light] img[src$="#gh-dark-mode-only"] {
