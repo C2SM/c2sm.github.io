@@ -90,7 +90,7 @@ Articles 11 and 12 in the latter guidelines explicitly regulate the
 rights and obligations of ETH researchers concerning the collection,
 documentation, and storage of primary data, as well as the rights to the
 primary data and materials. Importantly, data is owned by the respective
-institution and stay with ETH also if researchers leave ETH. WSL
+institution and remains with ETH even if researchers leave ETH. WSL
 researchers should also consult the WSL Compliance Guide (available in
 WSL-Intranet), especially the section on Research Data Management (RDM)
 and Open Research Data (ORD).
@@ -101,7 +101,7 @@ institutional and legal accountability, focusing on establishing the
 group's overarching data strategy, ensuring compliance with
 institutional and funder mandates, and overseeing long-term data
 continuity. In contrast, the PhD students and PostDocs handle the daily,
-hands-on implementation. They actively maintaining their specific
+hands-on implementation. They actively maintain their specific
 project\'s Data Management Plan (DMP), ensuring precise documentation
 and secure storage, and executing a complete data handover prior to
 leaving to satisfy the mandatory 10-year retention rule. Data users must
@@ -354,7 +354,7 @@ performance. For reproducibility we recommend to build containers with
 your software.
 
 Providing the software infrastructure for other researchers to reliably
-run your code or containers in the future is out of scope for this
+run your code or containers in the future is out of scope for these
 recommendations. For example, CSCS provides state-of-the-art tools for
 running container workloads on HPC systems, (e.g.
 [podman :material-open-in-new:](https://podman.io/){:target="_blank"}).
@@ -413,19 +413,19 @@ structure, for example:
 project_name/
 ├── README incl link to git repo for source code and model used (see Sect.4.3.3)
 ├── Manuscripts/
-|   ├── Paper1/
-|   |   ├── Submission1
-├── DATA/
-|   ├── primary_data
-|   |   ├── model-output-year0001.nc
-|   |   ├── model-output-year0002.nc
-|   |   ├── measurements-year0001.csv
-|   ├── derived_data_1
-|   |   ├── tas_CESM2_1850-2010.nc
-|   ├── derived_data_n
-|   ├── third party data
-|   ├── published data
-|   ├── dataset_repository
+│   └── Paper1/
+│       └── Submission1
+└── DATA/
+    ├── primary_data/
+    │   ├── model-output-year0001.nc
+    │   ├── model-output-year0002.nc
+    │   └── measurements-year0001.csv
+    ├── derived_data_1/
+    │   └── tas_CESM2_1850-2010.nc
+    ├── derived_data_n/
+    ├── third party data/
+    ├── published data/
+    └── dataset_repository/
 
 Note that sometimes it is more appropriate to save the primary data
 outside of a project directory in a common shared storage used by many
@@ -446,7 +446,7 @@ postprocessing steps are adapted. It is essential to apply a reasonable
 name convention of the folders (see 4.2) and to document very clearly in
 which way the datasets were created (see 4.3), otherwise the danger
 exists that many similar datasets exist but it is unclear in which way
-the differ and how they could be accurately described in a publication.
+they differ and how they could be accurately described in a publication.
 
 ### 4.2 File and Directory Naming
 
@@ -582,7 +582,7 @@ practices, and try to remember them when you are in a hurry:
 
 - Be sure that important data is always backed up
 
-- Use compression in order to save disk space ()
+- Use compression in order to save disk space ([see](compression.md))
 
 - Separate programs and scripts from data
 
@@ -955,7 +955,7 @@ should contain two elements:
   this by a one-line statement containing the SPDX-standardized
   identifier in the following way:
 
-> SPDX-Licence-Identifier: \<standardized SPDX licence identifier\>
+> SPDX-License-Identifier: \<standardized SPDX license identifier\>
 
 For more information on the SPDX specifications, please visit the
 [SPDX :material-open-in-new:](https://spdx.org/ids){:target="_blank"}​ website.
@@ -969,7 +969,7 @@ of valuable data. Long-term archiving on tapes is recommended for data
 that is not meant to either evolve or request frequent read access
 anymore. Before you archive, please make sure your data is properly
 organised, documented and cleaned up from any unnecessary components
-(cf. section 4.). The following general recommendation are valid for the
+(cf. section 4.). The following general recommendations are valid for the
 tape archive at ETH and the one at CSCS:
 
 - Add a README.txt file that contains a description, a contact person,
@@ -1002,7 +1002,7 @@ tape archive at ETH and the one at CSCS:
 ### 6.1 Tape archiving at ETH Zurich
 
 Each department at ETH has two own data repositories. One accessible
-over CIFS (Windows) and on over NFS (Linux). From January 1st 2020 the
+over CIFS (Windows) and one over NFS (Linux). From January 1st 2020 the
 Long Term Storage (LTS) service of ETH is free of charge for ETH
 members. This might change in the future. Users are not allowed to
 directly write data to the tape archive. Each group has a responsible
@@ -1024,7 +1024,7 @@ or contact [CSCS service desk :material-open-in-new:](https://jira.cscs.ch/plugi
 
 ## Acknowledgements
 
-An earlier version of these guidelines are based on the
+An earlier version of these guidelines was based on the
 [EAWAG data management guide :material-open-in-new:](https://opendata.eawag.ch/docs/research-data-management/archiving-guide.html){:target="_blank"}
 published by Harald von Waldow.​ An earlier version of the section​ on
 software and data licences has been developed by T. Chadha (former C2SM
