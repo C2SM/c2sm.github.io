@@ -51,6 +51,7 @@ date: 2026-10-01
 ---
 
 # C2SM Data Management Recommendations
+<button onclick="window.print()">Download PDF</button>
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -251,8 +252,7 @@ file that describes the package at the highest level. The README file
 
 - describes the project structure, that is the organisation in a
   [folder-hierarchy :material-open-in-new:](https://opendata.eawag.ch/docs/research-data-management/archiving-guide.html#folder-structure-and-file-archives){:target="_blank"}
-  (if there is one) and the​
-  [file-naming :material-open-in-new:](https://opendata.eawag.ch/docs/research-data-management/archiving-guide.html#file-naming){:target="_blank"}
+  (if there is one) and the​ [file-naming :material-open-in-new:](https://opendata.eawag.ch/docs/research-data-management/archiving-guide.html#file-naming){:target="_blank"}
   convention used, if applicable.
 
 - should mention if the package contains files in a non-common format
