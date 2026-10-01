@@ -65,7 +65,7 @@ date: 2026-10-01
 These guidelines are primarily recommendations to research staff of the
 C2SM community at ETH Zurich, since Empa, Eawag, MeteoSwiss and WSL have
 their own guidelines. We aim to complement the
-[Guidelines for Research Data Management at ETH Zurich](https://ethz.ch/content/dam/ethz/main/eth-zurich/organisation/rechtssammlung/414.2en.pdf)
+[Guidelines for Research Data Management at ETH Zurich :material-open-in-new:](https://ethz.ch/content/dam/ethz/main/eth-zurich/organisation/rechtssammlung/414.2en.pdf){:target="_blank"}
 with more specific recommendations for climate scientists from the
 Master level all across to senior scientists how to organise, manage,
 and document their research data, and where and how to store these data
@@ -81,11 +81,11 @@ Open Research Data (ORD). Meaning data should be *\"as open as possible,
 as closed as necessary.\"*
 
 General information on research data management is also available from
-the [ETH library](https://library.ethz.ch/en/researching-and-publishing/data-management-and-policies.html).​
+the [ETH library :material-open-in-new:](https://library.ethz.ch/en/researching-and-publishing/data-management-and-policies.html){:target="_blank"}.​
 Legal aspects are covered by the
-[ETH Guidelines for Research Integrity](https://doi.org/10.3929/ethz-b-000179298),​
+[ETH Guidelines for Research Integrity :material-open-in-new:](https://doi.org/10.3929/ethz-b-000179298){:target="_blank"},​
 which have been developed by
-[ETH commission of Good Scientific Practice (GSP)](https://ethz.ch/en/the-eth-zurich/organisation/boards-university-groups-commissions/commission-gsp.html)​.
+[ETH commission of Good Scientific Practice (GSP) :material-open-in-new:](https://ethz.ch/en/the-eth-zurich/organisation/boards-university-groups-commissions/commission-gsp.html){:target="_blank"}​.
 Articles 11 and 12 in the latter guidelines explicitly regulate the
 rights and obligations of ETH researchers concerning the collection,
 documentation, and storage of primary data, as well as the rights to the
@@ -222,7 +222,7 @@ highly accurate, accessible, and ready for use. Unlike raw data, which
 can be chaotic and fragmented, curated data is actively managed
 throughout its lifecycle to ensure long-term value and trustworthiness.
 The CMIP6-next generation archive is an example of curated data at C2SM
-([Brunner et al. 2020](https://zenodo.org/records/3734128)).
+([Brunner et al. 2020 :material-open-in-new:](https://zenodo.org/records/3734128){:target="_blank"}).
 
 ### 2.4 Published data
 
@@ -238,7 +238,7 @@ file that describes the package at the highest level. The README file
 
 - is a pure ASCII or UTF-8 text-file (README.txt) or is written in a
   common markup-language such as
-  ​[Markdown](https://en.wikipedia.org/wiki/Markdown)
+  ​[Markdown :material-open-in-new:](https://en.wikipedia.org/wiki/Markdown){:target="_blank"}
   (README.md), or HTML (README.html).
 
 - has an understandable description of the dataset explaining what are
@@ -250,9 +250,9 @@ file that describes the package at the highest level. The README file
   each element of the project.
 
 - describes the project structure, that is the organisation in a
-  [folder-hierarchy](https://opendata.eawag.ch/docs/research-data-management/archiving-guide.html#folder-structure-and-file-archives)
+  [folder-hierarchy :material-open-in-new:](https://opendata.eawag.ch/docs/research-data-management/archiving-guide.html#folder-structure-and-file-archives){:target="_blank"}
   (if there is one) and the​
-  [file-naming](https://opendata.eawag.ch/docs/research-data-management/archiving-guide.html#file-naming)
+  [file-naming :material-open-in-new:](https://opendata.eawag.ch/docs/research-data-management/archiving-guide.html#file-naming){:target="_blank"}
   convention used, if applicable.
 
 - should mention if the package contains files in a non-common format
@@ -266,7 +266,7 @@ file that describes the package at the highest level. The README file
   scientific metadata.
 
 - should contain a reference to the associated article or report (as a
-  [DOI](https://www.doi.org/) if possible), if applicable.
+  [DOI :material-open-in-new:](https://www.doi.org/){:target="_blank"} if possible), if applicable.
 
 #### 2.4.1 Ancillary information
 
@@ -320,13 +320,13 @@ software license (cf. section 5.3) from the beginning.
 #### 3.1.1 Version control systems
 
 It is good practice to use source code versioning systems such as
-[GIT](https://git-scm.com/).
+[GIT :material-open-in-new:](https://git-scm.com/){:target="_blank"}.
 Applications are for instance provided by ETH at
 <https://gitlab.ethz.ch/> and WSL provides its own Git repository at
-[code.wsl.ch](code.wsl.ch). [EMPA](https://gitlab.empa.ch/),
-[eawag](https://gitlab.eawag.ch/), and
-[MeteoSwiss](https://service.meteoswiss.ch/git) also have their own
-gitlab instances and [IAC](https://git.iac.ethz.ch/) provides an
+[code.wsl.ch](code.wsl.ch){:target="_blank"}. [EMPA :material-open-in-new:](https://gitlab.empa.ch/){:target="_blank"},
+[eawag :material-open-in-new:](https://gitlab.eawag.ch/){:target="_blank"}, and
+[MeteoSwiss :material-open-in-new:](https://service.meteoswiss.ch/git){:target="_blank"} also have their own
+gitlab instances and [IAC :material-open-in-new:](https://git.iac.ethz.ch/){:target="_blank"} provides an
 additional one for its members. Git is a tool for tracking changes in
 files in order to record reasons for changes, compare with and
 incorporate versions from other people, have multiple people working on
@@ -356,7 +356,7 @@ Providing the software infrastructure for other researchers to reliably
 run your code or containers in the future is out of scope for this
 recommendations. For example, CSCS provides state-of-the-art tools for
 running container workloads on HPC systems, (e.g.
-[podman](https://podman.io/)).
+[podman :material-open-in-new:](https://podman.io/){:target="_blank"}).
 
 #### 3.2 Third-party code
 
@@ -520,7 +520,7 @@ If a file naming scheme is employed, it should be descriptive and
 consistent. Encode attributes of a file as alphanumeric strings
 separated by underscores ( \_ ). See for instance the file nameing
 convention defined for
-[CMIP7](https://wcrp-cmip.github.io/cmip7-guidance/docs/CMIP7/Global_Attributes/#2-filenames).
+[CMIP7 :material-open-in-new:](https://wcrp-cmip.github.io/cmip7-guidance/docs/CMIP7/Global_Attributes/#2-filenames){:target="_blank"}.
 
 If mapping your content to such a convention and directory-structure
 becomes too complex, you should consider to employ a proper database. In
@@ -712,7 +712,7 @@ properly identify research data in order to be able to share, reproduce
 and reuse it.
 
 These data policy regulations have been formalised under the
-[[FAI](https://www.go-fair.org/fair-principles/)​[R](https://www.go-fair.org/fair-principles/)]{.underline}
+[[FAI :material-open-in-new:](https://www.go-fair.org/fair-principles/){:target="_blank"}​[R :material-open-in-new:](https://www.go-fair.org/fair-principles/){:target="_blank"}]{.underline}
 [[principles]{.underline},](https://www.go-fair.org/fair-principles/)[​]{.underline}
 which are widely recognised. For detailed explanations of these
 principles, it is strongly advised to read [[SNF's]{.underline}
@@ -720,7 +720,7 @@ principles, it is strongly advised to read [[SNF's]{.underline}
 [principles]{.underline}.](http://www.snf.ch/SiteCollectionDocuments/FAIR_principles_translation_SNSF_logo.pdf)[​]{.underline}
 Generally speaking, it is very valuable to familiarise with the SNSF
 policy in terms of [[open research
-dat](http://www.snf.ch/en/theSNSF/research-policies/open_research_data/Pages/default.aspx)​[a](http://www.snf.ch/en/theSNSF/research-policies/open_research_data/Pages/default.aspx)]{.underline}.​
+dat](http://www.snf.ch/en/theSNSF/research-policies/open_research_data/Pages/default.aspx)​[a :material-open-in-new:](http://www.snf.ch/en/theSNSF/research-policies/open_research_data/Pages/default.aspx){:target="_blank"}]{.underline}.​
 
 ### 5.1 Documentation for reproducibility
 
@@ -737,7 +737,7 @@ useful to describe parts of it in separate README-files, perhaps located
 in sub-directories.
 
 The publication proper (article, report) usually contains indispensable
-scientific metadata. Please include the [[DOI](https://www.doi.org/) of
+scientific metadata. Please include the [[DOI :material-open-in-new:](https://www.doi.org/){:target="_blank"} of
 the publication]{.underline} as a resource of the package (see
 [[example]{.underline})](https://doi.org/10.1177/2053019617740365).
 
@@ -781,14 +781,14 @@ Among choices validated by SNSF, we specifically recommend to use the
 
 [[Collection]{.underline}](http://www.research-collection.ethz.ch/)
 together with the
-[[ET](https://www.library.ethz.ch/en/ms/Forschungsdatenmanagement-und-Datenerhalt/ETH-Data-Archive)​[H](https://www.library.ethz.ch/en/ms/Forschungsdatenmanagement-und-Datenerhalt/ETH-Data-Archive)]{.underline}
+[[ET :material-open-in-new:](https://www.library.ethz.ch/en/ms/Forschungsdatenmanagement-und-Datenerhalt/ETH-Data-Archive){:target="_blank"}​[H :material-open-in-new:](https://www.library.ethz.ch/en/ms/Forschungsdatenmanagement-und-Datenerhalt/ETH-Data-Archive){:target="_blank"}]{.underline}
 [[Data]{.underline}
 [Archive]{.underline}](https://www.library.ethz.ch/en/ms/Forschungsdatenmanagement-und-Datenerhalt/ETH-Data-Archive),
-[Envi](https://www.envidat.ch/#/)Dat for WSL,
-[ERIC](https://opendata.eawag.ch/) for eawag or
-​[[Zenodo](https://www.zenodo.org/)​]{.underline}. All are safe, support
+[Envi :material-open-in-new:](https://www.envidat.ch/#/){:target="_blank"}Dat for WSL,
+[ERIC :material-open-in-new:](https://opendata.eawag.ch/){:target="_blank"} for eawag or
+​[[Zenodo :material-open-in-new:](https://www.zenodo.org/){:target="_blank"}​]{.underline}. All are safe, support
 the
-[[FAI](https://www.force11.org/group/fairgroup/fairprinciples)​[R](https://www.force11.org/group/fairgroup/fairprinciples)]{.underline}
+[[FAI :material-open-in-new:](https://www.force11.org/group/fairgroup/fairprinciples){:target="_blank"}​[R :material-open-in-new:](https://www.force11.org/group/fairgroup/fairprinciples){:target="_blank"}]{.underline}
 [[Principles]{.underline}](https://www.force11.org/group/fairgroup/fairprinciples)
 and offer excellent visibility of your data on the world wide web. While
 the ETH Data Archive has the advantage of being the in-house solution,
@@ -835,8 +835,8 @@ of ETH Zurich.
 ETH Zurich has since long implemented a policy for licencing of program
 code under an open source license (OSL) and generally supports such
 licencing. For the policy please visit the
-[Open Source Software page of ETH](https://transfer.ethz.ch/researchers/oss/policies.html)
-or contact [ETH transfer](https://transfer.ethz.ch/).
+[Open Source Software page of ETH :material-open-in-new:](https://transfer.ethz.ch/researchers/oss/policies.html){:target="_blank"}
+or contact [ETH transfer :material-open-in-new:](https://transfer.ethz.ch/){:target="_blank"}.
 Please carefully review such policy and verify if you are allowed to
 licence a program code under an open source licence prior following our
 recommendations below.
@@ -846,30 +846,30 @@ NOTE: Keep in mind that enforcement of a licence is another issue.
 #### 5.3.2 Policy at ETH Zurich
 
 ETH supports the use of Open Source licences supported by the
-[Open Source Initiative (OSI)](https://opensource.org/licenses).
+[Open Source Initiative (OSI) :material-open-in-new:](https://opensource.org/licenses){:target="_blank"}.
 ETH requires researchers to register all OSS developed at the university
 with the
-[ETH Data Archive](https://transfer.ethz.ch/researchers/oss.html) and release them
+[ETH Data Archive :material-open-in-new:](https://transfer.ethz.ch/researchers/oss.html){:target="_blank"} and release them
 using standardized, OSI-approved licenses (MIT, Apache2.0, GNU GPL). All
 underlying digital assets, including code and data, must follow the
-[FAIR Principles](https://ethz.ch/en/research/open-science/fairdata.html) to
+[FAIR Principles :material-open-in-new:](https://ethz.ch/en/research/open-science/fairdata.html){:target="_blank"} to
 ensure they are Findable, Accessible, Interoperable, and Reusable.
 Software recorded in the ETH Research Collection with the publication
 type \"Software\" must be registered prior to publication. The
-[Business Creation Regulation](https://transfer.ethz.ch/researchers/oss/oss-for-commercialization.html)
+[Business Creation Regulation :material-open-in-new:](https://transfer.ethz.ch/researchers/oss/oss-for-commercialization.html){:target="_blank"}
 outlines how research groups can establish ETH spin-offs using OSS
 without needing an additional license for the source code. More
 information can be found
-[under this link](https://unlimited.ethz.ch/plugins/viewsource/viewpagesrc.action?pageId=276476357).
+[under this link :material-open-in-new:](https://unlimited.ethz.ch/plugins/viewsource/viewpagesrc.action?pageId=276476357){:target="_blank"}.
 
 When publishing a paper, which includes, e.g., plotting code in the
 supplemental material, this code should be provided with an open source
 licence and prior to publication, needs to be registered at the ETH Data
 Archive (and subsequently approved by ETH Transfer). A list of projects
 registered at the ETH Data Archive can be found at
-[this link](https://search.library.ethz.ch/primo-explore/search?query=any,exact,open%20source,AND&tab=default_tab&search_scope=data_archive&sortby=date&vid=DADS&lang=en_US&mode=advanced&offset=0).
+[this link :material-open-in-new:](https://search.library.ethz.ch/primo-explore/search?query=any,exact,open%20source,AND&tab=default_tab&search_scope=data_archive&sortby=date&vid=DADS&lang=en_US&mode=advanced&offset=0){:target="_blank"}.
 Also, when sharing the software on download portals read the
-[ETH guidelines](https://ethz.ch/en/industry-and-society/intellectual-property/software/Apps-Download-Portalen.html)​.
+[ETH guidelines :material-open-in-new:](https://ethz.ch/en/industry-and-society/intellectual-property/software/Apps-Download-Portalen.html){:target="_blank"}​.
 
 #### 5.3.3 How to add a licence to your datasets
 
@@ -885,7 +885,7 @@ The above information mainly pertains to licences for software. When it
 comes to other forms of data (e.g. tabulated data or databases,
 presentations, images, videos, etc.), there are other families of
 licences which are more adapted, widely used, and accepted. The most
-important and widely used licences are the [Creative Commons (CC)](https://creativecommons.org/).
+important and widely used licences are the [Creative Commons (CC) :material-open-in-new:](https://creativecommons.org/){:target="_blank"}.
 
 Creative Commons licencing offers a kind-of **mix**​ **your licence**
 based on your specific needs. It provides a baseline licence and the
@@ -893,18 +893,18 @@ possibility to allow or restrict some additional features. For example,
 CC-0 can be used to be fully compatible with any Open Research Data
 (ORD) regulations but it doesn't require attribution. If a user wishes
 to be attributed for their work he/she can use the licence
-[CC BY](https://creativecommons.org/licenses/by/4.0/)[​]{.underline}
+[CC BY :material-open-in-new:](https://creativecommons.org/licenses/by/4.0/){:target="_blank"}[​]{.underline}
 Now if in addition to attribution the user also wants any potential
 derivative work to be licenced under identical or compatible terms
 he/she can use the licence
-[CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)
+[CC BY-SA :material-open-in-new:](https://creativecommons.org/licenses/by-sa/4.0/){:target="_blank"}
 ('SA' stands for Share-Alike), however, because it restricts further
 usage, users need to be aware that
 CC BY-SA
 is not considered as a fully open license by opendata.swiss.
 
 A complete list of possibilities that can be combined in a CC licence
-can be found at the [creative commons](https://creativecommons.org/licenses/) page.
+can be found at the [creative commons :material-open-in-new:](https://creativecommons.org/licenses/){:target="_blank"} page.
 Note, however, that the non-commercial (NC) and the no-derivative (ND)
 licence conditions are generally considered non-open licenses. In
 particular, we strongly recommend against using the ND licence
@@ -912,19 +912,19 @@ condition, as it violates the interoperability as defined by the [FAIR
 principle](https://www.go-fair.org/fair-principles/).​
 
 Creative Commons licence also offers an
-[interface](https://creativecommons.org/choose/)
+[interface :material-open-in-new:](https://creativecommons.org/choose/){:target="_blank"}
 which helps the user to select the correct combination of licence
 features. CC-0 and CC-BY are always safe choices as open licenses.
 
 Additional resources:
 
-- [Choosing a licence](https://choosealicense.com/)
+- [Choosing a licence :material-open-in-new:](https://choosealicense.com/){:target="_blank"}
 
-- [How to licence research data](http://www.dcc.ac.uk/resources/how-guides/license-research-data)
+- [How to licence research data :material-open-in-new:](http://www.dcc.ac.uk/resources/how-guides/license-research-data){:target="_blank"}
 
-- [Why avoid non-commercial licences?](https://freedomdefined.org/Licenses/NC)
+- [Why avoid non-commercial licences? :material-open-in-new:](https://freedomdefined.org/Licenses/NC){:target="_blank"}
 
-- [Creative Commons and Open Science](http://doi.org/10.5281/zenodo.840651)
+- [Creative Commons and Open Science :material-open-in-new:](http://doi.org/10.5281/zenodo.840651){:target="_blank"}
 
 #### 5.3.5 Recommended OSLs for software licenses
 
@@ -934,11 +934,11 @@ and obligations coming with such a license.
 
 We recommend to use:
 
-- The [MIT license](https://opensource.org/licenses/MIT) if you want a very permissive open source licence
+- The [MIT license :material-open-in-new:](https://opensource.org/licenses/MIT){:target="_blank"} if you want a very permissive open source licence
 
-- The [Apache license](https://www.apache.org/licenses/LICENSE-2.0) if you want permissive free and open source license
+- The [Apache license :material-open-in-new:](https://www.apache.org/licenses/LICENSE-2.0){:target="_blank"} if you want permissive free and open source license
 
-- The [GNU GPL license](https://opensource.org/licenses/gpl-license) if
+- The [GNU GPL license :material-open-in-new:](https://opensource.org/licenses/gpl-license){:target="_blank"} if
   you want a more restrictive open source licence.
 
 Always keep in mind that **NOT** ​all OSLs are made the same!​
@@ -947,7 +947,7 @@ Some of them are more permissive than others (with respect to the
 freedom given to the user). Two examples of more permissive licences are
 the BSD​ 2.0 and the MIT​ licence,​ respectively. On the other hand, there
 are more restrictive open source licences like the
-[GNU General Public licence](https://opensource.org/licenses/gpl-license).​ If
+[GNU General Public licence :material-open-in-new:](https://opensource.org/licenses/gpl-license){:target="_blank"}.​ If
 you like how the GPL requires users to share their modifications of your
 library, but want to give users more flexibility in licencing their
 applications, then the [GNU Lesser General Public
@@ -956,11 +956,11 @@ suit you.
 
 Additional resources:
 
-- A complete list of [open source licences approved by OSI](https://opensource.org/licenses)​
+- A complete list of [open source licences approved by OSI :material-open-in-new:](https://opensource.org/licenses){:target="_blank"}​
 
-- Another [licence list](https://opensource.org/licenses/category) nicely separated by categories​
+- Another [licence list :material-open-in-new:](https://opensource.org/licenses/category){:target="_blank"} nicely separated by categories​
 
-- Another [very helpful guide](https://choosealicense.com/) on choosing your licence
+- Another [very helpful guide :material-open-in-new:](https://choosealicense.com/){:target="_blank"} on choosing your licence
 
 #### 5.3.6 How to add a license to your software
 
@@ -995,7 +995,7 @@ should contain two elements:
 - a licence-specific short text. Each licence may specify how this text
   (also called 'licence notice') should be set. One can find this
   information in the corresponding licence notice listed at the
-  [Software Package Data Exchange (SPDX)](https://spdx.org/licenses/) website.
+  [Software Package Data Exchange (SPDX) :material-open-in-new:](https://spdx.org/licenses/){:target="_blank"} website.
   Alternatively to this licence short text, it is equivalent to replace
   this by a one-line statement containing the SPDX-standardized
   identifier in the following way:
@@ -1003,7 +1003,7 @@ should contain two elements:
 > SPDX-Licence-Identifier: \<standardized SPDX licence identifier\>
 
 For more information on the SPDX specifications, please visit the
-[SPDX](https://spdx.org/ids)​ website.
+[SPDX :material-open-in-new:](https://spdx.org/ids){:target="_blank"}​ website.
 
 ## 6. Archiving Data <a name="section-6"></a>
 
@@ -1054,7 +1054,7 @@ directly write data to the tape archive. Each group has a responsible
 person for data management. The data manager will review the data before
 transferring it to the LTS system. The maximum supported file size is 2
 TB. Guidelines to the users and data managers are provided at the
-[IAC Wiki](https://wiki.iac.ethz.ch/IT/ETHTapeSystem).
+[IAC Wiki :material-open-in-new:](https://wiki.iac.ethz.ch/IT/ETHTapeSystem){:target="_blank"}.
 
 ### 6.2 Tape archiving at CSCS
 
@@ -1064,13 +1064,13 @@ regularly organises data storage for a group of their members at D-USYS.
 Please keep in mind that this is not a free service, therefore make an
 informed use of it by checking back with your professor/head of group
 and/or contacting C2SM about it. More information and technical details
-can be found at [CSCS longterm storage](https://docs.cscs.ch/storage/longterm/)
-or contact [CSCS service desk](https://jira.cscs.ch/plugins/servlet/desk?customize=true).
+can be found at [CSCS longterm storage :material-open-in-new:](https://docs.cscs.ch/storage/longterm/){:target="_blank"}
+or contact [CSCS service desk :material-open-in-new:](https://jira.cscs.ch/plugins/servlet/desk?customize=true){:target="_blank"}.
 
 ## Acknowledgements
 
 An earlier version of these guidelines are based on the
-[EAWAG data management guide :material-open-in-new:](https://opendata.eawag.ch/docs/research-data-management/archiving-guide.html)
+[EAWAG data management guide :material-open-in-new:](https://opendata.eawag.ch/docs/research-data-management/archiving-guide.html){:target="_blank"}
 published by Harald von Waldow.​ An earlier version of the section​ on
 software and data licences has been developed by T. Chadha (former C2SM
 Scientific Visualization) and counterchecked by ETH Transfer. These
