@@ -1,6 +1,6 @@
 # Data Handling and Management
 
-A lot of information about data management is provided on institutional level, e.g. ETH (see links below). Make sure you follow your institutional guidelines. In addition, the C2SM data management task force, which inlcudes members from the C2SM Core Team as well as Data Specialists from other groups and partner institutions, has put together [recommendations](recommendations.md) more specific to the physical climate sciences.
+A lot of information about data management is provided on institutional level, e.g. ETH (see links below). Make sure you follow your institutional guidelines. In addition, the C2SM data management task force, which includes members from the C2SM Core Team as well as Data Specialists from other groups and partner institutions, has put together [recommendations](recommendations.md) more specific to the physical climate sciences.
 
 ## ETH Links
    * [Research Data at ETH Zurich :material-open-in-new:](https://ethz.ch/staffnet/en/service/a-to-z/research-data.html){:target="_blank"}

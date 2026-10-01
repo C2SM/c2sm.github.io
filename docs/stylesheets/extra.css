@@ -46,8 +46,8 @@ td {
   border: none !important;
 }
 
+/* Print layout only for pages containing a print button */
 @media print {
-  nav, footer, .sidebar { display: none; } /* Hide web UI */
-  h2 { page-break-before: always; }       /* Start each subsection on a new page */
-  body { font-size: 12pt; color: #000; }
+  .print-button { display: none; }
+  .md-typeset:has(.print-button) h2 ~ h2 { break-before: page; }
 }

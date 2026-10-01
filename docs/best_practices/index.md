@@ -1,6 +1,6 @@
 # Best Practices
 
-Here, you'll find valuable resources for improving your [coding](coding/coding.md) and [data handling](data_handling/index.md) skills. For those new to coding, we emphasize the importance of using version control with Git and implementing automatic testing to ensure high-quality, reliable software. We offer courses and materials on Git, along with examples of various types of tests to help you maintain robust code.
+Here, you'll find valuable resources for improving your [coding](coding/index.md) and [data handling](data_handling/index.md) skills. For those new to coding, we emphasize the importance of using version control with Git and implementing automatic testing to ensure high-quality, reliable software. We offer courses and materials on Git, along with examples of various types of tests to help you maintain robust code.
 
 Additionally, our data handling section provides guidelines for effective data management, including links to ETH resources, data repositories, and licensing advice to help you manage and share your research data responsibly and efficiently.
 
@@ -12,7 +12,7 @@ Additionally, our data handling section provides guidelines for effective data m
 
     Best practices for version control with Git and automatic testing to keep your code robust and reliable.
 
-    [:octicons-arrow-right-24: Coding](coding/coding.md)
+    [:octicons-arrow-right-24: Coding](coding/index.md)
 
 -   :material-database-cog-outline:{ .lg .middle } **Data Handling**
 

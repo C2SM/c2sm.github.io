@@ -1,3 +1,5 @@
+# Link Collection
+
 ## Data repositories
    * [C2SM datasets](../../datasets/index.md)
    * [Directory of data repositories :material-open-in-new:](https://www.re3data.org){:target="_blank"}
