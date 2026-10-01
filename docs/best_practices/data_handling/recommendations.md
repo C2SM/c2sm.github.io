@@ -693,7 +693,7 @@ together with the
 [ERIC :material-open-in-new:](https://opendata.eawag.ch/){:target="_blank"} for eawag or
 [Zenodo :material-open-in-new:](https://www.zenodo.org/){:target="_blank"}.
 All are safe, support the
-[FAIR Principles :material-open-in-new:](https://www.force11.org/group/fairgroup/fairprinciples){:target="_blank"}
+[FAIR Principles :material-open-in-new:](https://force11.org/info/the-fair-data-principles/){:target="_blank"}
 and offer excellent visibility of your data on the world wide web. While
 the ETH Data Archive has the advantage of being the in-house solution,
 at Zenodo, there is a 50 GB per dataset limit, but registered groups may
