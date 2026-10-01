@@ -411,21 +411,21 @@ Frequently, research data is organised in a hierarchical folder
 structure, for example:
 
 project_name/
-├── README incl link to git repo for source code and model used (see Sect.4.3.3)
-├── Manuscripts/
-│   └── Paper1/
-│       └── Submission1
-└── DATA/
-    ├── primary_data/
-    │   ├── model-output-year0001.nc
-    │   ├── model-output-year0002.nc
-    │   └── measurements-year0001.csv
-    ├── derived_data_1/
-    │   └── tas_CESM2_1850-2010.nc
-    ├── derived_data_n/
-    ├── third party data/
-    ├── published data/
-    └── dataset_repository/
++-- README incl link to git repo for source code and model used (see Sect.4.3.3)
++-- Manuscripts/
+|   \-- Paper1/
+|       \-- Submission1
+\-- DATA/
+    +-- primary_data/
+    |   +-- model-output-year0001.nc
+    |   +-- model-output-year0002.nc
+    |   \-- measurements-year0001.csv
+    +-- derived_data_1/
+    |   \-- tas_CESM2_1850-2010.nc
+    +-- derived_data_n/
+    +-- third party data/
+    +-- published data/
+    \-- dataset_repository/
 
 Note that sometimes it is more appropriate to save the primary data
 outside of a project directory in a common shared storage used by many
