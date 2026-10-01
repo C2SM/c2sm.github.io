@@ -324,7 +324,7 @@ It is good practice to use source code versioning systems such as
 Applications are for instance provided by ETH at
 <https://gitlab.ethz.ch/> and WSL provides its own Git repository at
 [code.wsl.ch :material-open-in-new:](https://code.wsl.ch){:target="_blank"}.
-[EMPA :material-open-in-new:](https://gitlab.empa.ch/),
+[EMPA :material-open-in-new:](https://gitlab.empa.ch/){:target="_blank"},
 [eawag :material-open-in-new:](https://gitlab.eawag.ch/){:target="_blank"}, and
 [MeteoSwiss :material-open-in-new:](https://service.meteoswiss.ch/git){:target="_blank"} also have their own
 gitlab instances and [IAC :material-open-in-new:](https://git.iac.ethz.ch/){:target="_blank"} provides an
@@ -713,11 +713,11 @@ properly identify research data in order to be able to share, reproduce
 and reuse it.
 
 These data policy regulations have been formalised under the
-[FAIR](https://www.go-fair.org/fair-principles/)
+[FAIR :material-open-in-new:](https://www.go-fair.org/fair-principles/){:target="_blank"}
 which are widely recognised. For detailed explanations of these
-principles, it is strongly advised to read [SNSF's document on FAIR principles](http://www.snf.ch/SiteCollectionDocuments/FAIR_principles_translation_SNSF_logo.pdf)
+principles, it is strongly advised to read [SNSF's document on FAIR principles :material-open-in-new:](http://www.snf.ch/SiteCollectionDocuments/FAIR_principles_translation_SNSF_logo.pdf){:target="_blank"}
 Generally speaking, it is very valuable to familiarise with the SNSF
-policy in terms of [open research data](http://www.snf.ch/en/theSNSF/research-policies/open_research_data/Pages/default.aspx).​
+policy in terms of [open research data :material-open-in-new:](http://www.snf.ch/en/theSNSF/research-policies/open_research_data/Pages/default.aspx){:target="_blank"}.​
 
 ### 5.1 Documentation for reproducibility
 
@@ -734,9 +734,9 @@ useful to describe parts of it in separate README-files, perhaps located
 in sub-directories.
 
 The publication proper (article, report) usually contains indispensable
-scientific metadata. Please include the [DOI](https://www.doi.org/) of
+scientific metadata. Please include the [DOI :material-open-in-new:](https://www.doi.org/){:target="_blank"} of
 the publication as a resource of the package (see
-[example](https://doi.org/10.1177/2053019617740365)).
+[example :material-open-in-new:](https://doi.org/10.1177/2053019617740365){:target="_blank"}).
 
 ### 5.2 Data Repositories
 
@@ -745,7 +745,7 @@ terms of what they offer as services, how they are indexed on search
 engines, whether they provide their service for free or not, etc. In
 order to find the best suited data repository, it is very helpful to
 search in the
-[Registry of Research Data Repositories](https://www.re3data.org/),​ which nicely
+[Registry of Research Data Repositories :material-open-in-new:](https://www.re3data.org/){:target="_blank"},​ which nicely
 classifies repositories by a large amount of search criteria.
 
 It is important to note that SNSF defines criteria for an acceptable
@@ -753,7 +753,7 @@ data repository, i.e., which complies with their open research data
 policy:
 
 - it must be non-commercial (as identified in the registry of
-  [research data repositories re3data](https://www.re3data.org/))​
+  [research data repositories re3data :material-open-in-new:](https://www.re3data.org/){:target="_blank"})​
 
 - it must offer globally unique and persistent identifiers (e.g. a DOI)
 
@@ -769,14 +769,14 @@ policy:
 - it has a long-term preservation plan
 
 Among choices validated by SNSF, we specifically recommend to use the
-[ETH Research Collection](http://www.research-collection.ethz.ch/)
+[ETH Research Collection :material-open-in-new:](http://www.research-collection.ethz.ch/){:target="_blank"}
 together with the
-[ETH Data Archive](https://www.library.ethz.ch/en/ms/Forschungsdatenmanagement-und-Datenerhalt/ETH-Data-Archive),
-[EnviDat](https://www.envidat.ch/#/) for WSL,
-[ERIC](https://opendata.eawag.ch/) for eawag or
-​[Zenodo](https://www.zenodo.org/).
+[ETH Data Archive :material-open-in-new:](https://www.library.ethz.ch/en/ms/Forschungsdatenmanagement-und-Datenerhalt/ETH-Data-Archive){:target="_blank"},
+[EnviDat :material-open-in-new:](https://www.envidat.ch/#/){:target="_blank"} for WSL,
+[ERIC :material-open-in-new:](https://opendata.eawag.ch/){:target="_blank"} for eawag or
+​[Zenodo :material-open-in-new:](https://www.zenodo.org/){:target="_blank"}.
 All are safe, support the
-[FAIR Principles](https://www.force11.org/group/fairgroup/fairprinciples)
+[FAIR Principles :material-open-in-new:](https://www.force11.org/group/fairgroup/fairprinciples){:target="_blank"}
 and offer excellent visibility of your data on the world wide web. While
 the ETH Data Archive has the advantage of being the in-house solution,
 at Zenodo, there is a 50 GB per dataset limit, but registered groups may
