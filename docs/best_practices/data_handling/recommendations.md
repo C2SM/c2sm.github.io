@@ -18,14 +18,14 @@ These guidelines are primarily recommendations to research staff of the
 C2SM community at ETH Zurich, since Empa, Eawag, MeteoSwiss and WSL have
 their own guidelines. We aim to complement the
 [Guidelines for Research Data Management at ETH Zurich :material-open-in-new:](https://ethz.ch/content/dam/ethz/main/eth-zurich/organisation/rechtssammlung/414.2en.pdf){:target="_blank"}
-with more specific recommendations for climate scientists from the
-Master level all across to senior scientists how to organise, manage,
+with more specific recommendations for climate scientists, from
+Master's students to senior scientists, on how to organise, manage,
 and document their research data, and where and how to store these data
 at suitable repositories. The recommendations focus on large data sets
 typically produced from weather and climate models, but are applicable
 to other types of data as well.
 <!-- TODO: Add link to further recommendations regarding very large
-datasets from high resolution kilometer-scale climate model simulations. -->
+datasets from high resolution kilometre-scale climate model simulations. -->
 
 All data must be managed according to the international FAIR principles
 (Findable, Accessible, Interoperable, and Reusable) and the ideal of
@@ -57,7 +57,7 @@ hands-on implementation. They actively maintain their specific
 project's Data Management Plan (DMP), ensuring precise documentation
 and secure storage, and executing a complete data handover prior to
 leaving to satisfy the mandatory 10-year retention rule. Data users must
-treat existing datasets with academic rigor by providing proper
+treat existing datasets with academic rigour by providing proper
 citations and adhering strictly to all legal, ethical, licensing and
 export restrictions. Additionally, they are responsible for
 transparently documenting any modifications or analyses performed on the
@@ -82,18 +82,18 @@ data collected from experiments or other sources. In practice however, a
 modified form of that data, e.g. through averaging or the discarding of
 irrelevant data, is frequently considered primary data. As a rule of
 thumb, primary data is data for which there exists no previous
-incarnation. The researcher, considering conventions in her or his
+incarnation. The researcher, considering conventions in their
 field, defines what exactly to archive as primary data.
 
 > **Primary data examples:** Weather and climate model simulations,
 > reanalysis data sets, measurements from field instruments, etc.
-> Remember that the user has to decide him/herself what exactly has to
+> Remember that the user has to decide themselves what exactly has to
 > be declared as primary data.
 
 #### 2.1.1 Raw data
 
 Raw data can be defined as data that has not been processed,
-transformed, or analyzed since its initial collection from a physical
+transformed, or analysed since its initial collection from a physical
 source. Under ETH Zurich guidelines, raw data represents the absolute
 starting point of the empirical data lifecycle. It is the direct output
 from observational platforms, sensors, or field instruments before any
@@ -114,13 +114,15 @@ metadata) is critical for long-term data provenance.
   provided by your departmental IT Service Group (ISG) or central IT
   Services (e.g., central NAS or replicated S3 buckets) of your
   institution. For the mandatory 10-year preservation phase, raw
-  datasets must be archived using the ETH Library's institutional
-  repository (ETH Research Collection), which automatically pushes data
-  to the geo-redundant ETH Data Archive for long-term preservation.
+  datasets suitable for publication can be archived in the ETH Library's
+  institutional repository (ETH Research Collection), which automatically
+  pushes data to the geo-redundant ETH Data Archive for long-term
+  preservation. Large data volumes should instead be archived on
+  tape-based long-term storage (see [Section 6](#6-archiving-data)).
 
 #### 2.1.2 Original simulation output
 
-While often categorized broadly as primary data, original simulation
+While often categorised broadly as primary data, original simulation
 output must be distinguished from observational raw data. It refers to
 the immediate, un-postprocessed digital files generated directly by a
 numerical weather prediction (NWP) or climate model run. This data is in
@@ -164,12 +166,12 @@ some of your primary data, archiving derived data is essential.
 
 Processed data refers to data which was processed in a certain way, for
 example averaging over certain time periods, like calculating monthly
-averages from daily values. For reproducability it is important to note
+averages from daily values. For reproducibility it is important to note
 which scripts or version of code were used to process the data.
 
 ### 2.3 Curated data
 
-Curated data is organized, cleaned, enriched, and documented to make it
+Curated data is organised, cleaned, enriched, and documented to make it
 highly accurate, accessible, and ready for use. Unlike raw data, which
 can be chaotic and fragmented, curated data is actively managed
 throughout its lifecycle to ensure long-term value and trustworthiness.
@@ -180,12 +182,10 @@ The CMIP6-next generation archive is an example of curated data at C2SM
 
 Published data is a selected subset of data for a selected publication,
 published in a data repository such as the ETH Research Collection or
-WSL's environmenral data portal EnviDat. We will use the term *data
-package* in order to describe the research data used for a specific
-project or a publication.
+WSL's environmental data portal EnviDat.
 
 The data in the package needs to be annotated to be useful for other
-researchers or your future self. Each package should contain a README -
+researchers or your future self. Each package should contain a README
 file that describes the package at the highest level. The README file
 
 - is a pure ASCII or UTF-8 text-file (README.txt) or is written in a
@@ -250,10 +250,10 @@ different forms. Software can be available in source code or as
 proprietary software. For reproducibility purposes, it is crucial to
 know which version of software was used to create or process a dataset.
 Reproducibility means the ability to consistently achieve the exact same
-output, results, or behavior when running the same software on the same
-input data. Please check licenses of all software used so it does not
-interfere with scripts or other code produced by you (see [Section 5.3](#53-licencing-of-software-and-data)
-for more information about licenses).
+output, results, or behaviour when running the same software on the same
+input data. Please check licences of all software used so it does not
+interfere with scripts or other code produced by you (see [Section 5.3](#53-licensing-of-software-and-data)
+for more information about licences).
 
 ### 3.1 Source code
 
@@ -263,15 +263,15 @@ to post-process data. You should include in your data package any code
 along with relevant information about dependencies, the platform it runs
 on, required interpreters, compilers, libraries, and the versions used.
 Take care to provide a reasonable degree of user documentation for your
-software ([Section 4](#4-organizing-and-documenting-data)) and how you have used external software like modeling
+software ([Section 4](#4-organising-and-documenting-data)) and how you have used external software like modelling
 code. Source code should always be managed in a version control system,
 even if you work by yourself and choose an appropriate open source
-software license (cf. [Section 5.3](#53-licencing-of-software-and-data)) from the beginning.
+software licence (cf. [Section 5.3](#53-licensing-of-software-and-data)) from the beginning.
 
 #### 3.1.1 Version control systems
 
 It is good practice to use source code versioning systems such as
-[GIT :material-open-in-new:](https://git-scm.com/){:target="_blank"}.
+[Git :material-open-in-new:](https://git-scm.com/){:target="_blank"}.
 Applications are for instance provided by ETH at
 <https://gitlab.ethz.ch/> and WSL provides its own Git repository at
 [code.wsl.ch :material-open-in-new:](https://code.wsl.ch){:target="_blank"}.
@@ -284,9 +284,9 @@ files in order to record reasons for changes, compare with and
 incorporate versions from other people, have multiple people working on
 the same code, and maintain several parallel versions of the same code
 in a systematic way. Git is designed for collaborative, open source
-workflows, [see here](../coding/index.md). However, GIT does not
-continuously sync like other tools (polybox, dropbox) but you need to actively synchronize
-local and remote versions. GIT is a versioning system for code not data
+workflows, [see here](../coding/index.md#version-control-with-git). However, Git does not
+continuously sync like other tools (polybox, dropbox) but you need to actively synchronise
+local and remote versions. Git is a versioning system for code not data
 (do not upload large data volumes). Note that these platforms do not
 qualify as "archives" and might disappear tomorrow. Instead, create a
 zip- or tar-archive from the version of the source code used in your
@@ -317,7 +317,7 @@ included in the data package. Instead you should refer to exactly the
 version used, which is available from a reliable, well-established
 repository committed to long-term preservation. For open-source
 third-party code, make sure that all dependencies (including versions)
-are provided explicitly and containerized with your source code.
+are provided explicitly and containerised with your source code.
 
 ### 3.3 Proprietary software
 
@@ -326,7 +326,7 @@ third-party software, libraries, languages, or tool-chains. Aim at using
 open source software for scientific work, since proprietary tools
 diminish the reproducibility and long-term value of your research.
 
-## 4. Organizing and Documenting Data
+## 4. Organising and Documenting Data
 
 Throughout your work, keep your research data continuously and
 reasonably organised, best from the start. If you come back after three
@@ -363,11 +363,12 @@ structure, for example:
 
 ```text
 project_name/
-├── README incl link to git repo for source code and model used (see Sect.4.3.3)
-├── Manuscripts/
-│   └── Paper1/
-│       └── Submission1
-└── DATA/
+├── README (incl. link to Git repository for source code and model used, see Section 4.3.3)
+├── code/
+├── manuscripts/
+│   └── paper1/
+│       └── submission1/
+└── data/
     ├── primary_data/
     │   ├── model-output-year0001.nc
     │   ├── model-output-year0002.nc
@@ -375,8 +376,8 @@ project_name/
     ├── derived_data_1/
     │   └── tas_CESM2_1850-2010.nc
     ├── derived_data_n/
-    ├── third party data/
-    ├── published data/
+    ├── third_party_data/
+    ├── published_data/
     └── dataset_repository/
 ```
 
@@ -525,7 +526,7 @@ Minimal examples from <https://data.iac.ethz.ch/atmos/> contain:
 All the data organising aspects discussed are obvious when you read
 about them in such a guideline. But during daily work, you will still
 find yourself neglecting some of the very basic aspects, be it
-because you have to fulfill a nearby deadline, you just want to solve
+because you have to fulfil a nearby deadline, you just want to solve
 the problem as quickly as possible, or you simply do not care about who
 is coming after you. So think about the following list of best
 practices, and try to remember them when you are in a hurry:
@@ -537,12 +538,11 @@ practices, and try to remember them when you are in a hurry:
 
 - Use compression in order to save disk space (see [Data Compression](compression.md))
 
-- Separate programs and scripts from data
-
 - Use a version control system (see [Git best
   practices](../coding/index.md#version-control-with-git))
 
-- Try to split your program in small sub-programs. Re-use functions
+- Split your program into small sub-programs and re-use functions.
+  Smaller program pieces are also easier to re-use in other projects
 
 - Keep your main results on a reliable storage system
 
@@ -564,10 +564,6 @@ practices, and try to remember them when you are in a hurry:
 
 - Start documenting your code and your progress from the very beginning,
   and keep your documentation up-to-date.
-
-- Avoid writing huge program code. Try to split your problem into small
-  pieces. It will also be easier to re-use smaller program pieces in
-  other projects.
 
 - Use variables (or, even better, runtime arguments) instead of hard
   coded paths and system names
@@ -598,7 +594,8 @@ document management is applied. Some common pitfalls are:
   can be completely outdated or even misleading.
 
 - Strictly separate programs from data; programs ask for a daily backup,
-  whereas this is typically not the case for primary and derived data
+  whereas primary and derived data typically require different backup
+  and archiving strategies (see [Section 2.1](#21-primary-data))
 
 - Separate programs from reports; programs and scripts are optimally
   handled with a versioning system (Git), whereas this is typically not
@@ -636,7 +633,7 @@ These data policy regulations have been formalised under the
 which are widely recognised. For detailed explanations of these
 principles, it is strongly advised to read [SNSF's document on FAIR principles :material-open-in-new:](http://www.snf.ch/SiteCollectionDocuments/FAIR_principles_translation_SNSF_logo.pdf){:target="_blank"}
 Generally speaking, it is very valuable to familiarise with the SNSF
-policy in terms of [open research data :material-open-in-new:](http://www.snf.ch/en/theSNSF/research-policies/open_research_data/Pages/default.aspx){:target="_blank"}.
+policy in terms of [open research data :material-open-in-new:](https://www.snf.ch/en/dMILj9t4LNk8NwyR/topic/open-research-data){:target="_blank"}.
 
 ### 5.1 Documentation for reproducibility
 
@@ -679,7 +676,7 @@ policy:
 - it allows to define intrinsic (aka general, basic) and user-defined
   (advanced, specialised) metadata
 
-- it allows to set a license for the data
+- it allows to set a licence for the data
 
 - metadata are always publicly available, even if the data itself is not
 
@@ -690,7 +687,7 @@ policy:
 Among choices validated by SNSF, we specifically recommend to use the
 [ETH Research Collection :material-open-in-new:](http://www.research-collection.ethz.ch/){:target="_blank"}
 together with the
-[ETH Data Archive :material-open-in-new:](https://www.library.ethz.ch/en/ms/Forschungsdatenmanagement-und-Datenerhalt/ETH-Data-Archive){:target="_blank"},
+[ETH Data Archive :material-open-in-new:](https://library.ethz.ch/en/collections-and-archives/archiving/digital-long-term-preservation/eth-data-archive.html){:target="_blank"},
 [EnviDat :material-open-in-new:](https://www.envidat.ch/#/){:target="_blank"} for WSL,
 [ERIC :material-open-in-new:](https://opendata.eawag.ch/){:target="_blank"} for eawag or
 [Zenodo :material-open-in-new:](https://www.zenodo.org/){:target="_blank"}.
@@ -716,7 +713,7 @@ latter category). Journals are generally more permissive for
 self-archiving on an institutional repository than on other repository
 types.
 
-### 5.3 Licencing of software and data
+### 5.3 Licensing of software and data
 
 #### 5.3.1 General information
 
@@ -725,7 +722,7 @@ created in fixed form (from the moment it is written i.e., coded) and
 such protection cannot be waived neither in the EU nor in Switzerland.
 Therefore, a person receiving or downloading program code is in
 principle not allowed to use such program code without an explicit
-permission (the license).
+permission (the licence).
 
 Thus, one of the things that a software developer shall always do is to
 apply an appropriate licence to their software when the software is
@@ -738,13 +735,13 @@ rights of use and the corresponding exploitation rights of such program
 code belongs to ETH Zurich, and such program code is considered property
 of ETH Zurich.
 
-ETH Zurich has since long implemented a policy for licencing of program
-code under an open source license (OSL) and generally supports such
-licencing. For the policy please visit the
+ETH Zurich has since long implemented a policy for licensing of program
+code under an open source licence (OSL) and generally supports such
+licensing. For the policy please visit the
 [Open Source Software page of ETH :material-open-in-new:](https://transfer.ethz.ch/researchers/oss/policies.html){:target="_blank"}
 or contact [ETH transfer :material-open-in-new:](https://transfer.ethz.ch/){:target="_blank"}.
 Please carefully review such policy and verify if you are allowed to
-licence a program code under an open source licence prior following our
+license a program code under an open source licence prior following our
 recommendations below.
 
 NOTE: Keep in mind that enforcement of a licence is another issue.
@@ -756,7 +753,7 @@ ETH supports the use of Open Source licences supported by the
 ETH requires researchers to register all OSS developed at the university
 with the
 [ETH Data Archive :material-open-in-new:](https://transfer.ethz.ch/researchers/oss.html){:target="_blank"} and release them
-using standardized, OSI-approved licenses (MIT, Apache2.0, GNU GPL). All
+using standardised, OSI-approved licences (MIT, Apache2.0, GNU GPL). All
 underlying digital assets, including code and data, must follow the
 [FAIR Principles :material-open-in-new:](https://ethz.ch/en/research/open-science/fairdata.html){:target="_blank"} to
 ensure they are Findable, Accessible, Interoperable, and Reusable.
@@ -764,7 +761,7 @@ Software recorded in the ETH Research Collection with the publication
 type "Software" must be registered prior to publication. The
 [Business Creation Regulation :material-open-in-new:](https://transfer.ethz.ch/researchers/oss/oss-for-commercialization.html){:target="_blank"}
 outlines how research groups can establish ETH spin-offs using OSS
-without needing an additional license for the source code. More
+without needing an additional licence for the source code. More
 information can be found
 [under this link :material-open-in-new:](https://unlimited.ethz.ch/plugins/viewsource/viewpagesrc.action?pageId=276476357){:target="_blank"}.
 
@@ -774,14 +771,14 @@ licence and prior to publication, needs to be registered at the ETH Data
 Archive (and subsequently approved by ETH Transfer). A list of projects
 registered at the ETH Data Archive can be found at
 [this link :material-open-in-new:](https://search.library.ethz.ch/primo-explore/search?query=any,exact,open%20source,AND&tab=default_tab&search_scope=data_archive&sortby=date&vid=DADS&lang=en_US&mode=advanced&offset=0){:target="_blank"}.
-Also, when sharing the software on download portals read the
-[ETH guidelines :material-open-in-new:](https://ethz.ch/en/industry-and-society/intellectual-property/software/Apps-Download-Portalen.html){:target="_blank"}.
+<!-- TODO: Add a valid link to the ETH guidelines for sharing software
+on download portals (previous link is no longer available). -->
 
 #### 5.3.3 How to add a licence to your datasets
 
-The easiest way of licencing data is done when making the data available
+The easiest way of licensing data is done when making the data available
 on a data repository (cf. [Section 5.2](#52-data-repositories)): as mentioned above, in order to
-fulfill FAIR criteria, the chosen data repository should offer licencing
+fulfil FAIR criteria, the chosen data repository should offer licensing
 services. When creating a new entry in your selected repository, the
 form will contain a specific menu to define the chosen licence.
 
@@ -793,26 +790,26 @@ presentations, images, videos, etc.), there are other families of
 licences which are more adapted, widely used, and accepted. The most
 important and widely used licences are the [Creative Commons (CC) :material-open-in-new:](https://creativecommons.org/){:target="_blank"}.
 
-Creative Commons licencing offers a kind-of **mix** **your licence**
+Creative Commons licensing offers a kind-of **mix your licence**
 based on your specific needs. It provides a baseline licence and the
 possibility to allow or restrict some additional features. For example,
 CC-0 can be used to be fully compatible with any Open Research Data
-(ORD) regulations but it doesn't require attribution. If a user wishes
-to be attributed for their work he/she can use the licence
+(ORD) regulations but it doesn't require attribution. If authors wish
+to be attributed for their work, they can use the licence
 [CC BY :material-open-in-new:](https://creativecommons.org/licenses/by/4.0/){:target="_blank"}
 Now if in addition to attribution the user also wants any potential
-derivative work to be licenced under identical or compatible terms
-he/she can use the licence
+derivative work to be licensed under identical or compatible terms,
+they can use the licence
 [CC BY-SA :material-open-in-new:](https://creativecommons.org/licenses/by-sa/4.0/){:target="_blank"}
 ('SA' stands for Share-Alike), however, because it restricts further
 usage, users need to be aware that
 CC BY-SA
-is not considered as a fully open license by opendata.swiss.
+is not considered as a fully open licence by opendata.swiss.
 
 A complete list of possibilities that can be combined in a CC licence
 can be found at the [creative commons :material-open-in-new:](https://creativecommons.org/licenses/){:target="_blank"} page.
 Note, however, that the non-commercial (NC) and the no-derivative (ND)
-licence conditions are generally considered non-open licenses. In
+licence conditions are generally considered non-open licences. In
 particular, we strongly recommend against using the ND licence
 condition, as it violates the interoperability as defined by the [FAIR
 principle :material-open-in-new:](https://www.go-fair.org/fair-principles/){:target="_blank"}.
@@ -820,7 +817,7 @@ principle :material-open-in-new:](https://www.go-fair.org/fair-principles/){:tar
 Creative Commons licence also offers an
 [interface :material-open-in-new:](https://creativecommons.org/choose/){:target="_blank"}
 which helps the user to select the correct combination of licence
-features. CC-0 and CC-BY are always safe choices as open licenses.
+features. CC-0 and CC-BY are always safe choices as open licences.
 
 Additional resources:
 
@@ -832,32 +829,31 @@ Additional resources:
 
 - [Creative Commons and Open Science :material-open-in-new:](http://doi.org/10.5281/zenodo.840651){:target="_blank"}
 
-#### 5.3.5 Recommended OSLs for software licenses
+#### 5.3.5 Recommended OSLs for software licences
 
 There are many OSLs out there. It is highly recommended to use one of
 the common OSLs since this means that users are familiar with the rights
-and obligations coming with such a license.
+and obligations coming with such a licence.
 
 We recommend to use:
 
-- The [MIT license :material-open-in-new:](https://opensource.org/licenses/MIT){:target="_blank"} if you want a very permissive open source licence
+- The [MIT licence :material-open-in-new:](https://opensource.org/licenses/MIT){:target="_blank"} if you want a very permissive open source licence
 
-- The [Apache license :material-open-in-new:](https://www.apache.org/licenses/LICENSE-2.0){:target="_blank"} if you want permissive free and open source license
+- The [Apache licence :material-open-in-new:](https://www.apache.org/licenses/LICENSE-2.0){:target="_blank"} if you want permissive free and open source licence
 
-- The [GNU GPL license :material-open-in-new:](https://opensource.org/licenses/gpl-license){:target="_blank"} if
+- The [GNU GPL licence :material-open-in-new:](https://opensource.org/licenses/gpl-license){:target="_blank"} if
   you want a more restrictive open source licence.
 
 Always keep in mind that **NOT** all OSLs are made the same!
 
 Some of them are more permissive than others (with respect to the
 freedom given to the user). Two examples of more permissive licences are
-the BSD 2.0 and the MIT licence, respectively. On the other hand, there
+the BSD 2-Clause and the MIT licence, respectively. On the other hand, there
 are more restrictive open source licences like the
 [GNU General Public licence :material-open-in-new:](https://opensource.org/licenses/gpl-license){:target="_blank"}. If
 you like how the GPL requires users to share their modifications of your
-library, but want to give users more flexibility in licencing their
-applications, then the [GNU Lesser General Public
-license :material-open-in-new:](https://opensource.org/license/lgpl-3-0){:target="_blank"} might
+library, but want to give users more flexibility in licensing their
+applications, then the [GNU Lesser General Public licence :material-open-in-new:](https://opensource.org/license/lgpl-3-0){:target="_blank"} might
 suit you.
 
 Additional resources:
@@ -868,7 +864,7 @@ Additional resources:
 
 - Another [very helpful guide :material-open-in-new:](https://choosealicense.com/){:target="_blank"} on choosing your licence
 
-#### 5.3.6 How to add a license to your software
+#### 5.3.6 How to add a licence to your software
 
 In order to add a licence to your work, two different actions are
 required:
@@ -903,7 +899,7 @@ should contain two elements:
   information in the corresponding licence notice listed at the
   [Software Package Data Exchange (SPDX) :material-open-in-new:](https://spdx.org/licenses/){:target="_blank"} website.
   Alternatively to this licence short text, it is equivalent to replace
-  this by a one-line statement containing the SPDX-standardized
+  this by a one-line statement containing the SPDX-standardised
   identifier in the following way:
 
 ```text
@@ -922,7 +918,7 @@ of valuable data. Long-term archiving on tapes is recommended for data
 that is not meant to either evolve or request frequent read access
 anymore. Before you archive, please make sure your data is properly
 organised, documented and cleaned up from any unnecessary components
-(cf. [Section 4](#4-organizing-and-documenting-data)). The following general recommendations are valid for the
+(cf. [Section 4](#4-organising-and-documenting-data)). The following general recommendations are valid for the
 tape archive at ETH and the one at CSCS:
 
 - Add a README.txt file that contains a description, a contact person,
