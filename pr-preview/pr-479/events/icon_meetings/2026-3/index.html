@@ -5879,32 +5879,32 @@ Jacopo Canton (JC)</p>
 <p><em>Minutes by Alitzel Macías</em></p>
 <h2 id="reports">Reports<a class="headerlink" href="#reports" title="Permanent link">&para;</a></h2>
 <h3 id="c2sm-michael-jahn-matthieu-leclair-mikael-stellio-alitzel-macias">C2SM (Michael Jähn, Matthieu Leclair, Mikael Stellio, Alitzel Macías)<a class="headerlink" href="#c2sm-michael-jahn-matthieu-leclair-mikael-stellio-alitzel-macias" title="Permanent link">&para;</a></h3>
-<p>MJ mentioned that to be on the mailing list for this meeting one should register on the link in the C2SM landing page.</p>
+<p>MJ mentions that to receive the invitation for this meeting, one needs to subscribe to the <a href="../../../models/icon/#mailing-list">C2SM ICON mailing list</a> on the C2SM landing page.</p>
 <p>MJ welcomes everyone and shares the <a href="https://polybox.ethz.ch/index.php/s/2ddZ43CLpEx83cK" target="_blank">latest news about ICON from C2SM <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg></span></a>.</p>
-<p>CZ asked about the reason behind the name 'gpus-per-node' in the CSCS new changes, MK mentioned it was what was more convenient. He also confirmed that this flag is only for <code>srun</code> (not <code>SBATCH</code>) and that they are still working on the accounting, so that the user gets billed only for the gpus they are using, the estimated time for this is end of year.</p>
-<p>MaL mentioned that when selecting the numa nodes you have to explicitly ask the system what socket it gave you, to make sure that the binding is correct.</p>
-<p>CK asked about where to report issues with ICON, it is not very clear where to do this. MaL answered that it will get better once the repos are unified on icon/icon. Tina mentioned that it would be good to flag it internally and then C2SM reports it. This is because otherwise there is no one that is clearly responsible. MaL says that this is something that needs to be dicussed further, specially given the upcoming changes of only Nightly CI testing. CK's specific issue only happened with 24 nodes, which is why the bug was not catched with the CI.</p>
-<p>Regarding the soil data, CZ says that he has a dataset that MS can compare with his current dataset to evaluate its correctness. MA was also interested in this dataset from CZ.</p>
+<p>CZ asks about the reason behind the name <code>--gpus-per-node</code> in the recent node sharing changes on <a href="../../../hpc/cscs/santis/">Säntis</a>; MK replies that it was the most convenient choice. He also confirms that <code>--gres-flags=allow-task-sharing</code> must be passed to <code>srun</code> (not in the <code>#SBATCH</code> block). CSCS is still working on the accounting, so that users only get billed for the GPUs they actually use; this is expected to be ready by the end of the year.</p>
+<p>MaL mentions that when selecting NUMA nodes, one has to explicitly ask the system which socket was assigned, to make sure that the binding is correct.</p>
+<p>CK asks where to report issues with ICON, as this is currently not very clear. MaL answers that it will get better once the repositories are unified on <code>icon/icon</code>. TS suggests flagging issues internally first and letting C2SM report them, since otherwise no one is clearly responsible. MaL says that this needs to be discussed further, especially given the upcoming switch to nightly-only CI testing. CK's specific issue only occurred with 24 nodes, which is why the bug was not caught by the CI.</p>
+<p>Regarding the issue with the <a href="https://www.fao.org/soils-portal/data-hub/soil-maps-and-databases/harmonized-world-soil-database-v20/en/" target="_blank">HWSD <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> (Harmonized World Soil Database) soil data in <a href="../../../tools/extpar/">EXTPAR</a>, CZ says that he has a dataset that MS can compare with the current one to evaluate its correctness. MA is also interested in this dataset from CZ.</p>
 <h3 id="christian-zemman">Christian Zemman<a class="headerlink" href="#christian-zemman" title="Permanent link">&para;</a></h3>
-<p>Working on runing European high resolution simulations (ensemble, 3km, 30 year current and 30 year future 3 degrees warming), which is a multiyear proyect.</p>
+<p>Working on European high-resolution simulations (ensemble, 3 km, 30 years of current climate and 30 years of future climate at 3 degrees of warming), which is a multi-year project.</p>
 <h3 id="prince-asilevi">Prince Asilevi<a class="headerlink" href="#prince-asilevi" title="Permanent link">&para;</a></h3>
-<p>Working at EMPA, setting ICON over west Africa, will be looking at chemistry simulations, the project duration is 5 years.</p>
+<p>Working at Empa, setting up ICON over West Africa. He will be looking at chemistry simulations; the project duration is 5 years.</p>
 <h3 id="michael-steiner">Michael Steiner<a class="headerlink" href="#michael-steiner" title="Permanent link">&para;</a></h3>
-<p>Also working on chemistry simulations on Africa, focusing on Aereosols emissions, methane and satellite data. He is using ICON-ART on Eiger (CPU). He also uses the harmonized soil dataset. He'll have some future C2SM requests: porting something to GPUs, Zonda inputs for urban modelling.</p>
+<p>Also working on chemistry simulations over Africa, focusing on aerosol emissions, methane and satellite data. He is using <a href="https://www.icon-art.kit.edu" target="_blank">ICON-ART <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> on <a href="../../../hpc/cscs/eiger/">Eiger</a> (CPU) together with the HWSD soil dataset. He will have some future requests for C2SM: porting code to GPUs and <a href="../../../tools/zonda/">Zonda</a> inputs for urban modeling.</p>
 <h3 id="christoph-riess">Christoph Riess<a class="headerlink" href="#christoph-riess" title="Permanent link">&para;</a></h3>
-<p>He is also working on ICON-ART for methane inversions, on Säntis and at a European scale.</p>
+<p>Also working on ICON-ART for methane inversions, on Säntis and at European scale.</p>
 <h3 id="andrea-stenke">Andrea Stenke<a class="headerlink" href="#andrea-stenke" title="Permanent link">&para;</a></h3>
-<p>Working on ICON-ART for simulating atmospheric tracing (selenium, arsenic, etc) on Euler. </p>
+<p>Working on ICON-ART for simulating atmospheric trace elements (selenium, arsenic, etc.) on <a href="../../../hpc/ethz/euler/">Euler</a>.</p>
 <h3 id="doris-folini">Doris Folini<a class="headerlink" href="#doris-folini" title="Permanent link">&para;</a></h3>
 <p>No update.</p>
 <h3 id="clarissa-alicia-kroll">Clarissa Alicia Kroll<a class="headerlink" href="#clarissa-alicia-kroll" title="Permanent link">&para;</a></h3>
-<p>She is working on the implementation of an extension to the damping scheme, on PBL, 5km simulations.</p>
+<p>Working on the implementation of an extension to the damping scheme in the PBL, using 5 km simulations.</p>
 <h3 id="marco-arpagaus">Marco Arpagaus<a class="headerlink" href="#marco-arpagaus" title="Permanent link">&para;</a></h3>
-<p>Working on new version of radiation topography corrections: 3d radar, homogenizing setups. They are also working on ATP: there are some issues with the model being too dry.</p>
+<p>Working on a new version of the radiation-topography corrections, 3D radar, and homogenizing setups. They are also working on ATP, where there are some issues with the model being too dry.</p>
 <h3 id="christian-steger">Christian Steger<a class="headerlink" href="#christian-steger" title="Permanent link">&para;</a></h3>
-<p>Also working on the radiation topography scheme. It is now a lot faster than before, and both gridscale and sub-grid scale should be available soon.</p>
+<p>Also working on the radiation-topography scheme. It is now considerably faster than before, and both the grid-scale and subgrid-scale versions should be available soon.</p>
 <h3 id="jacopo-canton">Jacopo Canton<a class="headerlink" href="#jacopo-canton" title="Permanent link">&para;</a></h3>
-<p>Working on EXCLAIM on icon4py. He wants input from the ICON community on what would be nice to have on icon4py. CZ said that having an overview would be a good start.</p>
+<p>Working within <a href="https://exclaim.ethz.ch" target="_blank">EXCLAIM <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> on <a href="https://github.com/C2SM/icon4py" target="_blank">ICON4Py <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> (see also the <a href="../../../2026-09-25-icon4py-dynamical-core-merged-into-icon-master/">news post on the ICON4Py dynamical core</a>). He would like input from the ICON community on which features would be useful in ICON4Py. CZ says that an overview would be a good start.</p>
 
 
 
@@ -5927,7 +5927,7 @@ Jacopo Canton (JC)</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 1, 2026 09:42:13 UTC">October 1, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 1, 2026 09:59:04 UTC">October 1, 2026</span>
   </span>
 
     
@@ -5937,7 +5937,7 @@ Jacopo Canton (JC)</p>
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 1, 2026 09:42:13 UTC">October 1, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 1, 2026 09:59:04 UTC">October 1, 2026</span>
   </span>
 
     
