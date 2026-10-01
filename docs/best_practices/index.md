@@ -20,7 +20,7 @@ Additionally, our data handling section provides guidelines for effective data m
 
     Guidelines for effective data management, including ETH resources, data repositories and licensing advice.
 
-    [:octicons-arrow-right-24: Data Handling](data_handling/SUMMARY.md)
+    [:octicons-arrow-right-24: Data Handling](data_handling/index.md)
 
 -   :material-robot-outline:{ .lg .middle } **GitHub Copilot**
 
