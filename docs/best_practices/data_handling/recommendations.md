@@ -333,7 +333,7 @@ files in order to record reasons for changes, compare with and
 incorporate versions from other people, have multiple people working on
 the same code, and maintain several parallel versions of the same code
 in a systematic way. Git is designed for collaborative, open source
-workflows (see e.g. [C2SM git courses](../../events/git_courses.md)). However, GIT does not
+workflows, [see here](../coding/coding.md). However, GIT does not
 continuously sync like other tools (polybox, dropbox) but you need to actively synchronize
 local and remote versions. GIT is a versioning system for code not data
 (do not upload large data volumes). Note that these platforms do not
