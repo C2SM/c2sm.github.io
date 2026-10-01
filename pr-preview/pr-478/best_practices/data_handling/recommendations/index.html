@@ -6852,12 +6852,13 @@ irrelevant data, is frequently considered primary data. As a rule of
 thumb, primary data is data for which there exists no previous
 incarnation. The researcher, considering conventions in their
 field, defines what exactly to archive as primary data.</p>
-<blockquote>
-<p><strong>Primary data examples:</strong> Weather and climate model simulations,
-reanalysis data sets, measurements from field instruments, etc.
-Remember that the user has to decide themselves what exactly has to
-be declared as primary data.</p>
-</blockquote>
+<div class="admonition example">
+<p class="admonition-title">Primary data examples</p>
+<p>Weather and climate model simulations, reanalysis data sets,
+measurements from field instruments, etc. Remember that the user has
+to decide themselves what exactly has to be declared as primary
+data.</p>
+</div>
 <h4 id="211-raw-data">2.1.1 Raw data<a class="headerlink" href="#211-raw-data" title="Permanent link">&para;</a></h4>
 <p>Raw data can be defined as data that has not been processed,
 transformed, or analysed since its initial collection from a physical
@@ -6868,28 +6869,24 @@ quality control, calibration equations, or physical unit conversions are
 applied. Because physical observations cannot be replicated if the
 original source files are lost, archiving raw data (alongside its
 metadata) is critical for long-term data provenance.</p>
-<ul>
-<li>
-<p><strong>Raw data examples:</strong> Raw voltage signals or unprocessed,
-  high-frequency digital data from eddy covariance towers, output
-  retrieved from field data loggers, uncalibrated digital counts from
-  satellite sensors, raw binary data from weather radars, or handwritten
-  field logs.</p>
-</li>
-<li>
-<p><strong>Storage Recommendation:</strong> Raw data must <strong>never</strong> be stored
-  exclusively on local hard drives or instrument laptops. During active
-  research, it must be stored on secure, redundant network storage
-  provided by your departmental IT Service Group (ISG) or central IT
-  Services (e.g., central NAS or replicated S3 buckets) of your
-  institution. For the mandatory 10-year preservation phase, raw
-  datasets suitable for publication can be archived in the ETH Library's
-  institutional repository (ETH Research Collection), which automatically
-  pushes data to the geo-redundant ETH Data Archive for long-term
-  preservation. Large data volumes should instead be archived on
-  tape-based long-term storage (see <a href="#6-archiving-data">Section 6</a>).</p>
-</li>
-</ul>
+<div class="admonition example">
+<p class="admonition-title">Raw data examples</p>
+<p>Raw voltage signals or unprocessed, high-frequency digital data from
+eddy covariance towers, output retrieved from field data loggers,
+uncalibrated digital counts from satellite sensors, raw binary data
+from weather radars, or handwritten field logs.</p>
+</div>
+<p><strong>Storage recommendation:</strong> Raw data must <strong>never</strong> be stored
+exclusively on local hard drives or instrument laptops. During active
+research, it must be stored on secure, redundant network storage
+provided by your departmental IT Service Group (ISG) or central IT
+Services (e.g., central NAS or replicated S3 buckets) of your
+institution. For the mandatory 10-year preservation phase, raw
+datasets suitable for publication can be archived in the ETH Library's
+institutional repository (ETH Research Collection), which automatically
+pushes data to the geo-redundant ETH Data Archive for long-term
+preservation. Large data volumes should instead be archived on
+tape-based long-term storage (see <a href="#6-archiving-data">Section 6</a>).</p>
 <h4 id="212-original-simulation-output">2.1.2 Original simulation output<a class="headerlink" href="#212-original-simulation-output" title="Permanent link">&para;</a></h4>
 <p>While often categorised broadly as primary data, original simulation
 output must be distinguished from observational raw data. It refers to
@@ -6898,41 +6895,37 @@ numerical weather prediction (NWP) or climate model run. This data is in
 its native grid and time step, containing all prognostic variables
 before any spatial interpolation, temporal averaging (e.g., monthly
 means), or diagnostic variable calculations occur.</p>
-<ul>
-<li>
-<p><strong>Original simulation output examples:</strong> Raw history or restart files
-  directly from an atmospheric/oceanic general circulation model (GCM),
-  or native-grid output from a high-resolution regional climate model
-  (RCM).</p>
-</li>
-<li>
-<p><strong>Storage Recommendation:</strong> Active simulation runs are typically
-  generated on high-performance computing (HPC) scratch spaces. Because
-  scratch space is not backed up and is subject to automated purging,
-  critical outputs must be moved immediately upon run completion. Due to
-  the massive volume of climate files, storing all original output on
-  standard redundant disk storage is often financially or technically
-  unfeasible. In alignment with Art. 5 of the ETH RDM Guidelines, if the
-  data is too large for standard redundant storage, the researcher must
-  secure the exact code version (e.g., on gitlab.ethz.ch), namelists,
-  seeding keys, and boundary conditions required to deterministically
-  <em>recreate</em> the simulation. If the native files themselves are
-  irreplaceable, they must be moved to Tape-Based Long-Term Storage
-  (LTS) provided by ETH IT Services or CSCS.</p>
-</li>
-</ul>
+<div class="admonition example">
+<p class="admonition-title">Original simulation output examples</p>
+<p>Raw history or restart files directly from an atmospheric/oceanic
+general circulation model (GCM), or native-grid output from a
+high-resolution regional climate model (RCM).</p>
+</div>
+<p><strong>Storage recommendation:</strong> Active simulation runs are typically
+generated on high-performance computing (HPC) scratch spaces. Because
+scratch space is not backed up and is subject to automated purging,
+critical outputs must be moved immediately upon run completion. Due to
+the massive volume of climate files, storing all original output on
+standard redundant disk storage is often financially or technically
+unfeasible. In alignment with Art. 5 of the ETH RDM Guidelines, if the
+data is too large for standard redundant storage, the researcher must
+secure the exact code version (e.g., on gitlab.ethz.ch), namelists,
+seeding keys, and boundary conditions required to deterministically
+<em>recreate</em> the simulation. If the native files themselves are
+irreplaceable, they must be moved to Tape-Based Long-Term Storage
+(LTS) provided by ETH IT Services or CSCS.</p>
 <h3 id="22-derived-data">2.2 Derived data<a class="headerlink" href="#22-derived-data" title="Permanent link">&para;</a></h3>
 <p>In addition to the primary data, for a data package you should include
 as a minimum all datasets necessary to reproduce the figures, tables,
 and individual numbers in the running text that are presented in the
 main paper and the supporting information. In case you decide to delete
 some of your primary data, archiving derived data is essential.</p>
-<blockquote>
-<p><strong>Derived data examples</strong>: Weather feature climatologies, trend
-analyses, etc. These data are produced from the primary data using
-programs and scripts (Fortran, Shell scripts, Python, R, Matlab, NCL,
-etc.)</p>
-</blockquote>
+<div class="admonition example">
+<p class="admonition-title">Derived data examples</p>
+<p>Weather feature climatologies, trend analyses, etc. These data are
+produced from the primary data using programs and scripts (Fortran,
+Shell scripts, Python, R, Matlab, NCL, etc.)</p>
+</div>
 <h4 id="221-processed-data">2.2.1 Processed data<a class="headerlink" href="#221-processed-data" title="Permanent link">&para;</a></h4>
 <p>Processed data refers to data which was processed in a certain way, for
 example averaging over certain time periods, like calculating monthly
@@ -6999,11 +6992,12 @@ further help to understand your work or build on your results. This
 includes, for example, photos and figures of a related publication and
 its supporting information, maps, pointers to related resources such as
 the project website, etc.</p>
-<blockquote>
-<p><strong>Examples:</strong> Written report or presentation, paper, thesis. The
-report is created based on the processed data (Word, LaTeX,
-Powerpoint, visualisation software).</p>
-</blockquote>
+<div class="admonition example">
+<p class="admonition-title">Ancillary information examples</p>
+<p>Written report or presentation, paper, thesis. The report is created
+based on the processed data (Word, LaTeX, Powerpoint, visualisation
+software).</p>
+</div>
 <h3 id="25-third-party-data">2.5 Third-party data<a class="headerlink" href="#25-third-party-data" title="Permanent link">&para;</a></h3>
 <p>Third-party data is data used for research, but which has not been
 created within the frame of the respective research project. It is
@@ -7771,7 +7765,7 @@ guidelines were written by humans and enhanced using AI.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 1, 2026 14:53:33 UTC">October 1, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 1, 2026 15:49:48 UTC">October 1, 2026</span>
   </span>
 
     
@@ -7781,7 +7775,7 @@ guidelines were written by humans and enhanced using AI.</p>
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 1, 2026 14:53:33 UTC">October 1, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 1, 2026 15:49:48 UTC">October 1, 2026</span>
   </span>
 
     
