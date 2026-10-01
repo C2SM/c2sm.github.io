@@ -425,14 +425,13 @@ pain to process programmatically:
 - Dates in filenames (and pretty much everywhere else) should have one
   of the below formats:
 
-  1.  YYYYMMDD
+    1. YYYYMMDD
+    2. YYYYMM
+    3. YYYY
 
-  2.  YYYYMM
-
-  3.  YYYY
-
-> Of course, you can also use hyphens between the individual name parts,
-> e.g., YYYY-MM-DD.
+    !!! note
+        Of course, you can also use hyphens between the individual name
+        parts, e.g., YYYY-MM-DD.
 
 - Numbers as part of file names should be left padded with zeros, for
   example: site01_logger001.csv, ..., site12_logger328.csv
