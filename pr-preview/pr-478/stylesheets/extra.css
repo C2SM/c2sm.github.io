@@ -4,7 +4,7 @@
 }
 [data-md-color-scheme="slate"] {
     --md-primary-fg-color:        #00305d;
-    --md-hue: 210; 
+    --md-hue: 210;
 }
 
 [data-md-color-scheme=c2sm-light] img[src$="#only-dark"],
@@ -44,4 +44,10 @@ tr,
 th,
 td {
   border: none !important;
+}
+
+@media print {
+  nav, footer, .sidebar { display: none; } /* Hide web UI */
+  h2 { page-break-before: always; }       /* Start each subsection on a new page */
+  body { font-size: 12pt; color: #000; }
 }
