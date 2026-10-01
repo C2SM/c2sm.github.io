@@ -1,5 +1,3 @@
-# C2SM Data Management Recommendations
-
 ---
 title: "C2SM Data Management Recommendations"
 
@@ -51,6 +49,8 @@ affiliations:
 
 date: 2026-10-01
 ---
+
+# C2SM Data Management Recommendations
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -323,7 +323,8 @@ It is good practice to use source code versioning systems such as
 [GIT :material-open-in-new:](https://git-scm.com/){:target="_blank"}.
 Applications are for instance provided by ETH at
 <https://gitlab.ethz.ch/> and WSL provides its own Git repository at
-[code.wsl.ch](code.wsl.ch){:target="_blank"}. [EMPA :material-open-in-new:](https://gitlab.empa.ch/){:target="_blank"},
+[code.wsl.ch :material-open-in-new:](https://code.wsl.ch){:target="_blank"}.
+[EMPA :material-open-in-new:](https://gitlab.empa.ch/),
 [eawag :material-open-in-new:](https://gitlab.eawag.ch/){:target="_blank"}, and
 [MeteoSwiss :material-open-in-new:](https://service.meteoswiss.ch/git){:target="_blank"} also have their own
 gitlab instances and [IAC :material-open-in-new:](https://git.iac.ethz.ch/){:target="_blank"} provides an
@@ -358,7 +359,7 @@ recommendations. For example, CSCS provides state-of-the-art tools for
 running container workloads on HPC systems, (e.g.
 [podman :material-open-in-new:](https://podman.io/){:target="_blank"}).
 
-#### 3.2 Third-party code
+### 3.2 Third-party code
 
 Similar to third-party data, copyrighted third-party code should not be
 included in the data package. Instead you should refer to exactly the
@@ -367,7 +368,7 @@ repository committed to long-term preservation. For open-source
 third-party code, make sure that all dependencies (including versions)
 are provided explicitly and containerized with your source code.
 
-#### 3.3 Proprietary software
+### 3.3 Proprietary software
 
 These recommendations might not be fully workable if you use proprietary
 third-party software, libraries, languages, or tool-chains. Aim at using
@@ -518,7 +519,7 @@ pain to process programmatically:
 
 If a file naming scheme is employed, it should be descriptive and
 consistent. Encode attributes of a file as alphanumeric strings
-separated by underscores ( \_ ). See for instance the file nameing
+separated by underscores ( \_ ). See for instance the file naming
 convention defined for
 [CMIP7 :material-open-in-new:](https://wcrp-cmip.github.io/cmip7-guidance/docs/CMIP7/Global_Attributes/#2-filenames){:target="_blank"}.
 
@@ -582,7 +583,7 @@ algorithm is too complicated. If your algorithm is not reasonable,
 documentation will make life (later) a little easier, but it will not
 'rescue' you.
 
-**4.3.3 README file**
+#### 4.3.3 README file
 
 Always place in the directory of the data a README file that describes
 the data set in sufficient detail (e.g. programs, scripts used to create
@@ -712,15 +713,11 @@ properly identify research data in order to be able to share, reproduce
 and reuse it.
 
 These data policy regulations have been formalised under the
-[[FAI :material-open-in-new:](https://www.go-fair.org/fair-principles/){:target="_blank"}​[R :material-open-in-new:](https://www.go-fair.org/fair-principles/){:target="_blank"}]{.underline}
-[[principles]{.underline},](https://www.go-fair.org/fair-principles/)[​]{.underline}
+[FAIR](https://www.go-fair.org/fair-principles/)
 which are widely recognised. For detailed explanations of these
-principles, it is strongly advised to read [[SNF's]{.underline}
-[document]{.underline} [on]{.underline} [FAIR]{.underline}
-[principles]{.underline}.](http://www.snf.ch/SiteCollectionDocuments/FAIR_principles_translation_SNSF_logo.pdf)[​]{.underline}
+principles, it is strongly advised to read [SNSF's document on FAIR principles](http://www.snf.ch/SiteCollectionDocuments/FAIR_principles_translation_SNSF_logo.pdf)
 Generally speaking, it is very valuable to familiarise with the SNSF
-policy in terms of [[open research
-dat](http://www.snf.ch/en/theSNSF/research-policies/open_research_data/Pages/default.aspx)​[a :material-open-in-new:](http://www.snf.ch/en/theSNSF/research-policies/open_research_data/Pages/default.aspx){:target="_blank"}]{.underline}.​
+policy in terms of [open research data](http://www.snf.ch/en/theSNSF/research-policies/open_research_data/Pages/default.aspx).​
 
 ### 5.1 Documentation for reproducibility
 
@@ -737,9 +734,9 @@ useful to describe parts of it in separate README-files, perhaps located
 in sub-directories.
 
 The publication proper (article, report) usually contains indispensable
-scientific metadata. Please include the [[DOI :material-open-in-new:](https://www.doi.org/){:target="_blank"} of
-the publication]{.underline} as a resource of the package (see
-[[example]{.underline})](https://doi.org/10.1177/2053019617740365).
+scientific metadata. Please include the [DOI](https://www.doi.org/) of
+the publication as a resource of the package (see
+[example](https://doi.org/10.1177/2053019617740365)).
 
 ### 5.2 Data Repositories
 
@@ -748,9 +745,7 @@ terms of what they offer as services, how they are indexed on search
 engines, whether they provide their service for free or not, etc. In
 order to find the best suited data repository, it is very helpful to
 search in the
-[[Registr]{.underline}](https://www.re3data.org/)​[[y]{.underline}
-[of]{.underline} [Research]{.underline} [Data]{.underline}
-[Repositories]{.underline}](https://www.re3data.org/),​ which nicely
+[Registry of Research Data Repositories](https://www.re3data.org/),​ which nicely
 classifies repositories by a large amount of search criteria.
 
 It is important to note that SNSF defines criteria for an acceptable
@@ -758,9 +753,7 @@ data repository, i.e., which complies with their open research data
 policy:
 
 - it must be non-commercial (as identified in the registry of
-  [[researc]{.underline}](https://www.re3data.org/)​[[h]{.underline}
-  [data]{.underline} [repositories]{.underline}
-  [re3data]{.underline}](https://www.re3data.org/))​
+  [research data repositories re3data](https://www.re3data.org/))​
 
 - it must offer globally unique and persistent identifiers (e.g. a DOI)
 
@@ -776,27 +769,21 @@ policy:
 - it has a long-term preservation plan
 
 Among choices validated by SNSF, we specifically recommend to use the
-[[ETH]{.underline}
-[Research]{.underline}](http://www.research-collection.ethz.ch/)
-
-[[Collection]{.underline}](http://www.research-collection.ethz.ch/)
+[ETH Research Collection](http://www.research-collection.ethz.ch/)
 together with the
-[[ET :material-open-in-new:](https://www.library.ethz.ch/en/ms/Forschungsdatenmanagement-und-Datenerhalt/ETH-Data-Archive){:target="_blank"}​[H :material-open-in-new:](https://www.library.ethz.ch/en/ms/Forschungsdatenmanagement-und-Datenerhalt/ETH-Data-Archive){:target="_blank"}]{.underline}
-[[Data]{.underline}
-[Archive]{.underline}](https://www.library.ethz.ch/en/ms/Forschungsdatenmanagement-und-Datenerhalt/ETH-Data-Archive),
-[Envi :material-open-in-new:](https://www.envidat.ch/#/){:target="_blank"}Dat for WSL,
-[ERIC :material-open-in-new:](https://opendata.eawag.ch/){:target="_blank"} for eawag or
-​[[Zenodo :material-open-in-new:](https://www.zenodo.org/){:target="_blank"}​]{.underline}. All are safe, support
-the
-[[FAI :material-open-in-new:](https://www.force11.org/group/fairgroup/fairprinciples){:target="_blank"}​[R :material-open-in-new:](https://www.force11.org/group/fairgroup/fairprinciples){:target="_blank"}]{.underline}
-[[Principles]{.underline}](https://www.force11.org/group/fairgroup/fairprinciples)
+[ETH Data Archive](https://www.library.ethz.ch/en/ms/Forschungsdatenmanagement-und-Datenerhalt/ETH-Data-Archive),
+[EnviDat](https://www.envidat.ch/#/) for WSL,
+[ERIC](https://opendata.eawag.ch/) for eawag or
+​[Zenodo](https://www.zenodo.org/).
+All are safe, support the
+[FAIR Principles](https://www.force11.org/group/fairgroup/fairprinciples)
 and offer excellent visibility of your data on the world wide web. While
 the ETH Data Archive has the advantage of being the in-house solution,
 at Zenodo, there is a 50 GB per dataset limit, but registered groups may
 upload as many datasets as desired, the total repository size being
 several petabytes, with constant annual increase. This is not true for
 the ETH Research Collection where fees apply above 1 TB of upload per
-ETH research group. [Envidat...]{.mark}
+ETH research group.
 
 Please note that in the very specific context of article self-archiving,
 i.e., re-publication of the accepted or published version of an article
@@ -1025,7 +1012,7 @@ tape archive at ETH and the one at CSCS:
 - Files smaller than 10 GB are not suitable for tape archiving
 
 - Files adding to tape archive should be ideally already compressed (see
-  [link to compression]{.mark})
+  [link to compression](compression.md))
 
 - Group files smaller than 10 GB into .tar.gz or .tar files (in case the
   data is already compressed)
