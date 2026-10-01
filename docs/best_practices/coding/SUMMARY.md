@@ -1,2 +1,2 @@
-* [Coding](index.md)
-* [GitHub Copilot](github-copilot.md)
+* [Version Control and Testing](index.md)
+* [GitHub Copilot](../github-copilot.md)

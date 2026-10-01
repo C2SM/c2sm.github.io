@@ -28,6 +28,6 @@ Additionally, our data handling section provides guidelines for effective data m
 
     An overview of GitHub Copilot, the AI-powered code completion tool, and how to get access.
 
-    [:octicons-arrow-right-24: GitHub Copilot](coding/github-copilot.md)
+    [:octicons-arrow-right-24: GitHub Copilot](github-copilot.md)
 
 </div>
