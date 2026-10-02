@@ -7,12 +7,12 @@ Compression can considerably reduce disk space usage and the time needed for dat
 
 ## Lossless vs. lossy compression
 
-| | Lossless | Lossy |
-|---|---|---|
-| Principle | Restores the file to its original state, without the loss of a single bit | Permanently removes bits that are redundant, unimportant, or imperceptible |
-| Typical use | Measured and simulated data, archives | Graphics, audio, video, images; depending on the use case also measured or simulated data |
-| Reversible | :material-check: Yes | :material-close: No |
-| File size | Smaller | Usually smallest |
+|                 | Lossless | Lossy |
+|-----------------|---|---|
+| **Principle**   | Restores the file to its original state, without the loss of a single bit | Permanently removes bits that are redundant, unimportant, or imperceptible |
+| **Typical use** | Measured and simulated data, archives | Graphics, audio, video, images; depending on the use case also measured or simulated data |
+| **Reversible**  | :material-check: Yes | :material-close: No |
+| **File size**   | Smaller | Usually smallest |
 
 ## Working with compressed files
 
@@ -35,7 +35,7 @@ Lossless compression in netCDF4 is based on the zlib library. The following para
 
 ### Tools
 
-- **nccopy**
+=== "nccopy"
 
     Part of every netCDF4 installation. Allows setting the compression level, the shuffling option, and chunk sizes.
 
@@ -47,7 +47,7 @@ Lossless compression in netCDF4 is based on the zlib library. The following para
     nccopy -d 1 -s -c time/1,lat/180,lon/360 input.nc output.nc
     ```
 
-- **NCO (ncks)**
+=== "NCO (ncks)
 
     The `ncks` command is part of the [NCO :material-open-in-new:](https://nco.sourceforge.net/nco.html){:target="_blank"} toolkit and offers extensive chunking options.
 
@@ -58,7 +58,7 @@ Lossless compression in netCDF4 is based on the zlib library. The following para
     !!! info "IAC systems"
         On IAC systems, the script `nczip` is installed. It is a wrapper around `ncks` and compresses or decompresses a single netCDF file or all netCDF files in a folder.
 
-- **CDO**
+=== "CDO"
 
     [Climate Data Operators :material-open-in-new:](https://code.mpimet.mpg.de/projects/cdo){:target="_blank"} can compress netCDF files, but offer fewer chunking options than NCO.
 
@@ -66,11 +66,11 @@ Lossless compression in netCDF4 is based on the zlib library. The following para
     cdo -f nc4 -z zip_1 copy input.nc output.nc
     ```
 
-- **nccompress**
+=== "nccompress"
 
     [nccompress :material-open-in-new:](https://github.com/coecms/nccompress){:target="_blank"} is another alternative to `nczip` for batch compression of netCDF files.
 
-- **Source code**
+=== "Source code"
 
     Compression settings can also be specified directly in the source code when creating netCDF variables, e.g., via the Fortran, R, or Python interfaces.
 
@@ -97,7 +97,7 @@ Lossy compression can achieve ratios of 10–50× for climate and weather data, 
 
 - **C2SM dc_toolkit**
 
-    The [data-compression :material-open-in-new:](https://github.com/C2SM/data-compression){:target="_blank"} toolkit systematically searches for the best compression pipeline for your data and verifies the result against a user-defined error threshold. See [C2SM data-compression toolkit](#c2sm-data-compression-toolkit) below.
+    The [data-compression :material-open-in-new:](https://github.com/C2SM/data-compression){:target="_blank"} toolkit systematically searches for the best compression pipeline for your data and verifies the result against a user-defined error threshold. See [C2SM data-compression toolkit](#c2sm-data-compression-toolkit-dc_toolkit) below.
 
 ## C2SM data-compression toolkit (dc_toolkit)
 
@@ -113,11 +113,11 @@ The [**dc_toolkit**](https://github.com/C2SM/data-compression) automates the sea
 
 **Compression pipeline** — compression is applied in up to three stages:
 
-| Stage | Role | Examples |
-|---|---|---|
-| Serialiser | Converts floating-point values into bytes | `zfp`, `EBCC`, `FixedScaleOffset` |
-| Filter | Pre-processes data to improve compressibility | `Delta`, `BitRound`, `AsType` |
-| Compressor | Applies a byte-level codec | `Zstd`, `Blosc`, `LZ4` |
+| Stage          | Role | Examples |
+|----------------|---|---|
+| **Serialiser** | Converts floating-point values into bytes | `zfp`, `EBCC`, `FixedScaleOffset` |
+| **Filter**     | Pre-processes data to improve compressibility | `Delta`, `BitRound`, `AsType` |
+| **Compressor** | Applies a byte-level codec | `Zstd`, `Blosc`, `LZ4` |
 
 Note: Community recommendations — the ESiWACE3 project publishes [community recommendations :material-open-in-new:](https://compression-recommendations.readthedocs.io){:target="_blank"} specifying the maximum permissible error for ERA5 variables. These can be used as the gate of a sweep as a replacement for manual error thresholds.
 
@@ -125,19 +125,19 @@ Note: Community recommendations — the ESiWACE3 project publishes [community re
 
 1. `evaluate_combos` — sweeps the codec space on a sample of each field and writes the best pipeline into a json file: 
 
-```bash
-dc_toolkit evaluate_combos input.nc \
-  --where-to-write ./path_to_folder \
-  --field-to-compress field \
-  --l1-threshold 0.005 \        # relative L1 error budget (0.5 %)
-  --eval-data-size-limit 5GB
-```
+    ```bash
+    dc_toolkit evaluate_combos input.nc \
+      --where-to-write ./path_to_folder \
+      --field-to-compress field \
+      --l1-threshold 0.005 \        # relative L1 error budget (0.5 %)
+      --eval-data-size-limit 5GB
+    ```
 
 2. `compress` — writes all fields into a shared `.zarr` store and re-reads every field to verify the stored data meets the original thresholds:
 
-```bash
-dc_toolkit compress input.nc ./out
-```
+    ```bash
+    dc_toolkit compress input.nc ./out
+    ```
 
 ### Compression libraries
 
