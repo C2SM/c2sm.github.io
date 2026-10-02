@@ -49,7 +49,7 @@ Lossless compression in netCDF4 is based on the zlib library. The following para
     nccopy -d 1 -s -c time/1,lat/180,lon/360 input.nc output.nc
     ```
 
-=== "NCO (ncks)
+=== "NCO (ncks)"
 
     The `ncks` command is part of the [NCO :material-open-in-new:](https://nco.sourceforge.net/nco.html){:target="_blank"} toolkit and offers extensive chunking options.
 
