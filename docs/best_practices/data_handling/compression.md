@@ -28,7 +28,7 @@ Compressed files such as `*.gz`, `*.zip`, or `*.bz2` normally need to be uncompr
 
 Lossless compression in netCDF4 is based on the zlib library. The following parameters can be tuned:
 
-- *Compression level*: ranges from 1 (least aggressive) to 9 (most aggressive). Level 1 requires moderate CPU and memory resources and is sufficient for most purposes. Higher levels usually produce smaller files, but at a higher processing cost when packing and unpacking.
+- *Compression level*: ranges from 1 (least aggressive) to 9 (most aggressive). Level 1 requires moderate CPU and memory resources and is sufficient for most purposes. Higher levels usually produce smaller files, but at a higher processing cost when packing and unpacking and often for a marginal additional gain.
 - *Chunk sizes*: compression operates on data chunks. These should match the data blocks that are typically accessed at the same time.
 - *Shuffling*: often further reduces the data size.
 - *Unlimited dimensions*: remove unneeded unlimited dimensions, as they may reduce the compression efficiency.
