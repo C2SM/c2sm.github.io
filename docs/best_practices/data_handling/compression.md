@@ -19,7 +19,7 @@ Compression can considerably reduce disk space usage and the time needed for dat
 Compressed files such as `*.gz`, `*.zip`, or `*.bz2` normally need to be uncompressed before they can be used again. There are alternatives, however:
 
 - Linux commands such as `zless`, `zcat`, `zdiff`, and `zgrep` handle compressed files on the fly.
-- Scripting languages such as R, Python, Matlab, or IDL can read compressed files directly.
+- many packages from scripting languages such as R, Python, Matlab, or IDL can read compressed files directly.
 
 ## Standard lossless methods
 
