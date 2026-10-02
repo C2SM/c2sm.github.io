@@ -21,7 +21,7 @@ However, compressing and decompressing data consumes CPU and memory resources, c
 Compressed files such as `*.gz`, `*.zip`, or `*.bz2` normally need to be uncompressed before they can be used again. There are alternatives, however:
 
 - Linux commands such as `zless`, `zcat`, `zdiff`, and `zgrep` handle compressed files on the fly.
-- Scripting languages such as R, Python, Matlab, or IDL can read compressed files directly.
+- many packages from scripting languages such as R, Python, Matlab, or IDL can read compressed files directly.
 
 ## Standard lossless methods
 
@@ -30,7 +30,7 @@ Compressed files such as `*.gz`, `*.zip`, or `*.bz2` normally need to be uncompr
 
 Lossless compression in netCDF4 is based on the zlib library. The following parameters can be tuned:
 
-- *Compression level*: ranges from 1 (least aggressive) to 9 (most aggressive). Level 1 requires moderate CPU and memory resources and is sufficient for most purposes. Higher levels usually produce smaller files, but at a higher processing cost when packing and unpacking.
+- *Compression level*: ranges from 1 (least aggressive) to 9 (most aggressive). Level 1 requires moderate CPU and memory resources and is sufficient for most purposes. Higher levels usually produce smaller files, but at a higher processing cost when packing and unpacking and often for a marginal additional gain.
 - *Chunk sizes*: compression operates on data chunks. These should match the data blocks that are typically accessed at the same time.
 - *Shuffling*: often further reduces the data size.
 - *Unlimited dimensions*: remove unneeded unlimited dimensions, as they may reduce the compression efficiency.
@@ -85,7 +85,7 @@ Lossless compression in netCDF4 is based on the zlib library. The following para
 ## Lossy algorithms
 
 !!! warning "Use with care"
-    Lossy compression permanently removes information that annot be restored. Always verify that the error introduced is acceptable for your use case before archiving or sharing data.
+    Lossy compression permanently removes information that cannot be restored. Always verify that the error introduced is acceptable for your use case before archiving or sharing data.
 
 Lossy compression can achieve ratios of 10–50× for climate and weather data, far beyond what lossless methods offer. Available tools include:
 
