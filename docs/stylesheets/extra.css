@@ -4,7 +4,15 @@
 }
 [data-md-color-scheme="slate"] {
     --md-primary-fg-color:        #00305d;
-    --md-hue: 210; 
+    --md-hue: 210;
+}
+[data-md-color-scheme="slate"] .md-typeset .md-button {
+    color: #339cdd;
+    border-color: #339cdd;
+}
+[data-md-color-scheme="slate"] .md-typeset .md-button:hover {
+    color: #ffffff;
+    background-color: #339cdd;
 }
 
 [data-md-color-scheme=c2sm-light] img[src$="#only-dark"],
@@ -44,4 +52,10 @@ tr,
 th,
 td {
   border: none !important;
+}
+
+/* Print layout only for pages containing a print button */
+@media print {
+  .print-button { display: none; }
+  .md-typeset:has(.print-button) h2 ~ h2 { break-before: page; }
 }
