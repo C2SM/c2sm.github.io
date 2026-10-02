@@ -1,6 +1,8 @@
 # Data Compression
 
-Compression can considerably reduce disk space usage and the time needed for data transfer. However, compressing and decompressing data consumes CPU and memory resources and can slow down read and write operations.
+Compression can considerably reduce disk space usage and the time needed for data transfer. 
+
+However, compressing and decompressing data consumes CPU and memory resources, can slow down read and write operations, and bring potential loss of information depending on the chosen compression strategy.
 
 !!! tip "When to compress"
     Ideally, compress data that is not accessed frequently. Compression is highly recommended for data that is stored in an archive (see [Archiving Data](recommendations.md#6-archiving-data)).
