@@ -1,24 +1,91 @@
 # Data Compression
 
-Compression of data can considerably reduce disk space usage and the time for data transfer. Compressing data can be a lossless or lossy process. Lossless compression enables the restoration of a file to its original state, without the loss of a single bit of data. Lossy compression permanently eliminates bits of data that are redundant, unimportant or imperceptible. Lossy compression is useful for graphics, audio, video and images, where the removal of some data bits has little or no discernible effect on the representation of the content. Depending on the use case, lossy compression can also be applied to measured or simulated data.
+Compression can considerably reduce disk space usage and the time needed for data transfer. However, compressing and decompressing data consumes CPU and memory resources and can slow down read and write operations.
 
-Compression and decompression use CPU and memory resources and can have a negative impact on read and write performance. Ideally, data that is not accessed much should be compressed. It is highly recommended for data that is stored in an archive.
+!!! tip "When to compress"
+    Ideally, compress data that is not accessed frequently. Compression is highly recommended for data that is stored in an archive (see [Archiving Data](recommendations.md#6-archiving-data)).
 
-Compressed files, like *.gz, *.zip, *.bz files normally need to be uncompressed before they can be used again. But there are alternatives. Linux commands, like zless, zcat, zdiff, zgrep, etc. can handle compressed files on the fly. The same is true for file access from scripting languages like R, python, Matlab or IDL.
+## Lossless vs. lossy compression
+
+| | Lossless | Lossy |
+|---|---|---|
+| **Principle** | Restores the file to its original state, without the loss of a single bit | Permanently removes bits that are redundant, unimportant, or imperceptible |
+| **Typical use** | Measured and simulated data, archives | Graphics, audio, video, images; depending on the use case also measured or simulated data |
+| **Reversible** | :material-check: Yes | :material-close: No |
+| **File size** | Smaller | Usually smallest |
+
+## Working with compressed files
+
+Compressed files such as `*.gz`, `*.zip`, or `*.bz2` normally need to be uncompressed before they can be used again. There are alternatives, however:
+
+- Linux commands such as `zless`, `zcat`, `zdiff`, and `zgrep` handle compressed files on the fly.
+- Scripting languages such as R, Python, Matlab, or IDL can read compressed files directly.
 
 ## Standard lossless methods
-   * netcdf4 library and all the tools compiled with netcdf4 support seamlessly integrate compression
-   * We recommend lossless compressed netcdf4 files for many cases
-      * Lossless compression in netcdf4 is based on the zlib library. The level of compression can be adjusted between 1 (least aggressive) and 9 (most aggressive compression). The minimum compression requires moderate CPU and memory resources and is sufficient for most purposes. Higher levels should usually result in smaller compressed files, but come with larger processing costs when packing/unpacking. For fine tuning netcdf compression, it is possible to set the size of data chunks on which the compression operates. These chunks should match typical data blocks that have to be accessed at the same time. Furthermore, the shuffling option is often a possibility to further reduce data size. Finally, it is advantageous to remove unneeded unlimited dimensions from a netcdf file as they may reduce the efficiency of compression.
-   * On IAC systems the script nczip is installed. The nczip script is a wrapper around ncks and can be used to compress and decompress a netcdf file or a bunch of netcdf files in a folder. The command ncks is part of NCO.
-   * Good results can also be obtained with the nccopy command which is part of every netcdf4 installation. nccopy allows setting the compression level, shuffling option, and even chunk sizes.
-   * Another alternative to nczip is nccompress
-   * Climate Data Operators (cdo) can compress netCDF, but offers limited chunking options compared to NCO
-   * Compression details can also directly be set in source code when creating netcdf variables (e.g., FORTRAN, R, python interfaces)
+
+!!! success "Recommendation"
+    We recommend **lossless compressed netCDF4** files for most use cases. The netCDF4 library, and all tools compiled with netCDF4 support, integrate compression seamlessly.
+
+Lossless compression in netCDF4 is based on the zlib library. The following parameters can be tuned:
+
+- **Compression level**: ranges from 1 (least aggressive) to 9 (most aggressive). Level 1 requires moderate CPU and memory resources and is sufficient for most purposes. Higher levels usually produce smaller files, but at a higher processing cost when packing and unpacking.
+- **Chunk sizes**: compression operates on data chunks. These should match the data blocks that are typically accessed at the same time.
+- **Shuffling**: often further reduces the data size.
+- **Unlimited dimensions**: remove unneeded unlimited dimensions, as they may reduce the compression efficiency.
+
+### Tools
+
+=== "nccopy"
+
+    Part of every netCDF4 installation. Allows setting the compression level, the shuffling option, and chunk sizes.
+
+    ```bash
+    # Compression level 1 with shuffling
+    nccopy -d 1 -s input.nc output.nc
+
+    # Additionally set chunk sizes per dimension
+    nccopy -d 1 -s -c time/1,lat/180,lon/360 input.nc output.nc
+    ```
+
+=== "NCO (ncks)"
+
+    The `ncks` command is part of the [NCO :material-open-in-new:](https://nco.sourceforge.net/nco.html){:target="_blank"} toolkit and offers extensive chunking options.
+
+    ```bash
+    ncks -4 -L 1 input.nc output.nc
+    ```
+
+    !!! info "IAC systems"
+        On IAC systems, the script `nczip` is installed. It is a wrapper around `ncks` and compresses or decompresses a single netCDF file or all netCDF files in a folder.
+
+=== "CDO"
+
+    [Climate Data Operators :material-open-in-new:](https://code.mpimet.mpg.de/projects/cdo){:target="_blank"} can compress netCDF files, but offer fewer chunking options than NCO.
+
+    ```bash
+    cdo -f nc4 -z zip_1 copy input.nc output.nc
+    ```
+
+=== "nccompress"
+
+    [nccompress :material-open-in-new:](https://github.com/coecms/nccompress){:target="_blank"} is another alternative to `nczip` for batch compression of netCDF files.
+
+=== "Source code"
+
+    Compression settings can also be specified directly in the source code when creating netCDF variables, e.g., via the Fortran, R, or Python interfaces.
+
+    ```python
+    # xarray
+    ds.to_netcdf("output.nc", encoding={"temp": {"zlib": True, "complevel": 1, "shuffle": True}})
+    ```
 
 ## Lossy algorithms
-   * This is still an area where people experiment. We cannot make recommendations at this point
-   * ncks also supports three lossy compression algorithms. More information can be found in the NCO User Guide
-   * Python users should have a look at netcdf4-python or xarray which support lossless and lossy compression. The latter is supported by defining a least significant digit. The least significant digit is the power of ten of the smallest decimal place in the data that is a reliable value. All information below this threshold is cropped from the data before saving and cannot be restored.
-   * Check the dedicated dc-toolkit that helps exploring data compression techniques on your data
-   * One always needs to be aware of what might be lost. In general, lossy compression should result in smaller files than lossless compression.
+
+!!! warning "No general recommendation yet"
+    Lossy compression of scientific data is still an area of active experimentation. We cannot make general recommendations at this point. Always be aware of what might be lost: the removed information **cannot be restored**.
+
+In general, lossy compression results in smaller files than lossless compression. Available options include:
+
+- **NCO**: `ncks` supports several lossy compression algorithms. More information can be found in the [NCO User Guide :material-open-in-new:](https://nco.sourceforge.net/nco.html){:target="_blank"}.
+- **Python**: [netcdf4-python :material-open-in-new:](https://unidata.github.io/netcdf4-python/){:target="_blank"} and [xarray :material-open-in-new:](https://docs.xarray.dev/en/stable/user-guide/io.html){:target="_blank"} support both lossless and lossy compression. Lossy compression is enabled by defining a *least significant digit*, i.e., the power of ten of the smallest decimal place in the data that is still reliable. All information below this threshold is removed before saving.
+- **C2SM data-compression toolkit**: the [data-compression :material-open-in-new:](https://github.com/C2SM/data-compression){:target="_blank"} repository provides tools to explore compression techniques on your own data.
