@@ -101,7 +101,7 @@ Lossy compression can achieve ratios of 10–50× for climate and weather data, 
 
 ## C2SM data-compression toolkit (dc_toolkit)
 
-The [**dc_toolkit**](https://github.com/C2SM/data-compression) automates the search for the best compression pipeline for netCDF files and writes the result into a zarr zip. It sweeps all `compressor × filter × serialiser` combinations on a representative sample of each field and filters results according to pre-defined error thresholds.
+The [**dc_toolkit** :material-open-in-new:](https://github.com/C2SM/data-compression){:target="_blank"} automates the search for the best compression pipeline for netCDF files and writes the result into a zarr zip. It sweeps all `compressor × filter × serialiser` combinations on a representative sample of each field and filters results according to pre-defined error thresholds.
 
 ### Key concepts
 
@@ -141,8 +141,8 @@ dc_toolkit compress input.nc ./out
 
 ### Compression libraries
 
-- [Numcodecs](https://numcodecs.readthedocs.io): the standard Zarr codec library, providing Zstd, Blosc, LZ4, FixedScaleOffset, Delta, etc.
-- [EBCC](https://github.com/spcl/EBCC) *(optional)*: the Error Bounded Climate Compressor. At loose error bounds (0.1–1 % of the field's range) it achieves 2–4× the ratio of `zfp`; at tight bounds the advantage disappears. However, it is slow to encode (~1–2 MB/s per core).
+- [Numcodecs :material-open-in-new:](https://numcodecs.readthedocs.io){:target="_blank"}: the standard Zarr codec library, providing Zstd, Blosc, LZ4, FixedScaleOffset, Delta, etc.
+- [EBCC :material-open-in-new:](https://github.com/spcl/EBCC){:target="_blank"} *(optional)*: the Error Bounded Climate Compressor. At loose error bounds (0.1–1 % of the field's range) it achieves 2–4× the ratio of `zfp`; at tight bounds the advantage disappears. However, it is slow to encode (~1–2 MB/s per core).
 
 ### Installation
 
