@@ -83,7 +83,7 @@ Lossless compression in netCDF4 is based on the zlib library. The following para
 ## Lossy algorithms
 
 !!! warning "Use with care"
-    Lossy compression permanently removes information that annot be restored. Always verify that the error introduced is acceptable for your use case before archiving or sharing data.
+    Lossy compression permanently removes information that cannot be restored. Always verify that the error introduced is acceptable for your use case before archiving or sharing data.
 
 Lossy compression can achieve ratios of 10–50× for climate and weather data, far beyond what lossless methods offer. Available tools include:
 
