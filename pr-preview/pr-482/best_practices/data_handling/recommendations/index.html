@@ -1,0 +1,7843 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://c2sm.github.io/best_practices/data_handling/recommendations/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../compression/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>C2SM Data Management Recommendations - C2SM User Landing Page</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  <script
+  defer
+  data-domain="c2sm.github.io"
+  src="https://plausible.io/js/plausible.js"
+  
+></script>
+
+<script>
+  window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) };
+
+  /* Register event handlers after documented loaded */
+  document.addEventListener("DOMContentLoaded", function () {
+    /* Set up search tracking */
+    if (document.forms.search) {
+      var query = document.forms.search.query;
+      query.addEventListener("blur", function() {
+        if (this.value) plausible("Search", { props: { search_term: this.value } });
+      })
+    }
+
+    /* Set up feedback, i.e. "Was this page helpful?" */
+    document$.subscribe(function () {
+      var feedback = document.forms.feedback;
+      if (typeof feedback === "undefined") return;
+
+      /* Send feedback to Plausible */
+      for (var button of feedback.querySelectorAll("[type=submit]")) {
+        button.addEventListener("click", function (ev) {
+          ev.preventDefault();
+
+          var page = document.location.pathname;
+          var value = this.getAttribute("data-md-value");
+          console.log("[feedback] User clicked", { value });
+          plausible(`Feedback: ${value}`);
+
+          /* Disable form and show note, if given */
+          feedback.firstElementChild.disabled = true;
+          var note = feedback.querySelector(".md-feedback__note [data-md-value='" + value + "']");
+          if (note) note.hidden = false;
+        })
+
+        /* Show feedback */
+        feedback.hidden = false;
+      }
+    });
+  });
+</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="c2sm-light" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#c2sm-data-management-recommendations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="C2SM User Landing Page" class="md-header__button md-logo" aria-label="C2SM User Landing Page" data-md-component="logo">
+      
+  <img src="../../../assets/c2sm_logo_white_transparent.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            C2SM User Landing Page
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C2SM Data Management Recommendations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="c2sm-light" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/C2SM/c2sm.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    C2SM/c2sm.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../about/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  About C2SM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../events/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Events
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../tasks/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tasks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../support/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Support
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../hpc/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  HPC
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../models/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Models
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../tools/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../datasets/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Datasets
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Best Practices
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../group_pages/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Group Pages
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../glossary/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Glossary
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="C2SM User Landing Page" class="md-nav__button md-logo" aria-label="C2SM User Landing Page" data-md-component="logo">
+      
+  <img src="../../../assets/c2sm_logo_white_transparent.png" alt="logo">
+
+    </a>
+    C2SM User Landing Page
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/C2SM/c2sm.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    C2SM/c2sm.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Posts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Posts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2023-08-22-git-for-advanced-workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git for Advanced Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2023-11-09-climate-model-and-climate-data-workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Climate Model and Climate Data Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2023-11-30-cosmoicon-user-workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    COSMO/ICON User Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2024-02-28-git-for-beginners-workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git for Beginners Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2024-03-18-scientific-visualisation-using-python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scientific Visualisation using Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2024-07-01-visual-update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Update
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2024-07-02-switching-to-alps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Switching to Alps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2024-07-29-git-for-advanced-workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git for Advanced Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2024-08-14-new-information-about-the-alps-system-available/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    New information about the Alps system available
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2024-11-26-icon-user-workshop-formerly-cosmo-icon-user-workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICON User Workshop (formerly COSMO ICON User Workshop)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2024-12-17-update-on-the-current-status-on-alps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Update on the current status on Alps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2025-02-19-git-for-beginners-workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git for Beginners Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2025-02-20-extpar-new-release-v515-and-documentation-available/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EXTPAR: New release v5.15 and documentation available
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2025-03-25-c2sm-communtiy-day-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C2SM Communtiy Day 2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2025-04-10-glossary-now-available/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary now available
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2025-06-23-upcoming-c2sm-workshops-open-for-registration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upcoming C2SM Workshops open for Registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2026-01-19-c2sm-modeling-workshop-2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C2SM Modeling Workshop 2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2026-02-02-git-for-beginners-workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git for Beginners Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2026-07-23-zephyr-multi-variable-requests-and-new-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zephyr: Multi-variable requests and new documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2026-08-20-git-beyond-the-basics-workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git: Beyond the Basics Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2026-09-09-new-pages-for-nccr-clim-task-submission-and-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    New pages for NCCR CLIM+ task submission and support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2026-09-25-icon4py-dynamical-core-merged-into-icon-master/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICON4Py dynamical core merged into ICON master
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Page
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Page
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../page/2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../page/3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Category workshop
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Category workshop
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4_1" id="__nav_1_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Page
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Page
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../category_workshop/page/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Categories
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../category_alps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../category_cosmo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    COSMO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../category_climate-model--data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Climate Model &amp; Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../category_community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../category_extpar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EXTPAR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../category_git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../category_icon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../category_modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modeling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../category_visualisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualisation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../category_website/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Website
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../category_workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../category_zephyr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zephyr
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../about/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About C2SM
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About C2SM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../events/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Events
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Events
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/wgdays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working Group Days
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../events/icon_meetings/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICON Meeting
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ICON Meeting
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2026-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026/3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2026-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026/2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2026-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026/1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2025-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025/3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2025-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025/2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2025-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025/1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2024-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024/4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2024-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024/3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2024-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024/2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2024-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024/1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2023-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023/4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2023-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023/3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2023-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023/2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2023-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023/1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2022-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2022/4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2022-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2022/3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2022-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2022/2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/icon_meetings/2022-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2022/1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../events/modeling_workshop/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modeling Workshop
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modeling Workshop
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/modeling_workshop/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/modeling_workshop/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/modeling_workshop/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/git_courses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git Courses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/pyvis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python Visualisation Course
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/climate_model_workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Climate Model and Data Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../tasks/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tasks/working_groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working Groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tasks/assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Task Assignment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tasks/climplus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCCR CLIM+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../support/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Support
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../support/user_support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../support/status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support Status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../support/climplus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCCR CLIM+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../hpc/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HPC
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    HPC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../hpc/cscs/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CSCS
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CSCS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hpc/cscs/santis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Santis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hpc/cscs/balfrin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balfrin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hpc/cscs/eiger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eiger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ETHZ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ETHZ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hpc/ethz/euler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Euler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../models/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Models
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../models/icon/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICON
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ICON
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../models/icon/compile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../models/icon/run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Run Test Case
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../models/icon/validate_custom_namelist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validate Custom Namelist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../models/icon/probtest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Run Probtest on Säntis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../models/icon/icon-clm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICON-CLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../models/icon/input_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../models/icon/comin_gpu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ComIn on GPU
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../models/icon/known_bugs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Known Bugs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../models/cesm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CESM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../tools/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/icontools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DWD ICON Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/extpar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EXTPAR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/processing_chain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processing Chain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/scaling_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scaling Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/spack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spack-C2SM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/spice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPICE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/zephyr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zephyr
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/zonda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zonda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../datasets/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datasets
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Datasets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datasets/climate_model_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Climate Model Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datasets/obs_reanalysis_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Observational and Re-analysis Datasets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datasets/cordex_fpsconv_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CORDEX-FPSCONV Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datasets/ecmwf_data_cube/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ECMWF Data Cube
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datasets/ch2011/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Swiss Climate Change Scenarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Best Practices
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../coding/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coding
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Coding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Handling
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Handling
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C2SM Data Management Recommendations
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C2SM Data Management Recommendations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-research-data-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Research data definitions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Research data definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-primary-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Primary data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Primary data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-raw-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1 Raw data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-original-simulation-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2 Original simulation output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-derived-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Derived data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Derived data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-processed-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.1 Processed data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-curated-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Curated data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-published-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Published data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Published data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#241-ancillary-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.1 Ancillary information
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-third-party-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Third-party data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-software-related-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Software related definitions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Software related definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-source-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Source code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Source code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-version-control-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 Version control systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-containers-for-enabling-reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 Containers for enabling reproducibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-third-party-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Third-party code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-proprietary-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Proprietary software
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-organising-and-documenting-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Organising and Documenting Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Organising and Documenting Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Directory Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-file-and-directory-naming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 File and Directory Naming
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 File and Directory Naming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-general-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.1 General rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-file-naming-schemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.2 File naming schemes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-importance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.1 Importance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-different-aspects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.2 Different aspects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-readme-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.3 README file
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-a-list-of-best-practice-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 A list of best-practice recommendations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-some-common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Some common pitfalls
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-publishing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Publishing Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Publishing Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-documentation-for-reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Documentation for reproducibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-data-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Data Repositories
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-licensing-of-software-and-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Licensing of software and data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Licensing of software and data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-general-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.1 General information
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-policy-at-eth-zurich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.2 Policy at ETH Zurich
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533-how-to-add-a-licence-to-your-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.3 How to add a licence to your datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#534-recommended-data-licences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.4 Recommended data licences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#535-recommended-osls-for-software-licences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.5 Recommended OSLs for software licences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#536-how-to-add-a-licence-to-your-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.6 How to add a licence to your software
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-archiving-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Archiving Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Archiving Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-tape-archiving-at-eth-zurich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Tape archiving at ETH Zurich
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-tape-archiving-at-cscs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Tape archiving at CSCS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acknowledgements
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Compression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Link Collection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../group_pages/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Group Pages
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Group Pages
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../group_pages/wew-icon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEW-ICON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../group_pages/aimlplanning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI/ML Workshop 2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../glossary/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Glossary
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-research-data-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Research data definitions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Research data definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-primary-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Primary data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Primary data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-raw-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1 Raw data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-original-simulation-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2 Original simulation output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-derived-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Derived data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Derived data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-processed-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.1 Processed data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-curated-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Curated data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-published-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Published data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Published data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#241-ancillary-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.1 Ancillary information
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-third-party-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Third-party data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-software-related-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Software related definitions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Software related definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-source-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Source code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Source code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-version-control-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 Version control systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-containers-for-enabling-reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 Containers for enabling reproducibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-third-party-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Third-party code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-proprietary-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Proprietary software
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-organising-and-documenting-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Organising and Documenting Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Organising and Documenting Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Directory Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-file-and-directory-naming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 File and Directory Naming
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 File and Directory Naming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-general-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.1 General rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-file-naming-schemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.2 File naming schemes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-importance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.1 Importance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-different-aspects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.2 Different aspects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-readme-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.3 README file
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-a-list-of-best-practice-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 A list of best-practice recommendations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-some-common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Some common pitfalls
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-publishing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Publishing Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Publishing Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-documentation-for-reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Documentation for reproducibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-data-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Data Repositories
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-licensing-of-software-and-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Licensing of software and data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Licensing of software and data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-general-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.1 General information
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-policy-at-eth-zurich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.2 Policy at ETH Zurich
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533-how-to-add-a-licence-to-your-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.3 How to add a licence to your datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#534-recommended-data-licences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.4 Recommended data licences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#535-recommended-osls-for-software-licences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.5 Recommended OSLs for software licences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#536-how-to-add-a-licence-to-your-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.6 How to add a licence to your software
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-archiving-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Archiving Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Archiving Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-tape-archiving-at-eth-zurich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Tape archiving at ETH Zurich
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-tape-archiving-at-cscs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Tape archiving at CSCS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acknowledgements
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Best Practices
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Data Handling
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/C2SM/c2sm.github.io/edit/main/docs/best_practices/data_handling/recommendations.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="c2sm-data-management-recommendations">C2SM Data Management Recommendations<a class="headerlink" href="#c2sm-data-management-recommendations" title="Permanent link">&para;</a></h1>
+<p>R. Lorenz<sup>1</sup>, U. Beyerle<sup>1</sup>, I. Iosifescu Enescu<sup>3</sup>, S. Ferrachat<sup>1</sup>, M. Hauser<sup>1</sup>, M. Hirschi<sup>1</sup>, S. Henne<sup>2</sup>, M. Jähn<sup>1</sup>, M. Münnich<sup>1</sup>, G.-K. Plattner<sup>3</sup>, C. Schnadt Poberaj<sup>1</sup>, M. Sprenger<sup>1</sup></p>
+<p><sup>1</sup> Swiss Federal Institute of Technology ETH,
+<sup>2</sup> Swiss Federal Laboratories for Materials Science and Technology Empa,
+<sup>3</sup> Swiss Federal Institute for Forest, Snow and Landscape Research WSL</p>
+<p><button class="md-button print-button" onclick="window.print()">Download PDF</button></p>
+<h2 id="1-introduction">1. Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">&para;</a></h2>
+<p>These guidelines are primarily recommendations to research staff of the
+C2SM community at ETH Zurich, since Empa, Eawag, MeteoSwiss and WSL have
+their own guidelines. We aim to complement the
+<a href="https://ethz.ch/content/dam/ethz/main/eth-zurich/organisation/rechtssammlung/414.2en.pdf" target="_blank">Guidelines for Research Data Management at ETH Zurich <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+with more specific recommendations for climate scientists, from
+Master's students to senior scientists, on how to organise, manage,
+and document their research data, and where and how to store these data
+at suitable repositories. The recommendations focus on large data sets
+typically produced from weather and climate models, but are applicable
+to other types of data as well.</p>
+<!-- TODO: Add link to further recommendations regarding very large
+datasets from high resolution kilometre-scale climate model simulations. -->
+
+<p>All data must be managed according to the international FAIR principles
+(Findable, Accessible, Interoperable, and Reusable) and the ideal of
+Open Research Data (ORD). Meaning data should be <em>"as open as possible,
+as closed as necessary."</em></p>
+<p>General information on research data management is also available from
+the <a href="https://library.ethz.ch/en/researching-and-publishing/data-management-and-policies.html" target="_blank">ETH library <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.
+Legal aspects are covered by the
+<a href="https://doi.org/10.3929/ethz-b-000179298" target="_blank">ETH Guidelines for Research Integrity <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>,
+which have been developed by
+<a href="https://ethz.ch/en/the-eth-zurich/organisation/boards-university-groups-commissions/commission-gsp.html" target="_blank">ETH commission of Good Scientific Practice (GSP) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.
+Articles 11 and 12 in the latter guidelines explicitly regulate the
+rights and obligations of ETH researchers concerning the collection,
+documentation, and storage of primary data, as well as the rights to the
+primary data and materials. Importantly, data is owned by the respective
+institution and remains with ETH even if researchers leave ETH. WSL
+researchers should also consult the WSL Compliance Guide (available in
+WSL-Intranet), especially the section on Research Data Management (RDM)
+and Open Research Data (ORD).</p>
+<p>The division of data management responsibilities is a balance between
+governance and execution. The Principal Investigator (PI) holds ultimate
+institutional and legal accountability, focusing on establishing the
+group's overarching data strategy, ensuring compliance with
+institutional and funder mandates, and overseeing long-term data
+continuity. In contrast, the PhD students and PostDocs handle the daily,
+hands-on implementation. They actively maintain their specific
+project's Data Management Plan (DMP), ensuring precise documentation
+and secure storage, and executing a complete data handover prior to
+leaving to satisfy the mandatory 10-year retention rule. Data users must
+treat existing datasets with academic rigour by providing proper
+citations and adhering strictly to all legal, ethical, licensing and
+export restrictions. Additionally, they are responsible for
+transparently documenting any modifications or analyses performed on the
+data to maintain scientific integrity and reproducibility.</p>
+<p>These guidelines are under continuous development. We very much
+appreciate feedback of any kind (gaps, inconsistencies, suggested
+additions, etc.) to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#99;&#50;&#115;&#109;&#46;&#101;&#116;&#104;&#122;&#46;&#99;&#104;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#99;&#50;&#115;&#109;&#46;&#101;&#116;&#104;&#122;&#46;&#99;&#104;</a>.</p>
+<h2 id="2-research-data-definitions">2. Research data definitions<a class="headerlink" href="#2-research-data-definitions" title="Permanent link">&para;</a></h2>
+<p>The term <em>research data</em> not only refers to numerical datasets, but to
+all kinds of information that can be used to reproduce, validate, or
+re-use scientific work. We will use the term <em>data package</em> in order to
+describe the research data used for a specific project or a publication.</p>
+<h3 id="21-primary-data">2.1 Primary data<a class="headerlink" href="#21-primary-data" title="Permanent link">&para;</a></h3>
+<p>Strictly speaking, primary data is digital data that is the direct
+result of simulations or measurements, hence the original unanalysed
+data collected from experiments or other sources. In practice however, a
+modified form of that data, e.g. through averaging or the discarding of
+irrelevant data, is frequently considered primary data. As a rule of
+thumb, primary data is data for which there exists no previous
+incarnation. The researcher, considering conventions in their
+field, defines what exactly to archive as primary data.</p>
+<div class="admonition example">
+<p class="admonition-title">Primary data examples</p>
+<p>Weather and climate model simulations, reanalysis data sets,
+measurements from field instruments, etc. Remember that the user has
+to decide themselves what exactly has to be declared as primary
+data.</p>
+</div>
+<h4 id="211-raw-data">2.1.1 Raw data<a class="headerlink" href="#211-raw-data" title="Permanent link">&para;</a></h4>
+<p>Raw data can be defined as data that has not been processed,
+transformed, or analysed since its initial collection from a physical
+source. Under ETH Zurich guidelines, raw data represents the absolute
+starting point of the empirical data lifecycle. It is the direct output
+from observational platforms, sensors, or field instruments before any
+quality control, calibration equations, or physical unit conversions are
+applied. Because physical observations cannot be replicated if the
+original source files are lost, archiving raw data (alongside its
+metadata) is critical for long-term data provenance.</p>
+<div class="admonition example">
+<p class="admonition-title">Raw data examples</p>
+<p>Raw voltage signals or unprocessed, high-frequency digital data from
+eddy covariance towers, output retrieved from field data loggers,
+uncalibrated digital counts from satellite sensors, raw binary data
+from weather radars, or handwritten field logs.</p>
+</div>
+<p><strong>Storage recommendation:</strong> Raw data must <strong>never</strong> be stored
+exclusively on local hard drives or instrument laptops. During active
+research, it must be stored on secure, redundant network storage
+provided by your departmental IT Service Group (ISG) or central IT
+Services (e.g., central NAS or replicated S3 buckets) of your
+institution. For the mandatory 10-year preservation phase, raw
+datasets suitable for publication can be archived in the ETH Library's
+institutional repository (ETH Research Collection), which automatically
+pushes data to the geo-redundant ETH Data Archive for long-term
+preservation. Large data volumes should instead be archived on
+tape-based long-term storage (see <a href="#6-archiving-data">Section 6</a>).</p>
+<h4 id="212-original-simulation-output">2.1.2 Original simulation output<a class="headerlink" href="#212-original-simulation-output" title="Permanent link">&para;</a></h4>
+<p>While often categorised broadly as primary data, original simulation
+output must be distinguished from observational raw data. It refers to
+the immediate, un-postprocessed digital files generated directly by a
+numerical weather prediction (NWP) or climate model run. This data is in
+its native grid and time step, containing all prognostic variables
+before any spatial interpolation, temporal averaging (e.g., monthly
+means), or diagnostic variable calculations occur.</p>
+<div class="admonition example">
+<p class="admonition-title">Original simulation output examples</p>
+<p>Raw history or restart files directly from an atmospheric/oceanic
+general circulation model (GCM), or native-grid output from a
+high-resolution regional climate model (RCM).</p>
+</div>
+<p><strong>Storage recommendation:</strong> Active simulation runs are typically
+generated on high-performance computing (HPC) scratch spaces. Because
+scratch space is not backed up and is subject to automated purging,
+critical outputs must be moved immediately upon run completion. Due to
+the massive volume of climate files, storing all original output on
+standard redundant disk storage is often financially or technically
+unfeasible. In alignment with Art. 5 of the ETH RDM Guidelines, if the
+data is too large for standard redundant storage, the researcher must
+secure the exact code version (e.g., on gitlab.ethz.ch), namelists,
+seeding keys, and boundary conditions required to deterministically
+<em>recreate</em> the simulation. If the native files themselves are
+irreplaceable, they must be moved to Tape-Based Long-Term Storage
+(LTS) provided by ETH IT Services or CSCS.</p>
+<h3 id="22-derived-data">2.2 Derived data<a class="headerlink" href="#22-derived-data" title="Permanent link">&para;</a></h3>
+<p>In addition to the primary data, for a data package you should include
+as a minimum all datasets necessary to reproduce the figures, tables,
+and individual numbers in the running text that are presented in the
+main paper and the supporting information. In case you decide to delete
+some of your primary data, archiving derived data is essential.</p>
+<div class="admonition example">
+<p class="admonition-title">Derived data examples</p>
+<p>Weather feature climatologies, trend analyses, etc. These data are
+produced from the primary data using programs and scripts (Fortran,
+Shell scripts, Python, R, Matlab, NCL, etc.)</p>
+</div>
+<h4 id="221-processed-data">2.2.1 Processed data<a class="headerlink" href="#221-processed-data" title="Permanent link">&para;</a></h4>
+<p>Processed data refers to data which was processed in a certain way, for
+example averaging over certain time periods, like calculating monthly
+averages from daily values. For reproducibility it is important to note
+which scripts or version of code were used to process the data.</p>
+<h3 id="23-curated-data">2.3 Curated data<a class="headerlink" href="#23-curated-data" title="Permanent link">&para;</a></h3>
+<p>Curated data is organised, cleaned, enriched, and documented to make it
+highly accurate, accessible, and ready for use. Unlike raw data, which
+can be chaotic and fragmented, curated data is actively managed
+throughout its lifecycle to ensure long-term value and trustworthiness.
+The CMIP6-next generation archive is an example of curated data at C2SM
+(<a href="https://zenodo.org/records/3734128" target="_blank">Brunner et al. 2020 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>).</p>
+<h3 id="24-published-data">2.4 Published data<a class="headerlink" href="#24-published-data" title="Permanent link">&para;</a></h3>
+<p>Published data is a selected subset of data for a selected publication,
+published in a data repository such as the ETH Research Collection or
+WSL's environmental data portal EnviDat.</p>
+<p>The data in the package needs to be annotated to be useful for other
+researchers or your future self. Each package should contain a README
+file that describes the package at the highest level. The README file</p>
+<ul>
+<li>
+<p>is a pure ASCII or UTF-8 text-file (README.txt) or is written in a
+  common markup-language such as
+  <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank">Markdown <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+  (README.md), or HTML (README.html).</p>
+</li>
+<li>
+<p>has an understandable description of the dataset explaining what are
+  the research data files about and a brief summary of the methods used
+  to obtain them</p>
+</li>
+<li>
+<p>has to reference, implicitly or explicitly, each other file in the
+  package and thus can be used to look up the purpose and description of
+  each element of the project.</p>
+</li>
+<li>
+<p>describes the project structure, that is the organisation in a
+  <a href="https://opendata.eawag.ch/docs/research-data-management/archiving-guide.html#folder-structure-and-file-archives" target="_blank">folder-hierarchy <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+  (if there is one) and the <a href="https://opendata.eawag.ch/docs/research-data-management/archiving-guide.html#file-naming" target="_blank">file-naming <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+  convention used, if applicable.</p>
+</li>
+<li>
+<p>should mention if the package contains files in a non-common format
+  and point to required software to read them.</p>
+</li>
+<li>
+<p>should contain all information necessary to interpret and understand
+  the dataset that is not recorded elsewhere, e.g., meaning of column
+  headers, abbreviations, units of variables, etc.</p>
+</li>
+<li>
+<p>should contain pointers to other files in the package that contain
+  scientific metadata.</p>
+</li>
+<li>
+<p>should contain a reference to the associated article or report (as a
+  <a href="https://www.doi.org/" target="_blank">DOI <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> if possible), if applicable.</p>
+</li>
+</ul>
+<h4 id="241-ancillary-information">2.4.1 Ancillary information<a class="headerlink" href="#241-ancillary-information" title="Permanent link">&para;</a></h4>
+<p>Generously add any files and information to your data package that could
+further help to understand your work or build on your results. This
+includes, for example, photos and figures of a related publication and
+its supporting information, maps, pointers to related resources such as
+the project website, etc.</p>
+<div class="admonition example">
+<p class="admonition-title">Ancillary information examples</p>
+<p>Written report or presentation, paper, thesis. The report is created
+based on the processed data (Word, LaTeX, Powerpoint, visualisation
+software).</p>
+</div>
+<h3 id="25-third-party-data">2.5 Third-party data<a class="headerlink" href="#25-third-party-data" title="Permanent link">&para;</a></h3>
+<p>Third-party data is data used for research, but which has not been
+created within the frame of the respective research project. It is
+important to properly document the origin of this data and, e.g., when
+the data was downloaded, because many datasets may exist in different
+versions. Be aware whether there are restrictions to publish or pass on
+this third party data. Do not upload restricted third party data
+together with your data in a research data publication repository, but
+rather explain what third-party data has been used and how other users
+can obtain it again from the original source.</p>
+<h2 id="3-software-related-definitions">3. Software related definitions<a class="headerlink" href="#3-software-related-definitions" title="Permanent link">&para;</a></h2>
+<p>A lot of software is used in research and data management and can have
+different forms. Software can be available in source code or as
+proprietary software. For reproducibility purposes, it is crucial to
+know which version of software was used to create or process a dataset.
+Reproducibility means the ability to consistently achieve the exact same
+output, results, or behaviour when running the same software on the same
+input data. Please check licences of all software used so it does not
+interfere with scripts or other code produced by you (see <a href="#53-licensing-of-software-and-data">Section 5.3</a>
+for more information about licences).</p>
+<h3 id="31-source-code">3.1 Source code<a class="headerlink" href="#31-source-code" title="Permanent link">&para;</a></h3>
+<p>Computer code is often a critical part of research and necessary to
+validate or reproduce a person's work. This can be model code and code
+to post-process data. You should include in your data package any code
+along with relevant information about dependencies, the platform it runs
+on, required interpreters, compilers, libraries, and the versions used.
+Take care to provide a reasonable degree of user documentation for your
+software (<a href="#4-organising-and-documenting-data">Section 4</a>) and how you have used external software like modelling
+code. Source code should always be managed in a version control system,
+even if you work by yourself and choose an appropriate open source
+software licence (cf. <a href="#53-licensing-of-software-and-data">Section 5.3</a>) from the beginning.</p>
+<h4 id="311-version-control-systems">3.1.1 Version control systems<a class="headerlink" href="#311-version-control-systems" title="Permanent link">&para;</a></h4>
+<p>It is good practice to use source code versioning systems such as
+<a href="https://git-scm.com/" target="_blank">Git <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.
+Applications are for instance provided by ETH at
+<a href="https://gitlab.ethz.ch/">https://gitlab.ethz.ch/</a> and WSL provides its own Git repository at
+<a href="https://code.wsl.ch" target="_blank">code.wsl.ch <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.
+<a href="https://gitlab.empa.ch/" target="_blank">EMPA <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>,
+<a href="https://gitlab.eawag.ch/" target="_blank">eawag <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>, and
+<a href="https://service.meteoswiss.ch/git" target="_blank">MeteoSwiss <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> also have their own
+gitlab instances and <a href="https://git.iac.ethz.ch/" target="_blank">IAC <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> provides an
+additional one for its members. Git is a tool for tracking changes in
+files in order to record reasons for changes, compare with and
+incorporate versions from other people, have multiple people working on
+the same code, and maintain several parallel versions of the same code
+in a systematic way. Git is designed for collaborative, open source
+workflows, <a href="../../coding/#version-control-with-git">see here</a>. However, Git does not
+continuously sync like other tools (polybox, dropbox) but you need to actively synchronise
+local and remote versions. Git is a versioning system for code not data
+(do not upload large data volumes). Note that these platforms do not
+qualify as "archives" and might disappear tomorrow. Instead, create a
+zip- or tar-archive from the version of the source code used in your
+work and add it to the data package, while being mindful of third-party
+copyright (cf. <a href="#32-third-party-code">Section 3.2</a>).</p>
+<h4 id="312-containers-for-enabling-reproducibility">3.1.2 Containers for enabling reproducibility<a class="headerlink" href="#312-containers-for-enabling-reproducibility" title="Permanent link">&para;</a></h4>
+<p>A container is a standard unit of software that packages up code and all
+its dependencies so the application runs quickly and reliably from one
+computing environment to another. Atmosphere and ocean models are
+characterised by complex dependencies, external configurations, and
+performance requirements. Containerising such software stacks helps to
+provide a consistent environment to ensure security, portability, and
+performance. For reproducibility we recommend to build containers with
+your software.</p>
+<p>Providing the software infrastructure for other researchers to reliably
+run your code or containers in the future is out of scope for these
+recommendations. For example, CSCS provides state-of-the-art tools for
+running container workloads on HPC systems, (e.g.
+<a href="https://podman.io/" target="_blank">podman <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>).</p>
+<h3 id="32-third-party-code">3.2 Third-party code<a class="headerlink" href="#32-third-party-code" title="Permanent link">&para;</a></h3>
+<p>Similar to third-party data, copyrighted third-party code should not be
+included in the data package. Instead you should refer to exactly the
+version used, which is available from a reliable, well-established
+repository committed to long-term preservation. For open-source
+third-party code, make sure that all dependencies (including versions)
+are provided explicitly and containerised with your source code.</p>
+<h3 id="33-proprietary-software">3.3 Proprietary software<a class="headerlink" href="#33-proprietary-software" title="Permanent link">&para;</a></h3>
+<p>These recommendations might not be fully workable if you use proprietary
+third-party software, libraries, languages, or tool-chains. Aim at using
+open source software for scientific work, since proprietary tools
+diminish the reproducibility and long-term value of your research.</p>
+<h2 id="4-organising-and-documenting-data">4. Organising and Documenting Data<a class="headerlink" href="#4-organising-and-documenting-data" title="Permanent link">&para;</a></h2>
+<p>Throughout your work, keep your research data continuously and
+reasonably organised, best from the start. If you come back after three
+weeks of holidays and you only need to read your own documentation to
+know what is where and what it means, you are OK. If you organise your
+data in a directory hierarchy and/or
+employ a file naming convention, put some effort into documenting these
+structures from the start. Liberally re-factor as your work develops and
+these conventions and structures do not match anymore.</p>
+<h3 id="41-directory-structure">4.1 Directory Structure<a class="headerlink" href="#41-directory-structure" title="Permanent link">&para;</a></h3>
+<p>You will need to think about where to save and/or archive (i) the
+primary data; (ii) the derived data; (iii) the reports, presentations
+and figures. In addition, also consider where to save the tools to do
+(iv) the processing and (v) the visualisation. It is highly recommended
+to store (i) to (v) in different directories to avoid a chaotic set of
+data, programs, and documents in the same directory. They also typically
+require different archiving strategies.</p>
+<p>Any project consists of different steps: data acquisition; data
+processing; visualisation; reporting. Of course, the steps can also run
+in parallel. These different steps should also be reflected in a
+corresponding directory structure. First of all, it is highly
+recommended to create a project directory. This project folder should
+contain everything that is specific to this project: data, programs,
+figures. Do not put all your programs into one single program folder, if
+the programs needed for the project are very specific to this project.
+Hence, place them under <code>project_name/code</code>. Similarly, data specific
+to a project should be placed under <code>project_name/data</code>.</p>
+<p>Frequently, research data is organised in a hierarchical folder
+structure, for example:</p>
+<div class="highlight"><pre><span></span><code>project_name/
+├── README (incl. link to Git repository for source code and model used, see Section 4.3.3)
+├── code/
+├── manuscripts/
+│   └── paper1/
+│       └── submission1/
+└── data/
+    ├── primary_data/
+    │   ├── model-output-year0001.nc
+    │   ├── model-output-year0002.nc
+    │   └── measurements-year0001.csv
+    ├── derived_data_1/
+    │   └── tas_CESM2_1850-2010.nc
+    ├── derived_data_n/
+    ├── third_party_data/
+    ├── published_data/
+    └── dataset_repository/
+</code></pre></div>
+<p>Note that sometimes it is more appropriate to save the primary data
+outside of a project directory in a common shared storage used by many
+different projects. This is particularly the case if the primary data is
+used in different projects.</p>
+<p>A clear hierarchical directory structure is essential to keep track of
+different data sets, code versions, and documents. From the beginning,
+one should very strictly make sure that different data types are not
+stored in the same directories. For instance, programs should be saved
+in one place, primary data in another; and also documents and figures
+need a separate directory. In this way a data / program chaos can be
+avoided.</p>
+<p>Often, different versions of processed data are created and saved in
+different directories, e.g., because some thresholds in some
+postprocessing steps are adapted. It is essential to apply a reasonable
+name convention of the folders (see <a href="#42-file-and-directory-naming">Section 4.2</a>) and to document very clearly in
+which way the datasets were created (see <a href="#43-documentation">Section 4.3</a>), otherwise the danger
+exists that many similar datasets exist but it is unclear in which way
+they differ and how they could be accurately described in a publication.</p>
+<h3 id="42-file-and-directory-naming">4.2 File and Directory Naming<a class="headerlink" href="#42-file-and-directory-naming" title="Permanent link">&para;</a></h3>
+<h4 id="421-general-rules">4.2.1 General rules<a class="headerlink" href="#421-general-rules" title="Permanent link">&para;</a></h4>
+<p>File- and directory-names should adhere to the following conventions to
+ensure interoperability across platforms and filesystems and not be a
+pain to process programmatically:</p>
+<ul>
+<li>
+<p>Do not use spaces in filenames! Use an underscore ( _ ) as a
+  substitute.</p>
+</li>
+<li>
+<p>Use only alphanumeric characters, minus ( - ), and underscore ( _ ),
+  do not use special characters such as
+  <code>&amp; , * % # ; ( ) ! @ $ ^ ~ ' { } [ ] ? &lt; &gt;</code>.</p>
+</li>
+<li>
+<p>The file extension should be standard and should accurately reflect
+  its content</p>
+</li>
+<li>
+<p>Dates in filenames (and pretty much everywhere else) should have one
+  of the below formats:</p>
+<ol>
+<li>YYYYMMDD</li>
+<li>YYYYMM</li>
+<li>YYYY</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Of course, you can also use hyphens between the individual name
+parts, e.g., YYYY-MM-DD.</p>
+</div>
+</li>
+<li>
+<p>Numbers as part of file names should be left padded with zeros, for
+  example: site01_logger001.csv, ..., site12_logger328.csv</p>
+</li>
+<li>
+<p>Keep filenames as long as needed but as short as possible</p>
+</li>
+</ul>
+<h4 id="422-file-naming-schemes">4.2.2 File naming schemes<a class="headerlink" href="#422-file-naming-schemes" title="Permanent link">&para;</a></h4>
+<p>If a file naming scheme is employed, it should be descriptive and
+consistent. Encode attributes of a file as alphanumeric strings
+separated by underscores ( _ ). See for instance the file naming
+convention defined for
+<a href="https://wcrp-cmip.github.io/cmip7-guidance/docs/CMIP7/Global_Attributes/#2-filenames" target="_blank">CMIP7 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
+<p>If mapping your content to such a convention and directory-structure
+becomes too complex, you should consider to employ a proper database. In
+particular, if you feel you spend too much effort in your analysis code
+to construct the paths for the data files, you are in the process of
+implementing a primitive database software by yourself and should step
+back and reconsider.</p>
+<h3 id="43-documentation">4.3 Documentation<a class="headerlink" href="#43-documentation" title="Permanent link">&para;</a></h3>
+<h4 id="431-importance">4.3.1 Importance<a class="headerlink" href="#431-importance" title="Permanent link">&para;</a></h4>
+<p>Documentation is essential! You might be able to handle one current
+project without documentation. But you will definitely fail if</p>
+<ul>
+<li>
+<p>you come back to this project half a year later and try to find out
+  what your processed data really means, i.e., which version of a
+  program was used to create it; or if you have to change something in
+  your program and it contains no comments</p>
+</li>
+<li>
+<p>you start having to run several projects in parallel (which
+  certainly will happen), you often have to switch between different
+  projects</p>
+</li>
+<li>
+<p>you want someone else to work with your code; nobody wants to apply
+  your programs if they are badly structured, not documented. If your
+  code is easy to use or adjust, people will more likely be interested
+  in using it, and you will also benefit from the spread of your code</p>
+</li>
+</ul>
+<h4 id="432-different-aspects">4.3.2 Different aspects<a class="headerlink" href="#432-different-aspects" title="Permanent link">&para;</a></h4>
+<p>There are different aspects of documentation, depending on the kind of
+research data:</p>
+<ul>
+<li>
+<p>primary and derived data: place in the directory of the data a README
+  file that describes the data set in sufficient detail (e.g. programs,
+  scripts used to create it; parameter settings; etc.). See also <a href="#433-readme-file">Section
+  4.3.3</a> below about the contents of README files.</p>
+</li>
+<li>
+<p>programs and scripts: add many comments into your code and markdown
+  files to understand later what the different code sections do; just
+  reading the comments should give a reasonable outline of your
+  algorithm. Optimally, your comments not only describe what is done,
+  but also why it is done. Be careful, however, to not clutter your code
+  by artificially "over-documenting" obvious statements. Also, keep
+  comments in your scripts and programs up-to-date, thus avoiding to
+  mislead the reader by wrong comments.</p>
+</li>
+</ul>
+<p>Do not think that there is no need to add comments to your code because
+it is only used once for a very specific task and then will never be
+used again. Essentially all code can become useful again, if it is well
+documented and thus adaptable to new tasks. Documentation comments
+should (i) be concise; (ii) represent a reasonable bit of code; and
+(iii) be up to date. Keep your comments in line with your changes to
+data and/or programs.</p>
+<p>Finally, if you find it difficult to comment your code: maybe your
+algorithm is too complicated. If your algorithm is not reasonable,
+documentation will make life (later) a little easier, but it will not
+'rescue' you.</p>
+<h4 id="433-readme-file">4.3.3 README file<a class="headerlink" href="#433-readme-file" title="Permanent link">&para;</a></h4>
+<p>Always place in the directory of the data a README file that describes
+the data set in sufficient detail (e.g. programs, scripts used to create
+it; parameter settings; from where data was downloaded etc.).</p>
+<p>Minimal examples from <a href="https://data.iac.ethz.ch/atmos/">https://data.iac.ethz.ch/atmos/</a> contain:</p>
+<ul>
+<li>
+<p>Summary</p>
+</li>
+<li>
+<p>Contact</p>
+</li>
+<li>
+<p>Links</p>
+</li>
+<li>
+<p>Last Change</p>
+</li>
+</ul>
+<h3 id="44-a-list-of-best-practice-recommendations">4.4 A list of best-practice recommendations<a class="headerlink" href="#44-a-list-of-best-practice-recommendations" title="Permanent link">&para;</a></h3>
+<p>All the data organising aspects discussed are obvious when you read
+about them in such a guideline. But during daily work, you will still
+find yourself neglecting some of the very basic aspects, be it
+because you have to fulfil a nearby deadline, you just want to solve
+the problem as quickly as possible, or you simply do not care about who
+is coming after you. So think about the following list of best
+practices, and try to remember them when you are in a hurry:</p>
+<ul>
+<li>
+<p>Do not create multiple copies of your data. Use soft or hard links
+  instead</p>
+</li>
+<li>
+<p>Be sure that important data is always backed up</p>
+</li>
+<li>
+<p>Use compression in order to save disk space (see <a href="../compression/">Data Compression</a>)</p>
+</li>
+<li>
+<p>Use a version control system (see <a href="../../coding/#version-control-with-git">Git best
+  practices</a>)</p>
+</li>
+<li>
+<p>Split your program into small sub-programs and re-use functions.
+  Smaller program pieces are also easier to re-use in other projects</p>
+</li>
+<li>
+<p>Keep your main results on a reliable storage system</p>
+</li>
+<li>
+<p>Add useful comments to your program code. Describe with the comments
+  what your code is doing</p>
+</li>
+<li>
+<p>From time to time, clean up your directories and remove old and no
+  longer used data and files</p>
+</li>
+<li>
+<p>Your figures should be easily reproduced at any time by running
+  scripts. Avoid "manual" data manipulations</p>
+</li>
+<li>
+<p>Try to organise your programs in different directories. Create at
+  least one directory per project</p>
+</li>
+<li>
+<p>You should always know which is your latest version of your code and
+  (processed) data. Old versions should be easy to identify for others,
+  or even better, delete old versions not used anymore</p>
+</li>
+<li>
+<p>Start documenting your code and your progress from the very beginning,
+  and keep your documentation up-to-date.</p>
+</li>
+<li>
+<p>Use variables (or, even better, runtime arguments) instead of hard
+  coded paths and system names</p>
+</li>
+<li>
+<p>Put variable definitions at the beginning of your code or use
+  configuration files which can be easily changed</p>
+</li>
+<li>
+<p>Apply data versioning</p>
+</li>
+</ul>
+<h3 id="45-some-common-pitfalls">4.5 Some common pitfalls<a class="headerlink" href="#45-some-common-pitfalls" title="Permanent link">&para;</a></h3>
+<p>Some problems can easily be avoided if careful data, program, and
+document management is applied. Some common pitfalls are:</p>
+<ul>
+<li>
+<p><strong>Different versions of programs and scripts</strong>: Which version was used
+  to create a data set? Which version did I use to create a figure? Do I
+  keep old versions of scripts? Do I often manually do some steps and
+  hence make them difficult to reproduce?</p>
+</li>
+<li>
+<p><strong>Remember where the 'good' data is</strong>! In the course of your work you
+  will most likely create several versions of a data set (e.g. a
+  blocking climatology): Do you still remember how all the different
+  versions were created, in which way they differ? Is it really
+  necessary to keep all versions of a data set?</p>
+</li>
+<li>
+<p><strong>Documentation out of date</strong>! In the beginning you might document
+  your programs well. Then you change your code, and the documentation
+  can be completely outdated or even misleading.</p>
+</li>
+<li>
+<p>Strictly separate programs from data; programs ask for a daily backup,
+  whereas primary and derived data typically require different backup
+  and archiving strategies (see <a href="#21-primary-data">Section 2.1</a>)</p>
+</li>
+<li>
+<p>Separate programs from reports; programs and scripts are optimally
+  handled with a versioning system (Git), whereas this is typically not
+  needed for reports and presentations</p>
+</li>
+</ul>
+<p>Avoiding these pitfalls asks for some strategies in organisation. But it
+is important to be aware of and actively force yourself to avoid them.
+Therefore, do not write your programs in a hurry. Instead, take time to
+think about structure and documentation, avoid placing everything in the
+same directory because it is convenient at the moment: at a later time
+you will be glad if data, documents, and programs are clearly separated
+from each other.</p>
+<h2 id="5-publishing-data">5. Publishing Data<a class="headerlink" href="#5-publishing-data" title="Permanent link">&para;</a></h2>
+<p>It is now very common that funding agencies (among them: SNSF, EU) as
+well as the institutions from the ETH Domain request the applicants to
+write a data management plan (DMP) together with the scientific
+proposal, with very detailed information about the research data
+workflow (from creation to archiving) and the planned measures to make
+this data available to other researchers. Data availability, in this
+context, is to be understood in a very broad meaning, comprising not
+only the fact that the data should be downloadable, but also the way the
+data is organised, formatted and annotated with sufficient and
+informative metadata. In the same spirit, many journals request that the
+data package is deposited in a data repository with URL(s) properly
+referenced in the text.</p>
+<p>The underlying goals for such requests stem from the necessity to
+properly identify research data in order to be able to share, reproduce
+and reuse it.</p>
+<p>These data policy regulations have been formalised under the
+<a href="https://www.go-fair.org/fair-principles/" target="_blank">FAIR <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+which are widely recognised. For detailed explanations of these
+principles, it is strongly advised to read <a href="http://www.snf.ch/SiteCollectionDocuments/FAIR_principles_translation_SNSF_logo.pdf" target="_blank">SNSF's document on FAIR principles <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+Generally speaking, it is very valuable to familiarise with the SNSF
+policy in terms of <a href="https://www.snf.ch/en/dMILj9t4LNk8NwyR/topic/open-research-data" target="_blank">open research data <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
+<h3 id="51-documentation-for-reproducibility">5.1 Documentation for reproducibility<a class="headerlink" href="#51-documentation-for-reproducibility" title="Permanent link">&para;</a></h3>
+<p>A publication consists of many parts: primary and derived data,
+programs, visualisation scripts, reports and figures. The goal must be
+that all results presented in a publication are reproducible with a
+reasonable effort. To this aim you should organise your publication data
+in a data package. In its simplest form this is a self-contained
+directory where all data is saved; at least the data package must
+clearly point to all resources needed to reproduce the results.</p>
+<p>Depending on the size and complexity of the data package, it might be
+useful to describe parts of it in separate README-files, perhaps located
+in sub-directories.</p>
+<p>The publication proper (article, report) usually contains indispensable
+scientific metadata. Please include the <a href="https://www.doi.org/" target="_blank">DOI <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> of
+the publication as a resource of the package (see
+<a href="https://doi.org/10.1177/2053019617740365" target="_blank">example <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>).</p>
+<h3 id="52-data-repositories">5.2 Data Repositories<a class="headerlink" href="#52-data-repositories" title="Permanent link">&para;</a></h3>
+<p>Data repositories are extremely numerous, with a large diversity in
+terms of what they offer as services, how they are indexed on search
+engines, whether they provide their service for free or not, etc. In
+order to find the best suited data repository, it is very helpful to
+search in the
+<a href="https://www.re3data.org/" target="_blank">Registry of Research Data Repositories <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>, which nicely
+classifies repositories by a large amount of search criteria.</p>
+<p>It is important to note that SNSF defines criteria for an acceptable
+data repository, i.e., which complies with their open research data
+policy:</p>
+<ul>
+<li>
+<p>it must be non-commercial (as identified in the registry of
+  <a href="https://www.re3data.org/" target="_blank">research data repositories re3data <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>)</p>
+</li>
+<li>
+<p>it must offer globally unique and persistent identifiers (e.g. a DOI)</p>
+</li>
+<li>
+<p>it allows to define intrinsic (aka general, basic) and user-defined
+  (advanced, specialised) metadata</p>
+</li>
+<li>
+<p>it allows to set a licence for the data</p>
+</li>
+<li>
+<p>metadata are always publicly available, even if the data itself is not</p>
+</li>
+<li>
+<p>it ensures interoperability</p>
+</li>
+<li>
+<p>it has a long-term preservation plan</p>
+</li>
+</ul>
+<p>Among choices validated by SNSF, we specifically recommend to use the
+<a href="http://www.research-collection.ethz.ch/" target="_blank">ETH Research Collection <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+together with the
+<a href="https://library.ethz.ch/en/collections-and-archives/archiving/digital-long-term-preservation/eth-data-archive.html" target="_blank">ETH Data Archive <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>,
+<a href="https://www.envidat.ch/#/" target="_blank">EnviDat <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> for WSL,
+<a href="https://opendata.eawag.ch/" target="_blank">ERIC <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> for eawag or
+<a href="https://www.zenodo.org/" target="_blank">Zenodo <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.
+All are safe, support the
+<a href="https://force11.org/info/the-fair-data-principles/" target="_blank">FAIR Principles <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+and offer excellent visibility of your data on the world wide web. While
+the ETH Data Archive has the advantage of being the in-house solution,
+at Zenodo, there is a 50 GB per dataset limit, but registered groups may
+upload as many datasets as desired, the total repository size being
+several petabytes, with constant annual increase. This is not true for
+the ETH Research Collection where fees apply above 1 TB of upload per
+ETH research group.</p>
+<p>Please note that in the very specific context of article self-archiving,
+i.e., re-publication of the accepted or published version of an article
+text, the ETH Research Collection should be preferred to Zenodo, as
+journal self-archiving policies generally distinguish between
+'institutional repositories' (like the ETH Research Collection) and
+other repository types as</p>
+<p>'subject repository' or 'aggregated repository' (Zenodo pertains to the
+latter category). Journals are generally more permissive for
+self-archiving on an institutional repository than on other repository
+types.</p>
+<h3 id="53-licensing-of-software-and-data">5.3 Licensing of software and data<a class="headerlink" href="#53-licensing-of-software-and-data" title="Permanent link">&para;</a></h3>
+<h4 id="531-general-information">5.3.1 General information<a class="headerlink" href="#531-general-information" title="Permanent link">&para;</a></h4>
+<p>Copyright protection for code exists from the time the program code is
+created in fixed form (from the moment it is written i.e., coded) and
+such protection cannot be waived neither in the EU nor in Switzerland.
+Therefore, a person receiving or downloading program code is in
+principle not allowed to use such program code without an explicit
+permission (the licence).</p>
+<p>Thus, one of the things that a software developer shall always do is to
+apply an appropriate licence to their software when the software is
+distributed to someone or placed on an internet page.</p>
+<p>According to the copyright, the author of the program code is the
+creator of the program code. However, for all program code created
+during the official duties of an employment at ETH Zurich, the exclusive
+rights of use and the corresponding exploitation rights of such program
+code belongs to ETH Zurich, and such program code is considered property
+of ETH Zurich.</p>
+<p>ETH Zurich has since long implemented a policy for licensing of program
+code under an open source licence (OSL) and generally supports such
+licensing. For the policy please visit the
+<a href="https://transfer.ethz.ch/researchers/oss/policies.html" target="_blank">Open Source Software page of ETH <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+or contact <a href="https://transfer.ethz.ch/" target="_blank">ETH transfer <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.
+Please carefully review such policy and verify if you are allowed to
+license a program code under an open source licence prior following our
+recommendations below.</p>
+<p>NOTE: Keep in mind that enforcement of a licence is another issue.</p>
+<h4 id="532-policy-at-eth-zurich">5.3.2 Policy at ETH Zurich<a class="headerlink" href="#532-policy-at-eth-zurich" title="Permanent link">&para;</a></h4>
+<p>ETH supports the use of Open Source licences supported by the
+<a href="https://opensource.org/licenses" target="_blank">Open Source Initiative (OSI) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.
+ETH requires researchers to register all OSS developed at the university
+with the
+<a href="https://transfer.ethz.ch/researchers/oss.html" target="_blank">ETH Data Archive <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> and release them
+using standardised, OSI-approved licences (MIT, Apache2.0, GNU GPL). All
+underlying digital assets, including code and data, must follow the
+<a href="https://ethz.ch/en/research/open-science/fairdata.html" target="_blank">FAIR Principles <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> to
+ensure they are Findable, Accessible, Interoperable, and Reusable.
+Software recorded in the ETH Research Collection with the publication
+type "Software" must be registered prior to publication. The
+<a href="https://transfer.ethz.ch/researchers/oss/oss-for-commercialization.html" target="_blank">Business Creation Regulation <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+outlines how research groups can establish ETH spin-offs using OSS
+without needing an additional licence for the source code. More
+information can be found
+<a href="https://unlimited.ethz.ch/plugins/viewsource/viewpagesrc.action?pageId=276476357" target="_blank">under this link <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
+<p>When publishing a paper, which includes, e.g., plotting code in the
+supplemental material, this code should be provided with an open source
+licence and prior to publication, needs to be registered at the ETH Data
+Archive (and subsequently approved by ETH Transfer). A list of projects
+registered at the ETH Data Archive can be found at
+<a href="https://search.library.ethz.ch/primo-explore/search?query=any,exact,open%20source,AND&amp;tab=default_tab&amp;search_scope=data_archive&amp;sortby=date&amp;vid=DADS&amp;lang=en_US&amp;mode=advanced&amp;offset=0" target="_blank">this link <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
+<!-- TODO: Add a valid link to the ETH guidelines for sharing software
+on download portals (previous link is no longer available). -->
+
+<h4 id="533-how-to-add-a-licence-to-your-datasets">5.3.3 How to add a licence to your datasets<a class="headerlink" href="#533-how-to-add-a-licence-to-your-datasets" title="Permanent link">&para;</a></h4>
+<p>The easiest way of licensing data is done when making the data available
+on a data repository (cf. <a href="#52-data-repositories">Section 5.2</a>): as mentioned above, in order to
+fulfil FAIR criteria, the chosen data repository should offer licensing
+services. When creating a new entry in your selected repository, the
+form will contain a specific menu to define the chosen licence.</p>
+<h4 id="534-recommended-data-licences">5.3.4 Recommended data licences<a class="headerlink" href="#534-recommended-data-licences" title="Permanent link">&para;</a></h4>
+<p>The above information mainly pertains to licences for software. When it
+comes to other forms of data (e.g. tabulated data or databases,
+presentations, images, videos, etc.), there are other families of
+licences which are more adapted, widely used, and accepted. The most
+important and widely used licences are the <a href="https://creativecommons.org/" target="_blank">Creative Commons (CC) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
+<p>Creative Commons licensing offers a kind-of <strong>mix your licence</strong>
+based on your specific needs. It provides a baseline licence and the
+possibility to allow or restrict some additional features. For example,
+CC-0 can be used to be fully compatible with any Open Research Data
+(ORD) regulations but it doesn't require attribution. If authors wish
+to be attributed for their work, they can use the licence
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+Now if in addition to attribution the user also wants any potential
+derivative work to be licensed under identical or compatible terms,
+they can use the licence
+<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+('SA' stands for Share-Alike), however, because it restricts further
+usage, users need to be aware that
+CC BY-SA
+is not considered as a fully open licence by opendata.swiss.</p>
+<p>A complete list of possibilities that can be combined in a CC licence
+can be found at the <a href="https://creativecommons.org/licenses/" target="_blank">creative commons <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> page.
+Note, however, that the non-commercial (NC) and the no-derivative (ND)
+licence conditions are generally considered non-open licences. In
+particular, we strongly recommend against using the ND licence
+condition, as it violates the interoperability as defined by the <a href="https://www.go-fair.org/fair-principles/" target="_blank">FAIR
+principle <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
+<p>Creative Commons licence also offers an
+<a href="https://creativecommons.org/choose/" target="_blank">interface <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+which helps the user to select the correct combination of licence
+features. CC-0 and CC-BY are always safe choices as open licences.</p>
+<p>Additional resources:</p>
+<ul>
+<li>
+<p><a href="https://choosealicense.com/" target="_blank">Choosing a licence <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a></p>
+</li>
+<li>
+<p><a href="http://www.dcc.ac.uk/resources/how-guides/license-research-data" target="_blank">How to licence research data <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a></p>
+</li>
+<li>
+<p><a href="https://freedomdefined.org/Licenses/NC" target="_blank">Why avoid non-commercial licences? <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a></p>
+</li>
+<li>
+<p><a href="http://doi.org/10.5281/zenodo.840651" target="_blank">Creative Commons and Open Science <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a></p>
+</li>
+</ul>
+<h4 id="535-recommended-osls-for-software-licences">5.3.5 Recommended OSLs for software licences<a class="headerlink" href="#535-recommended-osls-for-software-licences" title="Permanent link">&para;</a></h4>
+<p>There are many OSLs out there. It is highly recommended to use one of
+the common OSLs since this means that users are familiar with the rights
+and obligations coming with such a licence.</p>
+<p>We recommend to use:</p>
+<ul>
+<li>
+<p>The <a href="https://opensource.org/licenses/MIT" target="_blank">MIT licence <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> if you want a very permissive open source licence</p>
+</li>
+<li>
+<p>The <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache licence <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> if you want permissive free and open source licence</p>
+</li>
+<li>
+<p>The <a href="https://opensource.org/licenses/gpl-license" target="_blank">GNU GPL licence <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> if
+  you want a more restrictive open source licence.</p>
+</li>
+</ul>
+<p>Always keep in mind that <strong>NOT</strong> all OSLs are made the same!</p>
+<p>Some of them are more permissive than others (with respect to the
+freedom given to the user). Two examples of more permissive licences are
+the BSD 2-Clause and the MIT licence, respectively. On the other hand, there
+are more restrictive open source licences like the
+<a href="https://opensource.org/licenses/gpl-license" target="_blank">GNU General Public licence <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>. If
+you like how the GPL requires users to share their modifications of your
+library, but want to give users more flexibility in licensing their
+applications, then the <a href="https://opensource.org/license/lgpl-3-0" target="_blank">GNU Lesser General Public licence <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> might
+suit you.</p>
+<p>Additional resources:</p>
+<ul>
+<li>
+<p>A complete list of <a href="https://opensource.org/licenses" target="_blank">open source licences approved by OSI <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a></p>
+</li>
+<li>
+<p>Another <a href="https://opensource.org/licenses/category" target="_blank">licence list <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> nicely separated by categories</p>
+</li>
+<li>
+<p>Another <a href="https://choosealicense.com/" target="_blank">very helpful guide <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> on choosing your licence</p>
+</li>
+</ul>
+<h4 id="536-how-to-add-a-licence-to-your-software">5.3.6 How to add a licence to your software<a class="headerlink" href="#536-how-to-add-a-licence-to-your-software" title="Permanent link">&para;</a></h4>
+<p>In order to add a licence to your work, two different actions are
+required:</p>
+<ol>
+<li>
+<p>to add a proper licence text in your package;</p>
+</li>
+<li>
+<p>to add a reference to the copyright information and the licence in
+    the header of every source file of your package.</p>
+</li>
+</ol>
+<p>For action 1., there is an automatic and a manual way to do it.</p>
+<p>If your software is versioned and hosted on a versioning platform like
+gitlab, you may use the 'automatic way': on your versioning platform,
+where your repository is shown, there is a button to 'Add a license'.
+Choose the one you want. This will add the proper text in your
+repository, including the modification with your name as author. Make
+sure however to review this and replace your name in the copyright
+ownership by 'ETH Zurich'. Save the file. This will commit the licence
+text into your software package.</p>
+<p>If, for some reason, the above 'automatic' method does not apply, you
+can add a licence manually: create a file called "Licence.txt" or
+"Licence.md" that contains the licence in the top-level directory.</p>
+<p>Concerning action 2. (specific header in every source file): the header
+should contain two elements:</p>
+<ul>
+<li>
+<p>the copyright information (<code>Copyright &lt;YEAR&gt; ETH Zurich</code>)</p>
+</li>
+<li>
+<p>a licence-specific short text. Each licence may specify how this text
+  (also called 'licence notice') should be set. One can find this
+  information in the corresponding licence notice listed at the
+  <a href="https://spdx.org/licenses/" target="_blank">Software Package Data Exchange (SPDX) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> website.
+  Alternatively to this licence short text, it is equivalent to replace
+  this by a one-line statement containing the SPDX-standardised
+  identifier in the following way:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>SPDX-License-Identifier: &lt;standardized SPDX license identifier&gt;
+</code></pre></div>
+<p>For more information on the SPDX specifications, please visit the
+<a href="https://spdx.org/ids" target="_blank">SPDX <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> website.</p>
+<h2 id="6-archiving-data">6. Archiving Data<a class="headerlink" href="#6-archiving-data" title="Permanent link">&para;</a></h2>
+<p>The focus of data repositories (cf. <a href="#52-data-repositories">Section 5.2</a>) lie on publishing and
+preserving the accessibility of your data in the long term. Whereas tape
+facilities provide a solution for long term storage (LTS) and archiving
+of valuable data. Long-term archiving on tapes is recommended for data
+that is not meant to either evolve or request frequent read access
+anymore. Before you archive, please make sure your data is properly
+organised, documented and cleaned up from any unnecessary components
+(cf. <a href="#4-organising-and-documenting-data">Section 4</a>). The following general recommendations are valid for the
+tape archive at ETH and the one at CSCS:</p>
+<ul>
+<li>
+<p>Add a README.txt file that contains a description, a contact person,
+  and if possible an expiration date for your data</p>
+</li>
+<li>
+<p>The optimal file size is between 10 and 200 GB</p>
+</li>
+<li>
+<p>Files smaller than 10 GB are not suitable for tape archiving</p>
+</li>
+<li>
+<p>Files adding to tape archive should be ideally already compressed (see
+  <a href="../compression/">Data Compression</a>)</p>
+</li>
+<li>
+<p>Group files smaller than 10 GB into .tar.gz or .tar files (in case the
+  data is already compressed)</p>
+</li>
+<li>
+<p>The larger the tarball, the better is the migrate/recall operation
+  performance</p>
+</li>
+<li>
+<p>For each file abc.tar or abc.tar.gz, create a file abc.list containing
+  the list of files of the tarball. This will allow to inspect the
+  contents without actually recalling it from tape</p>
+</li>
+<li>
+<p>Archive only those data that you will not need to retrieve soon.
+  Recalling data from tape should be an infrequent operation</p>
+</li>
+<li>
+<p>IMPORTANT: Once your data has moved to tape, changes are no longer
+  possible. The data cannot be changed on tape, but only be deleted or
+  retrieved</p>
+</li>
+</ul>
+<h3 id="61-tape-archiving-at-eth-zurich">6.1 Tape archiving at ETH Zurich<a class="headerlink" href="#61-tape-archiving-at-eth-zurich" title="Permanent link">&para;</a></h3>
+<p>Each department at ETH has two own data repositories. One accessible
+over CIFS (Windows) and one over NFS (Linux). From January 1st 2020 the
+Long Term Storage (LTS) service of ETH is free of charge for ETH
+members. This might change in the future. Users are not allowed to
+directly write data to the tape archive. Each group has a responsible
+person for data management. The data manager will review the data before
+transferring it to the LTS system. The maximum supported file size is 2
+TB. Guidelines to the users and data managers are provided at the
+<a href="https://wiki.iac.ethz.ch/IT/ETHTapeSystem" target="_blank">IAC Wiki <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
+<h3 id="62-tape-archiving-at-cscs">6.2 Tape archiving at CSCS<a class="headerlink" href="#62-tape-archiving-at-cscs" title="Permanent link">&para;</a></h3>
+<p>Tape storage at CSCS is offered to projects or organisations that have
+been granted a specific quota for that. This is the case for C2SM who
+regularly organises data storage for a group of their members at D-USYS.
+Please keep in mind that this is not a free service, therefore make an
+informed use of it by checking back with your professor/head of group
+and/or contacting C2SM about it. More information and technical details
+can be found at <a href="https://docs.cscs.ch/storage/longterm/" target="_blank">CSCS longterm storage <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+or contact <a href="https://jira.cscs.ch/plugins/servlet/desk?customize=true" target="_blank">CSCS service desk <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
+<h2 id="acknowledgements">Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permanent link">&para;</a></h2>
+<p>An earlier version of these guidelines was based on the
+<a href="https://opendata.eawag.ch/docs/research-data-management/archiving-guide.html" target="_blank">EAWAG data management guide <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+published by Harald von Waldow. An earlier version of the section on
+software and data licences has been developed by T. Chadha (former C2SM
+Scientific Visualization) and counterchecked by ETH Transfer. These
+guidelines were written by humans and enhanced using AI.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 4, 2026 03:04:02 UTC">October 4, 2026</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 4, 2026 03:04:02 UTC">October 4, 2026</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "mermaid2", "navigation.bottom", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sticky", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
