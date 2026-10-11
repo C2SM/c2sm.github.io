@@ -110,8 +110,8 @@
     ```
 
 
-- Size: 219.68 TB :material-information-outline:{ title="last updated: 2026-10-03 06:30:48" }
-- Number of files: 745,810 :material-information-outline:{ title="last updated: 2026-10-03 06:30:48" }
+- Size: 222.47 TB :material-information-outline:{ title="last updated: 2026-10-10 09:54:01" }
+- Number of files: 764,266 :material-information-outline:{ title="last updated: 2026-10-10 09:54:01" }
 - Access: direct / rsync
 - Status: updated monthly
 - Variables: 
