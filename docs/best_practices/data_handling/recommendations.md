@@ -151,7 +151,7 @@ standard redundant disk storage is often financially or technically
 unfeasible. In alignment with Art. 5 of the ETH RDM Guidelines, if the
 data is too large for standard redundant storage, the researcher must
 secure the exact code version (e.g., on gitlab.ethz.ch), namelists,
-seeding keys, and boundary conditions required to deterministically
+and boundary conditions required to deterministically
 *recreate* the simulation. If the native files themselves are
 irreplaceable, they must be moved to Tape-Based Long-Term Storage
 (LTS) provided by ETH IT Services or CSCS.
@@ -845,6 +845,8 @@ We recommend to use:
 - The [MIT licence :material-open-in-new:](https://opensource.org/licenses/MIT){:target="_blank"} if you want a very permissive open source licence
 
 - The [Apache licence :material-open-in-new:](https://www.apache.org/licenses/LICENSE-2.0){:target="_blank"} if you want permissive free and open source licence
+
+- The [BSD 3-Clause licence :material-open-in-new:](https://opensource.org/license/bsd-3-clause){:target="_blank"} if you want a very permissive open source licence but explicitly want to prevent companies from using your institution's name in marketing materials for commercial derivatives.
 
 - The [GNU GPL licence :material-open-in-new:](https://opensource.org/licenses/gpl-license){:target="_blank"} if
   you want a more restrictive open source licence.
