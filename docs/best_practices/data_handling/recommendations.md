@@ -844,7 +844,7 @@ We recommend to use:
 
 - The [Apache licence :material-open-in-new:](https://www.apache.org/licenses/LICENSE-2.0){:target="_blank"} if you want permissive free and open source licence
 
-- The [BSD 3-Clause licence :material-open-in-new:](https://opensource.org/license/bsd-3-clause){:target="_blank"} if you want a very permissive open source licence but explicitly want to prevent companies from using your institution's name in marketing materials for commercial derivatives.
+- The [BSD 3-Clause licence :material-open-in-new:](https://opensource.org/license/bsd-3-clause){:target="_blank"} if you want a very permissive open source licence that prohibits using copyright-holder or contributor names to endorse or promote derived products without specific prior written permission.
 
 - The [GNU GPL licence :material-open-in-new:](https://opensource.org/licenses/gpl-license){:target="_blank"} if
   you want a more restrictive open source licence.
