@@ -700,13 +700,11 @@ together with the
 [Zenodo :material-open-in-new:](https://www.zenodo.org/){:target="_blank"}.
 All are safe, support the
 [FAIR Principles :material-open-in-new:](https://force11.org/info/the-fair-data-principles/){:target="_blank"}
-and offer excellent visibility of your data on the world wide web. While
-the ETH Data Archive has the advantage of being the in-house solution,
-at Zenodo, there is a 50 GB per dataset limit, but registered groups may
-upload as many datasets as desired, the total repository size being
-several petabytes, with constant annual increase. This is not true for
-the ETH Research Collection where fees apply above 1 TB of upload per
-ETH research group.
+and offer excellent visibility of your data on the world wide web.
+While the ETH Data Archive serves as the in-house long-term preservation backend,
+Zenodo allows free uploads up to a 50 GB limit per dataset across its multi-petabyte repository.
+Similarly, publishing research data in the ETH Research Collection is free of charge for ETH members,
+supporting direct uploads up to 50 GB per dataset and offering the Libdrive service for larger datasets.
 
 Please note that in the very specific context of article self-archiving,
 i.e., re-publication of the accepted or published version of an article
