@@ -47,6 +47,20 @@ C2SM supports a set of pre- and postprocessing tools on different high-performan
 
 </div>
 
+## Post-processing
+
+<div class="grid cards" markdown>
+
+-   :material-zip-box:{ .lg .middle } **Data Compression Toolkit**
+
+    ---
+
+    Finds the best lossy compression pipeline for netCDF files within user-defined error thresholds and writes the result into a Zarr store.
+
+    [:octicons-arrow-right-24: dc_toolkit](dc_toolkit.md)
+
+</div>
+
 ## HPC Utilities
 
 <div class="grid cards" markdown>
