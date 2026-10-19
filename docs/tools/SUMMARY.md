@@ -1,4 +1,5 @@
 * [Tools](index.md)
+* [Data Compression Toolkit](dc_toolkit.md)
 * [DWD ICON Tools](icontools.md)
 * [EXTPAR](extpar.md)
 * [Processing Chain](processing_chain.md)
