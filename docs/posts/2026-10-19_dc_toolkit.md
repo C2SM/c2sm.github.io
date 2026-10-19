@@ -21,4 +21,4 @@ The toolkit runs on Santis, Balfrin, and Euler, and scales across many nodes wit
 
 - [dc_toolkit page](../tools/dc_toolkit.md)
 - [Data compression best practices](../best_practices/data_handling/compression.md)
-- [Repository at C2SM :material-open-in-new:](https://github.com/C2SM/data-compression){:target="_blank"}
+- [Repository at C2SM :material-open-in-new:](https://github.com/C2SM/dc_toolkit){:target="_blank"}

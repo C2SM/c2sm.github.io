@@ -99,4 +99,4 @@ Lossy compression can achieve ratios of 10–50× for climate and weather data, 
 
 - **C2SM dc_toolkit**
 
-    The [data-compression :material-open-in-new:](https://github.com/C2SM/data-compression){:target="_blank"} toolkit systematically searches for the best compression pipeline for your data and verifies the result against a user-defined error threshold. See the [dc_toolkit](../../tools/dc_toolkit.md) page in the Tools section.
+    The [dc_toolkit :material-open-in-new:](https://github.com/C2SM/dc_toolkit){:target="_blank"} toolkit systematically searches for the best compression pipeline for your data and verifies the result against a user-defined error threshold. See the [dc_toolkit](../../tools/dc_toolkit.md) page in the Tools section.

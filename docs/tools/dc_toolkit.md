@@ -1,6 +1,6 @@
 # Data Compression Toolkit (dc_toolkit)
 
-The [**dc_toolkit** :material-open-in-new:](https://github.com/C2SM/data-compression){:target="_blank"} automates the search for the best lossy compression pipeline for netCDF files and writes the result into a Zarr store. It sweeps all `compressor × filter × serializer` combinations on a representative sample of each field and filters the results according to predefined error thresholds.
+The [**dc_toolkit** :material-open-in-new:](https://github.com/C2SM/dc_toolkit){:target="_blank"} automates the search for the optimal compression pipeline for netCDF files and writes the result into a Zarr store. It sweeps all `compressor × filter × serializer` combinations on a 2 GB representative sample of each field and filters the results according to predefined error thresholds.
 
 For general guidance on lossless and lossy compression, see [Data Compression](../best_practices/data_handling/compression.md) in the best practices section.
 
@@ -54,7 +54,7 @@ For general guidance on lossless and lossy compression, see [Data Compression](.
 ## Installation
 
 ```bash
-git clone https://github.com/C2SM/data-compression.git dc_toolkit
+git clone https://github.com/C2SM/dc_toolkit.git
 cd dc_toolkit
 python -m venv venv && source venv/bin/activate
 bash install_dc_toolkit.sh
@@ -80,4 +80,4 @@ srun dc_toolkit evaluate_combos input.nc \
 
 ## Documentation
 
-For further details, including Docker usage and a step-by-step walkthrough, see the [dc_toolkit documentation :material-open-in-new:](https://github.com/C2SM/data-compression){:target="_blank"}.
+For further details, including Docker and AWS usage and a step-by-step walkthrough, see the [dc_toolkit documentation :material-open-in-new:](https://github.com/C2SM/dc_toolkit){:target="_blank"}.
