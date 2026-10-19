@@ -55,7 +55,7 @@ C2SM supports a set of pre- and postprocessing tools on different high-performan
 
     ---
 
-    Finds the best lossy compression pipeline for netCDF files within user-defined error thresholds and writes the result into a Zarr store.
+    Finds the optimal compression pipeline for netCDF files within user-defined error thresholds and writes the result into a Zarr store.
 
     [:octicons-arrow-right-24: dc_toolkit](dc_toolkit.md)
 
