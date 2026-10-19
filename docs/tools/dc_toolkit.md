@@ -11,6 +11,11 @@ For general guidance on lossless and lossy compression, see [Data Compression](.
 - L1 (mean absolute error): average deviation across all cells; the most common budget for climate data.
 - L2 (root-mean-square error): penalizes large local deviations.
 - L∞ (maximum absolute error): the worst-case deviation anywhere in the field.
+- Bias: positive and negative errors cancel each other out to maintain a balanced output
+- q99 tail: checks outliers
+- Physical bounds: min and max values for a field
+- Finiteness: no NaN/infinite values introduced
+- Gradient: spatial structure preserved
 
 **Compression pipeline**: compression is applied in up to three stages:
 
