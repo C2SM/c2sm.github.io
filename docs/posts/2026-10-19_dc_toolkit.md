@@ -7,7 +7,7 @@ categories:
 
 # New tool: Data Compression Toolkit (dc_toolkit)
 
-The [Data Compression Toolkit](../tools/dc_toolkit.md) is now part of the C2SM tools. It helps you find the best lossy compression setup for your netCDF data while staying within an error budget that you define.
+The [Data Compression Toolkit](../tools/dc_toolkit.md) is now part of the C2SM tools. It helps you find the optimal compression setup for your netCDF data while staying within customized error budgets.
 
 <!-- more -->
 
