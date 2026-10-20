@@ -15,7 +15,7 @@
     ```
 
 - Size: 0 TB
-- Number of Files:
+- Number of files:
 - Access: direct
 - Status: updated
 - Resolution: native
