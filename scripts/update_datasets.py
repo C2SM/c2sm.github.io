@@ -13,6 +13,7 @@ def read_yaml(file_path):
 
 def download_json(url):
     response = requests.get(url)
+    response.raise_for_status()
     return json.loads(response.text)
 
 def read_markdown(file_path):
@@ -238,6 +239,10 @@ def replace_entry(file_path, heading_dataset, new_variables_content, entry):
         # Check for an exact match with the heading, considering markdown syntax
         if not skip_section and line.strip() == f"### {heading_dataset}":
             heading_found = True
+            continue
+        # Stop at the next heading so entries of other datasets are never modified
+        if heading_found and line.lstrip().startswith("#"):
+            break
         if heading_found and line.strip().startswith(entry):
             start_index = i
             break
@@ -299,8 +304,12 @@ def main():
     # Process data for each dataset and append markdown file
     for dataset in datasets.keys():
         # Load the JSON data for the dataset from https://data.iac.ethz.ch/zephyr/file_index/ and merge with metadata
-        dataset_json = download_json(f'https://data.iac.ethz.ch/zephyr/file_index/file_tree_{dataset}_noindent.json')
-        dataset_json_meta = download_json(f'https://data.iac.ethz.ch/zephyr/file_index/meta_{dataset}.json')
+        try:
+            dataset_json = download_json(f'https://data.iac.ethz.ch/zephyr/file_index/file_tree_{dataset}_noindent.json')
+            dataset_json_meta = download_json(f'https://data.iac.ethz.ch/zephyr/file_index/meta_{dataset}.json')
+        except requests.HTTPError as error:
+            print(f"Skipping {dataset}: file index not available ({error})")
+            continue
         dataset_json = {**dataset_json, **dataset_json_meta}
         heading_dataset = datasets[dataset]
 
