@@ -98,6 +98,26 @@
 
 !!! note
     Next Generation (ng) archives were maintained by Reto's group (Jan Sedlacek/Lukas Brunner). Ruth Lorenz / C2SM took over cmip6-ng in 2022. Contact: [cmip6-archive@env.ethz.ch](mailto:cmip6-archive@env.ethz.ch). Documentation: [https://doi.org/10.5281/zenodo.373412 :material-open-in-new:](https://doi.org/10.5281/zenodo.3734128){:target="_blank"}.
+    cmip7-ng is developed by Ruth Lorenz and Anna Merrifield.
+
+### CMIP7-ng
+
+=== "IAC"
+    ```console
+    /net/atmos/data/cmip7-ng
+    ```
+=== "Euler"
+    ```console
+    /nfs/atmos/c2sm/cmip7-ng
+    ```
+
+- Size:
+- Number of files:
+- Access: direct / rsync
+- Status: updated
+- Variables:
+- Resolution: native and 1° x 1°
+- Coverage: global
 
 ### CMIP6-ng
 
@@ -115,7 +135,7 @@
 - Number of files: 764,266 :material-information-outline:{ title="last updated: 2026-10-31 05:08:47" }
 - Access: direct / rsync
 - Status: updated monthly
-- Variables: 
+- Variables:
   `areacella`{ title="fx (native)" },
   `clt`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `co2mass`{ title="mon (native)" },
@@ -228,7 +248,8 @@
     ```console
     /net/stratus/c2sm-data/cordex-cmip6/EUR-12/
     ```
-
+- Size:
+- Number of files:
 - Access: direct
 - Status: updated
 - Resolution: 0.11°
@@ -288,10 +309,17 @@
     /net/stratus/c2sm-data/cordex-cmip6/processed/
     ```
 
+- Size:
+- Number of files:
 - Access: direct
 - Status: updated
-- Resolution: 0.11°
-- Coverage: Europe or hydrological Switzerland
+- Variables:
+    - monthly:  `pr`, `tas`
+    - daily: `pr`, `tas`
+    - hourly: `hurs`, `huss`, `pr`, `ps`, `sfcWind`, `tas`
+- Resolution: 0.11° (monthly) or WGS84 (daily and 1-hourly)
+- Coverage: Europe (daily, monthly) or hydrological Switzerland (1-hourly data)
+- monthly data is concatenated historical runs plus scenarios, daily and 1-hourly data is regridded to regular lat lon grid WGS84 and cut to square covering hydrological Switzerland in case of 1-hourly data.
 
 ### CORDEX.ch2025
 
@@ -326,7 +354,7 @@
 - Number of files: 1.800
 - Access: direct
 - Status: frozen (2019-04)
-- Variables: 
+- Variables:
   `hfls`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
   `hfss`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
   `hurs`{ title="historical: 3hr, day, mon, sem — rcp26: 3hr, day, mon, sem — rcp85: 3hr, day, mon, sem" },
