@@ -18,12 +18,12 @@ Clone the ICON repository:
 
 === "Latest release at DKRZ GitLab"
     ```console
-    git clone -b release-2026.04-public --recurse-submodules https://gitlab.dkrz.de/icon/icon-model.git
+    git clone -b release-2026.04-public --recurse-submodules https://git.gitlab.dkrz.de/icon/icon-model.git
     ```
 
 === "icon-nwp master branch at DKRZ GitLab"
     ```console
-    git clone --recurse-submodules git@gitlab.dkrz.de:icon/icon-nwp.git
+    git clone --recurse-submodules git@git.gitlab.dkrz.de:icon/icon-nwp.git
     ```
 
 ### Compiling

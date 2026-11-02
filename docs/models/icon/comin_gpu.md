@@ -36,7 +36,7 @@ source $SCRATCH/spack-c2sm-nwp/setup-env.sh /user-environment
 ## 3. Clone and Prepare the ICON Code
 
 ```bash
-git clone git@gitlab.dkrz.de:icon/icon-nwp.git ./icon-nwp
+git clone git@git.gitlab.dkrz.de:icon/icon-nwp.git ./icon-nwp
 cd ./icon-nwp
 git submodule update --init --recursive
 ```
