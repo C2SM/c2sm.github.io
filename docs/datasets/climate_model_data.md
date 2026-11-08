@@ -15,8 +15,8 @@
     /net/stratus/c2sm-data/cmip7
     ```
 
-- Size: 8.23 TB :material-information-outline:{ title="last updated: 2026-10-31 05:08:58" }
-- Number of files: 38,402 :material-information-outline:{ title="last updated: 2026-10-31 05:08:58" }
+- Size: 12.38 TB :material-information-outline:{ title="last updated: 2026-11-07 07:03:14" }
+- Number of files: 59,705 :material-information-outline:{ title="last updated: 2026-11-07 07:03:14" }
 - Access: direct
 - Status: updated
 - Resolution: native
@@ -111,11 +111,11 @@
     ```
 
 
-- Size: 222.48 TB :material-information-outline:{ title="last updated: 2026-10-31 05:08:47" }
-- Number of files: 764,266 :material-information-outline:{ title="last updated: 2026-10-31 05:08:47" }
+- Size: 222.48 TB :material-information-outline:{ title="last updated: 2026-11-07 07:02:48" }
+- Number of files: 764,266 :material-information-outline:{ title="last updated: 2026-11-07 07:02:48" }
 - Access: direct / rsync
 - Status: updated monthly
-- Variables:
+- Variables: 
   `areacella`{ title="fx (native)" },
   `clt`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `co2mass`{ title="mon (native)" },
