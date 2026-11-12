@@ -1,11 +1,12 @@
 
 # Support
 
-C2SM's Core Team supports members in running and compiling the models and tools it maintains, and helps resolve issues on supported HPC systems.
+C2SM's Core Team supports members in running and compiling the models and tools it maintains, and helps resolve issues
+on supported HPC systems.
 
 <div class="grid cards" markdown>
 
--   :material-lifebuoy:{ .lg .middle } **User Support**
+- :material-lifebuoy:{ .lg .middle } **User Support**
 
     ---
 
@@ -13,7 +14,7 @@ C2SM's Core Team supports members in running and compiling the models and tools 
 
     [:octicons-arrow-right-24: User Support](user_support.md)
 
--   :material-clipboard-check-outline:{ .lg .middle } **Support Status**
+- :material-clipboard-check-outline:{ .lg .middle } **Support Status**
 
     ---
 

@@ -1,22 +1,37 @@
 # Run Probtest on Säntis
 
-Use Probtest to verify whether your test case produces consistent results on GPU. It compares a GPU test run to a CPU ensemble with perturbed input conditions.
+Use Probtest to verify whether your test case produces consistent results on GPU. It compares a GPU test run to a CPU
+ensemble with perturbed input conditions.
 
 ## 1. Compile ICON
+
 Compile ICON on CPU and on GPU as [out-of-source builds](compile.md#building-out-of-source) in sub-directories of ICON.
 
 !!! note
-    The probtest container uses the ICON root directory as its working directory and can therefore only access data within the ICON root directory. This is why the out-of-source builds need to be subdirectories of ICON.
+    The probtest container uses the ICON root directory as its working directory and can therefore only access data
+    within the ICON root directory. This is why the out-of-source builds need to be subdirectories of ICON.
 
 ## 2. Set Up the Probtest Container and Environment on Säntis
-To run Probtest for ICON on Säntis, use the prebuilt container available on Docker Hub ([Probtest Container :material-open-in-new:](https://github.com/MeteoSwiss/probtest?tab=readme-ov-file#probtest-container){:target="_blank"}). ICON provides the wrapper script [`probtest_container_wrapper.py` :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/scripts/cscs_ci/probtest_container_wrapper.py?ref_type=heads){:target="_blank"}.
+
+To run Probtest for ICON on Säntis, use the prebuilt container available on Docker Hub
+([Probtest
+Container :material-open-in-new:](https://github.com/MeteoSwiss/probtest?tab=readme-ov-file#probtest-container){:target="_blank"}).
+ICON provides the wrapper script
+[`probtest_container_wrapper.py` :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/scripts/cscs_ci/probtest_container_wrapper.py?ref_type=heads){:target="_blank"}.
 
 !!! note
-    If your ICON version doesn’t include this script, add it to `scripts/cscs_ci/probtest_container_wrapper.py`, along with the appropriate [PROBTEST_TAG :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/run/tolerance/PROBTEST_TAG?ref_type=heads){:target="_blank"} under `run/tolerance/PROBTEST_TAG` and [yaml_experiment_test_processor.py :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/scripts/experiments/yaml_experiment_test_processor.py?ref_type=heads){:target="_blank"} under `scripts/experiments/yaml_experiment_test_processor.py` (replace if already available).
-
+    If your ICON version doesn’t include this script, add it to `scripts/cscs_ci/probtest_container_wrapper.py`, along
+    with the appropriate
+    [PROBTEST_TAG :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/run/tolerance/PROBTEST_TAG?ref_type=heads){:target="_blank"}
+    under `run/tolerance/PROBTEST_TAG` and
+    [yaml_experiment_test_processor.py :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/scripts/experiments/yaml_experiment_test_processor.py?ref_type=heads){:target="_blank"}
+    under `scripts/experiments/yaml_experiment_test_processor.py` (replace if already available).
 
 ### When Setting Up ICON from Scratch
-Add a TOML configuration to run the probtest container in your ICON root directory (this requires setting the `EDF_PATH` to your *current directory* = *ICON root directory*):
+
+Add a TOML configuration to run the probtest container in your ICON root directory (this requires setting the `EDF_PATH`
+to your *current directory* = *ICON root directory*):
+
 ```console
 PROBTEST_TAG=$(cat run/tolerance/PROBTEST_TAG)
 echo "image = 'c2sm/probtest:${PROBTEST_TAG}'" > probtest.toml
@@ -26,13 +41,16 @@ echo "writable = true" >> probtest.toml
 ```
 
 Install Python image needed for *probtest_container_wrapper.py*:
-```
+
+```console
 export UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
 uenv run ${UENV_VERSION} --view default -- bash -c 'python3 -m venv --clear .venv && source .venv/bin/activate && pip install click numpy pandas pyyaml toml'
 ```
 
 ### Every Time You Reconnect to the Server
+
 If the `probtest.toml` file already exists in your ICON root directory, run the following command from within that directory:
+
 ```console
 # Set the path to the probtest.toml file
 export EDF_PATH=$(pwd)
@@ -45,21 +63,26 @@ export UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
 ```
 
 Set experiment name, e.g.:
+
 ```console
 export EXP=c2sm_clm_r13b03_seaice
 ```
 
 ## 3. Run perturbed ensemble on CPU
-To run a perturbed ensemble, please allocate compute nodes interactively to *not* use your login nodes. Therefore, run the following (replace `<project account>`):
+
+To run a perturbed ensemble, please allocate compute nodes interactively to *not* use your login nodes. Therefore, run
+the following (replace `<project account>`):
+
 ```console
 salloc -A <project account> -p normal --nodes=1 --gpus-per-node=4 --time=01:00:00
 ```
 
 !!! warning "Compute account"
-    Ensure that your default account at CSCS has computing resources. If this is not the case, you need to open a ticket 
+    Ensure that your default account at CSCS has computing resources. If this is not the case, you need to open a ticket
     at the [CSCS Service Desk :material-open-in-new:](https://jira.cscs.ch/plugins/servlet/desk/site/global){:target="_blank"}.
 
 Then navigate to your CPU build directory and generate and run a 10-member ensemble (this may take time):
+
 ```console
 cd nvhpc_cpu
 ./make_runscripts $EXP
@@ -74,6 +97,7 @@ This generates:
 ## 4. Generate Tolerance from Ensemble
 
 Create reference and tolerance files using the 10 ensemble members:
+
 ```console
 uenv run ${UENV_VERSION} --view default -- bash -c 'source ${EDF_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 10)'
 ```
@@ -83,7 +107,9 @@ This generates:
 - `${EXP}_tolerance.csv`
 
 ## 5. Run the test case on GPU and collect statistics
+
 Navigate to your GPU build folder and run the same test case, e.g.:
+
 ```console
 cd ../nvhpc_gpu
 ./make_runscripts $EXP
@@ -91,6 +117,7 @@ cd run && uenv run $UENV_VERSION --view modules,default -- bash -c './exp.$EXP.r
 ```
 
 Navigate back to ICON root folder and collect the GPU statistics:
+
 ```console
 cd ..
 uenv run ${UENV_VERSION} --view default -- bash -c 'source ${EDF_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py stats $EXP --stats-file-name stats_gpu.csv --build-dir ${EDF_PATH}/nvhpc_gpu'
@@ -101,19 +128,24 @@ This saves the GPU stats as `stats_gpu.csv` in your ICON root directory.
 ## 6. Check GPU Statistics Against Reference and Tolerance
 
 From your ICON root directory, run the check using the generated reference and tolerance:
+
 ```console
 uenv run ${UENV_VERSION} --view default -- bash -c 'source ${EDF_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py check $EXP --current-files stats_gpu.csv --reference-files nvhpc_cpu/${EXP}_reference.csv --tolerance-files nvhpc_cpu/${EXP}_tolerance.csv --build-dir $(pwd)'
 ```
 
 ## 7. Increase Ensemble Size if Validation Fails
+
 Again, if not done already, allocate compute nodes interactively to *not* use your login nodes:
+
 ```console
 salloc -A <project account> -p normal --nodes=1 --gpus-per-node=4 --time=01:20:00
 ```
 
-A 10-member ensemble may not capture the full variability, causing false negatives. Increase to 49 members for better coverage from your CPU build directory:
+A 10-member ensemble may not capture the full variability, causing false negatives. Increase to 49 members for better
+coverage from your CPU build directory:
 
 Run additional members (11–49):
+
 ```console
 cd nvhpc_cpu
 ./make_runscripts $EXP
@@ -121,6 +153,7 @@ uenv run ${UENV_VERSION} --view default -- bash -c 'source ${EDF_PATH}/.venv/bin
 ```
 
 Regenerate reference and tolerance using all 49 members:
+
 ```console
 uenv run ${UENV_VERSION} --view default -- bash -c 'source ${EDF_PATH}/.venv/bin/activate && python3 scripts/cscs_ci/probtest_container_wrapper.py tolerance $EXP --build-dir $(pwd) --member-ids $(seq -s, 1 49)'
 ```

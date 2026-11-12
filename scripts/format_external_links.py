@@ -11,8 +11,8 @@ def modify_link(line):
     open_new_tab = '{:target="_blank"}'
 
     # Define patterns for general and download links
-    general_pattern = r'\[([^\]]+)\]\((http[s]?://[^\s\)]+)\)'
-    download_pattern = r'\[([^\]]+)\]\((https://polybox\.ethz\.ch/index\.php/s/[^\s\)]+)\)'
+    general_pattern = r'(?<!!)\[([^\]]+)\]\((http[s]?://[^\s\)]+)\)'
+    download_pattern = r'(?<!!)\[([^\]]+)\]\((https://polybox\.ethz\.ch/index\.php/s/[^\s\)]+)\)'
 
     # Define replacements for general and download links
     general_replacement = r'[\1 ' + icon_external_link + r'](\2)'
@@ -34,7 +34,7 @@ def modify_link(line):
 
         # Check for new tab attribute
         if open_new_tab not in line:
-            new_line = re.sub(r'(\[.*?\]\(.*?\))', r'\1' + open_new_tab, line)
+            new_line = re.sub(r'((?<!!)\[.*?\]\(.*?\))', r'\1' + open_new_tab, line)
             if new_line != line:
                 line = new_line
                 replaced = True
@@ -63,15 +63,20 @@ def process_markdown_file(file_path):
             print(f"File modified: {file_path}")
 
 
-def main(start_path):
+def main(start_path, files):
+    if files:
+        for file in files:
+            process_markdown_file(file)
+        return
     for root, dirs, files in os.walk(start_path):
         for file in files:
             if file.endswith('.md'):
                 process_markdown_file(os.path.join(root, file))
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Check markdown links in files.')
+    parser = argparse.ArgumentParser(description='Format external links in markdown files.')
+    parser.add_argument('files', nargs='*', help='Markdown files to format. If omitted, all files under --path are formatted.')
     parser.add_argument('-p', '--path', default=os.getcwd(), help='Base path to search for markdown files. Defaults to current working directory.')
     args = parser.parse_args()
 
-    main(args.path) 
+    main(args.path, args.files)

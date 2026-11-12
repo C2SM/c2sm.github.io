@@ -1,3 +1,6 @@
+<!-- Generated variable lists (scripts/update_datasets.py) cannot be wrapped -->
+<!-- markdownlint-disable MD013 -->
+
 # Climate Model Data
 
 ## Raw CMIP Archives
@@ -6,7 +9,8 @@
     The data is available as downloaded from ESGF.
 
 !!! note
-    "Resolution: native" means that each model output is available on the native grid on which it was run. Size and file information last updated in June 2021.
+    "Resolution: native" means that each model output is available on the native grid on which it was run. Size and file
+    information last updated in June 2021.
 
 ### CMIP7
 
@@ -21,7 +25,6 @@
 - Status: updated
 - Resolution: native
 - Coverage: global
-
 
 ### CMIP6
 
@@ -45,7 +48,6 @@
 - Link to [Publication behind the scenarios :material-open-in-new:](https://link.springer.com/article/10.1007/s10584-013-0905-2){:target="_blank"}
 - Link to [CMIP6 explained by CarbonBrief :material-open-in-new:](https://www.carbonbrief.org/cmip6-the-next-generation-of-climate-models-explained/){:target="_blank"}
 
-
 ### CMIP5
 
 === "IAC"
@@ -59,7 +61,6 @@
 - Status: frozen (2023/01)
 - Resolution: native
 - Coverage: global
-
 
 ### CMIP3
 
@@ -75,7 +76,6 @@
 - Resolution: native
 - Coverage: global
 
-
 ### CMIP2
 
 === "IAC"
@@ -90,14 +90,15 @@
 - Resolution: native
 - Coverage: global
 
-
 ## CMIP Next Generation
 
 !!! info
     The datasets are checked, standardized, and regridded to common grid.
 
 !!! note
-    Next Generation (ng) archives were maintained by Reto's group (Jan Sedlacek/Lukas Brunner). Ruth Lorenz / C2SM took over cmip6-ng in 2022. Contact: [cmip6-archive@env.ethz.ch](mailto:cmip6-archive@env.ethz.ch). Documentation: [https://doi.org/10.5281/zenodo.373412 :material-open-in-new:](https://doi.org/10.5281/zenodo.3734128){:target="_blank"}.
+    Next Generation (ng) archives were maintained by Reto's group (Jan Sedlacek/Lukas Brunner). Ruth Lorenz / C2SM took
+    over cmip6-ng in 2022. Contact: [cmip6-archive@env.ethz.ch](mailto:cmip6-archive@env.ethz.ch). Documentation:
+    [https://doi.org/10.5281/zenodo.373412 :material-open-in-new:](https://doi.org/10.5281/zenodo.3734128){:target="_blank"}.
 
 ### CMIP6-ng
 
@@ -110,12 +111,11 @@
     /nfs/atmos/c2sm/cmip6-ng
     ```
 
-
 - Size: 222.48 TB :material-information-outline:{ title="last updated: 2026-11-07 07:02:48" }
 - Number of files: 764,266 :material-information-outline:{ title="last updated: 2026-11-07 07:02:48" }
 - Access: direct / rsync
 - Status: updated monthly
-- Variables: 
+- Variables:
   `areacella`{ title="fx (native)" },
   `clt`{ title="ann (g025), ann (native), mon (g025), mon (native)" },
   `co2mass`{ title="mon (native)" },
@@ -184,7 +184,6 @@
 - Link to [CMIP6 explained by CarbonBrief :material-open-in-new:](https://www.carbonbrief.org/cmip6-the-next-generation-of-climate-models-explained/){:target="_blank"}
 - Link to [CMIP6-ng publication on Zenodo (Brunner et al. 2020):material-open-in-new:](https://zenodo.org/records/3734128){:target="_blank"}
 
-
 ### CMIP5-ng
 
 === "IAC"
@@ -199,7 +198,6 @@
 - Variables: n/a
 - Resolution: native and 2.5° x 2.5°
 - Coverage: global
-
 
 ### CMIP3-ng
 
@@ -216,14 +214,13 @@
 - Resolution: native and 2.5°x2.5°
 - Coverage: global
 
-
-
 ## Raw CORDEX
 
 !!! info
     The data is available as downloaded.
 
 ### EURO-CORDEX-CMIP6
+
 === "IAC"
     ```console
     /net/stratus/c2sm-data/cordex-cmip6/EUR-12/
@@ -233,7 +230,6 @@
 - Status: updated
 - Resolution: 0.11°
 - Coverage: Europe
-
 
 ### CORDEX (CMIP5)
 
@@ -249,7 +245,6 @@
     ```console
     /capstor/store/cscs/c2sm/c2sme/cordex
     ```
-
 
 - Size: 356.98 TB :material-information-outline:{ title="last updated: 2026-09-05 09:39:57" }
 - Number of files: 552,596 :material-information-outline:{ title="last updated: 2026-09-05 09:39:57" }
@@ -281,8 +276,8 @@
 !!! info
     The data is checked, and regridded to identical grids if necessary.
 
-
 ### CORDEX-CMIP6 processed
+
 === "IAC"
     ```console
     /net/stratus/c2sm-data/cordex-cmip6/processed/
@@ -309,7 +304,6 @@
 - Resolution: 0.11°
 - Coverage: Europe
 - [List with issues on polybox :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/RQQrUnRPlg86Apx){:target="_blank"}
-
 
 ### CORDEX.ch2018
 
@@ -375,7 +369,6 @@
 - Resolution: 0.44° and 0.11°
 - Coverage: Europe
 
-
 ### CORDEX-FPSCONV
 
 === "IAC"
@@ -396,7 +389,7 @@
     - daily: `pr`, `tas`, `tasmax`, `tasmin`
 - Resolution: 2-3 km
 - Coverage: European Alpine domain
-- More details [here](cordex_fpsconv_data.md)
+- More details on the [CORDEX-FPSCONV data page](cordex_fpsconv_data.md)
 
 ## Seasonal Forecast Data from ECMWF (SEAS5)
 
@@ -411,7 +404,9 @@
 - Access: direct / rsync
 - Status: frozen (could be updated on request)
 - Variables:
-    - daily: `10m_u_component_of_wind`,  `2m_dewpoint_temperature`,  `mean_sea_level_pressure`,  `snow_depth_water_equivalent`,  `surface_net_solar_radiation`,  `total_cloud_cover`,
-`10m_v_component_of_wind`,  `evaporation`, `snow_depth`, `sub_surface_runoff`, `surface_runoff`, `2m_temperature`, `maximum_2m_temperature_in_the_last_24_hours`, `minimum_2m_temperature_in_the_last_24_hours`, `total_precipitation`
+    - daily: `10m_u_component_of_wind`,  `2m_dewpoint_temperature`,  `mean_sea_level_pressure`,
+      `snow_depth_water_equivalent`,  `surface_net_solar_radiation`,  `total_cloud_cover`,
+`10m_v_component_of_wind`,  `evaporation`, `snow_depth`, `sub_surface_runoff`, `surface_runoff`, `2m_temperature`,
+`maximum_2m_temperature_in_the_last_24_hours`, `minimum_2m_temperature_in_the_last_24_hours`, `total_precipitation`
 - Resolution: 1° x 1°
 - Coverage: global

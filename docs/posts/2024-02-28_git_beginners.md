@@ -8,7 +8,8 @@ categories:
 
 # Git for Beginners Workshop
 
-We are pleased to announce our next Git for Beginners workshop, which will take place on **Thursday, April 11th from 9:30 am to 3:00 pm**.
+We are pleased to announce our next Git for Beginners workshop, which will take place on **Thursday, April 11th from
+9:30 am to 3:00 pm**.
 
 <!-- more -->
 

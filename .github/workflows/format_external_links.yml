@@ -1,33 +1,21 @@
-name: Format Markdown Links
+name: Check External Link Format
 
 on:
   push:
-    branches-ignore:
-    # We don't want code modified after merge in master
-    - main
-    paths:
-    # Run action if any Markdown file is pushed
-    - '**.md'
+  pull_request:
 
 jobs:
   format-links:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-      
-      - name: Run Link Formatter Script
+
+      - name: Format external links
         run: python ./scripts/format_external_links.py --path ./docs
-      
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: 'GitHub Action: Apply external link format'
-          branch: ${{ github.head_ref }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fail if links were not formatted
+        run: git diff --exit-code || (echo "Run 'pre-commit run --all-files' and commit the changes." && exit 1)

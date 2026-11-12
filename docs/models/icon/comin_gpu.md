@@ -1,6 +1,7 @@
 # Compiling `icon-nwp` on Santis with GPU Support and ComIn Integration
 
-This guide provides a step-by-step recipe to compile **`icon-nwp`** on **Santis** with GPU support and enable **ComIn** functionality.  
+This guide provides a step-by-step recipe to compile **`icon-nwp`** on **Santis** with GPU support and enable **ComIn**
+functionality.  
 It includes environment setup, code compilation, and configuration steps for running ICON with the ComIn plugin.
 
 !!! note "Important Notes"

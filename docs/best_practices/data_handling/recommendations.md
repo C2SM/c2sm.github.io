@@ -1,10 +1,8 @@
----
-title: "C2SM Data Management Recommendations"
----
-
 # C2SM Data Management Recommendations
 
-R. Lorenz<sup>1</sup>, U. Beyerle<sup>1</sup>, I. Iosifescu Enescu<sup>3</sup>, S. Ferrachat<sup>1</sup>, M. Hauser<sup>1</sup>, M. Hirschi<sup>1</sup>, S. Henne<sup>2</sup>, M. Jähn<sup>1</sup>, M. Münnich<sup>1</sup>, G.-K. Plattner<sup>3</sup>, C. Schnadt Poberaj<sup>1</sup>, M. Sprenger<sup>1</sup>
+R. Lorenz<sup>1</sup>, U. Beyerle<sup>1</sup>, I. Iosifescu Enescu<sup>3</sup>, S. Ferrachat<sup>1</sup>, M.
+Hauser<sup>1</sup>, M. Hirschi<sup>1</sup>, S. Henne<sup>2</sup>, M. Jähn<sup>1</sup>, M. Münnich<sup>1</sup>, G.-K.
+Plattner<sup>3</sup>, C. Schnadt Poberaj<sup>1</sup>, M. Sprenger<sup>1</sup>
 
 <sup>1</sup> Swiss Federal Institute of Technology ETH,
 <sup>2</sup> Swiss Federal Laboratories for Materials Science and Technology Empa,
@@ -775,7 +773,11 @@ supplemental material, this code should be provided with an open source
 licence and prior to publication, needs to be registered at the ETH Data
 Archive (and subsequently approved by ETH Transfer). A list of projects
 registered at the ETH Data Archive can be found at
-[this link :material-open-in-new:](https://search.library.ethz.ch/primo-explore/search?query=any,exact,open%20source,AND&tab=default_tab&search_scope=data_archive&sortby=date&vid=DADS&lang=en_US&mode=advanced&offset=0){:target="_blank"}. Also, when sharing the software on download portals read the [ETH guideline​s :material-open-in-new:](https://transfer.ethz.ch/researchers/licensing-software/apps-download-portals.html){:target="_blank"}.
+[this
+link :material-open-in-new:](https://search.library.ethz.ch/primo-explore/search?query=any,exact,open%20source,AND&tab=default_tab&search_scope=data_archive&sortby=date&vid=DADS&lang=en_US&mode=advanced&offset=0){:target="_blank"}.
+Also, when sharing the software on download portals read the
+[ETH
+guideline​s :material-open-in-new:](https://transfer.ethz.ch/researchers/licensing-software/apps-download-portals.html){:target="_blank"}.
 
 #### 5.3.3 How to add a licence to your datasets
 
@@ -840,11 +842,15 @@ and obligations coming with such a licence.
 
 We recommend to use:
 
-- The [MIT licence :material-open-in-new:](https://opensource.org/licenses/MIT){:target="_blank"} if you want a very permissive open source licence
+- The [MIT licence :material-open-in-new:](https://opensource.org/licenses/MIT){:target="_blank"} if you want a very
+  permissive open source licence
 
-- The [Apache licence :material-open-in-new:](https://www.apache.org/licenses/LICENSE-2.0){:target="_blank"} if you want permissive free and open source licence
+- The [Apache licence :material-open-in-new:](https://www.apache.org/licenses/LICENSE-2.0){:target="_blank"} if you want
+  permissive free and open source licence
 
-- The [BSD 3-Clause licence :material-open-in-new:](https://opensource.org/license/bsd-3-clause){:target="_blank"} if you want a very permissive open source licence that prohibits using copyright-holder or contributor names to endorse or promote derived products without specific prior written permission.
+- The [BSD 3-Clause licence :material-open-in-new:](https://opensource.org/license/bsd-3-clause){:target="_blank"} if
+  you want a very permissive open source licence that prohibits using copyright-holder or contributor names to endorse
+  or promote derived products without specific prior written permission.
 
 - The [GNU GPL licence :material-open-in-new:](https://opensource.org/licenses/gpl-license){:target="_blank"} if
   you want a more restrictive open source licence.
@@ -858,14 +864,17 @@ are more restrictive open source licences like the
 [GNU General Public licence :material-open-in-new:](https://opensource.org/licenses/gpl-license){:target="_blank"}. If
 you like how the GPL requires users to share their modifications of your
 library, but want to give users more flexibility in licensing their
-applications, then the [GNU Lesser General Public licence :material-open-in-new:](https://opensource.org/license/lgpl-3-0){:target="_blank"} might
+applications, then the
+[GNU Lesser General Public licence :material-open-in-new:](https://opensource.org/license/lgpl-3-0){:target="_blank"}
+might
 suit you.
 
 Additional resources:
 
 - A complete list of [open source licences approved by OSI :material-open-in-new:](https://opensource.org/licenses){:target="_blank"}
 
-- Another [licence list :material-open-in-new:](https://opensource.org/licenses/category){:target="_blank"} nicely separated by categories
+- Another [licence list :material-open-in-new:](https://opensource.org/licenses/category){:target="_blank"} nicely
+  separated by categories
 
 - Another [very helpful guide :material-open-in-new:](https://choosealicense.com/){:target="_blank"} on choosing your licence
 
@@ -874,9 +883,9 @@ Additional resources:
 In order to add a licence to your work, two different actions are
 required:
 
-1.  to add a proper licence text in your package;
+1. to add a proper licence text in your package;
 
-2.  to add a reference to the copyright information and the licence in
+2. to add a reference to the copyright information and the licence in
     the header of every source file of your package.
 
 For action 1., there is an automatic and a manual way to do it.

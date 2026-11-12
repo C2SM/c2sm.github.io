@@ -6,7 +6,7 @@ There are different types of data sets available for ICON:
 - General input data for use cases / production runs
 - Reference data (observations, reanalysis, satellite, other models)
 
-## Santis 
+## Santis
 
 On Säntis, all ICON input and reference data is collected in the project `cws01`.
 
@@ -91,7 +91,6 @@ On Säntis, all ICON input and reference data is collected in the project `cws01
     └── model_comparisons/                    # Reference data from other models
 ```
 
-
 ## Input data pools
 
 === "Santis"
@@ -105,7 +104,7 @@ On Säntis, all ICON input and reference data is collected in the project `cws01
 === "Euler"
     ```shell
     /cluster/work/climate/icon_input
-    ```    
+    ```
 
 ## Testing input data pool
 

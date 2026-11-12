@@ -39,7 +39,7 @@ def generate_markdown_default(json_data, dataset, entry):
     - str: A markdown-formatted string listing variables and their details.
     """
     if entry == ENTRY_VARIABLES:
-        markdown_content = f"{entry} \n"
+        markdown_content = f"{entry}\n"
     else: 
         markdown_content = f"{entry} "
     
@@ -79,7 +79,7 @@ def generate_markdown_cordex(json_data, entry):
     - str: A markdown-formatted string listing variables along with their scenarios and temporal resolutions.
     """
     if entry == ENTRY_VARIABLES:
-        markdown_content = f"{entry} \n"
+        markdown_content = f"{entry}\n"
         variable_details = {}
         for scenario, temporal_resolutions in json_data['data'].items():
             for temporal_resolution, variables in temporal_resolutions.items():

@@ -3,29 +3,48 @@
 
 ## Core Team
 
-The C2SM Core Team - or C2SM's Executive Office - currently employs six scientific programmers. Their work is distributed among the following areas:
+The C2SM Core Team - or C2SM's Executive Office - currently employs six scientific programmers. Their work is
+distributed among the following areas:
 
 - Tasks from the Working Groups
 - Maintenance of supported models, tools and datasets
 - Regular support for users
 - [EXCLAIM project :material-open-in-new:](https://exclaim.ethz.ch/){:target="_blank"}
-- [NCCR CLIM+ project :material-open-in-new:](https://nccr-climplus.ch/){:target="_blank"} 
+- [NCCR CLIM+ project :material-open-in-new:](https://nccr-climplus.ch/){:target="_blank"}
 - Organisation of workshops
 
 ### Executive Director
 
-- [Christina Schnadt Poberaj :material-open-in-new:](https://iac.ethz.ch/people-iac/person-detail.html?persid=116573){:target="_blank"} (CHN M 16.2)
+- [Christina Schnadt
+  Poberaj :material-open-in-new:](https://iac.ethz.ch/people-iac/person-detail.html?persid=116573){:target="_blank"}
+  (CHN M 16.2)
 
 ### Scientific Programmers
 
-- [Michael Jähn :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091){:target="_blank"} (CHN M 15.1)
-- [Annika Lauber :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=235458){:target="_blank"} (CHN M 15.1)
-- [Matthieu Leclair :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=221860){:target="_blank"} (CHN M 15.2)
-- [Ruth Lorenz :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=112356){:target="_blank"} (CHN M 15.1)
-- [Alitzel Macías Infante :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=334696){:target="_blank"} (CHN M 15.1)
-- [Anna Merrifield Könz :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=250725){:target="_blank"} (CHN M 15.1)
-- [Konstantinos Servis :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=382462){:target="_blank"} (CHN M 16.3)
-- [Mikael Stellio :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=226434){:target="_blank"} (CHN M 15.2)
+- [Michael
+  Jähn :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=286091){:target="_blank"}
+  (CHN M 15.1)
+- [Annika
+  Lauber :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=235458){:target="_blank"}
+  (CHN M 15.1)
+- [Matthieu
+  Leclair :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=221860){:target="_blank"}
+  (CHN M 15.2)
+- [Ruth
+  Lorenz :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=112356){:target="_blank"}
+  (CHN M 15.1)
+- [Alitzel Macías
+  Infante :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=334696){:target="_blank"}
+  (CHN M 15.1)
+- [Anna Merrifield
+  Könz :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=250725){:target="_blank"}
+  (CHN M 15.1)
+- [Konstantinos
+  Servis :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=382462){:target="_blank"}
+  (CHN M 16.3)
+- [Mikael
+  Stellio :material-open-in-new:](https://c2sm.ethz.ch/the-center/people/person-detail.html?persid=226434){:target="_blank"}
+  (CHN M 15.2)
 
 ### Further staff
 
@@ -34,7 +53,8 @@ Further information about C2SM project staff and previous core team members can 
 ## How to get Access
 
 Please follow the step-by-step instructions below to get access to the C2SM organisation.
-This will allow you to submit new tasks, receive support from the C2SM Core Team and have access to supported models and tools.
+This will allow you to submit new tasks, receive support from the C2SM Core Team and have access to supported models and
+tools.
 
 1. Create an account on [GitHub :material-open-in-new:](https://github.com/signup){:target="_blank"}.
 2. Get access to the [C2SM GitHub organisation :material-open-in-new:](https://github.com/C2SM){:target="_blank"}.
@@ -43,10 +63,12 @@ This will allow you to submit new tasks, receive support from the C2SM Core Team
    - If you do not know who your group's technical contact is, please send an email to [support@c2sm.ethz.ch](mailto:support@c2sm.ethz.ch).
 
 ## Are you a new member of the C2SM community?
+
 - Designate a technical contact within your group, preferably a permanent member who is familiar with technical aspects.
 - Contact us by visiting our office in person or by emailing us at [support@c2sm.ethz.ch](mailto:support@c2sm.ethz.ch).
 - Once contacted, we will initiate the setup of your group's user group on GitHub for effective collaboration.
 
 ## C2SM on GitHub
 
-C2SM maintains the [C2SM :material-open-in-new:](https://github.com/C2SM){:target="_blank"} GitHub organization to distribute code to the community. It contains many repositories including many of the supported tools.
+C2SM maintains the [C2SM :material-open-in-new:](https://github.com/C2SM){:target="_blank"} GitHub organization to
+distribute code to the community. It contains many repositories including many of the supported tools.

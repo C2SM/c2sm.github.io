@@ -2,7 +2,8 @@
 
 The vCluster `santis` is dedicated to **Climate and Weather** applications. It includes the following:
 
-- [EXCLAIM :material-open-in-new:](https://c2sm.ethz.ch/research/exclaim.html){:target="_blank"}: Project for ICON-based km-scale climate simulations
+- [EXCLAIM :material-open-in-new:](https://c2sm.ethz.ch/research/exclaim.html){:target="_blank"}: Project for ICON-based
+  km-scale climate simulations
 - Projects by C2SM community members
 - User lab projects in climate and weather domains
 
@@ -36,14 +37,14 @@ which cdo
 
 ### Pre-release uenvs
 
-User environments that are not (yet) part of the official CSCS uenv 
+User environments that are not (yet) part of the official CSCS uenv
 registry can be found in the following folder:
 
-```
+```text
 /capstor/store/cscs/userlab/cws01/uenvs
 ```
-The README file there provides information about these images.
 
+The README file there provides information about these images.
 
 ## SLURM Partitions
 
