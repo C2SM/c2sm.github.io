@@ -4498,6 +4498,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#compile-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compile Options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compile Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-or-disable-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enable or Disable Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-compiler-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Compiler Flags
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommendations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5994,6 +6044,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#compile-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compile Options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compile Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-or-disable-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enable or Disable Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-compiler-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Compiler Flags
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommendations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6083,7 +6183,7 @@ into the <a href="https://gitlab.dkrz.de/icon/icon-nwp" target="_blank">icon-nwp
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Latest release at DKRZ GitLab</label><label for="__tabbed_1_2">icon-nwp master branch at DKRZ GitLab</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="go">git clone -b release-2026.04-public --recurse-submodules https://git.gitlab.dkrz.de/icon/icon-model.git</span>
+<div class="highlight"><pre><span></span><code><span class="go">git clone -b release-2026.10-public --recurse-submodules https://git.gitlab.dkrz.de/icon/icon-model.git</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -6260,6 +6360,106 @@ to an external service, e.g. GitHub or GitLab.</p>
 spack<span class="w"> </span>env<span class="w"> </span>activate<span class="w"> </span>-d<span class="w"> </span>config/ethz/spack/<span class="si">${</span><span class="nv">SPACK_TAG</span><span class="si">}</span>/euler_cpu_gcc
 srun<span class="w"> </span>-N<span class="w"> </span><span class="m">1</span><span class="w"> </span>-n<span class="w"> </span><span class="m">12</span><span class="w"> </span>--mem-per-cpu<span class="o">=</span>1G<span class="w"> </span>spack<span class="w"> </span>install<span class="w"> </span>-j<span class="w"> </span><span class="m">12</span>
 </code></pre></div>
+<h2 id="compile-options">Compile Options<a class="headerlink" href="#compile-options" title="Permanent link">&para;</a></h2>
+<p>On all machines above, ICON is built with <a href="https://spack.readthedocs.io" target="_blank">Spack <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.
+The ICON configuration is defined by the Spack spec in the <code>spack.yaml</code> file of the environment
+that the configure wrapper activates:</p>
+<table>
+<thead>
+<tr>
+<th>Machine</th>
+<th>Configure wrapper</th>
+<th>Spack environment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Säntis</td>
+<td><code>config/cscs/santis.cpu.nvhpc</code></td>
+<td><code>config/cscs/spack/santis_cpu_double</code></td>
+</tr>
+<tr>
+<td>Säntis</td>
+<td><code>config/cscs/santis.gpu.nvhpc</code></td>
+<td><code>config/cscs/spack/santis_gpu_double</code></td>
+</tr>
+<tr>
+<td>Balfrin</td>
+<td><code>config/cscs/alps_mch.cpu.nvidia</code></td>
+<td><code>config/cscs/spack/mch_cpu_double</code></td>
+</tr>
+<tr>
+<td>Balfrin</td>
+<td><code>config/cscs/alps_mch.gpu.nvidia</code></td>
+<td><code>config/cscs/spack/mch_gpu_double</code></td>
+</tr>
+<tr>
+<td>Euler</td>
+<td><code>config/ethz/euler.cpu.gcc</code></td>
+<td><code>config/ethz/spack/euler_cpu_gcc</code></td>
+</tr>
+</tbody>
+</table>
+<p>A spec looks like this (example for Säntis CPU):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">spack</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">specs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">icon-nwp @develop +grib2 +eccodes-definitions +ecrad +art ~aes</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange +mpi %c,cxx,fortran=nvhpc</span>
+</code></pre></div>
+<h3 id="enable-or-disable-components">Enable or Disable Components<a class="headerlink" href="#enable-or-disable-components" title="Permanent link">&para;</a></h3>
+<p>Each <code>+&lt;variant&gt;</code> enables and each <code>~&lt;variant&gt;</code> disables a feature, which translates to
+<code>--enable-&lt;variant&gt;</code> and <code>--disable-&lt;variant&gt;</code> of the ICON <code>configure</code> script.
+For example, to build ICON with the ICON community interface (ComIn) but without ART, change the spec to:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">icon-nwp @develop +grib2 +eccodes-definitions +ecrad ~art +comin ~aes</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange +mpi %c,cxx,fortran=nvhpc</span>
+</code></pre></div>
+<p>Then rerun the configure wrapper as described above. Spack detects the modified spec and rebuilds ICON.</p>
+<p>To list all available variants and their default values, run the following
+with the Spack instance of your build loaded:</p>
+<div class="highlight"><pre><span></span><code><span class="go">spack info icon-nwp</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Package name</p>
+<p>Depending on the ICON version and the machine, the spec uses either the <code>icon</code> or the <code>icon-nwp</code>
+Spack package. Use the package name of your <code>spack.yaml</code> file for <code>spack info</code>.</p>
+</div>
+<p>Configure options without a corresponding variant can be passed with the <code>extra-config-args</code> variant
+of <code>icon-nwp</code>, e.g., <code>extra-config-args=--enable-dim-swap</code>.
+Use this cautiously, as it bypasses the consistency checks of the Spack package.</p>
+<h3 id="change-compiler-flags">Change Compiler Flags<a class="headerlink" href="#change-compiler-flags" title="Permanent link">&para;</a></h3>
+<p>Additional compiler flags are set with the <code>fflags</code> (Fortran), <code>cflags</code> (C), and <code>ldflags</code> (linker)
+variants. They are appended to the default flags of the Spack package. For example, to obtain
+debug information and a traceback when the model crashes:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">icon-nwp @develop +grib2 +eccodes-definitions +ecrad +art ~aes</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange +mpi</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">fflags="-g -traceback" %c,cxx,fortran=nvhpc</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Check that your flags are applied</p>
+<p>These variants only reach the compiler with a spack-c2sm version that includes
+<a href="https://github.com/C2SM/spack-c2sm/pull/1089" target="_blank">C2SM/spack-c2sm#1089 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.
+Older versions silently ignore them. Check the <code>FCFLAGS</code> entry in the <code>config.log</code> file
+of your build folder to verify which flags are used.</p>
+</div>
+<p>To compile a subset of the source code with a different flag, e.g., a lower optimization level for
+a part that causes problems, use the <code>fcgroup</code> variant of <code>icon-nwp</code> with the format <code>NAME.paths.flag</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">fcgroup=NWP.src/atm_phy_nwp.-O1</span>
+</code></pre></div>
+<p><code>NAME</code> consists of capital letters, <code>paths</code> is a colon-separated list of files and directories
+relative to the ICON root folder (without dots), and <code>flag</code> is a single compiler flag that is used
+instead of the default <code>ICON_FCFLAGS</code> for these files.</p>
+<h3 id="recommendations">Recommendations<a class="headerlink" href="#recommendations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Compile only what you need:</strong> Disable all components that your experiment does not use
+  (e.g., <code>~ocean ~jsbach ~coupling ~waves ~art</code>). This reduces the compilation time and the number of
+  dependencies that may fail to build.</li>
+<li><strong>Use one build folder per configuration:</strong> Combine different specs with
+  <a href="#building-out-of-source">out-of-source builds</a> instead of recompiling the same folder.</li>
+<li><strong>Keep debug and production builds apart:</strong> Debug flags such as <code>-g</code> or <code>-O0</code> slow down the model
+  considerably. Do not use them for production runs.</li>
+<li><strong>Keep track of your changes:</strong> The <code>spack.yaml</code> files are part of the ICON repository.
+  Commit your modifications to your own branch so that the configuration of your build is reproducible.</li>
+</ul>
 
 
 
@@ -6282,7 +6482,7 @@ srun<span class="w"> </span>-N<span class="w"> </span><span class="m">1</span><s
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:34:37 UTC">November 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:47:08 UTC">November 12, 2026</span>
   </span>
 
     
@@ -6292,7 +6492,7 @@ srun<span class="w"> </span>-N<span class="w"> </span><span class="m">1</span><s
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:34:37 UTC">November 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:47:08 UTC">November 12, 2026</span>
   </span>
 
     
