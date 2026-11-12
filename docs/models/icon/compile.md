@@ -212,34 +212,28 @@ spack install
 
 #### Euler
 
-Navigate into the ICON root folder.
-
-Now, set up your spack instance:
-
-```bash
-# Setup spack
-SPACK_TAG=$(cat "config/ethz/SPACK_TAG_EULER")
-git clone --depth 1 --recurse-submodules --shallow-submodules -b ${SPACK_TAG} https://github.com/C2SM/spack-c2sm.git
-. spack-c2sm/setup-env.sh
-```
-
-Euler Support recommends to compile code on compute nodes. There,
-we can take advantage of multi-core compiling.
-However, we need to load the module `eth_proxy`, which enables connecting from a compute node
-to an external service, e.g. GitHub or GitLab.
+Euler Support recommends compiling code on compute nodes, where multiple cores can be used for the build.
+Since the configure wrapper downloads [spack-c2sm :material-open-in-new:](https://github.com/C2SM/spack-c2sm){:target="_blank"},
+load the module `eth_proxy` first, which enables connections from compute nodes to external services,
+e.g., GitHub or GitLab:
 
 ```console
 module load eth_proxy
 ```
 
-Now, activate the spack environment and build ICON:
+Then run the following after navigating into the ICON root folder:
+
+```console
+srun --ntasks=1 --cpus-per-task=12 --mem-per-cpu=2G --time=02:00:00 ./config/ethz/euler.cpu.gcc
+```
+
+The wrapper sets up Spack in the folder `spack-c2sm` of the ICON root folder and builds ICON with 12 threads.
+You can run it out-of-source as well, e.g.:
 
 ```bash
-# Build ICON
-# For out-of-source builds: navigate into the build folder and 
-# adapt the path to the Spack environment in the following
-spack env activate -d config/ethz/spack/${SPACK_TAG}/euler_cpu_gcc
-srun -N 1 -n 12 --mem-per-cpu=1G spack install -j 12
+mkdir gcc_cpu
+cd gcc_cpu
+srun --ntasks=1 --cpus-per-task=12 --mem-per-cpu=2G --time=02:00:00 ./../config/ethz/euler.cpu.gcc
 ```
 
 ## Compile Options
