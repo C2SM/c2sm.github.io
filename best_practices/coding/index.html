@@ -5927,18 +5927,29 @@
 
 
 <h1 id="coding">Coding<a class="headerlink" href="#coding" title="Permanent link">&para;</a></h1>
-<p>Whether you are new to coding or already working on it, there are two important things to remember: always <strong>use version control</strong> and <strong>add automatic testing</strong>. These steps will make things easier for you and everyone you work with. Also, try out tools that can make coding easier for you.</p>
+<p>Whether you are new to coding or already working on it, there are two important things to remember: always <strong>use version
+control</strong> and <strong>add automatic testing</strong>. These steps will make things easier for you and everyone you work with. Also,
+try out tools that can make coding easier for you.</p>
 <h2 id="version-control-with-git">Version Control with Git<a class="headerlink" href="#version-control-with-git" title="Permanent link">&para;</a></h2>
-<p><strong>Git</strong> is a popular tool for managing source code. C2SM repositories are hosted on GitHub, which uses Git as its version control system.</p>
-<p>If you're new to Git or want to improve your Git skills, we recommend attending our annual <strong>Git for Beginners</strong> and/or <strong>Git for Advanced</strong> courses.
+<p><strong>Git</strong> is a popular tool for managing source code. C2SM repositories are hosted on GitHub, which uses Git as its
+version control system.</p>
+<p>If you're new to Git or want to improve your Git skills, we recommend attending our annual <strong>Git for Beginners</strong> and/or
+<strong>Git for Advanced</strong> courses.
 Additionally, all course materials are publicly available and can be used throughout the year.
 For more details, please visit <a href="../../events/git_courses/">Technical Events - Git Courses</a>.</p>
 <h3 id="key-concepts-of-git">Key Concepts of Git<a class="headerlink" href="#key-concepts-of-git" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Repository (Repo)</strong>: A Git repository is a container for a software project. It stores the complete history of the project, including all files, directories, and changes made over time. Repositories can be hosted locally or remotely on platforms like GitHub, GitLab, or Bitbucket.</li>
-<li><strong>Commit</strong>: A commit is a fundamental concept in Git, representing a snapshot of the codebase at a particular point in time. Each commit is identified by a unique SHA-1 hash, contains a descriptive message explaining the changes, and references the previous commit, forming a version history.</li>
-<li><strong>Branches</strong>: Branches allow developers to work on separate lines of development. The primary branch is usually called 'master' or 'main', while feature branches enable the development of new features or bug-fix branches for addressing issues without affecting the main codebase.</li>
-<li><strong>Merge</strong>: Merging is the process of combining changes from one branch into another. Git provides tools to automatically or manually resolve conflicts that may arise when merging different branches.</li>
+<li><strong>Repository (Repo)</strong>: A Git repository is a container for a software project. It stores the complete history of the
+  project, including all files, directories, and changes made over time. Repositories can be hosted locally or remotely
+  on platforms like GitHub, GitLab, or Bitbucket.</li>
+<li><strong>Commit</strong>: A commit is a fundamental concept in Git, representing a snapshot of the codebase at a particular point in
+  time. Each commit is identified by a unique SHA-1 hash, contains a descriptive message explaining the changes, and
+  references the previous commit, forming a version history.</li>
+<li><strong>Branches</strong>: Branches allow developers to work on separate lines of development. The primary branch is usually called
+  'master' or 'main', while feature branches enable the development of new features or bug-fix branches for addressing
+  issues without affecting the main codebase.</li>
+<li><strong>Merge</strong>: Merging is the process of combining changes from one branch into another. Git provides tools to
+  automatically or manually resolve conflicts that may arise when merging different branches.</li>
 </ul>
 <h3 id="github-workflow">GitHub Workflow<a class="headerlink" href="#github-workflow" title="Permanent link">&para;</a></h3>
 <p>When working together with Git, follow these simple steps for a smooth collaborative process:</p>
@@ -5946,33 +5957,64 @@ For more details, please visit <a href="../../events/git_courses/">Technical Eve
 <li><strong>Clone</strong>: Get a copy of the remote repository you want to work on.</li>
 <li><strong>Branch Out</strong>: Create a branch with a name that describes your development.</li>
 <li><strong>Development Zone</strong>: Work on your feature within that branch.</li>
-<li><strong>Pull Request (PR)</strong>: When you are finished, open a pull request from your feature branch to the main one. Request a review.</li>
+<li><strong>Pull Request (PR)</strong>: When you are finished, open a pull request from your feature branch to the main one. Request a
+   review.</li>
 <li><strong>Refinement</strong>: Make any necessary changes until it's approved.</li>
 <li><strong>Merge Time</strong>: Once the revisions are done and the tests are green, merge your feature branch into the main branch.</li>
 </ol>
 <h2 id="automatic-testing">Automatic Testing<a class="headerlink" href="#automatic-testing" title="Permanent link">&para;</a></h2>
-<p>Code testing is a critical step in software development. It's about finding and fixing problems to make sure the software works well, is of high quality and reliable.
+<p>Code testing is a critical step in software development. It's about finding and fixing problems to make sure the
+software works well, is of high quality and reliable.
 Testing involves checking different parts of the code to make sure the software is strong and free of bugs.
-The specific tests you need will depend on your project and its requirements. Here is a list of tests that are usually very useful.</p>
+The specific tests you need will depend on your project and its requirements. Here is a list of tests that are usually
+very useful.</p>
 <h3 id="unit-tests">Unit Tests<a class="headerlink" href="#unit-tests" title="Permanent link">&para;</a></h3>
 <p>These tests are for testing individual components or functions of your code to ensure they work correctly in isolation.
-Find an <a href="https://github.com/C2SM/spack-c2sm/blob/main/test/unit_test.py" target="_blank">example for unit tests <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> in our spack-c2sm repository.</p>
+Find an
+<a href="https://github.com/C2SM/spack-c2sm/blob/main/test/unit_test.py" target="_blank">example for unit
+tests <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> in our
+spack-c2sm repository.</p>
 <h3 id="integrations-tests">Integrations Tests<a class="headerlink" href="#integrations-tests" title="Permanent link">&para;</a></h3>
 <p>These tests are to check how different parts of your code work together and communicate with each other.
-Find an <a href="https://github.com/C2SM/spack-c2sm/blob/main/test/integration_test.py" target="_blank">example for integration tests <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> in our spack-c2sm repository.</p>
+Find an
+<a href="https://github.com/C2SM/spack-c2sm/blob/main/test/integration_test.py" target="_blank">example for integration
+tests <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+in our spack-c2sm repository.</p>
 <h3 id="system-tests">System Tests<a class="headerlink" href="#system-tests" title="Permanent link">&para;</a></h3>
-<p>These tests are performed to ensure that all the components and modules of a software system work together as intended and that the system meets its specified requirements and functions correctly in its operational environment.
-Find an <a href="https://github.com/C2SM/spack-c2sm/blob/main/test/system_test.py" target="_blank">example for system tests <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> in our spack-c2sm repository.</p>
+<p>These tests are performed to ensure that all the components and modules of a software system work together as intended
+and that the system meets its specified requirements and functions correctly in its operational environment.
+Find an
+<a href="https://github.com/C2SM/spack-c2sm/blob/main/test/system_test.py" target="_blank">example for system
+tests <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> in our
+spack-c2sm repository.</p>
 <h3 id="tolerance-tests">Tolerance tests<a class="headerlink" href="#tolerance-tests" title="Permanent link">&para;</a></h3>
-<p>These tests are used in the development of ICON, specifically when code is ported from CPU to GPU. The results when running on CPU and GPU are not bit identical, therefore a tolerance range is accepted when comparing a test case to the CPU reference. The accepted tolerance range is created by running an ensemble of the same test case with different perturbations. MeteoSwiss has developed <a href="https://github.com/MeteoSwiss/probtest" target="_blank">probtest <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> for handling everything related to tolerance tests with ICON. If you have a DKRZ account and are working with ICON-NWP, you can also check out the manual for <a href="https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Validating-with-probtest-without-buildbot-references-(Generating-tolerances-for-non-standard-tests){:target=&quot;_blank&quot;}">Generating tolerances for non-standard tests <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
+<p>These tests are used in the development of ICON, specifically when code is ported from CPU to GPU. The results when
+running on CPU and GPU are not bit identical, therefore a tolerance range is accepted when comparing a test case to the
+CPU reference. The accepted tolerance range is created by running an ensemble of the same test case with different
+perturbations. MeteoSwiss has developed
+<a href="https://github.com/MeteoSwiss/probtest" target="_blank">probtest <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> for handling everything
+related to tolerance tests with ICON. If you have a DKRZ account and are working with ICON-NWP, you can also check out
+the manual for
+<a href="https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Validating-with-probtest-without-buildbot-references-(Generating-tolerances-for-non-standard-tests){:target=&quot;_blank&quot;}">Generating tolerances for non-standard
+tests <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
 <h3 id="git-hooks-github-actions">Git Hooks &amp; GitHub Actions<a class="headerlink" href="#git-hooks-github-actions" title="Permanent link">&para;</a></h3>
-<p>Git Hooks are local scripts in Git that make sure things get done right when you work on your code. GitHub Actions, on the other hand, are integrated with GitHub and allow you to automate code management workflows. They can be run automatically on GitHub whenever something is committed.</p>
-<p>Check out our Git course for examples of <a href="https://github.com/C2SM/git-course/blob/main/advanced/Exercise_7_git-hooks.md" target="_blank">Custom Git Hooks <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> hooks, and read GitHub's <a href="https://docs.github.com/en/actions" target="_blank">documentation on GitHub Actions <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
+<p>Git Hooks are local scripts in Git that make sure things get done right when you work on your code. GitHub Actions, on
+the other hand, are integrated with GitHub and allow you to automate code management workflows. They can be run
+automatically on GitHub whenever something is committed.</p>
+<p>Check out our Git course for examples of
+<a href="https://github.com/C2SM/git-course/blob/main/advanced/Exercise_7_git-hooks.md" target="_blank">Custom Git
+Hooks <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+hooks, and read GitHub's
+<a href="https://docs.github.com/en/actions" target="_blank">documentation on GitHub Actions <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
 <h2 id="useful-tools-for-coding">Useful tools for coding<a class="headerlink" href="#useful-tools-for-coding" title="Permanent link">&para;</a></h2>
-<p>Two popular tools for coding are <a href="https://code.visualstudio.com" target="_blank">Visual Studio (VS) Code <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> and <a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>. Here are instructions for setting up and using Visual Studio Code with SSH on a CSCS machine.</p>
+<p>Two popular tools for coding are
+<a href="https://code.visualstudio.com" target="_blank">Visual Studio (VS) Code <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> and
+<a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>. Here are instructions for
+setting up and using Visual Studio Code with SSH on a CSCS machine.</p>
 <h3 id="vs-code">VS Code<a class="headerlink" href="#vs-code" title="Permanent link">&para;</a></h3>
 <ol>
-<li><a href="https://code.visualstudio.com/download" target="_blank">Download <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> and install VS Code on your computer.</li>
+<li><a href="https://code.visualstudio.com/download" target="_blank">Download <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> and install VS Code on
+   your computer.</li>
 <li>Install extensions:<ul>
 <li>Open VS Code.</li>
 <li>Look for the 'Extensions' icon in the sidebar (it looks like four small squares).</li>
@@ -6016,7 +6058,7 @@ Find an <a href="https://github.com/C2SM/spack-c2sm/blob/main/test/system_test.p
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2026 11:52:13 UTC">November 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:34:37 UTC">November 12, 2026</span>
   </span>
 
     
@@ -6026,7 +6068,7 @@ Find an <a href="https://github.com/C2SM/spack-c2sm/blob/main/test/system_test.p
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2026 11:52:13 UTC">November 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:34:37 UTC">November 12, 2026</span>
   </span>
 
     

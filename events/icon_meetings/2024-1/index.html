@@ -6273,38 +6273,68 @@ Kutay Dönmez (KD)</p>
 <p>MJ welcomes everyone and shares the <a href="https://polybox.ethz.ch/index.php/s/4fXixLycOwOy41K" target="_blank">latest news about ICON from C2SM <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
 <p>ER asks about the bug related to volcanic transient Kinne aerosols. AL confirms that the bug also affects the CPU.</p>
 <h3 id="sylvaine-ferrachat">Sylvaine Ferrachat<a class="headerlink" href="#sylvaine-ferrachat" title="Permanent link">&para;</a></h3>
-<p>SF provides an update on the progress of PhD student Andrina Caratsch, who will study tropical cyclones using ICON-HAM at high resolutions (10 km and below). They have set up the experiment successfully and ran a global 10 km simulation for a few time steps. Currently, they are using ICON version 2.6.4 but aim to transition to the open-source release.</p>
+<p>SF provides an update on the progress of PhD student Andrina Caratsch, who will study tropical cyclones using ICON-HAM
+at high resolutions (10 km and below). They have set up the experiment successfully and ran a global 10 km simulation
+for a few time steps. Currently, they are using ICON version 2.6.4 but aim to transition to the open-source release.</p>
 <h3 id="andrea-stenke">Andrea Stenke<a class="headerlink" href="#andrea-stenke" title="Permanent link">&para;</a></h3>
-<p>AS uses ICON-ART on Euler and now has an account at CSCS, which provides access to the data pool. With MJ's help, she has integrated her script into the Processing Chain tool on Euler. AS discovered that the latest version of ICON (2.6.6) no longer supports AMIP runs.</p>
+<p>AS uses ICON-ART on Euler and now has an account at CSCS, which provides access to the data pool. With MJ's help, she
+has integrated her script into the Processing Chain tool on Euler. AS discovered that the latest version of ICON (2.6.6)
+no longer supports AMIP runs.</p>
 <h3 id="athena-nghiem">Athena Nghiem<a class="headerlink" href="#athena-nghiem" title="Permanent link">&para;</a></h3>
 <p>AN is integrating arsenic into ICON-ART and will implement emissions.</p>
 <h3 id="emmanuele-russo">Emmanuele Russo<a class="headerlink" href="#emmanuele-russo" title="Permanent link">&para;</a></h3>
-<p>ER is developing an aqua planet with a dry atmosphere. Regarding ICON-CLM, they are refining the setup for the EURO-CORDEX, which should be finalized by the end of April. They experienced problems with shortwave radiation but were able to reduce this bias by adjusting cloud cover. These adjustments require code changes in ICON, which will soon be merged into the master branch. ER anticipates that these changes may necessitate additional GPU ports.</p>
-<p>DB asks about the project and the meaning of CLM. ER explains that CLM refers to Climate Mode, which is distinct from Climate Land Model despite the shared abbreviation.</p>
-<p>DB asks if C2SM/EXCLAIM plans to use the same setup. MJ confirms that EXCLAIM will use a similar setup but will run it on GPU.</p>
-<p>DB asks about the importance of transient aerosols. According to MJ, the transient aerosol dataset is crucial because the climatological aerosols showed biased and outdated, and therefore not representative of current conditions.</p>
+<p>ER is developing an aqua planet with a dry atmosphere. Regarding ICON-CLM, they are refining the setup for the
+EURO-CORDEX, which should be finalized by the end of April. They experienced problems with shortwave radiation but were
+able to reduce this bias by adjusting cloud cover. These adjustments require code changes in ICON, which will soon be
+merged into the master branch. ER anticipates that these changes may necessitate additional GPU ports.</p>
+<p>DB asks about the project and the meaning of CLM. ER explains that CLM refers to Climate Mode, which is distinct from
+Climate Land Model despite the shared abbreviation.</p>
+<p>DB asks if C2SM/EXCLAIM plans to use the same setup. MJ confirms that EXCLAIM will use a similar setup but will run it
+on GPU.</p>
+<p>DB asks about the importance of transient aerosols. According to MJ, the transient aerosol dataset is crucial because
+the climatological aerosols showed biased and outdated, and therefore not representative of current conditions.</p>
 <h3 id="fulden-batibeniz">Fulden Batibeniz<a class="headerlink" href="#fulden-batibeniz" title="Permanent link">&para;</a></h3>
-<p>FB plans to run the EURO-CORDEX with seasonal forecasts and is waiting for the final version of ICON, which includes transient aerosols.</p>
-<p>DB inquires about FB's group at the University of Bern (Climate and Environmental Physics) and their plans for transitioning to ICON. FB confirms that she is responsible for transitioning ICON to the group.</p>
+<p>FB plans to run the EURO-CORDEX with seasonal forecasts and is waiting for the final version of ICON, which includes
+transient aerosols.</p>
+<p>DB inquires about FB's group at the University of Bern (Climate and Environmental Physics) and their plans for
+transitioning to ICON. FB confirms that she is responsible for transitioning ICON to the group.</p>
 <h3 id="will-sawyer">Will Sawyer<a class="headerlink" href="#will-sawyer" title="Permanent link">&para;</a></h3>
-<p>WS announces the arrival of the new Alps system and the setup of a virtual cluster as a sandbox. However, technical difficulties such as frequent system downtimes are being faced, which are expected to be resolved once everyone gains access. The pre-Alps system is currently being used to test the ICON application.</p>
-<p>WS presents <a href="https://polybox.ethz.ch/index.php/s/T9ZYnrQ6wkb8TP6" target="_blank">slides <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> indicating that pre-Alps is simulating 85 days per day with a 5 km resolution. Performance between Daint and Santis was compared, with an initial speedup factor of 6, slightly below expectations. However, due to the increased memory capacity of the new GPUs, a fair comparison yields a speedup factor of 9. ICON-DSL demonstrates similar performance, and although there's room for improvement, the functionality is satisfactory.</p>
-<p>Running the same simulation on CPUs reveals the significant processing power of CPUs on pre-Alps. One Grace has 72 cores. CPUs are currently being used for ocean simulations.</p>
+<p>WS announces the arrival of the new Alps system and the setup of a virtual cluster as a sandbox. However, technical
+difficulties such as frequent system downtimes are being faced, which are expected to be resolved once everyone gains
+access. The pre-Alps system is currently being used to test the ICON application.</p>
+<p>WS presents <a href="https://polybox.ethz.ch/index.php/s/T9ZYnrQ6wkb8TP6" target="_blank">slides <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>
+indicating that pre-Alps is simulating 85 days per day with a 5 km resolution. Performance between Daint and Santis was
+compared, with an initial speedup factor of 6, slightly below expectations. However, due to the increased memory
+capacity of the new GPUs, a fair comparison yields a speedup factor of 9. ICON-DSL demonstrates similar performance, and
+although there's room for improvement, the functionality is satisfactory.</p>
+<p>Running the same simulation on CPUs reveals the significant processing power of CPUs on pre-Alps. One Grace has 72
+cores. CPUs are currently being used for ocean simulations.</p>
 <p>DB asks about a recipe for configuring nproma efficiently on Grace-Hopper.
-WS explains that for the DLS version, nproma should be maximized within memory constraints. They will provide a recipe for both GPU and CPU versions, with optimal nproma appearing to be 48.</p>
-<p>MA raises a question regarding a reported speedup factor of 1.4. WS clarifies that this speedup was gained in comparison to Balfrin.</p>
-<p>MJ inquires about the accessibility of the reported information to others. WS confirms that they will share the slides and requests a few more weeks to provide detailed speedup factor data.</p>
-<p>MS asks why advection is twice as slow on Alps compared to Balfrin. WS suggests that this could be due to numerical or memory issues, which require additional time to analyze and report precise numbers.</p>
+WS explains that for the DLS version, nproma should be maximized within memory constraints. They will provide a recipe
+for both GPU and CPU versions, with optimal nproma appearing to be 48.</p>
+<p>MA raises a question regarding a reported speedup factor of 1.4. WS clarifies that this speedup was gained in comparison
+to Balfrin.</p>
+<p>MJ inquires about the accessibility of the reported information to others. WS confirms that they will share the slides
+and requests a few more weeks to provide detailed speedup factor data.</p>
+<p>MS asks why advection is twice as slow on Alps compared to Balfrin. WS suggests that this could be due to numerical or
+memory issues, which require additional time to analyze and report precise numbers.</p>
 <h3 id="christian-steger">Christian Steger<a class="headerlink" href="#christian-steger" title="Permanent link">&para;</a></h3>
 <p>CS has joined MCH to study the physics of ICON, focusing on the interaction between topography and surface radiation.</p>
 <h3 id="alina-yapparova">Alina Yapparova<a class="headerlink" href="#alina-yapparova" title="Permanent link">&para;</a></h3>
 <p>AY, also recently joined MCH, will work on the GLORY project, specifically with 3D radiation data.</p>
 <h3 id="marco-arpagaus">Marco Arpagaus<a class="headerlink" href="#marco-arpagaus" title="Permanent link">&para;</a></h3>
-<p>MA provides an update on ICON-22, acknowledging the ongoing challenge of the Alps system experiencing frequent reboots, which has been a drawback. Despite this issue, ICON continues to perform well overall. There have been no significant surprises since its pre-operational phase. In comparison, ICON outperforms COSMO in most aspects, although a few systematic biases persist, notably the 2m temperature. MA suggests strategies to address bias, including improving snow analysis and adjusting the minimum diffusion coefficient for better stabilization during winter. However, implementation of these changes must wait until sufficient statistical data for post-processing is collected. Operational deployment is scheduled for May.</p>
+<p>MA provides an update on ICON-22, acknowledging the ongoing challenge of the Alps system experiencing frequent reboots,
+which has been a drawback. Despite this issue, ICON continues to perform well overall. There have been no significant
+surprises since its pre-operational phase. In comparison, ICON outperforms COSMO in most aspects, although a few
+systematic biases persist, notably the 2m temperature. MA suggests strategies to address bias, including improving snow
+analysis and adjusting the minimum diffusion coefficient for better stabilization during winter. However, implementation
+of these changes must wait until sufficient statistical data for post-processing is collected. Operational deployment is
+scheduled for May.</p>
 <h3 id="arash-hamzehloo">Arash Hamzehloo<a class="headerlink" href="#arash-hamzehloo" title="Permanent link">&para;</a></h3>
 <p>AH is currently working on porting ART components to the GPU. There is an open merge request to add additional functionality.</p>
 <h3 id="corina-keller">Corina Keller<a class="headerlink" href="#corina-keller" title="Permanent link">&para;</a></h3>
-<p>CK is preparing to set up and run air quality simulations. Recently, a full chemistry case was incorporated into the Processing Chain.</p>
+<p>CK is preparing to set up and run air quality simulations. Recently, a full chemistry case was incorporated into the
+Processing Chain.</p>
 <p>MJ remarks that he is available to offer assistance with the Processing Chain.</p>
 <h3 id="michael-steiner">Michael Steiner<a class="headerlink" href="#michael-steiner" title="Permanent link">&para;</a></h3>
 <p>MicS reports that ICON-ART is operating smoothly with multiple passive tracers.</p>
@@ -6335,7 +6365,7 @@ WS explains that for the DLS version, nproma should be maximized within memory c
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2026 11:52:13 UTC">November 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:34:37 UTC">November 12, 2026</span>
   </span>
 
     
@@ -6345,7 +6375,7 @@ WS explains that for the DLS version, nproma should be maximized within memory c
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2026 11:52:13 UTC">November 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:34:37 UTC">November 12, 2026</span>
   </span>
 
     

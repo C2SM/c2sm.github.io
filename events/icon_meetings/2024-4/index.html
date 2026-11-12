@@ -6223,52 +6223,85 @@ David Leutwyler (DL)</p>
 <h2 id="reports">Reports<a class="headerlink" href="#reports" title="Permanent link">&para;</a></h2>
 <h3 id="c2sm-michael-jahn-annika-lauber-matthieu-leclair-jonas-jucker">C2SM (Michael Jähn, Annika Lauber, Matthieu Leclair, Jonas Jucker)<a class="headerlink" href="#c2sm-michael-jahn-annika-lauber-matthieu-leclair-jonas-jucker" title="Permanent link">&para;</a></h3>
 <p>MJ welcomes everyone and shares the <a href="https://polybox.ethz.ch/index.php/s/D9fmc4EMafC4H6H" target="_blank">latest news about ICON from C2SM <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg></span></a>.</p>
-<p>The C2SM Core Team would be happy to get feedback about their services and asks everybody to fill out their survey: <a href="https://forms.gle/UR3NqbfZM4vKVFr58" target="_blank">C2SM Core Team Survey <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
+<p>The C2SM Core Team would be happy to get feedback about their services and asks everybody to fill out their survey:
+<a href="https://forms.gle/UR3NqbfZM4vKVFr58" target="_blank">C2SM Core Team Survey <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
 <p><strong>Discussion about ALPS</strong></p>
-<p>MK reports that they hope Säntis will be up and running tomorrow. If users previously had access to Säntis on Pre-Alps, it should work the same way again.</p>
-<p>JJ asks whether Säntis will remain available and if it is possible to build on top of it. MK confirms, explaining that Säntis will be the final vcluster. Initially, it will consist of 500 GH nodes, but this setup might change over time and could become a hybrid system.</p>
-<p>AH notes that they did not have access to Säntis and asks if they will gain access. MK inquires if AH is running ICON and states that they will need to check. MK also mentions that Daint should be set up this week and that images may need to be adapted, as they are currently configured for Tödi but not for Daint. AH reiterates their question about gaining access to Säntis, and MK commits to clarifying this.</p>
+<p>MK reports that they hope Säntis will be up and running tomorrow. If users previously had access to Säntis on Pre-Alps,
+it should work the same way again.</p>
+<p>JJ asks whether Säntis will remain available and if it is possible to build on top of it. MK confirms, explaining that
+Säntis will be the final vcluster. Initially, it will consist of 500 GH nodes, but this setup might change over time and
+could become a hybrid system.</p>
+<p>AH notes that they did not have access to Säntis and asks if they will gain access. MK inquires if AH is running ICON
+and states that they will need to check. MK also mentions that Daint should be set up this week and that images may need
+to be adapted, as they are currently configured for Tödi but not for Daint. AH reiterates their question about gaining
+access to Säntis, and MK commits to clarifying this.</p>
 <p>DF adds that it would be beneficial for everyone to gain access to Säntis and asks MK to check this for all users.</p>
 <p>TS suggests verifying if additional projects are running on Säntis and advises getting in touch with Anurag for further coordination.</p>
 <p><strong>Discussion about Setup CSCS-CI for Alps</strong></p>
-<p>WS asks what needs to happen to get the trigger mechanism working. JJ explains that they received feedback from Ralf and Sergey but still need to figure out how to trigger a manually launched pipeline. WS inquires who JJ needs to speak to for clarification. JJ responds that it will likely be Ralf. WS concludes that it is just a matter of time before the issue is resolved, and JJ agrees.</p>
+<p>WS asks what needs to happen to get the trigger mechanism working. JJ explains that they received feedback from Ralf and
+Sergey but still need to figure out how to trigger a manually launched pipeline. WS inquires who JJ needs to speak to
+for clarification. JJ responds that it will likely be Ralf. WS concludes that it is just a matter of time before the
+issue is resolved, and JJ agrees.</p>
 <h3 id="will-sawyer">Will Sawyer<a class="headerlink" href="#will-sawyer" title="Permanent link">&para;</a></h3>
-<p>WS reports that there is a lot happening at CSCS and raises concerns about where to store test and run data, describing the current situation as somewhat disorganized.</p>
-<p>MK suggests adding a mount point to Säntis and Balfrin for either the store or scratch space. SK notes that accessing Tödi or Säntis storage from Balfrin would be necessary. MK mentions ongoing discussions with André and Xavier to address these issues and suggests that storing data on Säntis might make the most sense.</p>
-<p>WS asks if write access is required. SK responds that it likely isn’t and that read access should suffice. MK adds that if write access does become necessary, a solution could potentially be implemented.</p>
-<p>DL points out that a similar issue exists regarding read-only access on the CPU cluster Clariden. MK explains that Clariden and Säntis share the same store, so resolving the issue for one system should also address it for the other.</p>
+<p>WS reports that there is a lot happening at CSCS and raises concerns about where to store test and run data, describing
+the current situation as somewhat disorganized.</p>
+<p>MK suggests adding a mount point to Säntis and Balfrin for either the store or scratch space. SK notes that accessing
+Tödi or Säntis storage from Balfrin would be necessary. MK mentions ongoing discussions with André and Xavier to address
+these issues and suggests that storing data on Säntis might make the most sense.</p>
+<p>WS asks if write access is required. SK responds that it likely isn’t and that read access should suffice. MK adds that
+if write access does become necessary, a solution could potentially be implemented.</p>
+<p>DL points out that a similar issue exists regarding read-only access on the CPU cluster Clariden. MK explains that
+Clariden and Säntis share the same store, so resolving the issue for one system should also address it for the other.</p>
 <h3 id="sven-kotlarski">Sven Kotlarski<a class="headerlink" href="#sven-kotlarski" title="Permanent link">&para;</a></h3>
-<p>SK raises the open question of who will become the Principal Investigator (PI) for EXCLAIM. They ask whether Christoph Schär will continue in the role or if Andreas Prein will take over.</p>
+<p>SK raises the open question of who will become the Principal Investigator (PI) for EXCLAIM. They ask whether Christoph
+Schär will continue in the role or if Andreas Prein will take over.</p>
 <h3 id="alina-yapparova">Alina Yapparova<a class="headerlink" href="#alina-yapparova" title="Permanent link">&para;</a></h3>
 <p>AY reports that they are still working on data assimilation and are using EMVORADO for this purpose.</p>
 <h3 id="christian-steger">Christian Steger<a class="headerlink" href="#christian-steger" title="Permanent link">&para;</a></h3>
-<p>CS reports two topics. First, they looked into a new topography dataset for EXTPAR. They note that if high-resolution runs are required, the ASTER dataset has significant limitations. However, another dataset appears to be quite promising for high-resolution simulations.  </p>
-<p>Second, CS mentions work on <code>lradtopo</code> and reports that the unified ICON code from COSMO is nearly complete and should be finished soon.</p>
+<p>CS reports two topics. First, they looked into a new topography dataset for EXTPAR. They note that if high-resolution
+runs are required, the ASTER dataset has significant limitations. However, another dataset appears to be quite promising
+for high-resolution simulations.  </p>
+<p>Second, CS mentions work on <code>lradtopo</code> and reports that the unified ICON code from COSMO is nearly complete and should
+be finished soon.</p>
 <h3 id="mikael-stellio">Mikael Stellio<a class="headerlink" href="#mikael-stellio" title="Permanent link">&para;</a></h3>
-<p>MikS reports that the transition to Alps for ICON-HAM has been completed, and everything is running smoothly. Benchmarks for the production proposal were conducted, showing promising results. Tests with 90 levels required 1,000 GPUs.  </p>
-<p>They temporarily moved back to the old Daint system to finish work with the Lohmann microphysics scheme, achieving a 16% speedup on HAM. MikS plans to complete a few cleanups.  </p>
-<p>They also addressed issues in the radiation interface, where five four-dimensional fields were consuming 30% of the memory. To mitigate this, they had to significantly reduce the use of nproma, which negatively impacts performance.  </p>
+<p>MikS reports that the transition to Alps for ICON-HAM has been completed, and everything is running smoothly. Benchmarks
+for the production proposal were conducted, showing promising results. Tests with 90 levels required 1,000 GPUs.  </p>
+<p>They temporarily moved back to the old Daint system to finish work with the Lohmann microphysics scheme, achieving a 16%
+speedup on HAM. MikS plans to complete a few cleanups.  </p>
+<p>They also addressed issues in the radiation interface, where five four-dimensional fields were consuming 30% of the
+memory. To mitigate this, they had to significantly reduce the use of nproma, which negatively impacts performance.  </p>
 <p>MJ asks how many nodes were used and about the results. MikS responds that they ran on 44 nodes.</p>
 <h3 id="david-leutwyler">David Leutwyler<a class="headerlink" href="#david-leutwyler" title="Permanent link">&para;</a></h3>
-<p>DL reports working with Lukas on precipitation, noting too much spread on long lead times and excessively intense precipitation during extreme events. Progress has been very slow. DL also mentions that the CSCS proposal for TeamX was declined, despite receiving two excellent reviews, meaning there will be no contribution from Switzerland for the winter. This is disappointing news.</p>
-<p>TS shares that they discussed the issue with EXCLAIM and raised the possibility of taking over the simulation, though it is uncertain if this would be feasible for the winter.</p>
+<p>DL reports working with Lukas on precipitation, noting too much spread on long lead times and excessively intense
+precipitation during extreme events. Progress has been very slow. DL also mentions that the CSCS proposal for TeamX was
+declined, despite receiving two excellent reviews, meaning there will be no contribution from Switzerland for the
+winter. This is disappointing news.</p>
+<p>TS shares that they discussed the issue with EXCLAIM and raised the possibility of taking over the simulation, though it
+is uncertain if this would be feasible for the winter.</p>
 <p>DL points out that the time window is closing as the campaign is scheduled for February.</p>
 <p>TS will check with Oli and Anurag to explore potential solutions.</p>
 <h3 id="nander-wever">Nander Wever<a class="headerlink" href="#nander-wever" title="Permanent link">&para;</a></h3>
 <p>NW reports that they are still working on integrating the mixed snow model into the main branch of ICON.</p>
 <h3 id="doris-folini">Doris Folini<a class="headerlink" href="#doris-folini" title="Permanent link">&para;</a></h3>
-<p>DF reports that they completed benchmarking for the CSCS proposal using the ICON-EXCLAIM code (R2B7). They had planned to go higher, but Tödi was too unstable. DF also mentions that all ICON code has been ported to the new Daint system to ensure readiness, in case it is needed.</p>
+<p>DF reports that they completed benchmarking for the CSCS proposal using the ICON-EXCLAIM code (R2B7). They had planned
+to go higher, but Tödi was too unstable. DF also mentions that all ICON code has been ported to the new Daint system to
+ensure readiness, in case it is needed.</p>
 <h3 id="yi-yao">Yi Yao<a class="headerlink" href="#yi-yao" title="Permanent link">&para;</a></h3>
-<p>YY reports that they wanted to run a benchmark on Tödi with coarse resolution, but Tödi has not been very stable. They plan to start the Euro-44 benchmark again next year.</p>
+<p>YY reports that they wanted to run a benchmark on Tödi with coarse resolution, but Tödi has not been very stable. They
+plan to start the Euro-44 benchmark again next year.</p>
 <h3 id="arash-hamzehloo">Arash Hamzehloo<a class="headerlink" href="#arash-hamzehloo" title="Permanent link">&para;</a></h3>
-<p>AH reports that they successfully compiled and ran ICON-ART on Tödi and managed to merge the NWP master branch. They hope to open a merge request in the next few days and will contact the gatekeeper at KIT. They are optimistic that this will be included in the next open-source release.  </p>
+<p>AH reports that they successfully compiled and ran ICON-ART on Tödi and managed to merge the NWP master branch. They
+hope to open a merge request in the next few days and will contact the gatekeeper at KIT. They are optimistic that this
+will be included in the next open-source release.  </p>
 <p>Next year, AH plans to work on extending the chemistry part of ART.</p>
 <h3 id="erik-koene">Erik Koene<a class="headerlink" href="#erik-koene" title="Permanent link">&para;</a></h3>
-<p>EK clarifies that they are not working on ICON itself but with ICON. They mention that they can run atmospheric inversions for production using the processing chain.</p>
+<p>EK clarifies that they are not working on ICON itself but with ICON. They mention that they can run atmospheric
+inversions for production using the processing chain.</p>
 <h3 id="tina-schnadt">Tina Schnadt<a class="headerlink" href="#tina-schnadt" title="Permanent link">&para;</a></h3>
 <p>TS reports that C2SM will be an official ICON partner, with the contract expected to be signed in February.</p>
 <h3 id="matthias-kraushaar">Matthias Kraushaar<a class="headerlink" href="#matthias-kraushaar" title="Permanent link">&para;</a></h3>
-<p>MK reports that they have received new information. The MK cluster will have 500 nodes, and projects that use ICON will be placed on Säntis.</p>
+<p>MK reports that they have received new information. The MK cluster will have 500 nodes, and projects that use ICON will
+be placed on Säntis.</p>
 
 
 
@@ -6291,7 +6324,7 @@ David Leutwyler (DL)</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2026 11:52:13 UTC">November 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:34:37 UTC">November 12, 2026</span>
   </span>
 
     
@@ -6301,7 +6334,7 @@ David Leutwyler (DL)</p>
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2026 11:52:13 UTC">November 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:34:37 UTC">November 12, 2026</span>
   </span>
 
     

@@ -6226,9 +6226,9 @@
 <p>Michael Jähn (MJ), Annika Lauber (AL), Jonas Jucker (JJ), Emmanuele Russo
  (ER), Nadja Omanovic (NO), Brigitta Goger (BG), Guillaume Bertoli (GB)</p>
 <h2 id="participants-zoom">Participants (Zoom)<a class="headerlink" href="#participants-zoom" title="Permanent link">&para;</a></h2>
-<p>Arash Hamzehloo (AH), Stephanie Westerhuis (SW), Joel Thanwerdas (JT), Kseniya Ivanova (KI), 
-William Sawyer (WS), Marco Arpagaus (MA), Nicoletta Farabullini (NF), Doris Folini (DF), 
-Tamara Bandikova (TB), Dominik Brunner (DB), Stefan Rüdisühli (SR), Nikolai Ponomarev (NP), 
+<p>Arash Hamzehloo (AH), Stephanie Westerhuis (SW), Joel Thanwerdas (JT), Kseniya Ivanova (KI),
+William Sawyer (WS), Marco Arpagaus (MA), Nicoletta Farabullini (NF), Doris Folini (DF),
+Tamara Bandikova (TB), Dominik Brunner (DB), Stefan Rüdisühli (SR), Nikolai Ponomarev (NP),
 Samuel Kellerhals (SK), Jacopo Canton (JC), Jean-Marie Bettems (JB)</p>
 <p><em>Minutes by Annika Lauber</em></p>
 <h2 id="reports">Reports<a class="headerlink" href="#reports" title="Permanent link">&para;</a></h2>
@@ -6239,53 +6239,76 @@ AL says that it should be about the same as on CPU as there is now speed-up on G
 MA says that this should be 30% in that case.</p>
 <p>JJ reports on the ICON-C meeting in Bonn.</p>
 <h3 id="guillaume-bertoli">Guillaume Bertoli<a class="headerlink" href="#guillaume-bertoli" title="Permanent link">&para;</a></h3>
-<p>GB works on Machine Learning (ML) to predict atmospheric radiation. The first version with a ML emulator exists now but there are no results so far. A master student started a thesis on ICON timestep sensitivity.</p>
+<p>GB works on Machine Learning (ML) to predict atmospheric radiation. The first version with a ML emulator exists now but
+there are no results so far. A master student started a thesis on ICON timestep sensitivity.</p>
 <h3 id="brigitta-goger">Brigitta Goger<a class="headerlink" href="#brigitta-goger" title="Permanent link">&para;</a></h3>
-<p>BG <a href="https://polybox.ethz.ch/index.php/s/ZpWPL5N9PJTEy6t" target="_blank">shows a plot about her work <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> where she is testing ICON over complex terrain using various resolutions.</p>
+<p>BG
+<a href="https://polybox.ethz.ch/index.php/s/ZpWPL5N9PJTEy6t" target="_blank">shows a plot about her
+work <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> where she is testing
+ICON over complex terrain using various resolutions.</p>
 <h3 id="nadja-omanovic">Nadja Omanovic<a class="headerlink" href="#nadja-omanovic" title="Permanent link">&para;</a></h3>
-<p>NO works with the two-moment microphysics scheme. She focuses on low stratus clouds, which will be seeded as part of the CloudLab campaign.</p>
+<p>NO works with the two-moment microphysics scheme. She focuses on low stratus clouds, which will be seeded as part of the
+CloudLab campaign.</p>
 <h3 id="emmanuele-russo">Emmanuele Russo<a class="headerlink" href="#emmanuele-russo" title="Permanent link">&para;</a></h3>
 <p>ER is trying to port the full mixed-layer model and plays around with low level damping of winds.</p>
 <h3 id="dominik-brunner">Dominik Brunner<a class="headerlink" href="#dominik-brunner" title="Permanent link">&para;</a></h3>
-<p>DB talks about what is being done at Empa. They are mainly interested in tracer simulations and have seven people using ICON-ART. They are doing simulations of CO2 over Switzerland, specifically Zurich. They are testing if there is any systematic tracer release bias, which is difficult to test. They are also working on the port of ART to GPUs. KI is coupling FLEXPART to ICON. A PhD student is coupling ICON with the Ensemble Kalman filter. Sven Werchner from KIT will probably become the gate keeper of ART and helps with porting ART to GPU.</p>
+<p>DB talks about what is being done at Empa. They are mainly interested in tracer simulations and have seven people using
+ICON-ART. They are doing simulations of CO2 over Switzerland, specifically Zurich. They are testing if there is any
+systematic tracer release bias, which is difficult to test. They are also working on the port of ART to GPUs. KI is
+coupling FLEXPART to ICON. A PhD student is coupling ICON with the Ensemble Kalman filter. Sven Werchner from KIT will
+probably become the gate keeper of ART and helps with porting ART to GPU.</p>
 <h3 id="marco-arpagaus">Marco Arpagaus<a class="headerlink" href="#marco-arpagaus" title="Permanent link">&para;</a></h3>
-<p>!MeteoSwiss is still struggling with the new machine Balfrin. They are late by half a year for going operational. They will start going pre-operational next year and full in 2024.</p>
+<p>!MeteoSwiss is still struggling with the new machine Balfrin. They are late by half a year for going operational. They
+will start going pre-operational next year and full in 2024.</p>
 <h3 id="stephanie-westerhuis">Stephanie Westerhuis<a class="headerlink" href="#stephanie-westerhuis" title="Permanent link">&para;</a></h3>
-<p>SW shares <a href="https://polybox.ethz.ch/index.php/s/ReSyMTX1VHRcLY5" target="_blank">slide about orography smoothing in ICON <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>. In COSMO the orography is prepared with EXTPAR, in ICON most is prepared in EXTPAR but the smoothing happens in ICON, which leads to inconsistency, e.g., HORIZON is not matching.
-SW looked at a real case where ICON highly overestimated the precipitation. They are still figuring out if there will be a change for the operational system regarding the filtering.</p>
+<p>SW shares
+<a href="https://polybox.ethz.ch/index.php/s/ReSyMTX1VHRcLY5" target="_blank">slide about orography smoothing in
+ICON <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>. In COSMO the
+orography is prepared with EXTPAR, in ICON most is prepared in EXTPAR but the smoothing happens in ICON, which leads to
+inconsistency, e.g., HORIZON is not matching.
+SW looked at a real case where ICON highly overestimated the precipitation. They are still figuring out if there will be
+a change for the operational system regarding the filtering.</p>
 <p>DB asks if ICON needs the same degree of smoothing as COSMO.
-SW says that ICON is able to handle much steeper slopes. However, very steep slopes might lead to overestimation of precipitation because of really high vertical wind speeds.
+SW says that ICON is able to handle much steeper slopes. However, very steep slopes might lead to overestimation of
+precipitation because of really high vertical wind speeds.
 BG says that she can run ICON stable with 40 degree slopes but with a very high resolution a damping factor is also needed.</p>
 <h3 id="william-sawyer">William Sawyer<a class="headerlink" href="#william-sawyer" title="Permanent link">&para;</a></h3>
-<p>WS shares <a href="https://polybox.ethz.ch/index.php/s/k0W4ZyBuTCGxOhY" target="_blank">slides about ICON engineering efforts <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>. They should have a version of ICON which runs on !LUMI before Christmas.
+<p>WS shares
+<a href="https://polybox.ethz.ch/index.php/s/k0W4ZyBuTCGxOhY" target="_blank">slides about ICON engineering
+efforts <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>. They should have
+a version of ICON which runs on !LUMI before Christmas.
 For EXCLAIM there has been a ICON-C agreement to split ICON into "granules."</p>
-<p>MA says that Switzerland/CSCS has a share of LUMI. It is one of the EuroHPC platforms that will probably be used for the DefinEClimate Twin. Why is the ICON community interested?
-WS says that NWP will theoretically compile on LUMI before Christmas but doesn’t know if anybody will run it. There is some Swiss financial interest in LUMI.
+<p>MA says that Switzerland/CSCS has a share of LUMI. It is one of the EuroHPC platforms that will probably be used for the
+DefinEClimate Twin. Why is the ICON community interested?
+WS says that NWP will theoretically compile on LUMI before Christmas but doesn’t know if anybody will run it. There is
+some Swiss financial interest in LUMI.
 MA says that they are still looking for resources for TeamX and asks if it is possible to run NWP on LUMI next summer.
 WS answers that it’s not only about computing resources but also human resources.</p>
 <h3 id="doris-folini">Doris Folini<a class="headerlink" href="#doris-folini" title="Permanent link">&para;</a></h3>
 <p>DF says that Boriana Chtirkova is examining the role of SSTs.</p>
 <h3 id="samuel-kellerhals">Samuel Kellerhals<a class="headerlink" href="#samuel-kellerhals" title="Permanent link">&para;</a></h3>
-<p>SK (EXCLAIM) has been working on an implementation with MeteoSwiss to get stencils to run. </p>
+<p>SK (EXCLAIM) has been working on an implementation with MeteoSwiss to get stencils to run.</p>
 <h3 id="nicoletta-farabullini">Nicoletta Farabullini<a class="headerlink" href="#nicoletta-farabullini" title="Permanent link">&para;</a></h3>
 <p>There are a lot more functionalities of GT4Py now.
 WS adds that Magdalena Luz is working on a stand-alone granule on the Python side.</p>
 <h3 id="jacopo-canton">Jacopo Canton<a class="headerlink" href="#jacopo-canton" title="Permanent link">&para;</a></h3>
 <p>JC is not currently working with ICON but has plans to port URB to ICON.</p>
-<p>JJ says that since two years he heard about that there will be new external parameters but hasn’t seen any piece of code still. JJ asks if JC knows more about it.
+<p>JJ says that since two years he heard about that there will be new external parameters but hasn’t seen any piece of code
+still. JJ asks if JC knows more about it.
 JC answers that TERRA-URB can work with global parameters but it’s a bit all over the place. He has scripts that do work.</p>
 <p>DB asks if ICON runs with TERRA-URB but if the problem is the preprocessing or if there are other issues.
 JC answers that TERRA-URB is not fully implemented in ICON.
-JB says that Jan-Peter Schulz from DWD is doing this work. 
+JB says that Jan-Peter Schulz from DWD is doing this work.
 JC says that there is not so much left to be implemented according to Jan-Peter.</p>
 <p>BG comments that for landuse datasets, the CORINE dataset is very useful.
-DB says that the CORINE dataset cannot be used in ICON but it would be very interesting. 
+DB says that the CORINE dataset cannot be used in ICON but it would be very interesting.
 BG says EXTPAR can process the CORINE dataset. She didn’t get any errors but hasn’t checked if it works.</p>
 <h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
 <p>WS asks if there are any news about the ICON seamless effort.
 MA cannot give any more stable information.
 JB will send mail. There is information on the <a href="https://www.cosmo-model.org/content/tasks/workGroups/wgPHY/default.htm" target="_blank">COSMO website <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
-<p>DB sends a reminder about the COSMO/ICON user workshop on 2 February. Please send him your registration and indicate if you want to present a poster.</p>
+<p>DB sends a reminder about the COSMO/ICON user workshop on 2 February. Please send him your registration and indicate if
+you want to present a poster.</p>
 
 
 
@@ -6308,7 +6331,7 @@ JB will send mail. There is information on the <a href="https://www.cosmo-model.
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2026 11:52:13 UTC">November 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:34:37 UTC">November 12, 2026</span>
   </span>
 
     
@@ -6318,7 +6341,7 @@ JB will send mail. There is information on the <a href="https://www.cosmo-model.
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2026 11:52:13 UTC">November 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:34:37 UTC">November 12, 2026</span>
   </span>
 
     

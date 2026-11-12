@@ -5959,15 +5959,23 @@
 <h1 id="icon-meeting-20221">ICON Meeting 2022/1<a class="headerlink" href="#icon-meeting-20221" title="Permanent link">&para;</a></h1>
 <p><em>15 February 2022, inline via Zoom</em></p>
 <h2 id="participants">Participants<a class="headerlink" href="#participants" title="Permanent link">&para;</a></h2>
-<p>Michael Jähn (MJ), Annika Lauber (AL), David Ochsner (DO), Tina Schnadt, Stephanie Westerhuis (SW), Guy de Morsier ( GdM), Stefan Rüdisühli (SR), Philipp Sommer (PS), Michael Steiner (MS), Emmanuelle Russo (ER), Sylvaine Ferrachat (SF), Victoria Cherkas (VC), Boriana Chtirkova (BC), Doris Folini (DF), William Sawyer, Anurag Dipankar (AD), Nadja Omanovic (NO), Andrea Stenke (AS), Oliver Fuhrer (OF), Kseniya Ivanova (KI), Romain Pilon (RP), André Walser (AW), Shweta Singh (SS), Carlos Osuna (CO)</p>
+<p>Michael Jähn (MJ), Annika Lauber (AL), David Ochsner (DO), Tina Schnadt, Stephanie Westerhuis (SW), Guy de Morsier (
+GdM), Stefan Rüdisühli (SR), Philipp Sommer (PS), Michael Steiner (MS), Emmanuelle Russo (ER), Sylvaine Ferrachat (SF),
+Victoria Cherkas (VC), Boriana Chtirkova (BC), Doris Folini (DF), William Sawyer, Anurag Dipankar (AD), Nadja Omanovic
+(NO), Andrea Stenke (AS), Oliver Fuhrer (OF), Kseniya Ivanova (KI), Romain Pilon (RP), André Walser (AW), Shweta Singh
+(SS), Carlos Osuna (CO)</p>
 <p><em>Minutes by Annika Lauber</em></p>
 <h2 id="reports">Reports<a class="headerlink" href="#reports" title="Permanent link">&para;</a></h2>
 <h3 id="c2sm-michael-jahn-annika-lauber">C2SM (Michael Jähn, Annika Lauber)<a class="headerlink" href="#c2sm-michael-jahn-annika-lauber" title="Permanent link">&para;</a></h3>
 <p>MJ welcomes all participants to the meeting and <a href="https://polybox.ethz.ch/index.php/s/G7kUB22wcyaRkCq" target="_blank">presents C2SM ICON news <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
 <h2 id="short-presentations-from-participants">Short presentations from participants<a class="headerlink" href="#short-presentations-from-participants" title="Permanent link">&para;</a></h2>
-<p>SW <a href="https://polybox.ethz.ch/index.php/s/zwWmSrKDTRQjy0w" target="_blank">presents her work <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> on cooling of the surface during a clear-sky night. How well can ICON simulate that? During a case study ICON stays close to 0°C even for temperatures going down to -15°C. Reach out if you also want to compare model output to measurements.</p>
-<p>GdM talks about pressure bias for which they have found potential causes. The boundary values are fixed and should not have been considered. Tried to use ICON-EU boundary condition but doesn't change problem either.</p>
-<p>AW works on GPU porting. Will soon have  MeteoSwiss virtual clusters on ALPS and run benchmarks. Is still working on sspt implementation. Did not handle wind correctly, should always provide wind components on lat-lon grid.
+<p>SW <a href="https://polybox.ethz.ch/index.php/s/zwWmSrKDTRQjy0w" target="_blank">presents her work <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> on
+cooling of the surface during a clear-sky night. How well can ICON simulate that? During a case study ICON stays close
+to 0°C even for temperatures going down to -15°C. Reach out if you also want to compare model output to measurements.</p>
+<p>GdM talks about pressure bias for which they have found potential causes. The boundary values are fixed and should not
+have been considered. Tried to use ICON-EU boundary condition but doesn't change problem either.</p>
+<p>AW works on GPU porting. Will soon have  MeteoSwiss virtual clusters on ALPS and run benchmarks. Is still working on
+sspt implementation. Did not handle wind correctly, should always provide wind components on lat-lon grid.
 BC asks which remapping tool he is using.
 AW uses iconremap within ICONtools.
 SS asks if problems only apply to wind field or also other variables?
@@ -5975,45 +5983,63 @@ AW answer that wind fields are special because they are vectors.</p>
 <p>SS does ICON-NWP simulation and looks at tracer transport.</p>
 <p>VC worked on the benchmarks and was working on the icon-vis repo with pspylot on using grib files.</p>
 <p>MS uses ICON-ART simulations. Wants to estimate methane emissions over Europe.</p>
-<p>KI is working on coupling FLEXPART. Compared point sourced emission between ICON-ART and FLEXPART. Next step: couple complete landscape.</p>
-<p>DO from EMPA is working on porting parts of ICON-ART to GPU. First step is to decide from which ICON version to start the development. It has to fit ART part.</p>
-<p>RP works in Daniela Domeisen's group at the University of Lausanne. He works on teleconnection. </p>
+<p>KI is working on coupling FLEXPART. Compared point sourced emission between ICON-ART and FLEXPART. Next step: couple
+complete landscape.</p>
+<p>DO from EMPA is working on porting parts of ICON-ART to GPU. First step is to decide from which ICON version to start
+the development. It has to fit ART part.</p>
+<p>RP works in Daniela Domeisen's group at the University of Lausanne. He works on teleconnection.</p>
 <p>ER joined Daniela's group in November, working in the project heat forecast. He started experiments with dry dynamical cores.</p>
 <p>NO works with ICON-NWP using 2-moment scheme. Interested in low-stratus clouds.</p>
-<p>SR <a href="https://polybox.ethz.ch/index.php/s/iYnCFATvOvppTLP" target="_blank">presents aqua-planet simulations by Sebastian Schemm <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>. Next step: add seasonal cycle and topography. They also work on improving ecRad with machine learning.
+<p>SR
+<a href="https://polybox.ethz.ch/index.php/s/iYnCFATvOvppTLP" target="_blank">presents aqua-planet simulations by Sebastian
+Schemm <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>. Next step: add
+seasonal cycle and topography. They also work on improving ecRad with machine learning.
 OF says that they have a bit of experience to implement machine learning into Fortran code and could maybe help.
 WS asks if aqua-planet connected with the EXCLAIM use case.
 SR is not sure because he is not completely involved.</p>
-<p>SF works with ICON-HAM. Upgraded ICON base version to 2.6.4 release. Elsa Germann is checking GPU port after upgrade. It runs but doesn't validate. They have now ICON-HAM version, which is tuned.</p>
+<p>SF works with ICON-HAM. Upgraded ICON base version to 2.6.4 release. Elsa Germann is checking GPU port after upgrade. It
+runs but doesn't validate. They have now ICON-HAM version, which is tuned.</p>
 <p>BC simulates long-term and global changes. Teamed up with ER and Priyanka Yadav. Happy for more people to team up with.
 WS asks if the use ECHAM physics?
 BC answers yes but nothing against ICON-NWP physics.
 WS thinks that for now ECHAM physics is the right choice.</p>
 <p>DF is using coarse resolution. Teamed up with ER, BC and Priyanka Yadav.</p>
-<p>WS is talking about the use cases of EXCLAIM. The software development is trying to pull components out of ICON models to remove deprecated code. 
-They want to clean up the release candidate 2.6.5. Several components will probably disappear, e.g., old radiation scheme (PSrad). 
-Asks if there are users of LES and if someone would have a problem if it would be removed in the release candidate. The graupel microphysics will be turned into stand-alone component with GT4py tool to run components on GPU or CPU. MeteoSwiss will have access to new cluster on ALPS. The cray compiler is going to support OpenACC again.
+<p>WS is talking about the use cases of EXCLAIM. The software development is trying to pull components out of ICON models
+to remove deprecated code.
+They want to clean up the release candidate 2.6.5. Several components will probably disappear, e.g., old radiation
+scheme (PSrad).
+Asks if there are users of LES and if someone would have a problem if it would be removed in the release candidate. The
+graupel microphysics will be turned into stand-alone component with GT4py tool to run components on GPU or CPU.
+MeteoSwiss will have access to new cluster on ALPS. The cray compiler is going to support OpenACC again.
 SF comments that NO will use LES in her PhD. Asks where to find ICON consolidated.
-WS says that GitLab is repository for all ICON code and changes should be documented in wiki. You should have access to ICON consolidated
+WS says that GitLab is repository for all ICON code and changes should be documented in wiki. You should have access to
+ICON consolidated
 AW asks if the cray compiler is a second besides NVIDIA.
 WS answers yes but that they don't have benchmarks. NVIDIA can do better and should be preferred.</p>
 <p>CO is working on DSLs. Working on dynamic core of ICON.</p>
-<p>AS wants to introduce the Inorganic Environmental Geochemistry group to ICON. They just started using ICON-ART and will run model on Euler cluster.</p>
+<p>AS wants to introduce the Inorganic Environmental Geochemistry group to ICON. They just started using ICON-ART and will
+run model on Euler cluster.</p>
 <p><a href="https://github.com/Chilipp/psyplot-ICON-C2SM-Meeting-20220215" target="_blank"><strong>Presentation of psyplot by Philipp Sommer</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a></p>
 <h2 id="questions">Questions<a class="headerlink" href="#questions" title="Permanent link">&para;</a></h2>
 <p>WS asks if PS has ever tried to plot ICON restart files.
-PS answers that the grid information is needed, which can also be in a separate file. It is straightforward to merge multiple files. So if the cf-conventions are fulfilled, there should be no problem. You can always send PS a file and he can help you.</p>
+PS answers that the grid information is needed, which can also be in a separate file. It is straightforward to merge
+multiple files. So if the cf-conventions are fulfilled, there should be no problem. You can always send PS a file and he
+can help you.</p>
 <p>WS asks at which resolution psyplot breaks down.
-PS answers that psyplot is still using matplotlib, which is not very well suited for high resolution. For about 4 Mio grid points it takes about 1 minute. Hope would be to use something different, maybe PyVista or VDK.
+PS answers that psyplot is still using matplotlib, which is not very well suited for high resolution. For about 4 Mio
+grid points it takes about 1 minute. Hope would be to use something different, maybe PyVista or VDK.
 WS asks what the maximum is, which psyplot can use.
 PS answers that it should be R3B7, which is roughly 3 Mio grid cells.</p>
 <p>CO asks if PS has discussed with VDK.
-PS answers that the first goal of psyplot is just to visualise. He doesn't think they have currently resources for that but maybe in the future.</p>
+PS answers that the first goal of psyplot is just to visualise. He doesn't think they have currently resources for that
+but maybe in the future.</p>
 <p>DF comments that ParaView can handle data on big scale, so why not trying to get VDK with  ParaView.
-PS answers that for  ParaView the idea is different. It is a visualization focus framework and has a very general scope, not primarily made for visualizing model output.
+PS answers that for  ParaView the idea is different. It is a visualization focus framework and has a very general scope,
+not primarily made for visualizing model output.
 DF asks if it is too complicated to use.
 PS answers yes and the scope is different. Most scientist working with model output are using command line tools.</p>
-<p>VC struggled to do a plot with normal wind components and asks if there is maybe a problem if the variables are defined on the edge or node.
+<p>VC struggled to do a plot with normal wind components and asks if there is maybe a problem if the variables are defined
+on the edge or node.
 PS answers that this shouldn't matter and offers VC to send him the netcdf so he can check.</p>
 
 
@@ -6037,7 +6063,7 @@ PS answers that this shouldn't matter and offers VC to send him the netcdf so he
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2026 11:52:13 UTC">November 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:34:37 UTC">November 12, 2026</span>
   </span>
 
     
@@ -6047,7 +6073,7 @@ PS answers that this shouldn't matter and offers VC to send him the netcdf so he
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2026 11:52:13 UTC">November 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:34:37 UTC">November 12, 2026</span>
   </span>
 
     

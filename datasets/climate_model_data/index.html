@@ -6277,6 +6277,9 @@
   
 
 
+<!-- Generated variable lists (scripts/update_datasets.py) cannot be wrapped -->
+<!-- markdownlint-disable MD013 -->
+
 <h1 id="climate-model-data">Climate Model Data<a class="headerlink" href="#climate-model-data" title="Permanent link">&para;</a></h1>
 <h2 id="raw-cmip-archives">Raw CMIP Archives<a class="headerlink" href="#raw-cmip-archives" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
@@ -6285,7 +6288,8 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>"Resolution: native" means that each model output is available on the native grid on which it was run. Size and file information last updated in June 2021.</p>
+<p>"Resolution: native" means that each model output is available on the native grid on which it was run. Size and file
+information last updated in June 2021.</p>
 </div>
 <h3 id="cmip7">CMIP7<a class="headerlink" href="#cmip7" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">IAC</label></div>
@@ -6387,7 +6391,9 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Next Generation (ng) archives were maintained by Reto's group (Jan Sedlacek/Lukas Brunner). Ruth Lorenz / C2SM took over cmip6-ng in 2022. Contact: <a href="mailto:cmip6-archive@env.ethz.ch">cmip6-archive@env.ethz.ch</a>. Documentation: <a href="https://doi.org/10.5281/zenodo.3734128" target="_blank">https://doi.org/10.5281/zenodo.373412 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
+<p>Next Generation (ng) archives were maintained by Reto's group (Jan Sedlacek/Lukas Brunner). Ruth Lorenz / C2SM took
+over cmip6-ng in 2022. Contact: <a href="mailto:cmip6-archive@env.ethz.ch">cmip6-archive@env.ethz.ch</a>. Documentation:
+<a href="https://doi.org/10.5281/zenodo.3734128" target="_blank">https://doi.org/10.5281/zenodo.373412 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a>.</p>
 </div>
 <h3 id="cmip6-ng">CMIP6-ng<a class="headerlink" href="#cmip6-ng" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">IAC</label><label for="__tabbed_6_2">Euler</label></div>
@@ -6407,7 +6413,7 @@
 <li>Number of files: 764,266 <span class="twemoji" title="last updated: 2026-11-07 07:02:48"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span></li>
 <li>Access: direct / rsync</li>
 <li>Status: updated monthly</li>
-<li>Variables: 
+<li>Variables:
   <code title="fx (native)">areacella</code>,
   <code title="ann (g025), ann (native), mon (g025), mon (native)">clt</code>,
   <code title="mon (native)">co2mass</code>,
@@ -6712,7 +6718,7 @@
 </li>
 <li>Resolution: 2-3 km</li>
 <li>Coverage: European Alpine domain</li>
-<li>More details <a href="../cordex_fpsconv_data/">here</a></li>
+<li>More details on the <a href="../cordex_fpsconv_data/">CORDEX-FPSCONV data page</a></li>
 </ul>
 <h2 id="seasonal-forecast-data-from-ecmwf-seas5">Seasonal Forecast Data from ECMWF (SEAS5)<a class="headerlink" href="#seasonal-forecast-data-from-ecmwf-seas5" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">IAC</label></div>
@@ -6730,8 +6736,10 @@
 <li>Access: direct / rsync</li>
 <li>Status: frozen (could be updated on request)</li>
 <li>Variables:<ul>
-<li>daily: <code>10m_u_component_of_wind</code>,  <code>2m_dewpoint_temperature</code>,  <code>mean_sea_level_pressure</code>,  <code>snow_depth_water_equivalent</code>,  <code>surface_net_solar_radiation</code>,  <code>total_cloud_cover</code>,
-<code>10m_v_component_of_wind</code>,  <code>evaporation</code>, <code>snow_depth</code>, <code>sub_surface_runoff</code>, <code>surface_runoff</code>, <code>2m_temperature</code>, <code>maximum_2m_temperature_in_the_last_24_hours</code>, <code>minimum_2m_temperature_in_the_last_24_hours</code>, <code>total_precipitation</code></li>
+<li>daily: <code>10m_u_component_of_wind</code>,  <code>2m_dewpoint_temperature</code>,  <code>mean_sea_level_pressure</code>,
+  <code>snow_depth_water_equivalent</code>,  <code>surface_net_solar_radiation</code>,  <code>total_cloud_cover</code>,
+<code>10m_v_component_of_wind</code>,  <code>evaporation</code>, <code>snow_depth</code>, <code>sub_surface_runoff</code>, <code>surface_runoff</code>, <code>2m_temperature</code>,
+<code>maximum_2m_temperature_in_the_last_24_hours</code>, <code>minimum_2m_temperature_in_the_last_24_hours</code>, <code>total_precipitation</code></li>
 </ul>
 </li>
 <li>Resolution: 1° x 1°</li>
@@ -6759,7 +6767,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2026 11:52:13 UTC">November 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:34:37 UTC">November 12, 2026</span>
   </span>
 
     
@@ -6769,7 +6777,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2026 11:52:13 UTC">November 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:34:37 UTC">November 12, 2026</span>
   </span>
 
     

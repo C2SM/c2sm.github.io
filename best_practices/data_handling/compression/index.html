@@ -5957,11 +5957,13 @@
 
 
 <h1 id="data-compression">Data Compression<a class="headerlink" href="#data-compression" title="Permanent link">&para;</a></h1>
-<p>Compression can considerably reduce disk space usage and the time needed for data transfer. </p>
-<p>However, compressing and decompressing data consumes CPU and memory resources, can slow down read and write operations, and bring potential loss of information depending on the chosen compression strategy.</p>
+<p>Compression can considerably reduce disk space usage and the time needed for data transfer.</p>
+<p>However, compressing and decompressing data consumes CPU and memory resources, can slow down read and write operations,
+and bring potential loss of information depending on the chosen compression strategy.</p>
 <div class="admonition tip">
 <p class="admonition-title">When to compress</p>
-<p>Ideally, compress data that is not accessed frequently. Compression is highly recommended for data that is stored in an archive (see <a href="../recommendations/#6-archiving-data">Archiving Data</a>).</p>
+<p>Ideally, compress data that is not accessed frequently. Compression is highly recommended for data that is stored in
+an archive (see <a href="../recommendations/#6-archiving-data">Archiving Data</a>).</p>
 </div>
 <h2 id="lossless-vs-lossy-compression">Lossless vs. lossy compression<a class="headerlink" href="#lossless-vs-lossy-compression" title="Permanent link">&para;</a></h2>
 <table>
@@ -5996,7 +5998,8 @@
 </tbody>
 </table>
 <h2 id="working-with-compressed-files">Working with compressed files<a class="headerlink" href="#working-with-compressed-files" title="Permanent link">&para;</a></h2>
-<p>Compressed files such as <code>*.gz</code>, <code>*.zip</code>, or <code>*.bz2</code> normally need to be uncompressed before they can be used again. There are alternatives, however:</p>
+<p>Compressed files such as <code>*.gz</code>, <code>*.zip</code>, or <code>*.bz2</code> normally need to be uncompressed before they can be used again.
+There are alternatives, however:</p>
 <ul>
 <li>Linux commands such as <code>zless</code>, <code>zcat</code>, <code>zdiff</code>, and <code>zgrep</code> handle compressed files on the fly.</li>
 <li>many packages from scripting languages such as R, Python, Matlab, or IDL can read compressed files directly.</li>
@@ -6004,12 +6007,16 @@
 <h2 id="standard-lossless-methods">Standard lossless methods<a class="headerlink" href="#standard-lossless-methods" title="Permanent link">&para;</a></h2>
 <div class="admonition success">
 <p class="admonition-title">Recommendation</p>
-<p>We recommend <strong>lossless compressed netCDF4</strong> files for most use cases. The netCDF4 library, and all tools compiled with netCDF4 support, integrate compression seamlessly.</p>
+<p>We recommend <strong>lossless compressed netCDF4</strong> files for most use cases. The netCDF4 library, and all tools compiled
+with netCDF4 support, integrate compression seamlessly.</p>
 </div>
 <p>Lossless compression in netCDF4 is based on the zlib library. The following parameters can be tuned:</p>
 <ul>
-<li><em>Compression level</em>: ranges from 1 (least aggressive) to 9 (most aggressive). Level 1 requires moderate CPU and memory resources and is sufficient for most purposes. Higher levels usually produce smaller files, but at a higher processing cost when packing and unpacking and often for a marginal additional gain.</li>
-<li><em>Chunk sizes</em>: compression operates on data chunks. These should match the data blocks that are typically accessed at the same time.</li>
+<li><em>Compression level</em>: ranges from 1 (least aggressive) to 9 (most aggressive). Level 1 requires moderate CPU and memory
+  resources and is sufficient for most purposes. Higher levels usually produce smaller files, but at a higher processing
+  cost when packing and unpacking and often for a marginal additional gain.</li>
+<li><em>Chunk sizes</em>: compression operates on data chunks. These should match the data blocks that are typically accessed at
+  the same time.</li>
 <li><em>Shuffling</em>: often further reduces the data size.</li>
 <li><em>Unlimited dimensions</em>: remove unneeded unlimited dimensions, as they may reduce the compression efficiency.</li>
 </ul>
@@ -6054,21 +6061,29 @@ nccopy<span class="w"> </span>-d<span class="w"> </span><span class="m">1</span>
 <h2 id="lossy-algorithms">Lossy algorithms<a class="headerlink" href="#lossy-algorithms" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Use with care</p>
-<p>Lossy compression permanently removes information that cannot be restored. Always verify that the error introduced is acceptable for your use case before archiving or sharing data.</p>
+<p>Lossy compression permanently removes information that cannot be restored. Always verify that the error introduced
+is acceptable for your use case before archiving or sharing data.</p>
 </div>
-<p>Lossy compression can achieve ratios of 10–50× for climate and weather data, far beyond what lossless methods offer. Available tools include:</p>
+<p>Lossy compression can achieve ratios of 10–50× for climate and weather data, far beyond what lossless methods offer.
+Available tools include:</p>
 <ul>
 <li>
 <p><strong>NCO (ncks)</strong></p>
-<p>In addition to lossless compression (see <a href="#standard-lossless-methods">Standard lossless methods</a>), <code>ncks</code> supports several lossy algorithms. </p>
+<p>In addition to lossless compression (see <a href="#standard-lossless-methods">Standard lossless methods</a>), <code>ncks</code> supports
+several lossy algorithms.</p>
 </li>
 <li>
 <p><strong>Python</strong></p>
-<p><a href="https://unidata.github.io/netcdf4-python/" target="_blank">netcdf4-python <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> and <a href="https://docs.xarray.dev/en/stable/user-guide/io.html" target="_blank">xarray <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> support lossy compression by defining a <em>least significant digit</em>. All information below this threshold is removed before saving.</p>
+<p><a href="https://unidata.github.io/netcdf4-python/" target="_blank">netcdf4-python <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> and
+<a href="https://docs.xarray.dev/en/stable/user-guide/io.html" target="_blank">xarray <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> support
+lossy compression by defining a <em>least significant digit</em>. All information below this threshold is removed before
+saving.</p>
 </li>
 <li>
 <p><strong>C2SM dc_toolkit</strong></p>
-<p>The <a href="https://github.com/C2SM/dc_toolkit" target="_blank">dc_toolkit <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> toolkit systematically searches for the best compression pipeline for your data and verifies the result against a user-defined error threshold. See the <a href="../../../tools/dc_toolkit/">dc_toolkit</a> page in the Tools section.</p>
+<p>The <a href="https://github.com/C2SM/dc_toolkit" target="_blank">dc_toolkit <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a> toolkit systematically
+searches for the best compression pipeline for your data and verifies the result against a user-defined error
+threshold. See the <a href="../../../tools/dc_toolkit/">dc_toolkit</a> page in the Tools section.</p>
 </li>
 </ul>
 
@@ -6093,7 +6108,7 @@ nccopy<span class="w"> </span>-d<span class="w"> </span><span class="m">1</span>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2026 11:52:13 UTC">November 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:34:37 UTC">November 12, 2026</span>
   </span>
 
     
@@ -6103,7 +6118,7 @@ nccopy<span class="w"> </span>-d<span class="w"> </span><span class="m">1</span>
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2026 11:52:13 UTC">November 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2026 13:34:37 UTC">November 12, 2026</span>
   </span>
 
     
