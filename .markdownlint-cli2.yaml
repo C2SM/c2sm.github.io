@@ -1,3 +1,25 @@
 # SUMMARY.md files hold the literate-nav navigation of MkDocs, not content pages
 ignores:
   - "**/SUMMARY.md"
+
+config:
+  # MkDocs needs 4-space indentation for nested lists
+  MD007:
+    indent: 4
+  MD010:
+    spaces_per_tab: 4
+  MD013:
+    line_length: 120
+    code_blocks: false
+    tables: false
+    headings: false
+  MD024:
+    siblings_only: true
+  # Allow a trailing colon, as used by Material icon shortcodes such as :material-apple:
+  MD026:
+    punctuation: ".,;!"
+  # HTML elements used by Material for MkDocs pages
+  MD033:
+    allowed_elements: [b, br, button, details, div, img, p, s, small, span, sub, summary, sup, u]
+  # Admonitions and content tabs use indented content that looks like code blocks
+  MD046: false

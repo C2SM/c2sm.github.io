@@ -65,9 +65,9 @@ The following commands are available:
 
 All Markdown files are checked with
 [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) on every push and pull request.
-The rules are configured in `.markdownlint.yaml` and adapted to Material for MkDocs
+The rules are configured in `.markdownlint-cli2.yaml` and adapted to Material for MkDocs
 (4-space list indentation, admonitions, inline HTML elements, 120-character lines).
-The `SUMMARY.md` navigation files are excluded in `.markdownlint-cli2.yaml`.
+The `SUMMARY.md` navigation files are excluded there as well.
 
 External links in `docs/` must carry an icon and open in a new tab. `scripts/format_external_links.py` adds both,
 and a GitHub workflow fails if a link is not formatted.
@@ -99,7 +99,7 @@ To skip the hooks for a single commit, use `git commit --no-verify`. The CI chec
 ### Editor integration
 
 The [markdownlint extension](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
-for VS Code reads `.markdownlint.yaml` and shows errors while typing.
+for VS Code reads `.markdownlint-cli2.yaml` and shows errors while typing.
 
 ### Common pitfalls
 
