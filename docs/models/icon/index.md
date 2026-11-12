@@ -24,7 +24,7 @@ GPU architectures.
 
 !!! info
 
-      The latest official ICON release (currently `2026.04`) and the [`icon-nwp` master branch :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"} are continuously being tested on both [Santis](../../hpc/cscs/santis.md){:target="_blank"} (CSCS) and [Euler](../../hpc/ethz/euler.md){:target="_blank"} (ETHZ).
+      The latest official ICON release (currently `2026.10`) and the [`icon-nwp` master branch :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"} are continuously being tested on both [Santis](../../hpc/cscs/santis.md){:target="_blank"} (CSCS) and [Euler](../../hpc/ethz/euler.md){:target="_blank"} (ETHZ).
 
 ## Mailing List
 

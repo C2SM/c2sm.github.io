@@ -20,7 +20,7 @@ Clone the ICON repository:
 
 === "Latest release at DKRZ GitLab"
     ```console
-    git clone -b release-2026.04-public --recurse-submodules https://git.gitlab.dkrz.de/icon/icon-model.git
+    git clone -b release-2026.10-public --recurse-submodules https://git.gitlab.dkrz.de/icon/icon-model.git
     ```
 
 === "icon-nwp master branch at DKRZ GitLab"
@@ -241,3 +241,95 @@ Now, activate the spack environment and build ICON:
 spack env activate -d config/ethz/spack/${SPACK_TAG}/euler_cpu_gcc
 srun -N 1 -n 12 --mem-per-cpu=1G spack install -j 12
 ```
+
+## Compile Options
+
+On all machines above, ICON is built with [Spack :material-open-in-new:](https://spack.readthedocs.io){:target="_blank"}.
+The ICON configuration is defined by the Spack spec in the `spack.yaml` file of the environment
+that the configure wrapper activates:
+
+| Machine | Configure wrapper | Spack environment |
+| --- | --- | --- |
+| Säntis | `config/cscs/santis.cpu.nvhpc` | `config/cscs/spack/santis_cpu_double` |
+| Säntis | `config/cscs/santis.gpu.nvhpc` | `config/cscs/spack/santis_gpu_double` |
+| Balfrin | `config/cscs/alps_mch.cpu.nvidia` | `config/cscs/spack/mch_cpu_double` |
+| Balfrin | `config/cscs/alps_mch.gpu.nvidia` | `config/cscs/spack/mch_gpu_double` |
+| Euler | `config/ethz/euler.cpu.gcc` | `config/ethz/spack/euler_cpu_gcc` |
+
+A spec looks like this (example for Säntis CPU):
+
+```yaml
+spack:
+  specs:
+    - icon-nwp @develop +grib2 +eccodes-definitions +ecrad +art ~aes
+      ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange +mpi %c,cxx,fortran=nvhpc
+```
+
+### Enable or Disable Components
+
+Each `+<variant>` enables and each `~<variant>` disables a feature, which translates to
+`--enable-<variant>` and `--disable-<variant>` of the ICON `configure` script.
+For example, to build ICON with the ICON community interface (ComIn) but without ART, change the spec to:
+
+```yaml
+    - icon-nwp @develop +grib2 +eccodes-definitions +ecrad ~art +comin ~aes
+      ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange +mpi %c,cxx,fortran=nvhpc
+```
+
+Then rerun the configure wrapper as described above. Spack detects the modified spec and rebuilds ICON.
+
+To list all available variants and their default values, run the following
+with the Spack instance of your build loaded:
+
+```console
+spack info icon-nwp
+```
+
+!!! info "Package name"
+    Depending on the ICON version and the machine, the spec uses either the `icon` or the `icon-nwp`
+    Spack package. Use the package name of your `spack.yaml` file for `spack info`.
+
+Configure options without a corresponding variant can be passed with the `extra-config-args` variant
+of `icon-nwp`, e.g., `extra-config-args=--enable-dim-swap`.
+Use this cautiously, as it bypasses the consistency checks of the Spack package.
+
+### Change Compiler Flags
+
+Additional compiler flags are set with the `fflags` (Fortran), `cflags` (C), and `ldflags` (linker)
+variants. They are appended to the default flags of the Spack package. For example, to obtain
+debug information and a traceback when the model crashes:
+
+```yaml
+    - icon-nwp @develop +grib2 +eccodes-definitions +ecrad +art ~aes
+      ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange +mpi
+      fflags="-g -traceback" %c,cxx,fortran=nvhpc
+```
+
+!!! warning "Check that your flags are applied"
+    These variants only reach the compiler with a spack-c2sm version that includes
+    [C2SM/spack-c2sm#1089 :material-open-in-new:](https://github.com/C2SM/spack-c2sm/pull/1089){:target="_blank"}.
+    Older versions silently ignore them. Check the `FCFLAGS` entry in the `config.log` file
+    of your build folder to verify which flags are used.
+
+To compile a subset of the source code with a different flag, e.g., a lower optimization level for
+a part that causes problems, use the `fcgroup` variant of `icon-nwp` with the format `NAME.paths.flag`:
+
+```yaml
+fcgroup=NWP.src/atm_phy_nwp.-O1
+```
+
+`NAME` consists of capital letters, `paths` is a colon-separated list of files and directories
+relative to the ICON root folder (without dots), and `flag` is a single compiler flag that is used
+instead of the default `ICON_FCFLAGS` for these files.
+
+### Recommendations
+
+- **Compile only what you need:** Disable all components that your experiment does not use
+  (e.g., `~ocean ~jsbach ~coupling ~waves ~art`). This reduces the compilation time and the number of
+  dependencies that may fail to build.
+- **Use one build folder per configuration:** Combine different specs with
+  [out-of-source builds](#building-out-of-source) instead of recompiling the same folder.
+- **Keep debug and production builds apart:** Debug flags such as `-g` or `-O0` slow down the model
+  considerably. Do not use them for production runs.
+- **Keep track of your changes:** The `spack.yaml` files are part of the ICON repository.
+  Commit your modifications to your own branch so that the configuration of your build is reproducible.
