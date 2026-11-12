@@ -1,0 +1,3 @@
+extends: ../../.markdownlint.yaml
+# Event pages use an emphasized date and minutes line as a subtitle
+MD036: false
