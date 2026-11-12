@@ -20,7 +20,7 @@ Clone the ICON repository:
 
 === "Latest release at DKRZ GitLab"
     ```console
-    git clone -b release-2026.04-public --recurse-submodules https://git.gitlab.dkrz.de/icon/icon-model.git
+    git clone -b release-2026.10-public --recurse-submodules https://git.gitlab.dkrz.de/icon/icon-model.git
     ```
 
 === "icon-nwp master branch at DKRZ GitLab"
@@ -254,7 +254,7 @@ that the configure wrapper activates:
 | Säntis | `config/cscs/santis.gpu.nvhpc` | `config/cscs/spack/santis_gpu_double` |
 | Balfrin | `config/cscs/alps_mch.cpu.nvidia` | `config/cscs/spack/mch_cpu_double` |
 | Balfrin | `config/cscs/alps_mch.gpu.nvidia` | `config/cscs/spack/mch_gpu_double` |
-| Euler | - | `config/ethz/spack/${SPACK_TAG}/euler_cpu_gcc` |
+| Euler | `config/ethz/euler.cpu.gcc` | `config/ethz/spack/euler_cpu_gcc` |
 
 A spec looks like this (example for Säntis CPU):
 
