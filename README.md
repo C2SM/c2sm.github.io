@@ -67,6 +67,7 @@ All Markdown files are checked with
 [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) on every push and pull request.
 The rules are configured in `.markdownlint.yaml` and adapted to Material for MkDocs
 (4-space list indentation, admonitions, inline HTML elements, 120-character lines).
+The `SUMMARY.md` navigation files are excluded in `.markdownlint-cli2.yaml`.
 
 External links in `docs/` must carry an icon and open in a new tab. `scripts/format_external_links.py` adds both,
 and a GitHub workflow fails if a link is not formatted.

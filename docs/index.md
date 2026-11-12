@@ -1,3 +1,4 @@
+<!-- markdownlint-disable-next-line MD041 -->
 **Welcome to the C2SM User Landing Page!**
 
 Here we collect helpful information for scientists and partners about the [C2SM core team](about/index.md),

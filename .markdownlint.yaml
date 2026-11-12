@@ -16,7 +16,5 @@ MD026:
 # HTML elements used by Material for MkDocs pages
 MD033:
   allowed_elements: [b, br, button, details, div, img, p, s, small, span, sub, summary, sup, u]
-# SUMMARY.md files hold the literate-nav navigation and start with a list
-MD041: false
 # Admonitions and content tabs use indented content that looks like code blocks
 MD046: false

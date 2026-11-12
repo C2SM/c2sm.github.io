@@ -1,0 +1,3 @@
+# SUMMARY.md files hold the literate-nav navigation of MkDocs, not content pages
+ignores:
+  - "**/SUMMARY.md"
