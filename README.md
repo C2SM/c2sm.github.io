@@ -71,18 +71,42 @@ The rules are configured in `.markdownlint.yaml` and adapted to Material for MkD
 External links in `docs/` must carry an icon and open in a new tab. `scripts/format_external_links.py` adds both,
 and a GitHub workflow fails if a link is not formatted.
 
-To format links and fix most lint issues automatically before each commit, install the
-[pre-commit](https://pre-commit.com) hooks once:
+### Setup
+
+Install the [pre-commit](https://pre-commit.com) hooks once after cloning. Node.js is not required, since pre-commit
+installs it automatically on the first run:
 
 ```console
 pip install pre-commit
 pre-commit install
 ```
 
-To check and fix all files manually, run:
+From then on, every `git commit` formats external links and fixes most lint issues in the staged files. If a hook
+changes a file, the commit is aborted: review the changes, stage them with `git add`, and commit again. Errors that
+cannot be fixed automatically are listed with file, line, and rule (e.g., `docs/index.md:12 MD013/line-length`).
+
+### Checking all files
+
+To check and fix all files at once, for example after a failed CI check, run:
 
 ```console
 pre-commit run --all-files
 ```
 
-Line length (MD013) cannot be fixed automatically; wrap long prose lines by hand.
+To skip the hooks for a single commit, use `git commit --no-verify`. The CI checks still apply.
+
+### Editor integration
+
+The [markdownlint extension](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+for VS Code reads `.markdownlint.yaml` and shows errors while typing.
+
+### Common pitfalls
+
+* Line length (MD013) cannot be fixed automatically; wrap long prose lines by hand. Lines in code blocks and tables are
+  exempt.
+* Do not start a wrapped line with `-`, `*`, `+`, or `1.`, as it would become a new list item.
+* Indent content that belongs to a list item (paragraphs, code blocks) by 4 spaces. Otherwise, the list is split and
+  its numbering restarts.
+* Use headings instead of bold text on a line of its own (MD036).
+* To disable a rule for a single line, add `<!-- markdownlint-disable-next-line MD013 -->` above it. Use this
+  sparingly.
