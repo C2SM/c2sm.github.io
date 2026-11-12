@@ -6,9 +6,10 @@ categories:
   - Climate Model & Data
 ---
 
-#  Climate Model and Climate Data Workshop
+# Climate Model and Climate Data Workshop
 
-We are pleased to announce our first Climate model and climate data workshop, which will take place on **Wednesday December 6th from 9:30 am to 3:00 pm** at Eawag in Dübendorf.
+We are pleased to announce our first Climate model and climate data workshop, which will take place on **Wednesday
+December 6th from 9:30 am to 3:00 pm** at Eawag in Dübendorf.
 
 <!-- more -->
 

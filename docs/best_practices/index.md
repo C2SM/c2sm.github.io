@@ -1,12 +1,17 @@
 # Best Practices
 
-Here, you'll find valuable resources for improving your [coding](coding/index.md) and [data handling](data_handling/index.md) skills. For those new to coding, we emphasize the importance of using version control with Git and implementing automatic testing to ensure high-quality, reliable software. We offer courses and materials on Git, along with examples of various types of tests to help you maintain robust code.
+Here, you'll find valuable resources for improving your [coding](coding/index.md) and
+[data handling](data_handling/index.md) skills. For those new to coding, we emphasize the importance of using version
+control with Git and implementing automatic testing to ensure high-quality, reliable software. We offer courses and
+materials on Git, along with examples of various types of tests to help you maintain robust code.
 
-Additionally, our data handling section provides guidelines for effective data management, including links to ETH resources, data repositories, and licensing advice to help you manage and share your research data responsibly and efficiently.
+Additionally, our data handling section provides guidelines for effective data management, including links to ETH
+resources, data repositories, and licensing advice to help you manage and share your research data responsibly and
+efficiently.
 
 <div class="grid cards" markdown>
 
--   :material-code-tags:{ .lg .middle } **Coding**
+- :material-code-tags:{ .lg .middle } **Coding**
 
     ---
 
@@ -14,7 +19,7 @@ Additionally, our data handling section provides guidelines for effective data m
 
     [:octicons-arrow-right-24: Coding](coding/index.md)
 
--   :material-database-cog-outline:{ .lg .middle } **Data Handling**
+- :material-database-cog-outline:{ .lg .middle } **Data Handling**
 
     ---
 
@@ -22,7 +27,7 @@ Additionally, our data handling section provides guidelines for effective data m
 
     [:octicons-arrow-right-24: Data Handling](data_handling/index.md)
 
--   :material-robot-outline:{ .lg .middle } **GitHub Copilot**
+- :material-robot-outline:{ .lg .middle } **GitHub Copilot**
 
     ---
 

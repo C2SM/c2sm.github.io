@@ -1,6 +1,6 @@
 # ICON-CLM Workflow for EURO-CORDEX 12 km Domain
 
-!!! warning 
+!!! warning
 
     Information provided here is outdated since Santis, uenvs and SPICE have received updates.
 
@@ -15,7 +15,8 @@ tailored for ICON-CLM simulations.
     [official docs :material-open-in-new:](https://hereon-coast.atlassian.net/wiki/spaces/SPICE/pages/983065){:target="_blank"}.
 
 !!! note
-    It is assumed that the [uenvs](../../hpc/cscs/index.md#user-environments) for ICON and pre-/postprocessing are in place. For that, the following has 
+    It is assumed that the [uenvs](../../hpc/cscs/index.md#user-environments) for ICON and pre-/postprocessing are in
+    place. For that, the following has
     to be executed once:
 
     ```bash
@@ -69,12 +70,12 @@ Alps is officially supported in SPICE >=v2.3 and can be configured in the follow
 
 The standard SPICE configuration needs ERAInterim or ERA5 data and initial
 and boundary conditions.
-This is originally provided on Levante@DKRZ. For Alps, the data is also 
+This is originally provided on Levante@DKRZ. For Alps, the data is also
 synced to this destination:
 
 ```shell
 /capstor/store/cscs/c2sm/c2sme/reanalyses_dkrz
-``` 
+```
 
 For reference, check the information about
 [ERA5 :material-open-in-new:](https://c2sm.github.io/datasets/obs_reanalysis_data/#era5-for-icon-clm){:target="_blank"}
@@ -122,14 +123,14 @@ Now, switch to another terminal to build ICON using the corresponding uenv:
     ./test/cscs-alps/scripts/build-icon.sh gpu icon-model
     ```
 
-Afterwards, go back to your original terminal containing the 
+Afterwards, go back to your original terminal containing the
 `netcdf-tools/2024:v1` uenv.
 
 ### Install Python virtual environment
 
 Some scripts in SPICE use Python. For that, some dependencies have to be installed.
 
-**Step 1: Download and Install Miniforge**
+#### Step 1: Download and Install Miniforge
 
 ```bash
 wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh
@@ -137,32 +138,34 @@ bash Miniforge3-Linux-aarch64.sh
 source ~/miniforge3/bin/activate
 ```
 
-**Step 2: Create a conda virtual environment**
+#### Step 2: Create a conda virtual environment
 
 ```bash
 conda create --prefix ${SPICE_DIR}/venv python=3.12 -y
 conda activate ${SPICE_DIR}/venv 
 ```
 
-**Step 3: Install packages**
+#### Step 3: Install packages
 
 ```bash
 conda install pip -y
 pip install -r requirements.txt
 ```
 
-**Step 4: Verify installation**
+#### Step 4: Verify installation
 
 ```bash
 ${SPICE_DIR}/venv/bin/python -c 'import xarray; import pandas; import numpy; import scipy; import h5netcdf; import matplotlib; import cftime; import netCDF4; print("All modules imported successfully!")'
 ```
+
 Now your Python environment for SPICE is ready to go! 🚀
 
-### Use Experiment Template from C2SM's EURO-CORDEX Run 
+### Use Experiment Template from C2SM's EURO-CORDEX Run
 
-The official ICON-CLM setups are part of the [spice-setups :material-open-in-new:](https://github.com/C2SM/spice-setups){:target="_blank"} repository.
-Please follow the instructions in the [README :material-open-in-new:](https://github.com/C2SM/spice-setups/blob/main/README.md){:target="_blank"} file.
-
+The official ICON-CLM setups are part of the
+[spice-setups :material-open-in-new:](https://github.com/C2SM/spice-setups){:target="_blank"} repository.
+Please follow the instructions in the
+[README :material-open-in-new:](https://github.com/C2SM/spice-setups/blob/main/README.md){:target="_blank"} file.
 
 ### Run the case
 
@@ -174,15 +177,13 @@ Navigate into your experiment folder and start the simulation chain with
 
 #### `chain_status.log`
 
-The file `chain_status.log` can be inspected at any time and shows the current 
+The file `chain_status.log` can be inspected at any time and shows the current
 state of the SPICE chain. It contains information about started and finished
 jobs.
-
 
 #### Log files
 
 Job log files are located at `${SPICE_DIR}/experiments/work/${EXP}/joblogs`.
-
 
 #### Output
 
@@ -193,6 +194,4 @@ Job output files are located at `${SPICE_DIR}/experiments/work/${EXP}/joboutputs
 1. Inspect `chain_status.log` to see which job failed.
 2. Fix the cause of the problem (e.g., increase walltime for corresponding job in `job_settings`).
 3. Check if `date.log` corresponds to the current chunk.
-3. Restart the chain by typing `./subchain <jobname>`. If the ICON job failed, use `./subchain icon noprep`.
-
-
+4. Restart the chain by typing `./subchain <jobname>`. If the ICON job failed, use `./subchain icon noprep`.

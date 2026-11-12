@@ -3,11 +3,13 @@
 ## Access
 
 Since 2024, ICON is open-source and comes with semi-annual, public releases, which
-can be accessed via the public [icon-model :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-model){:target="_blank"} repository.
+can be accessed via the public
+[icon-model :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-model){:target="_blank"} repository.
 
-If you are an ICON developer, you should have access to the DKRZ GitLab, where the original ICON repository is hosted. All developments related to GPU porting and NWP settings go
+If you are an ICON developer, you should have access to the DKRZ GitLab, where the original ICON repository is hosted.
+All developments related to GPU porting and NWP settings go
 into the [icon-nwp :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"} repository.
-    
+
 ## Configure and Compile
 
 ### Cloning ICON Repository
@@ -59,7 +61,7 @@ Run the following after navigating into the ICON root folder:
 ##### Building out-of-source
 
 Out-of-source builds are useful if you want to have two or more compiled versions of ICON in the same repository.
-To achieve that, you simply need to create separate folders in the ICON root folder 
+To achieve that, you simply need to create separate folders in the ICON root folder
 and run the configure wrapper from there.
 
 For example, if you want to compile ICON both for `cpu` and `gpu`, create those directories:
@@ -99,7 +101,6 @@ Run the following after navigating into the ICON root folder:
     ```
 
 You can run the above scripts out-of-source also.
-
 
 #### Eiger
 
@@ -208,7 +209,6 @@ spack install
 ```
 
 `concretize` resolves dependencies, and `install` builds the packages.
-
 
 #### Euler
 
