@@ -107,10 +107,6 @@
     ```console
     /net/atmos/data/cmip7-ng
     ```
-=== "Euler"
-    ```console
-    /nfs/atmos/c2sm/cmip7-ng
-    ```
 
 - Size:
 - Number of files:
@@ -120,7 +116,7 @@
 - Resolution: native and 1° x 1°
 - Coverage: global
 A documentation about cmip7-ng ist still work in progress, the data may not be final and is updated continuously at the moment (Q4 2026).
-Basic checks are performed in alignment with cmip6-ng (see below), data is concatenated per scenario (but historical and scenario runs are not concatenated together), a regridding to a common 1-1 degree grid is performed.
+Basic checks are performed in alignment with cmip6-ng (see below), data is concatenated per scenario (but historical and scenario runs are not concatenated together), a regridding to a common 1x1 degree grid is performed.
 
 ### CMIP6-ng
 
@@ -257,6 +253,7 @@ Basic checks are performed in alignment with cmip6-ng (see below), data is conca
 - Status: updated
 - Resolution: 0.11°
 - Coverage: Europe
+- [Important information for interpreting differences between ICON-CLM-202407-1-1 and ICON-CLM-202407-1-2 runs :material-open-in-new:](https://doi.org/10.5281/zenodo.19812905) {:target="_blank"}
 
 
 ### CORDEX (CMIP5)
