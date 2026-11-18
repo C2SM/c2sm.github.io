@@ -32,10 +32,12 @@ To run the created runscript, navigate to the *run* subdirectory and submit the 
         Since Euler's Slurm does not support PMIx, which OpenMPI 5 requires, `srun` starts each MPI task
         as a separate single-task run (the log shows `ICON run on 1 mpi processes`), and the run aborts.
         As a workaround, replace `srun` with the `mpirun` of the Spack environment before submitting.
-        Run the following from the ICON root folder (for an out-of-source build, use e.g. `cd gcc_cpu/run`):
+        Run the following from the folder where you called `make_runscripts`, i.e., the ICON root folder or,
+        for an out-of-source build, the build folder (e.g., `gcc_cpu`):
 
         ```shell
-        MPIRUN=$(realpath config/ethz/spack/euler_cpu_gcc/.spack-env/view/bin/mpirun)
+        ICON_DIR=$(pwd)  # out-of-source build: ICON_DIR=$(realpath ..)
+        MPIRUN=$(realpath ${ICON_DIR}/config/ethz/spack/euler_cpu_gcc/.spack-env/view/bin/mpirun)
         cd run && sed -i "s|START=\"srun -n|START=\"${MPIRUN} -n|" exp.${EXP}.run
         sbatch ./exp.${EXP}.run
         ```
