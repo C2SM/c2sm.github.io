@@ -50,7 +50,7 @@ enough for CI.
 
 #### Compile Out-of-Source
 
-Follow the instructions in [Configure](compile.md) to compile ICON out-of-source for CPU and GPU.
+Follow the instructions in [Compile](compile.md) to compile ICON out-of-source for CPU and GPU.
 
 #### Create Test Case and Add It to the Checksuite
 
@@ -59,8 +59,8 @@ Set up an ICON test case with a low number of grid points and a few time steps (
 one can serve as a template.
 
 Then follow the step-by-step guide
-[Add System Tests to CI :material-open-in-new:](https://docs.icon-model.org/latest/documentation/infrastructure/testing/system_tests.html#ref-infrastructure-system-tests-add-tests){:target="_blank"}
-in the ICON documentation to add the experiment, check script and YAML entries. Start with the `checksuite_modes` for
+[Add System Tests to CI :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/infrastructure/testing/system_tests.html#ref-infrastructure-system-tests-add-tests){:target="_blank"}
+in the ICON-NWP documentation to add the experiment, check script and YAML entries. Start with the `checksuite_modes` for
 the base test (`'b'`) on the machine you are testing on.
 
 !!! note "Add test cases to out-of-source build"
@@ -71,13 +71,13 @@ the base test (`'b'`) on the machine you are testing on.
 
 Before adding anything to the official ICON, we recommend you to run all tests locally starting with CPU. The general
 procedure is described in
-[Run ICON Test Cases :material-open-in-new:](https://docs.icon-model.org/latest/documentation/buildrun/buildrun_running.html#ref-buildrun-run-test){:target="_blank"}.
+[Run ICON Test Cases :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/buildrun/buildrun_running.html#ref-buildrun-run-test){:target="_blank"}.
 The machine-specific steps for CSCS are given below. First, set up or activate the Python environment:
 
 === "Santis"
 
     Follow the
-    [Set Up the Probtest Container and Environment on Säntis](probtest.md#2-set-up-the-probtest-container-and-environment-on-säntis)
+    [Set Up the Probtest Container and Environment on Säntis](probtest.md#2-set-up-the-probtest-container-and-environment-on-santis)
     instructions.
 
 === "Balfrin"
@@ -108,7 +108,7 @@ Then, create the check run scripts:
 
 !!! warning "Compute account"
     Ensure that your default account at CSCS has computing resources. If this is not the case, you need to open a ticket
-    at the [CSCS Service Desk :material-open-in-new:](https://jira.cscs.ch/plugins/servlet/desk/site/global){:target="_blank"}.
+    at the [CSCS Service Desk :material-open-in-new:](https://support.cscs.ch){:target="_blank"}.
 
 Now run the check run scripts:
 
@@ -156,11 +156,11 @@ for the CPU reference. Note that you have to set `pinit_seed = 0` and `pinit_amp
     python externals/probtest/probtest.py init --codebase-install $PWD --experiment-name ${EXP} --reference $PWD $file_id --member-ids $(seq -s, 1 10)
     ```
 
-    Then follow the Probtest instructions [Example: Check the output of an ICON experiment with an test build compared to a reference build :material-open-in-new:](https://github.com/MeteoSwiss/probtest?tab=readme-ov-file#example-check-the-output-of-an-icon-experiment-with-an-test-build-compared-to-a-reference-build){:target="_blank"} skipping the *Initialize probtest* step.
+    Then follow the Probtest instructions [Example: Check the output of an ICON experiment with a test build compared to a reference build :material-open-in-new:](https://github.com/MeteoSwiss/probtest?tab=readme-ov-file#example-check-the-output-of-an-icon-experiment-with-a-test-build-compared-to-a-reference-build){:target="_blank"} skipping the *Initialize probtest* step.
 
 If probtest validates, change the `checksuite_modes` to `'t'`, add the tag `probtest` and add the CPU builder to
 `refgen` in `scripts/experiments/<institution>/*_tests.yml`. All available settings are described in
-[Experiment and Test Settings :material-open-in-new:](https://docs.icon-model.org/latest/documentation/infrastructure/testing/system_tests.html#experiment-and-test-settings){:target="_blank"}.
+[Experiment and Test Settings :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/infrastructure/testing/system_tests.html#experiment-and-test-settings){:target="_blank"}.
 Now everything is set for activating the test in a CI pipeline.
 
 ### 1.3 Activate Test in a CI Pipeline
