@@ -26,6 +26,21 @@ To run the created runscript, navigate to the *run* subdirectory and submit the 
     ```shell
     cd run && sbatch ./exp.${EXP}.run
     ```
+
+    !!! warning "Run scripts fail with `MPI_ERR_COMM: invalid communicator`"
+        In ICON `release-2026.10-public`, the run scripts for Euler start ICON with `srun`.
+        Since Euler's Slurm does not support PMIx, which OpenMPI 5 requires, `srun` starts each MPI task
+        as a separate single-task run (the log shows `ICON run on 1 mpi processes`), and the run aborts.
+        As a workaround, replace `srun` with the `mpirun` of the Spack environment before submitting.
+        Run the following from the folder where you called `make_runscripts`, i.e., the ICON root folder or,
+        for an out-of-source build, the build folder (e.g., `gcc_cpu`):
+
+        ```shell
+        ICON_DIR=$(pwd)  # out-of-source build: ICON_DIR=$(realpath ..)
+        MPIRUN=$(realpath ${ICON_DIR}/config/ethz/spack/euler_cpu_gcc/.spack-env/view/bin/mpirun)
+        cd run && sed -i "s|START=\"srun -n|START=\"${MPIRUN} -n|" exp.${EXP}.run
+        sbatch ./exp.${EXP}.run
+        ```
 === "Balfrin"
     ```shell
     cd run && sbatch ./exp.${EXP}.run
