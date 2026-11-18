@@ -19,7 +19,7 @@ runs first in upstream ICON (e.g.,
 [ICON-NWP :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"}). This helps you identify
 whether an issue comes from the upstream version or from your downstream modifications.
 
-!!! info "Accesss upstream ICON"
+!!! info "Access upstream ICON"
 
     If you don't have access to upstream ICON, you need to request it by DKRZ.
 
@@ -53,20 +53,16 @@ enough for CI.
 
 Follow the instructions in [Configure](compile.md) to compile ICON out-of-source for CPU and GPU.
 
-#### Create Test Case
+#### Create Test Case and Add It to the Checksuite
 
-Set up an ICON test case with a low number of grid points and a few time steps (about 6) and save it under
-`run/exp.<my_exp>`. Existing use cases like the
+Set up an ICON test case with a low number of grid points and a few time steps (about 6). Existing use cases like the
 [Aquaplanet :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/run/exp.exclaim_ape_R02B04){:target="_blank"}
 one can serve as a template.
 
-#### Add Test Case to Checksuite
-
-Follow the step-by-step guide in
-[How to add experiments to a CI
-list :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/How-to-set-up-new-test-experiments-for-CI#how-to-add-experiments-to-a-ci-list){:target="_blank"}
-to add your test case to the checksuite. Start with the `checksuite_modes` for the base tests (`'b'`) for the machine
-you are testing on.
+Then follow the step-by-step guide
+[Add System Tests to CI :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/infrastructure/testing/system_tests.html#ref-infrastructure-system-tests-add-tests){:target="_blank"}
+in the ICON documentation to add the experiment, check script and YAML entries. Start with the `checksuite_modes` for
+the base test (`'b'`) on the machine you are testing on.
 
 !!! note "Add test cases to out-of-source build"
 
@@ -74,8 +70,10 @@ you are testing on.
 
 ### 1.2 Local Testing
 
-Before adding anything to the official ICON, we recommend you to run all tests locally starting with CPU. Therefore a
-Python environment has to be setup or activated:
+Before adding anything to the official ICON, we recommend you to run all tests locally starting with CPU. The general
+procedure is described in
+[Run ICON Test Cases :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/buildrun/buildrun_running.html#ref-buildrun-run-test){:target="_blank"}.
+The machine-specific steps for CSCS are given below. First, set up or activate the Python environment:
 
 === "Santis"
 
@@ -134,7 +132,10 @@ Check in the LOG file if all tests passed.
 #### Test on GPU
 
 If all tests are validating on CPU, the next step is to test on GPU. Follow the same steps as for CPU and run the
-*nproma* and *mpi* test. Again, check in the LOG file to see if all tests passed before proceeding to the next step.
+*nproma* and *mpi* tests (see
+[ICON Development Checksuite :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/infrastructure/testing/system_tests.html#icon-development-checksuite){:target="_blank"}
+for a description of all test modes).
+Again, check in the LOG file to see if all tests passed before proceeding to the next step.
 
 ##### Run Probtest
 
@@ -158,9 +159,10 @@ for the CPU reference. Note that you have to set `pinit_seed = 0` and `pinit_amp
 
     Then follow the Probtest instructions [Example: Check the output of an ICON experiment with an test build compared to a reference build :material-open-in-new:](https://github.com/MeteoSwiss/probtest?tab=readme-ov-file#example-check-the-output-of-an-icon-experiment-with-an-test-build-compared-to-a-reference-build){:target="_blank"} skipping the *Initialize probtest* step.
 
- If probtest validates, you can change the `checksuite_modes` to `'t'`, add the tag `probtest` and the CPU builder to
- `refgen` in the `scripts/experiments/<institution>/*_tests.yml`. Now everything is set for activating the test in a CI
- pipeline.
+If probtest validates, change the `checksuite_modes` to `'t'`, add the tag `probtest` and add the CPU builder to
+`refgen` in `scripts/experiments/<institution>/*_tests.yml`. All available settings are described in
+[Experiment and Test Settings :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/infrastructure/testing/system_tests.html#experiment-and-test-settings){:target="_blank"}.
+Now everything is set for activating the test in a CI pipeline.
 
 ### 1.3 Activate Test in a CI Pipeline
 
