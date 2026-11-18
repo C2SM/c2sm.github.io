@@ -5,10 +5,9 @@ troubleshooting large configurations can be difficult. To avoid problems, we rec
 configuration with a small test case. Add this test case to the ICON CI to ensure it stays compatible with future
 developments.
 
-You can find a list of available tests in the ICON documentation under System Tests (for
-[ICON :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon/documentation/infrastructure/testing/system_tests.html#ref-infrastructure-system-tests){:target="_blank"}
-and
-[ICON-NWP :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/infrastructure/testing/system_tests.html#ref-infrastructure-system-tests){:target="_blank"})
+You can find a list of available tests in the ICON documentation under
+[System
+Tests :material-open-in-new:](https://docs.icon-model.org/latest/documentation/infrastructure/testing/system_tests.html#ref-infrastructure-system-tests){:target="_blank"}
 within `CI System Tests on External Machines by Builder`.
 
 After the initial test case, we suggest building up step by step: from a small ICON test case to increasingly complex
@@ -60,7 +59,7 @@ Set up an ICON test case with a low number of grid points and a few time steps (
 one can serve as a template.
 
 Then follow the step-by-step guide
-[Add System Tests to CI :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/infrastructure/testing/system_tests.html#ref-infrastructure-system-tests-add-tests){:target="_blank"}
+[Add System Tests to CI :material-open-in-new:](https://docs.icon-model.org/latest/documentation/infrastructure/testing/system_tests.html#ref-infrastructure-system-tests-add-tests){:target="_blank"}
 in the ICON documentation to add the experiment, check script and YAML entries. Start with the `checksuite_modes` for
 the base test (`'b'`) on the machine you are testing on.
 
@@ -72,7 +71,7 @@ the base test (`'b'`) on the machine you are testing on.
 
 Before adding anything to the official ICON, we recommend you to run all tests locally starting with CPU. The general
 procedure is described in
-[Run ICON Test Cases :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/buildrun/buildrun_running.html#ref-buildrun-run-test){:target="_blank"}.
+[Run ICON Test Cases :material-open-in-new:](https://docs.icon-model.org/latest/documentation/buildrun/buildrun_running.html#ref-buildrun-run-test){:target="_blank"}.
 The machine-specific steps for CSCS are given below. First, set up or activate the Python environment:
 
 === "Santis"
@@ -133,7 +132,7 @@ Check in the LOG file if all tests passed.
 
 If all tests are validating on CPU, the next step is to test on GPU. Follow the same steps as for CPU and run the
 *nproma* and *mpi* tests (see
-[ICON Development Checksuite :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/infrastructure/testing/system_tests.html#icon-development-checksuite){:target="_blank"}
+[ICON Development Checksuite :material-open-in-new:](https://docs.icon-model.org/latest/documentation/infrastructure/testing/system_tests.html#icon-development-checksuite){:target="_blank"}
 for a description of all test modes).
 Again, check in the LOG file to see if all tests passed before proceeding to the next step.
 
@@ -161,7 +160,7 @@ for the CPU reference. Note that you have to set `pinit_seed = 0` and `pinit_amp
 
 If probtest validates, change the `checksuite_modes` to `'t'`, add the tag `probtest` and add the CPU builder to
 `refgen` in `scripts/experiments/<institution>/*_tests.yml`. All available settings are described in
-[Experiment and Test Settings :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/infrastructure/testing/system_tests.html#experiment-and-test-settings){:target="_blank"}.
+[Experiment and Test Settings :material-open-in-new:](https://docs.icon-model.org/latest/documentation/infrastructure/testing/system_tests.html#experiment-and-test-settings){:target="_blank"}.
 Now everything is set for activating the test in a CI pipeline.
 
 ### 1.3 Activate Test in a CI Pipeline
