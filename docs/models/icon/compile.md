@@ -224,7 +224,7 @@ module load eth_proxy
 Then run the following after navigating into the ICON root folder:
 
 ```console
-srun --ntasks=1 --cpus-per-task=12 --mem-per-cpu=2G --time=02:00:00 ./config/ethz/euler.cpu.gcc
+srun --ntasks=1 --cpus-per-task=12 --mem-per-cpu=2G --time=00:30:00 ./config/ethz/euler.cpu.gcc
 ```
 
 The wrapper sets up Spack in the folder `spack-c2sm` of the ICON root folder and builds ICON with 12 threads.
@@ -233,7 +233,7 @@ You can run it out-of-source as well, e.g.:
 ```bash
 mkdir gcc_cpu
 cd gcc_cpu
-srun --ntasks=1 --cpus-per-task=12 --mem-per-cpu=2G --time=02:00:00 ./../config/ethz/euler.cpu.gcc
+srun --ntasks=1 --cpus-per-task=12 --mem-per-cpu=2G --time=00:30:00 ./../config/ethz/euler.cpu.gcc
 ```
 
 ## Compile Options
