@@ -5,17 +5,17 @@ troubleshooting large configurations can be difficult. To avoid problems, we rec
 configuration with a small test case. Add this test case to the ICON CI to ensure it stays compatible with future
 developments.
 
-You can find a list of available tests in the ICON documentation for the latest ICON-NWP version under
-[System
-Tests :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/infrastructure/testing/system_tests.html#ref-infrastructure-system-tests){:target="_blank"}
+You can find a list of available tests in the ICON documentation under System Tests (for
+[ICON :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon/documentation/infrastructure/testing/system_tests.html#ref-infrastructure-system-tests){:target="_blank"}
+and
+[ICON-NWP :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/infrastructure/testing/system_tests.html#ref-infrastructure-system-tests){:target="_blank"})
 within `CI System Tests on External Machines by Builder`.
 
 After the initial test case, we suggest building up step by step: from a small ICON test case to increasingly complex
 setups, and finally to your full production configuration.
 
-If you are working with a downstream version of ICON (e.g.,
-[ICON-EXCLAIM :material-open-in-new:](https://github.com/C2SM/icon-exclaim){:target="_blank"}), make sure everything
-runs first in upstream ICON (e.g.,
+If you are working with a downstream version of ICON, make sure everything runs first in upstream ICON
+([ICON :material-open-in-new:](https://gitlab.dkrz.de/icon/icon){:target="_blank"} or
 [ICON-NWP :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"}). This helps you identify
 whether an issue comes from the upstream version or from your downstream modifications.
 
@@ -56,7 +56,7 @@ Follow the instructions in [Configure](compile.md) to compile ICON out-of-source
 #### Create Test Case and Add It to the Checksuite
 
 Set up an ICON test case with a low number of grid points and a few time steps (about 6). Existing use cases like the
-[Aquaplanet :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp/-/blob/master/run/exp.exclaim_ape_R02B04){:target="_blank"}
+[Aquaplanet :material-open-in-new:](https://gitlab.dkrz.de/icon/icon/-/blob/main/run/exp.exclaim_ape_R02B04){:target="_blank"}
 one can serve as a template.
 
 Then follow the step-by-step guide
