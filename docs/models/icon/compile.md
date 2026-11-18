@@ -221,6 +221,15 @@ e.g., GitHub or GitLab:
 module load eth_proxy
 ```
 
+!!! warning "Reuse OpenMPI from the Euler software stack"
+    In ICON `release-2026.10-public`, the Spack environment does not pin the OpenMPI variants.
+    Spack then builds OpenMPI, HDF5 and netCDF-C from source instead of reusing them from the Euler software stack,
+    and the resulting OpenMPI lacks Slurm support. To avoid this, run the following in the ICON root folder before compiling:
+
+    ```console
+    sed -i "s/require: \[openmpi@5.0.8\]/require: ['openmpi@5.0.8 schedulers=slurm fabrics=ucx +romio']/" config/ethz/spack/euler_cpu_gcc/spack.yaml
+    ```
+
 Then run the following after navigating into the ICON root folder:
 
 ```console
