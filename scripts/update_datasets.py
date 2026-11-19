@@ -24,184 +24,66 @@ def write_markdown(file_path, content):
     with open(file_path, 'a') as file:
         file.write(content)
 
-def generate_markdown_default(json_data, dataset, entry):
-    """
-    Generates markdown content for climate datasets.
+def walk(node, depth, path=()):
+    """Yields every (path, node) pair of the file tree at the given depth."""
+    if len(path) == depth:
+        yield path, node
+    elif isinstance(node, dict):
+        for key, child in node.items():
+            if key != 'date_range':
+                yield from walk(child, depth, path + (key,))
 
-    This function iterates over variables in the provided JSON data, processing each
-    to generate a markdown string that lists variables and their details for a given dataset.
+def generate_variables(json_data):
+    """
+    Generates the markdown variable list of a dataset from its file tree.
+
+    The tree levels are identified by the 'labels' of the file index. Archives organized
+    by scenario list the scenarios and temporal resolutions of each variable; all other
+    archives list the temporal resolutions and grids, including the date range if available.
 
     Parameters:
-    - json_data (dict): The JSON data containing variables and their resolutions.
-    - dataset (str): The name of the dataset being processed.
+    - json_data (dict): The file index containing 'labels' and the file tree 'data'.
 
     Returns:
-    - str: A markdown-formatted string listing variables and their details.
+    - str: A markdown-formatted list of variables with their details as tooltips.
     """
-    if entry == ENTRY_VARIABLES:
-        markdown_content = f"{entry}\n"
-    else: 
-        markdown_content = f"{entry} "
-    
-    if entry == ENTRY_VARIABLES:
-        first_iteration = True
-        for variable, resolutions in json_data['data'].items():
-            if dataset == 'cmip6-ng':
-                # Logic for CMIP6-ng datasets
-                markdown_content += generate_variable_info_cmip6ng(variable, resolutions, first_iteration)
-            else:
-                # Original logic for datasets with an additional scenario level
-                markdown_content += generate_variable_info_default(variable, resolutions, first_iteration)
-            first_iteration = False
-    elif entry == ENTRY_SIZE:
-        markdown_content += json_data['total_size'] 
-        markdown_content += f" :material-information-outline:{{ title=\"last updated: {json_data['last_updated']}\" }}"
-    elif entry == ENTRY_NUMBER:
-        markdown_content += "{:,}".format(json_data['file_count'])
-        markdown_content += f" :material-information-outline:{{ title=\"last updated: {json_data['last_updated']}\" }}"
-    else: 
-        raise ValueError(f"Invalid entry type: {entry}")
-
-    return markdown_content
-
-def generate_markdown_cordex(json_data, entry):
-    """
-    Generates markdown content for CORDEX(-ReKLiEs) datasets.
-
-    This function compiles details about variables across scenarios and temporal resolutions
-    from the provided JSON data. It then processes this information to generate a markdown
-    string that lists variables, scenarios, and their temporal resolutions.
-
-    Parameters:
-    - json_data (dict): The JSON data containing scenarios, temporal resolutions, and variables.
-
-    Returns:
-    - str: A markdown-formatted string listing variables along with their scenarios and temporal resolutions.
-    """
-    if entry == ENTRY_VARIABLES:
-        markdown_content = f"{entry}\n"
-        variable_details = {}
-        for scenario, temporal_resolutions in json_data['data'].items():
-            for temporal_resolution, variables in temporal_resolutions.items():
-                for variable, details in variables.items():
-                    if variable not in variable_details:
-                        variable_details[variable] = {}
-                    if scenario not in variable_details[variable]:
-                        variable_details[variable][scenario] = set()
-                    # Add resolution to the set of resolutions for this scenario
-                    variable_details[variable][scenario].add(temporal_resolution)
-        
-        first_iteration = True
-        for variable, scenarios_resolutions in variable_details.items():
-            markdown_content += generate_variable_info_cordex(variable, scenarios_resolutions, first_iteration)
-            first_iteration = False
-    elif entry == ENTRY_SIZE: 
-        markdown_content = f"{entry} "
-        markdown_content += json_data['total_size']
-        markdown_content += f" :material-information-outline:{{ title=\"last updated: {json_data['last_updated']}\" }}"
-    elif entry == ENTRY_NUMBER:
-        markdown_content = f"{entry} "
-        markdown_content += "{:,}".format(json_data['file_count'])
-        markdown_content += f" :material-information-outline:{{ title=\"last updated: {json_data['last_updated']}\" }}"
-    else: 
-        raise ValueError(f"Invalid entry type: {entry}")
-
-    return markdown_content
-    
-def generate_variable_info_cordex(variable, scenarios_resolutions, first_iteration):
-    """
-    Processes CORDEX data to generate markdown information for a single variable.
-
-    This function creates a markdown string for a given variable, detailing the scenarios
-    and temporal resolutions available for that variable.
-
-    Parameters:
-    - variable (str): The variable being processed.
-    - scenarios_resolutions (dict): A dictionary mapping scenarios to sets of temporal resolutions.
-    - first_iteration (bool): Indicates if this is the first variable being processed (affects formatting).
-
-    Returns:
-    - str: A markdown-formatted string for the variable, including scenario and resolution details.
-    """
-    variable_info = ""
-    tooltip_content = " — ".join(
-        f"{scenario}: {', '.join(sorted(resolutions))}" 
-        for scenario, resolutions in scenarios_resolutions.items()
-    )
-    if first_iteration:
-        variable_info += f"  `{variable}`{{ title=\"{tooltip_content}\" }}"
-        first_iteration = False
+    labels = [label.replace(' ', '_') for label in json_data['labels']]
+    var, res = labels.index('variable'), labels.index('temporal_resolution')
+    details = {}
+    if 'scenario' in labels[:var]:
+        scen = labels.index('scenario')
+        for path, _ in walk(json_data['data'], max(var, res, scen) + 1):
+            details.setdefault(path[var], {}).setdefault(path[scen], set()).add(path[res])
+        tooltips = {v: '; '.join(f"{s}: {', '.join(sorted(r))}" for s, r in sorted(d.items())) for v, d in details.items()}
     else:
-        variable_info += f",\n  `{variable}`{{ title=\"{tooltip_content}\" }}"
+        grid = labels.index('grid')
+        for path, node in walk(json_data['data'], max(var, res, grid) + 1):
+            date_range = f": {node['date_range']}" if 'date_range' in node else ''
+            details.setdefault(path[var], {})[f"{path[res]} ({path[grid]}){date_range}"] = None
+        tooltips = {v: ', '.join(d) for v, d in details.items()}
+    entries = {v: f"`{v}`{{ title=\"{t}\" }}" for v, t in tooltips.items()}
+    if labels[0] != 'institution':
+        return f"{ENTRY_VARIABLES}\n" + ",\n".join(f"  {e}" for e in entries.values())
+    # Archives organized by institution group the variables by the institutions providing them
+    providers = {}
+    for path, _ in walk(json_data['data'], var + 1):
+        providers.setdefault(path[var], set()).add(path[0])
+    institutions = set().union(*providers.values())
+    groups = {}
+    for v, e in entries.items():
+        groups.setdefault(frozenset(providers[v]), []).append(e)
+    lines = [ENTRY_VARIABLES]
+    for insts, group in sorted(groups.items(), key=lambda g: -len(g[0])):
+        label = 'All institutions' if insts == institutions else f"Only {', '.join(sorted(insts))}"
+        lines.append(f"    - {label}:\n" + ",\n".join(f"      {e}" for e in group))
+    return '\n'.join(lines)
 
-    return variable_info
+def generate_summary(json_data, entry):
+    """Generates the markdown size or number of files entry of a dataset."""
+    value = json_data['total_size'] if entry == ENTRY_SIZE else f"{json_data['file_count']:,}"
+    return f"{entry} {value} :material-information-outline:{{ title=\"last updated: {json_data['last_updated']}\" }}"
 
-def generate_variable_info_cmip6ng(variable, resolutions, first_iteration):
-    """
-    Processes cmip6-ng data to generate markdown information for a single variable.
 
-    This function creates a markdown string for a given variable, detailing the resolutions
-    and, depending on the dataset, additional details like grid type and date range.
-
-    Parameters:
-    - variable (str): The variable being processed.
-    - resolutions (dict): A dictionary mapping resolutions to their details.
-    - first_iteration (bool): Indicates if this is the first variable being processed (affects formatting).
-
-    Returns:
-    - str: A markdown-formatted string for the variable, including resolution and grid type.
-    """
-    variable_info = ""
-    if first_iteration:
-        variable_info += f"  `{variable}`{{ title=\""
-    else:
-        variable_info += f",\n  `{variable}`{{ title=\""
-    first_iteration_info = True
-    for resolution, grid in resolutions.items():
-        for grid_type, grid_values in grid.items():
-            if first_iteration_info:
-                variable_info += f"{resolution} ({grid_type})"
-                first_iteration_info = False
-            else:
-                variable_info += f", {resolution} ({grid_type})"
-
-    variable_info += "\" }"
-    return variable_info
-
-def generate_variable_info_default(variable, resolutions, first_iteration):
-    """
-    Processes climate data to generate markdown information for a single variable.
-
-    This function creates a markdown string for a given variable, detailing the resolutions
-    and, depending on the dataset, additional details like grid type and date range.
-
-    Parameters:
-    - variable (str): The variable being processed.
-    - resolutions (dict): A dictionary mapping resolutions to their details.
-    - first_iteration (bool): Indicates if this is the first variable being processed (affects formatting).
-    - dataset (str): The name of the dataset, which determines the detail level in the markdown.
-
-    Returns:
-    - str: A markdown-formatted string for the variable, including resolution and possibly other details.
-    """
-    variable_info = ""
-    if first_iteration:
-        variable_info += f"  `{variable}`{{ title=\""
-    else:
-        variable_info += f",\n  `{variable}`{{ title=\""
-    first_iteration_info = True
-    for resolution, grid in resolutions.items():
-        for grid_type, grid_values in grid.items():
-            date_range = grid_values.get('date_range', 'N/A')
-            if first_iteration_info:
-                variable_info += f"{resolution} ({grid_type}): {date_range}"
-                first_iteration_info = False
-            else:
-                variable_info += f", {resolution} ({grid_type}): {date_range}"
-
-    variable_info += "\" }"
-    return variable_info
-    
 def replace_entry(file_path, heading_dataset, new_variables_content, entry):
     """
     Replaces a specified list entry for a specified dataset within a markdown file.
@@ -316,14 +198,9 @@ def main():
         print(heading_dataset)
 
         # Generate the markdown content for the dataset
-        if dataset.startswith('cordex'):
-            markdown_variables = generate_markdown_cordex(dataset_json, ENTRY_VARIABLES)
-            markdown_size = generate_markdown_cordex(dataset_json, ENTRY_SIZE)
-            markdown_number = generate_markdown_cordex(dataset_json, ENTRY_NUMBER)
-        else:
-            markdown_variables = generate_markdown_default(dataset_json, dataset, ENTRY_VARIABLES)
-            markdown_size = generate_markdown_default(dataset_json, dataset, ENTRY_SIZE)
-            markdown_number = generate_markdown_default(dataset_json, dataset, ENTRY_NUMBER)
+        markdown_variables = generate_variables(dataset_json)
+        markdown_size = generate_summary(dataset_json, ENTRY_SIZE)
+        markdown_number = generate_summary(dataset_json, ENTRY_NUMBER)
 
         # Initialize flags to track if the variables, size, and number of files entries were updated
         updated_variables = False

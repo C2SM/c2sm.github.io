@@ -193,8 +193,8 @@
     /net/atmos/data/cerra/processed/v1/
     ```
 
-- Size: 8.56 TB :material-information-outline:{ title="last updated: 2026-11-14 04:05:48" }
-- Number of files: 4,014 :material-information-outline:{ title="last updated: 2026-11-14 04:05:48" }
+- Size: 8.56 TB :material-information-outline:{ title="last updated: 2026-11-18 04:06:29" }
+- Number of files: 4,014 :material-information-outline:{ title="last updated: 2026-11-18 04:06:29" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -242,8 +242,8 @@
     /net/atmos/data/cerra-land/processed/v1/
     ```
 
-- Size: 1.78 TB :material-information-outline:{ title="last updated: 2026-11-14 04:05:48" }
-- Number of files: 1,220 :material-information-outline:{ title="last updated: 2026-11-14 04:05:48" }
+- Size: 1.78 TB :material-information-outline:{ title="last updated: 2026-11-18 04:06:30" }
+- Number of files: 1,220 :material-information-outline:{ title="last updated: 2026-11-18 04:06:30" }
 - Access: direct
 - Status: updated
 - Time period: 1985-2020
@@ -301,40 +301,40 @@
     /nfs/atmos/c2sm/era5/processed/
     ```
 
-- Size: 46.73 TB :material-information-outline:{ title="last updated: 2026-11-13 08:38:31" }
-- Number of files: 141,084 :material-information-outline:{ title="last updated: 2026-11-13 08:38:31" }
+- Size: 46.73 TB :material-information-outline:{ title="last updated: 2026-11-17 06:50:43" }
+- Number of files: 141,084 :material-information-outline:{ title="last updated: 2026-11-17 06:50:43" }
 - Access: direct
 - Status: updated
 - Time period: v1: 1940-2022, v2: 1980-2023, v3: 1940-present
 - Variables:
-  `cbh`{ title="day (native): 194001-202606, mon (native): 194001-202606" },
+  `cbh`{ title="day (native): 194001-202607, mon (native): 194001-202607" },
   `cl`{ title="day (native): 194001-202312, mon (native): 194001-202312" },
   `clt`{ title="day (native): 198001-202312, mon (native): 194012-202312" },
-  `d2m`{ title="day (native): 194001-202606, mon (native): 194012-202606" },
+  `d2m`{ title="day (native): 194001-202607, mon (native): 194012-202607" },
   `hur`{ title="day (native): 194001-202605, mon (native): 194001-202605" },
   `hurs`{ title="day (native): 194001-202312, mon (native): 198001-198512" },
   `hus`{ title="day (native): 202201-202605, mon (native): 202201-202605" },
-  `orog`{ title="fx (native): N/A" },
-  `pr`{ title="day (native): 194001-202606, mon (native): 194012-202606" },
-  `ps`{ title="day (native): 194001-202606, mon (native): 194012-202606" },
-  `psl`{ title="day (05x05): 195001-202212, day (native): 202401-202606, mon (05x05): 195001-202212, mon (native): 202401-202606" },
-  `rlds`{ title="day (native): 194001-202606, mon (native): 194001-202606" },
+  `orog`{ title="fx (native)" },
+  `pr`{ title="day (native): 194001-202607, mon (native): 194012-202607" },
+  `ps`{ title="day (native): 194001-202607, mon (native): 194012-202607" },
+  `psl`{ title="day (05x05): 195001-202212, day (native): 202401-202607, mon (05x05): 195001-202212, mon (native): 202401-202607" },
+  `rlds`{ title="day (native): 194001-202607, mon (native): 194001-202607" },
   `rls`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
-  `rsds`{ title="day (native): 194001-202606, mon (native): 194012-202606" },
-  `sfcWind`{ title="day (native): 194001-202606, mon (native): 194012-202606" },
-  `sftlf`{ title="fx (native): N/A" },
-  `str`{ title="day (native): 202401-202606, mon (native): 202401-202606" },
+  `rsds`{ title="day (native): 194001-202607, mon (native): 194012-202607" },
+  `sfcWind`{ title="day (native): 194001-202607, mon (native): 194012-202607" },
+  `sftlf`{ title="fx (native)" },
+  `str`{ title="day (native): 202401-202607, mon (native): 202401-202607" },
   `strd`{ title="day (native): 194001-202312, mon (native): 194012-202312" },
   `ta`{ title="day (native): 194001-202605, mon (native): 194001-202605" },
-  `tas`{ title="day (native): 194001-202606, mon (native): 194001-202606" },
-  `tasmax`{ title="day (native): 194001-202606, mon (native): 194001-202606" },
-  `tasmin`{ title="day (native): 194001-202606, mon (native): 194001-202606" },
-  `tos`{ title="day (native): 194001-202606, mon (native): 194001-202606" },
+  `tas`{ title="day (native): 194001-202607, mon (native): 194001-202607" },
+  `tasmax`{ title="day (native): 194001-202607, mon (native): 194001-202607" },
+  `tasmin`{ title="day (native): 194001-202607, mon (native): 194001-202607" },
+  `tos`{ title="day (native): 194001-202607, mon (native): 194001-202607" },
   `ua`{ title="day (native): 194001-202605, mon (native): 194001-202605" },
-  `uas`{ title="day (native): 194001-202606, mon (native): 194012-202606" },
+  `uas`{ title="day (native): 194001-202607, mon (native): 194012-202607" },
   `va`{ title="day (native): 194001-202605, mon (native): 194001-202605" },
-  `vas`{ title="day (native): 194001-202606, mon (native): 194012-202606" },
-  `zg`{ title="day (native): 194001-202606, mon (native): 194001-202606" }
+  `vas`{ title="day (native): 194001-202607, mon (native): 194012-202607" },
+  `zg`{ title="day (native): 194001-202607, mon (native): 194001-202607" }
 - [Variable list and progress :material-open-in-new:](https://www.polybox.ethz.ch/index.php/s/5efYkkFrSVC64lZ){:target="_blank"}
 - v2: variable names and units are standardized to CMIP. Inconsistency in clt, clt is provided as fraction (as original
   ERA5) not % (as supposed to be in CMIP)
@@ -353,8 +353,8 @@
     /net/atmos/data/era5-land_cds/processed/v1/
     ```
 
-- Size: 8.9 TB :material-information-outline:{ title="last updated: 2026-11-13 08:38:32" }
-- Number of files: 2,012 :material-information-outline:{ title="last updated: 2026-11-13 08:38:32" }
+- Size: 8.9 TB :material-information-outline:{ title="last updated: 2026-11-17 06:50:44" }
+- Number of files: 2,012 :material-information-outline:{ title="last updated: 2026-11-17 06:50:44" }
 - Access: direct
 - Status: updated
 - Time period: 1950-present
