@@ -154,7 +154,6 @@
 A documentation about cmip7-ng ist still work in progress, the data may not be final and is updated continuously at the moment (Q4 2026).
 Basic checks are performed in alignment with cmip6-ng (see below), data is concatenated per scenario (but historical and scenario runs are not concatenated together), a regridding to a common 1x1 degree grid is performed.
 
-
 ### CMIP6-ng
 
 === "IAC"
@@ -503,7 +502,6 @@ Basic checks are performed in alignment with cmip6-ng (see below), data is conca
 - Number of files:
 - Access: direct
 - Status: updated
-<<<<<<< HEAD
 - Variables:
     - monthly:  `pr`, `tas`
     - daily: `pr`, `tas`
@@ -511,11 +509,7 @@ Basic checks are performed in alignment with cmip6-ng (see below), data is conca
 - Resolution: 0.11° (monthly) or WGS84 (daily and 1-hourly)
 - Coverage: Europe (daily, monthly) or hydrological Switzerland (1-hourly data)
 - monthly data is concatenated historical runs plus scenarios, daily and 1-hourly data is regridded to regular lat lon grid WGS84 and cut to square covering hydrological Switzerland in case of 1-hourly data.
-=======
-- Resolution: 0.11°
-- Coverage: Europe or hydrological Switzerland
 - Link to [Documentation on the aerosol bug in ICON scenario simulations (Maurer 2026) :material-open-in-new:](https://doi.org/10.5281/zenodo.19812905){:target="_blank"}
->>>>>>> main
 
 ### CORDEX.ch2025
 
