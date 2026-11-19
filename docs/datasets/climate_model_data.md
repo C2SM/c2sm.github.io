@@ -60,6 +60,7 @@
   `rsus_tavg-u-hxy-si_glb`{ title="esm-piControl: mon; historical: mon; piControl: mon; scen7-vl: mon" }
 - Resolution: native
 - Coverage: global
+- Link to [More general info about CMIP7 :material-open-in-new:](https://wcrp-cmip.org/cmip-phases/cmip7/){:target="_blank"}
 
 ### CMIP6
 
@@ -134,6 +135,24 @@
     Next Generation (ng) archives were maintained by Reto's group (Jan Sedlacek/Lukas Brunner). Ruth Lorenz / C2SM took
     over cmip6-ng in 2022. Contact: [cmip6-archive@env.ethz.ch](mailto:cmip6-archive@env.ethz.ch). Documentation:
     [https://doi.org/10.5281/zenodo.373412 :material-open-in-new:](https://doi.org/10.5281/zenodo.3734128){:target="_blank"}.
+
+### CMIP7-ng
+
+=== "IAC"
+    ```console
+    /net/atmos/data/cmip7-ng
+    ```
+
+- Size:
+- Number of files:
+- Access: direct / rsync
+- Status: updated
+- Variables:
+- Resolution: native and 1° x 1°
+- Coverage: global
+
+A documentation about cmip7-ng ist still work in progress, the data may not be final and is updated continuously at the moment (Q4 2026).
+Basic checks are performed in alignment with cmip6-ng (see below), data is concatenated per scenario (but historical and scenario runs are not concatenated together), a regridding to a common 1x1 degree grid is performed.
 
 ### CMIP6-ng
 
@@ -479,10 +498,17 @@
     /net/stratus/c2sm-data/cordex-cmip6/processed/
     ```
 
+- Size:
+- Number of files:
 - Access: direct
 - Status: updated
-- Resolution: 0.11°
-- Coverage: Europe or hydrological Switzerland
+- Variables:
+    - monthly:  `pr`, `tas`
+    - daily: `pr`, `tas`
+    - hourly: `hurs`, `huss`, `pr`, `ps`, `sfcWind`, `tas`
+- Resolution: 0.11° (monthly) or WGS84 (daily and 1-hourly)
+- Coverage: Europe (daily, monthly) or hydrological Switzerland (1-hourly data)
+- monthly data is concatenated historical runs plus scenarios, daily and 1-hourly data is regridded to regular lat lon grid WGS84 and cut to square covering hydrological Switzerland in case of 1-hourly data.
 - Link to [Documentation on the aerosol bug in ICON scenario simulations (Maurer 2026) :material-open-in-new:](https://doi.org/10.5281/zenodo.19812905){:target="_blank"}
 
 ### CORDEX.ch2025
