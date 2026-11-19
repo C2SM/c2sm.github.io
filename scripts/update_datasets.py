@@ -61,7 +61,22 @@ def generate_variables(json_data):
             date_range = f": {node['date_range']}" if 'date_range' in node else ''
             details.setdefault(path[var], {})[f"{path[res]} ({path[grid]}){date_range}"] = None
         tooltips = {v: ', '.join(d) for v, d in details.items()}
-    return f"{ENTRY_VARIABLES}\n" + ",\n".join(f"  `{v}`{{ title=\"{t}\" }}" for v, t in tooltips.items())
+    entries = {v: f"`{v}`{{ title=\"{t}\" }}" for v, t in tooltips.items()}
+    if labels[0] != 'institution':
+        return f"{ENTRY_VARIABLES}\n" + ",\n".join(f"  {e}" for e in entries.values())
+    # Archives organized by institution group the variables by the institutions providing them
+    providers = {}
+    for path, _ in walk(json_data['data'], var + 1):
+        providers.setdefault(path[var], set()).add(path[0])
+    institutions = set().union(*providers.values())
+    groups = {}
+    for v, e in entries.items():
+        groups.setdefault(frozenset(providers[v]), []).append(e)
+    lines = [ENTRY_VARIABLES]
+    for insts, group in sorted(groups.items(), key=lambda g: -len(g[0])):
+        label = 'All institutions' if insts == institutions else f"Only {', '.join(sorted(insts))}"
+        lines.append(f"    - {label}:\n" + ",\n".join(f"      {e}" for e in group))
+    return '\n'.join(lines)
 
 def generate_summary(json_data, entry):
     """Generates the markdown size or number of files entry of a dataset."""
