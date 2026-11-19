@@ -4,6 +4,7 @@
 * [EXTPAR](extpar.md)
 * [Processing Chain](processing_chain.md)
 * [Scaling Analysis](scaling_analysis.md)
+* [Sirocco](sirocco.md)
 * [Spack-C2SM](spack.md)
 * [SPICE](spice.md)
 * [Zephyr](zephyr.md)
