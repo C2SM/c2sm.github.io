@@ -247,13 +247,11 @@ Basic checks are performed in alignment with cmip6-ng (see below), data is conca
     ```console
     /net/stratus/c2sm-data/cordex-cmip6/EUR-12/
     ```
-- Size:
-- Number of files:
+
 - Access: direct
 - Status: updated
 - Resolution: 0.11°
 - Coverage: Europe
-- [Important information for interpreting differences between ICON-CLM-202407-1-1 and ICON-CLM-202407-1-2 runs :material-open-in-new:](https://doi.org/10.5281/zenodo.19812905) {:target="_blank"}
 
 
 ### CORDEX (CMIP5)
