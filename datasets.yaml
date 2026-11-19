@@ -1,8 +1,11 @@
 cerra: CERRA
 cerra-land: CERRA-Land
+cmip5: CMIP5
+cmip6: CMIP6
 cmip6-ng: CMIP6-ng
 cmip7: CMIP7
-cordex: CORDEX
-cordex-reklies: CORDEX-ReKliEs
+cordex: CORDEX (CMIP5)
+cordex-cmip6: EURO-CORDEX-CMIP6
+cordex-reklies: CORDEX-ReKliEs (CMIP5)
 era5_cds: ERA5
 era5-land_cds: ERA5-Land

@@ -1,6 +1,7 @@
 # The Alps System at CSCS
 
-[Alps :material-open-in-new:](https://www.cscs.ch/computers/alps){:target="_blank"} is a distributed high-performance computing (HPC) infrastructure managed by CSCS.
+[Alps :material-open-in-new:](https://www.cscs.ch/computers/alps){:target="_blank"} is a distributed high-performance
+computing (HPC) infrastructure managed by CSCS.
 Unlike traditional HPC systems, it is composed of several logical units called vClusters (versatile clusters).
 
 From a user's perspective, these vClusters play the role of traditional HPC machines, with each one tailored
@@ -12,7 +13,7 @@ The main physical component of Alps is hosted at CSCS in Lugano and a detailed d
 
 ## vClusters
 
-The following table shows current clusters distribution on Alps at CSCS 
+The following table shows current clusters distribution on Alps at CSCS
 (only C2SM relevant clusters are shown).
 
 | vCluster | Activity           | Share                    | C2SM Support       |
@@ -33,7 +34,7 @@ More information about clusters on Alps is available on the
 
 ## Access
 
-Connection to vClusters happens as for any other CSCS machine, 
+Connection to vClusters happens as for any other CSCS machine,
 e.g. `ssh santis.cscs.ch` with a `ProxyJump` on `ela.cscs.ch`.
 A section in the `~/.ssh/config` could look as follows:
 
@@ -57,7 +58,7 @@ Host balfrin*
 ```
 
 This allows standard connections like `ssh santis`, but you can also specify a login node if needed,
-e.g., `ssh santis-ln002`. Replace `cscsusername` with your actual username. 
+e.g., `ssh santis-ln002`. Replace `cscsusername` with your actual username.
 
 ## User Environments
 
@@ -78,8 +79,8 @@ In a way, they can be considered as poor man's containers.
     - quicker access to software compared to classical multi-files directories
 
 !!! info "CSCS Documentation"
-    A description of user environments and the `uenv` tool can be found in the 
-    [CSCS documentation :material-open-in-new:](https://docs.cscs.ch/software/uenv/){:target="_blank"}. 
+    A description of user environments and the `uenv` tool can be found in the
+    [CSCS documentation :material-open-in-new:](https://docs.cscs.ch/software/uenv/){:target="_blank"}.
 
 ## Support by CSCS
 
@@ -88,7 +89,7 @@ General information about access, file systems, vClusters, user environments and
 
 To contact CSCS staff directly, users can join their dedicated
 [Slack workspace :material-open-in-new:](https://cscs-users.slack.com){:target="_blank"},
-with dedicated channels for each vCluster. 
+with dedicated channels for each vCluster.
 
 ## Introductory Workshop Material
 
@@ -97,4 +98,4 @@ As an introduction to the Alps infrastructure, the material of our
 
 - [Recording :material-download:](https://polybox.ethz.ch/index.php/s/oSxyJgTjyvJKX8B){:target="_blank"}<br>
 - [Slides presenting Alps, vClusters and Uenvs :material-download:](https://polybox.ethz.ch/index.php/s/jvtIYkBvHUSGZYD){:target="_blank"}<br>
-- [Slides for the integration of Uenvs in `spack-c2sm` :material-download:](https://polybox.ethz.ch/index.php/s/SWbYrOVRIprke60){:target="_blank"} 
+- [Slides for the integration of Uenvs in `spack-c2sm` :material-download:](https://polybox.ethz.ch/index.php/s/SWbYrOVRIprke60){:target="_blank"}

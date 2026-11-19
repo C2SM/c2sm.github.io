@@ -21,5 +21,8 @@ which is a storage system at the ECMWF Data Center in Bologna.
 - Using [polytope :material-open-in-new:](https://polytope-client.readthedocs.io/en/latest/index.html){:target="_blank"}
   web service it will be possible to query ECMWF MARS (Meteorological Archival and Retrieval System)
 - polytope is set up on AlpsB
-- An [initial ERA5 dataset :material-open-in-new:](https://docs.google.com/spreadsheets/d/1oKjhWkcIRSb-vsmQz5OxGSe6SgSO4-Zttg8OMj8qyvU/edit?usp=sharing){:target="_blank"} has been copied to AlpsB and can be queried using polytope
+- An
+  [initial ERA5
+  dataset :material-open-in-new:](https://docs.google.com/spreadsheets/d/1oKjhWkcIRSb-vsmQz5OxGSe6SgSO4-Zttg8OMj8qyvU/edit?usp=sharing){:target="_blank"}
+  has been copied to AlpsB and can be queried using polytope
 - [Repository with Polytope usage examples :material-open-in-new:](https://github.com/C2SM/polytope-ecmwf){:target="_blank"}

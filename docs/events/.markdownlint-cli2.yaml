@@ -1,0 +1,3 @@
+# Event pages use an emphasized date and minutes line as a subtitle
+config:
+  MD036: false

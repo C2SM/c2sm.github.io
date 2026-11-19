@@ -8,7 +8,8 @@ categories:
 
 # Git for Advanced Workshop
 
-We are pleased to announce our next Git for Advanced workshop, which will take place on **Wednesday, September 25th from 9:00 am to 12:30 pm**.
+We are pleased to announce our next Git for Advanced workshop, which will take place on **Wednesday, September 25th from
+9:00 am to 12:30 pm**.
 
 <!-- more -->
 

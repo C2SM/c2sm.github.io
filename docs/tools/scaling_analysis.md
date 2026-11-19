@@ -15,9 +15,9 @@ as a technical report is required that must include the following information:
 - Representative benchmarks and scaling
 - Resource justification (annual node hours and disk space)
 
-The plots created by the Scaling Analysis Tool can be used directly for the 
+The plots created by the Scaling Analysis Tool can be used directly for the
 proposal.
 
 ## Code and Documentation
 
-* [Scaling Analysis Tool :material-open-in-new:](https://github.com/C2SM/scaling_analysis){:target="_blank"}
+- [Scaling Analysis Tool :material-open-in-new:](https://github.com/C2SM/scaling_analysis){:target="_blank"}

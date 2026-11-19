@@ -4,7 +4,7 @@ C2SM organises the following [technical events :material-open-in-new:](https://c
 
 <div class="grid cards" markdown>
 
--   :material-forum:{ .lg .middle } **Quarterly ICON Meeting**
+- :material-forum:{ .lg .middle } **Quarterly ICON Meeting**
 
     ---
 
@@ -12,15 +12,16 @@ C2SM organises the following [technical events :material-open-in-new:](https://c
 
     [:octicons-arrow-right-24: Quarterly ICON Meeting](icon_meetings/index.md)
 
--   :material-account-group:{ .lg .middle } **Modeling Workshop**
+- :material-account-group:{ .lg .middle } **Modeling Workshop**
 
     ---
 
-    Annual, informal one-day event bringing together users and developers of the ICON and CESM models (formerly COSMO-ICON User Workshop).
+    Annual, informal one-day event bringing together users and developers of the ICON and CESM models (formerly
+    COSMO-ICON User Workshop).
 
     [:octicons-arrow-right-24: Modeling Workshop](modeling_workshop/index.md)
 
--   :material-git:{ .lg .middle } **Git Courses**
+- :material-git:{ .lg .middle } **Git Courses**
 
     ---
 
@@ -28,7 +29,7 @@ C2SM organises the following [technical events :material-open-in-new:](https://c
 
     [:octicons-arrow-right-24: Git Courses](git_courses.md)
 
--   :material-language-python:{ .lg .middle } **Python Visualisation Course**
+- :material-language-python:{ .lg .middle } **Python Visualisation Course**
 
     ---
 
@@ -36,7 +37,7 @@ C2SM organises the following [technical events :material-open-in-new:](https://c
 
     [:octicons-arrow-right-24: Python Visualisation Course](pyvis.md)
 
--   :material-weather-partly-cloudy:{ .lg .middle } **Climate Model and Data Workshop**
+- :material-weather-partly-cloudy:{ .lg .middle } **Climate Model and Data Workshop**
 
     ---
 
@@ -44,7 +45,7 @@ C2SM organises the following [technical events :material-open-in-new:](https://c
 
     [:octicons-arrow-right-24: Climate Model and Data Workshop](climate_model_workshop.md)
 
--   :material-calendar-star:{ .lg .middle } **Working Group Days**
+- :material-calendar-star:{ .lg .middle } **Working Group Days**
 
     ---
 

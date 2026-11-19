@@ -1,21 +1,29 @@
 # Euler
 
-Euler is ETH Zurich's central high-performance computing (HPC) cluster, providing computational resources for research across all disciplines.
+Euler is ETH Zurich's central high-performance computing (HPC) cluster, providing computational resources for research
+across all disciplines.
 
 ## Access
 
-Groups at IAC have shares for storage and CPU via the Euler **Climate** group. As a group member, you should have an existing account and access to Euler. If this is not the case, contact your group leader or Urs Beyerle.
+Groups at IAC have shares for storage and CPU via the Euler **Climate** group. As a group member, you should have an
+existing account and access to Euler. If this is not the case, contact your group leader or Urs Beyerle.
 
 ## Useful Links
 
 - [Euler documentation :material-open-in-new:](https://docs.hpc.ethz.ch/){:target="_blank"}
-- [Climate Euler users :material-open-in-new:](https://wiki.iac.ethz.ch/Collaboration/EulerUsers){:target="_blank"} (:material-lock: IAC login required)
-- [Accounting :material-open-in-new:](https://wiki.iac.ethz.ch/Collaboration/EulerAccounting){:target="_blank"} (:material-lock: IAC login required)
-- [Euler Climate members :material-open-in-new:](https://wiki.iac.ethz.ch/Collaboration/EulerClimateMembers){:target="_blank"} (:material-lock: IAC login required)
+- [Climate Euler users :material-open-in-new:](https://wiki.iac.ethz.ch/Collaboration/EulerUsers){:target="_blank"}
+  (:material-lock: IAC login required)
+- [Accounting :material-open-in-new:](https://wiki.iac.ethz.ch/Collaboration/EulerAccounting){:target="_blank"}
+  (:material-lock: IAC login required)
+- [Euler Climate
+  members :material-open-in-new:](https://wiki.iac.ethz.ch/Collaboration/EulerClimateMembers){:target="_blank"}
+  (:material-lock: IAC login required)
 
 ## Software Stack
 
-Euler provides a [software stack :material-open-in-new:](https://docs.hpc.ethz.ch/software/software-stack/){:target="_blank"} via the module command:
+Euler provides a
+[software stack :material-open-in-new:](https://docs.hpc.ethz.ch/software/software-stack/){:target="_blank"} via the
+module command:
 
 ```bash
 module load stack openmpi

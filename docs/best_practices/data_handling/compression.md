@@ -1,11 +1,13 @@
 # Data Compression
 
-Compression can considerably reduce disk space usage and the time needed for data transfer. 
+Compression can considerably reduce disk space usage and the time needed for data transfer.
 
-However, compressing and decompressing data consumes CPU and memory resources, can slow down read and write operations, and bring potential loss of information depending on the chosen compression strategy.
+However, compressing and decompressing data consumes CPU and memory resources, can slow down read and write operations,
+and bring potential loss of information depending on the chosen compression strategy.
 
 !!! tip "When to compress"
-    Ideally, compress data that is not accessed frequently. Compression is highly recommended for data that is stored in an archive (see [Archiving Data](recommendations.md#6-archiving-data)).
+    Ideally, compress data that is not accessed frequently. Compression is highly recommended for data that is stored in
+    an archive (see [Archiving Data](recommendations.md#6-archiving-data)).
 
 ## Lossless vs. lossy compression
 
@@ -18,7 +20,8 @@ However, compressing and decompressing data consumes CPU and memory resources, c
 
 ## Working with compressed files
 
-Compressed files such as `*.gz`, `*.zip`, or `*.bz2` normally need to be uncompressed before they can be used again. There are alternatives, however:
+Compressed files such as `*.gz`, `*.zip`, or `*.bz2` normally need to be uncompressed before they can be used again.
+There are alternatives, however:
 
 - Linux commands such as `zless`, `zcat`, `zdiff`, and `zgrep` handle compressed files on the fly.
 - many packages from scripting languages such as R, Python, Matlab, or IDL can read compressed files directly.
@@ -26,12 +29,16 @@ Compressed files such as `*.gz`, `*.zip`, or `*.bz2` normally need to be uncompr
 ## Standard lossless methods
 
 !!! success "Recommendation"
-    We recommend **lossless compressed netCDF4** files for most use cases. The netCDF4 library, and all tools compiled with netCDF4 support, integrate compression seamlessly.
+    We recommend **lossless compressed netCDF4** files for most use cases. The netCDF4 library, and all tools compiled
+    with netCDF4 support, integrate compression seamlessly.
 
 Lossless compression in netCDF4 is based on the zlib library. The following parameters can be tuned:
 
-- *Compression level*: ranges from 1 (least aggressive) to 9 (most aggressive). Level 1 requires moderate CPU and memory resources and is sufficient for most purposes. Higher levels usually produce smaller files, but at a higher processing cost when packing and unpacking and often for a marginal additional gain.
-- *Chunk sizes*: compression operates on data chunks. These should match the data blocks that are typically accessed at the same time.
+- *Compression level*: ranges from 1 (least aggressive) to 9 (most aggressive). Level 1 requires moderate CPU and memory
+  resources and is sufficient for most purposes. Higher levels usually produce smaller files, but at a higher processing
+  cost when packing and unpacking and often for a marginal additional gain.
+- *Chunk sizes*: compression operates on data chunks. These should match the data blocks that are typically accessed at
+  the same time.
 - *Shuffling*: often further reduces the data size.
 - *Unlimited dimensions*: remove unneeded unlimited dimensions, as they may reduce the compression efficiency.
 
@@ -85,18 +92,26 @@ Lossless compression in netCDF4 is based on the zlib library. The following para
 ## Lossy algorithms
 
 !!! warning "Use with care"
-    Lossy compression permanently removes information that cannot be restored. Always verify that the error introduced is acceptable for your use case before archiving or sharing data.
+    Lossy compression permanently removes information that cannot be restored. Always verify that the error introduced
+    is acceptable for your use case before archiving or sharing data.
 
-Lossy compression can achieve ratios of 10–50× for climate and weather data, far beyond what lossless methods offer. Available tools include:
+Lossy compression can achieve ratios of 10–50× for climate and weather data, far beyond what lossless methods offer.
+Available tools include:
 
 - **NCO (ncks)**
 
-    In addition to lossless compression (see [Standard lossless methods](#standard-lossless-methods)), `ncks` supports several lossy algorithms. 
+    In addition to lossless compression (see [Standard lossless methods](#standard-lossless-methods)), `ncks` supports
+    several lossy algorithms.
 
 - **Python**
 
-    [netcdf4-python :material-open-in-new:](https://unidata.github.io/netcdf4-python/){:target="_blank"} and [xarray :material-open-in-new:](https://docs.xarray.dev/en/stable/user-guide/io.html){:target="_blank"} support lossy compression by defining a *least significant digit*. All information below this threshold is removed before saving.
+    [netcdf4-python :material-open-in-new:](https://unidata.github.io/netcdf4-python/){:target="_blank"} and
+    [xarray :material-open-in-new:](https://docs.xarray.dev/en/stable/user-guide/io.html){:target="_blank"} support
+    lossy compression by defining a *least significant digit*. All information below this threshold is removed before
+    saving.
 
 - **C2SM dc_toolkit**
 
-    The [dc_toolkit :material-open-in-new:](https://github.com/C2SM/dc_toolkit){:target="_blank"} toolkit systematically searches for the best compression pipeline for your data and verifies the result against a user-defined error threshold. See the [dc_toolkit](../../tools/dc_toolkit.md) page in the Tools section.
+    The [dc_toolkit :material-open-in-new:](https://github.com/C2SM/dc_toolkit){:target="_blank"} toolkit systematically
+    searches for the best compression pipeline for your data and verifies the result against a user-defined error
+    threshold. See the [dc_toolkit](../../tools/dc_toolkit.md) page in the Tools section.

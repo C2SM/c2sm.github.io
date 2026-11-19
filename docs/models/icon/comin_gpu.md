@@ -1,6 +1,7 @@
 # Compiling `icon-nwp` on Santis with GPU Support and ComIn Integration
 
-This guide provides a step-by-step recipe to compile **`icon-nwp`** on **Santis** with GPU support and enable **ComIn** functionality.  
+This guide provides a step-by-step recipe to compile **`icon-nwp`** on **Santis** with GPU support and enable **ComIn**
+functionality.  
 It includes environment setup, code compilation, and configuration steps for running ICON with the ComIn plugin.
 
 !!! note "Important Notes"
@@ -36,7 +37,7 @@ source $SCRATCH/spack-c2sm-nwp/setup-env.sh /user-environment
 ## 3. Clone and Prepare the ICON Code
 
 ```bash
-git clone git@gitlab.dkrz.de:icon/icon-nwp.git ./icon-nwp
+git clone git@git.gitlab.dkrz.de:icon/icon-nwp.git ./icon-nwp
 cd ./icon-nwp
 git submodule update --init --recursive
 ```

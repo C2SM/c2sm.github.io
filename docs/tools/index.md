@@ -7,15 +7,16 @@ C2SM supports a set of pre- and postprocessing tools on different high-performan
 
 <div class="grid cards" markdown>
 
--   :material-map-legend:{ .lg .middle } **DWD ICON Tools**
+- :material-map-legend:{ .lg .middle } **DWD ICON Tools**
 
     ---
 
-    Routines for reading, remapping and writing fields on ICON grids; generate lateral boundary and initial conditions for ICON-LAM simulations.
+    Routines for reading, remapping and writing fields on ICON grids; generate lateral boundary and initial conditions
+    for ICON-LAM simulations.
 
     [:octicons-arrow-right-24: DWD ICON Tools](icontools.md)
 
--   :material-earth:{ .lg .middle } **EXTPAR**
+- :material-earth:{ .lg .middle } **EXTPAR**
 
     ---
 
@@ -29,7 +30,7 @@ C2SM supports a set of pre- and postprocessing tools on different high-performan
 
 <div class="grid cards" markdown>
 
--   :material-chili-hot:{ .lg .middle } **SPICE**
+- :material-chili-hot:{ .lg .middle } **SPICE**
 
     ---
 
@@ -37,7 +38,7 @@ C2SM supports a set of pre- and postprocessing tools on different high-performan
 
     [:octicons-arrow-right-24: SPICE](spice.md)
 
--   :material-pipe:{ .lg .middle } **Processing Chain**
+- :material-pipe:{ .lg .middle } **Processing Chain**
 
     ---
 
@@ -51,11 +52,12 @@ C2SM supports a set of pre- and postprocessing tools on different high-performan
 
 <div class="grid cards" markdown>
 
--   :material-zip-box:{ .lg .middle } **Data Compression Toolkit**
+- :material-zip-box:{ .lg .middle } **Data Compression Toolkit**
 
     ---
 
-    Finds the optimal compression pipeline for netCDF files within user-defined error thresholds and writes the result into a Zarr store.
+    Finds the optimal compression pipeline for netCDF files within user-defined error thresholds and writes the result
+    into a Zarr store.
 
     [:octicons-arrow-right-24: dc_toolkit](dc_toolkit.md)
 
@@ -65,7 +67,7 @@ C2SM supports a set of pre- and postprocessing tools on different high-performan
 
 <div class="grid cards" markdown>
 
--   :material-package-variant:{ .lg .middle } **Spack-C2SM**
+- :material-package-variant:{ .lg .middle } **Spack-C2SM**
 
     ---
 
@@ -73,7 +75,7 @@ C2SM supports a set of pre- and postprocessing tools on different high-performan
 
     [:octicons-arrow-right-24: Spack-C2SM](spack.md)
 
--   :material-chart-bar:{ .lg .middle } **Scaling Analysis**
+- :material-chart-bar:{ .lg .middle } **Scaling Analysis**
 
     ---
 
@@ -87,7 +89,7 @@ C2SM supports a set of pre- and postprocessing tools on different high-performan
 
 <div class="grid cards" markdown>
 
--   :material-weather-windy:{ .lg .middle } **Zephyr**
+- :material-weather-windy:{ .lg .middle } **Zephyr**
 
     ---
 
@@ -95,7 +97,7 @@ C2SM supports a set of pre- and postprocessing tools on different high-performan
 
     [:octicons-arrow-right-24: Zephyr](zephyr.md)
 
--   :material-dice-d20:{ .lg .middle } **Zonda**
+- :material-dice-d20:{ .lg .middle } **Zonda**
 
     ---
 

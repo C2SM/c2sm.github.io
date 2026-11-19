@@ -1,0 +1,15 @@
+repos:
+  - repo: local
+    hooks:
+      - id: format-external-links
+        name: format external links
+        entry: python scripts/format_external_links.py
+        language: python
+        files: ^docs/.*\.md$
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.18.1
+    hooks:
+      - id: markdownlint-cli2
+        args: [--fix]
+        # Pinned because nodeenv fails to parse prerelease versions of the latest Node release
+        language_version: 22.14.0

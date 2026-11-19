@@ -1,10 +1,11 @@
 # C2SM Working Group Days
 
-The [working groups](../tasks/working_groups.md) meet on a regular basis at our annual Working Group Days to share expertise, report on tasks by the C2SM programmers, and present new ideas for joint research.
+The [working groups](../tasks/working_groups.md) meet on a regular basis at our annual Working Group Days to share
+expertise, report on tasks by the C2SM programmers, and present new ideas for joint research.
 
 !!! info
     All documents from previous WG Days are available on :key: [Polybox :material-open-in-new:](https://polybox.ethz.ch/index.php/s/JsjNFYANSZHLDdK){:target="_blank"}.
-    If you need help, please contact C2SM Support (support@c2sm.ethz.ch).
+    If you need help, please contact C2SM Support (<support@c2sm.ethz.ch>).
 
 | Date(s)                              | Working Group Day       |
 |--------------------------------------|-------------------------|
@@ -17,4 +18,3 @@ The [working groups](../tasks/working_groups.md) meet on a regular basis at our 
 | 1 February 2022                      | No. 3, WG 1 & 2 Meeting |
 | 28 June 2021                         | No. 2, WG Meeting       |
 | 31 March 2021                        | No. 1, WG Day           |
-

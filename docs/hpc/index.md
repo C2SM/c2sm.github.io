@@ -5,7 +5,7 @@ C2SM supported models and tools run on the following high-performance computing 
 
 <div class="grid cards" markdown>
 
--   :material-server:{ .lg .middle } **CSCS**
+- :material-server:{ .lg .middle } **CSCS**
 
     ---
 
@@ -13,7 +13,7 @@ C2SM supported models and tools run on the following high-performance computing 
 
     [:octicons-arrow-right-24: CSCS](cscs/index.md)
 
--   :material-school:{ .lg .middle } **Euler**
+- :material-school:{ .lg .middle } **Euler**
 
     ---
 
