@@ -19,44 +19,47 @@
     /net/stratus/c2sm-data/cmip7
     ```
 
-- Size: 13.15 TB :material-information-outline:{ title="last updated: 2026-11-17 06:45:17" }
-- Number of files: 61,091 :material-information-outline:{ title="last updated: 2026-11-17 06:45:17" }
+- Size: 17.03 TB :material-information-outline:{ title="last updated: 2026-11-21 05:07:43" }
+- Number of files: 73,742 :material-information-outline:{ title="last updated: 2026-11-21 05:07:43" }
 - Access: direct
 - Status: updated
 - Variables:
   `huss_tavg-h2m-hxy-u_glb`{ title="1pctCO2: day; esm-hist: day; esm-piControl: day; esm-scen7-h: day; esm-scen7-m: day; esm-scen7-vl: day; historical: day; piControl: day; scen7-h: day; scen7-m: day; scen7-vl: day" },
   `mrsol_tavg-d10cm-hxy-lnd_glb`{ title="1pctCO2: day, mon; abrupt-4xCO2: mon; esm-hist: day, mon; esm-piControl: day, mon; esm-scen7-h: day, mon; esm-scen7-m: day, mon; esm-scen7-vl: day, mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: day, mon; land-hist: mon; piControl: day, mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
   `mrsol_tavg-sl-hxy-lnd_glb`{ title="1pctCO2: day, mon; abrupt-4xCO2: mon; esm-hist: day, mon; esm-piControl: day, mon; esm-scen7-h: day, mon; esm-scen7-m: day, mon; esm-scen7-vl: day, mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: day, mon; land-hist: mon; piControl: day, mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
-  `pr_tavg-u-hxy-u_glb`{ title="1pctCO2: day, mon; abrupt-4xCO2: mon; esm-hist: day, mon; esm-piControl: day, mon; esm-scen7-h: day, mon; esm-scen7-m: day, mon; esm-scen7-vl: day, mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: day, mon; land-hist: mon; piControl: day, mon; scen7-h: day, mon; scen7-m: day, mon; scen7-vl: day, mon" },
-  `ps_tavg-u-hxy-u_glb`{ title="1pctCO2: day; esm-hist: day; esm-piControl: day; esm-scen7-h: day; esm-scen7-m: day; esm-scen7-vl: day; historical: day; piControl: day" },
+  `pr_tavg-u-hxy-u_glb`{ title="1pctCO2: day, mon; abrupt-4xCO2: mon; esm-hist: day, mon; esm-piControl: day, mon; esm-scen7-h: day, mon; esm-scen7-m: day, mon; esm-scen7-vl: day, mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: day, mon; land-hist: mon; piControl: day, mon; scen7-h: day, mon; scen7-m: day, mon; scen7-vl: 1hr, day, mon" },
+  `ps_tavg-u-hxy-u_glb`{ title="1pctCO2: day; esm-hist: day; esm-piControl: day; esm-scen7-h: day; esm-scen7-m: day; esm-scen7-vl: day; historical: day; piControl: day; scen7-h: day" },
   `psl_tavg-u-hxy-u_glb`{ title="1pctCO2: day, mon; abrupt-4xCO2: mon; esm-hist: day, mon; esm-piControl: day, mon; esm-scen7-h: day, mon; esm-scen7-m: day, mon; esm-scen7-vl: day, mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: day, mon; piControl: day, mon; scen7-h: day, mon; scen7-m: day, mon; scen7-vl: day, mon" },
   `tas_tavg-h2m-hxy-u_glb`{ title="1pctCO2: day, mon; abrupt-4xCO2: mon; esm-hist: day, mon; esm-piControl: day, mon; esm-scen7-h: day, mon; esm-scen7-m: day, mon; esm-scen7-vl: day, mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: day, mon; land-hist: mon; piControl: day, mon; scen7-h: day, mon; scen7-m: day, mon; scen7-vl: day, mon" },
   `tas_tmax-h2m-hxy-u_glb`{ title="1pctCO2: day; esm-hist: day; esm-piControl: day; esm-scen7-h: day; esm-scen7-m: day; esm-scen7-vl: day; historical: day; piControl: day; scen7-h: day; scen7-m: day; scen7-vl: day" },
   `tas_tmin-h2m-hxy-u_glb`{ title="1pctCO2: day; esm-hist: day; esm-piControl: day; esm-scen7-h: day; esm-scen7-m: day; esm-scen7-vl: day; historical: day; piControl: day; scen7-h: day; scen7-m: day; scen7-vl: day" },
-  `zg_tavg-500hPa-hxy-air_glb`{ title="1pctCO2: day; esm-hist: day; esm-scen7-h: day; esm-scen7-vl: day; historical: day" },
+  `zg_tavg-500hPa-hxy-air_glb`{ title="1pctCO2: day; esm-hist: day; esm-piControl: day; esm-scen7-h: day; esm-scen7-vl: day; historical: day" },
   `evspsbl_tavg-u-hxy-ifs_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
   `evspsbl_tavg-u-hxy-si_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
   `evspsbl_tavg-u-hxy-u_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
   `evspsblsoi_tavg-u-hxy-lnd_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; land-hist: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
   `evspsblveg_tavg-u-hxy-lnd_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; land-hist: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
-  `hfls_tavg-u-hxy-u_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; land-hist: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
-  `hfss_tavg-u-hxy-u_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; land-hist: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
+  `hfls_tavg-u-hxy-u_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: day, mon; esm-scen7-m: day, mon; esm-scen7-vl: day, mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: day, mon; land-hist: mon; piControl: mon; scen7-h: day, mon; scen7-m: day, mon; scen7-vl: day, mon" },
+  `hfss_tavg-u-hxy-u_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: day, mon; esm-scen7-m: day, mon; esm-scen7-vl: day, mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: day, mon; land-hist: mon; piControl: mon; scen7-h: day, mon; scen7-m: day, mon; scen7-vl: day, mon" },
   `mrro_tavg-u-hxy-lnd_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
   `mrso_tavg-u-hxy-lnd_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; land-hist: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
   `rlds_tavg-u-hxy-si_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; historical: mon; piControl: mon; scen7-h: mon; scen7-vl: mon" },
-  `rlds_tavg-u-hxy-u_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
+  `rlds_tavg-u-hxy-u_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: day, mon; esm-scen7-m: day, mon; esm-scen7-vl: day, mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; piControl: mon; scen7-h: day, mon; scen7-m: day, mon; scen7-vl: day, mon" },
   `rldscs_tavg-u-hxy-u_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
   `rlus_tavg-u-hxy-si_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; historical: mon; piControl: mon; scen7-h: mon; scen7-vl: mon" },
-  `rlus_tavg-u-hxy-u_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; land-hist: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
-  `rsds_tavg-u-hxy-u_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; land-hist: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
+  `rlus_tavg-u-hxy-u_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: day, mon; esm-scen7-m: day, mon; esm-scen7-vl: day, mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; land-hist: mon; piControl: mon; scen7-h: day, mon; scen7-m: day, mon; scen7-vl: day, mon" },
+  `rsds_tavg-u-hxy-u_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: day, mon; esm-scen7-m: day, mon; esm-scen7-vl: day, mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; land-hist: mon; piControl: mon; scen7-h: day, mon; scen7-m: day, mon; scen7-vl: day, mon" },
   `rsdscs_tavg-u-hxy-u_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
-  `rsus_tavg-u-hxy-u_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
+  `rsus_tavg-u-hxy-u_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: day, mon; esm-scen7-m: day, mon; esm-scen7-vl: day, mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; piControl: mon; scen7-h: day, mon; scen7-m: day, mon; scen7-vl: day, mon" },
   `snw_tavg-u-hxy-lnd_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; piControl: mon; scen7-h: mon; scen7-vl: mon" },
   `snw_tavg-u-hxy-si_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
+  `tos_tavg-u-hxy-sea_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; historical: mon; piControl: mon; scen7-h: mon; scen7-vl: mon" },
   `tran_tavg-u-hxy-lnd_glb`{ title="1pctCO2: mon; abrupt-4xCO2: mon; esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-m: mon; esm-scen7-vl: mon; hist-GHG: mon; hist-aer: mon; hist-nat: mon; historical: mon; land-hist: mon; piControl: mon; scen7-h: mon; scen7-m: mon; scen7-vl: mon" },
   `evspsbl_tavg-u-hxy-lnd_glb`{ title="esm-hist: mon; esm-scen7-h: mon" },
   `mrtws_tavg-u-hxy-lnd_glb`{ title="esm-hist: mon" },
   `rsds_tavg-u-hxy-si_glb`{ title="esm-hist: mon; esm-piControl: mon; esm-scen7-h: mon; esm-scen7-vl: mon; historical: mon; piControl: mon; scen7-vl: mon" },
+  `tos_tavg-u-hm-sea_glb`{ title="esm-hist: mon; esm-scen7-h: mon; esm-scen7-vl: mon" },
+  `tdps_tavg-h2m-hxy-u_glb`{ title="esm-piControl: day" },
   `rsus_tavg-u-hxy-si_glb`{ title="esm-piControl: mon; historical: mon; piControl: mon; scen7-vl: mon" }
 - Resolution: native
 - Coverage: global
@@ -73,8 +76,8 @@
     /nfs/atmos/c2sm/cmip6
     ```
 
-- Size: 630.56 TB :material-information-outline:{ title="last updated: 2026-11-18 06:53:33" }
-- Number of files: 12,916,492 :material-information-outline:{ title="last updated: 2026-11-18 06:53:33" }
+- Size: 630.56 TB :material-information-outline:{ title="last updated: 2026-11-21 04:41:54" }
+- Number of files: 12,916,492 :material-information-outline:{ title="last updated: 2026-11-21 04:41:54" }
 - Access: direct / rsync
 - Status: weekly updated
 - Resolution: native
@@ -91,8 +94,8 @@
     /net/atmos/data/cmip5
     ```
 
-- Size: 129.62 TB :material-information-outline:{ title="last updated: 2026-11-18 04:13:09" }
-- Number of files: 693,303 :material-information-outline:{ title="last updated: 2026-11-18 04:13:09" }
+- Size: 129.62 TB :material-information-outline:{ title="last updated: 2026-11-21 04:09:40" }
+- Number of files: 693,303 :material-information-outline:{ title="last updated: 2026-11-21 04:09:40" }
 - Access: direct / rsync
 - Status: frozen (2023/01)
 - Resolution: native
@@ -165,8 +168,8 @@ Basic checks are performed in alignment with cmip6-ng (see below), data is conca
     /nfs/atmos/c2sm/cmip6-ng
     ```
 
-- Size: 222.47 TB :material-information-outline:{ title="last updated: 2026-11-17 06:44:48" }
-- Number of files: 764,266 :material-information-outline:{ title="last updated: 2026-11-17 06:44:48" }
+- Size: 222.48 TB :material-information-outline:{ title="last updated: 2026-11-21 05:07:17" }
+- Number of files: 764,266 :material-information-outline:{ title="last updated: 2026-11-21 05:07:17" }
 - Access: direct / rsync
 - Status: updated monthly
 - Variables:
@@ -280,8 +283,8 @@ Basic checks are performed in alignment with cmip6-ng (see below), data is conca
     /net/stratus/c2sm-data/cordex-cmip6/EUR-12/
     ```
 
-- Size: 146.6 TB :material-information-outline:{ title="last updated: 2026-11-19 07:21:15" }
-- Number of files: 144,209 :material-information-outline:{ title="last updated: 2026-11-19 07:21:15" }
+- Size: 146.6 TB :material-information-outline:{ title="last updated: 2026-11-21 05:10:04" }
+- Number of files: 144,209 :material-information-outline:{ title="last updated: 2026-11-21 05:10:04" }
 - Access: direct
 - Status: updated
 - Variables:
@@ -461,8 +464,8 @@ Basic checks are performed in alignment with cmip6-ng (see below), data is conca
     /capstor/store/cscs/c2sm/c2sme/cordex
     ```
 
-- Size: 356.98 TB :material-information-outline:{ title="last updated: 2026-11-17 06:47:52" }
-- Number of files: 552,596 :material-information-outline:{ title="last updated: 2026-11-17 06:47:52" }
+- Size: 356.98 TB :material-information-outline:{ title="last updated: 2026-11-21 05:09:44" }
+- Number of files: 552,596 :material-information-outline:{ title="last updated: 2026-11-21 05:09:44" }
 - Access: direct / rsync
 - Status: monthly updated
 - Resolution: 0.44° and 0.11°
@@ -479,8 +482,8 @@ Basic checks are performed in alignment with cmip6-ng (see below), data is conca
     /nfs/atmos/c2sm/cordex-reklies
     ```
 
-- Size: 22.41 TB :material-information-outline:{ title="last updated: 2026-11-17 06:48:31" }
-- Number of files: 94,936 :material-information-outline:{ title="last updated: 2026-11-17 06:48:31" }
+- Size: 22.41 TB :material-information-outline:{ title="last updated: 2026-11-21 05:10:23" }
+- Number of files: 94,936 :material-information-outline:{ title="last updated: 2026-11-21 05:10:23" }
 - Access: direct
 - Status: monthly updated
 - Resolution: 0.11°
