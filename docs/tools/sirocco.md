@@ -27,7 +27,8 @@ uenv start sirocco/v0.1.0:v1
 
 Loading the uenv activates the default view `app` in which the `sirocco` command is available.
 
-Further releases will follow the same naming convention, the `:v1` tag beeing required for a uenv. List availalble uenvs with
+Further releases will follow the same naming convention, the `:v1` tag beeing required for a uenv. List availalble uenvs
+with
 
 ```shell
 uenv image find sirocco
