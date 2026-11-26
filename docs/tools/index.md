@@ -46,6 +46,15 @@ C2SM supports a set of pre- and postprocessing tools on different high-performan
 
     [:octicons-arrow-right-24: Processing Chain](processing_chain.md)
 
+- :material-graph-outline:{ .lg .middle } **Sirocco**
+
+    ---
+
+    Python workflow tool for climate and weather applications on HPC systems, with workflows described as a graph of
+    tasks and data in YAML.
+
+    [:octicons-arrow-right-24: Sirocco](sirocco.md)
+
 </div>
 
 ## Post-processing
