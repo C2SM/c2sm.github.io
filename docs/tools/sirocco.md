@@ -10,9 +10,9 @@ and [AiiDA :material-open-in-new:](https://www.aiida.net/){:target="_blank"}, an
 - Cycles with their own periodicity for climate and weather workflows
 - Parameterized tasks and data for ensemble and sensitivity experiments
 - Tasks submitted ahead of time and chained by scheduler dependencies
-- A general purpose `shell` plugin and a dedicated plugin for the ICON model, including coupled runs on hybrid CPU/GPU
+- A general-purpose `shell` plugin and a dedicated plugin for the ICON model, including coupled runs on hybrid CPU/GPU
   architectures
-- A standalone engine running autonomously on the HPC system and an AiiDA based engine (under development)
+- A standalone engine running autonomously on the HPC system and an AiiDA-based engine (under development)
 
 ## Usage on Säntis
 
