@@ -11,7 +11,9 @@ Tests :material-open-in-new:](https://docs.icon-model.org/latest/documentation/i
 within `CI System Tests on External Machines by Builder`.
 
 After the initial test case, we suggest building up step by step: from a small ICON test case to increasingly complex
-setups, and finally to your full production configuration.
+setups, and finally to your full production configuration. This workflow is described in the ICON documentation under
+[Customized Configurations :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/buildrun/buildrun_customized.html){:target="_blank"}.
+This page complements it with the specific steps for the CSCS machines.
 
 If you are working with a downstream version of ICON, make sure everything runs first in upstream ICON
 ([ICON :material-open-in-new:](https://gitlab.dkrz.de/icon/icon){:target="_blank"} or
@@ -158,52 +160,21 @@ for the CPU reference. Note that you have to set `pinit_seed = 0` and `pinit_amp
 
     Then follow the Probtest instructions [Example: Check the output of an ICON experiment with a test build compared to a reference build :material-open-in-new:](https://github.com/MeteoSwiss/probtest?tab=readme-ov-file#example-check-the-output-of-an-icon-experiment-with-a-test-build-compared-to-a-reference-build){:target="_blank"} skipping the *Initialize probtest* step.
 
-If probtest validates, change the `checksuite_modes` to `'t'`, add the tag `probtest` and add the CPU builder to
-`refgen` in `scripts/experiments/<institution>/*_tests.yml`. All available settings are described in
-[Experiment and Test Settings :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/infrastructure/testing/system_tests.html#experiment-and-test-settings){:target="_blank"}.
-Now everything is set for activating the test in a CI pipeline.
+If Probtest validates, prepare the test for the CI as described in
+[Test on GPU :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/buildrun/buildrun_customized.html#test-on-gpu){:target="_blank"}
+in the ICON documentation.
 
 ### 1.3 Activate Test in a CI Pipeline
 
-If you followed the steps above in [1.2 Local testing](#12-local-testing), everything is set to activate the test in a
-CI pipeline. Therefore, push your changes to a branch on ICON and open a merge request. Then follow the instructions in
-[Member selection for generating probtest
-tolerances :material-open-in-new:](https://gitlab.dkrz.de/icon/wiki/-/wikis/GPU-development/Member-selection-for-generating-probtest-tolerances){:target="_blank"}
-for adding tolerances and references as well as best members for generating them to the CI pipeline.
+Push your changes to a branch on ICON and open a merge request. To select the ensemble members and to generate the
+references and tolerances with CSCS-CI, follow
+[Generate References and Tolerances :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/infrastructure/testing/cscs_ci.html#ref-infrastructure-cscs-ci-tol){:target="_blank"}
+in the ICON documentation.
 
-## 2. Intermediate Scale Test
+## 2. Intermediate and Full Scale Tests
 
-To test the scalability of ICON simulations under demanding conditions while minimizing queue wait times, we can design
-tests to stretch computational limits in memory and time. Here are some steps to extend your setup to meet these goals.
-
-### 2.1 Increase Horizontal Resolution with Fixed Node Count
-
-*Goal:* Test memory scaling behavior by increasing resolution without increasing node count.
-
-*Method:*
-Increase the model's horizontal grid resolution (i.e., decrease grid spacing) to improve spatial accuracy.
-        This will require more memory per node due to higher data density but will not increase the node count.
-        Monitor the memory usage closely on each node, and consider using profiling tools to track memory allocation
-        patterns and potential memory overflow risks.
-
-*Expected Outcome:* This test will reveal the memory thresholds on individual nodes for your current setup and may
-highlight areas where memory optimization or node allocation adjustments are necessary.
-
-!!! note "Monitor Memory Usage"
-
-    Approaching the memory limits without exceeding them can help identify how close the current node allocation is to becoming unsustainable at higher resolutions. If necessary, consider using memory-aware scheduling tools to balance memory loads across nodes if available.
-
-### 2.2 Run Longer Simulations (e.g., One Year vs. One Month)
-
-*Goal:* Assess the model's stability and resource consumption over prolonged simulation periods, revealing any potential
-issues with computational drift or resource leaks.
-
-*Method:* Run the small scale test for an extended period, e.g., one year instead of one month, to test how well the
-model holds up over time.
-
-*Expected Outcome:* Catching issues like numerical drift, stability loss, or escalating memory/CPU demands that aren’t
-noticeable in shorter simulations.
-
-## 3. Full Scale Test
-
-At the end of this journey, we're finally ready to launch the full scale runs and start doing science with them! :material-party-popper:
+For the next steps towards your production configuration, follow
+[Intermediate Scale Test :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/buildrun/buildrun_customized.html#intermediate-scale-test){:target="_blank"}
+and
+[Full Scale Test :material-open-in-new:](https://icon.gitlab-pages.dkrz.de/icon-nwp/documentation/buildrun/buildrun_customized.html#full-scale-test){:target="_blank"}
+in the ICON documentation.
