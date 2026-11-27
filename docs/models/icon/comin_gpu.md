@@ -1,158 +1,132 @@
-# Compiling `icon-nwp` on Santis with GPU Support and ComIn Integration
+# ComIn on GPU
 
-This guide provides a step-by-step recipe to compile **`icon-nwp`** on **Santis** with GPU support and enable **ComIn**
-functionality.  
-It includes environment setup, code compilation, and configuration steps for running ICON with the ComIn plugin.
+This guide shows how to compile ICON on **Säntis** with GPU support and the
+[ICON Community Interface (ComIn) :material-open-in-new:](https://gitlab.dkrz.de/icon-comin/comin){:target="_blank"},
+including its Python adapter, and how to run a small test case with a Python plugin on the GPU.
 
-!!! note "Important Notes"
+It is based on the public ICON release `release-2026.10-public`, which bundles
+[ComIn v1.0.0 :material-open-in-new:](https://www.icon-model.org/news/news-1/icon-comin-v1-0-0-release-announcement){:target="_blank"},
+the first stable release of ComIn. Only the official uenv and the configure wrapper of the release are needed.
 
-    - The **`master`** branch of [`icon-nwp` :material-open-in-new:](https://gitlab.dkrz.de/icon/icon-nwp){:target="_blank"} does **not** currently include the latest ComIn updates.  
-    A manual fix is required to make ComIn work on GPUs, following this commit:  
-    [ComIn Commit f9e1c2f :material-open-in-new:](https://gitlab.dkrz.de/icon-comin/comin/-/commit/f9e1c2fe9e17650e55ccf82f5e1b8e872fc658c7){:target="_blank"}
+!!! warning "Migrating plugins from ComIn 0.x"
 
-    - Further ComIn bug fixes are under development. Updates will be merged into `icon-nwp` when available.
+    ComIn v1.0 is not compatible with earlier versions. Every plugin has to be recompiled, and the namelist
+    has changed: the single `comin_nml` group with `plugin_list(i)%` entries is replaced by one
+    `comin_plugin_nml` group per plugin (see [step 6](#6-use-comin-in-your-own-experiment)).
+    For all changes, see the
+    [migration guide :material-open-in-new:](https://icon-comin.gitlab-pages.dkrz.de/comin/){:target="_blank"}
+    of ComIn.
 
-    - Replace all instances of `<username>` with your actual username.
-
-## 1. Pull and Start the ICON Environment
+## 1. Clone ICON
 
 ```bash
-uenv image pull icon/25.2:v1
-uenv start icon/25.2:v1 --view modules
+git clone -b release-2026.10-public --recurse-submodules https://git.gitlab.dkrz.de/icon/icon-model.git
+cd icon-model
 ```
 
-## 2. Install a Custom Spack Instance
+All following commands are run from the ICON root folder unless stated otherwise.
+
+## 2. Enable ComIn and Its Python Adapter
+
+Add the `comin` variant to the Spack spec of the Säntis GPU build. The Python adapter, which is required for
+Python plugins, is enabled with the configure option `--enable-bundled-python=comin`:
 
 ```bash
-git clone --depth 1 --recurse-submodules --shallow-submodules -b v0.22.2.2 \
-    https://github.com/C2SM/spack-c2sm.git $SCRATCH/spack-c2sm-nwp
+sed -i 's/+mpi-gpu +realloc-buf/+mpi-gpu +realloc-buf +comin extra-config-args=--enable-bundled-python=comin/' \
+    config/cscs/spack/santis_gpu_double/spack.yaml
 ```
 
-Load the Spack instance:
+ComIn v1.0.0 contains a bug that can skip the device-to-host copy of a variable the first time a CPU plugin reads it,
+so the plugin sees outdated data. It is fixed in ComIn
+[c14abf4 :material-open-in-new:](https://gitlab.dkrz.de/icon-comin/comin/-/commit/c14abf4){:target="_blank"},
+which is not part of the ICON release. Apply the fix with:
 
 ```bash
-source $SCRATCH/spack-c2sm-nwp/setup-env.sh /user-environment
+sed -i 's/^  bool accessed;/  bool accessed = false;/' externals/comin/src/core/comin_state.hpp
 ```
 
-## 3. Clone and Prepare the ICON Code
+## 3. Compile ICON
+
+Compile ICON out-of-source in the folder `gpu`, as described in [Compile](compile.md#building-out-of-source):
 
 ```bash
-git clone git@git.gitlab.dkrz.de:icon/icon-nwp.git ./icon-nwp
-cd ./icon-nwp
-git submodule update --init --recursive
-```
-
-## 4. Set Up the Build Directory
-
-```bash
+UENV_VERSION=$(cat config/cscs/SANTIS_ENV_TAG)
 mkdir gpu && cd gpu
-mkdir santis && touch ./santis/spack.yaml
+uenv run ${UENV_VERSION} --view default -- ./../config/cscs/santis.gpu.nvhpc
 ```
 
-Copy the contents of the `spack.yaml` file below into `./santis/spack.yaml`.
+The compilation takes about one hour. Besides the ICON binary `bin/icon`, it produces the Python adapter
+`externals/comin/build/_icon/plugins/python_adapter/libpython_adapter.so`.
 
-<details>
+## 4. Create a Python Environment for the Plugins
 
-<summary>spack.yaml</summary>
-
-```yaml
-# ICON
-#
-# ------------------------------------------
-# Copyright (C) 2004-2025, DWD, MPI-M, DKRZ, KIT, ETH, MeteoSwiss
-# Contact information: icon-model.org
-# See AUTHORS.TXT for a list of authors
-# See LICENSES/ for license information
-# SPDX-License-Identifier: BSD-3-Clause
-# ------------------------------------------
-
-spack:
-  specs:
-  - py-numpy
-  - py-scipy
-  - py-xarray
-  - py-mpi4py
-  - py-netcdf4
-  - py-scikit-learn
-  - py-shapely
-  - cosmo-eccodes-definitions@2.36.0.3
-  - icon @develop %nvhpc +comin +grib2 +eccodes-definitions +ecrad +emvorado +art +dace gpu=nvidia-90
-    +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange
-    ~async-io-rma ~cuda-graphs fflags="-traceback"
-  view: true
-  concretizer:
-    unify: true
-  packages:
-    icon:
-      package_attributes:
-        build_directory: gpu
-  develop:
-    icon:
-      spec: icon @develop %nvhpc +comin +grib2 +eccodes-definitions +ecrad +emvorado +art +dace gpu=nvidia-90 +mpi-gpu +realloc-buf ~aes ~jsbach ~ocean ~coupling ~rte-rrtmgp ~loop-exchange ~async-io-rma ~cuda-graphs fflags="-traceback" 
-      path: /capstor/scratch/cscs/<username>/icon-nwp
-```
-
-</details>
-
-## 5. Activate the Spack Environment and Build ICON
+The Python adapter embeds the Python interpreter of the uenv (Python 3.13).
+Create a virtual environment from this interpreter inside the folder `gpu` and install the packages
+your plugins need. For plugins running on the GPU, install [CuPy :material-open-in-new:](https://cupy.dev){:target="_blank"}
+for CUDA 13, which is the CUDA version of the uenv:
 
 ```bash
-spack env activate -p -d santis/
-spack concretize -f
-spack install -v
+uenv run ${UENV_VERSION} --view default -- bash -c \
+    'python -m venv venv-comin && ./venv-comin/bin/pip install numpy "cupy-cuda13x[ctk]"'
 ```
 
-## 6. Create a Python Virtual Environment for ComIn
+!!! info "CuPy needs the CUDA headers"
+
+    The `[ctk]` extra installs the CUDA headers that CuPy needs to compile its kernels at runtime.
+    Without it, the plugin fails with `RuntimeError: Failed to find CUDA headers`.
+
+## 5. Run a Test Case
+
+The ICON release contains the test case `atm_tracer_Hadley_comin_portability`, a pure tracer advection
+experiment on a coarse global grid. It attaches the Python plugin `gpu_test.py`, which uses CuPy to write
+ICON variables on the GPU and checks the data transfers between CPU and GPU.
+
+Copy the experiment into the `run` folder, set the path to the grid file on Säntis and create the run script:
 
 ```bash
-python -m venv venv-comin
-source ./venv-comin/bin/activate
+EXP=atm_tracer_Hadley_comin_portability
+cp run/checksuite.infrastructure/comin/exp.${EXP} run/
+sed -i 's|^grids_folder=.*|grids_folder=/capstor/store/cscs/userlab/cws01/ci/testing-input-data/c2sm/tracer_Hadley|' \
+    run/exp.${EXP}
+./make_runscripts ${EXP}
 ```
 
-Install required Python packages:
+Tell the Python adapter to use the virtual environment and submit the job:
 
 ```bash
-pip install --upgrade pip
-pip install cupy numpy scipy xarray mpi4py netcdf4 shapely scikit-learn pyyaml
+export COMIN_PYTHON_EXECUTABLE=${PWD}/venv-comin/bin/python
+cd run && sbatch --uenv ${UENV_VERSION} --account=<my_account_id> ./exp.${EXP}.run
 ```
 
-## 7. Build ComIn
+The job runs on one node with four GPUs and takes about 15 minutes. The log file
+`LOG.exp.atm_tracer_Hadley_comin_portability.run.<job_id>.o` contains the messages of the plugin, e.g.:
 
-Enter the Spack build environment and compile ComIn:
-
-```bash
-spack build-env icon -- bash
-cd ./externals/comin/build
-cmake -DCOMIN_ENABLE_EXAMPLES=ON -DCOMIN_ENABLE_PYTHON_ADAPTER=ON .
-make
+```console
+ INFO(cuda_test): glob.device_name='NVIDIA GH200 120GB'
+ INFO(cuda_test): Using cupy!
 ```
 
-## 8. Add ComIn to the ICON Namelist
+and ends with `Script run successfully:  OK`.
 
-In your ICON namelist, include the following section:
+## 6. Use ComIn in Your Own Experiment
+
+Add one `comin_plugin_nml` group per plugin to the atmosphere namelist of your experiment.
+For a Python plugin, `plugin_library` is the Python adapter and `options` is the path to your plugin script:
 
 ```fortran
-&comin_nml
-  plugin_list(1)%name           = "comin_plugin"
-  plugin_list(1)%plugin_library = "/capstor/scratch/cscs/<username>/icon-nwp/gpu/externals/comin/build/plugins/python_adapter/libpython_adapter.so"
-  plugin_list(1)%options        = "<comin_python_script_path>"
+&comin_plugin_nml
+  name           = "my_plugin"
+  plugin_library = "<icon_root>/gpu/externals/comin/build/_icon/plugins/python_adapter/libpython_adapter.so"
+  options        = "<path_to_my_plugin>.py"
 /
 ```
 
-## 9. Configure the Slurm Job
+Export `COMIN_PYTHON_EXECUTABLE` as in [step 5](#5-run-a-test-case) before submitting the job, or set it in the
+run script.
 
-In your Slurm job script, load the Spack environment and activate the Python virtual environment:
+## Further Reading
 
-```bash
-# Load Spack environment
-source $SCRATCH/spack-c2sm-nwp/setup-env.sh /user-environment
-spack env activate -p -d /capstor/scratch/cscs/<username>/icon-nwp/gpu/santis/
-
-# Set Python executable for ComIn
-export COMIN_PYTHON_EXECUTABLE="/capstor/scratch/cscs/<username>/icon-nwp/gpu/venv-comin/bin/python"
-
-# Load necessary modules
-module load cray-mpich
-
-echo "Environment loaded"
-```
+- [ComIn documentation :material-open-in-new:](https://icon-comin.gitlab-pages.dkrz.de/comin/){:target="_blank"}
+  with the Python API, the section on using GPUs and the migration guide
+- Example plugins in `externals/comin/plugins` of the ICON source code, e.g.,
+  `python_adapter/examples/simple_python_plugin.py`
